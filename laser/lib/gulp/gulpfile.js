@@ -32,16 +32,17 @@ const gulp = require('gulp'),
 //порядок подключения CSS файлов
 const cssFiles = [
   '../../src/styles/**/*.sass',
+  // '../materialize/css/materialize/css'
   // './src/sass/_media.sass'
 ]
 //порядок подключения JS файлов
 const jsFiles = [
-  './src/js/lib.js',
-  './src/js/main.js'
+  '../../src/js/main.js',
+  '../materialize/js/materialize.js'
 ]
 const pugPages = [
-  '../../src/pug/pages/*.pug',
-  '../../src/pug/**/*.pug'
+  '../../src/pug/index.pug',
+  '../../src/pug/page/**/*.pug'
 ]
 
 //таск на стили CSS
