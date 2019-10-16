@@ -6,10 +6,13 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title steffany
     link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="materialize/css/materialize.css")
     script(type='text/javascript')
+    script(type='text/javascript' src="/materialize/js/materialize.js")
 
   body
     include ../modules/header
-    include ../modules/footer
 
-  block content
+    block content
+
+    include ../modules/footer

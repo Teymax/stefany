@@ -1,101 +1,101 @@
-@import "variables"
-
-$grid__bp-sm: 576
-$grid__bp-md: 768
-$grid__bp-lg: 992
-$grid__bp-xl: 1200
-$grid__bp-xxl: 1440
-$grid__cols: 12
-
-
-$map-grid-props: ('': 0, '-sm': $grid__bp-sm, '-md': $grid__bp-md, '-lg': $grid__bp-lg, '-xl': $grid__bp-xl, '-xxl': $grid__bp-xxl)
-@mixin create-mq($breakpoint, $min-or-max)
-  @if ($breakpoint == 0)
-    @content
-  @else
-    @media all and (#{$min-or-max}-width: $breakpoint *1px)
-      @content
-
-@mixin create-col-classes($modifier, $grid-cols, $breakpoint)
-  @include create-mq($breakpoint, 'min')
-    .__col#{$modifier}-offset-0
-      margin-left: 0
-    @for $i from 1 through $grid-cols
-      .__col#{$modifier}-#{$i}
-        flex-basis: (100 / ($grid-cols / $i)) * 1%
-        //padding: 0 5px
-      .__col#{$modifier}-offset-#{$i}
-        margin-left: (100 / ($grid-cols / $i)) * 1%
-
-@each $modifier, $breakpoint in $map-grid-props
-  @if ($modifier == '')
-    $modifier: '-xs'
-  @include create-mq($breakpoint - 1, 'max')
-    .hidden#{$modifier}-down
-      display: none !important
-    .column#{$modifier}-down
-      flex-direction: column !important
-      display: flex
-    .a#{$modifier}-center-down
-      align-items: center !important
-      display: flex
-    .a#{$modifier}-end-down
-      align-items: flex-end !important
-      display: flex
-    .j#{$modifier}-center-down
-      justify-content: center !important
-      display: flex
-    .j#{$modifier}-end-down
-      justify-content: flex-end !important
-      display: flex
-    .text#{$modifier}-center-down
-      text-align: center !important
-    .text#{$modifier}-right-down
-      text-align: right !important
-    .text#{$modifier}-left-down
-      text-align: left !important
-  @include create-mq($breakpoint, 'min')
-    .hidden#{$modifier}-up
-      display: none !important
-    .column#{$modifier}-up
-      flex-direction: column !important
-      display: flex
-    .a#{$modifier}-center-up
-      align-items: center !important
-      display: flex
-    .a#{$modifier}-end-up
-      align-items: flex-end !important
-      display: flex
-    .j#{$modifier}-center-up
-      justify-content: center !important
-      display: flex
-    .j#{$modifier}-end-up
-      justify-content: flex-end !important
-      display: flex
-    .text#{$modifier}-center-up
-      text-align: center !important
-    .text#{$modifier}-right-up
-      text-align: right !important
-    .text#{$modifier}-left-up
-      text-align: left !important
-.grid-container
-  width: 100%
-  max-width: $grid__bp-xl * 1px
-  margin: 0 auto
-  padding: 0 30px
-
-  &.fluid
-    margin: 0
-    max-width: 100%
-
-  .__row
-    display: flex
-    flex-wrap: wrap
-    width: 100%
-    //margin: 0 -5px
-
-  @each $modifier, $breakpoint in $map-grid-props
-    @include create-col-classes($modifier, $grid__cols, $breakpoint)
-
-
-
+//@import "variables"
+//
+//$grid__bp-sm: 576
+//$grid__bp-md: 768
+//$grid__bp-lg: 992
+//$grid__bp-xl: 1200
+//$grid__bp-xxl: 1440
+//$grid__cols: 12
+//
+//
+//$map-grid-props: ('': 0, '-sm': $grid__bp-sm, '-md': $grid__bp-md, '-lg': $grid__bp-lg, '-xl': $grid__bp-xl, '-xxl': $grid__bp-xxl)
+//@mixin create-mq($breakpoint, $min-or-max)
+//  @if ($breakpoint == 0)
+//    @content
+//  @else
+//    @media all and (#{$min-or-max}-width: $breakpoint *1px)
+//      @content
+//
+//@mixin create-col-classes($modifier, $grid-cols, $breakpoint)
+//  @include create-mq($breakpoint, 'min')
+//    .__col#{$modifier}-offset-0
+//      margin-left: 0
+//    @for $i from 1 through $grid-cols
+//      .__col#{$modifier}-#{$i}
+//        flex-basis: (100 / ($grid-cols / $i)) * 1%
+//        //padding: 0 5px
+//      .__col#{$modifier}-offset-#{$i}
+//        margin-left: (100 / ($grid-cols / $i)) * 1%
+//
+//@each $modifier, $breakpoint in $map-grid-props
+//  @if ($modifier == '')
+//    $modifier: '-xs'
+//  @include create-mq($breakpoint - 1, 'max')
+//    .hidden#{$modifier}-down
+//      display: none !important
+//    .column#{$modifier}-down
+//      flex-direction: column !important
+//      display: flex
+//    .a#{$modifier}-center-down
+//      align-items: center !important
+//      display: flex
+//    .a#{$modifier}-end-down
+//      align-items: flex-end !important
+//      display: flex
+//    .j#{$modifier}-center-down
+//      justify-content: center !important
+//      display: flex
+//    .j#{$modifier}-end-down
+//      justify-content: flex-end !important
+//      display: flex
+//    .text#{$modifier}-center-down
+//      text-align: center !important
+//    .text#{$modifier}-right-down
+//      text-align: right !important
+//    .text#{$modifier}-left-down
+//      text-align: left !important
+//  @include create-mq($breakpoint, 'min')
+//    .hidden#{$modifier}-up
+//      display: none !important
+//    .column#{$modifier}-up
+//      flex-direction: column !important
+//      display: flex
+//    .a#{$modifier}-center-up
+//      align-items: center !important
+//      display: flex
+//    .a#{$modifier}-end-up
+//      align-items: flex-end !important
+//      display: flex
+//    .j#{$modifier}-center-up
+//      justify-content: center !important
+//      display: flex
+//    .j#{$modifier}-end-up
+//      justify-content: flex-end !important
+//      display: flex
+//    .text#{$modifier}-center-up
+//      text-align: center !important
+//    .text#{$modifier}-right-up
+//      text-align: right !important
+//    .text#{$modifier}-left-up
+//      text-align: left !important
+//.grid-container
+//  width: 100%
+//  max-width: $grid__bp-xl * 1px
+//  margin: 0 auto
+//  padding: 0 30px
+//
+//  &.fluid
+//    margin: 0
+//    max-width: 100%
+//
+//  .__row
+//    display: flex
+//    flex-wrap: wrap
+//    width: 100%
+//    //margin: 0 -5px
+//
+//  @each $modifier, $breakpoint in $map-grid-props
+//    @include create-col-classes($modifier, $grid__cols, $breakpoint)
+//
+//
+//
