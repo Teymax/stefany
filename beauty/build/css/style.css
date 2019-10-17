@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Circe-Regular";
-  src: url("../assets/fonts/Circe-Regular.woff2");
-  font-weight: 300; }
-
-@font-face {
   font-family: "Circe-Bold";
   src: url("../assets/fonts/Circe-Bold.woff2");
   font-weight: 700; }
@@ -14,14 +9,19 @@
   font-weight: 900; }
 
 @font-face {
-  font-family: "CormorantGaramond-Regular";
-  src: url("../assets/fonts/CormorantGaramond-Regular.woff2");
+  font-family: "Circe-Regular";
+  src: url("../assets/fonts/Circe-Regular.woff2");
   font-weight: 300; }
 
 @font-face {
   font-family: "CormorantGaramond-Bold";
   src: url("../assets/fonts/CormorantGaramond-Bold.woff2");
   font-weight: 700; }
+
+@font-face {
+  font-family: "CormorantGaramond-Regular";
+  src: url("../assets/fonts/CormorantGaramond-Regular.woff2");
+  font-weight: 300; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
