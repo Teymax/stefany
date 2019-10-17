@@ -5,15 +5,27 @@
 @import "spacing-helpers"
 @import "grid"
 
+@media only screen and (min-width : 1200px)
+  .container
+    max-width: 1260px !important
+
 
 .container
-  width: 100% !important
+
   padding: 0 30px
 
 .section
   padding: 2rem 0
 
+.icon
+  display: inline-block
+  width: 15px
+  height: 19px
 
+.text-dashed
+  border-bottom: 1px dashed #000080
+.small-text
+  @include font(Circe, 400, 14, 22)
 .text-w-bold
   font-weight: 700 !important
 .text-w-light
@@ -81,6 +93,9 @@
 @import 'sections/main-laser-service'
 @import 'sections/consultation-form'
 @import 'sections/about-steffany'
+
+
+@import 'sections/footer'
 
 
 

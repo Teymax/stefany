@@ -286,12 +286,30 @@ table {
 .ma {
   margin: 0 auto  !important; }
 
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1260px !important; } }
+
 .container {
-  width: 100% !important;
   padding: 0 30px; }
 
 .section {
   padding: 2rem 0; }
+
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 19px; }
+
+.text-dashed {
+  border-bottom: 1px dashed #000080; }
+
+.small-text {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px; }
 
 .text-w-bold {
   font-weight: 700 !important; }
@@ -418,7 +436,7 @@ header .c-row {
 section.section.advantages {
   background-image: url("../assets/img/background/advantages-bg.jpg");
   background-size: cover; }
-  section.section.advantages .container p.advantages-count {
+  section.section.advantages .container .container p.advantages-count {
     font-family: "CormorantGaramond";
     font-style: normal;
     font-weight: 700;
@@ -503,26 +521,37 @@ section.section.laser-desc {
   padding: 5rem 0;
   background-color: #EDE1DF; }
 
-section.section.main-laser-service .container .c-service__service-box {
+section.section.main-laser-service .c-service__service-box {
   height: 300px; }
-  section.section.main-laser-service .container .c-service__service-box_bg-1 {
-    background-image: url("../assets/img/main-service/bg_1.png"); }
-  section.section.main-laser-service .container .c-service__service-box_bg-2 {
-    background-image: url("../assets/img/main-service/bg_2.png"); }
-  section.section.main-laser-service .container .c-service__service-box_bg-3 {
-    background-image: url("../assets/img/main-service/bg_3.jpg"); }
-  section.section.main-laser-service .container .c-service__service-box_bg-4 {
-    background-image: url("../assets/img/main-service/bg_4.jpg"); }
-  section.section.main-laser-service .container .c-service__service-box_bg-5 {
-    background-image: url("../assets/img/main-service/bg_5.png"); }
+  section.section.main-laser-service .c-service__service-box_bg-1 {
+    background-image: url("../assets/img/main-service/bg_1.png");
+    background-size: cover; }
+  section.section.main-laser-service .c-service__service-box_bg-2 {
+    background-image: url("../assets/img/main-service/bg_2.png");
+    background-size: cover; }
+  section.section.main-laser-service .c-service__service-box_bg-3 {
+    background-image: url("../assets/img/main-service/bg_3.jpg");
+    background-size: cover; }
+  section.section.main-laser-service .c-service__service-box_bg-4 {
+    background-image: url("../assets/img/main-service/bg_4.jpg");
+    background-size: cover; }
+  section.section.main-laser-service .c-service__service-box_bg-5 {
+    background-image: url("../assets/img/main-service/bg_5.png");
+    background-size: cover; }
 
 section.section.consultation-form {
+  padding: 8rem 0;
   background-image: url("../assets/img/background/consultation-form-bg.jpg");
   background-size: cover; }
 
-section.section.about-steffany .container {
-  height: 1000px;
-  background-color: #000; }
+footer.footer {
+  padding-top: 4rem; }
+  footer.footer .container .c-logo-f img {
+    max-width: 264px;
+    max-height: 100px; }
+  footer.footer .container img.icon-large {
+    width: 40px;
+    height: 40px; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
