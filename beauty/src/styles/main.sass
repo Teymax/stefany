@@ -54,9 +54,37 @@
   @extend .custom-icon-number
   background-color: #9FA6BA
 
-  p
-    @include font(Circe, bold, 27, 42)
-    color: #fff
+p
+  margin-bottom: 0 !important
+  @include font('Circe-Regular', 300, 16, 23)
+  color: $text-color-dark
+p.p-bold
+  @include font('Circe-Bold', 700, 16, 23)
+
+
+.button
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 33px
+  height: 38px
+  background: $btn-bg
+  @include font('Circe-ExtraBold', 900, 10, 13)
+  text-transform: uppercase
+  color: $color-white !important
+  letter-spacing: 1.5px
+  border-radius: 100px
+  transition: 0.3s ease 
+  &:hover 
+    box-shadow: 0 0 20px $btn-bg
+
+.h-title
+  display: block
+  margin-bottom: 20px
+  @include font('CormorantGaramond-Bold', 900, 44, 45)
+  color: $h-title-color
+
 
 //nav
 //  background-color: $text-color-white !important

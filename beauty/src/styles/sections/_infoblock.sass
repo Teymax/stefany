@@ -1,0 +1,93 @@
+.info-block
+	padding-top: 160px
+	background: url('../assets/img/infoblock/infoblock-bg-1.png')
+	background-repeat: no-repeat 
+	background-size: 100% 80%
+	background-position: top left
+	.container 
+		position: relative
+		width: 100%
+		max-width: 1150px
+		.row 
+			position: relative
+			display: flex
+			align-items: flex-start
+			justify-content: flex-end
+			width: 100%
+			margin: 0
+		.col 
+			padding: 0
+		.col-img
+			position: absolute
+			left: 0
+			top: -70px
+			z-index: 2
+			width: 100%
+			max-width: 457px
+			box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
+			& img 
+				width: 100%
+		.col-info
+			position: relative
+			z-index: 1
+			width: 100%
+			max-width: 771px
+			padding: 57px 93px 100px 144px
+			background: $color-white
+			p 
+				padding-bottom: 50px
+		.big-text
+			position: absolute
+			bottom: 80px
+			left: -173px
+			z-index: 3
+			@include font('Circe-ExtraBold', 900, 322, 130)
+			letter-spacing: 5px
+			color: $color-white
+.info-block-2	
+	padding-top: 65px
+	padding-bottom: 65px
+	background: url('../assets/img/infoblock/infoblock-bg-2.jpg')
+	background-repeat: no-repeat 
+	background-size: 100% 90%
+	background-position: bottom left
+	.container
+		.row 
+			justify-content: flex-start
+			.col-img
+				left: auto
+				right: 0
+				max-width: 476px
+			.col-info
+				max-width: 739px
+				padding: 45px 141px 58px 51px
+	.big-text
+		left: auto
+		right: -235px
+		top: -96px
+		text-align: right
+.info-list-item
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	width: 100%
+	p 
+		padding-bottom: 20px !important
+	.info-list-number
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 37px
+		min-width: 37px
+		height: 37px
+		margin-top: -7px
+		margin-right: 31px
+  	color: $color-white !important
+		background: $list-number
+		border-radius: 50%
+		@include font('CormorantGaramond-Bold', 700, 42, 42)
+		span 
+			display: block
+			margin-top: -6px
+			color: $color-white
+	
