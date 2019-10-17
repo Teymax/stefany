@@ -11,29 +11,37 @@
   padding: 0 30px
 
 .section
-  padding: 2rem 0 !important
+  padding: 2rem 0
 
-.paragraph-text-light
+
+.text-w-bold
+  font-weight: 700 !important
+.text-w-light
+  font-weight: 300 !important
+.text-w-regular
+  font-weight: 400 !important
+.text-color-light
+  color: $text-color-white !important
+.text-color-dark
+  color: $text-color-dark !important
+
+.paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
 
-.paragraph-text-dark
-  @include font(Circe, 400, 16, 26)
-  color: $text-color-dark
+
+.section-title
+  @include font (CormorantGaramond, bold, 44, 53)
+  color: $text-color-white
+.section-subtitle
+  @include font (Circe, 400, 20, 45)
+  color: $text-color-white
 
 .extralarge-text-bg
   white-space: nowrap
   position: absolute
-  @include font(Circe, 400, 321, 377)
+  @include font(Circe, 900, 321, 377)
   color: $text-color-white
-
-.section-title-light
-  @include font(Circe, bold, 44, 45)
-  color: $text-color-white
-
-.section-title-dark
-  @include font(Circe, bold, 44, 45)
-  color: $text-color-dark
 
 .custom-icon-number
   display: inline-flex
@@ -62,12 +70,19 @@
 //  box-shadow: none !important
 
 
-@import sections/header
-@import sections/advantages
-@import sections/almalaser
-@import sections/choose-service
-@import sections/consultation
-@import sections/discount
+@import 'sections/header'
+@import 'sections/advantages'
+@import 'sections/almalaser'
+@import 'sections/choose-service'
+@import 'sections/consultation'
+@import 'sections/discount'
+@import 'sections/safety'
+@import 'sections/laser-description'
+@import 'sections/main-laser-service'
+@import 'sections/consultation-form'
+@import 'sections/about-steffany'
+
+
 
 
 @import "media"

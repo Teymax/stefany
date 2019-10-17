@@ -1,41 +1,31 @@
 @font-face {
-  font-family: "Myriad Pro";
-  src: url("../assets/fonts/MyriadPro-Regular.woff");
+  font-family: "Circe";
+  src: url("../assets/fonts/Circe-Light.woff2");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Circe";
+  src: url("../assets/fonts/Circe-Regular.woff2");
   font-weight: 400; }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/MyriadPro-Regular.woff");
-  font-weight: 400; }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Medium.woff");
-  font-weight: 500; }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Bold.woff");
+  font-family: "Circe";
+  src: url("../assets/fonts/Circe-Bold.woff2");
   font-weight: 700; }
 
 @font-face {
-  font-family: "Myriad Pro";
-  src: url("../assets/fonts/MyriadPro-Regular.woff");
+  font-family: "Circe";
+  src: url("../assets/fonts/Circe-ExtraBold.woff2");
+  font-weight: 900; }
+
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url("../assets/fonts/CormorantGaramond-Regular.woff2");
   font-weight: 400; }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/MyriadPro-Regular.woff");
-  font-weight: 400; }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Medium.woff");
-  font-weight: 500; }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-Bold.woff");
+  font-family: "CormorantGaramond";
+  src: url("../assets/fonts/CormorantGaramond-Bold.woff2");
   font-weight: 700; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -301,9 +291,24 @@ table {
   padding: 0 30px; }
 
 .section {
-  padding: 2rem 0 !important; }
+  padding: 2rem 0; }
 
-.paragraph-text-light {
+.text-w-bold {
+  font-weight: 700 !important; }
+
+.text-w-light {
+  font-weight: 300 !important; }
+
+.text-w-regular {
+  font-weight: 400 !important; }
+
+.text-color-light {
+  color: #ffffff !important; }
+
+.text-color-dark {
+  color: #556278 !important; }
+
+.paragraph-text {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
@@ -311,39 +316,31 @@ table {
   line-height: 26px;
   color: #ffffff; }
 
-.paragraph-text-dark {
+.section-title {
+  font-family: "CormorantGaramond";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 53px;
+  color: #ffffff; }
+
+.section-subtitle {
   font-family: "Circe";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #556278; }
+  font-size: 20px;
+  line-height: 45px;
+  color: #ffffff; }
 
 .extralarge-text-bg {
   white-space: nowrap;
   position: absolute;
   font-family: "Circe";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 321px;
   line-height: 377px;
   color: #ffffff; }
-
-.section-title-light {
-  font-family: "Circe";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 44px;
-  line-height: 45px;
-  color: #ffffff; }
-
-.section-title-dark {
-  font-family: "Circe";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 44px;
-  line-height: 45px;
-  color: #556278; }
 
 .custom-icon-number, .custom-icon-number-dark {
   display: inline-flex;
@@ -419,7 +416,15 @@ header .c-row {
         color: #556278; }
 
 section.section.advantages {
-  background-image: url("../assets/img/background/advantages-bg.jpg"); }
+  background-image: url("../assets/img/background/advantages-bg.jpg");
+  background-size: cover; }
+  section.section.advantages .container p.advantages-count {
+    font-family: "CormorantGaramond";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 90px;
+    color: #ffffff; }
 
 section.section.almalaser {
   position: relative;
@@ -443,7 +448,7 @@ section.section.choose-service .container .choose-zone-box {
   section.section.choose-service .container .choose-zone-box:hover .choose-zone-box__desc {
     color: #F6AE9F; }
   section.section.choose-service .container .choose-zone-box__desc {
-    font-family: "Cormorant Garamond";
+    font-family: "CormorantGaramond";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -471,7 +476,53 @@ section.section.consultation .consultation-bottom {
   background-color: #EDE1DF; }
 
 section.section.discount {
-  background-image: url("../assets/img/bg-discount.jpg"); }
+  background-image: url("../assets/img/discount-bg.jpg"); }
+
+section.section.safety {
+  padding: 5rem 0;
+  background-image: url("../assets/img/background/safety-bg.jpg");
+  background-size: cover; }
+  section.section.safety .container .c-safety .safety-box {
+    max-width: 517px;
+    z-index: 0;
+    position: relative; }
+    section.section.safety .container .c-safety .safety-box:nth-child(1):before {
+      content: url("../assets/img/safety/safety-img_1.png");
+      position: absolute;
+      left: -83px;
+      top: -100px;
+      z-index: -1; }
+    section.section.safety .container .c-safety .safety-box:nth-child(2):before {
+      content: url("../assets/img/safety/safety-img_2.png");
+      position: absolute;
+      left: -110px;
+      top: -93px;
+      z-index: -1; }
+
+section.section.laser-desc {
+  padding: 5rem 0;
+  background-color: #EDE1DF; }
+
+section.section.main-laser-service .container .c-service__service-box {
+  height: 300px; }
+  section.section.main-laser-service .container .c-service__service-box_bg-1 {
+    background-image: url("../assets/img/main-service/bg_1.png"); }
+  section.section.main-laser-service .container .c-service__service-box_bg-2 {
+    background-image: url("../assets/img/main-service/bg_2.png"); }
+  section.section.main-laser-service .container .c-service__service-box_bg-3 {
+    background-image: url("../assets/img/main-service/bg_3.jpg"); }
+  section.section.main-laser-service .container .c-service__service-box_bg-4 {
+    background-image: url("../assets/img/main-service/bg_4.jpg"); }
+  section.section.main-laser-service .container .c-service__service-box_bg-5 {
+    background-image: url("../assets/img/main-service/bg_5.png"); }
+
+section.section.consultation-form {
+  background-image: url("../assets/img/background/consultation-form-bg.jpg");
+  background-size: cover; }
+
+section.section.about-steffany .container {
+  height: 1000px;
+  background-color: #000; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -505,20 +556,3 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-section.section.advantages {
-  background-image: url("../assets/img/background/advantages-bg.jpg"); }
-
-section.section.almalaser {
-  position: relative;
-  background-color: #EDE1DF; }
-  section.section.almalaser p.extralarge-text-bg {
-    bottom: -100px;
-    left: 700px; }
-  section.section.almalaser .container p.position:before {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 90px;
-    background-color: rgba(125, 137, 158, 0.39);
-    margin: 1.5rem 0; }
