@@ -6,28 +6,33 @@
 @import "grid"
 
 
-
 .container
   width: 100% !important
   padding: 0 30px
+
 .section
   padding: 2rem 0 !important
+
 .paragraph-text-light
-  @include font (Circe, 400, 16, 26)
+  @include font(Circe, 400, 16, 26)
   color: $text-color-white
+
 .paragraph-text-dark
-  @include font (Circe, 400, 16, 26)
+  @include font(Circe, 400, 16, 26)
   color: $text-color-dark
+
 .extralarge-text-bg
   white-space: nowrap
   position: absolute
-  @include font (Circe, 400, 321, 377)
+  @include font(Circe, 400, 321, 377)
   color: $text-color-white
-.section-title-white
-  @include font (Circe, bold, 44, 45)
+
+.section-title-light
+  @include font(Circe, bold, 44, 45)
   color: $text-color-white
+
 .section-title-dark
-  @include font (Circe, bold, 44, 45)
+  @include font(Circe, bold, 44, 45)
   color: $text-color-dark
 
 .custom-icon-number
@@ -38,14 +43,18 @@
   height: 55px
   background-color: #EDE1DF
   border-radius: 50%
+
   p
-   @include font (Circe, bold, 27, 42)
-   color: #9FA6BA
+    @include font(Circe, bold, 27, 42)
+    color: #9FA6BA
+    transform: translateY(8px)
+
 .custom-icon-number-dark
   @extend .custom-icon-number
   background-color: #9FA6BA
+
   p
-    @include font (Circe, bold, 27, 42)
+    @include font(Circe, bold, 27, 42)
     color: #fff
 
 //nav
@@ -58,5 +67,7 @@
 @import sections/almalaser
 @import sections/choose-service
 @import sections/consultation
+@import sections/discount
+
 
 @import "media"
