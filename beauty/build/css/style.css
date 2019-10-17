@@ -337,9 +337,15 @@ section.section.discount {
   background-image: url("../assets/img/bg-discount.jpg"); }
 
 header .icon {
-  width: 12px;
-  height: 15px;
   margin-right: 10px; }
+
+header .icon-loc {
+  width: 10px;
+  height: 13px; }
+
+header .icon-phone {
+  width: 14px;
+  height: 13px; }
 
 header .icon-arrow {
   width: 12px;
@@ -347,7 +353,9 @@ header .icon-arrow {
 
 header .container {
   display: flex;
-  max-width: 1260px !important; }
+  max-width: 1260px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 header .c-row {
   display: flex;
@@ -358,15 +366,15 @@ header .c-row {
     header .c-row ul.header-contact-list:nth-last-child(1) {
       margin-right: 0; }
     header .c-row ul.header-contact-list li {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       margin-right: 25px; }
       header .c-row ul.header-contact-list li a {
-        font-family: "Circe";
+        font-family: "Circe-Regular";
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 14px;
-        line-height: 22px;
+        line-height: 14px;
         color: #556278; }
   header .c-row nav.header-nav ul.header-nav-list {
     display: flex;
@@ -376,9 +384,9 @@ header .c-row {
       align-items: center;
       margin-right: 25px; }
       header .c-row nav.header-nav ul.header-nav-list li a {
-        font-family: "Circe";
+        font-family: "Circe-Regular";
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 16px;
         line-height: 25px;
         color: #556278; }
@@ -458,105 +466,3 @@ header .c-row {
     font-size: 27px;
     line-height: 42px;
     color: #fff; }
-
-header .icon {
-  width: 12px;
-  height: 15px;
-  margin-right: 10px; }
-
-header .icon-arrow {
-  width: 12px;
-  margin-left: 6px; }
-
-header .container {
-  display: flex;
-  max-width: 1260px !important; }
-
-header .c-row {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto; }
-  header .c-row ul.header-contact-list {
-    display: flex; }
-    header .c-row ul.header-contact-list:nth-last-child(1) {
-      margin-right: 0; }
-    header .c-row ul.header-contact-list li {
-      display: inline-flex;
-      align-items: center;
-      margin-right: 25px; }
-      header .c-row ul.header-contact-list li a {
-        font-family: "Circe";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color: #556278; }
-  header .c-row nav.header-nav ul.header-nav-list {
-    display: flex;
-    margin-right: 0; }
-    header .c-row nav.header-nav ul.header-nav-list li {
-      display: inline-flex;
-      align-items: center;
-      margin-right: 25px; }
-      header .c-row nav.header-nav ul.header-nav-list li a {
-        font-family: "Circe";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-        color: #556278; }
-
-section.section.advantages {
-  background-image: url("../assets/img/background/advantages-bg.jpg"); }
-
-section.section.almalaser {
-  position: relative;
-  background-color: #EDE1DF; }
-  section.section.almalaser p.extralarge-text-bg {
-    bottom: -100px;
-    left: 700px; }
-  section.section.almalaser .container p.position:before {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 90px;
-    background-color: rgba(125, 137, 158, 0.39);
-    margin: 1.5rem 0; }
-
-section.section.choose-service .container .icon-service-choose {
-  height: 190px; }
-
-section.section.choose-service .container .choose-zone-box {
-  cursor: pointer; }
-  section.section.choose-service .container .choose-zone-box:hover .choose-zone-box__desc {
-    color: #F6AE9F; }
-  section.section.choose-service .container .choose-zone-box__desc {
-    font-family: "Cormorant Garamond";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    color: #556278;
-    cursor: pointer; }
-
-section.section.consultation .custom-icon-number, section.section.consultation .custom-icon-number-dark {
-  width: 27px;
-  height: 27px; }
-  section.section.consultation .custom-icon-number p, section.section.consultation .custom-icon-number-dark p {
-    font-family: "Circe";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 26px; }
-
-section.section.consultation .consultation-top {
-  background-color: #9FA6BA; }
-
-section.section.consultation .consultation-middle {
-  background-color: #A9A8C6; }
-
-section.section.consultation .consultation-bottom {
-  background-color: #EDE1DF; }
-
-section.section.discount {
-  background-image: url("../assets/img/bg-discount.jpg"); }
