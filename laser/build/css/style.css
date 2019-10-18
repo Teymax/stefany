@@ -288,7 +288,7 @@ table {
 
 @media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1260px !important; } }
+    max-width: 1280px !important; } }
 
 .container {
   padding: 0 30px; }
@@ -350,6 +350,14 @@ table {
   line-height: 45px;
   color: #ffffff; }
 
+.h3-title {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff; }
+
 .extralarge-text-bg {
   white-space: nowrap;
   position: absolute;
@@ -399,6 +407,31 @@ table {
   background-color: #EDE1DF; }
   .custom-bg-light p {
     color: #9FA6BA; }
+
+ul.list-outside {
+  list-style-position: inside !important; }
+  ul.list-outside li {
+    list-style: outside; }
+
+@media (max-width: 399px) {
+  .paragraph-text {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px; }
+  .section-title {
+    font-family: "CormorantGaramond";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 30px; }
+  .section-subtitle {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px; } }
 
 header .icon {
   margin-right: 10px; }
@@ -591,8 +624,19 @@ section.section.advantages {
     font-style: normal;
     font-weight: 700;
     font-size: 75px;
-    line-height: 90px;
+    line-height: 80px;
     color: #ffffff; }
+  section.section.advantages .container .h3-title {
+    text-transform: uppercase; }
+  section.section.advantages .container .c-boxes {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin-left: 200px; }
+    section.section.advantages .container .c-boxes img {
+      position: absolute;
+      z-index: -1;
+      left: -245px; }
 
 section.section.almalaser {
   position: relative;
@@ -654,6 +698,13 @@ section.section.consultation .consultation-middle {
 
 section.section.consultation .consultation-bottom {
   background-color: #EDE1DF; }
+  section.section.consultation .consultation-bottom .container .white-block-design {
+    width: 504px;
+    height: 704px;
+    margin-left: auto; }
+    section.section.consultation .consultation-bottom .container .white-block-design img {
+      top: 30px;
+      right: -20px; }
 
 section.section.discount {
   background-image: url("../assets/img/discount-bg.jpg"); }
@@ -691,10 +742,6 @@ section.section.laser-desc {
     height: 500px; }
     section.section.laser-desc .container .white-block-design img {
       top: 50px; }
-  section.section.laser-desc .container ul {
-    list-style-position: inside !important; }
-    section.section.laser-desc .container ul li {
-      list-style: outside; }
 
 section.section.main-laser-service .c-service__service-box {
   height: 300px; }
@@ -718,6 +765,9 @@ section.section.consultation-form {
   padding: 8rem 0;
   background-image: url("../assets/img/background/consultation-form-bg.jpg");
   background-size: cover; }
+
+section.section.about-steffany {
+  padding: 4rem 0; }
 
 footer.footer {
   padding-top: 4rem; }

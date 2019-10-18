@@ -7,8 +7,7 @@
 
 @media only screen and (min-width : 1200px)
   .container
-    max-width: 1260px !important
-
+    max-width: 1280px !important
 
 .container
 
@@ -17,80 +16,13 @@
 .section
   padding: 4rem 0
 
-.icon
-  display: inline-block
-  width: 15px
-  height: 19px
 
-.text-dashed
-  border-bottom: 1px dashed #000080
-.small-text
-  @include font(Circe, 400, 14, 22)
-.text-w-bold
-  font-weight: 700 !important
-.text-w-light
-  font-weight: 300 !important
-.text-w-regular
-  font-weight: 400 !important
-.text-color-light
-  color: $text-color-white !important
-.text-color-dark
-  color: $text-color-dark !important
-
-.paragraph-text
-  @include font(Circe, 400, 16, 26)
-  color: $text-color-white
-
-
-.section-title
-  @include font (CormorantGaramond, bold, 44, 53)
-  color: $text-color-white
-.section-subtitle
-  @include font (Circe, 400, 20, 45)
-  color: $text-color-white
-
-.extralarge-text-bg
-  white-space: nowrap
-  position: absolute
-  @include font(Circe, 900, 321, 377)
-  color: $text-color-white
-
-.custom-icon-number
-  display: inline-flex
-  justify-content: center
-  align-items: center
-  width: 55px
-  height: 55px
-  background-color: #EDE1DF
-  border-radius: 50%
-  p
-    @include font(Circe, 900, 27, 42)
-    color: $text-color-dark
-    transform: translateY(9px)
-
-.white-block-design
-  position: relative
-  background-color: #fff
-  img
-    position: absolute
-  p
-    @include font(Circe, bold, 27, 42)
-    color: #9FA6BA
-
-.custom-bg-dark
-  background-color: #9FA6BA
-  p
-    color: #EDE1DF
-
-.custom-bg-light
-  background-color: #EDE1DF
-  p
-    color: #9FA6BA
 
 //nav
 //  background-color: $text-color-white !important
 //  box-shadow: none !important
 
+@import 'custom_classes'
 
 @import 'sections/header'
 @import 'sections/advantages'
