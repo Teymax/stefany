@@ -15,7 +15,7 @@
   padding: 0 30px
 
 .section
-  padding: 2rem 0
+  padding: 4rem 0
 
 .icon
   display: inline-block
@@ -63,19 +63,29 @@
   height: 55px
   background-color: #EDE1DF
   border-radius: 50%
+  p
+    @include font(Circe, 900, 27, 42)
+    color: $text-color-dark
+    transform: translateY(9px)
 
+.white-block-design
+  position: relative
+  background-color: #fff
+  img
+    position: absolute
   p
     @include font(Circe, bold, 27, 42)
     color: #9FA6BA
-    transform: translateY(8px)
 
-.custom-icon-number-dark
-  @extend .custom-icon-number
+.custom-bg-dark
   background-color: #9FA6BA
-
   p
-    @include font(Circe, bold, 27, 42)
-    color: #fff
+    color: #EDE1DF
+
+.custom-bg-light
+  background-color: #EDE1DF
+  p
+    color: #9FA6BA
 
 //nav
 //  background-color: $text-color-white !important
@@ -89,6 +99,7 @@
 @import 'sections/consultation'
 @import 'sections/discount'
 @import 'sections/safety'
+@import 'sections/accordion-answer'
 @import 'sections/laser-description'
 @import 'sections/main-laser-service'
 @import 'sections/consultation-form'
