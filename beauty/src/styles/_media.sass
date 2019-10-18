@@ -3,10 +3,18 @@
 
 @include tablet
 
-
+@media(max-width: 880px)
+	.grid-number
+		top: 25px
+		left: 18px
+		letter-spacing: 1px
 
 @include mobile-medium
-
+    @media(max-width: 767px)
+        .grid-number
+            top: 62px
+            left: 15px
+            letter-spacing: 2px
 
 
 @include desktop

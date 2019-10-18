@@ -1,6 +1,5 @@
 .service-list
 	.container
-		width: 100%
 		max-width: 1470px
 	.h-title
 		position: relative
@@ -9,31 +8,24 @@
 		line-height: 33px !important
 		color: $color-white
 		display: -webkit-box  !important
-    -webkit-line-clamp: 3 !important
-    overflow: hidden !important
-    -webkit-box-orient: vertical !important
+		-webkit-line-clamp: 3 !important
+		overflow: hidden !important
+		-webkit-box-orient: vertical !important
 	p
 		position: relative
 		z-index: 2
 		display: -webkit-box
-    -webkit-line-clamp: 3
-    overflow: hidden
-    -webkit-box-orient: vertical
+		-webkit-line-clamp: 3
+		overflow: hidden
+		-webkit-box-orient: vertical
 		line-height: 20px
 		color: $color-white
 	.button
 		position: relative
 		z-index: 2
 	.row
-		width: 100%
-		.col
-			display: flex
-			flex-direction: column
-			align-items: flex-start
-			justify-content: space-between
-			width: 100%
-			max-width: 458px
-			height: 308px
+		.service-item
+			height: 295px
 			overflow: hidden
 			padding-top: 33px
 			padding-bottom: 45px
@@ -41,9 +33,6 @@
 			.service-btn-wrap
 				position: relative
 				z-index: 2
-				display: flex
-				align-items: center
-				justify-content: flex-start
 				.button
 					cursor: pointer
 					width: 38px
@@ -52,7 +41,7 @@
 					padding: 0
 					& svg 
 						width: 13px
-    				height: 13px
+    					height: 13px
 						.st0 
 							fill: $color-white
 				span
@@ -66,23 +55,9 @@
 				z-index: 1
 				width: 100%
 				max-width: 100%
-		.col1
-			width: 100%
-			max-width: 918px
-		.col2
-			width: 100%
-			max-width: 522px
+		.service-item-2
 			.button 
 				background: #9FA6BA
 				border: 1px solid rgba(255, 255, 255, 0.3)
 				&:hover
 					box-shadow: 0 0 10px rgba(255, 255, 255, 0.3)
-		.col3
-			width: 100%
-			max-width: 458px
-		.col4
-			width: 100%
-			max-width: 460px
-		.col5
-			width: 100%
-			max-width: 522px

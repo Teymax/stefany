@@ -7,9 +7,9 @@
     <title>Stefany | Beauty</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript"></script>
-    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -68,9 +68,9 @@
       </div>
     </header>
     <div class="service-list">
-      <div class="container">
-        <div class="row service-list-block-1">
-          <div class="col col1">
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-8 service-item d-flex flex-column align-items-start justify-content-between bg-settings" style="background: url('./assets/img/background/serviceList/item-1.jpg') ">
             <div class="service-list-titles">
               <div class="h-title">
                  Окрашивание и уход <br/>
@@ -80,28 +80,26 @@
                  Колорирование любой сложности и <br/>
                 спа-процедуры для волос
               </p>
-            </div><a class="button">Записаться</a><img src="./assets/img/background/serviceList/item-1.jpg" alt="service-list-item">
+            </div><a class="button">Записаться</a>
           </div>
-          <div class="col col2">
+          <div class="col-4 service-item service-item-2 d-flex flex-column align-items-start justify-content-between bg-settings" style="background: url('./assets/img/background/serviceList/item-2.jpg') ">
             <div class="service-list-titles">
               <div class="h-title">Педикюр</div>
               <p>Уход за ногтями и стопами</p>
-            </div><a class="button">Записаться</a><img src="./assets/img/background/serviceList/item-2.jpg" alt="service-list-item">
+            </div><a class="button">Записаться</a>
           </div>
-        </div>
-        <div class="row service-list-block-2">
-          <div class="col col3">
+          <div class="col-4 service-item d-flex flex-column align-items-start justify-content-between bg-settings" style="background: url('./assets/img/background/serviceList/item-3.jpg') ">
             <div class="service-list-titles">
               <div class="h-title">Маникюр</div>
               <p>Любой вид маникюра и покрытия</p>
             </div>
-            <div class="service-btn-wrap"><a class="button"> 
+            <div class="service-btn-wrap d-flex align-items-center justify-content-start"><a class="button"> 
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
                   <style type="text/css">.st0{fill:#1B3EBF;}</style>
                   <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
-                </svg></a><span>200 - 350 грн</span></div><img src="./assets/img/background/serviceList/item-3.jpg" alt="service-list-item">
+                </svg></a><span>200 - 350 грн</span></div>
           </div>
-          <div class="col col4">
+          <div class="col-4 service-item d-flex flex-column align-items-start justify-content-between bg-settings" style="background: url('./assets/img/background/serviceList/item-4.jpg') ">
             <div class="service-list-titles">
               <div class="h-title">
                 Стрижки и <br/>
@@ -112,13 +110,13 @@
                 плетения и прически
               </p>
             </div>
-            <div class="service-btn-wrap"><a class="button"> 
+            <div class="service-btn-wrap d-flex align-items-center justify-content-start"><a class="button"> 
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
                   <style type="text/css">.st0{fill:#1B3EBF;}</style>
                   <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
-                </svg></a><span>200 - 350 грн</span></div><img src="./assets/img/background/serviceList/item-4.jpg" alt="service-list-item">
+                </svg></a><span>200 - 350 грн</span></div>
           </div>
-          <div class="col col5">
+          <div class="col-4 service-item d-flex flex-column align-items-start justify-content-between bg-settings" style="background: url('./assets/img/background/serviceList/item-5.jpg') ">
             <div class="service-list-titles">
               <div class="h-title">
                  Моделирование <br/>
@@ -131,50 +129,50 @@
                 окрашивание бровей и ресниц
               </p>
             </div>
-            <div class="service-btn-wrap"><a class="button"> 
+            <div class="service-btn-wrap d-flex align-items-center justify-content-start"><a class="button"> 
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
                   <style type="text/css">.st0{fill:#1B3EBF;}</style>
                   <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
-                </svg></a><span>200 - 350 грн</span></div><img src="./assets/img/background/serviceList/item-5.jpg" alt="service-list-item">
+                </svg></a><span>200 - 350 грн</span></div>
           </div>
         </div>
       </div>
     </div>
     <div class="info-block">
       <div class="container">
-        <div class="row">
+        <div class="row d-flex align-items-start justify-content-end no-gutters">
           <div class="col col-img"><img src="./assets/img/infoblock/item-1.jpg" alt="item"></div>
           <div class="col col-info">
             <div class="h-title">Салон красоты в Житомире</div>
             <p>Привет! Мы — сеть центров красоты Steffany. Нам уже не терпится познакомиться с вами вживую. Приходите к нам, когда захотите сбежать от дел и обязанностей. В Steffany вы должны только одно — расслабиться и наслаждаться уходом за собой.</p>
-            <p class="p-bold">Вот несколько предлогов заскочить к нам на бокал игристого:</p>
+            <p class="p-bold pt-50">Вот несколько предлогов заскочить к нам на бокал игристого:</p>
           </div>
         </div><span class="big-text">Colo  </span>
       </div>
     </div>
     <div class="info-block info-block-2">
       <div class="container">
-        <div class="row">
+        <div class="row d-flex align-items-start justify-content-start no-gutters">
           <div class="col col-info">
             <div class="info-list">
-              <div class="info-list-item">
-                <div class="info-list-number"><span>03</span></div>
+              <div class="info-list-item d-flex align-items-start justify-content-start">
+                <div class="info-list-number d-flex align-items-center justify-content-center"><span>03</span></div>
                 <div class="info-list-cnt">
-                  <p class="p-bold">Услуги для волос</p>
+                  <p class="p-bold thin-text pb-3">Услуги для волос</p>
                   <p>Вы можете сделать стрижку и окрашивание любой сложности, разные спа-процедуры для вашего типа волос, перманентную завивку, вечерние и свадебные прически, накрутки и плетения </p>
                 </div>
               </div>
-              <div class="info-list-item">
-                <div class="info-list-number"><span>04</span></div>
+              <div class="info-list-item d-flex align-items-start justify-content-start">
+                <div class="info-list-number d-flex align-items-center justify-content-center"><span>04</span></div>
                 <div class="info-list-cnt">
-                  <p class="p-bold">Услуги для ногтей</p>
+                  <p class="p-bold thin-text pb-3">Услуги для ногтей</p>
                   <p>Вас ждет покрытие гель-лаком или обычным лаком, все виды маникюра и педикюра, укрепление ногтевой пластины, наращивание ногтей гелем и полигелем, а также парафинотерапия для рук и стоп</p>
                 </div>
               </div>
-              <div class="info-list-item">
-                <div class="info-list-number"><span>05</span></div>
+              <div class="info-list-item d-flex align-items-start justify-content-start">
+                <div class="info-list-number d-flex align-items-center justify-content-center"><span>05</span></div>
                 <div class="info-list-cnt">
-                  <p class="p-bold">Услуги для лица</p>
+                  <p class="p-bold thin-text pb-3">Услуги для лица</p>
                   <p>Вы можете сделать у нас любой вид классического макияжа, моделирование, коррекцию, художественное оформление и ламинирование бровей, окрашивание бровей хной и краской, а также окрашивание ресниц краской. Просто записывайтесь на любую из них на удобное для вас время!</p>
                 </div>
               </div>
@@ -184,271 +182,106 @@
         </div><span class="big-text">san</span>
       </div>
     </div>
-    <section class="section advantages">
-      <div class="container">
-        <div class="row">
-          <h2 class="section-title-light">Кто сказал, что красота требует жертв?</h2>
-          <p class="paragraph-text-light">В Steffany совсем другой подход к эпиляции</p>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_1.png" alt="advantages-1">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">У нас нет услуги «экстра комфорт», потому что лазер и так полностью безболезненный. Он прогревается до высоких температур, но при касании с кожей охлаждается до температуры -3 градуса.  Благодаря такой мощной системе охлаждения вы почувствуете просто прикосновение. Нано-эпиляция также не приносит болевых ощущений. А если вы хотите обезболивание при шугаринге или восковой эпиляции, мы ее сделаем.</p>
-          </div>
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_2.png" alt="advantages-2">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">Нельзя загорать? Лучше начинать с осени? Забудьте об этих устаревших правилах.  Наш лазер удаляет волосы на коже до 6-го фототипа, а это метисы и мулаты. Так что при вашем загаре он тоже справится. В зависимости от оттенка кожи мастер просто выставит на лазере определенные параметры, чтобы процедура прошла эффективно. Так что можете делать лазерную эпиляцию летом и не бояться негативного эффекта.</p>
-          </div>
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_3.png" alt="advantages-3">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">Наш лазер не сжигает волосяной фолликул, а прогревает его. Когда он видит в фолликуле пигмент, он действует строго на него, не рассеиваясь на пигмент в коже. Это значит, что лазер работает только с волосом и не затрагивает близлежащие ткани. Поэтому лазер не будет влиять на ваши внутренние органы и организм в целом.</p>
-          </div>
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_4.png" alt="advantages-4">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">Поход в салон — это радость, а не обязанность. Мы хотим, чтобы процедуры принесли вам только расслабление и приятные ощущения. Поэтому смело озвучивайте все, что вам необходимо. Чай, кофе, шампанское, поболтать или наоборот помолчать — мы подстроимся под ваше настроение и сделаем сеанс эпиляции максимально комфортным.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section almalaser">
-      <p class="extralarge-text-bg">alma laser</p>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h2 class="section-title-dark">Мы проводим удаление волос лазером от Alma Lasers</h2>
-            <p class="paragraph-text-dark mb-1 position">Лазерная эпиляция в Steffany безболезненная и всесезонная благодаря нашему лазеру Soprano Ice Baby от израильской компании Alma Lasers. Его заводы находятся в Израиле, Германии и США. Это диодный лазер 2019 года выпуска.
-              <p class="paragraph-text-dark mb-1">Почему мы выбрали его?</p>
-              <ul>
-                <li>
-                  <p class="paragraph-text-dark">Никаких болезненных ощущений.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Работает с кожей от 1-го до 6-го фототипа: от белоснежек до мулаток.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Подходит для чувствительной кожи.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Можно загорать уже на следующий день.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Работает в движении, т.е. быстрее обычного.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark mb-1">Разрушает волосяной фолликул не сжиганием, а прогреванием.</p>
-                </li>
-              </ul>
-              <p class="paragraph-text-dark">Наш лазер — доказательство того, что лазерная эпиляция может быть комфортной.</p>
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_1.png" alt="position-img-1"></div>
-        </div>
-      </div>
-    </section>
-    <section class="section choose-service">
-      <div class="container">
-        <h2 class="section-title-dark center mb-2">Будьте уверены в чистоте и безопасности каждой процедуры</h2>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>1</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>2</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>3</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>4</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>5</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>6</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-        </div>
-        <h2 class="section-title-dark center mb-2">Выбирайте зону для эпиляции</h2>
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_1.png" alt="choose-zone_1">
-            <p class="choose-zone-box__desc center">Зога лица</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_2.png" alt="choose-zone_2">
-            <p class="choose-zone-box__desc center">Зога рук</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_3.png" alt="choose-zone_3">
-            <p class="choose-zone-box__desc center">Зога спины</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_4.png" alt="choose-zone_4">
-            <p class="choose-zone-box__desc center">Зога живота</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_5.png" alt="choose-zone_5">
-            <p class="choose-zone-box__desc center">Интимная зона</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_6.png" alt="choose-zone_6">
-            <p class="choose-zone-box__desc center">Зога ног</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section consultation">
-      <div class="consultation-top mb-7">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h2 class="section-title-light mb-1">Лазерная эпиляция начинается с консультации</h2>
-              <p class="paragraph-text-light mb-2">Главная задача консультации — чтобы вы были спокойны и уверенны в процедуре</p>
-              <p class="paragraph-text-light mb-1">Консультация — это первый и обязательный этап лазерной эпиляции. На ней вы получаете ответы на все свои вопросы, а мы убеждаемся, какой курс процедур вам назначить для наилучшего результата.</p>
-              <p class="paragraph-text-light mb-1">Как же проходит консультация?</p>
-              <div class="custom-icon-number mb-1">
-                <p>1</p>
-              </div>
-              <p class="paragraph-text-light mb-1">Мы знакомимся и заполняем карту клиента</p>
-              <p class="paragraph-text-light mb-1">Для начала мы выясняем, есть ли у вас опыт процедуры лазерной эпиляции. От этого зависит вся дальнейшая беседа. Ведь если вы уже удаляли волосы лазером, наверняка точно понимаете свои требования к процедуре. А если нет — у вас может быть много вопросов.</p>
-              <p class="paragraph-text-light mb-1">Во время разговора мы попутно заполняем вашу индивидуальную карту клиента. Там мы собираем анамнез — информацию о состоянии вашего здоровья. Мы общаемся с вами и проводим поверхностный осмотр, чтобы узнать сведения о вашей коже, возможных хронических заболеваниях, приеме препаратов, гормональном фоне, аллергических реакциях и т.д.. Все это поможет сделать дальнейшую процедуру максимально безопасной.</p>
-            </div>
-            <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_2.png" alt="position-img-2"></div>
-          </div>
-        </div>
-      </div>
-      <div class="consultation-middle">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_3.png" alt="position-img-3"></div>
-            <div class="col-sm-12 col-md-6">
-              <div class="custom-icon-number mb-1">
-                <p>2</p>
-              </div>
-              <p class="paragraph-text-light mb-1">Рассказываем о лазере и его эффекте</p>
-              <p class="paragraph-text-light mb-1">Мы рассказываем, как работает лазер и как будут уходить волосы. Каждая вторая наша клиентка с опытом лазерной эпиляции удивляется, что мы обещаем полную безболезненность и всесезонность. Однако это правда: лазер не ощущается на коже и его можно делать летом, а уже на следующий день идти на пляж.</p>
-              <p class="paragraph-text-light mb-1">Также подробно рассказываем, как будут уходить волосы. Этот процесс тоже отличается от лазеров предыдущего поколения. Мы не выжигаем волосяной фолликул, а прогреваем его. Поэтому эффект вы увидите на 10-14 день, когда кожа начнет выталкивать мертвые волосы. На консультации вы подробно узнаете о таких моментах и зададите необходимые вопросы.</p>
-              <div class="custom-icon-number mb-1">
-                <p>3</p>
-              </div>
-              <p class="paragraph-text-light mb-1">Сообщаем обо всех противопоказаниях</p>
-              <p class="paragraph-text-light mb-1">У нашего лазера есть абсолютные и относительные противопоказания. Большинство из них нужно обсуждать индивидуально. Мы поговорим об этом на консультации и вместе поймем, подходит ли вам удаление волос с помощью лазера.</p>
-              <p class="paragraph-text-light mb-1">После этого вы подписываете информационное соглашение о том, что мы провели с вами беседу и ознакомили со всеми тонкостями и особенностями процесса. Спрашивайте нас обо всем, что вас интересует. Нам важно, чтобы вы действительно были довольны результатом.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="consultation-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <div class="custom-icon-number-dark mb-1">
-                <p>4</p>
-              </div>
-              <p class="paragraph-text-dark mb-1">Составляем график процедур</p>
-              <p class="paragraph-text-dark mb-1">Когда у нас есть вся необходимая информация о вас, мы можем сказать вам количество процедур в курсе. В среднем это 6-8 сеансов, но может понадобиться и больше. Все зависит от ваших волос, кожи, а также общих физиологических особенностей роста волос.</p>
-              <p class="paragraph-text-dark mb-1">Также на консультации мы определяем, как часто вам нужно ходить на процедуры лазерной эпиляции. Постарайтесь придерживаться этого графика — от него реально зависит результат всей затеи.</p>
-              <div class="custom-icon-number-dark mb-1">
-                <p>5</p>
-              </div>
-              <p class="paragraph-text-dark mb-1">Проводим тест-драйв</p>
-              <p class="paragraph-text-dark mb-1">Наш лазер подходит для чувствительной кожи и вообще является спасением от раздражений и вросших волос. Однако мы обязательно проводим тест-драйв на небольшом участке вашей кожи. Так мы увидим, как ваша кожа реагирует на лазер и готова ли она к процедуре. Лично мы уверены: все будет хорошо!</p>
-            </div>
-            <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_4.png" alt="position-img-4"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section discount">
-      <div class="container">
-        <div class="row flex-column align-items-center">
-          <h2 class="section-title-dark">Комплексные предложения</h2>
-          <p class="paragraph-text-dark">Только 1 день скидки на пакеты обученияот 18% до 27%</p>
-          <p class="paragraph-text-dark">22 : 22 : 22</p><img src="assets/img/check-female.png" alt="check-female">
-        </div>
+    <div class="info-block-grid grid-bg-1">
+      <div class="container p-0">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p class="paragraph-text-dark">Бикини глубокое</p>
-                      <p class="paragraph-text-dark">Подмышечные области</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
-                </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+          <div class="col-md-6 col-sm-12 grid-cnt order-sm-1">
+            <div class="h-title">
+               Маникюр <br/>
+              классический
+            </div>
+            <div class="proccess-info">200 - 350 грн<span>35 минут</span></div>
+            <p>
+               Наши мастера используют <br/>
+              различные техники наращивания <br/>
+              ногтей  и нанесения.
+            </p><a class="btn-callback" href="#"><span><span>записаться</span></span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg></a>
+          </div>
+          <div class="col-md-6 col-sm-12 grid-img order-sm-2"><img src="assets/img/infoblock/grid-item-1.jpg" alt="grid-item"></div>
+          <div class="col-md-4 col-sm-12 grid-cnt grid-purple grid-cnt-1 order-sm-3">
+            <div class="grid-number white-text">01.</div>
+            <div class="grid-title white-text">
+              Мужская <br/>
+              стрижка
+            </div>
+            <div class="proccess-info">200 - 350 грн</div><a class="btn-callback btn-callback-white" href="#"><span><span>записаться</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg></a>
+          </div>
+          <div class="col-md-4 col-sm-12 grid-img order-sm-4"><img src="assets/img/infoblock/grid-item-2.jpg" alt="grid-item"></div>
+          <div class="col-md-4 col-sm-12 grid-cnt grid-cnt-2 order-sm-7">
+            <div class="grid-number">03.</div>
+            <div class="grid-title">
+              Прическа <br/>
+              вечерняя
+            </div>
+            <div class="proccess-info">1200 - 1350 грн</div>
+            <div class="proccess-info"><span>45 минут</span></div>
+          </div>
+          <div class="col-md-4 col-sm-12 grid-img order-sm-6"><img src="assets/img/infoblock/grid-item-3.jpg" alt="grid-item"></div>
+          <div class="col-md-4 col-sm-12 grid-cnt grid-cnt-3 order-sm-5">
+            <div class="grid-number">02.</div>
+            <div class="grid-title">
+              Педикюр <br/>
+              классический
+            </div>
+            <div class="proccess-info">300 - 350 грн</div>
+            <div class="proccess-info"><span>15 минут</span></div>
+          </div>
+          <div class="col-md-4 col-sm-12 grid-img order-sm-8"><img src="assets/img/infoblock/grid-item-4.jpg" alt="grid-item"></div>
+        </div>
+      </div>
+    </div>
+    <div class="benefits">
+      <div class="container">
+        <div class="row">
+          <div class="h-title h-center white-text">Женщина должна быть счастливой</div>
+        </div>
+        <div class="row">
+          <div class="h-subtitle h-center white-text">На этом убеждении в Steffany строится каждая мелочь </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12 mb-3 d-flex align-items-start justify-content-end">
+            <div class="bnf-img"><img src="./assets/img/bnf/item-1.png" alt="bnf-item"></div>
+            <div class="bnf-cnt">
+              <div class="bnf-number white-text">01</div>
+              <div class="bnf-title white-text">Стерильно и безопасно</div>
+              <p class="white-text thin-text">В нашем салоне красоты работает лаборатория стерилизации. В ней мы каждый день очищаем инструменты для разных процедур: ножницы для стрижек, инструменты для маникюра и педикюра, пинцеты для оформления бровей. Многие материалы для процедур одноразовые: съемные абразивы (пилочки) для маникюра и педикюра, апельсиновые палочки, ватные диски и палочки, перчатки и маски для мастера </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p class="paragraph-text-dark">Бикини глубокое</p>
-                      <p class="paragraph-text-dark">Подмышечные области</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
-                </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+          <div class="col-lg-6 col-md-12 col-sm-12 mb-3 d-flex align-items-start justify-content-end">
+            <div class="bnf-img"><img src="./assets/img/bnf/item-2.png" alt="bnf-item"></div>
+            <div class="bnf-cnt">
+              <div class="bnf-number white-text">02</div>
+              <div class="bnf-title white-text">Экономия времени</div>
+              <p class="white-text thin-text">За один визит вы можете пройти все нужные услуги сразу и выполнить план бьюти-процедур на месяц вперед. Также у нас вы можете сделать маникюр и педикюр одновременно. Всего за 2 часа наши мастера сделают параллельно обработают ваши ручки и ножки, чтобы сэкономить ваше время. Вам останется только следить, чтобы одна рука была свободна  — ей же нужно держать бокал шампанского </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p class="paragraph-text-dark">Бикини глубокое</p>
-                      <p class="paragraph-text-dark">Подмышечные области</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
-                </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+          <div class="col-lg-6 col-md-12 col-sm-12 mb-3 d-flex align-items-start justify-content-end">
+            <div class="bnf-img"><img src="./assets/img/bnf/item-3.png" alt="bnf-item"></div>
+            <div class="bnf-cnt">
+              <div class="bnf-number white-text">03</div>
+              <div class="bnf-title white-text">Комфорт и отдых</div>
+              <p class="white-text thin-text">Визит в салон красоты должен быть радостным событием на высшем уровне, а не очередной обязанностью. Переступив порог Steffany, вы можете наконец отдохнуть и расслабиться. Вас ждут шампанское, чай, кофе, свежие журналы и музыка. Каждый мастер постарается уловить ваше настроение. Говорите нам, что вас беспокоит в салоне — и мы постараемся это исправить </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 mb-3 d-flex align-items-start justify-content-end">
+            <div class="bnf-img"><img src="./assets/img/bnf/item-4.png" alt="bnf-item"></div>
+            <div class="bnf-cnt">
+              <div class="bnf-number white-text">04</div>
+              <div class="bnf-title white-text">Сеть с разными направлениями</div>
+              <p class="white-text thin-text">Кроме бьюти-услуг в сети Steffany есть другие центры красоты и здоровья: центры лазерной эпиляции и центр подологии. В них работают отличные мастера, в том числе дерматологи, подологи, массажисты. Бывают случаи, когда наши гости просят контакт хорошего специалиста. У нас таких контактов десятки! Мы с радостью посоветуем вам нужного мастера и поможем записаться </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <footer class="page-footer">
       <div class="container">
         <div class="row">
