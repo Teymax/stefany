@@ -6,36 +6,593 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>steffany</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/materialize/css/materialize.css">
-    <script type="text/javascript"></script>
-    <script type="text/javascript" src="/materialize/js/materialize.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!--header-->
+    <!--  .container-->
+    <!--    .c-logo-->
+    <!--      img.logo-header(src="assets/img/logo/logo.png" alt="Image Title")-->
+    <!--    .c-row-->
+    <!--      ul.header-contact-list-->
+    <!--        li-->
+    <!--          img.icon(src="assets/icon/map.png" alt="h-map")-->
+    <!--          a(href="#") Ивано-Франковск-->
+    <!--        li-->
+    <!--          img.icon(src="assets/icon/phone.png" alt="h-map")-->
+    <!--          a(href="#") 098 007 07 53-->
+    <!--        li-->
+    <!--          a(href="#").header-lang-->
+    <!---->
+    <!--      nav.header-nav-->
+    <!--        ul.header-nav-list-->
+    <!--          li-->
+    <!--            a(href="#") О нас-->
+    <!--            img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")-->
+    <!--          li-->
+    <!--            a(href="#") Услуги-->
+    <!--            img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")-->
+    <!--          li-->
+    <!--            a(href="#") Цены-->
+    <!--            img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")-->
+    <!--          li-->
+    <!--            a(href="#") Контакты-->
+    <!---->
+    <!---->
+    <!---->
     <header>
-      <div class="container">
-        <div class="c-logo"><img class="logo-header" src="assets/img/logo/logo.png" alt="Image Title"></div>
+      <div class="container"><a class="c-logo" href="#"><img class="logo-header" src="assets/img/logo/header-logo.png" alt="Image Title"></a>
         <div class="c-row">
           <ul class="header-contact-list">
-            <li><img class="icon" src="assets/icon/map.png" alt="h-map"><a href="#">Ивано-Франковск</a></li>
-            <li><img class="icon" src="assets/icon/phone.png" alt="h-map"><a href="#">098 007 07 53</a></li>
-            <li><a class="header-lang" href="#"></a></li>
+            <li><img class="icon icon-loc" src="assets/icon/map.png" alt="h-map"><a href="#">Ивано-Франковск<img src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down"></a>
+              <ul class="dropdown-menu-list">
+                <li><a href="#">Ивано-Франковск2</a></li>
+                <li><a href="#">Ивано-Франковск3</a></li>
+                <li><a href="#">Ивано-Франковск4</a></li>
+                <li><a href="#">Ивано-Франковск5</a></li>
+              </ul>
+            </li>
+            <li><img class="icon icon-phone" src="assets/icon/phone.png" alt="h-map"><a href="tel:0980070753">098 007 07 53</a></li>
+            <li class="header-lang-wrap"><a class="header-lang" href="#">RU</a>
+              <ul class="dropdown-menu-list">
+                <li><a href="#">UA</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </li>
           </ul>
-          <nav class="header-nav">
-            <ul class="header-nav-list">
-              <li><a href="#">О нас</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-              <li><a href="#">Услуги</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-              <li><a href="#">Цены</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
+          <div class="header-nav-wrap">
+            <nav class="header-nav">
+              <ul class="header-nav-list">
+                <li><a href="#">О нас</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
+                <li class="drop-menu"><a href="#">Услуги</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list">
+                    <li><a href="#">Услуга 2</a></li>
+                    <li><a href="#">Услуга 3</a></li>
+                    <li><a href="#">Услуга 4</a></li>
+                    <li><a href="#">Услуга 5</a></li>
+                  </ul>
+                </li>
+                <li class="drop-menu"><a href="#">Цены</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list">
+                    <li><a href="#">Цены 2</a></li>
+                    <li><a href="#">Цены 3</a></li>
+                    <li><a href="#">Цены 4</a></li>
+                    <li><a href="#">Цены 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav><a class="btn-callback" href="#"><span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#1B3EBF;}</style>
+                  <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
+                </svg><span>записаться</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg></a>
+          </div>
         </div>
       </div>
     </header>
-    <footer class="page-footer">
+    <section class="section main-laser-service">
+      <div class="row c-service no-gutters">
+        <div class="col-md-8 col-sm-12 c-service__service-box c-service__service-box_bg-1"></div>
+        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-2"></div>
+        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-3"></div>
+        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-4"></div>
+        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-5"></div>
+      </div>
+    </section>
+    <section class="section laser-desc">
       <div class="container">
         <div class="row">
-          <div class="col l6 s12"></div>
-          <div class="col l4 offset-l2 s12"></div>
+          <div class="col-sm12 col-md-6">
+            <div class="white-block-design"><img src="assets/img/position-img_5.png"></div>
+          </div>
+          <div class="col-sm12 col-md-6">
+            <h2 class="section-title text-color-dark mb-5">Лазерная эпиляция в Житомире</h2>
+            <p class="paragraph-text text-color-dark text-w-bold mb-1">А еще шугаринг, восковая эпиляция, нано-эпиляция и косметология</p>
+            <p class="paragraph-text text-color-dark text-w-light mb-3">Давайте знакомиться! Мы — сеть центров красоты и здоровья Steffany, где на каждое ваше «хочу» найдется процедура. А вы —  та самая девушка, которая заслужила расслабиться и получить качественный профессиональный уход.</p>
+            <p class="paragraph-text text-color-dark text-w-light mb-3">Вы можете прийти в отдельные центры Steffany по трем направлениям:</p>
+            <ul class="list-outside">
+              <li class="paragraph-text text-color-dark text-w-light mb-2">бьюти, где можно сделать маникюр, прическу, стрижку и макияж;</li>
+              <li class="paragraph-text text-color-dark text-w-light mb-2">эпиляция и косметология, где вас ждут ухаживающие процедуры для лица, тела и удаления волос;</li>
+              <li class="paragraph-text text-color-dark text-w-light mb-2">подология, где мы  о здоровье ваших стоп.</li>
+            </ul>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">Остановимся на эпиляции. У нас вы можете безболезненно и в любое время года удалить волосы лазером. Или выбрать другой способ, который вам по душе.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section advantages">
+      <div class="container">
+        <h2 class="section-title text-color-light text-center">Кто сказал, что красота требует жертв?</h2>
+        <p class="paragraph-text text-color-light text-center">В Steffany совсем другой подход к эпиляции</p>
+        <div class="row">
+          <div class="col-md-6 col-sm-12 c-boxes"><img src="assets/img/advantages/advantages_1.png" alt="advantages-1">
+            <p class="advantages-count">01</p>
+            <h3 class="h3-title mb-3">Никакой боли</h3>
+            <p class="paragraph-text text-color-light text-w-light">У нас нет услуги «экстра комфорт», потому что лазер и так полностью безболезненный. Он прогревается до высоких температур, но при касании с кожей охлаждается до температуры -3 градуса.  Благодаря такой мощной системе охлаждения вы почувствуете просто прикосновение. Нано-эпиляция также не приносит болевых ощущений. А если вы хотите обезболивание при шугаринге или восковой эпиляции, мы ее сделаем.</p>
+          </div>
+          <div class="col-md-6 col-sm-12 c-boxes"><img src="assets/img/advantages/advantages_2.png" alt="advantages-2">
+            <p class="advantages-count">02</p>
+            <h3 class="h3-title mb-3">В любое время года</h3>
+            <p class="paragraph-text text-color-light text-w-light">Нельзя загорать? Лучше начинать с осени? Забудьте об этих устаревших правилах.  Наш лазер удаляет волосы на коже до 6-го фототипа, а это метисы и мулаты. Так что при вашем загаре он тоже справится. В зависимости от оттенка кожи мастер просто выставит на лазере определенные параметры, чтобы процедура прошла эффективно. Так что можете делать лазерную эпиляцию летом и не бояться негативного эффекта.</p>
+          </div>
+          <div class="col-md-6 col-sm-12 c-boxes"><img src="assets/img/advantages/advantages_3.png" alt="advantages-3">
+            <p class="advantages-count">03</p>
+            <h3 class="h3-title mb-3">Безопасно для здоровья</h3>
+            <p class="paragraph-text text-color-light text-w-light">Наш лазер не сжигает волосяной фолликул, а прогревает его. Когда он видит в фолликуле пигмент, он действует строго на него, не рассеиваясь на пигмент в коже. Это значит, что лазер работает только с волосом и не затрагивает близлежащие ткани. Поэтому лазер не будет влиять на ваши внутренние органы и организм в целом.</p>
+          </div>
+          <div class="col-md-6 col-sm-12 c-boxes"><img src="assets/img/advantages/advantages_4.png" alt="advantages-4">
+            <p class="advantages-count">04</p>
+            <h3 class="h3-title mb-3">Может, шампанского?</h3>
+            <p class="paragraph-text text-color-light text-w-light">Поход в салон — это радость, а не обязанность. Мы хотим, чтобы процедуры принесли вам только расслабление и приятные ощущения. Поэтому смело озвучивайте все, что вам необходимо. Чай, кофе, шампанское, поболтать или наоборот помолчать — мы подстроимся под ваше настроение и сделаем сеанс эпиляции максимально комфортным.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section almalaser">
+      <p class="extralarge-text-bg">alma laser</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h2 class="section-title text-color-dark">Мы проводим удаление волос лазером от Alma Lasers</h2>
+            <p class="paragraph-text text-color-dark mb-1 position">Лазерная эпиляция в Steffany безболезненная и всесезонная благодаря нашему лазеру Soprano Ice Baby от израильской компании Alma Lasers. Его заводы находятся в Израиле, Германии и США. Это диодный лазер 2019 года выпуска.
+              <p class="paragraph-text text-color-dark mb-1">Почему мы выбрали его?</p>
+              <ul>
+                <li>
+                  <p class="paragraph-text text-color-dark">Никаких болезненных ощущений.</p>
+                </li>
+                <li>
+                  <p class="paragraph-text text-color-dark">Работает с кожей от 1-го до 6-го фототипа: от белоснежек до мулаток.</p>
+                </li>
+                <li>
+                  <p class="paragraph-text text-color-dark">Подходит для чувствительной кожи.</p>
+                </li>
+                <li>
+                  <p class="paragraph-text text-color-dark">Можно загорать уже на следующий день.</p>
+                </li>
+                <li>
+                  <p class="paragraph-text text-color-dark">Работает в движении, т.е. быстрее обычного.</p>
+                </li>
+                <li>
+                  <p class="paragraph-text text-color-dark mb-1">Разрушает волосяной фолликул не сжиганием, а прогреванием.</p>
+                </li>
+              </ul>
+              <p class="paragraph-text text-color-dark">Наш лазер — доказательство того, что лазерная эпиляция может быть комфортной.</p>
+            </p>
+          </div>
+          <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_1.png" alt="position-img-1"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section choose-service">
+      <div class="container">
+        <h2 class="section-title text-color-dark text-center mb-5">Будьте уверены в чистоте и безопасности каждой процедуры</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
+            <div class="custom-icon-number mb-3">
+              <p>1</p>
+            </div>
+            <h4 class="paragraph-text text-color-dark text-w-bold mb-3">Система стерилизации прямо в лазере</h4>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
+            <div class="custom-icon-number mb-3">
+              <p>2</p>
+            </div>
+            <h4 class="paragraph-text text-color-dark text-w-bold mb-3">Обработка лазера и кабинета после каждого клиента</h4>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">Мы обрабатываем 70%-м спиртом наконечник лазера после каждого клиента. Также каждое утро мы готовим рабочий раствор, которым дезинфицируем всю мебель и аппарат на рабочем месте</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
+            <div class="custom-icon-number mb-3">
+              <p>3</p>
+            </div>
+            <h4 class="paragraph-text text-color-dark text-w-bold mb-3">Одноразовые инструменты</h4>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">Во время вашего сеанса мастер использует преимущественно одноразовые инструменты. Бритвенный станок, деревянный шпатель, ватные диски, перчатки утилизируются после вашего визита</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
+            <div class="custom-icon-number mb-3">
+              <p>4</p>
+            </div>
+            <h4 class="paragraph-text text-color-dark text-w-bold mb-3">Защитные очки во время работы лазера</h4>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">Чтобы защитить ваши глаза от лазерных лучей, мастер выдает вам защитные очки. Следите за процедурой безопасно для своего зрения</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
+            <div class="custom-icon-number mb-3">
+              <p>5</p>
+            </div>
+            <h4 class="paragraph-text text-color-dark text-w-bold mb-3">Медкнижка у каждого мастера</h4>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">Медкнижка — обязательное условие при приеме на работу. У всех наших мастеров есть медкнижка, они регулярно проходят медкомиссию и обновляют осмотры</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
+            <div class="custom-icon-number mb-3">
+              <p>6</p>
+            </div>
+            <h4 class="paragraph-text text-color-dark text-w-bold mb-3">Защита родинок от лазерных лучей</h4>
+            <p class="paragraph-text text-color-dark text-w-light mb-1">На консультации мастер осматривает родинки в эпилируемых зонах. Если родинки не возвышаются над кожей, он заклеивает их медицинским пластырем для защиты от лазера Выбирайте зону для эпиляции</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_1.png" alt="choose-zone_1">
+            <p class="choose-zone-box__desc text-center">Зога лица</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_2.png" alt="choose-zone_2">
+            <p class="choose-zone-box__desc text-center">Зога рук</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_3.png" alt="choose-zone_3">
+            <p class="choose-zone-box__desc text-center">Зога спины</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_4.png" alt="choose-zone_4">
+            <p class="choose-zone-box__desc text-center">Зога живота</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_5.png" alt="choose-zone_5">
+            <p class="choose-zone-box__desc text-center">Интимная зона</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_6.png" alt="choose-zone_6">
+            <p class="choose-zone-box__desc text-center">Зога ног</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section consultation">
+      <div class="consultation-top mb-9 pt-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h2 class="section-title text-color-light mb-3">Лазерная эпиляция начинается с консультации</h2>
+              <p class="paragraph-text text-color-light text-w-bold mb-4">Главная задача консультации — чтобы вы были спокойны и уверенны в процедуре</p>
+              <p class="paragraph-text text-color-light text-w-light mb-2">Консультация — это первый и обязательный этап лазерной эпиляции. На ней вы получаете ответы на все свои вопросы, а мы убеждаемся, какой курс процедур вам назначить для наилучшего результата.</p>
+              <p class="paragraph-text text-color-light text-w-light mb-2">Как же проходит консультация?</p>
+              <div class="c-li d-flex align-items-center mb-2 mt-2">
+                <div class="custom-icon-number mb-2">
+                  <p class="paragraph-text text-color-dark">1</p>
+                </div>
+                <p class="paragraph-text text-color-light mb-2 ml-2">Мы знакомимся и заполняем карту клиента</p>
+              </div>
+              <p class="paragraph-text text-color-light text-w-light mb-2">Для начала мы выясняем, есть ли у вас опыт процедуры лазерной эпиляции. От этого зависит вся дальнейшая беседа. Ведь если вы уже удаляли волосы лазером, наверняка точно понимаете свои требования к процедуре. А если нет — у вас может быть много вопросов.</p>
+              <p class="paragraph-text text-color-light text-w-light mb-2">Во время разговора мы попутно заполняем вашу индивидуальную карту клиента. Там мы собираем анамнез — информацию о состоянии вашего здоровья. Мы общаемся с вами и проводим поверхностный осмотр, чтобы узнать сведения о вашей коже, возможных хронических заболеваниях, приеме препаратов, гормональном фоне, аллергических реакциях и т.д.. Все это поможет сделать дальнейшую процедуру максимально безопасной.</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="white-block-design"><img src="assets/img/position-img_2.png" alt="position-img-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consultation-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <div class="white-block-design"><img src="assets/img/position-img_3.png" alt="position-img-3"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 pt-7 pb-7">
+              <div class="c-li d-flex align-items-center mb-2 mt-2">
+                <div class="custom-icon-number mb-2">
+                  <p>2</p>
+                </div>
+                <p class="paragraph-text text-color-light text-w-bold mb-2 ml-2">Рассказываем о лазере и его эффекте</p>
+              </div>
+              <p class="paragraph-text text-color-light text-w-light mb-2">Мы рассказываем, как работает лазер и как будут уходить волосы. Каждая вторая наша клиентка с опытом лазерной эпиляции удивляется, что мы обещаем полную безболезненность и всесезонность. Однако это правда: лазер не ощущается на коже и его можно делать летом, а уже на следующий день идти на пляж.</p>
+              <p class="paragraph-text text-color-light text-w-light mb-2">Также подробно рассказываем, как будут уходить волосы. Этот процесс тоже отличается от лазеров предыдущего поколения. Мы не выжигаем волосяной фолликул, а прогреваем его. Поэтому эффект вы увидите на 10-14 день, когда кожа начнет выталкивать мертвые волосы. На консультации вы подробно узнаете о таких моментах и зададите необходимые вопросы.</p>
+              <div class="c-li d-flex align-items-center mb-2 mt-2">
+                <div class="custom-icon-number mb-2">
+                  <p>3</p>
+                </div>
+                <p class="paragraph-text text-color-bold mb-2 ml-2">Сообщаем обо всех противопоказаниях</p>
+              </div>
+              <p class="paragraph-text text-color-light text-w-light mb-2">У нашего лазера есть абсолютные и относительные противопоказания. Большинство из них нужно обсуждать индивидуально. Мы поговорим об этом на консультации и вместе поймем, подходит ли вам удаление волос с помощью лазера.</p>
+              <p class="paragraph-text text-color-light text-w-light mb-2">После этого вы подписываете информационное соглашение о том, что мы провели с вами беседу и ознакомили со всеми тонкостями и особенностями процесса. Спрашивайте нас обо всем, что вас интересует. Нам важно, чтобы вы действительно были довольны результатом.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consultation-bottom">
+        <div class="container">
+          <div class="row pt-5">
+            <div class="col-sm-12 col-md-6 pt-5">
+              <div class="c-li d-flex align-items-center mb-3 mt-2">
+                <div class="custom-icon-number custom-bg-dark mb-2">
+                  <p>4</p>
+                </div>
+                <p class="paragraph-text text-color-dark text-w-bold mb-2 ml-2">Составляем график процедур</p>
+              </div>
+              <p class="paragraph-text text-color-dark text-w-light mb-2">Когда у нас есть вся необходимая информация о вас, мы можем сказать вам количество процедур в курсе. В среднем это 6-8 сеансов, но может понадобиться и больше. Все зависит от ваших волос, кожи, а также общих физиологических особенностей роста волос.</p>
+              <p class="paragraph-text text-color-dark text-w-light mb-2">Также на консультации мы определяем, как часто вам нужно ходить на процедуры лазерной эпиляции. Постарайтесь придерживаться этого графика — от него реально зависит результат всей затеи.</p>
+              <div class="c-li d-flex align-items-center mb-3 mt-2">
+                <div class="custom-icon-number custom-bg-dark mb-2">
+                  <p>5</p>
+                </div>
+                <p class="paragraph-text text-color-dark text-w-bold mb-2 ml-2">Проводим тест-драйв</p>
+              </div>
+              <p class="paragraph-text text-color-dark text-w-light mb-2">Наш лазер подходит для чувствительной кожи и вообще является спасением от раздражений и вросших волос. Однако мы обязательно проводим тест-драйв на небольшом участке вашей кожи. Так мы увидим, как ваша кожа реагирует на лазер и готова ли она к процедуре. Лично мы уверены: все будет хорошо!</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="white-block-design"><img src="assets/img/position-img_4.png" alt="position-img-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section discount">
+      <div class="container">
+        <div class="row flex-column align-items-center">
+          <h2 class="section-title text-color-dark">Комплексные предложения</h2>
+          <p class="paragraph-text text-color-dark">Только 1 день скидки на пакеты обученияот 18% до 27%</p>
+          <p class="paragraph-text text-color-dark">22 : 22 : 22</p><img src="assets/img/check-female.png" alt="check-female">
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="text-center">Minimum</h3>
+              <div class="row">
+                <div class="col">
+                  <ul>
+                    <li>
+                      <p class="paragraph-text text-color-dark">Бикини глубокое</p>
+                      <p class="paragraph-text text-color-dark">Подмышечные области</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p>2 000 грн</p>
+                  <p>1 730 грн</p>
+                </div>
+              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="text-center">Minimum</h3>
+              <div class="row">
+                <div class="col">
+                  <ul>
+                    <li>
+                      <p class="paragraph-text text-color-dark">Бикини глубокое</p>
+                      <p class="paragraph-text text-color-dark">Подмышечные области</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p>2 000 грн</p>
+                  <p>1 730 грн</p>
+                </div>
+              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3 class="text-center">Minimum</h3>
+              <div class="row">
+                <div class="col">
+                  <ul>
+                    <li>
+                      <p class="paragraph-text text-color-dark">Бикини глубокое</p>
+                      <p class="paragraph-text text-color-dark">Подмышечные области</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p>2 000 грн</p>
+                  <p>1 730 грн</p>
+                </div>
+              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section safety">
+      <div class="container">
+        <h2 class="section-title text-center mb-3">Лазерная эпиляция должна вам помочь, а не навредить</h2>
+        <p class="paragraph-text text-center">Поэтому мы принимаем все меры предосторожности</p>
+        <div class="row mt-10 c-safety justify-content-between">
+          <div class="col-sm-12 col-md-6 safety-box">
+            <p class="paragraph-text text-w-bold">Направляем к узкопрофильному специалисту, если нас что-то настораживает</p>
+            <p class="paragraph-text text-w-light">В некоторых ситуациях наши мастера могут заподозрить возможные проблемы со здоровьем. Например, волосы в нежелательных местах по «мужскому» типу могут натолкнуть на мысль, что у девушки проблемы с гормонами. А большое количество родинок может свидетельствовать о потенциальной угрозе, что какая-то родинка превратится из доброкачественной в злокачественную. Поэтому иногда мы отправляем клиентов к хирургам, эндокринологам, дерматологам и другим узким специалистам.</p>
+          </div>
+          <div class="col-sm-12 col-md-6 safety-box">
+            <p class="paragraph-text text-w-bold"> Честно отказываем в процедуре, если она противопоказана</p>
+            <p class="paragraph-text text-w-light">Нежелательные волосы на теле — всего лишь эстетическая проблема. Нашим с вами главным приоритетом должно быть здоровье. Поэтому если состояние организма никак не позволяет провести лазерную эпиляцию — ничего страшного. Мы подберем вам другой способ удаления волос, который будет эффективным и безопасным лично для вас в этот период жизни. В будущем, если состояние организма изменится, мы вместе можем пересмотреть это решение и снова подумать о лазерной эпиляции.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section accordion-answer">
+      <div class="container">
+        <h2 class="section-title text-center">Часто задаваемые вопросы</h2>
+        <p class="section-subtitle text-center">Возможно, наши клиенты уже задали интересующий вас вопрос</p>
+        <div class="accordion mt-3" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="heading01">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse01" aria-expanded="true" aria-controls="collapse01">Если я пройду полный курс лазерной эпиляции, волосы исчезнут навсегда?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse01" aria-labelledby="heading01" data-parent="#accordionExample">
+              <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading02">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse02" aria-expanded="true" aria-controls="collapse02">Вы проводите лазерное удаление светлых пушковых волосы?</button>
+              </h5>
+            </div>
+            <div class="collapse show" id="collapse02" aria-labelledby="heading02" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading03">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse03" aria-expanded="true" aria-controls="collapse03">Как еще я могу удалить волосы, если не хочу делать лазерную эпиляцию?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse03" aria-labelledby="heading03" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading04">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse04" aria-expanded="true" aria-controls="collapse04">Вы проводите лазерное удаление волос несовершеннолетним?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse04" aria-labelledby="heading04" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading05">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse05" aria-expanded="true" aria-controls="collapse05">Можно ли мужчинам удалить волосы в вашем центре? В какую стоимость?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse05" aria-labelledby="heading05" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading06">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse06" aria-expanded="true" aria-controls="collapse06">Какой вид эпиляции мне выбрать, если у меня рыжие волосы?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse06" aria-labelledby="heading06" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading07">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse07" aria-expanded="true" aria-controls="collapse07">Если я хочу избавиться от одного волоска, у вас для этого есть услуга одного импульса?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse07" aria-labelledby="heading07" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading08">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse08" aria-expanded="true" aria-controls="collapse08">Можно ли позволить себе лазерное удаление волос, если на эпилируемом участке у меня есть татуировка?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse08" aria-labelledby="heading08" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading09">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse09" aria-expanded="true" aria-controls="collapse09">У ваших мастеров есть медицинское образование?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse09" aria-labelledby="heading09" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading10">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">Какой стаж у ваших мастеров?</button>
+              </h5>
+            </div>
+            <div class="collapse" id="collapse10" aria-labelledby="heading10" data-parent="#accordionExample">
+              <div class="card-body">Лазер может удалить только волосы с пигментом. Пигмент — его мишень. Поэтому светлые волосы он просто не увидит. Хорошая новость в том, что вы все равно можете на длительное время избавиться от нежелательных светлых пушковых волос. Для этого мы проводим нано-эпиляцию — щелочной пилинг для удаления таких волос. Курс состоит из минимум 10 процедур и тоже полностью безболезненный. Главное — соблюдать все правила последующего ухода.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section consultation-form">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h3 class="section-title text-w-regular">Запишитесь на консультацию прямо сейчас и получите скидку</h3>
+            <p class="paragraph-text text-w-light">Раздел медицины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.</p>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <form>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label col-form-label-sm" for="colFormLabelSm">Email</label>
+                  <div class="col-sm-10">
+                    <input class="form-control form-control-sm" id="colFormLabelSm" type="email" placeholder="col-form-label-sm">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label" for="colFormLabel">Email</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="colFormLabel" type="email" placeholder="col-form-label">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label col-form-label-lg" for="colFormLabelLg">Email</label>
+                  <div class="col-sm-10">
+                    <input class="form-control form-control-lg" id="colFormLabelLg" type="email" placeholder="col-form-label-lg">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <div class="c-logo-f"><img src="assets/icon/logo-f.png" alt="logo-f"></div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <ul>
+              <li class="mb-3"><img class="icon mr-3" src="assets/icon/phone.png" alt="icon-phone-f"><a href="tel:+0980070753">098-007-07-53</a></li>
+              <li class="mb-3"><img class="icon mr-3" src="assets/icon/map.png" alt="icon-map-f"><span class="paragraph-text text-color-dark text-w-light">Ивано-Франковск</span></li>
+              <li class="mb-3"><img class="icon mr-3" src="assets/icon/facebook-Icon.png" alt="facebook-f"><img class="icon mr-3" src="assets/icon/inst.png" alt="inst-f"></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <p class="paragraph-text text-color-dark text-w-light">Вакансии</p>
+            <p class="paragraph-text text-color-dark text-w-light">Steffany Beauty</p>
+            <p class="paragraph-text text-color-dark text-w-light">Steffany Podology</p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <p class="paragraph-text text-color-dark text-center">Не хотите звонить? Скачайте приложениеs<br>и управляйте своей записью онлайн!</p>
+            <div class="d-flex justify-content-center"><img class="icon icon-large" src="assets/icon/mob-f.png" alt="mob-f"><img class="icon icon-large" src="assets/icon/google-play-f.png" alt="play-f"></div>
+          </div>
+        </div>
+        <hr class="mt-4 mb-4">
+        <div class="row pb-lg-4">
+          <div class="col-sm-12 col-md-3"><span class="small-text">Разработано в &nbsp</span><span class="small-text text-dashed">dotwork</span></div>
+          <div class="col-sm-12 col-md-3"><span class="small-text text-dashed">Пользовательское соглашение</span></div>
+          <div class="col-sm-12 col-md-3"><span class="small-text text-dashed">Политика конфиденциальности</span></div>
+          <div class="col-sm-12 col-md-3"><span class="small-text">steffany.ua ©2019. Все права защищены</span></div>
         </div>
       </div>
     </footer>
