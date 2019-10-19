@@ -13,21 +13,14 @@ header
     width: 12px
     margin-left: 6px
   .container
-    display: flex
-    max-width: 1260px 
     padding-top: 20px
   .c-row
-    display: flex
-    align-items: flex-end
-    flex-direction: column
     margin-left: auto
     width: 100%
     max-width: 612px
     ul.dropdown-menu-list
       position: absolute
       z-index: -10
-      display: flex
-      flex-direction: column
       opacity: 0
       top: calc(100%)
       left: 50%
@@ -51,21 +44,14 @@ header
           &:hover 
             border-bottom: 1px solid $text-color-dark !important
     ul.header-contact-list
-      display: flex
       &:nth-last-child(1)
-        margin-right: 0
       & > li
         position: relative
         cursor: pointer
-        display: flex
-        align-items: center
         margin-right: 35px
         .header-lang 
           padding: 0 5px
         & > a
-          display: flex
-          align-items: center
-          justify-content: flex-start
           padding-top: 2px
           text-decoration: none
           @include font ('Circe-Regular', 300, 14, 14)
@@ -82,29 +68,17 @@ header
       .header-lang-wrap
         ul.dropdown-menu-list
           min-width: 35px 
-       
     .header-nav-wrap
-      display: flex
-      align-items: center
-      justify-content: space-between
       width: 100%
       nav.header-nav
         width: 100%
         max-width: 372px
         margin-right: 5px
         ul.header-nav-list
-          display: flex
-          justify-content: space-between
-          align-items: center
           width: 100%
-          margin-bottom: 0
-          &:nth-last-child(1)
-          margin-right: 0
           li
             position: relative
             cursor: pointer
-            display: inline-flex
-            align-items: center
             margin-right: 4px
             transition: 0.3s ease
             border-bottom: 2px solid transparent
@@ -121,9 +95,6 @@ header
                   z-index: 2
                   opacity: 1
 .btn-callback
-  display: flex
-  align-items: center
-  justify-content: space-between
   width: 100%
   max-width: 195px
   height: 38px
@@ -138,9 +109,6 @@ header
   border-radius: 100px
   transition: 0.3s linear
   & > span 
-    display: flex
-    align-items: center
-    justify-content: space-between
     text-decoration: none
     width: 100%
     max-width: 120px

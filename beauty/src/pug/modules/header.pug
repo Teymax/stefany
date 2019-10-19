@@ -1,14 +1,14 @@
 header
-  .container
+  .container.container-m.d-flex
     a.c-logo(href="#")
       img.logo-header(src="assets/img/logo/header-logo.png" alt="Image Title")
-    .c-row
-      ul.header-contact-list
-        li
+    .row.c-row.no-gutter.d-flex.align-items-end.justify-content-start.flex-column
+      ul.header-contact-list.d-flex
+        li.d-flex.align-items-center
           img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")
-          a(href="#") Ивано-Франковск 
+          a.d-flex.align-items-center.justify-content-start(href="#") Ивано-Франковск 
             img(src="assets/icon/drop-arrow-down.png", alt="drop-arrow-down")
-          ul.dropdown-menu-list
+          ul.dropdown-menu-list.d-flex.flex-column
             li 
               a(href="#") Ивано-Франковск2
             li 
@@ -17,26 +17,26 @@ header
               a(href="#") Ивано-Франковск4
             li 
               a(href="#") Ивано-Франковск5
-        li
+        li.d-flex.align-items-center
           img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")
-          a(href="tel:0980070753") 098 007 07 53
-        li.header-lang-wrap
-          a(href="#").header-lang RU
-          ul.dropdown-menu-list
+          a.d-flex.align-items-center.justify-content-start(href="tel:0980070753") 098 007 07 53
+        li.d-flex.align-items-center.header-lang-wrap.mr-0
+          a.d-flex.align-items-center.justify-content-start(href="#").header-lang RU
+          ul.dropdown-menu-list.d-flex.flex-column
             li 
               a(href="#") UA
             li 
               a(href="#") EN
-      .header-nav-wrap
+      .header-nav-wrap.d-flex.align-items-center.justify-content-between
         nav.header-nav
-          ul.header-nav-list
-            li
+          ul.header-nav-list.d-flex.align-items-center.justify-content-between.mb-0
+            li.d-inline-flex.align-items-center
               a(href="#") О нас
               img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")
-            li.drop-menu
+            li.d-inline-flex.align-items-center.drop-menu
               a(href="#") Услуги
               img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")
-              ul.dropdown-menu-list
+              ul.dropdown-menu-list.d-flex.flex-column
                 li
                   a(href="#") Услуга 2
                 li
@@ -45,10 +45,10 @@ header
                   a(href="#") Услуга 4
                 li
                   a(href="#") Услуга 5
-            li.drop-menu
+            li.d-inline-flex.align-items-center.drop-menu
               a(href="#") Цены
               img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")
-              ul.dropdown-menu-list
+              ul.dropdown-menu-list.d-flex.flex-column
                 li
                   a(href="#") Цены 2
                 li
@@ -57,10 +57,10 @@ header
                   a(href="#") Цены 4
                 li
                   a(href="#") Цены 5
-            li
+            li.d-inline-flex.align-items-center.mr-0
               a(href="#") Контакты
-        a.btn-callback(href="#")
-          span
+        a.btn-callback.d-flex.align-items-center.justify-content-between(href="#")
+          span.d-flex.align-items-center.justify-content-between
             svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 12 12', style='enable-background:new 0 0 12 12;', xml:space='preserve')
               style(type='text/css').
                 .st0{fill:#1B3EBF;}

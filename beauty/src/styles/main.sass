@@ -54,13 +54,12 @@
   @extend .custom-icon-number
   background-color: #9FA6BA
 
-p
+p, .p-text
   margin-bottom: 0 !important
   @include font('Circe-Regular', 400, 16, 23)
   color: $text-color-dark
-p.p-bold
+.p-bold
   @include font('Circe-Bold', 700, 16, 23)
-
 
 .button
   cursor: pointer
@@ -89,7 +88,7 @@ p.p-bold
   display: block
   width: 100%
   margin-bottom: 20px
-  @include font('Circe-Light', 400, 20, 21)
+  @include font('Circe-Light', 300, 20, 21)
   color: $h-title-color
 .grid-title
   display: -webkit-box
@@ -121,14 +120,77 @@ p.p-bold
 .bnf-title
   padding-bottom: 20px
   text-transform: uppercase
-  letter-spacing: 4px
+  letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
 .thin-text
   font-family: 'Circe-Light'
+.extrabold
+  font-family: 'Circe-ExtraBold'
 .bg-settings
   background-repeat: no-repeat !important
   background-size: cover !important
   background-position: center !important
+.container-m
+  max-width: 1260px !important
+.no-bg
+  background: transparent !important
+.mt-30
+  margin-top: 30px !important
+.mb-50
+  margin-bottom: 50px
+.mb-20
+  margin-bottom: 20px !important
+.mr-10
+  margin-right: 10px !important
+.br-100
+  border-radius: 100px
+.play-btn
+	position: absolute
+	width: 92px
+	height: 92px
+	background: $color-purple-opacity
+	border-radius: 50%
+	span
+		width: 20px
+		height: 20px
+		background: $play-btn-color
+		clip-path: polygon(0 0, 0% 100%, 100% 50%)
+.info-list
+  li
+    position: relative
+    padding-left: 20px
+    &:before
+      position: absolute
+      left: 0
+      top: 9px
+      content: ''
+      width: 5px
+      height: 5px
+      background: $breadcrump-color
+      border-radius: 50%
+.soc-btn
+  width: 38px
+  height: 38px
+  background: $soc-btn
+  border-radius: 50%
+  transition: 0.4s ease
+  &:hover
+    background: $color-purple
+.btn-simple
+  height: 38px
+  font-size: 10px
+  text-transform: uppercase
+  letter-spacing: 2px
+  background: $color-purple
+  color: $color-white
+  transition: 0.4s ease
+  &:hover
+    background: $soc-btn
+    color: $color-white
+
+
+
+
 
 
 //nav
