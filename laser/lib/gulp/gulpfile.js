@@ -87,13 +87,13 @@ function clean() {
   return del(['build/*'])
 }
 //таск вызывающий функцию pug
-gulp.task('pug', function() {
-  return gulp.src('../../src/pug/**/*.pug')
-      .pipe(pug({
-        pretty: true
-      }))
-      .pipe(gulp.dest('../../build'));
-});
+// gulp.task('pug', function() {
+//   return gulp.src('../../src/pug/**/*.pug')
+//       .pipe(pug({
+//         pretty: true
+//       }))
+//       .pipe(gulp.dest('../../build'));
+// });
 
 function watch() {
   browserSync.init({
@@ -102,8 +102,8 @@ function watch() {
     }
   });
   // следит за CSS файлами
-  gulp.watch('../../src/pug/**/*.pug', function() {
-    return gulp.src('../../src/pug/index.pug')
+  gulp.watch('../../src/pug/page/*.pug', function() {
+    return gulp.src('../../src/pug/page/*.pug')
         .pipe(pug({
           pretty: true
         }))
