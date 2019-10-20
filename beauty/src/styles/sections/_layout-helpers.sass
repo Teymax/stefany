@@ -1,0 +1,363 @@
+// container - style *******
+.container
+  width: 100% !important
+  padding: 0 30px
+.container-m
+  max-width: 1260px !important
+.container-l
+  max-width: 1270px !important
+
+// text - style *******
+	
+.paragraph-text-light
+  @include font(Circe, 400, 16, 26)
+  color: $text-color-white
+
+.paragraph-text-dark
+  @include font(Circe, 400, 16, 26)
+  color: $text-color-dark
+	
+.text-dashed
+  border-bottom: 1px dashed #000080
+
+.extralarge-text-bg
+  white-space: nowrap
+  position: absolute
+  @include font(Circe, 400, 321, 377)
+  color: $text-color-white
+
+.section-title-light
+  @include font(Circe, bold, 44, 45)
+  color: $text-color-white
+
+.section-title-dark
+  @include font(Circe, bold, 44, 45)
+  color: $text-color-dark
+
+.custom-icon-number
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 55px
+  height: 55px
+  background-color: #EDE1DF
+  border-radius: 50%
+
+
+.custom-icon-number-dark
+  @extend .custom-icon-number
+  background-color: #9FA6BA
+
+p, .p-text
+  margin-bottom: 0 !important
+  @include font('Circe-Regular', 400, 16, 23)
+  color: $text-color-dark
+.p-text-light
+	@include font('Circe-Light', 300, 14, 14)
+	color: $breadcrump-color
+.p-bold
+  @include font('Circe-Bold', 700, 16, 23)
+.text-uppercase
+	text-transform: uppercase !important
+.fs-12
+	font-size: 12px !important
+.thin-text
+  font-family: 'Circe-Light'
+.extrabold
+  font-family: 'Circe-ExtraBold'
+.section-title
+  display: block
+  width: 100%
+  margin-bottom: 20px
+  @include font('CormorantGaramond-Bold', 700, 44, 45)
+  color: $section-title-color
+
+.section-title-s
+  color: $breadcrump-color
+  display: block
+  @include font('CormorantGaramond-Bold', 700, 26, 31)
+
+.section-subtitle
+  display: block
+  width: 100%
+  margin-bottom: 20px
+  @include font('Circe-Light', 300, 20, 21)
+  color: $section-title-color
+
+.grid-title
+  display: -webkit-box
+  height: 70px
+  -webkit-line-clamp: 2
+  overflow: hidden
+  -webkit-box-orient: vertical
+  margin-bottom: 26px
+  @include font('CormorantGaramond-Bold', 700, 30, 35)
+  color: $section-title-color
+
+.grid-number
+  display: block
+  position: absolute
+  top: 64px
+  left: 25px
+  letter-spacing: 4px
+  color: $section-title-color
+  @include font('Circe-ExtraBold', 900, 11, 10)
+
+.white-text
+  color: $color-white
+
+.h-center
+  text-align: center
+
+.bnf-number
+  padding-bottom: 20px
+  text-transform: uppercase
+  letter-spacing: 2px
+  @include font('CormorantGaramond-Bold', 700, 75, 75)
+
+.bnf-title
+  padding-bottom: 20px
+  text-transform: uppercase
+  letter-spacing: 2px
+  @include font('Circe-Regular', 400, 20, 24)
+
+// buttons - style *******
+.btn-callback, .btn-send
+  width: 100%
+  max-width: 195px
+  height: 38px
+  padding-right: 18px
+  padding-left: 20px
+  background: url('../assets/img/background/callback-btn.png')
+  background-repeat: no-repeat
+  background-size: 45px 100%
+  background-position: top right
+  border: 2px solid $color-purple
+  text-decoration: none
+  border-radius: 100px
+  transition: 0.2s linear
+  & > span 
+    text-decoration: none
+    width: 100%
+    max-width: 120px
+    svg
+      width: 13px
+      height: 13px
+    .st0 
+      fill: $color-purple-text
+      transition: 0.3s ease 0.2s
+    span 
+      padding-top: 2px
+      @include font ('Circe-ExtraBold', 900, 10, 10)
+      text-transform: uppercase
+      letter-spacing: 2px
+      color: $color-purple-text
+      transition: 0.3s ease
+  & > svg 
+    width: 14px
+    height: 11px
+    .st0 
+      fill: $color-white
+  &:hover 
+    background-size: 100% 100%
+    text-decoration: none
+    & > span 
+      .st0 
+        fill: $color-white
+      span
+        color: $color-white
+.btn-callback-white
+  background: url('../assets/img/background/callback-btn-white.jpg')
+  background-repeat: no-repeat
+  background-size: 45px 100%
+  background-position: top right
+  border: 2px solid $color-white
+  & > span
+    span
+      color: $color-white 
+  & > svg 
+    .st0 
+      fill: $color-purple
+  &:hover    
+    background-size: 100% 100%
+    text-decoration: none
+    & > span
+      span
+        color: $color-purple
+.btn-callback-simple
+	width: auto
+	max-width: 100%
+	& > span 
+		max-width: 100%
+		span
+			padding-right: 23px
+.btn-send
+	& > span
+		span
+			padding-left: 8px
+			padding-right: 36px
+.button
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 33px
+  height: 38px
+  background: $btn-bg
+  @include font('Circe-ExtraBold', 900, 10, 13)
+  text-transform: uppercase
+  color: $color-white !important
+  letter-spacing: 1.5px
+  border-radius: 100px
+  transition: 0.3s ease 
+  &:hover 
+    box-shadow: 0 0 20px $btn-bg
+.soc-btn
+  width: 38px
+  height: 38px
+  background: $soc-btn
+  border-radius: 50%
+  transition: 0.4s ease
+  &:hover
+    background: $color-purple
+.btn-simple
+  color: $color-white
+  height: 38px
+  padding: 15px 30px
+  font-size: 10px
+  text-transform: uppercase
+  letter-spacing: 2px
+  transition: 0.4s ease
+  background: $color-purple
+.btn-simple:hover
+  color: $color-white
+  background: $soc-btn
+.btn-simple-light
+	color: $play-btn-color
+	background: transparent
+	border: 2px solid $border-light
+	&:hover, &.active
+    color: $color-white
+    background: $color-purple
+    color: $color-white !important
+    border: 2px solid $color-purple
+
+
+// bg - style ********
+
+.bg-settings
+  background-repeat: no-repeat !important
+  background-size: cover !important
+  background-position: center !important
+
+.no-bg
+  background: transparent !important
+
+// list - style ****
+
+.info-list
+  li
+    position: relative
+    padding-left: 20px
+    &:before
+      position: absolute
+      left: 0
+      top: 9px
+      content: ''
+      width: 5px
+      height: 5px
+      background: $breadcrump-color
+      border-radius: 50%
+
+// Icons - style *********
+
+.icon
+  margin-right: 10px
+.icon-loc
+  width: 13px
+  height: 17px
+.icon-phone
+  width: 17px
+  height: 16px
+.icon-time
+  width: 17px
+  height: 17px
+.icon-mail
+  width: 17px
+  height: 13px
+.icon-arrow
+  width: 12px
+  margin-left: 6px
+
+
+
+// Play-button - style ********
+
+.play-btn
+	position: absolute
+
+	width: 92px
+	height: 92px
+	background: $color-purple-opacity
+	border-radius: 50%
+	&-orange
+		background: $color-orange-opacity
+	span
+		width: 20px
+		height: 20px
+		background: $play-btn-color
+		clip-path: polygon(0 0, 0% 100%, 100% 50%)
+
+// border - style ********
+
+.border-b-light
+	border-bottom: 2px solid $border-bottom-bg
+.br-100
+  border-radius: 100px 
+
+// margings + paddings ********
+.mt-30
+  margin-top: 30px !important
+.mb-40
+  margin-bottom: 40px !important
+.mb-50
+  margin-bottom: 50px
+.mb-20
+  margin-bottom: 20px !important
+.mr-10
+  margin-right: 10px !important
+
+// height
+.height-25
+	height: 25px
+.height-50
+	height: 50px
+
+// city-items - style ******
+
+.city-item
+	display: none !important
+.city-active
+	display: flex !important
+
+// inputs - style ******
+
+.field
+	padding: 12px 20px
+	background: $input-bg
+	border-radius: 4px
+	border: none !important
+	outline: none !important
+	&textarea
+		height: 164px
+
+
+@media (min-width: 1200px)
+	.hidden-item
+	  display: none
+
+@media (max-width: 1200px)
+	.px-15
+		padding-left: 15px !important
+		padding-right: 15px !important
+	
