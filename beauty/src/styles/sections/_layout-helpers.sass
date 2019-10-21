@@ -53,7 +53,7 @@ p, .p-text
   @include font('Circe-Regular', 400, 16, 23)
   color: $text-color-dark
 .p-text-light
-	@include font('Circe-Light', 300, 14, 14)
+	@include font('Circe-Light', 300, 14, 24)
 	color: $breadcrump-color
 .p-bold
   @include font('Circe-Bold', 700, 16, 23)
@@ -61,6 +61,8 @@ p, .p-text
 	text-transform: uppercase !important
 .fs-12
 	font-size: 12px !important
+.fs-16
+	font-size: 16px !important
 .thin-text
   font-family: 'Circe-Light'
 .extrabold
@@ -81,9 +83,11 @@ p, .p-text
   display: block
   width: 100%
   margin-bottom: 20px
-  @include font('Circe-Light', 300, 20, 21)
+  @include font('Circe-Light', 400, 20, 21)
   color: $section-title-color
-
+.h3-title
+  @include font('Circe-Light', 400, 20, 24)
+  color: $text-color-white
 .grid-title
   display: -webkit-box
   height: 70px
@@ -351,6 +355,55 @@ p, .p-text
 	&textarea
 		height: 164px
 
+// slider-block - style **
+.slider-pad
+  padding-left:  47px
+  padding-right: 47px
+.slider-block
+  .owl-dots
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding-top: 60px
+    span
+      display: none
+    .owl-dot
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: $border-light
+      transition: 0.3s ease
+      &:not(:last-child)
+        margin-right: 16px
+      &:hover, &.active
+        background: $color-purple
+      &:focus
+        border: none !important
+        outline: none !important
+  .owl-nav
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    span
+      display: none
+    button
+      width: 30px
+      height: 30px
+      opacity: .4
+      &.owl-prev
+	      background-image: url('../assets/icon/slider-left-arrow.png') !important
+	      background-repeat: no-repeat  !important
+	      background-size: contain !important
+      &.owl-next
+	      background-image: url('../assets/icon/slider-right-arrow.png') !important
+	      background-repeat: no-repeat  !important
+	      background-size: contain !important
 
 @media (min-width: 1200px)
 	.hidden-item

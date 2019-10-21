@@ -38,8 +38,7 @@ const cssFiles = [
 
 //порядок подключения JS файлов
 const jsFiles = [
-  '../../src/js/main.js',
-  '../materialize/js/materialize.js'
+  '../../src/js/**/*.js'
 ]
 const pugPages = [
   '../../src/pug/index.pug',
