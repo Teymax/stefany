@@ -30,6 +30,7 @@ $(document).ready(function(){
 
 	$('.menu-trigger').click(function(e){
 		$(this).toggleClass('open');
+		$('header').toggleClass('open');
 	});
 
 	$('.diploma-slider').owlCarousel({

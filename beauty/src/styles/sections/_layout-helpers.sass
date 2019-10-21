@@ -2,6 +2,8 @@
 .container
   width: 100% !important
   padding: 0 30px
+.container-s
+  max-width: 1047px !important
 .container-m
   max-width: 1260px !important
 .container-l
@@ -49,7 +51,10 @@
 
 .text-color-dark
   color: $text-color-dark !important
-
+.f-bold
+  font-weight: bold !important
+.span-bigger
+  font-size: 70px !important
 .custom-icon-number-dark
   @extend .custom-icon-number
   background-color: #9FA6BA
@@ -64,6 +69,10 @@ p, .p-text, .paragraph-text
 .text-small
   @include font ('Circe-Regular', 300, 11, 13)
   color: $text-color-dark 
+.timer-nubmer
+  text-transform: uppercase
+  @include font ('Circe-Bold', 700, 26, 26)
+  color: $color-white
 .p-bold
   @include font('Circe-Bold', 700, 16, 23)
 .text-uppercase
@@ -72,6 +81,8 @@ p, .p-text, .paragraph-text
 	font-size: 12px !important
 .fs-16
 	font-size: 16px !important
+.regular-text
+  font-family: 'Circe-Regular' !important
 .thin-text
   font-family: 'Circe-Light'
 .extrabold

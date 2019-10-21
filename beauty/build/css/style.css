@@ -300,6 +300,9 @@ button:focus {
   width: 100% !important;
   padding: 0 30px; }
 
+.container-s {
+  max-width: 1047px !important; }
+
 .container-m {
   max-width: 1260px !important; }
 
@@ -371,6 +374,12 @@ button:focus {
 .text-color-dark {
   color: #556278 !important; }
 
+.f-bold {
+  font-weight: bold !important; }
+
+.span-bigger {
+  font-size: 70px !important; }
+
 .custom-icon-number-dark {
   background-color: #9FA6BA; }
 
@@ -399,6 +408,15 @@ p, .p-text, .paragraph-text {
   line-height: 13px;
   color: #556278; }
 
+.timer-nubmer {
+  text-transform: uppercase;
+  font-family: "Circe-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+  color: #ffffff; }
+
 .p-bold {
   font-family: "Circe-Bold";
   font-style: normal;
@@ -414,6 +432,9 @@ p, .p-text, .paragraph-text {
 
 .fs-16 {
   font-size: 16px !important; }
+
+.regular-text {
+  font-family: 'Circe-Regular' !important; }
 
 .thin-text {
   font-family: 'Circe-Light'; }
@@ -1234,6 +1255,63 @@ section.section.discount {
     padding: 0 15px !important;
     text-align: center !important; } }
 
+section.section.consultation-form {
+  background-image: url("../assets/img/background/consultation-form-bg-2.jpg");
+  background-size: cover; }
+  section.section.consultation-form .container .main-form {
+    max-width: 390px;
+    background-color: #EDE1DF;
+    border-radius: 5px 5px 0 0;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #000; }
+    section.section.consultation-form .container .main-form .form-control {
+      background-color: rgba(77, 82, 89, 0.2);
+      width: 252px; }
+  section.section.consultation-form .container .small-label {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px; }
+  section.section.consultation-form .container .input::placeholder {
+    color: #ffffff; }
+
+.consultation-form .container-s {
+  padding-left: 177px; }
+
+.timer-item {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background: #A09BCF; }
+  .timer-item:not(:last-child)::before {
+    content: ':';
+    position: absolute;
+    right: -11px;
+    color: rgba(77, 82, 89, 0.36); }
+
+.c-title-item span {
+  font-family: "CormorantGaramond-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 45px;
+  color: #6F7682; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.section.consultation-form .container .main-form {
+    border-radius: 0;
+    border: none; } }
+
+@media (max-width: 767px) {
+  section.section.consultation-form .container {
+    max-width: 100%; }
+    section.section.consultation-form .container .media-gutters {
+      padding: 0; }
+    section.section.consultation-form .container .main-form {
+      max-width: 100%; } }
+
 .breadcrumb-blk {
   padding-top: 35px;
   padding-bottom: 25px; }
@@ -1588,7 +1666,7 @@ header {
     background: #869791; }
 
 @media (max-width: 1200px) {
-  .map-cnt, .footer-cnt {
+  .map-cnt, .footer-cnt, .contact-cnt {
     max-width: 660px !important; }
   .slider-wrap {
     max-width: 610px !important; } }
@@ -1617,9 +1695,9 @@ header {
   header .container {
     padding-top: 11px;
     padding-bottom: 11px; }
-  .map-cnt, .slider-wrap, .footer-cnt {
+  .map-cnt, .slider-wrap, .footer-cnt, .contact-cnt {
     max-width: 320px !important; }
-    .map-cnt .slider-pad, .slider-wrap .slider-pad, .footer-cnt .slider-pad {
+    .map-cnt .slider-pad, .slider-wrap .slider-pad, .footer-cnt .slider-pad, .contact-cnt .slider-pad {
       padding: 0 !important; }
   .slider-block .owl-nav {
     position: static;
