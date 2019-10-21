@@ -494,20 +494,20 @@ table {
   line-height: 53px;
   color: #ffffff; }
 
-.section-subtitle {
-  font-family: "Circe";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 45px;
-  color: #ffffff; }
-
 .h3-title {
-  font-family: "Circe";
+  font-family: "CormorantGaramond";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+  color: #ffffff; }
+
+.h4-title {
+  font-family: "CormorantGaramond";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
   color: #ffffff; }
 
 .extralarge-text-bg {
@@ -565,7 +565,7 @@ ul.list-outside {
   ul.list-outside li {
     list-style: outside; }
 
-@media (max-width: 399px) {
+@media (max-width: 575px) {
   .paragraph-text {
     font-family: "Circe";
     font-style: normal;
@@ -578,7 +578,7 @@ ul.list-outside {
     font-weight: bold;
     font-size: 34px;
     line-height: 30px; }
-  .section-subtitle {
+  .h3-title {
     font-family: "Circe";
     font-style: normal;
     font-weight: 400;
@@ -804,21 +804,16 @@ section.section.almalaser {
     background-color: rgba(125, 137, 158, 0.39);
     margin: 1.5rem 0; }
 
+section.section.choose-service .container .section-title {
+  line-height: 36px; }
+
 section.section.choose-service .container .icon-service-choose {
   height: 190px; }
 
 section.section.choose-service .container .choose-zone-box {
   cursor: pointer; }
-  section.section.choose-service .container .choose-zone-box:hover .choose-zone-box__desc {
-    color: #F6AE9F; }
-  section.section.choose-service .container .choose-zone-box__desc {
-    font-family: "CormorantGaramond";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    color: #556278;
-    cursor: pointer; }
+  section.section.choose-service .container .choose-zone-box:hover .h4-title {
+    color: #F6AE9F !important; }
 
 section.section.consultation .custom-icon-number {
   width: 27px;
@@ -914,9 +909,45 @@ section.section.main-laser-service .c-service__service-box {
     background-size: cover; }
 
 section.section.consultation-form {
-  padding: 8rem 0;
   background-image: url("../assets/img/background/consultation-form-bg.jpg");
   background-size: cover; }
+  section.section.consultation-form .container .c-content .c-title {
+    width: 100%;
+    max-width: 500px; }
+  section.section.consultation-form .container .c-content .c-desc {
+    width: 100%;
+    max-width: 465px; }
+  section.section.consultation-form .container .main-form {
+    max-width: 390px;
+    background-color: #EDE1DF;
+    border-radius: 5px 5px 0 0;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #000; }
+    section.section.consultation-form .container .main-form .form-control {
+      background-color: rgba(77, 82, 89, 0.2);
+      width: 252px; }
+  section.section.consultation-form .container .small-label {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px; }
+  section.section.consultation-form .container .input::placeholder {
+    color: #ffffff; }
+
+@media (max-width: 991px) {
+  section.section.consultation-form .container .main-form {
+    border-radius: 0;
+    border: none; } }
+
+@media (max-width: 767px) {
+  section.section.consultation-form .container {
+    max-width: 100%; }
+    section.section.consultation-form .container .media-gutters {
+      padding: 0; }
+    section.section.consultation-form .container .main-form {
+      max-width: 100%; } }
 
 section.section.about-steffany {
   padding: 4rem 0; }

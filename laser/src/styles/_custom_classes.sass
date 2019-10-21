@@ -8,6 +8,7 @@
   border-bottom: 1px dashed #000080
 .small-text
   @include font(Circe, 400, 14, 22)
+
 .text-w-bold
   font-weight: 700 !important
 .text-w-light
@@ -25,12 +26,13 @@
 .section-title
   @include font (CormorantGaramond, bold, 44, 53)
   color: $text-color-white
-.section-subtitle
-  @include font (Circe, 400, 20, 45)
-  color: $text-color-white
 
 .h3-title
-  @include font(Circe, 400, 20, 24)
+  @include font(CormorantGaramond, 400, 20, 24)
+  color: $text-color-white
+
+.h4-title
+  @include font(CormorantGaramond, 400, 24, 34)
   color: $text-color-white
 
 .extralarge-text-bg
@@ -82,5 +84,5 @@ ul.list-outside
     @include font(Circe, 400, 14, 22)
   .section-title
     @include font (CormorantGaramond, bold, 34, 30)
-  .section-subtitle
+  .h3-title
     @include font (Circe, 400, 16, 20)
