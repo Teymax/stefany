@@ -4,8 +4,6 @@ header
   .container
     padding-top: 20px
   .c-row
-    margin-left: auto
-    width: 100%
     max-width: 612px
     ul.dropdown-menu-list
       position: absolute
@@ -14,7 +12,6 @@ header
       top: calc(100%)
       left: 50%
       transform: translateX(-50%)
-      width: 100%
       min-width: 100px
       padding: 7px
       background: #ffffff
@@ -25,13 +22,8 @@ header
         &:not(:last-child) 
           margin-bottom: 5px
         a 
-          @include font ('Circe-Regular', 300, 11, 13)
           transition: 0.3s ease
-          text-decoration: none
-          color: $text-color-dark 
           border-bottom: 1px solid transparent !important
-          &:hover 
-            border-bottom: 1px solid $text-color-dark !important
     ul.header-contact-list
       &:nth-last-child(1)
       & > li
@@ -42,9 +34,6 @@ header
           padding: 0 5px
         & > a
           padding-top: 2px
-          text-decoration: none
-          @include font ('Circe-Regular', 300, 14, 14)
-          color: $text-color-dark
           img 
             width: 10px
             height: 6px
@@ -71,10 +60,6 @@ header
             margin-right: 4px
             transition: 0.3s ease
             border-bottom: 2px solid transparent
-            a
-              @include font ('Circe-Regular', 300, 16, 18)
-              color: $text-color-dark
-              text-decoration: none
             &:hover 
               border-bottom: 2px solid $text-color-dark
             &.drop-menu

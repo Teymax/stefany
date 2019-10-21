@@ -28,6 +28,10 @@ $(document).ready(function(){
 		$(city).addClass('city-active');
 	});
 
+	$('.menu-trigger').click(function(e){
+		$(this).toggleClass('open');
+	});
+
 	$('.diploma-slider').owlCarousel({
 		loop:true,
 		margin:35,
