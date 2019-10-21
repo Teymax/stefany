@@ -617,7 +617,7 @@ header .c-row {
           color: #fff; }
 
 section.section.advantages {
-  background-image: url("../assets/img/background/advantages-bg.jpg");
+  background-color: #fff;
   background-size: cover; }
   section.section.advantages .container p.advantages-count {
     font-family: "CormorantGaramond";
@@ -625,32 +625,66 @@ section.section.advantages {
     font-weight: 700;
     font-size: 75px;
     line-height: 80px;
-    color: #ffffff; }
+    color: #556278; }
   section.section.advantages .container .h3-title {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #556278; }
   section.section.advantages .container .c-boxes {
     position: relative;
     z-index: 1;
     max-width: 400px;
-    margin-left: 200px; }
-    section.section.advantages .container .c-boxes img {
+    margin-left: 228px; }
+    section.section.advantages .container .c-boxes:nth-of-type(1) img {
       position: absolute;
       z-index: -1;
       left: -245px; }
+    section.section.advantages .container .c-boxes:nth-of-type(2) img {
+      position: absolute;
+      z-index: -1;
+      left: -241px;
+      top: 17px; }
+    section.section.advantages .container .c-boxes:nth-of-type(3) img {
+      position: absolute;
+      z-index: -1;
+      left: -298px;
+      top: 7px; }
+    section.section.advantages .container .c-boxes:nth-of-type(4) img {
+      position: absolute;
+      z-index: -1;
+      left: -273px; }
 
-section.section.almalaser {
+section.section.laser {
   position: relative;
-  background-color: #EDE1DF; }
-  section.section.almalaser p.extralarge-text-bg {
-    bottom: -100px;
-    left: 700px; }
-  section.section.almalaser .container p.position:before {
+  background-color: #EDE1DF;
+  overflow: hidden; }
+  section.section.laser .container .c-content {
+    max-width: 78%; }
+  section.section.laser .container p.extralarge-text-bg {
+    bottom: -148px;
+    z-index: 10;
+    letter-spacing: -3px; }
+    section.section.laser .container p.extralarge-text-bg span {
+      position: relative;
+      left: 69px;
+      letter-spacing: 4px; }
+  section.section.laser .container h2 {
+    margin-top: 104px; }
+  section.section.laser .container p b {
+    color: #000; }
+  section.section.laser .container p.position:before {
     content: '';
     display: block;
     height: 2px;
     width: 90px;
     background-color: rgba(125, 137, 158, 0.39);
-    margin: 1.5rem 0; }
+    margin: 1.5rem 0;
+    margin-bottom: 2.2rem; }
+  section.section.laser .container .white-block-design {
+    width: 504px;
+    height: 674px;
+    top: 64px; }
+    section.section.laser .container .white-block-design img {
+      top: 40px; }
 
 section.section.choose-service .container .icon-service-choose {
   height: 190px; }
@@ -768,6 +802,164 @@ section.section.consultation-form {
 
 section.section.about-steffany {
   padding: 4rem 0; }
+
+section.section.service-advantages {
+  background-color: #fff;
+  background-size: cover; }
+  section.section.service-advantages .container p.advantages-count {
+    font-family: "CormorantGaramond";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 80px;
+    color: #556278; }
+  section.section.service-advantages .container .h3-title {
+    text-transform: uppercase;
+    color: #556278; }
+  section.section.service-advantages .container .c-boxes {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin-left: 228px; }
+    section.section.service-advantages .container .c-boxes:nth-of-type(1) img {
+      position: absolute;
+      z-index: -1;
+      left: -245px; }
+    section.section.service-advantages .container .c-boxes:nth-of-type(2) img {
+      position: absolute;
+      z-index: -1;
+      left: -241px;
+      top: 17px; }
+    section.section.service-advantages .container .c-boxes:nth-of-type(3) img {
+      position: absolute;
+      z-index: -1;
+      left: -298px;
+      top: 7px; }
+    section.section.service-advantages .container .c-boxes:nth-of-type(4) img {
+      position: absolute;
+      z-index: -1;
+      left: -273px; }
+
+section.section.service-consultation {
+  padding-bottom: 0; }
+  section.section.service-consultation .custom-icon-number {
+    width: 21px;
+    height: 21px;
+    background-color: #4D5259; }
+    section.section.service-consultation .custom-icon-number p {
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px; }
+  section.section.service-consultation .consultation-top {
+    background-color: #9FA6BA; }
+    section.section.service-consultation .consultation-top .container {
+      position: relative; }
+      section.section.service-consultation .consultation-top .container .extralarge-text-bg {
+        bottom: -148px;
+        margin-left: 679px;
+        z-index: 10;
+        letter-spacing: -3px; }
+      section.section.service-consultation .consultation-top .container p.before {
+        margin-bottom: 2.5rem; }
+        section.section.service-consultation .consultation-top .container p.before::before {
+          content: '';
+          display: block;
+          height: 2px;
+          width: 90px;
+          background-color: rgba(255, 255, 255, 0.26);
+          position: relative;
+          top: 45px; }
+      section.section.service-consultation .consultation-top .container ul {
+        list-style: outside; }
+      section.section.service-consultation .consultation-top .container .white-block-design {
+        margin-top: 101px;
+        width: 465px;
+        height: 670px; }
+        section.section.service-consultation .consultation-top .container .white-block-design img {
+          top: 51px; }
+  section.section.service-consultation .consultation-middle {
+    background-color: #A9A8C6; }
+    section.section.service-consultation .consultation-middle .container p.before {
+      margin-bottom: 2.5rem; }
+      section.section.service-consultation .consultation-middle .container p.before::before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 90px;
+        background-color: rgba(255, 255, 255, 0.26);
+        position: relative;
+        top: -23px; }
+    section.section.service-consultation .consultation-middle .container .c-li:nth-of-type(3) .custom-icon-number {
+      position: relative;
+      top: -11px; }
+    section.section.service-consultation .consultation-middle .container .c-li:nth-of-type(3) .last-item {
+      width: 100%;
+      margin-left: -20px;
+      text-indent: 37px; }
+    section.section.service-consultation .consultation-middle .container .white-block-design {
+      width: 563px;
+      height: 731px;
+      left: 40px; }
+      section.section.service-consultation .consultation-middle .container .white-block-design img {
+        top: -69px;
+        left: -37px; }
+
+section.section.service-laser {
+  position: relative;
+  background-color: #EDE1DF;
+  overflow: hidden; }
+  section.section.service-laser .container .c-content {
+    max-width: 78%; }
+  section.section.service-laser .container p.extralarge-text-bg {
+    bottom: -148px;
+    z-index: 10;
+    letter-spacing: -3px; }
+    section.section.service-laser .container p.extralarge-text-bg span {
+      position: relative;
+      left: 69px;
+      letter-spacing: 8px; }
+  section.section.service-laser .container h2 {
+    margin-top: 104px; }
+  section.section.service-laser .container p b {
+    color: #000; }
+  section.section.service-laser .container p.position:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 90px;
+    background-color: rgba(125, 137, 158, 0.39);
+    margin: 1.5rem 0;
+    margin-bottom: 2.2rem; }
+  section.section.service-laser .container .white-block-design {
+    width: 504px;
+    height: 674px;
+    top: 64px; }
+    section.section.service-laser .container .white-block-design img {
+      top: 40px; }
+
+section.section.service-laser-service-list {
+  padding-top: 0;
+  background: url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%);
+  background-repeat: no-repeat;
+  background-position: top center; }
+  section.section.service-laser-service-list .container .row .left .radio-container {
+    width: 100px;
+    height: 36px;
+    background: #9FA6BA;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18);
+    border-radius: 100px; }
+    section.section.service-laser-service-list .container .row .left .radio-container input {
+      width: 30px;
+      height: 30px; }
+  section.section.service-laser-service-list .container .row .left .service-list-group {
+    width: 100%;
+    padding: 0 60px; }
+    section.section.service-laser-service-list .container .row .left .service-list-group h2 {
+      font-size: 30px; }
+    section.section.service-laser-service-list .container .row .left .service-list-group .checkbox-group {
+      width: 100%; }
 
 footer.footer {
   padding-top: 4rem; }
