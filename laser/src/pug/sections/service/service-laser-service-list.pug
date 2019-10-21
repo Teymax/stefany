@@ -14,10 +14,20 @@ section.section.service-laser-service-list
                         value='famale'
                     )
                 .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
-                    h2.section-title.text-color-dark Область Лица
-                    .checkbox-group.d-flex.flex-column.align-items-center
-                        
-
-
-
+                    - let arr = [{name:"Все лицо",price:"740 грн",time:"15 мин"},{name:"Верхняя губа",price:"210 грн",time:"15 мин"},{name:"Подбородок",price:"220 грн",time:"15 мин"},{name:"Межбровье",price:"200 грн",time:"15 мин"},{name:"Брови",price:"200 грн",time:"15 мин"},{name:"Линия лба",price:"230 грн",time:"15 мин"},{name:"Щеки",price:"300 грн",time:"15 мин"},{name:"Виски",price:"220 грн",time:"15 мин"},{name:"Уши",price:"220 грн",time:"15 мин"},{name:"Шея",price:"450 грн",time:"15 мин"}];
+                    - let arr1 =["Область Лица","Область рук","Область спины и живота","Область бикини","Область ног"] 
+                        each element in arr1
+                            h2.section-title.text-color-dark.mt-3 #{element}
+                            .checkbox-group.d-flex.flex-column.align-items-center
+                                each service in arr
+                                    .checkbox-row.d-flex.align-items-center.justify-content-between
+                                        .column-right.d-flex
+                                            input.align-self-center.mb-3(
+                                                type='checkbox'
+                                                name='servise'
+                                            )
+                                            p.paragraph-text.text-color-dark.ml-3 #{service.name}
+                                        .column-left.d-flex.justify-content-end
+                                            p.paragraph-text.text-color-dark.mr-3 #{service.time}
+                                            p.paragraph-text.text-color-dark #{service.price}
             .col-sm-12.col-md-4.right
