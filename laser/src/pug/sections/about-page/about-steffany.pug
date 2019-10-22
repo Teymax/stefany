@@ -1,19 +1,60 @@
 section.section.about-steffany
-  .container
-    .row
-      .col-md-7.col-sm-12
-        .c-image
-          img(src="/assets/img/about-steffany-page/img-video.png", atl="video")
-        .btn steffany podology
-        .btn steffany beauty
-      .col-md-5.col-sm-12
-        .c-desc.ml-4
-          h2.section-title.text-color-dark Про Steffany
-          p.paragraph-text.text-color-dark.text-w-light Давайте знакомиться! Мы — сеть центров красоты и здоровья Steffany, где на каждое ваше «хочу» найдется процедура. А вы —  та самая девушка, которая заслужила расслабиться и получить качественный профессиональный уход.
-          p.paragraph-text.text-color-dark.text-w-light.mb-2 Вы можете прийти в отдельные центры Steffany по трем направлениям:
-          ul.list-outside
-            li.paragraph-text.text-color-dark.text-w-light.mb-2 бьюти, где можно сделать маникюр, прическу, стрижку и макияж;
-            li.paragraph-text.text-color-dark.text-w-light.mb-2 эпиляция и косметология, где вас ждут ухаживающие процедуры для лица, тела и удаления волос;
-            li.paragraph-text.text-color-dark.text-w-light.mb-2.mb-2 подология, где мы позаботимся о здоровье ваших стоп.
-          p.paragraph-text.text-color-dark.text-w-light Остановимся на эпиляции. У нас вы можете безболезненно и в любое время года удалить волосы лазером. Или выбрать другой способ, который вам по душе.
+  .about
+    .container
+      .row.no-gutters.d-flex.align-items-start.justify-content-between
+        .col-lg-7.col-sm-12.pr-0.pr-md-0.pr-lg-5.order-1.order-lg-0
+          a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
+            img.w-100(src="assets/img/about/about-video-1.jpg", alt="about-video")
+            span.play-btn.d-flex.align-items-center.justify-content-center
+              span
+        .col-lg-5.col-sm-12.mt-5.mt-lg-0
+          h3.section-title.text-color-dark.mb-50 Про Steffany
+          p.mb-2.paragraph-text.text-color-dark Давайте знакомиться! Мы — сеть центров красоты и здоровья Steffany. Начали свою историю в Житомире, но сейчас потихоньку открываемся во многих городах Украины. У нас все просто: если вам нужна какая-то процедура — мы просто обязаны ее вам предоставить.
+          p.mb-2.paragraph-text.text-color-dark Сейчас в нашей сети вы можете прийти на
+            span.paragraph-text.text-color-dark.text-w-bold услуги трех направлений:
+          ul.info-list
+            li.p-text.paragraph-text.text-color-dark.mb-2 бьюти, где вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое;
+            li.p-text.paragraph-text.text-color-dark.mb-2 лазерная эпиляция и косметология, где вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж;
+            li.p-text.paragraph-text.text-color-dark подология, где мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата.
+          p.paragraph-text.text-color-dark.text-w-bold Сейчас вы в гостях у бьюти-направления. Выбирайте процедуру, чтобы стать еще красивее!
+      .row.no-gutters.mt-30.d-flex.align-items-center.justify-content-start.flex-column.flex-sm-row
+        .socials-buttons.d-flex.align-items-center.justify-content-start.mb-3.mb-sm-0.order-3.order-xl-1
+          a.soc-btn.mr-10.d-flex.align-items-center.justify-content-center(href="#")
+            svg(width='11', height='11', viewBox='0 0 11 11', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M9.35073 0.789062H2.26007C1.4501 0.789062 0.791016 1.44815 0.791016 2.25812V9.34877C0.791016 10.1587 1.4501 10.8178 2.26007 10.8178H9.35073C10.1607 10.8178 10.8198 10.1587 10.8198 9.34877V2.25812C10.8198 1.44815 10.1607 0.789062 9.35073 0.789062ZM5.82499 8.42816C4.36687 8.42816 3.18068 7.24198 3.18068 5.78386C3.18068 4.32574 4.36687 3.13956 5.82499 3.13956C7.28311 3.13956 8.46929 4.32574 8.46929 5.78386C8.46929 7.24198 7.28311 8.42816 5.82499 8.42816ZM8.76311 3.72718C8.27709 3.72718 7.88167 3.33176 7.88167 2.84574C7.88167 2.35973 8.27709 1.96431 8.76311 1.96431C9.24912 1.96431 9.64454 2.35973 9.64454 2.84574C9.64454 3.33176 9.24912 3.72718 8.76311 3.72718Z', fill='white')
+              path(d='M8.76256 2.55273C8.60043 2.55273 8.46875 2.68441 8.46875 2.84655C8.46875 3.00868 8.60043 3.14036 8.76256 3.14036C8.92469 3.14036 9.05637 3.00868 9.05637 2.84655C9.05637 2.68441 8.92469 2.55273 8.76256 2.55273Z', fill='white')
+              path(d='M5.82426 3.72656C4.69033 3.72656 3.76758 4.64931 3.76758 5.78324C3.76758 6.91717 4.69033 7.83993 5.82426 7.83993C6.95819 7.83993 7.88094 6.91717 7.88094 5.78324C7.88094 4.64931 6.95819 3.72656 5.82426 3.72656Z', fill='white')
+          a.soc-btn.mr-0.mr-sm-5.d-flex.align-items-center.justify-content-center(href="#")
+            svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+              g(clip-path='url(#clip0)')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M8.24288 13.0731H5.45726V7.15347H4.06445V4.8723H5.45726V3.50388C5.45726 1.64425 6.2432 0.537109 8.47559 0.537109H10.3345V2.81758H9.17304C8.30419 2.81758 8.24636 3.13669 8.24636 3.73172L8.24288 4.8723H10.3485L10.1018 7.15347H8.24288V13.0731Z', fill='white')
+              defs
+                clippath#clip0
+                  rect(width='12.536', height='12.536', fill='white', transform='translate(0.929688 0.537109)')
+        a.btn-simple.px-3.br-100.extrabold.mr-0.mr-sm-3.mb-3.mb-sm-0.d-flex.align-items-center.justify-content-center.order-2.order-xl-1(href="#") steffany podology
+        a.btn-simple.px-3.br-100.extrabold.mb-3.mb-sm-0.d-flex.align-items-center.justify-content-center.order-1.order-xl-1(href="#") steffany cosmetology
+
+
+
+
+
+        //section.section.about-steffany
+        //  .container
+        //    .row
+        //      .col-md-7.col-sm-12
+        //        .c-image
+        //          img(src="/assets/img/about-steffany-page/img-video.png", atl="video")
+        //        .btn steffany podology
+        //        .btn steffany beauty
+        //      .col-md-5.col-sm-12
+        //        .c-desc.ml-4
+        //          h2.section-title.text-color-dark Про Steffany
+        //          p.paragraph-text.text-color-dark.text-w-light Давайте знакомиться! Мы — сеть центров красоты и здоровья Steffany, где на каждое ваше «хочу» найдется процедура. А вы —  та самая девушка, которая заслужила расслабиться и получить качественный профессиональный уход.
+        //          p.paragraph-text.text-color-dark.text-w-light.mb-2 Вы можете прийти в отдельные центры Steffany по трем направлениям:
+        //          ul.list-outside
+        //            li.paragraph-text.text-color-dark.text-w-light.mb-2 бьюти, где можно сделать маникюр, прическу, стрижку и макияж;
+        //            li.paragraph-text.text-color-dark.text-w-light.mb-2 эпиляция и косметология, где вас ждут ухаживающие процедуры для лица, тела и удаления волос;
+        //            li.paragraph-text.text-color-dark.text-w-light.mb-2.mb-2 подология, где мы позаботимся о здоровье ваших стоп.
+        //          p.paragraph-text.text-color-dark.text-w-light Остановимся на эпиляции. У нас вы можете безболезненно и в любое время года удалить волосы лазером. Или выбрать другой способ, который вам по душе.
+        //
 
