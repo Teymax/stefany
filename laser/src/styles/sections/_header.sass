@@ -1,79 +1,17 @@
-//
-//header
-//  .icon
-//    width: 12px
-//    height: 15px
-//    margin-right: 10px
-//  .icon-arrow
-//    width: 12px
-//    margin-left: 6px
-//  .container
-//    display: flex
-//  .c-logo
-//  .c-row
-//    display: flex
-//    flex-direction: column
-//    margin-left: auto
-//    ul.header-contact-list
-//      display: flex
-//      &:nth-last-child(1)
-//        margin-right: 0
-//      li
-//        display: inline-flex
-//        align-items: center
-//        margin-right: 25px
-//        a
-//          @include font ('Circe', 400, 14, 22)
-//          color: $text-color-dark
-//
-//
-//    nav.header-nav
-//      ul.header-nav-list
-//        display: flex
-//        &:nth-last-child(1)
-//        margin-right: 0
-//        li
-//          display: inline-flex
-//          align-items: center
-//          margin-right: 25px
-//          a
-//            @include font ('Circe', 400, 16, 25)
-//            color: $text-color-dark
-//
-
 header
-  .icon
-    margin-right: 10px
-  .icon-loc
-    width: 10px
-    height: 13px
-  .icon-phone
-    width: 14px
-    height: 13px
-  .icon-arrow
-    width: 12px
-    margin-left: 6px
+  position: relative
+  z-index: 5
   .container
-    display: flex
-    max-width: 1260px
     padding-top: 20px
   .c-row
-    display: flex
-    align-items: flex-end
-    flex-direction: column
-    margin-left: auto
-    width: 100%
     max-width: 612px
     ul.dropdown-menu-list
       position: absolute
       z-index: -10
-      display: flex
-      flex-direction: column
       opacity: 0
       top: calc(100%)
       left: 50%
       transform: translateX(-50%)
-      width: 100%
       min-width: 100px
       padding: 7px
       background: #ffffff
@@ -84,33 +22,18 @@ header
         &:not(:last-child)
           margin-bottom: 5px
         a
-          @include font ('Circe-Regular', 300, 11, 13)
           transition: 0.3s ease
-          text-decoration: none
-          color: $text-color-dark
           border-bottom: 1px solid transparent !important
-          &:hover
-            border-bottom: 1px solid $text-color-dark !important
     ul.header-contact-list
-      display: flex
       &:nth-last-child(1)
-        margin-right: 0
       & > li
         position: relative
         cursor: pointer
-        display: flex
-        align-items: center
         margin-right: 35px
         .header-lang
           padding: 0 5px
         & > a
-          display: flex
-          align-items: center
-          justify-content: flex-start
           padding-top: 2px
-          text-decoration: none
-          @include font ('Circe-Regular', 300, 14, 14)
-          color: $text-color-dark
           img
             width: 10px
             height: 6px
@@ -123,36 +46,20 @@ header
       .header-lang-wrap
         ul.dropdown-menu-list
           min-width: 35px
-
     .header-nav-wrap
-      display: flex
-      align-items: center
-      justify-content: space-between
       width: 100%
       nav.header-nav
         width: 100%
         max-width: 372px
         margin-right: 5px
         ul.header-nav-list
-          display: flex
-          justify-content: space-between
-          align-items: center
           width: 100%
-          margin-bottom: 0
-          &:nth-last-child(1)
-          margin-right: 0
           li
             position: relative
             cursor: pointer
-            display: inline-flex
-            align-items: center
             margin-right: 4px
             transition: 0.3s ease
             border-bottom: 2px solid transparent
-            a
-              @include font ('Circe-Regular', 300, 16, 18)
-              color: $text-color-dark
-              text-decoration: none
             &:hover
               border-bottom: 2px solid $text-color-dark
             &.drop-menu
@@ -161,51 +68,172 @@ header
                 ul.dropdown-menu-list
                   z-index: 2
                   opacity: 1
-      .btn-callback
-        display: flex
-        align-items: center
-        justify-content: space-between
-        width: 100%
-        max-width: 195px
-        height: 38px
-        padding-right: 18px
-        padding-left: 20px
-        background: url('../assets/img/background/callback-btn.png')
-        background-repeat: no-repeat
-        background-size: 45px 38px
-        background-position: top right
-        border: 2px solid #000
-        text-decoration: none
-        border-radius: 100px
-        transition: 0.3s linear
-        & > span
-          display: flex
-          align-items: center
-          justify-content: space-between
-          width: 100%
-          max-width: 120px
-          svg
-            width: 13px
-            height: 13px
-          .st0
-            fill: #000
-            transition: 0.3s ease 0.1s
-          span
-            padding-top: 2px
-            @include font ('Circe-ExtraBold', 900, 10, 10)
-            text-transform: uppercase
-            letter-spacing: 2px
-            color: #000
-            transition: 0.3s ease
-        & > svg
-          width: 14px
-          height: 11px
-          .st0
-            fill: $color-white
-        &:hover
-          background-size: 195px 38px
-          & > span
-            .st0
-              fill: $color-white
-            span
-              color: $color-white
+
+//header
+//  .icon
+//    margin-right: 10px
+//  .icon-loc
+//    width: 10px
+//    height: 13px
+//  .icon-phone
+//    width: 14px
+//    height: 13px
+//  .icon-arrow
+//    width: 12px
+//    margin-left: 6px
+//  .container
+//    display: flex
+//    max-width: 1260px
+//    padding-top: 20px
+//  .c-row
+//    display: flex
+//    align-items: flex-end
+//    flex-direction: column
+//    margin-left: auto
+//    width: 100%
+//    max-width: 612px
+//    ul.dropdown-menu-list
+//      position: absolute
+//      z-index: -10
+//      display: flex
+//      flex-direction: column
+//      opacity: 0
+//      top: calc(100%)
+//      left: 50%
+//      transform: translateX(-50%)
+//      width: 100%
+//      min-width: 100px
+//      padding: 7px
+//      background: #ffffff
+//      border: 2px solid #a9a8c6
+//      border-radius: 10px
+//      li
+//        border-bottom: 0px solid transparent !important
+//        &:not(:last-child)
+//          margin-bottom: 5px
+//        a
+//          @include font ('Circe-Regular', 300, 11, 13)
+//          transition: 0.3s ease
+//          text-decoration: none
+//          color: $text-color-dark
+//          border-bottom: 1px solid transparent !important
+//          &:hover
+//            border-bottom: 1px solid $text-color-dark !important
+//    ul.header-contact-list
+//      display: flex
+//      &:nth-last-child(1)
+//        margin-right: 0
+//      & > li
+//        position: relative
+//        cursor: pointer
+//        display: flex
+//        align-items: center
+//        margin-right: 35px
+//        .header-lang
+//          padding: 0 5px
+//        & > a
+//          display: flex
+//          align-items: center
+//          justify-content: flex-start
+//          padding-top: 2px
+//          text-decoration: none
+//          @include font ('Circe-Regular', 300, 14, 14)
+//          color: $text-color-dark
+//          img
+//            width: 10px
+//            height: 6px
+//            margin-top: 2px
+//            margin-left: 6px
+//        &:hover
+//          ul.dropdown-menu-list
+//            z-index: 2
+//            opacity: 1
+//      .header-lang-wrap
+//        ul.dropdown-menu-list
+//          min-width: 35px
+//
+//    .header-nav-wrap
+//      display: flex
+//      align-items: center
+//      justify-content: space-between
+//      width: 100%
+//      nav.header-nav
+//        width: 100%
+//        max-width: 372px
+//        margin-right: 5px
+//        ul.header-nav-list
+//          display: flex
+//          justify-content: space-between
+//          align-items: center
+//          width: 100%
+//          margin-bottom: 0
+//          &:nth-last-child(1)
+//          margin-right: 0
+//          li
+//            position: relative
+//            cursor: pointer
+//            display: inline-flex
+//            align-items: center
+//            margin-right: 4px
+//            transition: 0.3s ease
+//            border-bottom: 2px solid transparent
+//            a
+//              @include font ('Circe-Regular', 300, 16, 18)
+//              color: $text-color-dark
+//              text-decoration: none
+//            &:hover
+//              border-bottom: 2px solid $text-color-dark
+//            &.drop-menu
+//              &:hover
+//                border-bottom: 2px solid transparent
+//                ul.dropdown-menu-list
+//                  z-index: 2
+//                  opacity: 1
+//      .btn-callback
+//        display: flex
+//        align-items: center
+//        justify-content: space-between
+//        width: 100%
+//        max-width: 195px
+//        height: 38px
+//        padding-right: 18px
+//        padding-left: 20px
+//        background: url('../assets/img/background/callback-btn.png')
+//        background-repeat: no-repeat
+//        background-size: 45px 38px
+//        background-position: top right
+//        border: 2px solid #000
+//        text-decoration: none
+//        border-radius: 100px
+//        transition: 0.3s linear
+//        & > span
+//          display: flex
+//          align-items: center
+//          justify-content: space-between
+//          width: 100%
+//          max-width: 120px
+//          svg
+//            width: 13px
+//            height: 13px
+//          .st0
+//            fill: #000
+//            transition: 0.3s ease 0.1s
+//          span
+//            padding-top: 2px
+//            @include font ('Circe-ExtraBold', 900, 10, 10)
+//            text-transform: uppercase
+//            letter-spacing: 2px
+//            color: #000
+//            transition: 0.3s ease
+//        & > svg
+//          width: 14px
+//          height: 11px
+//          .st0
+//            fill: $color-white
+//        &:hover
+//          background-size: 195px 38px
+//          & > span
+//            .st0
+//              fill: $color-white
+//            span
+//              color: $color-white

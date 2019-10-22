@@ -1,22 +1,3 @@
-// const gulp = require('gulp'),
-//       sass = require('gulp-sass');
-//
-// gulp.task('sass', function() {
-//   return gulp.src('./src/**/*.sass')
-//       .pipe(sass())
-//       .pipe(gulp.dest('./src'))
-// })
-//
-// function watch() {
-//   gulp.watch() {
-//     gulp.watch('./src/**/*.sass', )
-//   }
-//
-// }
-// gulp.task('sass:watch', function() {
-//   gulp.watch('./src/**/*.sass', 'sass');
-// })
-
 //подключение модулей gulp
 const gulp = require('gulp'),
     concat = require('gulp-concat'),
@@ -37,8 +18,7 @@ const cssFiles = [
 ]
 //порядок подключения JS файлов
 const jsFiles = [
-  '../../src/js/main.js',
-  '../materialize/js/materialize.js'
+  '../../src/js/**/*.js',
 ]
 const pugPages = [
   '../../src/pug/index.pug',
