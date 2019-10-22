@@ -254,8 +254,17 @@
 // list - style ****
 .info-list
   li
+    position: relative
+    padding-left: 20px
     &:before
-      background: #A9A8C6
+      position: absolute
+      left: 0
+      top: 9px
+      content: ''
+      width: 5px
+      height: 5px
+      background: $text-color-dark
+      border-radius: 50%
 
 // Icons - style *********
 .icon
