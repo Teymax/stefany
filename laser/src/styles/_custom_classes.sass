@@ -8,7 +8,7 @@
   border-bottom: 1px dashed #000080
 .small-text
   @include font(Circe, 400, 14, 22)
-
+  color: $text-color-dark
 .text-w-bold
   font-weight: 700 !important
 .text-w-light
@@ -17,16 +17,20 @@
   font-weight: 400 !important
 .text-color-light
   color: $text-color-white !important
+.text-color-lightgray
+  color: $text-color-lightgrey
 .text-color-dark
   color: $text-color-dark !important
 
 .paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
-.section-title
+.h1-title
   @include font (CormorantGaramond, bold, 44, 53)
   color: $text-color-white
-
+.h2-title
+  @include font (CormorantGaramond, bold, 34, 53)
+  color: $text-color-white
 .h3-title
   @include font(Circe, 400, 20, 24)
   color: $text-color-white
@@ -81,16 +85,13 @@
 
 
 
-ul.list-outside
-  list-style-position: inside !important
-  li
-    list-style: outside
+
 
 
 @include mobile-small
   .paragraph-text
     @include font(Circe, 400, 14, 22)
-  .section-title
+  .h1-title
     @include font (CormorantGaramond, bold, 34, 30)
   .h3-title
     @include font (Circe, 400, 16, 20)
@@ -253,17 +254,8 @@ ul.list-outside
 // list - style ****
 .info-list
   li
-    position: relative
-    padding-left: 20px
     &:before
-      position: absolute
-      left: 0
-      top: 9px
-      content: ''
-      width: 5px
-      height: 5px
-      background: $breadcrump-color
-      border-radius: 50%
+      background: #A9A8C6
 
 // Icons - style *********
 .icon

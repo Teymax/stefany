@@ -15,48 +15,54 @@
   </head>
   <body>
     <header>
-      <div class="container"><a class="c-logo" href="/"><img class="logo-header" src="assets/img/logo/header-logo.png" alt="Image Title"></a>
-        <div class="c-row">
-          <ul class="header-contact-list">
-            <li><img class="icon icon-loc" src="assets/icon/map.png" alt="h-map"><a href="#">Ивано-Франковск<img src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down"></a>
-              <ul class="dropdown-menu-list">
-                <li><a href="#">Ивано-Франковск2</a></li>
-                <li><a href="#">Ивано-Франковск3</a></li>
-                <li><a href="#">Ивано-Франковск4</a></li>
-                <li><a href="#">Ивано-Франковск5</a></li>
+      <div class="container container-m d-flex justify-content-between align-items-center"><a class="c-logo" href="#"><img class="logo-header" src="assets/img/logo/header-logo.png" alt="Image Title"></a>
+        <div class="row c-row w-100 no-gutter d-flex align-items-end justify-content-start flex-column m-0">
+          <ul class="header-contact-list d-flex mb-0 mb-md-3">
+            <li class="d-none d-md-flex align-items-center"><img class="icon icon-loc" src="assets/icon/map.png" alt="h-map"><a class="link-text-light d-flex align-items-center justify-content-start" href="#">Ивано-Франковск<img src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down"></a>
+              <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                <li><a class="text-small" href="#">Ивано-Франковск2</a></li>
+                <li><a class="text-small" href="#">Ивано-Франковск3</a></li>
+                <li><a class="text-small" href="#">Ивано-Франковск4</a></li>
+                <li><a class="text-small" href="#">Ивано-Франковск5</a></li>
               </ul>
             </li>
-            <li><img class="icon icon-phone" src="assets/icon/phone.png" alt="h-map"><a href="tel:0980070753">098 007 07 53</a></li>
-            <li class="header-lang-wrap"><a class="header-lang" href="#">RU</a>
-              <ul class="dropdown-menu-list">
-                <li><a href="#">UA</a></li>
-                <li><a href="#">EN</a></li>
+            <li class="d-none d-md-flex align-items-center"><img class="icon icon-phone" src="assets/icon/phone.png" alt="h-map"><a class="link-text-light d-flex align-items-center justify-content-start" href="tel:0980070753">098 007 07 53</a></li>
+            <li class="d-none d-xl-flex align-items-center header-lang-wrap mr-0"><a class="link-text-light d-flex align-items-center justify-content-start header-lang" href="#">RU</a>
+              <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                <li><a class="text-small" href="#">UA</a></li>
+                <li><a class="text-small" href="#">EN</a></li>
               </ul>
             </li>
+            <li class="d-flex d-xl-none align-items-center justify-content-between menu-trigger flex-column m-0"><span class="d-block w-100"></span><span class="d-block w-100"></span><span class="d-block w-100"></span></li>
           </ul>
-          <div class="header-nav-wrap">
-            <nav class="header-nav">
-              <ul class="header-nav-list">
-                <li><a href="/about.html">О нас</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-                <li class="drop-menu"><a href="#">Услуги</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
-                  <ul class="dropdown-menu-list">
-                    <li><a href="#">Услуга 2</a></li>
-                    <li><a href="#">Услуга 3</a></li>
-                    <li><a href="#">Услуга 4</a></li>
-                    <li><a href="#">Услуга 5</a></li>
+          <div class="header-nav-wrap d-flex align-items-center justify-content-end justify-content-xl-between">
+            <nav class="header-nav w-100 d-none d-xl-block">
+              <ul class="header-nav-list d-flex align-items-center justify-content-between mb-0">
+                <li class="d-inline-flex align-items-center drop-menu"><a class="p-text" href="#">О нас</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                    <li><a class="text-small" href="/about.html">Про Steffany</a></li>
+                    <li><a class="text-small" href="/about-salon.html">Про салон</a></li>
                   </ul>
                 </li>
-                <li class="drop-menu"><a href="#">Цены</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
-                  <ul class="dropdown-menu-list">
-                    <li><a href="#">Цены 2</a></li>
-                    <li><a href="#">Цены 3</a></li>
-                    <li><a href="#">Цены 4</a></li>
-                    <li><a href="#">Цены 5</a></li>
+                <li class="d-inline-flex align-items-center drop-menu"><a class="p-text" href="#">Услуги</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                    <li><a class="text-small" href="service-laser.html">Лазерная эпиляция</a></li>
+                    <li><a class="text-small" href="#">Услуга 2</a></li>
+                    <li><a class="text-small" href="#">Услуга 2</a></li>
+                    <li><a class="text-small" href="#">Услуга 3</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Контакты</a></li>
+                <li class="d-inline-flex align-items-center drop-menu"><a class="p-text" href="#">Цены</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                    <li><a class="text-small" href="#">Цены 2</a></li>
+                    <li><a class="text-small" href="#">Цены 3</a></li>
+                    <li><a class="text-small" href="#">Цены 4</a></li>
+                    <li><a class="text-small" href="#">Цены 5</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center mr-0"><a class="p-text" href="#">Контакты</a></li>
               </ul>
-            </nav><a class="btn-callback" href="#"><span>
+            </nav><a class="btn-callback d-none d-md-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
                   <style type="text/css">.st0{fill:#1B3EBF;}</style>
                   <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
@@ -69,13 +75,138 @@
         </div>
       </div>
     </header>
+    <!--header-->
+    <!--  .container-->
+    <!--    a.c-logo(href="/")-->
+    <!--      img.logo-header(src="assets/img/logo/header-logo.png" alt="Image Title")-->
+    <!--    .c-row-->
+    <!--      ul.header-contact-list-->
+    <!--        li-->
+    <!--          img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")-->
+    <!--          a(href="#") Ивано-Франковск-->
+    <!--            img(src="assets/icon/drop-arrow-down.png", alt="drop-arrow-down")-->
+    <!--          ul.dropdown-menu-list-->
+    <!--            li-->
+    <!--              a(href="#") Ивано-Франковск2-->
+    <!--            li-->
+    <!--              a(href="#") Ивано-Франковск3-->
+    <!--            li-->
+    <!--              a(href="#") Ивано-Франковск4-->
+    <!--            li-->
+    <!--              a(href="#") Ивано-Франковск5-->
+    <!--        li-->
+    <!--          img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")-->
+    <!--          a(href="tel:0980070753") 098 007 07 53-->
+    <!--        li.header-lang-wrap-->
+    <!--          a(href="#").header-lang RU-->
+    <!--          ul.dropdown-menu-list-->
+    <!--            li-->
+    <!--              a(href="#") UA-->
+    <!--            li-->
+    <!--              a(href="#") EN-->
+    <!--      .header-nav-wrap-->
+    <!--        nav.header-nav-->
+    <!--          ul.header-nav-list-->
+    <!--            li.drop-menu-->
+    <!--              a(href="#") О нас-->
+    <!--              img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")-->
+    <!--              ul.dropdown-menu-list-->
+    <!--                li-->
+    <!--                  a(href="/about.html") Про Steffany-->
+    <!--                li-->
+    <!--                  a(href="/about-salon.html") Про салон-->
+    <!---->
+    <!--            li.drop-menu-->
+    <!--              a(href="#") Услуги-->
+    <!--              img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")-->
+    <!--              ul.dropdown-menu-list-->
+    <!--                li-->
+    <!--                  a(href="/service-laser") Лазерная эпиляция-->
+    <!--                li-->
+    <!--                  a(href="#") Нано-эпиляция-->
+    <!--                li-->
+    <!--                  a(href="#") Шугаринг-->
+    <!--                li-->
+    <!--                  a(href="#") Восковая эпиляция-->
+    <!--            li.drop-menu-->
+    <!--              a(href="#") Цены-->
+    <!--              img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")-->
+    <!--              ul.dropdown-menu-list-->
+    <!--                li-->
+    <!--                  a(href="#") Цены 2-->
+    <!--                li-->
+    <!--                  a(href="#") Цены 3-->
+    <!--                li-->
+    <!--                  a(href="#") Цены 4-->
+    <!--                li-->
+    <!--                  a(href="#") Цены 5-->
+    <!--            li-->
+    <!--              a(href="#") Контакты-->
+    <!--        a.btn-callback(href="#")-->
+    <!--          span-->
+    <!--            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 12 12', style='enable-background:new 0 0 12 12;', xml:space='preserve')-->
+    <!--              style(type='text/css').-->
+    <!--                .st0{fill:#1B3EBF;}-->
+    <!--              path.st0(d='M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12\-->
+    <!--              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1\-->
+    <!--              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7\-->
+    <!--              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4\-->
+    <!--              C11.3,3.1,11.2,3.5,10.9,3.9z')-->
+    <!--            span записаться-->
+    <!--          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')-->
+    <!--            style(type='text/css').-->
+    <!--              .st0{fill:#D11111;}-->
+    <!--            path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\-->
+    <!--            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')-->
     <section class="section main-laser-service">
-      <div class="row c-service no-gutters">
-        <div class="col-md-8 col-sm-12 c-service__service-box c-service__service-box_bg-1"></div>
-        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-2"></div>
-        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-3"></div>
-        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-4"></div>
-        <div class="col-md-4 col-sm-12 c-service__service-box c-service__service-box_bg-5"></div>
+      <div class="container">
+        <div class="row c-service no-gutters">
+          <div class="col-12 col-md-12 col-lg-8 order-1 order-md-1 order-lg-1 c-service__service-box c-service__service-box_bg-1">
+            <div class="row">
+              <div class="col-6">
+                <div class="c-content p-3">
+                  <h1 class="h1-title text-w-bold text-color-lightgray">Комплексные зоны для эпиляции</h1>
+                  <ul class="info-list">
+                    <li class="small-text text-color-lightgray">Руки</li>
+                    <li class="small-text text-color-lightgray">Голени</li>
+                    <li class="small-text text-color-lightgray">Подмышки</li>
+                    <li class="small-text text-color-lightgray">Бикини глубокое</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6">
+                <button class="button"><span>подробнее</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 order-2 order-md-3 order-lg-2 c-service__service-box c-service__service-box_bg-2">
+            <div class="c-content p-3">
+              <h2 class="h2-title text-w-bold text-color-lightgray">Оплатите 3 сеанса лазерной эпиляции и получите 4-й в подарок</h2>
+              <button class="button"><span>подробнее</span></button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 order-5 order-md-4 order-lg-3 c-service__service-box c-service__service-box_bg-3">
+            <div class="c-content p-3">
+              <h2 class="h2-title text-w-bold text-color-lightgray">Лазерная эпиляция</h2>
+              <p class="paragraph-text d-none d-lg-block">Безболезненное удаление волос в любое время года</p>
+              <button class="button"><span>подробнее</span></button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 order-3 order-md-2 order-lg-4 c-service__service-box c-service__service-box_bg-4">
+            <div class="c-content p-3">
+              <h2 class="h2-title text-w-bold text-color-lightgray">Уход за лицом</h2>
+              <p class="paragraph-text d-none d-lg-block">Процедуры для восстановления и омоложения кожи</p>
+              <button class="button"><span>подробнее</span></button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 order-4 order-md-5 order-lg-5 c-service__service-box c-service__service-box_bg-5">
+            <div class="c-content p-3">
+              <h2 class="h2-title text-w-bold text-color-lightgray">SPA массаж</h2>
+              <p class="paragraph-text d-none d-lg-block">Расслабляющие ритуалы для ухода за телом</p>
+              <button class="button"><span>подробнее</span></button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section laser-desc">
@@ -85,11 +216,11 @@
             <div class="white-block-design"><img src="assets/img/position-img_5.png"></div>
           </div>
           <div class="col-12 col-lg-6">
-            <h2 class="section-title text-color-dark mb-5">Лазерная эпиляция в Житомире</h2>
+            <h2 class="h1-title text-color-dark mb-5">Лазерная эпиляция в Житомире</h2>
             <p class="paragraph-text text-color-dark text-w-bold mb-1">А еще шугаринг, восковая эпиляция, нано-эпиляция и косметология</p>
             <p class="paragraph-text text-color-dark text-w-light mb-3">Давайте знакомиться! Мы — сеть центров красоты и здоровья Steffany, где на каждое ваше «хочу» найдется процедура. А вы —  та самая девушка, которая заслужила расслабиться и получить качественный профессиональный уход.</p>
             <p class="paragraph-text text-color-dark text-w-light mb-3">Вы можете прийти в отдельные центры Steffany по трем направлениям:</p>
-            <ul class="list-outside">
+            <ul class="info-list">
               <li class="paragraph-text text-color-dark text-w-light mb-2">бьюти, где можно сделать маникюр, прическу, стрижку и макияж;</li>
               <li class="paragraph-text text-color-dark text-w-light mb-2">эпиляция и косметология, где вас ждут ухаживающие процедуры для лица, тела и удаления волос;</li>
               <li class="paragraph-text text-color-dark text-w-light mb-2">подология, где мы  о здоровье ваших стоп.</li>
@@ -99,9 +230,9 @@
         </div>
       </div>
     </section>
-    <section class="section advantages">
+    <section class="section four-boxes-01">
       <div class="container">
-        <h2 class="section-title text-color-light text-center">Кто сказал, что красота требует жертв?</h2>
+        <h2 class="h1-title text-color-light text-center">Кто сказал, что красота требует жертв?</h2>
         <p class="paragraph-text text-color-light text-center">В Steffany совсем другой подход к эпиляции</p>
         <div class="row">
           <div class="col-12 col-lg-6 c-boxes"><img src="assets/img/advantages/advantages_1.png" alt="advantages-1">
@@ -132,7 +263,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-            <h2 class="section-title text-color-dark">Мы проводим удаление волос лазером от Alma Lasers</h2>
+            <h2 class="h1-title text-color-dark">Мы проводим удаление волос лазером от Alma Lasers</h2>
             <p class="paragraph-text text-color-dark mb-1 position">Лазерная эпиляция в Steffany безболезненная и всесезонная благодаря нашему лазеру Soprano Ice Baby от израильской компании Alma Lasers. Его заводы находятся в Израиле, Германии и США. Это диодный лазер 2019 года выпуска.
               <p class="paragraph-text text-color-dark mb-1">Почему мы выбрали его?</p>
               <ul>
@@ -164,7 +295,7 @@
     </section>
     <section class="section choose-service">
       <div class="container">
-        <h2 class="section-title text-color-dark text-center mb-5">Будьте уверены в чистоте и безопасности каждой процедуры</h2>
+        <h2 class="h1-title text-color-dark text-center mb-5">Будьте уверены в чистоте и безопасности каждой процедуры</h2>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box mb-5">
             <div class="custom-icon-number mb-3">
@@ -209,7 +340,7 @@
             <p class="paragraph-text text-color-dark text-w-light mb-1">На консультации мастер осматривает родинки в эпилируемых зонах. Если родинки не возвышаются над кожей, он заклеивает их медицинским пластырем для защиты от лазера Выбирайте зону для эпиляции</p>
           </div>
         </div>
-        <h2 class="section-title text-center text-color-dark mb-3 mb-lg-5">Выбирайте зону для эпиляции</h2>
+        <h2 class="h1-title text-center text-color-dark mb-3 mb-lg-5">Выбирайте зону для эпиляции</h2>
         <div class="row">
           <div class="col-lg-2 col-md-4 col-sm-12 d-flex flex-column align-items-center choose-zone-box"><img class="icon-service-choose mr-4" src="assets/img/services-choose/choose-zone_1.png" alt="choose-zone_1">
             <p class="h4-title text-color-dark">Зога лица</p>
@@ -237,7 +368,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6">
-              <h2 class="section-title text-color-light mb-3">Лазерная эпиляция начинается с консультации</h2>
+              <h2 class="h1-title text-color-light mb-3">Лазерная эпиляция начинается с консультации</h2>
               <p class="paragraph-text text-color-light text-w-bold mb-4">Главная задача консультации — чтобы вы были спокойны и уверенны в процедуре</p>
               <p class="paragraph-text text-color-light text-w-light mb-2">Консультация — это первый и обязательный этап лазерной эпиляции. На ней вы получаете ответы на все свои вопросы, а мы убеждаемся, какой курс процедур вам назначить для наилучшего результата.</p>
               <p class="paragraph-text text-color-light text-w-light mb-2">Как же проходит консультация?</p>
@@ -313,66 +444,75 @@
     <section class="section discount">
       <div class="container">
         <div class="row flex-column align-items-center">
-          <h2 class="section-title text-color-dark">Комплексные предложения</h2>
+          <h2 class="h1-title text-color-dark">Комплексные предложения</h2>
           <p class="paragraph-text text-color-dark">Только 1 день скидки на пакеты обученияот 18% до 27%</p>
-          <p class="paragraph-text text-color-dark">22 : 22 : 22</p><img src="assets/img/check-female.png" alt="check-female">
+          <p class="paragraph-text text-color-dark text-w-bold"> 22 : 22 : 22</p><img src="assets/img/check-female.png" alt="check-female">
         </div>
         <div class="row no-gutters">
           <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
+            <div class="c-content p-4 border">
+              <h4 class="h4-title text-color-dark text-w-bold text-center mb-4">Minimum</h4>
               <div class="row">
                 <div class="col">
-                  <ul>
+                  <ul class="info-list">
                     <li>
-                      <p class="paragraph-text text-color-dark">Бикини глубокое</p>
-                      <p class="paragraph-text text-color-dark">Подмышечные области</p>
+                      <p class="paragraph-text text-color-dark text-w-light">Бикини глубокое</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-text text-color-dark text-w-light">Подмышечные области</p>
                     </li>
                   </ul>
                 </div>
                 <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
+                  <p class="paragraph-text text-color-dark text-w-bold">2 000 грн</p>
+                  <p class="paragraph-text text-color-dark text-w-bold">1 730 грн</p>
                 </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+              </div>
+              <div class="row justify-content-center"><a class="btn">оплатить</a><a class="btn">записаться</a></div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
+            <div class="c-content p-4 border">
+              <h4 class="h4-title text-color-dark text-w-bold text-center mb-4">Standart</h4>
               <div class="row">
                 <div class="col">
-                  <ul>
+                  <ul class="info-list">
                     <li>
-                      <p class="paragraph-text text-color-dark">Бикини глубокое</p>
-                      <p class="paragraph-text text-color-dark">Подмышечные области</p>
+                      <p class="paragraph-text text-color-dark text-w-light">Бикини глубокое</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-text text-color-dark text-w-light">Подмышечные области</p>
                     </li>
                   </ul>
                 </div>
                 <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
+                  <p class="paragraph-text text-color-dark text-w-bold">2 000 грн</p>
+                  <p class="paragraph-text text-color-dark text-w-bold">1 730 грн</p>
                 </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+              </div>
+              <div class="row justify-content-center"><a class="btn">оплатить</a><a class="btn">записаться</a></div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
+            <div class="c-content p-4 border">
+              <h4 class="h4-title text-color-dark text-w-bold text-center mb-4">Maximum</h4>
               <div class="row">
                 <div class="col">
-                  <ul>
+                  <ul class="info-list">
                     <li>
-                      <p class="paragraph-text text-color-dark">Бикини глубокое</p>
-                      <p class="paragraph-text text-color-dark">Подмышечные области</p>
+                      <p class="paragraph-text text-color-dark text-w-light">Бикини глубокое</p>
+                    </li>
+                    <li>
+                      <p class="paragraph-text text-color-dark text-w-light">Подмышечные области</p>
                     </li>
                   </ul>
                 </div>
                 <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
+                  <p class="paragraph-text text-color-dark text-w-bold">2 000 грн</p>
+                  <p class="paragraph-text text-color-dark text-w-bold">1 730 грн</p>
                 </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+              </div>
+              <div class="row justify-content-center"><a class="btn">оплатить</a><a class="btn">записаться</a></div>
             </div>
           </div>
         </div>
@@ -380,7 +520,7 @@
     </section>
     <section class="section safety">
       <div class="container">
-        <h2 class="section-title text-center mb-3">Лазерная эпиляция должна вам помочь, а не навредить</h2>
+        <h2 class="h1-title text-center mb-3">Лазерная эпиляция должна вам помочь, а не навредить</h2>
         <p class="paragraph-text text-center">Поэтому мы принимаем все меры предосторожности</p>
         <div class="row mt-7 mt-lg-10 c-safety justify-content-center justify-content-lg-between">
           <div class="col-12 col-lg-6 safety-box mb-6 mb-lg-0">
@@ -396,7 +536,7 @@
     </section>
     <section class="section accordion-answer">
       <div class="container">
-        <h2 class="section-title text-center">Часто задаваемые вопросы</h2>
+        <h2 class="h1-title text-center">Часто задаваемые вопросы</h2>
         <p class="h3-title text-center">Возможно, наши клиенты уже задали интересующий вас вопрос</p>
         <div class="accordion mt-3" id="accordion">
           <div class="card-header" id="heading01" data-toggle="collapse" data-target="#collapse01" aria-controls="collapse01" aria-expanded="true">
@@ -467,7 +607,7 @@
         <div class="row">
           <div class="col-12 col-md-6 col-lg-7">
             <div class="c-content ml-lg-7">
-              <h3 class="c-title section-title text-w-light">Запишитесь на консультацию <span class="text-w-regular">прямо сейчас</span> и получите скидку 10%</h3>
+              <h3 class="c-title h1-title text-w-light">Запишитесь на консультацию <span class="text-w-regular">прямо сейчас</span> и получите скидку 10%</h3>
               <p class="c-desc paragraph-text text-w-light">Раздел медицины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.</p>
             </div>
           </div>
@@ -492,7 +632,7 @@
     </section>
     <section class="section service-three-boxes_01">
       <div class="container">
-        <h3 class="section-title text-color-dark text-center mb-4 mb-lg-5">Нано-эпиляция — лучший способ удалить светлые волосы</h3>
+        <h3 class="h1-title text-color-dark text-center mb-4 mb-lg-5">Нано-эпиляция — лучший способ удалить светлые волосы</h3>
         <div class="row">
           <div class="col-12 col-lg-4">
             <div class="c-three-box"><img class="img-position" src="assets/img/safety/safety-img_1.png" alt="alt">

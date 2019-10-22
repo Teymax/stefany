@@ -10,7 +10,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img //
   display: block
 
-body, html
+body
   line-height: 1
   overflow-x: hidden
 
@@ -28,3 +28,16 @@ blockquote:before, blockquote:after, q:before, q:after
 table
   border-collapse: collapse
   border-spacing: 0
+
+a
+  text-decoration: none !important
+  &:hover
+    text-decoration: none !important
+    color: inherit
+button
+  border: none !important
+  outline: none !important
+  background-color: transparent
+  &:focus
+    border: none !important
+    outline: none !important
