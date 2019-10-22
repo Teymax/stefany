@@ -2,12 +2,16 @@
 .container
   width: 100% !important
   padding: 0 30px
-.container-s
-  max-width: 1047px !important
+.container-xs
+  max-width: 975px !important
 .container-m
   max-width: 1260px !important
 .container-l
   max-width: 1270px !important
+.container-xl
+  max-width: 1283px !important
+.container-xxl
+  max-width: 1470px !important
 
 // text - style *******
 	
@@ -53,6 +57,8 @@
   color: $text-color-dark !important
 .f-bold
   font-weight: bold !important
+.f-light
+  font-weight: 300 !important
 .span-bigger
   font-size: 70px !important
 .custom-icon-number-dark
@@ -67,7 +73,7 @@ p, .p-text, .paragraph-text
 	@include font('Circe-Light', 300, 14, 24)
 	color: $breadcrump-color
 .text-small
-  @include font ('Circe-Regular', 300, 11, 13)
+  @include font ('Circe-Regular', 300, 12, 13)
   color: $text-color-dark 
 .timer-nubmer
   text-transform: uppercase
@@ -108,6 +114,9 @@ p, .p-text, .paragraph-text
 .h3-title
   @include font('Circe-Light', 400, 20, 24)
   color: $text-color-white
+.h3-title-regular
+  @include font('Circe-Regular', 400, 20, 24)
+  color: $text-color-white
 .grid-title
   display: -webkit-box
   height: 70px
@@ -128,7 +137,7 @@ p, .p-text, .paragraph-text
   @include font('Circe-ExtraBold', 900, 11, 10)
 
 .white-text
-  color: $color-white
+  color: $color-white !important
 
 .h-center
   text-align: center
@@ -167,6 +176,9 @@ p, .p-text, .paragraph-text
     svg
       width: 13px
       height: 13px
+    .sendSvg
+      width: 13px
+      height: 19px
     .st0 
       fill: $color-purple-text
       transition: 0.3s ease 0.2s
@@ -330,18 +342,25 @@ p, .p-text, .paragraph-text
 // Play-button - style ********
 
 .play-btn
-	position: absolute
-	width: 92px
-	height: 92px
-	background: $color-purple-opacity
-	border-radius: 50%
-	&-orange
-		background: $color-orange-opacity
-	span
-		width: 20px
-		height: 20px
-		background: $play-btn-color
-		clip-path: polygon(0 0, 0% 100%, 100% 50%)
+  border-radius: 50%
+  transition: 0.4s ease
+  background: $color-purple-opacity
+  position: absolute
+  width: 92px
+  height: 92px
+  &-orange
+    background: $color-orange-opacity
+  span
+    width: 20px
+    height: 20px
+    clip-path: polygon(0 0, 0% 100%, 100% 50%)
+    background: $play-btn-color
+.play-btn-small
+  width: 42px
+  height: 42px
+  span
+    width: 10px
+    height: 10px
 
 // border - style ********
 
@@ -435,6 +454,24 @@ textarea.field
 	      background-image: url('../assets/icon/slider-right-arrow.png') !important
 	      background-repeat: no-repeat  !important
 	      background-size: contain !important
+  &.video-slider
+		.owl-nav
+			position: absolute !important
+			display: flex !important
+			top: calc(100% + 26px)
+			left: 0
+			width: 100%
+			margin-top: 0 !important
+			padding-top: 0 !important
+			button
+        &.owl-prev
+          background-image: url('../assets/icon/aroow-left-gray.png') !important
+          background-repeat: no-repeat  !important
+          background-size: contain !important
+        &.owl-next
+          background-image: url('../assets/icon/aroow-right-gray.png') !important
+          background-repeat: no-repeat  !important
+          background-size: contain !important
 
 // menu - stely **
 .menu-trigger 

@@ -1,5 +1,53 @@
 .questions
-  background: url('../assets/img/infoblock/infoblockGrid-bg-1.png')
+  background: url('../assets/img/background/question-bg.jpg')
   background-repeat: no-repeat
   background-size: cover
   background-position: top left
+  .card-header
+    border-radius: 0
+    background: none
+    border-bottom: 0px solid transparent
+  &-head
+    background: $text-color-dark
+    transition: 0.3s ease
+    .card-arrow
+      width: 64px
+      min-width: 64px
+      height: 100%
+      min-height: 64px
+      margin-right: 44px
+      background: $card-arrow-bg
+      transition: 0.3s ease
+      svg
+        width: 15px
+        height: 15px
+        transition: 0.3s ease
+        .cls-1
+          fill: $color-white
+  &-answer
+    .card-body
+      padding-left: 128px
+  &-item
+    cursor: pointer
+    &.active
+      .questions-answer
+        padding-bottom: 1.5rem!important 
+      .questions-head
+        background: $question-head-hover
+        .card-arrow
+          background: $color-purple
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+          svg
+            transform: rotate(-180deg)
+@media(max-width: 730px)
+  .questions-head .card-arrow
+    width: 60px
+    min-width: 60px
+    height: 100%
+    min-height: 60px  
+    margin-right: 20px
+  .accordion .paragraph-text 
+    font-size: 14px !important
+    line-height: 19px
+  .questions-answer .card-body
+    padding-left: 100px

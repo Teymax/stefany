@@ -33,6 +33,20 @@ $(document).ready(function(){
 		$('header').toggleClass('open');
 	});
 
+	$(".questions-item .collapse").on('show.bs.collapse', function(){
+		$(this).closest(".questions-item").addClass('active')
+	});
+
+	$(".questions-item .collapse").on('hide.bs.collapse', function(){
+		$(this).closest(".questions-item").removeClass('active')
+	});
+
+	$( ".questions-item" ).each(function(el) {
+		if($(this).find('.collapse-answer').hasClass('show') == true){
+			$(this).addClass('active')
+		}
+	});
+
 	$('.diploma-slider').owlCarousel({
 		loop:true,
 		margin:35,
@@ -68,6 +82,39 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	var videoSLider = $('.video-slider').owlCarousel({
+		loop:false,
+		margin: 0,
+		nav: true,
+		dots: false,
+		items:1,
+		dotsContainer: '.video-slider-dots',
+	});
+
+	$('.video-slider-dots .owl-dot').click(function (e) {
+		e.preventDefault()
+		var itemPosition = $(this).attr("data-pos");
+	  videoSLider.trigger('to.owl.carousel', [itemPosition, 300]);
+	});
+
+	var videoSliderDots = $('.video-slider-dots').owlCarousel({
+		navContainer: '.video-nav-slider-dots',
+		loop: false,
+		margin: 0,
+		nav: true,
+		dots: false,
+		items:1
+	});
+
+	$('.video-nav-slider-dots .owl-next').click(function() {
+		videoSliderDots.trigger('next.owl.carousel');
+	})
+
+	$('.video-nav-slider-dots .owl-prev').click(function() {
+		videoSliderDots.trigger('prev.owl.carousel', [300]);
+	})
+
 });
 
 
