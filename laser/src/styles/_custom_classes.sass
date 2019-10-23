@@ -85,7 +85,20 @@
 
 
 
-
+// list - style ****
+.info-list
+  li
+    position: relative
+    padding-left: 20px
+    &:before
+      position: absolute
+      left: 0
+      top: 9px
+      content: ''
+      width: 5px
+      height: 5px
+      background: $text-color-dark
+      border-radius: 50%
 
 
 @include mobile-small
@@ -93,8 +106,10 @@
     @include font(Circe, 400, 14, 22)
   .h1-title
     @include font (CormorantGaramond, bold, 34, 30)
+  .h2-title
+
   .h3-title
-    @include font (Circe, 400, 16, 20)
+  .h4-title
 
 
 
@@ -251,11 +266,12 @@
 .no-bg
   background: transparent !important
 
-// list - style ****
-.info-list
-  li
-    &:before
-      background: #A9A8C6
+
+
+
+
+
+
 
 // Icons - style *********
 .icon

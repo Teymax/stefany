@@ -2,21 +2,21 @@ section.section.four-boxes-01
   background-image: url("../assets/img/background/advantages-bg.jpg")
   background-size: cover
   .container
-    h2.h1-title.text-color-light
-    p.advantages-count
-      @include font(CormorantGaramond, 700, 75, 80)
-      color: $text-color-white
-    .h3-title
-      text-transform: uppercase
     .c-boxes
-      position: relative
-      z-index: 1
-      max-width: 400px
-      margin-left: 200px
-      img
-        position: absolute
-        z-index: -1
-        left: -245px
+      .c-card
+        img
+          @include mobile-all
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: -156px
+          @include tablet
+            margin-left: -30px
+          @include desktop
+            margin-left: -40px
+        @include mobile-all
+          max-width: 300px
+          margin: 0 auto
+
 section.section.four-boxes-02
   background-image: url("../assets/img/background/advantages-bg.jpg")
   background-size: cover
@@ -37,8 +37,4 @@ section.section.four-boxes-02
         z-index: -1
         left: -245px
 section.section.four-boxes-02
-  background-image: none
-  .container
-    .h1-title, .paragraph-text, .bnf-number, .h3-title
-      color: $text-color-dark !important
 

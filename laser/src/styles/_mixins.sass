@@ -20,7 +20,7 @@ $desktop-width: 1200px
     @content
 
 @mixin tablet
-  @media (max-width: #{$laptop-width - 1px})
+  @media (min-width: #{$tablet-width - 1px}) and (max-width: #{$laptop-width - 1px})
     @content
 
 @mixin not-laptop

@@ -1,17 +1,19 @@
 section.section.almalaser
   position: relative
   background-color: #EDE1DF
-  p.extralarge-text-bg
-    bottom: -100px
-    left: 700px
   .container
-    p.position
-      //position: relative
-      &:before
-        //position: absolute
-        content: ''
-        display: block
-        height: 2px
-        width: 90px
-        background-color: rgba(125, 137, 158, 0.39)
-        margin: 1.5rem 0
+    .white-block-design
+      width: 468px
+      height: 657px
+      img
+        top: 60px
+        left: 60px
+    @include mobile-all
+      .white-block-design
+        width: 230px
+        height: 326px
+        img
+          width: 251px
+          height: 248px
+          top: 33px
+          left: 33px
