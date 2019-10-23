@@ -1,0 +1,138 @@
+.info-block
+	padding-top: 160px
+	background: url('../assets/img/infoblock/infoblock-bg-1.png')
+	background-repeat: no-repeat 
+	background-size: 100% calc(100% - 100px)
+	background-position: top left
+	overflow: hidden
+	.container 
+		position: relative
+		max-width: 1150px
+		.row 
+			position: relative
+		.col-img
+			position: absolute
+			left: 0
+			top: -70px
+			z-index: 2
+			width: 100%
+			max-width: 457px
+			box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
+		.col-info
+			position: relative
+			z-index: 1
+			width: 100%
+			max-width: 771px
+			padding: 57px 93px 100px 144px
+			background: $color-white
+			p.pt-50 
+				padding-top: 50px
+		.big-text
+			position: absolute
+			bottom: 70px
+			left: -160px
+			z-index: 2
+			@include font('Circe-ExtraBold', 900, 322, 130)
+			letter-spacing: 5px
+			color: $color-white
+.info-block-1
+	padding-bottom: 100px	
+.info-block-2	
+	padding-top: 61px
+	padding-bottom: 65px
+	background: url('../assets/img/infoblock/infoblock-bg-2.jpg')
+	background-repeat: no-repeat 
+	background-size: 100% 90%
+	background-position: bottom left
+	.container
+		.row 
+			.col-img
+				left: auto
+				right: 0
+				max-width: 476px
+			.col-info
+				max-width: 739px
+				padding: 45px 141px 58px 51px
+	.big-text
+		left: auto
+		right: -235px
+		top: -96px
+		text-align: right
+.info-list-item
+	.info-list-number
+		width: 37px
+		min-width: 37px
+		height: 37px
+		margin-top: -7px
+		margin-right: 31px
+  	color: $color-white !important
+		background: $list-number
+		border-radius: 50%
+		@include font('CormorantGaramond-Bold', 700, 42, 42)
+		span 
+			display: block
+			margin-top: -6px
+			color: $color-white
+@media(max-width: 1120px)
+	.info-block .container .col-img
+		top: -15px
+		max-width: 400px
+	.info-block .container .col-info
+		max-width: 690px
+@media(max-width: 991px)
+	.info-block
+		padding-top: 50px
+		background-size: 100% 490px
+		&-1
+			padding-bottom: 0
+		&-2
+			padding-top: 0
+	.info-block .container
+		.row
+			position: relative
+			z-index: 3
+	.col-img
+		position: static !important
+		margin-top: -160px
+	.info-block .container .col-info
+		padding: 35px 0 200px !important
+	.info-block .container .big-text
+		transform: rotate(90deg)	
+		left: 132px	
+		height: 0	
+		width: 0	
+		top: -155px	
+	.info-block-2 .container .big-text
+      top: auto
+      left: 0
+      bottom: 0px
+      height: auto
+      transform: rotate(0)
+      width: 100%
+      text-align: center
+@media(max-width: 768px)
+	.info-block
+		background: none !important
+@media(max-width: 700px)
+	.big-text
+ 		display: none
+	.info-block .container
+		padding-bottom: 80px
+	.col-img
+		margin-top: 0
+	.info-block .container .col-info
+		padding: 35px 0 35px !important
+	.info-list-item .info-list-number
+		margin-right: 10px
+// @media(max-width: 1080px)
+// 	.big-text
+// 		display: none
+// @media(max-width: 730px)
+// 	.info-block .container .col-info
+// 		padding: 20px 18px 200px !important
+// 		max-width: 320px !important
+// 	.info-block .container .col-img
+// 		max-width: 270px !important
+// 	.info-list-item .info-list-number
+// 		margin-top: -8px
+//     margin-right: 15px

@@ -35,14 +35,14 @@ const cssFiles = [
   // '../materialize/css/materialize/css'
   // './src/sass/_media.sass'
 ]
+
 //порядок подключения JS файлов
 const jsFiles = [
-  '../../src/js/main.js',
-  '../materialize/js/materialize.js'
+  '../../src/js/**/*.js'
 ]
 const pugPages = [
   '../../src/pug/index.pug',
-  '../../src/pug/page/**/*.pug'
+  '../../src/pug/page/*.pug'
 ]
 
 //таск на стили CSS
@@ -101,9 +101,8 @@ function watch() {
       baseDir: "../../build"
     }
   });
-  // следит за CSS файлами
   gulp.watch('../../src/pug/**/*.pug', function() {
-    return gulp.src('../../src/pug/index.pug')
+    return gulp.src(pugPages)
         .pipe(pug({
           pretty: true
         }))
@@ -130,5 +129,3 @@ gulp.task('watch', watch);
 // gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
 
 // gulp.task('dev', gulp.series('build', 'watch'))
-
-

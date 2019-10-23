@@ -1,0 +1,66 @@
+.service-list
+	.container
+		max-width: 1470px
+	.section-title
+		position: relative
+		z-index: 2
+		margin-bottom: 13px
+		line-height: 33px !important
+		color: $color-white
+		display: -webkit-box  !important
+		-webkit-line-clamp: 3 !important
+		overflow: hidden !important
+		-webkit-box-orient: vertical !important
+	p
+		position: relative
+		z-index: 2
+		display: -webkit-box
+		-webkit-line-clamp: 3
+		overflow: hidden
+		-webkit-box-orient: vertical
+		line-height: 20px
+		color: $color-white
+	.button
+		position: relative
+		z-index: 2
+	.row
+		.service-item
+			height: 295px
+			overflow: hidden
+			padding-top: 33px
+			padding-bottom: 45px
+			padding-left: 36px
+			.service-btn-wrap
+				position: relative
+				z-index: 2
+				.button
+					cursor: pointer
+					width: 38px
+					height: 38px
+					margin-right: 25px
+					padding: 0
+					& svg 
+						width: 13px
+    				height: 13px
+						.st0 
+							fill: $color-white
+				span
+					@include font('Circe-ExtraBold', 900, 12, 12)
+					color: $color-white
+					letter-spacing: 3px
+			& > img
+				position: absolute
+				left: 0
+				top: 0
+				z-index: 1
+				width: 100%
+				max-width: 100%
+		.service-item-2
+			.button 
+				background: #9FA6BA
+				border: 1px solid rgba(255, 255, 255, 0.3)
+				&:hover
+					box-shadow: 0 0 10px rgba(255, 255, 255, 0.3)
+@media(max-width: 991px)
+	.service-list .row .service-item
+		padding-left: 25px
