@@ -446,12 +446,19 @@ table {
   padding: 0 30px; }
 
 .section {
-  padding: 4rem 0; }
+  padding: 4rem 0;
+  overflow: hidden; }
 
 .icon {
   display: inline-block;
   width: 15px;
   height: 19px; }
+
+.circles {
+  position: absolute;
+  z-index: 1;
+  opacity: .2;
+  pointer-events: none; }
 
 .text-dashed {
   border-bottom: 1px dashed #000080; }
@@ -757,8 +764,32 @@ table {
 .no-bg {
   background: transparent !important; }
 
-.info-list li:before {
-  background: #A9A8C6; }
+.dashes {
+  width: 15em;
+  position: absolute; }
+
+.dark-blue {
+  color: #3A405B; }
+
+.dash {
+  width: 5em;
+  height: .3em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  background: rgba(125, 137, 158, 0.39); }
+
+.info-list li {
+  position: relative;
+  padding-left: 20px; }
+  .info-list li:before {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #556278;
+    border-radius: 50%; }
 
 .icon {
   margin-right: 10px; }
@@ -943,17 +974,62 @@ header {
                 z-index: 2;
                 opacity: 1; }
 
-section.section.introduce .container {
-  position: relative;
-  height: 100vh; }
-  section.section.introduce .container #feetOne {
+section.section.introduce {
+  height: 84vh; }
+  section.section.introduce .info-list li:before {
+    background: #556278; }
+  section.section.introduce .feet {
     position: absolute;
-    top: -10em;
     z-index: -1;
-    display: block;
-    left: 39em;
+    display: block; }
+  section.section.introduce #feetOne {
+    top: 0;
+    right: 0;
     width: 50em;
     height: auto; }
+  section.section.introduce #feetTwo {
+    top: 2em;
+    width: 25em; }
+  section.section.introduce .container {
+    position: relative;
+    padding: 0; }
+    section.section.introduce .container #circles {
+      position: absolute;
+      top: 3em;
+      left: 10em; }
+    section.section.introduce .container .card {
+      background: #303947;
+      padding: 4em 3em;
+      position: relative; }
+      @media (max-width: 767px) {
+        section.section.introduce .container .card {
+          padding: 1em 3em;
+          border-radius: 0; } }
+      section.section.introduce .container .card h1 {
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 60px;
+        line-height: 55px; }
+        @media (max-width: 991px) {
+          section.section.introduce .container .card h1 {
+            font-size: 50px; } }
+        @media (max-width: 767px) {
+          section.section.introduce .container .card h1 {
+            font-size: 40px; } }
+        section.section.introduce .container .card h1 strong {
+          color: #4f79ca;
+          font-weight: 600; }
+      section.section.introduce .container .card .call-me {
+        margin-bottom: 5em; }
+      section.section.introduce .container .card .intro-dashes {
+        bottom: 0;
+        right: 3em; }
+
+section.section.advantages {
+  overflow: auto;
+  background: transparent;
+  margin-top: -9em; }
 
 footer.footer .container .c-logo-f img {
   max-width: 264px;
@@ -1000,6 +1076,44 @@ footer.footer .container .c-logo-f img {
 .btn:focus {
   outline: none !important;
   box-shadow: none !important; }
+
+.numbered-section {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff; }
+  .numbered-section img {
+    display: block;
+    height: auto;
+    position: absolute; }
+  .numbered-section .description {
+    margin-left: 12em; }
+    .numbered-section .description h3.title {
+      color: #3a405b;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 1em; }
+    .numbered-section .description p.desc {
+      color: #3a405b;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 26px; }
+  .numbered-section div {
+    margin-bottom: 5em; }
+    .numbered-section div:nth-child(1) img {
+      width: 16em; }
+    .numbered-section div:nth-child(2) img {
+      width: 8em; }
+    .numbered-section div:nth-child(2) .description {
+      margin-left: 10em; }
+    .numbered-section div:nth-child(3) img {
+      width: 9em; }
+    .numbered-section div:nth-child(4) img {
+      width: 14em; }
 
 /**
  * Owl Carousel v2.3.4
@@ -1226,15 +1340,3 @@ footer.footer .container .c-logo-f img {
     border-radius: 30px; }
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #869791; }
-
-section.section.introduce .container {
-  position: relative;
-  height: 100vh; }
-  section.section.introduce .container #feetOne {
-    position: absolute;
-    top: -10em;
-    z-index: -1;
-    display: block;
-    left: 39em;
-    width: 50em;
-    height: auto; }

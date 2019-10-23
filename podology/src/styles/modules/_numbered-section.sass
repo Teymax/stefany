@@ -1,0 +1,42 @@
+.numbered-section
+	display: flex
+	flex-wrap: wrap
+	background: #ffffff
+	img
+		display: block
+		height: auto
+		position: absolute
+
+	.description
+		margin-left: 12em
+
+		h3.title
+			color: #3a405b
+			@include font(Circe, 400, 18, 20)
+			margin-bottom: 1em
+
+		p.desc
+			color: #3a405b
+			@include font(Circe, 200, 14, 26)
+
+	div
+		margin-bottom: 5em
+
+		&:nth-child(1)
+			img
+				width: 16em
+
+		&:nth-child(2)
+			img
+				width: 8em
+
+			.description
+				margin-left: 10em
+
+		&:nth-child(3)
+			img
+				width: 9em
+
+		&:nth-child(4)
+			img
+				width: 14em

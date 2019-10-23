@@ -3,6 +3,12 @@
 	width: 15px
 	height: 19px
 
+.circles
+	position: absolute
+	z-index: 1
+	opacity: .2
+	pointer-events: none
+
 .text-dashed
 	border-bottom: 1px dashed #000080
 
@@ -283,11 +289,35 @@
 .no-bg
 	background: transparent !important
 
+.dashes
+	width: 15em
+	position: absolute
+
+.dark-blue
+	color: $secondary-header-color
+
+.dash
+	width: 5em
+	height: .3em
+	margin-top: 1em
+	margin-bottom: 1.5em
+	background: rgba(125, 137, 158, 0.39)
+
 // list - style ****
 .info-list
 	li
+		position: relative
+		padding-left: 20px
+
 		&:before
-			background: #A9A8C6
+			position: absolute
+			left: 0
+			top: 9px
+			content: ''
+			width: 5px
+			height: 5px
+			background: $text-color-dark
+			border-radius: 50%
 
 // Icons - style *********
 .icon
