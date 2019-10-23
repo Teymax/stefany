@@ -1,0 +1,90 @@
+header
+	position: relative
+	z-index: 5
+
+	.container
+		padding-top: 20px
+
+	.c-row
+		max-width: 612px
+
+		ul.dropdown-menu-list
+			position: absolute
+			z-index: -10
+			opacity: 0
+			top: calc(100%)
+			left: 50%
+			transform: translateX(-50%)
+			min-width: 100px
+			padding: 7px
+			background: #ffffff
+			border: 2px solid #a9a8c6
+			border-radius: 10px
+
+			li
+				border-bottom: 0px solid transparent !important
+
+				&:not(:last-child)
+					margin-bottom: 5px
+
+				a
+					transition: 0.3s ease
+					border-bottom: 1px solid transparent !important
+
+		ul.header-contact-list
+			&:nth-last-child(1)
+
+			& > li
+				position: relative
+				cursor: pointer
+				margin-right: 35px
+
+				.header-lang
+					padding: 0 5px
+
+				& > a
+					padding-top: 2px
+
+					img
+						width: 10px
+						height: 6px
+						margin-top: 2px
+						margin-left: 6px
+
+				&:hover
+					ul.dropdown-menu-list
+						z-index: 2
+						opacity: 1
+
+			.header-lang-wrap
+				ul.dropdown-menu-list
+					min-width: 35px
+
+		.header-nav-wrap
+			width: 100%
+
+			nav.header-nav
+				width: 100%
+				max-width: 372px
+				margin-right: 5px
+
+				ul.header-nav-list
+					width: 100%
+
+					li
+						position: relative
+						cursor: pointer
+						margin-right: 4px
+						transition: 0.3s ease
+						border-bottom: 2px solid transparent
+
+						&:hover
+							border-bottom: 2px solid $text-color-dark
+
+						&.drop-menu
+							&:hover
+								border-bottom: 2px solid transparent
+
+								ul.dropdown-menu-list
+									z-index: 2
+									opacity: 1
