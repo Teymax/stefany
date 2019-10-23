@@ -38,15 +38,15 @@ $(document).ready(function(){
 		$(this).toggleClass('open');
 	});
 
-	$(".questions-item .collapse").on('show.bs.collapse', function(){
-		$(this).closest(".questions-item").addClass('active')
+	$(".questions-item, .program-item .collapse, .program-item  .collapse").on('show.bs.collapse', function(){
+		$(this).closest(".questions-item, .program-item").addClass('active')
 	});
 
-	$(".questions-item .collapse").on('hide.bs.collapse', function(){
-		$(this).closest(".questions-item").removeClass('active')
+	$(".questions-item, .program-item .collapse, .program-item  .collapse").on('hide.bs.collapse', function(){
+		$(this).closest(".questions-item, .program-item").removeClass('active')
 	});
 
-	$( ".questions-item" ).each(function(el) {
+	$( ".questions-item, .program-item" ).each(function(el) {
 		if($(this).find('.collapse-answer').hasClass('show') == true){
 			$(this).addClass('active')
 		}

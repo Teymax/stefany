@@ -7,8 +7,11 @@
 .info-block-grid
 	overflow: hidden
 	.container
-		max-width: 880px
-		box-shadow: 0 0 70px $box-shadow-lightgray
+		max-width: 940px
+		padding-left: 30px !important
+		padding-right: 30px !important
+		& > .row
+		  box-shadow: 0 0 70px $box-shadow-lightgray
 		.grid-cnt
 			z-index: 2
 			background: $color-white
@@ -150,11 +153,13 @@
 	.info-block-grid .container .grid-cnt.col-md-4
     	padding: 15px 15px 15px 45px
 @media(max-width: 767px)
+	.info-block-2
+		padding-bottom: 0
 	.info-block-grid .container .grid-cnt.grid-cnt-big
 		p.thin-text
 			display: none
 	.grid-bg-1
-		padding: 0
+		padding: 80px 0
 	.info-block-grid .container .grid-cnt.col-md-6
 		padding: 50px 30px 50px 30px
 	.info-block-grid .container .grid-cnt.col-md-4
@@ -164,6 +169,9 @@
 		left: calc(50% - 22px)
 		width: 44px
 		height: 44px
+	.info-block-grid .container
+		padding-left: 0 !important
+		padding-right: 0 !important
 @media(max-width: 575px)
   .grid-block
     height: auto !important
