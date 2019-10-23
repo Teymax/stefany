@@ -1,69 +1,66 @@
-header
+header.pb-lg-3
   .container.container-m.d-flex.justify-content-between.align-items-center
     a.c-logo(href="#")
       img.logo-header(src="assets/img/logo/header-logo.png" alt="Image Title")
     .row.c-row.w-100.no-gutter.d-flex.align-items-end.justify-content-start.flex-column.m-0
-      ul.header-contact-list.d-flex.mb-0.mb-md-3
-        li.d-none.d-md-flex.align-items-center
+      ul.header-contact-list.d-flex.mb-0.mb-sm-3
+        li.d-none.d-sm-flex.align-items-center.drop-menu
           img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")
-          a.link-text-light.d-flex.align-items-center.justify-content-start(href="#") Ивано-Франковск 
-            img(src="assets/icon/drop-arrow-down.png", alt="drop-arrow-down")
-          ul.dropdown-menu-list.w-100.d-flex.flex-column
+          span.link-text-light.d-flex.align-items-center.justify-content-start(href="#") Ивано-Франковск 
+            img.icon-arrow(src="assets/icon/drop-arrow-down.png", alt="drop-arrow-down")
+          ul.dropdown-menu-list.d-flex.flex-column
             li 
-              a.text-small(href="#") Ивано-Франковск2
+              a.nav-link-text(href="#") Ивано-Франковск2
             li 
-              a.text-small(href="#") Ивано-Франковск3
+              a.nav-link-text(href="#") Ивано-Франковск3
             li 
-              a.text-small(href="#") Ивано-Франковск4
+              a.nav-link-text(href="#") Ивано-Франковск4
             li 
-              a.text-small(href="#") Ивано-Франковск5
-        li.d-none.d-md-flex.align-items-center
+              a.nav-link-text(href="#") Ивано-Франковск5
+        li.d-none.d-sm-flex.align-items-center
           img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")
           a.link-text-light.d-flex.align-items-center.justify-content-start(href="tel:0980070753") 098 007 07 53
-        li.d-none.d-xl-flex.align-items-center.header-lang-wrap.mr-0
-          a.link-text-light.d-flex.align-items-center.justify-content-start(href="#").header-lang RU
-          ul.dropdown-menu-list.w-100.d-flex.flex-column
+        li.d-none.d-lg-flex.align-items-center.header-lang-wrap.mr-0.drop-menu
+          span.link-text-light.d-flex.align-items-center.justify-content-start.header-lang RU
+          ul.dropdown-menu-list.d-flex.flex-column
             li 
-              a.text-small(href="#") UA
+              a.nav-link-text(href="#") UA
             li 
-              a.text-small(href="#") EN
-        li.d-flex.d-xl-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
+              a.nav-link-text(href="#") EN
+        li.d-flex.d-lg-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
           span.d-block.w-100
           span.d-block.w-100
           span.d-block.w-100
-      .header-nav-wrap.d-flex.align-items-center.justify-content-end.justify-content-xl-between
-        nav.header-nav.w-100.d-none.d-xl-block
+      .header-nav-wrap.d-flex.align-items-center.justify-content-end.justify-content-lg-between
+        nav.header-nav.w-100.d-none.d-lg-block
           ul.header-nav-list.d-flex.align-items-center.justify-content-between.mb-0
-            li.d-inline-flex.align-items-center
-              a.p-text(href="#") О нас
-              img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")
             li.d-inline-flex.align-items-center.drop-menu
-              a.p-text(href="#") Услуги
+              span.p-text(href="#") О нас
               img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")
-              ul.dropdown-menu-list.w-100.d-flex.flex-column
+              ul.dropdown-menu-list.d-flex.flex-column
                 li
-                  a.text-small(href="#") Услуга 2
+                  a.nav-link-text(href="#") Цены 2
                 li
-                  a.text-small(href="#") Услуга 3
+                  a.nav-link-text(href="#") Цены 3
                 li
-                  a.text-small(href="#") Услуга 4
+                  a.nav-link-text(href="#") Цены 4
                 li
-                  a.text-small(href="#") Услуга 5
+                  a.nav-link-text(href="#") Цены 5
             li.d-inline-flex.align-items-center.drop-menu
-              a.p-text(href="#") Цены
+              span.p-text(href="#")  Услуги и Цены
               img.icon-arrow(src="assets/icon/drop-arrow-down.png" alt="h-map")
-              ul.dropdown-menu-list.w-100.d-flex.flex-column
+              ul.dropdown-menu-list.d-flex.flex-column
                 li
-                  a.text-small(href="#") Цены 2
+                  a.nav-link-text(href="#") Цены 2
                 li
-                  a.text-small(href="#") Цены 3
+                  a.nav-link-text(href="#") Цены 3
                 li
-                  a.text-small(href="#") Цены 4
+                  a.nav-link-text(href="#") Цены 4
                 li
-                  a.text-small(href="#") Цены 5
+                  a.nav-link-text(href="#") Цены 5
             li.d-inline-flex.align-items-center.mr-0
               a.p-text(href="#") Контакты
-        a.btn-callback.d-none.d-md-flex.align-items-center.justify-content-between(href="#")
+        a.btn-callback.d-none.d-sm-flex.align-items-center.justify-content-between(href="#")
           span.d-flex.align-items-center.justify-content-between
             svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 12 12', style='enable-background:new 0 0 12 12;', xml:space='preserve')
               style(type='text/css').

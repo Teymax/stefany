@@ -2,13 +2,8 @@
 @import "mixins"
 
 @include tablet
-@media(max-width: 1200px)
-  .map-cnt, .footer-cnt, .contact-cnt
-    max-width: 660px !important
-  .slider-wrap
-    max-width: 610px !important
-@media(max-width: 880px)
 
+@media(max-width: 880px)
 	.grid-number
 		top: 25px
 		left: 18px
@@ -23,15 +18,13 @@
         top: 62px
         left: 15px
         letter-spacing: 2px
-@media(max-width: 730px)
+@media(max-width: 575px)
   .logo-header
     width: 87px
     height: 48px
   header .container
     padding-top: 11px
     padding-bottom: 11px
-  .map-cnt, .slider-wrap, .footer-cnt, .contact-cnt
-    max-width: 320px !important
     .slider-pad
       padding: 0 !important
   .slider-block

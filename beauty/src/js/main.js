@@ -32,6 +32,10 @@ $(document).ready(function(){
 		$(this).toggleClass('open');
 		$('header').toggleClass('open');
 	});
+	$('.drop-menu').click(function(e){
+		$('.drop-menu:not(.open)').removeClass('open');
+		$(this).toggleClass('open');
+	});
 
 	$(".questions-item .collapse").on('show.bs.collapse', function(){
 		$(this).closest(".questions-item").addClass('active')
@@ -56,10 +60,10 @@ $(document).ready(function(){
 			0:{
 				items:1
 			},
-			731:{
+			575: {
 				items:2
 			},
-			1200:{
+			993:{
 				items:4
 			}
 		}
@@ -74,10 +78,10 @@ $(document).ready(function(){
 			0:{
 				items:1
 			},
-			731:{
+			575: {
 				items:2
 			},
-			1200:{
+			993:{
 				items:4
 			}
 		}
@@ -86,10 +90,21 @@ $(document).ready(function(){
 	var videoSLider = $('.video-slider').owlCarousel({
 		loop:false,
 		margin: 0,
-		nav: true,
+		nav: false,
 		dots: false,
 		items:1,
 		dotsContainer: '.video-slider-dots',
+		responsive:{
+			0:{
+				nav: true
+			},
+			541:{
+				nav: false
+			},
+			1200:{
+				nav: false
+			}
+		}	
 	});
 
 	$('.video-slider-dots .owl-dot').click(function (e) {

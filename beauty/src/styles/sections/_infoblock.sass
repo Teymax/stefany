@@ -2,7 +2,7 @@
 	padding-top: 160px
 	background: url('../assets/img/infoblock/infoblock-bg-1.png')
 	background-repeat: no-repeat 
-	background-size: 100% 80%
+	background-size: 100% calc(100% - 100px)
 	background-position: top left
 	overflow: hidden
 	.container 
@@ -29,14 +29,14 @@
 				padding-top: 50px
 		.big-text
 			position: absolute
-			bottom: 80px
-			left: -173px
-			z-index: 3
+			bottom: 70px
+			left: -160px
+			z-index: 2
 			@include font('Circe-ExtraBold', 900, 322, 130)
 			letter-spacing: 5px
 			color: $color-white
-.info-block-2
-	padding-bottom: 150px	
+.info-block-1
+	padding-bottom: 100px	
 .info-block-2	
 	padding-top: 61px
 	padding-bottom: 65px
@@ -73,15 +73,29 @@
 			display: block
 			margin-top: -6px
 			color: $color-white
-@media(max-width: 1199px)
+@media(max-width: 1120px)
+	.info-block .container .col-img
+		top: -15px
+		max-width: 400px
+	.info-block .container .col-info
+		max-width: 690px
+@media(max-width: 991px)
 	.info-block
-		background-size: 100% 66%
+		padding-top: 50px
+		background-size: 100% 490px
+		&-1
+			padding-bottom: 0
+		&-2
+			padding-top: 0
+	.info-block .container
+		.row
+			position: relative
+			z-index: 3
 	.col-img
 		position: static !important
 		margin-top: -160px
 	.info-block .container .col-info
-		padding: 35px 30px 200px !important
-		max-width: 720px !important
+		padding: 35px 0 200px !important
 	.info-block .container .big-text
 		transform: rotate(90deg)	
 		left: 132px	
@@ -89,22 +103,36 @@
 		width: 0	
 		top: -155px	
 	.info-block-2 .container .big-text
-    top: auto
-    left: 0
-    bottom: 0px
-    height: auto
-    transform: rotate(0)
-    width: 100%
-    text-align: center
-@media(max-width: 1080px)
+      top: auto
+      left: 0
+      bottom: 0px
+      height: auto
+      transform: rotate(0)
+      width: 100%
+      text-align: center
+@media(max-width: 768px)
+	.info-block
+		background: none !important
+@media(max-width: 700px)
 	.big-text
-		display: none
-@media(max-width: 730px)
+ 		display: none
+	.info-block .container
+		padding-bottom: 80px
+	.col-img
+		margin-top: 0
 	.info-block .container .col-info
-		padding: 20px 18px 200px !important
-		max-width: 320px !important
-	.info-block .container .col-img
-		max-width: 270px !important
+		padding: 35px 0 35px !important
 	.info-list-item .info-list-number
-		margin-top: -8px
-    margin-right: 15px
+		margin-right: 10px
+// @media(max-width: 1080px)
+// 	.big-text
+// 		display: none
+// @media(max-width: 730px)
+// 	.info-block .container .col-info
+// 		padding: 20px 18px 200px !important
+// 		max-width: 320px !important
+// 	.info-block .container .col-img
+// 		max-width: 270px !important
+// 	.info-list-item .info-list-number
+// 		margin-top: -8px
+//     margin-right: 15px
