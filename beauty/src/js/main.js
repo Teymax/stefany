@@ -33,6 +33,7 @@ $(document).ready(function(){
 		$('header').toggleClass('open');
 	});
 	$('.drop-menu').click(function(e){
+		e.preventDefault();
 		$('.drop-menu:not(.open)').removeClass('open');
 		$(this).toggleClass('open');
 	});

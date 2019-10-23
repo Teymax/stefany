@@ -930,6 +930,53 @@ textarea.field {
 .menu-trigger.open span:nth-child(3) {
   transform: rotate(40deg); }
 
+.drop-menu {
+  cursor: pointer;
+  position: relative; }
+  .drop-menu .icon-arrow {
+    transition: 0.3s ease; }
+
+.drop-menu.open .icon-arrow {
+  transform: rotate(180deg); }
+
+.drop-menu.open ul.dropdown-menu-list {
+  z-index: 2;
+  opacity: 1; }
+
+ul.dropdown-menu-list {
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15); }
+  ul.dropdown-menu-list::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: calc(50% - 8px);
+    display: block;
+    width: 16px;
+    height: 16px;
+    transform: rotate(-45deg);
+    background: #ffffff; }
+  ul.dropdown-menu-list li a {
+    white-space: nowrap; }
+  ul.dropdown-menu-list li:not(:last-child) {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #D2DBE9; }
+
+.drop-menu-top ul.dropdown-menu-list {
+  top: auto;
+  bottom: calc(100% + 20px); }
+  .drop-menu-top ul.dropdown-menu-list::before {
+    top: calc(100% - 8px); }
+
 @media (min-width: 1200px) {
   .hidden-item {
     display: none; } }
@@ -1795,33 +1842,6 @@ header {
     padding-top: 20px; }
   header .c-row {
     max-width: 550px; }
-    header .c-row ul.dropdown-menu-list {
-      position: absolute;
-      z-index: -10;
-      opacity: 0;
-      top: calc(100% + 20px);
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 30px 25px;
-      background: #ffffff;
-      border-radius: 4px;
-      box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15); }
-      header .c-row ul.dropdown-menu-list::before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: calc(50% - 8px);
-        display: block;
-        width: 16px;
-        height: 16px;
-        transform: rotate(-45deg);
-        background: #ffffff; }
-      header .c-row ul.dropdown-menu-list li a {
-        white-space: nowrap; }
-      header .c-row ul.dropdown-menu-list li:not(:last-child) {
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #D2DBE9; }
     header .c-row ul.header-contact-list > li {
       position: relative;
       cursor: pointer;
@@ -1844,10 +1864,6 @@ header {
           header .c-row .header-nav-wrap nav.header-nav ul.header-nav-list li {
             position: relative;
             cursor: pointer; }
-
-.drop-menu.open ul.dropdown-menu-list {
-  z-index: 2;
-  opacity: 1; }
 
 /**
  * Owl Carousel v2.3.4
