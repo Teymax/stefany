@@ -572,6 +572,44 @@ table {
 .shadow {
   box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13); }
 
+.row-numbered {
+  display: flex;
+  flex-wrap: wrap; }
+  .row-numbered div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    .row-numbered div:nth-child(1) img {
+      width: 15em; }
+    .row-numbered div:nth-child(2) img {
+      width: 8em; }
+    .row-numbered div:nth-child(3) img {
+      width: 8em; }
+    .row-numbered div:nth-child(4) img {
+      width: 14em; }
+    .row-numbered div img {
+      height: auto;
+      position: absolute; }
+    .row-numbered div h3 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 10.8em;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: #2F3847; }
+    .row-numbered div p {
+      text-align: center;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3A405B; }
+
 .h4-title {
   font-family: "CormorantGaramond";
   font-style: normal;
@@ -1260,43 +1298,8 @@ section.section.about-doctors .container:nth-child(2) {
     section.section.about-doctors .container:nth-child(2) {
       width: 100%; } }
 
-section.section.about-doctors .container:nth-child(3) .row-numbered {
-  display: flex;
-  flex-wrap: wrap; }
-  section.section.about-doctors .container:nth-child(3) .row-numbered div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(1) img {
-      width: 15em; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(2) img {
-      width: 8em; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(3) img {
-      width: 8em; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(4) img {
-      width: 14em; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div img {
-      height: auto;
-      position: absolute; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div h3 {
-      text-transform: uppercase;
-      text-align: center;
-      margin-top: 10.8em;
-      font-family: "Circe";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 30px;
-      color: #2F3847; }
-    section.section.about-doctors .container:nth-child(3) .row-numbered div p {
-      text-align: center;
-      font-family: "Circe";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      color: #3A405B; }
+section.section.consultaion {
+  background: url("../assets/img/consulation-bg.png") no-repeat center/cover; }
 
 footer.footer {
   background: #303947;

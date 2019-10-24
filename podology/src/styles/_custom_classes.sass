@@ -97,6 +97,48 @@
 .shadow
 	box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
 
+.row-numbered
+	display: flex
+	flex-wrap: wrap
+
+	div
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: relative
+
+		&:nth-child(1)
+			img
+				width: 15em
+
+		&:nth-child(2)
+			img
+				width: 8em
+
+		&:nth-child(3)
+			img
+				width: 8em
+
+		&:nth-child(4)
+			img
+				width: 14em
+
+		img
+			height: auto
+			position: absolute
+
+		h3
+			text-transform: uppercase
+			text-align: center
+			margin-top: 10.8em
+			@include font(Circe, 600, 20, 30)
+			color: $dark-gray
+
+		p
+			text-align: center
+			@include font(Circe, 400, 14, 20)
+			color: $secondary-header-color
+
 .h4-title
 	@include font(CormorantGaramond, 400, 24, 34)
 	color: $text-color-white
