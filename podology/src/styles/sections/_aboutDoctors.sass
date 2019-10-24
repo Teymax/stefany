@@ -1,0 +1,79 @@
+section.section.about-doctors
+
+	> .container
+		position: relative
+
+		#circles3
+			z-index: -1
+			top: -2em
+			right: 0
+
+		#dashes3
+			top: 21em
+			left: 36em
+
+		.video
+			width: 100%
+			height: auto
+			position: relative
+
+			.custom-play-btn
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 6em
+				height: 6em
+
+		h2
+			color: $secondary-header-color
+			@include font(Circe, 600, 25, 28)
+			@include mobile-all
+				margin-top: 1rem
+	.container
+		&:nth-child(2)
+			width: 45em
+			@include mobile-all
+				width: 100%
+		&:nth-child(3)
+			.row-numbered
+				display: flex
+				flex-wrap: wrap
+
+				div
+					display: flex
+					flex-direction: column
+					align-items: center
+					position: relative
+
+					&:nth-child(1)
+						img
+							width: 15em
+
+					&:nth-child(2)
+						img
+							width: 8em
+
+					&:nth-child(3)
+						img
+							width: 8em
+
+					&:nth-child(4)
+						img
+							width: 14em
+
+					img
+						height: auto
+						position: absolute
+
+					h3
+						text-transform: uppercase
+						text-align: center
+						margin-top: 10.8em
+						@include font(Circe, 600, 20, 30)
+						color: $dark-gray
+
+					p
+						text-align: center
+						@include font(Circe, 400, 14, 20)
+						color: $secondary-header-color

@@ -452,8 +452,8 @@ table {
 
 .icon {
   display: inline-block;
-  width: 15px;
-  height: 19px; }
+  width: 30px;
+  height: 30px; }
 
 .circles {
   position: absolute;
@@ -464,6 +464,12 @@ table {
 .text-dashed {
   border-bottom: 1px dashed #000080; }
 
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
 .small-text {
   font-family: "Circe";
   font-style: normal;
@@ -472,11 +478,52 @@ table {
   line-height: 22px;
   color: #556278; }
 
+.dark-block {
+  background: #303947; }
+
+.light-darkness-block {
+  background: #556278; }
+
+.light-block {
+  background: #77849B; }
+
+.info-block {
+  padding: 1em 2em; }
+
 .text-w-bold {
   font-weight: 700 !important; }
 
 .text-w-light {
   font-weight: 300 !important; }
+
+.info-section {
+  padding: 2em 4em; }
+  .info-section .row {
+    width: 100%;
+    margin-bottom: 2em; }
+    .info-section .row img {
+      display: block;
+      width: 5em; }
+    .info-section .row .wrapper {
+      display: flex;
+      flex: 1;
+      margin-left: 1em;
+      align-items: center; }
+      .info-section .row .wrapper span {
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px; }
+  .info-section p {
+    color: #fff;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 24px; }
 
 .text-w-regular {
   font-weight: 400 !important; }
@@ -521,6 +568,9 @@ table {
   font-size: 20px;
   line-height: 24px;
   color: #ffffff; }
+
+.shadow {
+  box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13); }
 
 .h4-title {
   font-family: "CormorantGaramond";
@@ -620,12 +670,18 @@ table {
   .feet-section .item:nth-child(2) {
     padding-left: 3rem;
     background: url("../assets/img/pricing-feet-2.png") no-repeat center/cover; }
+    @media (max-width: 767px) {
+      .feet-section .item:nth-child(2) .c-content .button-forward {
+        left: -2em; } }
   .feet-section .item:nth-child(3) .c-content {
     padding-left: 4rem;
     background: url("../assets/img/pricing-feet-3.png") no-repeat center/cover; }
   .feet-section .item:nth-child(4) {
     padding-left: 3rem;
     background: url("../assets/img/pricing-feet-4.png") no-repeat center/cover; }
+    @media (max-width: 767px) {
+      .feet-section .item:nth-child(4) .c-content .button-forward {
+        left: -2em; } }
   .feet-section .item .c-content {
     height: 17em;
     display: flex;
@@ -827,7 +883,8 @@ table {
 
 .dashes {
   width: 15em;
-  position: absolute; }
+  position: absolute;
+  pointer-events: none; }
 
 .dark-blue {
   color: #3A405B; }
@@ -879,7 +936,7 @@ table {
   position: absolute;
   width: 92px;
   height: 92px;
-  background: rgba(160, 155, 207, 0.8);
+  background: rgba(58, 64, 91, 0.8);
   border-radius: 50%; }
   .play-btn-orange {
     background: rgba(242, 223, 225, 0.8); }
@@ -1043,6 +1100,9 @@ section.section.introduce {
     position: absolute;
     z-index: -1;
     display: block; }
+    @media (max-width: 767px) {
+      section.section.introduce .feet {
+        display: none; } }
   section.section.introduce #feetOne {
     top: 0;
     right: 0;
@@ -1091,9 +1151,14 @@ section.section.introduce {
 
 section.section.advantages {
   overflow: auto;
-  background: transparent;
-  margin-top: -9em;
-  margin-bottom: -9em; }
+  background: transparent; }
+  @media (min-width: 1200px) {
+    section.section.advantages {
+      margin-top: -9em;
+      margin-bottom: -9em; } }
+  @media (max-width: 767px) {
+    section.section.advantages {
+      display: none; } }
 
 section.section.activity .container div h2 {
   font-family: "Circe Bold";
@@ -1113,7 +1178,7 @@ section.section.activity .container div:nth-child(2) {
   position: relative; }
   section.section.activity .container div:nth-child(2) img {
     width: 100%;
-    box-shadow: 10px 20px 75px -43px rgba(0, 0, 0, 0.75); }
+    box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13); }
 
 section.section.pricing {
   background: #303947; }
@@ -1125,9 +1190,120 @@ section.section.pricing {
     line-height: 20px;
     margin-bottom: 2em; }
 
-footer.footer .container .c-logo-f img {
-  max-width: 264px;
-  max-height: 100px; }
+section.section.specific p {
+  color: #556278; }
+
+section.section.specific h3 {
+  font-family: "Circo";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+section.section.specific .person-wrapper img {
+  width: 4em;
+  height: auto; }
+
+section.section.category .description {
+  background: url("../assets/img/category-people-bg.png") no-repeat center/cover;
+  height: 20em; }
+  section.section.category .description .container {
+    height: 100%; }
+  section.section.category .description h2 {
+    color: #ffffff; }
+  section.section.category .description p {
+    text-align: center;
+    font-weight: 100; }
+    @media (min-width: 1200px) {
+      section.section.category .description p {
+        width: 40em; } }
+    @media (min-width: 992px) {
+      section.section.category .description p {
+        width: 40em; } }
+
+section.section.about-doctors > .container {
+  position: relative; }
+  section.section.about-doctors > .container #circles3 {
+    z-index: -1;
+    top: -2em;
+    right: 0; }
+  section.section.about-doctors > .container #dashes3 {
+    top: 21em;
+    left: 36em; }
+  section.section.about-doctors > .container .video {
+    width: 100%;
+    height: auto;
+    position: relative; }
+    section.section.about-doctors > .container .video .custom-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6em;
+      height: 6em; }
+  section.section.about-doctors > .container h2 {
+    color: #3A405B;
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 28px; }
+    @media (max-width: 767px) {
+      section.section.about-doctors > .container h2 {
+        margin-top: 1rem; } }
+
+section.section.about-doctors .container:nth-child(2) {
+  width: 45em; }
+  @media (max-width: 767px) {
+    section.section.about-doctors .container:nth-child(2) {
+      width: 100%; } }
+
+section.section.about-doctors .container:nth-child(3) .row-numbered {
+  display: flex;
+  flex-wrap: wrap; }
+  section.section.about-doctors .container:nth-child(3) .row-numbered div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(1) img {
+      width: 15em; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(2) img {
+      width: 8em; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(3) img {
+      width: 8em; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div:nth-child(4) img {
+      width: 14em; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div img {
+      height: auto;
+      position: absolute; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div h3 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 10.8em;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: #2F3847; }
+    section.section.about-doctors .container:nth-child(3) .row-numbered div p {
+      text-align: center;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3A405B; }
+
+footer.footer {
+  background: #303947;
+  color: #fff; }
+  footer.footer .container .c-logo-f img {
+    max-width: 264px;
+    max-height: 100px; }
 
 .footer-icon-blk {
   height: 18px; }

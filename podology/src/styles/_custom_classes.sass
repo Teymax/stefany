@@ -1,7 +1,7 @@
 .icon
 	display: inline-block
-	width: 15px
-	height: 19px
+	width: 30px
+	height: 30px
 
 .circles
 	position: absolute
@@ -12,15 +12,59 @@
 .text-dashed
 	border-bottom: 1px dashed #000080
 
+.centered-content
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+
 .small-text
 	@include font(Circe, 400, 14, 22)
 	color: $text-color-dark
+
+.dark-block
+	background: $bg-color-section-dark-blue
+
+.light-darkness-block
+	background: $text-color-dark
+
+.light-block
+	background: $light-bg
+
+.info-block
+	padding: 1em 2em
 
 .text-w-bold
 	font-weight: 700 !important
 
 .text-w-light
 	font-weight: 300 !important
+
+.info-section
+	padding: 2em 4em
+
+	.row
+		width: 100%
+		margin-bottom: 2em
+
+		img
+			display: block
+			width: 5em
+
+		.wrapper
+			display: flex
+			flex: 1
+			margin-left: 1em
+			align-items: center
+
+			span
+				color: #fff
+				text-transform: uppercase
+				@include font(Circe, 600, 13, 20)
+
+	p
+		color: #fff
+		@include font(Circe, 100, 14, 24)
 
 .text-w-regular
 	font-weight: 400 !important
@@ -49,6 +93,9 @@
 .h3-title
 	@include font(Circe, 400, 20, 24)
 	color: $text-color-white
+
+.shadow
+	box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
 
 .h4-title
 	@include font(CormorantGaramond, 400, 24, 34)
@@ -130,6 +177,9 @@
 		&:nth-child(2)
 			padding-left: 3rem
 			background: url('../assets/img/pricing-feet-2.png') no-repeat center/cover
+			@include mobile-all
+				.c-content .button-forward
+					left: -2em
 
 		&:nth-child(3)
 			.c-content
@@ -139,6 +189,9 @@
 		&:nth-child(4)
 			padding-left: 3rem
 			background: url('../assets/img/pricing-feet-4.png') no-repeat center/cover
+			@include mobile-all
+				.c-content .button-forward
+					left: -2em
 
 		.c-content
 			height: 17em
@@ -361,6 +414,7 @@
 .dashes
 	width: 15em
 	position: absolute
+	pointer-events: none
 
 .dark-blue
 	color: $secondary-header-color
@@ -418,7 +472,7 @@
 
 	width: 92px
 	height: 92px
-	background: $color-purple-opacity
+	background: rgba(58, 64, 91, .8)
 	border-radius: 50%
 
 	&-orange

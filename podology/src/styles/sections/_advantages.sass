@@ -1,6 +1,9 @@
 section.section.advantages
 	overflow: auto
 	background: transparent
-	margin:
-		top: -9em
-		bottom: -9em
+	@include desktop
+		margin:
+			top: -9em
+			bottom: -9em
+	@include mobile-all
+		display: none
