@@ -4,6 +4,7 @@
 	background-repeat: no-repeat 
 	background-size: 100% calc(100% - 100px)
 	background-position: top left
+
 	.container 
 		position: relative
 		max-width: 1150px
@@ -76,12 +77,13 @@
 		right: -235px
 		top: -96px
 		text-align: right
-.info-block-3
+.info-block-3, .info-block-4
 	padding-top: 73px
 	background: $dark-gren-bg
 	.col-img
 		top: auto !important
-		max-width: 504px !important
+		&:not(.behind-bg)
+		  max-width: 504px !important
 	.col-info
 		margin-left: 430px
 		padding: 57px 133px 136px 109px !important
@@ -104,6 +106,32 @@
 			display: block
 			margin-top: -6px
 			color: $color-white
+.light-orange-bg
+	background: $spec-bg !important
+.no-bg-blk
+	background: transparent !important
+.info-block .behind-bg
+	padding: 59px 0 130px 63px !important
+	background: -webkit-linear-gradient(left, #ffffff, #ffffff 70%, transparent 0, transparent )
+	max-width: 615px !important
+	box-shadow: none !important
+	top: -60px !important
+	img
+		box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
+.info-block-4
+  padding-top: 115px !important
+  padding-bottom: 30px !important
+  .border-el::before
+    top: -60px
+    left: -140px
+    width: calc(100% + 75px)
+    height: calc(100% + 100px)
+  .col-info
+    max-width: 505px !important
+    padding: 0 0 110px !important
+  .info-block-wrap .big-text
+    bottom: -58px !important
+    left: -23px !important
 @media(max-width: 1200px)
   .info-block
     background: $color-white !important
@@ -119,8 +147,10 @@
       margin-bottom: 20px !important
       &::before, br
         display: none
-  .col-img
+  .col-img, .info-block .behind-bg
     position: static !important
     max-height: 504px
+    padding: 0 !important
+    background: transparent
   .big-text
     display: none !important

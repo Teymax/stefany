@@ -1,24 +1,4 @@
 $(document).ready(function(){
-	$('#carouselExample').on('slide.bs.carousel', function (e) {
-		var $e = $(e.relatedTarget);
-		var idx = $e.index();
-		var itemsPerSlide = 4;
-		var totalItems = $('.carousel-item').length;
-		
-		if (idx >= totalItems-(itemsPerSlide-1)) {
-				var it = itemsPerSlide - (totalItems - idx);
-				for (var i=0; i<it; i++) {
-						// append slides to end
-						if (e.direction=="left") {
-								$('.carousel-item').eq(i).appendTo('.carousel-inner');
-						}
-						else {
-								$('.carousel-item').eq(0).appendTo('.carousel-inner');
-						}
-				}
-		};
-	});
-
 	$('.city-trigger').click(function(e){
 		e.preventDefault();
 		var city = "." + $(this).attr('data-city');
@@ -32,11 +12,11 @@ $(document).ready(function(){
 		$(this).toggleClass('open');
 		$('header').toggleClass('open');
 	});
-	$('.drop-menu').click(function(e){
-		e.preventDefault();
-		$('.drop-menu:not(.open)').removeClass('open');
-		$(this).toggleClass('open');
-	});
+		$('.drop-menu').click(function(e){
+			e.preventDefault();
+			$('.drop-menu').not($(this)).removeClass('open');
+			$(this).toggleClass('open');
+		});
 
 	$(".questions-item, .program-item .collapse, .program-item  .collapse").on('show.bs.collapse', function(){
 		$(this).closest(".questions-item, .program-item").addClass('active')
