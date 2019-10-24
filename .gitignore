@@ -1,2 +1,7 @@
-./idea
-./history
+./.idea/
+./*/.idea/
+./.history/
+./*/.history/
+./*/build/*
+!./*/build/assets/
+./*/node_modules/
