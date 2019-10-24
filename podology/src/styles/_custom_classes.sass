@@ -114,8 +114,77 @@
 
 //////////////////////////////////////////////
 
+.feet-section
+	display: flex
+	flex-wrap: wrap
 
+	.item
+		@include tablet
+			padding: 0
 
+		&:nth-child(1)
+			.c-content
+				padding-left: 4rem
+				background: url('../assets/img/pricing-feet-1.png') no-repeat center/cover
+
+		&:nth-child(2)
+			padding-left: 3rem
+			background: url('../assets/img/pricing-feet-2.png') no-repeat center/cover
+
+		&:nth-child(3)
+			.c-content
+				padding-left: 4rem
+				background: url('../assets/img/pricing-feet-3.png') no-repeat center/cover
+
+		&:nth-child(4)
+			padding-left: 3rem
+			background: url('../assets/img/pricing-feet-4.png') no-repeat center/cover
+
+		.c-content
+			height: 17em
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding-left: 1rem
+			position: relative
+
+			h3
+				color: $text-color-dark
+				@include font(Circe Bold, 600, 24, 20)
+
+			p.desc
+				color: $text-color-dark
+
+			.info-list
+				li
+					color: $text-color-dark
+
+					&:before
+						background: $text-color-dark
+
+			.button-forward
+				width: 3em
+				height: 3em
+				background: $forward-buutton
+				border-radius: 50%
+				position: absolute
+				bottom: 1em
+				right: 1em
+
+				@include mobile-small
+					left: 1em
+
+				&:hover
+					text-decoration: none
+
+				&:before
+					content: '→'
+					color: #fff
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
 
 .custom-icon-number-dark
 	@extend .custom-icon-number

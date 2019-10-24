@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Circe";
   src: url("../assets/fonts/Circe-Light.woff2");
@@ -443,7 +444,7 @@ table {
     max-width: 1280px !important; } }
 
 .container {
-  padding: 0 30px; }
+  padding: 0 30px 0 30px !important; }
 
 .section {
   padding: 4rem 0;
@@ -606,6 +607,66 @@ table {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px; } }
+
+.feet-section {
+  display: flex;
+  flex-wrap: wrap; }
+  @media (max-width: 991px) {
+    .feet-section .item {
+      padding: 0; } }
+  .feet-section .item:nth-child(1) .c-content {
+    padding-left: 4rem;
+    background: url("../assets/img/pricing-feet-1.png") no-repeat center/cover; }
+  .feet-section .item:nth-child(2) {
+    padding-left: 3rem;
+    background: url("../assets/img/pricing-feet-2.png") no-repeat center/cover; }
+  .feet-section .item:nth-child(3) .c-content {
+    padding-left: 4rem;
+    background: url("../assets/img/pricing-feet-3.png") no-repeat center/cover; }
+  .feet-section .item:nth-child(4) {
+    padding-left: 3rem;
+    background: url("../assets/img/pricing-feet-4.png") no-repeat center/cover; }
+  .feet-section .item .c-content {
+    height: 17em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+    position: relative; }
+    .feet-section .item .c-content h3 {
+      color: #556278;
+      font-family: "Circe Bold";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 20px; }
+    .feet-section .item .c-content p.desc {
+      color: #556278; }
+    .feet-section .item .c-content .info-list li {
+      color: #556278; }
+      .feet-section .item .c-content .info-list li:before {
+        background: #556278; }
+    .feet-section .item .c-content .button-forward {
+      width: 3em;
+      height: 3em;
+      background: #4F79CA;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 1em;
+      right: 1em; }
+      @media (max-width: 575px) {
+        .feet-section .item .c-content .button-forward {
+          left: 1em; } }
+      .feet-section .item .c-content .button-forward:hover {
+        text-decoration: none; }
+      .feet-section .item .c-content .button-forward:before {
+        content: '→';
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
 
 .custom-icon-number-dark {
   background-color: #9FA6BA; }
@@ -991,11 +1052,13 @@ section.section.introduce {
     top: 2em;
     width: 25em; }
   section.section.introduce .container {
-    position: relative;
-    padding: 0; }
+    position: relative; }
+    @media (max-width: 767px) {
+      section.section.introduce .container {
+        padding: 0 !important; } }
     section.section.introduce .container #circles {
       position: absolute;
-      top: 3em;
+      top: 1.9em;
       left: 10em; }
     section.section.introduce .container .card {
       background: #303947;
@@ -1029,7 +1092,38 @@ section.section.introduce {
 section.section.advantages {
   overflow: auto;
   background: transparent;
-  margin-top: -9em; }
+  margin-top: -9em;
+  margin-bottom: -9em; }
+
+section.section.activity .container div h2 {
+  font-family: "Circe Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px; }
+
+section.section.activity .container div .description {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 25px; }
+
+section.section.activity .container div:nth-child(2) {
+  position: relative; }
+  section.section.activity .container div:nth-child(2) img {
+    width: 100%;
+    box-shadow: 10px 20px 75px -43px rgba(0, 0, 0, 0.75); }
+
+section.section.pricing {
+  background: #303947; }
+  section.section.pricing h2 {
+    font-family: "Lato Bold";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 20px;
+    margin-bottom: 2em; }
 
 footer.footer .container .c-logo-f img {
   max-width: 264px;
