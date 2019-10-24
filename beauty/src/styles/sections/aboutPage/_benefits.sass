@@ -3,11 +3,17 @@
 	background-repeat: no-repeat 
 	background-size: cover
 	background-position: top left
+	&.serviceBenefits
+		background: $color-white
+		.container
+			max-width: 1353px
+			padding-left: 20px
+			padding-right: 20px
 .benefits
 	padding: 50px 0 44px
 	.container
 		max-width: 1283px
-		.col-lg-6
+		.bnf
 			position: relative
 			padding-left: 235px
 			.bnf-img
@@ -23,13 +29,43 @@
 				width: 100%
 				max-width: 394px
 				position: relative
+		.bnf-two
+			padding-left: 0 !important
+			.bnf-img-wrap
+				height: 269px
+				.bnf-img
+					padding-left: 0 !important
+					width: auto !important
+					max-width: 100% !important
+			.bnf-img
+				position: static !important
+				max-width: 234px
+				margin-left: -55px
+			.bnf-cnt
+				margin-top: -155px
+		.bnf-three
+			padding-left: 0
+			.bnf-cnt
+				max-width: 396px
+			.bnf-number
+				width: 87px
+				height: 87px
+				margin-bottom: 10px
+				padding-left: 10px
+				font-size: 100px
+				border-radius: 100%
+				background: $spec-bg
+ 
 @media(max-width: 992px)
 	.bnf-cnt
 		max-width: 100% !important
 		padding-bottom: 40px
+	.bnf-two
+		padding: 0 !important
+		max-width: 500px !important
 @media(max-width: 575px)
 	.bnf-img
 		position: static !important
 	.benefits
-		.bnf
+		.bnf:not(.bnf-two)
 			padding: 0 15px !important

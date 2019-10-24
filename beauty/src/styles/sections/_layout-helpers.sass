@@ -15,6 +15,12 @@
 .double-grid-container 
   max-width: 630px !important
   box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+.four-grid-container 
+  max-width: 1261px !important
+  .grid-block
+    box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+body
+  overflow-x: hidden
 
 // text - style *******
 	
@@ -33,7 +39,8 @@
 .paragraph-text-dark
   @include font(Circe, 400, 16, 26)
   color: $text-color-dark
-	
+.text-lightdark
+  color: $breadcrump-color !important
 .text-dashed
   border-bottom: 1px dashed #e4e4e4
 
@@ -71,6 +78,8 @@
 
 .text-color-dark
   color: $text-color-dark !important
+.text-color-for-list
+  color: $list-number !important
 .f-bold
   font-weight: bold !important
 .f-light
