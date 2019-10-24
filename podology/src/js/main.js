@@ -32,6 +32,28 @@ $( document ).ready( function () {
     $( this ).toggleClass( 'open' )
     $( 'header' ).toggleClass( 'open' )
   } )
+  $( '.drop-menu' ).click( function ( e ) {
+    e.preventDefault()
+    $( '.drop-menu:not(.open)' ).removeClass( 'open' )
+    $( this ).toggleClass( 'open' )
+  } )
+
+  $( '.questions-item, .program-item .collapse, .program-item  .collapse' )
+    .on( 'show.bs.collapse', function () {
+      $( this ).closest( '.questions-item, .program-item' ).addClass( 'active' )
+    } )
+
+  $( '.questions-item, .program-item .collapse, .program-item  .collapse' )
+    .on( 'hide.bs.collapse', function () {
+      $( this ).closest( '.questions-item, .program-item' )
+               .removeClass( 'active' )
+    } )
+
+  $( '.questions-item, .program-item' ).each( function ( el ) {
+    if ( $( this ).find( '.collapse-answer' ).hasClass( 'show' ) == true ) {
+      $( this ).addClass( 'active' )
+    }
+  } )
 
   $( '.diploma-slider' ).owlCarousel( {
     loop      : true,
@@ -39,13 +61,13 @@ $( document ).ready( function () {
     nav       : false,
     dots      : true,
     responsive: {
-      0   : {
+      0  : {
         items: 1
       },
-      731 : {
+      575: {
         items: 2
       },
-      1200: {
+      993: {
         items: 4
       }
     }
@@ -57,15 +79,59 @@ $( document ).ready( function () {
     nav       : true,
     dots      : false,
     responsive: {
-      0   : {
+      0  : {
         items: 1
       },
-      731 : {
+      575: {
         items: 2
       },
-      1200: {
+      993: {
         items: 4
       }
     }
   } )
+
+  var videoSLider = $( '.video-slider' ).owlCarousel( {
+    loop         : false,
+    margin       : 0,
+    nav          : false,
+    dots         : false,
+    items        : 1,
+    dotsContainer: '.video-slider-dots',
+    responsive   : {
+      0   : {
+        nav: true
+      },
+      541 : {
+        nav: false
+      },
+      1200: {
+        nav: false
+      }
+    }
+  } )
+
+  $( '.video-slider-dots .owl-dot' ).click( function ( e ) {
+    e.preventDefault()
+    var itemPosition = $( this ).attr( 'data-pos' )
+    videoSLider.trigger( 'to.owl.carousel', [ itemPosition, 300 ] )
+  } )
+
+  var videoSliderDots = $( '.video-slider-dots' ).owlCarousel( {
+    navContainer: '.video-nav-slider-dots',
+    loop        : false,
+    margin      : 0,
+    nav         : true,
+    dots        : false,
+    items       : 1
+  } )
+
+  $( '.video-nav-slider-dots .owl-next' ).click( function () {
+    videoSliderDots.trigger( 'next.owl.carousel' )
+  } )
+
+  $( '.video-nav-slider-dots .owl-prev' ).click( function () {
+    videoSliderDots.trigger( 'prev.owl.carousel', [ 300 ] )
+  } )
+
 } )
