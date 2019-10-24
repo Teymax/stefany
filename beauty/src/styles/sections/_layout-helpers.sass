@@ -531,18 +531,17 @@ textarea.field
   cursor: pointer
   position: relative
   .icon-arrow
-    transition: 0.3s ease
+    transition: 0.2s ease
 .drop-menu.open
   .icon-arrow
     transform: rotate(180deg)
   ul.dropdown-menu-list
-    z-index: 2
-    opacity: 1
+    display: flex !important
 
 ul.dropdown-menu-list
   position: absolute
-  z-index: -10
-  opacity: 0
+  z-index: 10
+  display: none !important
   top: calc(100% + 20px)
   left: 50%
   transform: translateX(-50%)

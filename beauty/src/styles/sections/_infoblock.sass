@@ -104,54 +104,23 @@
 			display: block
 			margin-top: -6px
 			color: $color-white
-@media(max-width: 1120px)
-	.info-block .container .col-img
-		top: -15px
-		max-width: 400px
-	.info-block .container .col-info
-		max-width: 690px
-	.info-block-3
-		.col-info
-			margin-left: 460px
-			padding: 57px 50px 133px 70px !important
-@media(max-width: 991px)
+@media(max-width: 1200px)
   .info-block
-    padding-top: 50px !important
-    padding-bottom:  0 !important
-    margin-bottom: 312px
+    background: $color-white !important
+    padding:  0 !important
   .container-info
-    padding-left: 0 !important
-    padding-right: 0 !important
+    padding-left: 15px !important
+    padding-right: 15px !important
   .info-block .container .col-info
     margin-left: 0 !important
-    padding: 35px 28px 225px !important
+    padding: 35px 0 40px!important
     max-width: 100% !important
     .section-title
       margin-bottom: 20px !important
       &::before, br
         display: none
   .col-img
-    top:  auto !important
-    bottom: -312px !important
-    left: 50% !important
-    transform: translateX(-50%)
+    position: static !important
     max-height: 504px
-    img
-      width: auto !important
-      height: 100%
   .big-text
     display: none !important
-@media(max-width: 768px)
-	.info-block
-		background: none !important
-@media(max-width: 700px)
-	.big-text
- 		display: none
-	.info-block .container
-		padding-bottom: 80px
-	.col-img
-		margin-top: 0
-	.info-block .container .col-info
-		padding: 35px 0 35px !important
-	.info-list-item .info-list-number
-		margin-right: 10px
