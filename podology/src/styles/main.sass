@@ -7,36 +7,59 @@
 @media only screen and (min-width : 1200px)
   .container
     max-width: 1280px !important
+/****************
+/*   SECTIONS
+/****************
 
-@media only screen and (min-width : 1200px)
-  .container
-    max-width: 1280px !important
+/* Common
+@import "sections/common/variables"
+@import "sections/common/mixins"
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints"
+@import 'sections/common/custom_classes'
+@import 'sections/common/header'
+@import 'sections/common/footer'
+@import "sections/common/media"
+@import "sections/common/fonts"
+@import "sections/common/reset"
+@import "sections/common/spacing-helpers"
+@import "sections/common/grid"
 
-.container
-  padding: 0 30px 0 30px!important
+/* Home Page
+@import 'sections/index/introduce'
+@import 'sections/index/advantages'
+@import 'sections/index/activity'
+@import 'sections/index/pricing'
+@import 'sections/index/specific'
+@import 'sections/index/category'
+@import 'sections/index/aboutDoctors'
+@import 'sections/index/consultaion'
+@import 'sections/index/client-feedback'
 
-.section
-  padding: 4rem 0
-  overflow: hidden
+/****************
+/*   MODULES
+/****************
 
-@import 'custom_classes'
-@import 'sections/header'
-@import 'sections/introduce'
-@import 'sections/advantages'
-@import 'sections/activity'
-@import 'sections/pricing'
-@import 'sections/specific'
-@import 'sections/category'
-@import 'sections/aboutDoctors'
-@import 'sections/consultaion'
+@import 'modules/accordion'
+@import 'modules/overlay'
+@import 'modules/numbered-section'
+
+/****************
+/*     LIBS
+/****************
 
 @import 'sections/services/about'
 @import 'sections/services/symptoms-with-image'
 
-@import 'sections/footer'
-
-@import 'modules/accordion'
-@import 'modules/numbered-section'
 @import 'lib/all'
 
-@import "media"
+/* Ne bug, a feature
+@media only screen and (min-width: 1200px)
+	.container
+		max-width: 1280px !important
+
+.container
+	padding: 0 30px 0 30px !important
+
+.section
+	padding: 4rem 0
+	overflow: hidden
