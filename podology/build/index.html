@@ -4,304 +4,469 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>steffany</title>
+    <title>Stefany | Podology</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script type="text/javascript"></script>
-    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
   </head>
   <body>
+    <!--include ../modules/overlay-->
     <header>
-      <div class="container">
-        <div class="c-logo"><img class="logo-header" src="assets/img/logo/logo.png" alt="Image Title"></div>
-        <div class="c-row">
-          <ul class="header-contact-list">
-            <li><img class="icon" src="assets/icon/map.png" alt="h-map"><a href="#">Ивано-Франковск</a></li>
-            <li><img class="icon" src="assets/icon/phone.png" alt="h-map"><a href="#">098 007 07 53</a></li>
-            <li><a class="header-lang" href="#"></a></li>
+      <div class="container container-m d-flex justify-content-between align-items-center"><a class="c-logo" href="#"><img class="logo-header" src="assets/icon/header-logo.png" alt="Image Title"></a>
+        <div class="row c-row w-100 no-gutter d-flex align-items-end justify-content-start flex-column m-0">
+          <ul class="header-contact-list d-flex mb-0 mb-md-3">
+            <li class="d-none d-md-flex align-items-center"><img class="icon icon-loc" src="assets/icon/map.png" alt="h-map"><a class="link-text-light d-flex align-items-center justify-content-start" href="#">Ивано-Франковск<img src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down"></a>
+              <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                <li><a class="text-small" href="#">Ивано-Франковск2</a></li>
+                <li><a class="text-small" href="#">Ивано-Франковск3</a></li>
+                <li><a class="text-small" href="#">Ивано-Франковск4</a></li>
+                <li><a class="text-small" href="#">Ивано-Франковск5</a></li>
+              </ul>
+            </li>
+            <li class="d-none d-md-flex align-items-center"><img class="icon icon-phone" src="assets/icon/phone.png" alt="h-map"><a class="link-text-light d-flex align-items-center justify-content-start" href="tel:0980070753">098 007 07 53</a></li>
+            <li class="d-none d-xl-flex align-items-center header-lang-wrap mr-0"><a class="link-text-light d-flex align-items-center justify-content-start header-lang" href="#">RU</a>
+              <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                <li><a class="text-small" href="#">UA</a></li>
+                <li><a class="text-small" href="#">EN</a></li>
+              </ul>
+            </li>
+            <li class="d-flex d-xl-none align-items-center justify-content-between menu-trigger flex-column m-0"><span class="d-block w-100"></span><span class="d-block w-100"></span><span class="d-block w-100"></span></li>
           </ul>
-          <nav class="header-nav">
-            <ul class="header-nav-list">
-              <li><a href="#">О нас</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-              <li><a href="#">Услуги</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-              <li><a href="#">Цены</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
+          <div class="header-nav-wrap d-flex align-items-center justify-content-end justify-content-xl-between">
+            <nav class="header-nav w-100 d-none d-xl-block">
+              <ul class="header-nav-list d-flex align-items-center justify-content-between mb-0">
+                <li class="d-inline-flex align-items-center"><a class="p-text" href="#">О нас</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map"></li>
+                <li class="d-inline-flex align-items-center drop-menu"><a class="p-text" href="#">Услуги</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                    <li><a class="text-small" href="#">Услуга 2</a></li>
+                    <li><a class="text-small" href="#">Услуга 3</a></li>
+                    <li><a class="text-small" href="#">Услуга 4</a></li>
+                    <li><a class="text-small" href="#">Услуга 5</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center drop-menu"><a class="p-text" href="#">Цены</a><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list w-100 d-flex flex-column">
+                    <li><a class="text-small" href="#">Цены 2</a></li>
+                    <li><a class="text-small" href="#">Цены 3</a></li>
+                    <li><a class="text-small" href="#">Цены 4</a></li>
+                    <li><a class="text-small" href="#">Цены 5</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center mr-0"><a class="p-text" href="#">Контакты</a></li>
+              </ul>
+            </nav><a class="btn-callback d-none d-md-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0 {
+                        fill: #1B3EBF;
+                    }
+                  </style>
+                  <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
+                </svg><span>записаться</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">
+                  .st0 {
+                      fill: #D11111;
+                  }
+                </style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg></a>
+          </div>
         </div>
       </div>
     </header>
+    <section class="section introduce"><img class="feet" src="assets/img/introduce-cover.png" id="feetOne"><img class="feet" src="assets/img/feet-2.png" id="feetTwo">
+      <div class="container"><img class="circles" src="assets/img/common/circles-with-hr.png" id="circles">
+        <div class="card col-12 col-sm-11 col-lg-6">
+          <h1 class="paragraph-text">Врач подолог<br><strong>в Житомире</strong></h1>
+          <div class="dash"></div>
+          <p class="paragraph-text">Лечим любые проблемы стоп и убираем причины их<br>возникновения<strong> без боли</strong></p>
+          <ul class="info-list">
+            <li>
+              <p class="paragraph-text">Лечим любые проблемы кожи стоп и ногтей</p>
+            </li>
+            <li>
+              <p class="paragraph-text">Восстанавливаем ногти после травм и исправляем рост ногтей</p>
+            </li>
+            <li>
+              <p class="paragraph-text">Корректируем положение стопы с помощью стелек и силиконовых протезов</p>
+            </li>
+          </ul>
+          <button class="call-me" onclick="alert('clicked')">Перезвоните мне</button><img class="dashes intro-dashes" src="assets/img/common/dash.png">
+        </div>
+      </div>
+    </section>
     <section class="section advantages">
       <div class="container">
-        <div class="row">
-          <h2 class="section-title-light">Кто сказал, что красота требует жертв?</h2>
-          <p class="paragraph-text-light">В Steffany совсем другой подход к эпиляции</p>
+        <h2 class="text-center dark-blue">Почему центр здоровья ног Steffany?</h2>
+        <p class="text-center dark-blue">Наша цель — облегчить вашу жизнь, поэтому у нас есть</p>
+            <div class="numbered-section">
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-1.png" srcset="assets/icon/common/adv-1@2x.png">
+                <div class="description">
+                  <h3 class="title">Стерильное помещение и оборудование</h3>
+                  <p class="desc">Центр проходит полный цикл стерилизации. Мы очищаем воздух в помещении тремя циркуляторами закрытого типа. Инструменты замачиваем в ультразвуковой ванночке в специальном растворе и обрабатываем в сухожаровом шкафу при температуре 180 градусов. Также дезинфицируем все поверхности в кабинете после каждого пациента и проводим регулярные уборки</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-2.png" srcset="assets/icon/common/adv-2@2x.png">
+                <div class="description">
+                  <h3 class="title">Контракт с лабораторией для точных результатов</h3>
+                  <p class="desc">Мы работаем с доказательной базой. Это значит, что все диагнозы мы ставим на основе анализов и исследований. Когда лечим грибок, для начала берем у пациента забор на анализ. Затем передаем этот образец через курьера в киевскую лабораторию, и через время получаем результат. Благодаря этому мы можем назначить максимально точное лечение и дать рекомендации</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-3.png" srcset="assets/icon/common/adv-3@2x.png">
+                <div class="description">
+                  <h3 class="title">Аппараты для диагностики ходьбы</h3>
+                  <p class="desc">Большинство проблем с ногами возникают из-за неправильного положения стоп во время походки. Чтобы вылеченные вросшие ногти или мозоли не возвращались, мы диагностируем ходьбу пациентов. Делаем это с помощью подоскопа — аппарата, который выявляет нарушения стопы в положении стоя. Также анализируем походку с помощью параподографического мата</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-4.png" srcset="assets/icon/common/adv-4@2x.png">
+                <div class="description">
+                  <h3 class="title">Обезболивание и аккуратность процесса</h3>
+                  <p class="desc">Боль — один из главных страхов наших пациентов, и он развеивается уже при первом визите на процедуру. Если ситуация не запущенная, пациентам не больно. Наши специалисты обезболивают пораженный участок — делают замораживания местными препаратами. В более сложных ситуациях специалисты обязательно предупреждают обо всех неприятных ощущениях</p>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section class="section activity">
+      <div class="container d-flex flex-wrap">
+        <div class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center">
+          <h2 class="dark-blue">Чем занимается врач подолог Житомир?</h2>
+          <div class="dash"></div>
+          <p class="description">Проблемы со стопами встречаются намного чаще, чем кажется. Люди мучаются, обращаются в разные клиники и больницы, но не находят там должного лечения. Все потому, что заболеваниями стоп занимаются специально обученные люди  —  подологи.<br><br>Классический подолог отвечает за здоровье кожи и ногтей на ногах. Он лечит вросшие ногти, мозоли, натоптыши, бородавки, трещины на пятках или грибок.<br><br>Однако многие из этих проблем появляются из-за неправильного положения стопы во время ходьбы, физических нагрузок или наоборот малоподвижности. Поэтому разумнее всего убрать причину, из-за которой появляются заболевания стоп.<br><br>В нашем центре стопы рассматривают как часть опорно-двигательного аппарата. Мы находим причину проблемы и делаем так, чтобы она больше не возвращалась.</p>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_1.png" alt="advantages-1">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">У нас нет услуги «экстра комфорт», потому что лазер и так полностью безболезненный. Он прогревается до высоких температур, но при касании с кожей охлаждается до температуры -3 градуса.  Благодаря такой мощной системе охлаждения вы почувствуете просто прикосновение. Нано-эпиляция также не приносит болевых ощущений. А если вы хотите обезболивание при шугаринге или восковой эпиляции, мы ее сделаем.</p>
+        <div class="col-sm-12 col-lg-6"><img class="d-block" src="assets/img/doctor-podolog.png"></div>
+      </div>
+    </section>
+    <section class="section pricing">
+      <h2 class="paragraph-text text-center">Цены на услуги подолога</h2>
+      <div class="container feet-section">
+        <div class="col-sm-12 col-lg-6 item mb-4">
+          <div class="c-content">
+            <h3 class="dark-blue">Подология</h3>
+            <p class="desc">Лечение ногтей и кожи стоп</p>
+            <ul class="info-list">
+              <li>Медицинский педикюр</li>
+              <li>Обработка диабетической стопы</li>
+              <li>Обработка грибковых поражений</li>
+            </ul><a class="button-forward" href="#"></a>
           </div>
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_2.png" alt="advantages-2">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">Нельзя загорать? Лучше начинать с осени? Забудьте об этих устаревших правилах.  Наш лазер удаляет волосы на коже до 6-го фототипа, а это метисы и мулаты. Так что при вашем загаре он тоже справится. В зависимости от оттенка кожи мастер просто выставит на лазере определенные параметры, чтобы процедура прошла эффективно. Так что можете делать лазерную эпиляцию летом и не бояться негативного эффекта.</p>
+        </div>
+        <div class="col-sm-12 col-lg-6 item mb-4">
+          <div class="c-content">
+            <h3 class="dark-blue">Вросший ноготь</h3>
+            <p class="desc">Исправление формы и роста ногтей</p>
+            <ul class="info-list">
+              <li>Установка скобы Фрезера</li>
+              <li>Установка титановой нити</li>
+              <li>Изготовление гелевого корректора пальцев</li>
+            </ul><a class="button-forward" href="#"></a>
           </div>
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_3.png" alt="advantages-3">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">Наш лазер не сжигает волосяной фолликул, а прогревает его. Когда он видит в фолликуле пигмент, он действует строго на него, не рассеиваясь на пигмент в коже. Это значит, что лазер работает только с волосом и не затрагивает близлежащие ткани. Поэтому лазер не будет влиять на ваши внутренние органы и организм в целом.</p>
+        </div>
+        <div class="col-sm-12 col-lg-6 item mb-4">
+          <div class="c-content">
+            <h3 class="dark-blue">Малая ортопедия</h3>
+            <p class="desc">Исправление положения стопы</p>
+            <ul class="info-list">
+              <li>Лечение грибковой инфекции</li>
+              <li>Удаление мозолей и натоптышей</li>
+              <li>Лечение трещин стопы</li>
+            </ul><a class="button-forward" href="#"></a>
           </div>
-          <div class="col-md-6 col-sm-12"><img src="assets/img/advantages/advantages_4.png" alt="advantages-4">
-            <p class="advantages-count">01</p>
-            <h3 class="advantages-box-title"></h3>
-            <p class="paragraph-text-light">Поход в салон — это радость, а не обязанность. Мы хотим, чтобы процедуры принесли вам только расслабление и приятные ощущения. Поэтому смело озвучивайте все, что вам необходимо. Чай, кофе, шампанское, поболтать или наоборот помолчать — мы подстроимся под ваше настроение и сделаем сеанс эпиляции максимально комфортным.</p>
+        </div>
+        <div class="col-sm-12 col-lg-6 item mb-4">
+          <div class="c-content">
+            <h3 class="dark-blue">Другие услуги</h3>
+            <p class="desc"></p>
+            <ul class="info-list">
+              <li>Лечение грибковой инфекции</li>
+              <li>Удаление мозолей и натоптышей</li>
+              <li>Лечение трещин стопы</li>
+            </ul><a class="button-forward" href="#"></a>
           </div>
         </div>
       </div>
     </section>
-    <section class="section almalaser">
-      <p class="extralarge-text-bg">alma laser</p>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h2 class="section-title-dark">Мы проводим удаление волос лазером от Alma Lasers</h2>
-            <p class="paragraph-text-dark mb-1 position">Лазерная эпиляция в Steffany безболезненная и всесезонная благодаря нашему лазеру Soprano Ice Baby от израильской компании Alma Lasers. Его заводы находятся в Израиле, Германии и США. Это диодный лазер 2019 года выпуска.
-              <p class="paragraph-text-dark mb-1">Почему мы выбрали его?</p>
-              <ul>
-                <li>
-                  <p class="paragraph-text-dark">Никаких болезненных ощущений.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Работает с кожей от 1-го до 6-го фототипа: от белоснежек до мулаток.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Подходит для чувствительной кожи.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Можно загорать уже на следующий день.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark">Работает в движении, т.е. быстрее обычного.</p>
-                </li>
-                <li>
-                  <p class="paragraph-text-dark mb-1">Разрушает волосяной фолликул не сжиганием, а прогреванием.</p>
-                </li>
-              </ul>
-              <p class="paragraph-text-dark">Наш лазер — доказательство того, что лазерная эпиляция может быть комфортной.</p>
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_1.png" alt="position-img-1"></div>
+    <section class="section specific">
+      <h2 class="text-center dark-blue">Кому нужны услуги подолога</h2>
+      <div class="wrapper d-flex justify-content-center mb-3 mt-3">
+        <div class="dash"></div>
+      </div>
+      <p class="text-center">В зависимости от образа жизни, профессии и состояния<br>здоровья самые разные люди могут иметь проблемы со стопами.</p>
+      <h3 class="text-center text-color-dark text-uppercase">Кто в группе риска</h3>
+      <div class="person-wrapper d-flex flex-wrap justify-content-center">
+        <div class="item d-flex flex-column justify-content-center col-12 col-lg-4 align-items-center"><img class="d-block mb-3" src="assets/img/specific-clock-1.png" alt="Specific clock">
+          <p class="text-color-dark">Люди, которые<strong>много стоят</strong></p>
+        </div>
+        <div class="item d-flex flex-column justify-content-center col-12 col-lg-4 align-items-center"><img class="d-block mb-3" src="assets/img/specific-clock-2.png" alt="Specific clock">
+          <p class="text-color-dark">Люди, которые<strong>много стоят</strong></p>
         </div>
       </div>
     </section>
-    <section class="section choose-service">
-      <div class="container">
-        <h2 class="section-title-dark center mb-2">Будьте уверены в чистоте и безопасности каждой процедуры</h2>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>1</p>
+    <section class="section category">
+      <div class="description">
+        <div class="container centered-content">
+          <h2 class="white-text text-center mb-3">Каким группам людей нужен подолог</h2>
+          <p class="white-text">Проблемы со стопами действительно распространены среди обычных людей. В идеале уже при малейших сигналах от организма следует идти к специалисту-подологу. Но чаще люди оттягивают визит, пока ситуация не станет приносить откровенный дискомфорт. Чтобы пациенты лечили проблемы на начальных стадиях, мы составили этот список.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 dark-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-1.png" alt="cat-item-1">
+              <div class="wrapper"><span>Диабетики</span></div>
             </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>2</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>3</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>4</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>5</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 text-center serves-box">
-            <div class="custom-icon-number mb-1">
-              <p>6</p>
-            </div>
-            <h4 class="serves-box__title mb-1">Система стерилизации прямо в лазере</h4>
-            <p class="serves-box__desc mb-1">Сапфировый наконечник лазера имеет встроенную систему стерилизации. Он прогревается до такой высокой температуры, что разрушает все микроорганизмы и споры прямо внутри себя</p>
+            <p>У людей с сахарным диабетом развивается синдром диабетической стопы. Такой стопе нужен специальный уход, который обеспечивает врач-подолог.</p>
           </div>
         </div>
-        <h2 class="section-title-dark center mb-2">Выбирайте зону для эпиляции</h2>
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_1.png" alt="choose-zone_1">
-            <p class="choose-zone-box__desc center">Зога лица</p>
+        <div class="col-sm-12 col-lg-4 light-darkness-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-2.png" alt="cat-item-2">
+              <div class="wrapper"><span>Люди с заболеваниями мышц и суставов</span></div>
+            </div>
+            <p>К этой группе относятся люди с ревматоидным артритом, остеоартрозом и другими заболеваниями. Их опорно-двигательный аппарат испытывает большое напряжение, и это отражается на состоянии их стоп.</p>
           </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_2.png" alt="choose-zone_2">
-            <p class="choose-zone-box__desc center">Зога рук</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_3.png" alt="choose-zone_3">
-            <p class="choose-zone-box__desc center">Зога спины</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_4.png" alt="choose-zone_4">
-            <p class="choose-zone-box__desc center">Зога живота</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_5.png" alt="choose-zone_5">
-            <p class="choose-zone-box__desc center">Интимная зона</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-12 choose-zone-box"><img class="icon-service-choose" src="assets/img/services-choose/choose-zone_6.png" alt="choose-zone_6">
-            <p class="choose-zone-box__desc center">Зога ног</p>
+        </div>
+        <div class="col-sm-12 col-lg-4 dark-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-3.png" alt="cat-item-3">
+              <div class="wrapper"><span>Люди с дерматозами</span></div>
+            </div>
+            <p>К такой группе относятся люди с псориазом, экземой, нейродермитом, атопическим дерматитом. У таких пациентов нарушена защитная функция кожи, поэтому они чаще «подхватывают» болезни стоп и страдают от давления на ногти.</p>
           </div>
         </div>
       </div>
-    </section>
-    <section class="section consultation">
-      <div class="consultation-top mb-7">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h2 class="section-title-light mb-1">Лазерная эпиляция начинается с консультации</h2>
-              <p class="paragraph-text-light mb-2">Главная задача консультации — чтобы вы были спокойны и уверенны в процедуре</p>
-              <p class="paragraph-text-light mb-1">Консультация — это первый и обязательный этап лазерной эпиляции. На ней вы получаете ответы на все свои вопросы, а мы убеждаемся, какой курс процедур вам назначить для наилучшего результата.</p>
-              <p class="paragraph-text-light mb-1">Как же проходит консультация?</p>
-              <div class="custom-icon-number mb-1">
-                <p>1</p>
-              </div>
-              <p class="paragraph-text-light mb-1">Мы знакомимся и заполняем карту клиента</p>
-              <p class="paragraph-text-light mb-1">Для начала мы выясняем, есть ли у вас опыт процедуры лазерной эпиляции. От этого зависит вся дальнейшая беседа. Ведь если вы уже удаляли волосы лазером, наверняка точно понимаете свои требования к процедуре. А если нет — у вас может быть много вопросов.</p>
-              <p class="paragraph-text-light mb-1">Во время разговора мы попутно заполняем вашу индивидуальную карту клиента. Там мы собираем анамнез — информацию о состоянии вашего здоровья. Мы общаемся с вами и проводим поверхностный осмотр, чтобы узнать сведения о вашей коже, возможных хронических заболеваниях, приеме препаратов, гормональном фоне, аллергических реакциях и т.д.. Все это поможет сделать дальнейшую процедуру максимально безопасной.</p>
+      <div class="row">
+        <div class="col-sm-12 col-lg-8 light-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-4.png" alt="cat-item-4">
+              <div class="wrapper"><span>Дети от 3-х лет</span></div>
             </div>
-            <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_2.png" alt="position-img-2"></div>
+            <p>В этом возрасте у детей закладывается манера походки. Если походка правильная, стопа не будет деформироваться. Поэтому мамы приводят своих детей, чтобы проверить основные моменты: правильно ли развивается стопа малыша, склонен ли он к плоскостопию, стоит ли ему носить ортопедическую обувь.<br><br>Если дети ходят в спортивные секции, особенно где есть так называемые «мокрые зоны», они чаще могут «подхватывать» бородавки и грибки.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 light-darkness-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-5.png" alt="cat-item-5">
+              <div class="wrapper"><span>Беременные женщины и молодые мамы</span></div>
+            </div>
+            <p>У беременных женщин смещается центр опоры, и под давлением веса стопа начинает деформироваться. Также из-за частых отеков ног у женщин могут врастать или менять форму ногти. Специалист-подолог может облегчить состояние будущих мам с помощью ортопедической стельки или специальных процедур.</p>
           </div>
         </div>
       </div>
-      <div class="consultation-middle">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_3.png" alt="position-img-3"></div>
-            <div class="col-sm-12 col-md-6">
-              <div class="custom-icon-number mb-1">
-                <p>2</p>
-              </div>
-              <p class="paragraph-text-light mb-1">Рассказываем о лазере и его эффекте</p>
-              <p class="paragraph-text-light mb-1">Мы рассказываем, как работает лазер и как будут уходить волосы. Каждая вторая наша клиентка с опытом лазерной эпиляции удивляется, что мы обещаем полную безболезненность и всесезонность. Однако это правда: лазер не ощущается на коже и его можно делать летом, а уже на следующий день идти на пляж.</p>
-              <p class="paragraph-text-light mb-1">Также подробно рассказываем, как будут уходить волосы. Этот процесс тоже отличается от лазеров предыдущего поколения. Мы не выжигаем волосяной фолликул, а прогреваем его. Поэтому эффект вы увидите на 10-14 день, когда кожа начнет выталкивать мертвые волосы. На консультации вы подробно узнаете о таких моментах и зададите необходимые вопросы.</p>
-              <div class="custom-icon-number mb-1">
-                <p>3</p>
-              </div>
-              <p class="paragraph-text-light mb-1">Сообщаем обо всех противопоказаниях</p>
-              <p class="paragraph-text-light mb-1">У нашего лазера есть абсолютные и относительные противопоказания. Большинство из них нужно обсуждать индивидуально. Мы поговорим об этом на консультации и вместе поймем, подходит ли вам удаление волос с помощью лазера.</p>
-              <p class="paragraph-text-light mb-1">После этого вы подписываете информационное соглашение о том, что мы провели с вами беседу и ознакомили со всеми тонкостями и особенностями процесса. Спрашивайте нас обо всем, что вас интересует. Нам важно, чтобы вы действительно были довольны результатом.</p>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 dark-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-6.png" alt="cat-item-6">
+              <div class="wrapper"><span>Подростки</span></div>
             </div>
+            <p>Из-за гормонального всплеска и повышенного потоотделения защитная функция кожи стоп у подростков снижается. Поэтому они часто заражаются вирусом папилломы человека — у них появляются бородавки.<br><br>Кроме этого подростки часто страдают вросшими ногтями, потому что неправильно их стригут или носят неудобную обувь.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 light-darkness-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-7.png" alt="cat-item-7">
+              <div class="wrapper"><span>Пожилые люди</span></div>
+            </div>
+            <p>Среди пожилых людей много диабетиков 2-го типа или людей с грибковыми заболеваниями. К сожалению, многие пенсионеры не привыкли заботиться о себе.<br><br>Поэтому периодически мы устраиваем бесплатные консультации, чтобы помочь пожилым людям.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 dark-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-8.png" alt="cat-item-8">
+              <div class="wrapper"><span>Пожилые люди</span></div>
+            </div>
+            <p>Люди из этой категории нагружают свой позвоночник постоянным сидением, а позвоночник влияет на положение стопы.<br><br>Также тесная обувь на высоких каблуках провоцирует искривление ногтей, мозоли, вросшие ногти и натоптыши.</p>
           </div>
         </div>
       </div>
-      <div class="consultation-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <div class="custom-icon-number-dark mb-1">
-                <p>4</p>
-              </div>
-              <p class="paragraph-text-dark mb-1">Составляем график процедур</p>
-              <p class="paragraph-text-dark mb-1">Когда у нас есть вся необходимая информация о вас, мы можем сказать вам количество процедур в курсе. В среднем это 6-8 сеансов, но может понадобиться и больше. Все зависит от ваших волос, кожи, а также общих физиологических особенностей роста волос.</p>
-              <p class="paragraph-text-dark mb-1">Также на консультации мы определяем, как часто вам нужно ходить на процедуры лазерной эпиляции. Постарайтесь придерживаться этого графика — от него реально зависит результат всей затеи.</p>
-              <div class="custom-icon-number-dark mb-1">
-                <p>5</p>
-              </div>
-              <p class="paragraph-text-dark mb-1">Проводим тест-драйв</p>
-              <p class="paragraph-text-dark mb-1">Наш лазер подходит для чувствительной кожи и вообще является спасением от раздражений и вросших волос. Однако мы обязательно проводим тест-драйв на небольшом участке вашей кожи. Так мы увидим, как ваша кожа реагирует на лазер и готова ли она к процедуре. Лично мы уверены: все будет хорошо!</p>
+      <div class="row">
+        <div class="col-sm-12 col-lg-8 light-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-9.png" alt="cat-item-9">
+              <div class="wrapper"><span>Спортсмены</span></div>
             </div>
-            <div class="col-sm-12 col-md-6"><img src="assets/img/position-img_4.png" alt="position-img-4"></div>
+            <p>Спортсмены испытывают большие динамические нагрузки. Особенно это касается бегунов и легкоатлетов. Каждый шаг при беге — это удар на позвоночник. Если в биомеханике все хорошо, стопа служит амортизатором.<br><br>Если же со стопой что-то не так, удар амортизирует напрямую позвоночник или колено. Поэтому спортсменам без явных жалоб время от времени стоит посещать врача-подолога.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 light-darkness-block">
+          <div class="centered-content info-section">
+            <div class="row"><img src="assets/img/cat-item-10.png" alt="cat-item-10">
+              <div class="wrapper"><span>Военные</span></div>
+            </div>
+            <p>Эта категория людей также испытывает регулярные динамические нагрузки, которые приходится переживать в неудобной, плохо «дышащей» обуви. Поэтому им важно обращаться к подологу для предотвращения осложнений.</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="section discount">
-      <div class="container">
-        <div class="row flex-column align-items-center">
-          <h2 class="section-title-dark">Комплексные предложения</h2>
-          <p class="paragraph-text-dark">Только 1 день скидки на пакеты обученияот 18% до 27%</p>
-          <p class="paragraph-text-dark">22 : 22 : 22</p><img src="assets/img/check-female.png" alt="check-female">
+    <section class="section about-doctors">
+      <div class="container d-flex flex-wrap"><img class="circles" src="assets/img/common/circles.png" id="circles3"><img class="dashes" src="assets/img/common/dash.png" id="dashes3">
+        <div class="col-12 col-lg-7 owl-video-wrapper">
+          <div class="video video-overlay"></div><a class="video d-flex align-items-center justify-content-center shadow" data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="w-100" src="assets/img/about-video.png" alt="about-video"><img class="custom-play-btn" src="assets/icon/common/play-video.png" alt="Play video button"></a>
         </div>
+        <div class="col-12 col-lg-5 d-flex justify-content-center flex-column mt-sm-5">
+          <h2>Steffany Podology</h2>
+          <div class="dash"></div>
+          <p class="text-color-dark">Это всеукраинская сеть центров здоровья ног. К нам следует сразу обратиться с любым косметическим, дерматологическим или ортопедическим дефектом стопы.</p>
+          <button>Подробнее</button>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <h2 class="text-center">Наши специалисты работают с оборудованием, которое дает точные данные о проблеме пациента:</h2>
+      </div>
+      <div class="container mt-5">
+        <div class="row row-numbered">
+          <div class="col-sm-12 col-lg-3"><img class="ml-sm-4" src="assets/icon/common/adv-1.png" alt="1">
+            <h3>дерматоскопом</h3>
+            <p>прибором для 20-кратного увеличения кожи. Позволяет поставить точный диагноз и наблюдать процесс выздоровления;</p>
+          </div>
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-2.png" alt="2">
+            <h3>подоскопом</h3>
+            <p>аппаратом для диагностики стопы в стоящем положении;</p>
+          </div>
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-3.png" alt="3">
+            <h3>параподографическим матом</h3>
+            <p>дорожкой, которая оценивает положение стопы при ходьбе</p>
+          </div>
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-4.png" alt="4">
+            <h3>лабораторией</h3>
+            <p>которая точно показывает разновидность грибковых заболеваний и позволяет назначить эффективное лечение.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section consultaion">
+      <div class="container d-flex flex-wrap">
+        <div class="col-12 col-lg-7 d-flex flex-column justify-content-center">
+          <h2 class="white-text text-sm-center text-lg-left">Запишись на консультацию <strong>прямо сейчас</strong> и получите <strong>скидку 10%</strong></h2>
+          <div class="dash"></div>
+          <p class="white-text">Раздел медицины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.</p>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="callback-card">
+            <h3>Оставьте ваши данные</h3>
+            <p>и мы вам перезвоним</p>
+            <form method="post" action="/">
+              <input type="text" placeholder="Имя">
+              <input type="email" placeholder="Email">
+              <input type="tel" placeholder="Телефон">
+              <input type="submit" value="Перезвонить мне">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section client-feedback">
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+        <h2 class="text-center dark-blue">Отзывы наших клиентов</h2><img class="d-block mt-4 mb-4" src="assets/icon/quote.png" alt="Quote" id="quote"><img class="circles" src="assets/img/common/circles-with-hr.png">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p class="paragraph-text-dark">Бикини глубокое</p>
-                      <p class="paragraph-text-dark">Подмышечные области</p>
-                    </li>
-                  </ul>
+          <div class="specialists-slider owl-carousel slider-block slider-pad">
+            <div class="specialists-item">
+              <div class="specialists-item-container mb-3 w-100" href="./assets/img/specialists/specialists-1.jpg" data-fancybox="">
+                <div class="specialists-img w-100"><img class="w-100" src="./assets/img/specialists/specialists-1.jpg" alt="diploma"></div>
+                <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+                  <p class="p-text-light fs-16">Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног</p>
+                  <p class="p-text"><span class="p-bold">Работает уже</span>13 лет</p>
                 </div>
-                <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
-                </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+              </div>
+              <p class="h3-title h-center">Демчук Виктория</p>
+              <p class="h3-title fs-16 h-center">Мастер ногтевого сервиса</p>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p class="paragraph-text-dark">Бикини глубокое</p>
-                      <p class="paragraph-text-dark">Подмышечные области</p>
-                    </li>
-                  </ul>
+            <div class="specialists-item">
+              <div class="specialists-item-container mb-3 w-100" href="./assets/img/specialists/specialists-2.jpg" data-fancybox="">
+                <div class="specialists-img w-100"><img class="w-100" src="./assets/img/specialists/specialists-2.jpg" alt="diploma"></div>
+                <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+                  <p class="p-text-light fs-16">Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног</p>
+                  <p class="p-text"><span class="p-bold">Работает уже</span>13 лет</p>
                 </div>
-                <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
-                </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+              </div>
+              <p class="h3-title h-center">Ксения Станиславская</p>
+              <p class="h3-title fs-16 h-center">Директор Nail Studio Steffany, мастер ногтевого сервиса</p>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <h3 class="text-center">Minimum</h3>
-              <div class="row">
-                <div class="col">
-                  <ul>
-                    <li>
-                      <p class="paragraph-text-dark">Бикини глубокое</p>
-                      <p class="paragraph-text-dark">Подмышечные области</p>
-                    </li>
-                  </ul>
+            <div class="specialists-item">
+              <div class="specialists-item-container mb-3 w-100" href="./assets/img/specialists/specialists-3.jpg" data-fancybox="">
+                <div class="specialists-img w-100"><img class="w-100" src="./assets/img/specialists/specialists-3.jpg" alt="diploma"></div>
+                <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+                  <p class="p-text-light fs-16">Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног</p>
+                  <p class="p-text"><span class="p-bold">Работает уже</span>13 лет</p>
                 </div>
-                <div class="col">
-                  <p>2 000 грн</p>
-                  <p>1 730 грн</p>
+              </div>
+              <p class="h3-title h-center">Ксения Станиславская</p>
+              <p class="h3-title fs-16 h-center">Директор Nail Studio Steffany, мастер ногтевого сервиса</p>
+            </div>
+            <div class="specialists-item">
+              <div class="specialists-item-container mb-3 w-100" href="./assets/img/specialists/specialists-4.jpg" data-fancybox="">
+                <div class="specialists-img w-100"><img class="w-100" src="./assets/img/specialists/specialists-4.jpg" alt="diploma"></div>
+                <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+                  <p class="p-text-light fs-16">Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног</p>
+                  <p class="p-text"><span class="p-bold">Работает уже</span>13 лет</p>
                 </div>
-              </div><a class="btn">оплатить</a><a class="btn">записаться</a>
+              </div>
+              <p class="h3-title h-center">Ксения Станиславская</p>
+              <p class="h3-title fs-16 h-center">Директор Nail Studio Steffany, мастер ногтевого сервиса</p>
+            </div>
+            <div class="specialists-item">
+              <div class="specialists-item-container mb-3 w-100" href="./assets/img/specialists/specialists-1.jpg" data-fancybox="">
+                <div class="specialists-img w-100"><img class="w-100" src="./assets/img/specialists/specialists-1.jpg" alt="diploma"></div>
+                <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+                  <p class="p-text-light fs-16">Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног</p>
+                  <p class="p-text"><span class="p-bold">Работает уже</span>13 лет</p>
+                </div>
+              </div>
+              <p class="h3-title h-center">Ксения Станиславская</p>
+              <p class="h3-title fs-16 h-center">Директор Nail Studio Steffany, мастер ногтевого сервиса</p>
+            </div>
+            <div class="specialists-item">
+              <div class="specialists-item-container mb-3 w-100" href="./assets/img/specialists/specialists-2.jpg" data-fancybox="">
+                <div class="specialists-img w-100"><img class="w-100" src="./assets/img/specialists/specialists-2.jpg" alt="diploma"></div>
+                <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+                  <p class="p-text-light fs-16">Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног</p>
+                  <p class="p-text"><span class="p-bold">Работает уже</span>13 лет</p>
+                </div>
+              </div>
+              <p class="h3-title h-center">Ксения Станиславская</p>
+              <p class="h3-title fs-16 h-center">Директор Nail Studio Steffany, мастер ногтевого сервиса</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12"></div>
-          <div class="col l4 offset-l2 s12"></div>
+    <footer class="footer pt-3">
+      <div class="container container-m">
+        <div class="row footer-cnt mx-auto mx-xl-0">
+          <div class="col-12 col-xl-3 d-none d-xl-block">
+            <div class="c-logo-f"><img src="assets/icon/Logo-f.png" alt="logo-f"></div>
+          </div>
+          <div class="col-12 col-md-4 col-xl-3 mb-3 mb-xl-0">
+            <ul class="d-flex d-md-block flex-column align-items-center mb-0">
+              <li class="mb-3 text-center text-xl-left d-flex align-items-center"><img class="icon icon-phone mr-3" src="assets/icon/phone.png" alt="icon-phone-f"><a class="paragraph-text-light" href="tel:+0980070753">098-007-07-53</a></li>
+              <li class="mb-3 text-center text-xl-left d-flex align-items-center"><img class="icon mr-3 icon-loc" src="assets/icon/map.png" alt="icon-map-f"><span class="paragraph-text-light">Ивано-Франковск</span></li>
+              <li class="mb-3 text-center text-xl-left d-flex align-items-center footer-icon-blk"><a class="mr-3" href=""><img class="icon icon-facebook" src="assets/icon/Facebook-Icon.png" alt="facebook-f"></a><a href=""><img class="icon icon-inst mr-0" src="assets/icon/inst.png" alt="inst-f"></a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 col-xl-2 mb-3"><a class="paragraph-text text-center text-md-left mb-3 d-block" href="">Вакансии</a><a class="paragraph-text text-center text-md-left mb-3 d-block" href="">Steffany Beauty</a><a class="paragraph-text text-center text-md-left d-block" href="">Steffany Podology</a>
+            <hr class="d-sm-none my-4">
+          </div>
+          <div class="col-12 col-md-5 d-none d-md-flex flex-column align-items-center align-items-md-start d-xl-none"><a class="p-text-light text-dashed d-inline-block mb-3" href="">Пользовательское соглашение <br/></a><a class="p-text-light text-dashed d-inline-block mb-3 mb-md-0" href="">Политика конфиденциальности</a></div>
+          <div class="col-12 col-xl-4 d-none d-md-flex flex-column justify-content-center justify-content-sm-between justify-content-xl-start flex-xl-column align-items-xl-center">
+            <p class="paragraph-text text-center mb-3">
+              Скачай приложение! <br/>
+              Почувствую заботу о себе в любой момент
+            </p>
+            <div class="d-none d-sm-flex justify-content-center align-items-center"><a class="mr-3" href="#"><img class="icon icon-large" src="assets/icon/mob-f.png" alt="mob-f"></a><a href="#"><img class="icon icon-large" src="assets/icon/google-play-f.png" alt="play-f"></a></div>
+          </div>
+        </div>
+        <hr class="d-none d-sm-block my-3">
+        <div class="d-flex flex-column align-items-center flex-xl-row justify-content-xl-between mb-3 footer-cnt mx-auto mx-xl-0">
+          <p class="mb-3 m-md-0 p-text-light order-1 order-xl-0 text-center text-xl-left">
+            Разработано в &nbsp<a class="p-text-light text-dashed" href="">dotwork</a></p><a class="mb-3 m-md-0 p-text-light text-dashed d-block d-md-none d-xl-block" href="">Пользовательское соглашение</a><a class="mb-3 m-md-0 p-text-light text-dashed d-block d-md-none d-xl-block" href="">Политика конфиденциальности</a>
+          <p class="mb-3 m-md-0 p-text-light text-center text-xl-left">steffany.ua ©2019. Все права защищены</p>
         </div>
       </div>
     </footer>
