@@ -1,0 +1,44 @@
+section.section.consultation-form
+  background:
+    image: url("../assets/img/background/consultation-form-bg.jpg")
+    size: cover
+  .container
+    .c-content
+      .c-title
+        width: 100%
+        max-width: 500px
+      .c-desc
+        width: 100%
+        max-width: 465px
+    .main-form
+      max-width: 390px
+      background-color: #EDE1DF
+      border-radius: 5px 5px 0 0
+      border-width: 1px 1px 0 1px
+      border-style: solid
+      border-color: #000
+      .form-control
+        background-color: rgba(77, 82, 89, .2)
+        width: 252px
+    .small-label
+      @include font(Circe, 400, 12, 22)
+    .input::placeholder
+      color: $text-color-white
+
+@include tablet
+  section.section.consultation-form
+    .container
+      .main-form
+        border-radius: 0
+        border: none
+
+@include mobile-all
+  section.section.consultation-form
+    .container
+      max-width: 100%
+      .media-gutters
+        padding: 0
+      .main-form
+        max-width: 100%
+
+
