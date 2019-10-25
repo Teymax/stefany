@@ -214,26 +214,22 @@
 		&:nth-child(1)
 			.c-content
 				padding-left: 4rem
-				background: url('../assets/img/pricing-feet-1.png') no-repeat center/cover
+				background: url('../assets/img/feet-index-1.png') no-repeat center/cover
 
 		&:nth-child(2)
-			padding-left: 3rem
-			background: url('../assets/img/pricing-feet-2.png') no-repeat center/cover
-			@include mobile-all
-				.c-content .button-forward
-					left: -2em
+			.c-content
+				padding-left: 3rem
+				background: url('../assets/img/feet-index-2.png') no-repeat center/cover
 
 		&:nth-child(3)
 			.c-content
 				padding-left: 4rem
-				background: url('../assets/img/pricing-feet-3.png') no-repeat center/cover
+				background: url('../assets/img/feet-index-3.png') no-repeat center/cover
 
 		&:nth-child(4)
-			padding-left: 3rem
-			background: url('../assets/img/pricing-feet-4.png') no-repeat center/cover
-			@include mobile-all
-				.c-content .button-forward
-					left: -2em
+			.c-content
+				padding-left: 3rem
+				background: url('../assets/img/feet-index-4.png') no-repeat center/cover
 
 		.c-content
 			height: 17em
@@ -457,6 +453,7 @@
 	width: 15em
 	position: absolute
 	pointer-events: none
+	@include mobile-all
 
 .dark-blue
 	color: $secondary-header-color
@@ -467,6 +464,9 @@
 	margin-top: 1em
 	margin-bottom: 1.5em
 	background: rgba(125, 137, 158, 0.39)
+	@include mobile-all
+		display: flex
+		align-self: center
 
 // list - style ****
 .info-list

@@ -16,18 +16,7 @@
     <script src="./js/main.js"></script>
   </head>
   <body>
-    <div id="overlay"><img src="assets/icon/close.png" alt="Close" id="closeOverlay">
-      <div class="wrapper">
-        <h2 class="text-center white-text">Привет!</h2>
-        <p class="white-text text-center">Пожалуйста, выбери город из списка.<br>Это поможет отобразить корректную информацию для тебя</p>
-        <p class="white-text">Я живу в:</p>
-        <select class="selectpicker">
-          <option>Киев</option>
-          <option>Житомир</option>
-          <option>Ивано-Франковск</option>
-        </select>
-      </div>
-    </div>
+    <!--include ../modules/overlay-->
     <header>
       <div class="container container-m d-flex justify-content-between align-items-center"><a class="c-logo" href="#"><img class="logo-header" src="assets/icon/header-logo.png" alt="Image Title"></a>
         <div class="row c-row w-100 no-gutter d-flex align-items-end justify-content-start flex-column m-0">
@@ -93,7 +82,7 @@
       </div>
     </header>
     <section class="section introduce"><img class="feet" src="assets/img/introduce-cover.png" id="feetOne"><img class="feet" src="assets/img/feet-2.png" id="feetTwo">
-      <div class="container"><img class="circles" src="assets/img/circles.png" id="circles">
+      <div class="container"><img class="circles" src="assets/img/common/circles-with-hr.png" id="circles">
         <div class="card col-12 col-sm-11 col-lg-6">
           <h1 class="paragraph-text">Врач подолог<br><strong>в Житомире</strong></h1>
           <div class="dash"></div>
@@ -109,7 +98,7 @@
               <p class="paragraph-text">Корректируем положение стопы с помощью стелек и силиконовых протезов</p>
             </li>
           </ul>
-          <button class="call-me" onclick="alert('clicked')">Перезвоните мне</button><img class="dashes intro-dashes" src="assets/img/dash.png">
+          <button class="call-me" onclick="alert('clicked')">Перезвоните мне</button><img class="dashes intro-dashes" src="assets/img/common/dash.png">
         </div>
       </div>
     </section>
@@ -117,32 +106,32 @@
       <div class="container">
         <h2 class="text-center dark-blue">Почему центр здоровья ног Steffany?</h2>
         <p class="text-center dark-blue">Наша цель — облегчить вашу жизнь, поэтому у нас есть</p>
-        <div class="numbered-section">
-          <div class="col-sm-12 col-lg-6"><img src="assets/icon/adv-1.png">
-            <div class="description">
-              <h3 class="title">Стерильное помещение и оборудование</h3>
-              <p class="desc">Центр проходит полный цикл стерилизации. Мы очищаем воздух в помещении тремя циркуляторами закрытого типа. Инструменты замачиваем в ультразвуковой ванночке в специальном растворе и обрабатываем в сухожаровом шкафу при температуре 180 градусов. Также дезинфицируем все поверхности в кабинете после каждого пациента и проводим регулярные уборки</p>
+            <div class="numbered-section">
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-1.png">
+                <div class="description">
+                  <h3 class="title">Стерильное помещение и оборудование</h3>
+                  <p class="desc">Центр проходит полный цикл стерилизации. Мы очищаем воздух в помещении тремя циркуляторами закрытого типа. Инструменты замачиваем в ультразвуковой ванночке в специальном растворе и обрабатываем в сухожаровом шкафу при температуре 180 градусов. Также дезинфицируем все поверхности в кабинете после каждого пациента и проводим регулярные уборки</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-2.png">
+                <div class="description">
+                  <h3 class="title">Контракт с лабораторией для точных результатов</h3>
+                  <p class="desc">Мы работаем с доказательной базой. Это значит, что все диагнозы мы ставим на основе анализов и исследований. Когда лечим грибок, для начала берем у пациента забор на анализ. Затем передаем этот образец через курьера в киевскую лабораторию, и через время получаем результат. Благодаря этому мы можем назначить максимально точное лечение и дать рекомендации</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-3.png">
+                <div class="description">
+                  <h3 class="title">Аппараты для диагностики ходьбы</h3>
+                  <p class="desc">Большинство проблем с ногами возникают из-за неправильного положения стоп во время походки. Чтобы вылеченные вросшие ногти или мозоли не возвращались, мы диагностируем ходьбу пациентов. Делаем это с помощью подоскопа — аппарата, который выявляет нарушения стопы в положении стоя. Также анализируем походку с помощью параподографического мата</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-6"><img src="assets/icon/common/adv-4.png">
+                <div class="description">
+                  <h3 class="title">Обезболивание и аккуратность процесса</h3>
+                  <p class="desc">Боль — один из главных страхов наших пациентов, и он развеивается уже при первом визите на процедуру. Если ситуация не запущенная, пациентам не больно. Наши специалисты обезболивают пораженный участок — делают замораживания местными препаратами. В более сложных ситуациях специалисты обязательно предупреждают обо всех неприятных ощущениях</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-sm-12 col-lg-6"><img src="assets/icon/adv-2.png">
-            <div class="description">
-              <h3 class="title">Стерильное помещение и оборудование</h3>
-              <p class="desc">Мы работаем с доказательной базой. Это значит, что все диагнозы мы ставим на основе анализов и исследований. Когда лечим грибок, для начала берем у пациента забор на анализ. Затем передаем этот образец через курьера в киевскую лабораторию, и через время получаем результат. Благодаря этому мы можем назначить максимально точное лечение и дать рекомендации</p>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-6"><img src="assets/icon/adv-3.png">
-            <div class="description">
-              <h3 class="title">Стерильное помещение и оборудование</h3>
-              <p class="desc">Большинство проблем с ногами возникают из-за неправильного положения стоп во время походки. Чтобы вылеченные вросшие ногти или мозоли не возвращались, мы диагностируем ходьбу пациентов. Делаем это с помощью подоскопа — аппарата, который выявляет нарушения стопы в положении стоя. Также анализируем походку с помощью параподографического мата</p>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-6"><img src="assets/icon/adv-4.png">
-            <div class="description">
-              <h3 class="title">Стерильное помещение и оборудование</h3>
-              <p class="desc">Боль — один из главных страхов наших пациентов, и он развеивается уже при первом визите на процедуру. Если ситуация не запущенная, пациентам не больно. Наши специалисты обезболивают пораженный участок — делают замораживания местными препаратами. В более сложных ситуациях специалисты обязательно предупреждают обо всех неприятных ощущениях</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     <section class="section activity">
@@ -317,9 +306,9 @@
       </div>
     </section>
     <section class="section about-doctors">
-      <div class="container d-flex flex-wrap"><img class="circles" src="assets/img/circles.png" id="circles3"><img class="dashes" src="assets/img/dash.png" id="dashes3">
+      <div class="container d-flex flex-wrap"><img class="circles" src="assets/img/common/circles.png" id="circles3"><img class="dashes" src="assets/img/common/dash.png" id="dashes3">
         <div class="col-12 col-lg-7 owl-video-wrapper">
-          <div class="video video-overlay"></div><a class="video d-flex align-items-center justify-content-center shadow" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img class="w-100" src="assets/img/about-video.png" alt="about-video"><img class="custom-play-btn" src="assets/icon/play-video.png" alt="Play video button"></a>
+          <div class="video video-overlay"></div><a class="video d-flex align-items-center justify-content-center shadow" data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><img class="w-100" src="assets/img/about-video.png" alt="about-video"><img class="custom-play-btn" src="assets/icon/common/play-video.png" alt="Play video button"></a>
         </div>
         <div class="col-12 col-lg-5 d-flex justify-content-center flex-column mt-sm-5">
           <h2>Steffany Podology</h2>
@@ -333,19 +322,19 @@
       </div>
       <div class="container mt-5">
         <div class="row row-numbered">
-          <div class="col-sm-12 col-lg-3"><img src="assets/icon/adv-1.png" alt="1">
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-1.png" alt="1">
             <h3>дерматоскопом</h3>
             <p>прибором для 20-кратного увеличения кожи. Позволяет поставить точный диагноз и наблюдать процесс выздоровления;</p>
           </div>
-          <div class="col-sm-12 col-lg-3"><img src="assets/icon/adv-2.png" alt="2">
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-2.png" alt="2">
             <h3>подоскопом</h3>
             <p>аппаратом для диагностики стопы в стоящем положении;</p>
           </div>
-          <div class="col-sm-12 col-lg-3"><img src="assets/icon/adv-3.png" alt="3">
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-3.png" alt="3">
             <h3>параподографическим матом</h3>
             <p>дорожкой, которая оценивает положение стопы при ходьбе</p>
           </div>
-          <div class="col-sm-12 col-lg-3"><img src="assets/icon/adv-4.png" alt="4">
+          <div class="col-sm-12 col-lg-3"><img src="assets/icon/common/adv-4.png" alt="4">
             <h3>лабораторией</h3>
             <p>которая точно показывает разновидность грибковых заболеваний и позволяет назначить эффективное лечение.</p>
           </div>
@@ -375,7 +364,7 @@
     </section>
     <section class="section client-feedback">
       <div class="container d-flex flex-column justify-content-center align-items-center">
-        <h2 class="text-center dark-blue">Отзывы наших клиентов</h2><img class="d-block mt-4 mb-4" src="assets/icon/quote.png" alt="Quote" id="quote"><img class="circles" src="assets/img/circles-with-hr.png">
+        <h2 class="text-center dark-blue">Отзывы наших клиентов</h2><img class="d-block mt-4 mb-4" src="assets/icon/quote.png" alt="Quote" id="quote"><img class="circles" src="assets/img/common/circles-with-hr.png">
         <div class="row no-gutters">
           <div class="specialists-slider owl-carousel slider-block slider-pad">
             <div class="specialists-item">

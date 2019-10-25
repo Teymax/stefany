@@ -71,7 +71,8 @@ function clean () {
 gulp.task( 'pug', function () {
   return gulp.src( '../../src/pug/**/*.pug' )
              .pipe( pug( {
-               pretty: true
+               pretty: true,
+               allowEmpty: true
              } ) )
              .pipe( gulp.dest( '../../build' ) )
 } )
@@ -106,8 +107,3 @@ gulp.task( 'scripts', scripts )
 gulp.task( 'del', clean )
 // таск для отслеживания изменений
 gulp.task( 'watch', watch )
-// таск для удаления файлов в папке build и паралельного запуска styles и
-// scripts gulp.task('build', gulp.series(clean, gulp.parallel(styles,
-// scripts)));
-
-// gulp.task('dev', gulp.series('build', 'watch'))
