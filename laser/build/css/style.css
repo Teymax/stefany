@@ -1513,6 +1513,52 @@ section.section.service-after-laserepila .consultation-bottom {
       top: 30px;
       left: -175px; }
 
+section.section.service-laser-whatToDo {
+  background: url(../assets/img/service-list/whatToDoBg.png); }
+  section.section.service-laser-whatToDo .container .items-container .text-container1 p:nth-of-type(1) {
+    margin-top: 52px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container1 p:nth-of-type(2) {
+    margin-top: 87px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container1 p:nth-of-type(3) {
+    margin-top: 68px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container1 p span {
+    color: #000; }
+  section.section.service-laser-whatToDo .container .items-container .text-container2 p:nth-of-type(1) {
+    margin-top: 52px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container2 p:nth-of-type(2) {
+    margin-top: 101px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container2 p:nth-of-type(3) {
+    margin-top: 57px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container2 p span {
+    color: #000; }
+  section.section.service-laser-whatToDo .container .items-container .text-container-hide p:nth-of-type(1) {
+    margin-top: 52px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container-hide p:nth-of-type(2) {
+    margin-top: 119px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container-hide p:nth-of-type(3) {
+    margin-top: 79px; }
+  section.section.service-laser-whatToDo .container .items-container .text-container-hide p span {
+    color: #000; }
+
+section.section.service-laser-contraindications {
+  background-color: #9FA6BA; }
+  section.section.service-laser-contraindications .container .white-block-mobile .white-block-design {
+    width: 489px;
+    height: 489px;
+    top: -32px;
+    left: 217px; }
+    section.section.service-laser-contraindications .container .white-block-mobile .white-block-design img {
+      top: -76px;
+      left: -149px; }
+  section.section.service-laser-contraindications .container .white-block-lg .white-block-design {
+    width: 562px;
+    height: 789px;
+    top: -100px;
+    left: 49px; }
+    section.section.service-laser-contraindications .container .white-block-lg .white-block-design img {
+      top: -57px;
+      left: -116px; }
+
 section.section.diploma {
   background-color: #4D5259; }
 
