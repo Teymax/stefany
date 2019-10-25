@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stefany | Beauty</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="pb-lg-3">
+      <div class="container container-m d-flex justify-content-between align-items-center"><a class="c-logo" href="./index.html"><img class="logo-header" src="assets/img/logo/header-logo.png" alt="Image Title"></a>
+        <div class="row c-row w-100 no-gutter d-flex align-items-end justify-content-start flex-column m-0">
+          <ul class="header-contact-list d-flex mb-0 mb-sm-3">
+            <li class="d-none d-sm-flex align-items-center drop-menu"><img class="icon icon-loc" src="assets/icon/map.png" alt="h-map"><span class="link-text-light d-flex align-items-center justify-content-start" href="#">Ивано-Франковск <img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down"></span>
+              <ul class="dropdown-menu-list d-flex flex-column">
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск2</a></li>
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск3</a></li>
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск4</a></li>
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск5</a></li>
+              </ul>
+            </li>
+            <li class="d-none d-sm-flex align-items-center"><img class="icon icon-phone" src="assets/icon/phone.png" alt="h-map"><a class="link-text-light d-flex align-items-center justify-content-start" href="tel:0980070753">098 007 07 53</a></li>
+            <li class="d-none d-lg-flex align-items-center header-lang-wrap mr-0 drop-menu"><span class="link-text-light d-flex align-items-center justify-content-start header-lang">RU</span>
+              <ul class="dropdown-menu-list d-flex flex-column">
+                <li> <a class="nav-link-text" href="#">UA</a></li>
+                <li> <a class="nav-link-text" href="#">EN</a></li>
+              </ul>
+            </li>
+            <li class="d-flex d-lg-none align-items-center justify-content-between menu-trigger flex-column m-0"><span class="d-block w-100"></span><span class="d-block w-100"></span><span class="d-block w-100"></span></li>
+          </ul>
+          <div class="header-nav-wrap d-flex align-items-center justify-content-end justify-content-lg-between">
+            <nav class="header-nav w-100 d-none d-lg-block">
+              <ul class="header-nav-list d-flex align-items-center justify-content-between mb-0">
+                <li class="d-inline-flex align-items-center drop-menu"><span class="p-text">О нас</span><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list d-flex flex-column">
+                    <li><a class="nav-link-text" href="./salonPage.html">Наши салоны</a></li>
+                    <li><a class="nav-link-text" href="./about.html">О нас</a></li>
+                    <li><a class="nav-link-text" href="./padology-learning.html">Падалогия обучение</a></li>
+                    <li><a class="nav-link-text" href="#">Цены 5</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center drop-menu"><span class="p-text"> Услуги и Цены</span><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list d-flex flex-column">
+                    <li><a class="nav-link-text" href="./serviceHairdresser.html">Стрижка</a></li>
+                    <li><a class="nav-link-text" href="./serviceNailExtension.html">Наращивание ногтей</a></li>
+                    <li><a class="nav-link-text" href="./serviceNailsManicure.html">Маникюр</a></li>
+                    <li><a class="nav-link-text" href="./serviceNailsPedicure.html">Педикиюр</a></li>
+                    <li><a class="nav-link-text" href="./serviceРairСoloringAndCare.html">Окрашивание волос</a></li>
+                    <li><a class="nav-link-text" href="./serviceEyebrows.html">Брови</a></li>
+                    <li><a class="nav-link-text" href="./serviceMakeup.html">Макияж</a></li>
+                    <li><a class="nav-link-text" href="./serviceSPA.html">СПА для рук</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center mr-0"><a class="p-text" href="./contact.html">Контакты</a></li>
+              </ul>
+            </nav><a class="btn-callback d-none d-sm-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#1B3EBF;}</style>
+                  <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
+                </svg><span>записаться</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section accordion-answer program py-5">
+      <h2 class="section-title text-center white-text">Программа курса базовой подологии</h2>
+      <p class="h3-title-regular text-center mb-4 pb-4 text-border-b">Ближайшая старт — ХХ месяца</p>
+      <p class="h3-title-regular text-center mb-4">Первая неделя</p>
+      <div class="programAccordion accordion m-0">
+        <div class="col-12 program-item-wrap w-100 mx-auto p-0">
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading01" data-toggle="collapse" data-target="#programCollapse01" aria-controls="programCollapse01" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 1 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Основы подологии. Сбор информации о пациенте. Работа с подоскопом</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse01" aria-labelledby="programHeading01" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading02" data-toggle="collapse" data-target="#programCollapse02" aria-controls="programCollapse02" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 2 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Основы подологии. Сбор информации о пациенте. Работа с подоскопом</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse02" aria-labelledby="programHeading02" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading03" data-toggle="collapse" data-target="#programCollapse03" aria-controls="programCollapse03" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 3 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Мозоли и бородавки. Работа скальпелем</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse03" aria-labelledby="programHeading03" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading04" data-toggle="collapse" data-target="#programCollapse04" aria-controls="programCollapse04" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 4 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Мозоли и бородавки. Работа скальпелем</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse04" aria-labelledby="programHeading04" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading05" data-toggle="collapse" data-target="#programCollapse05" aria-controls="programCollapse05" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 5</div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Гиперкератоз. Гипергидроз. Трещины на пятках</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse05" aria-labelledby="programHeading05" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading06" data-toggle="collapse" data-target="#programCollapse06" aria-controls="programCollapse06" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 6 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Гиперкератоз. Гипергидроз. Трещины на пятках</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse06" aria-labelledby="programHeading06" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="h3-title-regular text-center my-5">Вторая неделя</p>
+      <div class="programAccordion accordion m-0">
+        <div class="col-12 program-item-wrap w-100 mx-auto p-0">
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading07" data-toggle="collapse" data-target="#programCollapse07" aria-controls="programCollapse07" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 7 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Заболевания ногтей. Грибок. Меланома и невусы. Дерматоскоп</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse07" aria-labelledby="programHeading07" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading08" data-toggle="collapse" data-target="#programCollapse08" aria-controls="programCollapse08" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 8 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Проблемы ногтей. Грибок. Как брать анализы</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse08" aria-labelledby="programHeading08" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading03" data-toggle="collapse" data-target="#programCollapse09" aria-controls="programCollapse09" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 9 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Вросший ноготь. Воспаления и раны. Панариций</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse09" aria-labelledby="programHeading09" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading10" data-toggle="collapse" data-target="#programCollapse10" aria-controls="programCollapse10" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 10 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Вросший ноготь. Воспаления и раны. Панариций</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse10" aria-labelledby="programHeading10" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading11" data-toggle="collapse" data-target="#programCollapse11" aria-controls="programCollapse11" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 5</div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Диабетическая стопа. Дерматозы</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse11" aria-labelledby="programHeading11" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading12" data-toggle="collapse" data-target="#programCollapse12" aria-controls="programCollapse12" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 6 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Диабетическая стопа. Дерматозы</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse12" aria-labelledby="programHeading12" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeading13" data-toggle="collapse" data-target="#programCollapse13" aria-controls="programCollapse13" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 6 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Экзамен</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapse13" aria-labelledby="programHeading13" data-parent=".programAccordion">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 my-5 btn-callback-blue mx-auto" href="#"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
+        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+          <style type="text/css">.st0{fill:#D11111;}</style>
+          <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8      C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+        </svg></a>
+      <h2 class="section-title text-center white-text mt-5">Программа курса малой ортопедии и ортониксии</h2>
+      <p class="h3-title-regular text-center mb-4 pb-4 text-border-b">Ближайшая старт — ХХ месяца</p>
+      <p class="h3-title-regular text-center mb-4">Первая неделя</p>
+      <div class="programAccordionTwo accordion m-0">
+        <div class="col-12 program-item-wrap w-100 mx-auto p-0">
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo01" data-toggle="collapse" data-target="#programCollapseTwo01" aria-controls="programCollapseTwo01" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 1 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория <br/></span><span class="thin-text">Коррекция вросшего ногтя с помощью пластин</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo01" aria-labelledby="programHeadingTwo01" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Роль ортониксии в работе с вросшим ногтем. Понятие вросшего ногтя и показания к установке пластин. Сравнительная характеристика пластин bs, gold, onyclip, NiTi wire, podofix. Выбор системы и установка. Противопоказания. Материалы для работы. Особенности системы. Отработка систем Onyclip, Ni Ti Wire.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo02" data-toggle="collapse" data-target="#programCollapseTwo02" aria-controls="programCollapseTwo02" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 2 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Коррекция вросшего ногтя с помощью пластин</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo02" aria-labelledby="programHeadingTwo02" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo03" data-toggle="collapse" data-target="#programCollapseTwo03" aria-controls="programCollapseTwo03" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 3 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Коррекция вросшего ногтя с помощью пластин</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo03" aria-labelledby="programHeadingTwo03" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo04" data-toggle="collapse" data-target="#programCollapseTwo04" aria-controls="programCollapseTwo04" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 4 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория и практика <br/></span><span class="thin-text">Ортониксия. Скоба 3ТО</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo04" aria-labelledby="programHeadingTwo04" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo05" data-toggle="collapse" data-target="#programCollapseTwo05" aria-controls="programCollapseTwo05" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 5</div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Практика <br/></span><span class="thin-text">Ортониксия. Скоба 3ТО</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo05" aria-labelledby="programHeadingTwo05" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="h3-title-regular text-center my-5">Вторая неделя</p>
+      <div class="programAccordionTwo accordion m-0">
+        <div class="col-12 program-item-wrap w-100 mx-auto p-0">
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo06" data-toggle="collapse" data-target="#programCollapseTwo06" aria-controls="programCollapseTwo06" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 6 </div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория и практика <br/></span><span class="thin-text">Протезирование ногтей с помощью материалов</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo06" aria-labelledby="programHeadingTwo06" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Роль ортониксии в работе с вросшим ногтем. Понятие вросшего ногтя и показания к установке пластин. Сравнительная характеристика пластин bs, gold, onyclip, NiTi wire, podofix. Выбор системы и установка. Противопоказания. Материалы для работы. Особенности системы. Отработка систем Onyclip, Ni Ti Wire.</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters program-item">
+            <div class="row no-gutters w-100 program-head">
+              <div class="card-header p-0 w-100 program-container d-flex align-items-center" id="programHeadingTwo07" data-toggle="collapse" data-target="#programCollapseTwo07" aria-controls="programCollapseTwo07" aria-expanded="true">
+                <div class="card-arrow section-subtitle white-text d-flex align-items-center justify-content-center"> день 7</div>
+                <p class="paragraph-text-18"><span class="text-w-bold">Теория и практика <br/></span><span class="thin-text">Малая ортопедия. Изготовление ортозов</span></p>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                  <defs>
+                    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                    <clippath id="clip-path" transform="translate(0 -2.5)">
+                      <rect class="cls-1" width="12.5" height="12.5"></rect>
+                    </clippath>
+                  </defs>
+                  <g id="Слой_2" data-name="Слой 2">
+                    <g id="Слой_1-2" data-name="Слой 1">
+                      <g class="cls-2">
+                        <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="row no-gutters w-100 program-answer">
+              <div class="collapse w-100 collapse-answer program-container" id="programCollapseTwo07" aria-labelledby="programHeadingTwo07" data-parent=".programAccordionTwo">
+                <p class="card-body py-0 paragraph-text white-text"><span class="text-w-bold mb-1">Что вы изучите: <br/></span><span class="thin-text">Как заполнять карту пациента и собирать анамнез. Правила дезинфекции и стерилизации. Анатомию стопы. Деформации стоп и нарушения биомеханики ходьбы. Связь проблем вросшего ногтя, онихолизиса, мозолей и трещин на стопе с избыточной нагрузкой на стопу. Что такое подоскоп и как изучать на нем стопу в статике. Техника аппаратного педикюра. Выбор инструментов.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 my-5 btn-callback-blue mx-auto" href="#"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
+        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+          <style type="text/css">.st0{fill:#D11111;}</style>
+          <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8      C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+        </svg></a>
+    </section>
+    <footer class="footer pt-3">
+      <div class="container container-m">
+        <div class="row footer-cnt mx-auto mx-lg-0">
+          <div class="col-12 col-lg-3 d-none d-lg-block"><a class="c-logo-f" href="./index.html"><img src="assets/img/logo/footer-logo.png" alt="logo-f"></a></div>
+          <div class="col-12 col-sm-4 col-lg-3 mb-3 mb-lg-0">
+            <ul class="d-flex d-sm-block flex-column align-items-center mb-0">
+              <li class="mb-3 text-center text-lg-left d-flex align-items-center"><img class="icon icon-phone mr-3" src="assets/icon/phone.png" alt="icon-phone-f"><a class="paragraph-text-light text-color-dark" href="tel:+0980070753">098-007-07-53</a></li>
+              <li class="mb-3 text-center text-lg-left d-flex align-items-center drop-menu drop-menu-top"><img class="icon mr-3 icon-loc" src="assets/icon/map.png" alt="icon-map-f"><span class="paragraph-text-light text-color-dark">Ивано-Франковск</span><img class="icon-arrow ml-2" src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down">
+                <ul class="dropdown-menu-list d-flex flex-column">
+                  <li> <a class="nav-link-text" href="#">Львов</a></li>
+                  <li> <a class="nav-link-text" href="#">Львов</a></li>
+                  <li> <a class="nav-link-text" href="#">Львов</a></li>
+                </ul>
+              </li>
+              <li class="mb-3 text-center text-lg-left d-flex align-items-center footer-icon-blk"><a class="mr-3" href=""><img class="icon icon-facebook" src="assets/icon/facebook-Icon.png" alt="facebook-f"></a><a href=""><img class="icon icon-inst mr-0" src="assets/icon/inst.png" alt="inst-f"></a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3 col-lg-2 mb- mb-sm-3"><a class="paragraph-text text-color-dark text-center text-sm-left mb-3 d-block" href="">Вакансии</a><a class="paragraph-text text-color-dark text-center text-sm-left mb-3 d-block" href="">Steffany Beauty</a><a class="paragraph-text text-color-dark text-center text-sm-left d-block" href="">Steffany Podology</a>
+            <hr class="d-sm-none my-4">
+          </div>
+          <div class="col-12 col-sm-5 d-none d-sm-flex flex-column align-items-center align-items-sm-start d-lg-none"><a class="p-text-light text-dashed d-inline-block mb-3" href="">Пользовательское соглашение <br/></a><a class="p-text-light text-dashed d-inline-block mb-3 mb-sm-0" href="">Политика конфиденциальности</a></div>
+          <div class="col-12 col-lg-4 d-none d-sm-flex flex-column justify-content-center justify-content-sm-between justify-content-lg-start flex-lg-column align-items-lg-center">
+            <p class="paragraph-text text-color-dark text-center mb-3">
+              Скачай приложение! <br/>
+              Почувствую заботу о себе в любой момент
+            </p>
+            <div class="d-none d-sm-flex justify-content-center align-items-center"><a class="mr-3" href="#"><img class="icon icon-large" src="assets/icon/mob-f.png" alt="mob-f"></a><a href="#"><img class="icon icon-large" src="assets/icon/google-play-f.png" alt="play-f"></a></div>
+          </div>
+        </div>
+        <hr class="d-none d-sm-block my-3">
+        <div class="d-flex flex-column align-items-center flex-lg-row justify-content-lg-between mb-3 footer-cnt mx-auto mx-lg-0">
+          <p class="mb-3 m-sm-0 p-text-light order-1 order-lg-0 text-center text-lg-left">
+            Разработано в &nbsp<a class="p-text-light text-dashed" href="">dotwork</a></p><a class="mb-3 m-sm-0 p-text-light text-dashed d-block d-sm-none d-lg-block" href="">Пользовательское соглашение</a><a class="mb-3 m-sm-0 p-text-light text-dashed d-block d-sm-none d-lg-block" href="">Политика конфиденциальности</a>
+          <p class="mb-3 m-sm-0 p-text-light text-center text-lg-left">steffany.ua ©2019. Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stefany | Beauty</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+    <header class="pb-lg-3">
+      <div class="container container-m d-flex justify-content-between align-items-center"><a class="c-logo" href="./index.html"><img class="logo-header" src="assets/img/logo/header-logo.png" alt="Image Title"></a>
+        <div class="row c-row w-100 no-gutter d-flex align-items-end justify-content-start flex-column m-0">
+          <ul class="header-contact-list d-flex mb-0 mb-sm-3">
+            <li class="d-none d-sm-flex align-items-center drop-menu"><img class="icon icon-loc" src="assets/icon/map.png" alt="h-map"><span class="link-text-light d-flex align-items-center justify-content-start" href="#">Ивано-Франковск <img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down"></span>
+              <ul class="dropdown-menu-list d-flex flex-column">
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск2</a></li>
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск3</a></li>
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск4</a></li>
+                <li> <a class="nav-link-text" href="#">Ивано-Франковск5</a></li>
+              </ul>
+            </li>
+            <li class="d-none d-sm-flex align-items-center"><img class="icon icon-phone" src="assets/icon/phone.png" alt="h-map"><a class="link-text-light d-flex align-items-center justify-content-start" href="tel:0980070753">098 007 07 53</a></li>
+            <li class="d-none d-lg-flex align-items-center header-lang-wrap mr-0 drop-menu"><span class="link-text-light d-flex align-items-center justify-content-start header-lang">RU</span>
+              <ul class="dropdown-menu-list d-flex flex-column">
+                <li> <a class="nav-link-text" href="#">UA</a></li>
+                <li> <a class="nav-link-text" href="#">EN</a></li>
+              </ul>
+            </li>
+            <li class="d-flex d-lg-none align-items-center justify-content-between menu-trigger flex-column m-0"><span class="d-block w-100"></span><span class="d-block w-100"></span><span class="d-block w-100"></span></li>
+          </ul>
+          <div class="header-nav-wrap d-flex align-items-center justify-content-end justify-content-lg-between">
+            <nav class="header-nav w-100 d-none d-lg-block">
+              <ul class="header-nav-list d-flex align-items-center justify-content-between mb-0">
+                <li class="d-inline-flex align-items-center drop-menu"><span class="p-text">О нас</span><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list d-flex flex-column">
+                    <li><a class="nav-link-text" href="./salonPage.html">Наши салоны</a></li>
+                    <li><a class="nav-link-text" href="./about.html">О нас</a></li>
+                    <li><a class="nav-link-text" href="./padology-learning.html">Падалогия обучение</a></li>
+                    <li><a class="nav-link-text" href="#">Цены 5</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center drop-menu"><span class="p-text"> Услуги и Цены</span><img class="icon-arrow" src="assets/icon/drop-arrow-down.png" alt="h-map">
+                  <ul class="dropdown-menu-list d-flex flex-column">
+                    <li><a class="nav-link-text" href="./serviceHairdresser.html">Стрижка</a></li>
+                    <li><a class="nav-link-text" href="./serviceNailExtension.html">Наращивание ногтей</a></li>
+                    <li><a class="nav-link-text" href="./serviceNailsManicure.html">Маникюр</a></li>
+                    <li><a class="nav-link-text" href="./serviceNailsPedicure.html">Педикиюр</a></li>
+                    <li><a class="nav-link-text" href="./serviceРairСoloringAndCare.html">Окрашивание волос</a></li>
+                    <li><a class="nav-link-text" href="./serviceEyebrows.html">Брови</a></li>
+                    <li><a class="nav-link-text" href="./serviceMakeup.html">Макияж</a></li>
+                    <li><a class="nav-link-text" href="./serviceSPA.html">СПА для рук</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center mr-0"><a class="p-text" href="./contact.html">Контакты</a></li>
+              </ul>
+            </nav><a class="btn-callback d-none d-sm-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#1B3EBF;}</style>
+                  <path class="st0" d="M11.2,0.8c-1-1-2.7-1-3.7,0L0.6,7.6C0.6,7.7,0.5,7.8,0.5,7.8L0,11.6c0,0.1,0,0.2,0.1,0.3C0.2,12,0.3,12,0.3,12              c0,0,0,0,0,0l2.3-0.3c0.2,0,0.3-0.2,0.3-0.4c0-0.2-0.2-0.3-0.4-0.3l-1.8,0.2l0.4-2.6l2.8,2.8c0.1,0.1,0.2,0.1,0.2,0.1              c0.1,0,0.2,0,0.2-0.1l6.9-6.9C11.7,4,12,3.4,12,2.6C12,1.9,11.7,1.3,11.2,0.8z M7.6,1.6l1.2,1.2L2.5,9L1.3,7.9L7.6,1.6z M4.1,10.7              L3,9.5l6.3-6.3l1.1,1.1L4.1,10.7z M10.9,3.9L8.1,1.1c0.4-0.3,0.8-0.4,1.2-0.4c0.5,0,1,0.2,1.4,0.6c0.4,0.4,0.6,0.9,0.6,1.4              C11.3,3.1,11.2,3.5,10.9,3.9z"></path>
+                </svg><span>записаться</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="info-block info-block-4 light-orange-bg">
+      <div class="container container-info">
+        <div class="row no-gutters info-block-wrap w-100 d-flex justfiy-content-start">
+          <div class="row w-100 d-flex flex-column flex-xl-row align-items-center justify-content-center justify-content-xl-end no-gutters">
+            <div class="col col-img behind-bg order-2 mx-auto mx-xl-0"><img class="w-100" src="./assets/img/infoblock/item-4.jpg" alt="item"></div>
+            <div class="col col-info order-1 no-bg-blk">
+              <div class="section-title border-el">Укрепление и <br/> наращивание ногтей <br/>  в Житомире</div>
+              <p class="pb-3">Сколько времени нужно, чтобы получить крепкие длинные ногти идеальной формы? Несколько месяцев? Ну не знаем… В Steffany это дело нескольких часов. Приходите к нам и получите ногти, которые хотели. Вы можете сделать наращивание гелем или полигелем (акрилатиком), а также можете укрепить ногтевую пластину. Выбирайте процедуру, которая подойдет вам лучше всего. </p>
+            </div>
+          </div><span class="big-text">nails  </span>
+        </div>
+      </div>
+    </div>
+    <div class="benefits serviceBenefits">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="section-title h-center">Есть много причин сделать наращивание ногтей</div>
+        </div>
+        <div class="row no-gutters mb-4">
+          <div class="section-subtitle h-center">Для начала назовем хотя бы три</div>
+        </div>
+        <div class="row no-gutters">
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center white-text">01</div>
+              <div class="bnf-title text-center text-color-dark">Спасение для ломких ногтей</div>
+              <p class="thin-text text-center text-color-dark">Отрастить натуральные ногти сложно, когда они внезапно ломаются или ослабевают. Однако это не причина прощаться с длинными ногтями. Их можно просто нарастить искусственным материалом и периодически корректировать.</p>
+            </div>
+          </div>
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center white-text">02</div>
+              <div class="bnf-title text-center text-color-dark">Ногти желаемой формы</div>
+              <p class="thin-text text-center text-color-dark">Природная форма ногтей не всегда соответствует нашим идеалам. При наращивании вы сами определяете, какая форма ногтей у вас будет. Мастер поможет подобрать такую форму, которая подойдет всей кисти и подчеркнет красоту пальцев.</p>
+            </div>
+          </div>
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center white-text">03</div>
+              <div class="bnf-title text-center text-color-dark">Любой цвет и дизайн</div>
+              <p class="thin-text text-center text-color-dark">Нарощенные ногти можно сделать прозрачными и покрыть лаком или гель-лаком. Но кроме этого вы можете сделать их естественного нюдового оттенка, с френч маникюром или аквариумным дизайном прямо внутри нарощенных ногтей.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="benefits serviceBenefits doubleBnf bg-white">
+      <div class="container mx-auto">
+        <div class="row no-gutters">
+          <div class="bnf bnf-two col-lg-6 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-img-wrap d-flex align-items-end">
+              <div class="bnf-img"><img src="./assets/img/bnf/item-5.png" alt="bnf-item"></div>
+            </div>
+            <div class="bnf-cnt">
+              <div class="bnf-number text-lightdark">01</div>
+              <div class="bnf-title text-lightdark">Наращивание ногтей гелем </div>
+              <p class="paragraph-text-dark text-lightdark mb-2"><span class="f-bold">Бренд материала: Reforma <br/></span><span>Вам подойдет наращивание полигелем, если:</span></p>
+              <ul class="info-list">
+                <li class="p-text thin-text text-lightdark mb-2">у вас тонкие, ослабленные ногти;</li>
+                <li class="p-text thin-text text-lightdark mb-2">вы склонны к аллергическим реакциям;</li>
+                <li class="p-text thin-text text-lightdark mb-2">у вас чувствительная кожа и ногтевая пластина.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="bnf bnf-two col-lg-6 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-img-wrap d-flex align-items-end">
+              <div class="bnf-img"><img src="./assets/img/bnf/item-6.png" alt="bnf-item"></div>
+            </div>
+            <div class="bnf-cnt">
+              <div class="bnf-number text-lightdark">02</div>
+              <div class="bnf-title text-lightdark">Наращивание ногтей акрилатиком</div>
+              <p class="paragraph-text-dark text-lightdark mb-2"><span class="f-bold">Бренд материала: Lemme <br/></span><span>Вам подойдет наращивание гелем в Житомире, если:</span></p>
+              <ul class="info-list">
+                <li class="p-text thin-text text-lightdark mb-2">вас не беспокоит состояние ваших ногтей;</li>
+                <li class="p-text thin-text text-lightdark mb-2">ваши ногти плохо держат обычное покрытие;</li>
+                <li class="p-text thin-text text-lightdark mb-2">вы хотите новую форму и длину.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="benefits serviceBenefits word-bg">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="section-title h-center">Как проходит коррекция ногтей</div>
+        </div>
+        <div class="row no-gutters justify-content-around">
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center pl-1 white-text">01</div>
+              <div class="bnf-title text-center text-color-dark">Снятие покрытия</div>
+              <p class="thin-text text-center text-color-dark">Мастер снимает верхний слой вашего покрытия с помощью одноразовых абразивов.</p>
+            </div>
+          </div>
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center pl-1 white-text">02</div>
+              <div class="bnf-title text-center text-color-dark">Подготовка ногтевой пластины</div>
+              <p class="thin-text text-center text-color-dark">Мастер придает ногтям форму, убирает толщину, наносит средства, которые позже позволяют искусственному материалу соединиться с поверхностью натуральных ногтей.</p>
+            </div>
+          </div>
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center pl-1 white-text">03</div>
+              <div class="bnf-title text-center text-color-dark">Нанесение материала</div>
+              <p class="thin-text text-center text-color-dark">Мастер устанавливает форму и наносит на подготовленные ногти выбранный моделирующий материал — гель или полигель. </p>
+            </div>
+          </div>
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center pl-1 white-text">04</div>
+              <div class="bnf-title text-center text-color-dark">Оформление ногтей</div>
+              <p class="thin-text text-center text-color-dark">Вы опускаете ногти в диодную лампу, они сушатся, а затем мастер оформляет их с помощью сменных абразивов.</p>
+            </div>
+          </div>
+          <div class="bnf bnf-three col-lg-4 col-12 mb-3 mx-auto mx-lg-0">
+            <div class="bnf-cnt d-flex align-items-center justigy-content-start flex-column">
+              <div class="bnf-number d-flex align-items-center justigy-content-center text-center pl-1 white-text">05</div>
+              <div class="bnf-title text-center text-color-dark">Покрытие ногтей</div>
+              <p class="thin-text text-center text-color-dark">Если хотите, мастер покрывает нарощенные ногти выбранным оттенком лака или гель-лака.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-block-grid grid-bg-1 doubleGrid">
+      <div class="container p-0">
+        <div class="row no-gutters mb-5"> 
+          <div class="section-title text-center mb-0">Укрепление и наращивание ногтей в Житомире — цены</div>
+        </div>
+        <div class="row no-gutters grid-shodow double-grid-container w-100 mx-auto">
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">
+                  Стрижки женские  <br/>
+                  в Житомире
+                </div>
+                <p class="thin-text pb-5 pb-md-0">Мастер выполняет желаемую вами стрижку и укладывает волосы феном</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">40 минут</span>35 минут</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-5.jpg" alt="grid-item"></div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-6.jpg" alt="grid-item"></div>
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Стрижка челки</div>
+                <p class="thin-text pb-5 pb-md-0">Мастер стрижет челку и выполняет легкую укладку челки</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>1000-2500 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Мужские стрижки в Житомире</div>
+                <p class="thin-text pb-5 pb-md-0">Мастер моет ваши волосы, выполняет стрижку и затем укладку</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>1000-2500 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-7.jpg" alt="grid-item"></div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-8.jpg" alt="grid-item"></div>
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Шатуш</div>
+                <p class="thin-text pb-5 pb-md-0">Мастер осветляет пряди так, чтобы создать горизонтальный переход цвета на ваших волосах</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>25 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Мелирование волос </div>
+                <p class="thin-text pb-5 pb-md-0">Мастер окрашивает ваши волосы стойким красителем по всей длине, чтобы в результате получить однотонный результат</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>700-2100 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-9.jpg" alt="grid-item"></div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-10.jpg" alt="grid-item"></div>
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Мелирование <br/> «Эир тач»</div>
+                <p class="thin-text pb-5 pb-md-0">Одна из новых техник мелирования, когда мастер с помощью фена создает на волосах плавный переход от одного цвета к другому</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>1000-2500 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Объемное<br/> окрашивание<br/> волос</div>
+                <p class="thin-text pb-5 pb-md-0">Мастер создает на волосах градацию цвета, чтобы получить эффект выгоревших на солнце прядей</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>1000-2500 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-12.jpg" alt="grid-item"></div>
+          </div>
+          <div class="row no-gutters w-100 grid-block">
+            <div class="col-12 col-md-6 grid-img grid-img-hover"><img class="w-100" src="assets/img/infoblock/grid-item-13.jpg" alt="grid-item"></div>
+            <div class="col-12 col-md-6 grid-cnt h-auto h-md-100 grid-cnt-hover d-flex flex-column justify-content-between">
+              <div class="grid-titles">
+                <div class="grid-title">Завивка волос <br/> «Estel Niagara»</div>
+                <p class="thin-text pb-5 pb-md-0">Мастер осветляет пряди так, чтобы создать горизонтальный переход цвета на ваших волосах</p>
+              </div>
+              <div class="proccess-info hidden-text d-flex align-items-center"> <span class="mr-3">35 минут</span>600-1000 грн</div><a class="btn-callback btn-callback-white d-flex align-items-center justify-content-between" href="#"><span class="d-flex align-items-center justify-content-between"><span>записаться</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="section accordion-answer questions py-5">
+      <h2 class="section-title text-center white-text">Часто задаваемые вопросы</h2>
+      <p class="h3-title-regular text-center mb-4">Прочитайте, что чаще всего интересует наших клиентов</p>
+      <div class="accordion mt-3" id="accordion">
+        <div class="row no-gutters questions-item">
+          <div class="row no-gutters w-100 questions-head mb-3">
+            <div class="container-xl w-100 mx-auto">
+              <div class="card-header py-0 w-100 questions-container d-flex align-items-center" id="heading01" data-toggle="collapse" data-target="#collapse01" aria-controls="collapse01" aria-expanded="true">
+                <div class="card-arrow d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                    <defs>
+                      <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                      <clippath id="clip-path" transform="translate(0 -2.5)">
+                        <rect class="cls-1" width="12.5" height="12.5"></rect>
+                      </clippath>
+                    </defs>
+                    <g id="Слой_2" data-name="Слой 2">
+                      <g id="Слой_1-2" data-name="Слой 1">
+                        <g class="cls-2">
+                          <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <p class="paragraph-text text-w-bold white-text">Как обращаться с окрашенными бровями в повседневной жизни, чтобы сохранить результат?</p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 questions-answer">
+            <div class="container-xl w-100 mx-auto">
+              <div class="collapse w-100 collapse-answer questions-container show" id="collapse01" aria-labelledby="heading01" data-parent="#accordion">
+                <p class="card-body py-0 paragraph-text white-text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably havent heard of them accusamus labore sustainable VHS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters questions-item">
+          <div class="row no-gutters w-100 questions-head mb-3">
+            <div class="container-xl w-100 mx-auto">
+              <div class="card-header py-0 w-100 questions-container d-flex align-items-center" id="heading02" data-toggle="collapse" data-target="#collapse02" aria-controls="collapse02" aria-expanded="true">
+                <div class="card-arrow d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                    <defs>
+                      <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                      <clippath id="clip-path" transform="translate(0 -2.5)">
+                        <rect class="cls-1" width="12.5" height="12.5"></rect>
+                      </clippath>
+                    </defs>
+                    <g id="Слой_2" data-name="Слой 2">
+                      <g id="Слой_1-2" data-name="Слой 1">
+                        <g class="cls-2">
+                          <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <p class="paragraph-text text-w-bold white-text">Какие оттенки краски и хны для бровей и ресниц у вас есть для покраски бровей в Житомире?</p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 questions-answer">
+            <div class="container-xl w-100 mx-auto">
+              <div class="collapse w-100 collapse-answer questions-container" id="collapse02" aria-labelledby="heading02" data-parent="#accordion">
+                <p class="card-body py-0 paragraph-text white-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum. Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters questions-item">
+          <div class="row no-gutters w-100 questions-head mb-3">
+            <div class="container-xl w-100 mx-auto">
+              <div class="card-header py-0 w-100 questions-container d-flex align-items-center" id="heading03" data-toggle="collapse" data-target="#collapse03" aria-controls="collapse03" aria-expanded="true">
+                <div class="card-arrow d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                    <defs>
+                      <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                      <clippath id="clip-path" transform="translate(0 -2.5)">
+                        <rect class="cls-1" width="12.5" height="12.5"></rect>
+                      </clippath>
+                    </defs>
+                    <g id="Слой_2" data-name="Слой 2">
+                      <g id="Слой_1-2" data-name="Слой 1">
+                        <g class="cls-2">
+                          <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <p class="paragraph-text text-w-bold white-text">Какие оттенки краски и хны для бровей и ресниц у вас есть для покраски бровей в Житомире?</p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 questions-answer">
+            <div class="container-xl w-100 mx-auto">
+              <div class="collapse w-100 collapse-answer questions-container" id="collapse03" aria-labelledby="heading03" data-parent="#accordion">
+                <p class="card-body py-0 paragraph-text white-text">О, вариантов на предварительную запись очень много! Первый — можете позвонить нам по любому телефону на странице «Контакты». Второй — можете написать нам в социальных сетях и в переписке обсудить время и процедуру. Третий — можете скачать наше приложение и записываться через него. В нем вы будете получать уведомления, управлять своей записью и выбирать мастеров. Четвертый вариант — записывайтесь на нужную услугу прямо через этот сайт.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters questions-item">
+          <div class="row no-gutters w-100 questions-head mb-3">
+            <div class="container-xl w-100 mx-auto">
+              <div class="card-header py-0 w-100 questions-container d-flex align-items-center" id="heading04" data-toggle="collapse" data-target="#collapse04" aria-controls="collapse04" aria-expanded="true">
+                <div class="card-arrow d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                    <defs>
+                      <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                      <clippath id="clip-path" transform="translate(0 -2.5)">
+                        <rect class="cls-1" width="12.5" height="12.5"></rect>
+                      </clippath>
+                    </defs>
+                    <g id="Слой_2" data-name="Слой 2">
+                      <g id="Слой_1-2" data-name="Слой 1">
+                        <g class="cls-2">
+                          <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <p class="paragraph-text text-w-bold white-text">Каким должно быть масло для ламинированных бровей?</p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 questions-answer">
+            <div class="container-xl w-100 mx-auto">
+              <div class="collapse collapse-answer w-100 questions-container" id="collapse04" aria-labelledby="heading04" data-parent="#accordion">
+                <p class="card-body py-0 paragraph-text white-text">О, вариантов на предварительную запись очень много! Первый — можете позвонить нам по любому телефону на странице «Контакты». Второй — можете написать нам в социальных сетях и в переписке обсудить время и процедуру. Третий — можете скачать наше приложение и записываться через него. В нем вы будете получать уведомления, управлять своей записью и выбирать мастеров. Четвертый вариант — записывайтесь на нужную услугу прямо через этот сайт.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters questions-item">
+          <div class="row no-gutters w-100 questions-head mb-3">
+            <div class="container-xl w-100 mx-auto">
+              <div class="card-header py-0 w-100 questions-container d-flex align-items-center" id="heading05" data-toggle="collapse" data-target="#collapse05" aria-controls="collapse05" aria-expanded="true">
+                <div class="card-arrow d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12.5 7.07">
+                    <defs>
+                      <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#f2f2f2;}</style>
+                      <clippath id="clip-path" transform="translate(0 -2.5)">
+                        <rect class="cls-1" width="12.5" height="12.5"></rect>
+                      </clippath>
+                    </defs>
+                    <g id="Слой_2" data-name="Слой 2">
+                      <g id="Слой_1-2" data-name="Слой 1">
+                        <g class="cls-2">
+                          <path class="cls-3" d="M5.22,9.26.32,4.35A1.09,1.09,0,0,1,1.85,2.82l4.4,4.4,4.4-4.4a1.09,1.09,0,1,1,1.53,1.53l-4.9,4.9a1.08,1.08,0,0,1-1,.29A1.08,1.08,0,0,1,5.22,9.26Z" transform="translate(0 -2.5)"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <p class="paragraph-text text-w-bold white-text">Как совмещать ламинирование ресниц с процедурами покраски и моделирования бровей в Житомире?</p>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters w-100 questions-answer">
+            <div class="container-xl w-100 mx-auto">
+              <div class="collapse collapse-answer w-100 questions-container" id="collapse05" aria-labelledby="heading05" data-parent="#accordion">
+                <p class="card-body py-0 paragraph-text white-text">О, вариантов на предварительную запись очень много! Первый — можете позвонить нам по любому телефону на странице «Контакты». Второй — можете написать нам в социальных сетях и в переписке обсудить время и процедуру. Третий — можете скачать наше приложение и записываться через него. В нем вы будете получать уведомления, управлять своей записью и выбирать мастеров. Четвертый вариант — записывайтесь на нужную услугу прямо через этот сайт.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section consultation-form pt-5 pb-0">
+      <div class="container container-xxl">
+        <div class="row no-gutters container-xs mx-auto flex-column flex-md-row">
+          <div class="col-12 col-md-6 col-lg-6 w-100 form-content">
+            <div class="c-content ml-lg-7">
+              <h3 class="c-title-item c-subtitle pt-0 pt-lg-4 pb-2 text-center text-md-left">Запишитесь онлайн <br/><span class="f-bold">прямо сейчас </span>и получите   <br/><span class="f-bold">скидку </span><span class="span-bigger">10%</span></h3>
+              <p class="paragraph-text mb-3 pb-2 c-subtitle text-center text-md-left">Только <span class="f-bold">1 день </span>скидки на наращивание <span class="f-bold">от 18% до 27%</span></p>
+              <div class="timer d-flex justify-content-center justify-content-md-start pb-3">
+                <div class="timer-item d-flex align-items-center justify-content-center timer-nubmer mr-3">23</div>
+                <div class="timer-item d-flex align-items-center justify-content-center timer-nubmer mr-3">06</div>
+                <div class="timer-item d-flex align-items-center justify-content-center timer-nubmer">17</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 no-gutters media-gutters main-form-bg form-content">
+            <form class="main-form d-flex flex-column align-items-center">
+              <div class="h3-title-regular text-uppercase text-center white-text mb-1">Оставьте ваши данные</div>
+              <p class="paragraph-text text-center white-text mb-4">и мы вам перезвоним</p>
+              <div class="form-group w-100">
+                <input class="form-control" id="inputName" type="text" aria-describedby="emailHelp" placeholder="Имя">
+              </div>
+              <div class="form-group w-100">
+                <input class="form-control" id="inputEmail" type="email" aria-describedby="emailHelp" placeholder="Email">
+              </div>
+              <div class="form-group w-100 mb-4">
+                <input class="form-control" id="inputTell" type="tel" placeholder="Телефон">
+              </div>
+              <button class="btn-callback btn-callback-white d-flex align-items-center justify-content-between mb-4" href="#"><span class="d-flex align-items-center justify-content-between">
+                  <svg class="sendSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16">
+                    <defs>
+                      <style>.cls-1{fill:#fff;}</style>
+                    </defs>
+                    <g id="Слой_2" data-name="Слой 2">
+                      <g id="Слой_1-2" data-name="Слой 1">
+                        <path class="cls-1" d="M8.84,0H1.16A1.13,1.13,0,0,0,0,1.08V14.92A1.13,1.13,0,0,0,1.16,16H8.84A1.13,1.13,0,0,0,10,14.92V1.08A1.13,1.13,0,0,0,8.84,0ZM3.77.78H6.23a.14.14,0,0,1,.14.13A.14.14,0,0,1,6.23,1H3.77A.14.14,0,0,1,3.63.91.14.14,0,0,1,3.77.78ZM5,15.46a.54.54,0,1,1,.58-.54A.56.56,0,0,1,5,15.46ZM9.19,14H.81V1.71H9.19Z"></path>
+                      </g>
+                    </g>
+                  </svg><span>перезвоните мне</span></span>
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                  <style type="text/css">.st0{fill:#D11111;}</style>
+                  <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+                </svg>
+              </button><small class="text-small fs-12 white-text">* мы наберем вас в течении 15 минут</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer pt-3">
+      <div class="container container-m">
+        <div class="row footer-cnt mx-auto mx-lg-0">
+          <div class="col-12 col-lg-3 d-none d-lg-block"><a class="c-logo-f" href="./index.html"><img src="assets/img/logo/footer-logo.png" alt="logo-f"></a></div>
+          <div class="col-12 col-sm-4 col-lg-3 mb-3 mb-lg-0">
+            <ul class="d-flex d-sm-block flex-column align-items-center mb-0">
+              <li class="mb-3 text-center text-lg-left d-flex align-items-center"><img class="icon icon-phone mr-3" src="assets/icon/phone.png" alt="icon-phone-f"><a class="paragraph-text-light text-color-dark" href="tel:+0980070753">098-007-07-53</a></li>
+              <li class="mb-3 text-center text-lg-left d-flex align-items-center drop-menu drop-menu-top"><img class="icon mr-3 icon-loc" src="assets/icon/map.png" alt="icon-map-f"><span class="paragraph-text-light text-color-dark">Ивано-Франковск</span><img class="icon-arrow ml-2" src="assets/icon/drop-arrow-down.png" alt="drop-arrow-down">
+                <ul class="dropdown-menu-list d-flex flex-column">
+                  <li> <a class="nav-link-text" href="#">Львов</a></li>
+                  <li> <a class="nav-link-text" href="#">Львов</a></li>
+                  <li> <a class="nav-link-text" href="#">Львов</a></li>
+                </ul>
+              </li>
+              <li class="mb-3 text-center text-lg-left d-flex align-items-center footer-icon-blk"><a class="mr-3" href=""><img class="icon icon-facebook" src="assets/icon/facebook-Icon.png" alt="facebook-f"></a><a href=""><img class="icon icon-inst mr-0" src="assets/icon/inst.png" alt="inst-f"></a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3 col-lg-2 mb- mb-sm-3"><a class="paragraph-text text-color-dark text-center text-sm-left mb-3 d-block" href="">Вакансии</a><a class="paragraph-text text-color-dark text-center text-sm-left mb-3 d-block" href="">Steffany Beauty</a><a class="paragraph-text text-color-dark text-center text-sm-left d-block" href="">Steffany Podology</a>
+            <hr class="d-sm-none my-4">
+          </div>
+          <div class="col-12 col-sm-5 d-none d-sm-flex flex-column align-items-center align-items-sm-start d-lg-none"><a class="p-text-light text-dashed d-inline-block mb-3" href="">Пользовательское соглашение <br/></a><a class="p-text-light text-dashed d-inline-block mb-3 mb-sm-0" href="">Политика конфиденциальности</a></div>
+          <div class="col-12 col-lg-4 d-none d-sm-flex flex-column justify-content-center justify-content-sm-between justify-content-lg-start flex-lg-column align-items-lg-center">
+            <p class="paragraph-text text-color-dark text-center mb-3">
+              Скачай приложение! <br/>
+              Почувствую заботу о себе в любой момент
+            </p>
+            <div class="d-none d-sm-flex justify-content-center align-items-center"><a class="mr-3" href="#"><img class="icon icon-large" src="assets/icon/mob-f.png" alt="mob-f"></a><a href="#"><img class="icon icon-large" src="assets/icon/google-play-f.png" alt="play-f"></a></div>
+          </div>
+        </div>
+        <hr class="d-none d-sm-block my-3">
+        <div class="d-flex flex-column align-items-center flex-lg-row justify-content-lg-between mb-3 footer-cnt mx-auto mx-lg-0">
+          <p class="mb-3 m-sm-0 p-text-light order-1 order-lg-0 text-center text-lg-left">
+            Разработано в &nbsp<a class="p-text-light text-dashed" href="">dotwork</a></p><a class="mb-3 m-sm-0 p-text-light text-dashed d-block d-sm-none d-lg-block" href="">Пользовательское соглашение</a><a class="mb-3 m-sm-0 p-text-light text-dashed d-block d-sm-none d-lg-block" href="">Политика конфиденциальности</a>
+          <p class="mb-3 m-sm-0 p-text-light text-center text-lg-left">steffany.ua ©2019. Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
