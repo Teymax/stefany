@@ -1422,7 +1422,8 @@ footer.footer {
     top: 3em;
     right: 3em;
     width: 3em;
-    height: 3em; }
+    height: 3em;
+    cursor: pointer; }
 
 .numbered-section {
   display: flex;
