@@ -11,7 +11,7 @@
 .circles {
   position: absolute;
   z-index: 1;
-  opacity: .2;
+  opacity: .3;
   pointer-events: none; }
 
 .text-dashed {
@@ -1360,6 +1360,7 @@ section.section.client-feedback {
     width: 3em;
     height: auto; }
 
+/* About */
 /**************** */
 /*   MODULES */
 /**************** */
@@ -1458,6 +1459,22 @@ section.section.client-feedback {
       width: 9em; }
     .numbered-section div:nth-child(4) img {
       width: 14em; }
+
+.breadcrumbs .separator {
+  margin-left: .5em;
+  margin-right: .5em; }
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #3A405B;
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 20px; }
+  .breadcrumbs a:hover {
+    color: #3A405B;
+    text-decoration: none; }
 
 /**************** */
 /*     LIBS */
