@@ -9,7 +9,6 @@ const gulp         = require( 'gulp' ),
       sass         = require( 'gulp-sass' ),
       pug          = require( 'gulp-pug' )
 
-
 //порядок подключения CSS файлов
 const cssFiles = [
   '../../src/styles/**/*.sass'
@@ -71,7 +70,7 @@ function clean () {
 gulp.task( 'pug', function () {
   return gulp.src( '../../src/pug/**/*.pug' )
              .pipe( pug( {
-               pretty: true,
+               pretty    : true,
                allowEmpty: true
              } ) )
              .pipe( gulp.dest( '../../build' ) )
