@@ -1,6 +1,8 @@
 node_modules/
-idea/
-history/
+.idea/
+.idea/*
+.history/
+.history/*
 ./*/build/*
 !./*/build/assets/
 package-lock.json
