@@ -11,12 +11,13 @@ $(document).ready(function(){
 	$('.menu-trigger').click(function(e){
 		$(this).toggleClass('open');
 		$('header').toggleClass('open');
+		$('body').toggleClass('fixed');
 	});
-		$('.drop-menu').click(function(e){
-			e.preventDefault();
-			$('.drop-menu').not($(this)).removeClass('open');
-			$(this).toggleClass('open');
-		});
+
+	$('.drop-menu').click(function(){
+		$('.drop-menu').not($(this)).removeClass('open');
+		$(this).toggleClass('open');
+	});
 
 	$(".questions-item, .program-item .collapse, .program-item  .collapse").on('show.bs.collapse', function(){
 		$(this).closest(".questions-item, .program-item").addClass('active')

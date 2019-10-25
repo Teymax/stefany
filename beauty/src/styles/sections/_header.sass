@@ -8,8 +8,16 @@ header
     max-width: 152px
     img
       width: 100%
+    svg
+      width: 152px
+      height: 88px
+      path
+        fill: #556278
+      line
+        stroke: #556278
+
   .c-row
-    max-width: 550px
+    max-width: 555px
     ul.header-contact-list
       &:nth-last-child(1)
       & > li
@@ -18,19 +26,180 @@ header
         margin-right: 35px
         & > a
           padding-top: 2px
-          img 
+          svg 
             width: 10px
             height: 6px
             margin-top: 2px
             margin-left: 6px
-    .header-nav-wrap
-      width: 100%
-      nav.header-nav
-        width: 100%
-        max-width: 320px
-        margin-right: 5px
-        ul.header-nav-list
-          width: 100%
+nav.header-nav
+  width: 100%
+  max-width: 320px
+  margin-right: 5px
+  ul.header-nav-list
+    width: 100%
+    li
+      position: relative
+      cursor: pointer    
+@media(max-width: 991px)
+  .header-nav-wrap
+    position: fixed !important
+    z-index: -20
+    opacity: 0
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    width: 100% !important
+    max-width: 100% !important
+    height: 100vh
+    padding: 150px 15px 150px !important
+    background: $color-purple
+    transition: 0.45s ease
+    .nav-link-text
+      font-size: 13px !important
+      line-height: 13px !important
+    .header-nav
+      max-width: 100% !important
+      li, span, .p-text
+        color: $color-white !important
+        font-size: 24px !important
+        line-height: 24px !important
+      .dropdown-menu-list
+        width:  100% !important
+        position: static !important
+        display: flex !important
+        transform: translateX(0%) !important
+        padding: 0 !important
+        background: transparent !important
+        box-shadow: none !important
+        text-align: center !important
+        &::before
+          display: none !important
+        li, a
+          font-size: 0 !important
+          line-height: 0 !important
+          opacity: 0 !important
+          color: transparent
+          overflow: hidden
+          transition: opacity 0.3s ease 0.1s, font-size 0.2s ease-in-out, padding 0.2s ease-in-out
+        li
+          a
+            white-space: pre-wrap
+          &:not(:last-child) 
+            margin-bottom: 0 !important
+            padding-bottom: 0 !important
+            border-bottom: none !important
+    .drop-menu
+      &.open
+        .dropdown-menu-list
+          padding-top: 10px !important
           li
-            position: relative
-            cursor: pointer    
+            &:not(:last-child)
+              padding-bottom: 5px !important
+          li, a
+            font-size: 16px !important
+            line-height: 16px !important
+            color: #ffffff !important
+            opacity: 1 !important
+  header
+    position: relative
+    &.open
+      .header-nav-wrap
+        z-index: 20
+        opacity: 1
+      .header-contact-list a
+        color: $color-white 
+      .header-contact-list span, .header-contact-list > li > a
+        color: $color-white  !important
+      .menu-trigger
+        span
+          background: $color-white !important
+      svg.icon-arrow, svg.icon-phone, svg.icon-loc
+        path
+          fill: $color-white !important
+      .c-logo, .header-contact-list-wrap, .nav-callback
+        position: relative
+        z-index: 21
+      .c-logo
+        svg
+          path
+            fill: $color-white
+          line
+            stroke: $color-white
+  nav.header-nav
+    margin-right:  0 !important
+@media(max-width: 767px)
+  .header-nav-wrap
+    position: static !important
+    opacity: 1 !important
+    display: flex
+    align-items: center
+    width: 100% !important
+    max-width: 100% !important
+    height: auto !important
+    padding: 0 !important
+    background: transparent
+  .mob-menu
+    position: fixed !important
+    z-index: -20
+    opacity: 0
+    top: 0
+    left: 0
+    max-width: 100% !important
+    height: 100vh
+    padding: 150px 15px 150px !important
+    background: $color-purple
+    transition: 0.45s ease
+    .dropdown-menu-list
+      width:  100% !important
+      position: static !important
+      display: flex !important
+      transform: translateX(0%) !important
+      padding: 0 !important
+      background: transparent !important
+      box-shadow: none !important
+      text-align: center !important
+      &::before
+        display: none !important
+      li, a
+        font-size: 0 !important
+        line-height: 0 !important
+        opacity: 0 !important
+        color: transparent !important
+        overflow: hidden
+        transition: opacity 0.3s ease 0.2s, font-size 0.2s ease-in-out, padding 0.2s ease-in-out
+      li
+        a
+          white-space: pre-wrap
+        &:not(:last-child) 
+          margin-bottom: 0 !important
+          padding-bottom: 0 !important
+          border-bottom: none !important
+    & .col-12
+      flex:  0 !important
+    .header-nav-wrap, .nav-callback
+      margin-bottom: 55px !important
+  .drop-menu
+    &.open
+      .dropdown-menu-list
+        padding-top: 10px !important
+        li
+          &:not(:last-child)
+            padding-bottom: 5px !important
+        li, a
+          font-size: 16px !important
+          line-height: 16px !important
+          color: #ffffff !important
+          opacity: 1 !important
+  header
+    &.open
+      .menu-trigger
+        position: relative
+        z-index: 22
+      .mob-menu
+        z-index: 20
+        opacity: 1
+@media(max-width: 575px)
+  .mob-menu
+    padding: 100px 15px 20px !important
+    overflow-y: scroll !important
