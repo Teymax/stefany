@@ -1,40 +1,40 @@
-.accordion
+section.section.accordion-answer
+
   .card-header
+    display: flex
+    justify-content: space-between
     cursor: pointer
     margin-bottom: 1rem
     position: relative
     height: 50px
     border-radius: 100px !important
     background-color: rgba(85,98,120,.3)
-    &[aria-expanded="true"]:after
-      content: ''
+    padding: 0
+    p
+     padding: .75rem 1.25rem
+  .card-header.active
+    .card-arrpw
+      background-color: $btn-primary-color
+      &:before
+        transform: rotate(180deg)
+
+  .card-arrpw
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: $btn-second-color
+    display: flex
+    align-items: center
+    justify-content: center
+    &:before
+      content: ' '
       display: block
-      border-radius: 50%
-      width: 50px
-      height: 50px
-      background-color: #000
-      //float: right
-      position: absolute
-      top: 0
-      right: 0
-      z-index: 99
+      background-image: url("../assets/icon/accordion-arrow.png")
+      background-repeat: no-repeat
+      width: 13px
+      height: 9px
+      transition: transform .3s
 
-
-.accordion
-  .card-header
-    &[aria-expanded="false"]:after
-      content: ''
-      display: block
-      border-radius: 50%
-      width: 50px
-      height: 50px
-      background-color: #fff
-      //float: right
-      position: absolute
-      top: 0
-      right: 0
-      z-index: 99
-
-.btn:focus
-  outline: none !important
-  box-shadow: none !important
+  .btn:focus
+    outline: none !important
+    box-shadow: none !important

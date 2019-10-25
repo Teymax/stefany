@@ -5,6 +5,9 @@
     @include font (Circe, bold, 16, 26)
 .consultation-01
   background-color: #9FA6BA
+  margin-bottom: 87px
+  @include mobile-all
+    margin-bottom: 65px
   .container
     .white-block-design
       margin-top: 40px
@@ -16,8 +19,8 @@
     @include mobile-all
       .white-block-design
         margin-top: 40px
-        width: 220px
-        height: 326px
+        width: 230px
+        height: 300px
         img
           width: 240px
           height: 254px
@@ -30,8 +33,17 @@
       width: 527px
       height: 607px
       img
-        top: -90px
+        top: -48px
         left: -126px
+    @include mobile-all
+      .white-block-design
+        width: 260px
+        height: 300px
+        img
+          width: 256px
+          height: 288px
+          top: -22px
+          left: -22px
 .consultation-03
   background-color: #EDE1DF
   .container
