@@ -1,8 +1,8 @@
-./.idea/
-./*/.idea/
-./.history/
-./*/.history/
+node_modules/
+.idea/
+.idea/*
+.history/
+.history/*
 ./*/build/*
 !./*/build/assets/
-./*/node_modules/
-
+package-lock.json
