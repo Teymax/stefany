@@ -134,4 +134,7 @@ $( document ).ready( function () {
     videoSliderDots.trigger( 'prev.owl.carousel', [ 300 ] )
   } )
 
+  $( '#closeOverlay' ).click( function ( e ) {
+    $('#overlay').hide()
+  } )
 } )
