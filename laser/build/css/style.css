@@ -923,6 +923,9 @@ header {
   z-index: 5; }
   header .container {
     padding-top: 20px; }
+  header .c-logo img {
+    width: 275px;
+    height: 263px; }
   header .c-row {
     max-width: 612px; }
     header .c-row ul.dropdown-menu-list {
@@ -1313,12 +1316,14 @@ section.section.accordion-answer .card-header {
   cursor: pointer;
   margin-bottom: 1rem;
   position: relative;
-  height: 50px;
   border-radius: 100px !important;
   background-color: rgba(85, 98, 120, 0.3);
   padding: 0; }
   section.section.accordion-answer .card-header p {
-    padding: .75rem 1.25rem; }
+    padding: .75rem 1.25rem;
+    margin-bottom: 0; }
+  section.section.accordion-answer .card-header .card-header {
+    display: none; }
 
 section.section.accordion-answer .card-header.active .card-arrpw {
   background-color: #F6AE9F; }
