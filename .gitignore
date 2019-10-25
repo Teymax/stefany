@@ -6,3 +6,5 @@ node_modules/
 ./*/build/*
 !./*/build/assets/
 package-lock.json
+*/build/*
+!*/build/assets
