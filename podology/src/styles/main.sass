@@ -1,9 +1,3 @@
-@import "variables"
-@import "mixins"
-@import "fonts"
-@import "reset"
-@import "spacing-helpers"
-
 @media only screen and (min-width : 1200px)
   .container
     max-width: 1280px !important
@@ -12,36 +6,44 @@
 /****************
 
 /* Common
-@import "sections/common/variables"
-@import "sections/common/mixins"
+@import "pages/common/variables"
+@import "pages/common/mixins"
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints"
-@import 'sections/common/custom_classes'
-@import 'sections/common/header'
-@import 'sections/common/footer'
-@import "sections/common/media"
-@import "sections/common/fonts"
-@import "sections/common/reset"
-@import "sections/common/spacing-helpers"
-@import "sections/common/grid"
+@import 'pages/common/custom_classes'
+@import 'pages/common/header'
+@import 'pages/common/footer'
+@import "pages/common/media"
+@import "pages/common/fonts"
+@import "pages/common/reset"
+@import "pages/common/spacing-helpers"
+@import "pages/common/grid"
 
 /* Home Page
-@import 'sections/index/introduce'
-@import 'sections/index/advantages'
-@import 'sections/index/activity'
-@import 'sections/index/pricing'
-@import 'sections/index/specific'
-@import 'sections/index/category'
-@import 'sections/index/aboutDoctors'
-@import 'sections/index/consultaion'
-@import 'sections/index/client-feedback'
+@import 'pages/index/introduce'
+@import 'pages/index/advantages'
+@import 'pages/index/activity'
+@import 'pages/index/pricing'
+@import 'pages/index/specific'
+@import 'pages/index/category'
+@import 'pages/index/aboutDoctors'
+@import 'pages/index/consultaion'
+@import 'pages/index/client-feedback'
+
+/* About
+//@import "pages/about/"
 
 /****************
 /*   MODULES
 /****************
+// bootstrap connection
+@import "../../node_modules/bootstrap/scss/bootstrap"
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot"
 
 @import 'modules/accordion'
 @import 'modules/overlay'
 @import 'modules/numbered-section'
+@import 'modules/breadcrumbs'
 
 /****************
 /*     LIBS
