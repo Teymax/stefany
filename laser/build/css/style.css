@@ -1047,16 +1047,16 @@ section.section.almalaser {
         top: 33px;
         left: 33px; } }
 
-@media (max-width: 767px) {
-  section.section.choose-service .serves-box {
-    max-width: 340px;
-    margin: 0 auto; }
-  section.section.choose-service se {
-    height: 190px; }
-  section.section.choose-service .choose-zone-box {
-    cursor: pointer; }
-    section.section.choose-service .choose-zone-box:hover .h4-title {
-      color: #F6AE9F !important; } }
+section.section.choose-service .container .section-title {
+  line-height: 36px; }
+
+section.section.choose-service .container .icon-service-choose {
+  height: 190px; }
+
+section.section.choose-service .container .choose-zone-box {
+  cursor: pointer; }
+  section.section.choose-service .container .choose-zone-box:hover .h4-title {
+    color: #F6AE9F !important; }
 
 .custom-icon-number, .custom-icon-number-dark {
   width: 27px;
