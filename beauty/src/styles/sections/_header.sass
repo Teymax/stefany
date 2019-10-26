@@ -2,7 +2,8 @@ header
   position: relative
   z-index: 5
   .container
-    padding-top: 20px
+    padding-top: 30px
+    padding-bottom: 6px
   .c-logo
     width: 100%
     max-width: 152px
@@ -19,11 +20,15 @@ header
   .c-row
     max-width: 555px
     ul.header-contact-list
+      margin-bottom: 20px !important
       &:nth-last-child(1)
       & > li
         position: relative
         cursor: pointer
-        margin-right: 35px
+        &:not(:last-child),
+          margin-right: 40px !important
+        &.header-lang-wrap
+          margin-right: 0 !important
         & > a
           padding-top: 2px
           svg 
@@ -47,7 +52,7 @@ nav.header-nav
     opacity: 0
     top: 0
     left: 0
-    display: flex
+    display: none
     align-items: center
     width: 100% !important
     max-width: 100% !important
@@ -105,6 +110,7 @@ nav.header-nav
     position: relative
     &.open
       .header-nav-wrap
+        display: flex
         z-index: 20
         opacity: 1
       .header-contact-list a
@@ -143,6 +149,8 @@ nav.header-nav
     position: fixed !important
     z-index: -20
     opacity: 0
+    overflow: scroll
+    visibility: hidden
     top: 0
     left: 0
     max-width: 100% !important
@@ -197,8 +205,16 @@ nav.header-nav
         position: relative
         z-index: 22
       .mob-menu
+        visibility: visible
         z-index: 20
         opacity: 1
+  header .c-row ul.header-contact-list > li:not(:last-child)
+    margin-right: 0 !important
+  header .header-contact-list span, header .header-contact-list > li > a
+    color: #ffffff !important
+  header .drop-menu .icon-arrow, header svg.icon-loc, header svg.icon-phone
+    path
+      fill: #ffffff !important
 @media(max-width: 575px)
   .mob-menu
     padding: 100px 15px 20px !important

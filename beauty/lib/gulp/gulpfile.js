@@ -53,11 +53,8 @@ function styles() {
   //объединение файлов в один
       .pipe(sass().on('error', sass.logError))
       .pipe(concat('style.css'))
-      //добовление префиксов
-      // .pipe(autoprefixer({
-      //   browsers: ['last 2 versions'],
-      //   cascade: false
-      // }))
+      // добовление префиксов
+      .pipe(autoprefixer())
       //минификация sass
       // .pipe(cleanCSS({
       //   level: 2
