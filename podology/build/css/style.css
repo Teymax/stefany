@@ -619,6 +619,9 @@
     padding-left: 15px !important;
     padding-right: 15px !important; } }
 
+.section-bg-dark {
+  background-color: #2D3745; }
+
 .page-title {
   color: #3A405B;
   font-family: "Circe";
@@ -634,20 +637,31 @@
       font-size: 20px;
       line-height: 29px; } }
 
-.paragraph-text {
+.section-title {
   font-family: "Circe";
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  color: #3A405B; }
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%px; }
   @media (max-width: 767px) {
-    .paragraph-text {
+    .section-title {
       font-family: "Circe";
       font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 26px; } }
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%px; } }
+
+.text-dark-1 {
+  color: #3A405B; }
+
+ul.list-blue-bullets {
+  list-style: none; }
+  ul.list-blue-bullets li::before {
+    content: "•";
+    color: #4F79CA;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem; }
 
 header {
   position: relative;
@@ -11277,6 +11291,15 @@ template {
   height: 2px;
   width: 88px;
   background-color: #7D899E; }
+
+.descr-row--padding {
+  padding: 65px 0 40px 90px; }
+  @media (max-width: 767px) {
+    .descr-row--padding {
+      padding: 65px 45px 40px 45px; } }
+
+.feets-and-hands-bg-img {
+  background: url("../assets/img/services-warts/feets-and-hands.png"); }
 
 /**
  * Owl Carousel v2.3.4

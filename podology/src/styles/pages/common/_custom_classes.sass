@@ -621,15 +621,40 @@
     padding-left: 15px !important
     padding-right: 15px !important
 
-// services-page styles
+// services
+
+.section-bg-dark
+  background-color: $section-bg-dark
+
 .page-title
   color: $secondary-header-color
   @include font(Circe, 700, 40, 40)
   @include mobile-all
     @include font(Circe, 700, 20, 29)
 
-.paragraph-text
-  @include font(Circe, 400, 16, 26)
-  color: $secondary-header-color
+.section-title
+  @include font(Circe, 700, 30, 120%)
   @include mobile-all
-    @include font(Circe, 400, 14, 26)
+    @include font(Circe, 700, 20, 120%)
+
+.text-dark-1
+  color: $secondary-header-color
+
+
+ul.list-blue-bullets
+  list-style: none
+  li::before
+    content: "\2022"  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $forward-buutton /* Change the color */
+    font-weight: bold /* If you want it to be bold */
+    display: inline-block /* Needed to add space between the bullet and the text */
+    width: 1rem /* Also needed for space (tweak if needed) */
+
+
+
+
+//.paragraph-text
+//  @include font(Circe, 400, 16, 26)
+//  color: $secondary-header-color
+//  @include mobile-all
+//    @include font(Circe, 400, 14, 26)
