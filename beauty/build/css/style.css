@@ -1,31 +1,31 @@
 @font-face {
   font-family: "Circe-Bold";
-  src: url("../assets/fonts/Circe-Bold.woff2");
+  src: url("./fonts/Circe-Bold.woff2");
   font-weight: 700; }
 
 @font-face {
   font-family: "Circe-ExtraBold";
-  src: url("../assets/fonts/Circe-ExtraBold.woff2");
+  src: url("./fonts/Circe-ExtraBold.woff2");
   font-weight: 900; }
 
 @font-face {
   font-family: "Circe-Regular";
-  src: url("../assets/fonts/Circe-Regular.woff2");
+  src: url("./fonts/Circe-Regular.woff2");
   font-weight: 400; }
 
 @font-face {
   font-family: "Circe-Light";
-  src: url("../assets/fonts/Circe-Light.woff2");
+  src: url("./fonts/Circe-Light.woff2");
   font-weight: 100; }
 
 @font-face {
   font-family: "CormorantGaramond-Bold";
-  src: url("../assets/fonts/CormorantGaramond-Bold.woff2");
+  src: url("./fonts/CormorantGaramond-Bold.woff2");
   font-weight: 700; }
 
 @font-face {
   font-family: "CormorantGaramond-Regular";
-  src: url("../assets/fonts/CormorantGaramond-Regular.woff2");
+  src: url("./fonts/CormorantGaramond-Regular.woff2");
   font-weight: 400; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -612,7 +612,7 @@ p, .p-text, .paragraph-text {
   height: 38px;
   padding-right: 18px;
   padding-left: 20px;
-  background: url("../assets/img/background/callback-btn.png");
+  background: url("../images/img/background/callback-btn.png");
   background-repeat: no-repeat;
   background-size: 45px 100%;
   background-position: top right;
@@ -648,7 +648,7 @@ p, .p-text, .paragraph-text {
       fill: #ffffff; }
 
 .btn-callback-white, header.open .btn-callback {
-  background: url("../assets/img/background/callback-btn-white.jpg");
+  background: url("../images/img/background/callback-btn-white.jpg");
   background-repeat: no-repeat;
   background-size: 45px 100%;
   background-position: top right;
@@ -931,11 +931,11 @@ textarea.field {
     height: 30px;
     opacity: .4; }
     .slider-block .owl-nav button.owl-prev {
-      background-image: url("../assets/icon/slider-left-arrow.png") !important;
+      background-image: url("../images/icon/slider-left-arrow.png") !important;
       background-repeat: no-repeat  !important;
       background-size: contain !important; }
     .slider-block .owl-nav button.owl-next {
-      background-image: url("../assets/icon/slider-right-arrow.png") !important;
+      background-image: url("../images/icon/slider-right-arrow.png") !important;
       background-repeat: no-repeat  !important;
       background-size: contain !important; }
 
@@ -949,11 +949,11 @@ textarea.field {
   margin-top: 0 !important;
   padding-top: 0 !important; }
   .slider-block.video-slider .owl-nav button.owl-prev {
-    background-image: url("../assets/icon/aroow-left-gray.png") !important;
+    background-image: url("../images/icon/aroow-left-gray.png") !important;
     background-repeat: no-repeat  !important;
     background-size: contain !important; }
   .slider-block.video-slider .owl-nav button.owl-next {
-    background-image: url("../assets/icon/aroow-right-gray.png") !important;
+    background-image: url("../images/icon/aroow-right-gray.png") !important;
     background-repeat: no-repeat  !important;
     background-size: contain !important; }
 
@@ -1053,7 +1053,7 @@ ul.dropdown-menu-list {
     padding-right: 15px !important; } }
 
 section.section.advantages {
-  background-image: url("../assets/img/background/advantages-bg.jpg"); }
+  background-image: url("../images/img/background/advantages-bg.jpg"); }
 
 section.section.almalaser {
   position: relative;
@@ -1105,7 +1105,7 @@ section.section.consultation .consultation-bottom {
   background-color: #EDE1DF; }
 
 section.section.discount {
-  background-image: url("../assets/img/bg-discount.jpg"); }
+  background-image: url("../images/img/bg-discount.jpg"); }
 
 .service-list .container {
   max-width: 1470px; }
@@ -1189,7 +1189,7 @@ section.section.discount {
 
 .info-block {
   padding-top: 160px;
-  background: url("../assets/img/infoblock/infoblock-bg-1.png");
+  background: url("../images/img/infoblock/infoblock-bg-1.png");
   background-repeat: no-repeat;
   background-size: 100% calc(100% - 100px);
   background-position: top left; }
@@ -1254,7 +1254,7 @@ section.section.discount {
 .info-block-2 {
   padding-top: 61px;
   padding-bottom: 65px;
-  background: url("../assets/img/infoblock/infoblock-bg-2.jpg");
+  background: url("../images/img/infoblock/infoblock-bg-2.jpg");
   background-repeat: no-repeat;
   background-size: 100% 90%;
   background-position: bottom left; }
@@ -1360,7 +1360,7 @@ section.section.discount {
 
 .grid-bg-1 {
   padding: 68px 0;
-  background: url("../assets/img/infoblock/infoblockGrid-bg-1.png");
+  background: url("../images/img/infoblock/infoblockGrid-bg-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
@@ -1574,7 +1574,7 @@ section.section.discount {
     padding-right: 15px; } }
 
 section.section.consultation-form {
-  background-image: url("../assets/img/background/consultation-form-bg-2.jpg");
+  background-image: url("../images/img/background/consultation-form-bg-2.jpg");
   background-size: cover;
   background-position: center; }
   section.section.consultation-form .container .main-form {
@@ -1602,7 +1602,7 @@ section.section.consultation-form {
     section.section.consultation-form .container .main-form-bg {
       padding: 65px 65px 115px;
       max-width: 396px;
-      background-image: url("../assets/img/background/form-bg.png");
+      background-image: url("../images/img/background/form-bg.png");
       background-size: cover; }
       section.section.consultation-form .container .main-form-bg form {
         padding: 0;
@@ -1740,7 +1740,7 @@ section.section.consultation-form {
       max-width: 100%; } }
 
 .questions {
-  background: url("../assets/img/background/question-bg.jpg");
+  background: url("../images/img/background/question-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
@@ -1823,7 +1823,7 @@ section.section.consultation-form {
     display: none; }
 
 .slider-block .owl-nav button.owl-prev .owl-nav button {
-  background-image: url(../assets/icon/aroow-right-gray.png) !important; }
+  background-image: url(../images/icon/aroow-right-gray.png) !important; }
 
 .video-slider-dots-wrap {
   position: relative;
@@ -1877,7 +1877,7 @@ section.section.consultation-form {
         width: 40px;
         min-width: 40px;
         height: 9px;
-        background: url("../assets/icon/long-arrow.png");
+        background: url("../images/icon/long-arrow.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center; }
@@ -1916,12 +1916,12 @@ section.section.consultation-form {
     display: flex !important; } }
 
 .benefits {
-  background-image: url("../assets/img/background/benefits-bg.jpg");
+  background-image: url("../images/img/background/benefits-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
   .benefits.word-bg {
-    background-image: url("../assets/img/background/benefits-bg-2.png") !important;
+    background-image: url("../images/img/background/benefits-bg-2.png") !important;
     background-repeat: no-repeat  !important;
     background-size: cover !important;
     background-position: top 100px left !important; }
@@ -2001,13 +2001,13 @@ section.section.consultation-form {
     padding: 0 15px !important; } }
 
 .doploma {
-  background: url("../assets/img/diploma/diploma-bg.jpg");
+  background: url("../images/img/diploma/diploma-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
 
 .specialists {
-  background: url("../assets/img/specialists/specialists-bg.jpg");
+  background: url("../images/img/specialists/specialists-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
@@ -2031,7 +2031,7 @@ section.section.consultation-form {
     opacity: 1; }
 
 .program {
-  background: url("../assets/img/background/program-bg.jpg");
+  background: url("../images/img/background/program-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
