@@ -1,7 +1,7 @@
 section.section.discount
   .container
     .row.flex-column.align-items-center
-      h2.h1-title.text-color-dark Комплексные предложения
+      h2.section-title.text-color-dark Комплексные предложения
       p.paragraph-text.text-color-dark Только 1 день скидки на пакеты обученияот 18% до 27%
       p.paragraph-text.text-color-dark.text-w-bold  22 : 22 : 22
       img(src="assets/img/check-female.png" alt="check-female")
@@ -20,8 +20,8 @@ section.section.discount
               p.paragraph-text.text-color-dark.text-w-bold 2 000 грн
               p.paragraph-text.text-color-dark.text-w-bold 1 730 грн
           .row.justify-content-center
-            a.btn оплатить
-            a.btn записаться
+            +btnPen('записаться')
+            +btnCaset('оплатить')
       .col-md-4
         .c-content.p-4.border
           h4.h4-title.text-color-dark.text-w-bold.text-center.mb-4 Standart
@@ -36,8 +36,8 @@ section.section.discount
               p.paragraph-text.text-color-dark.text-w-bold 2 000 грн
               p.paragraph-text.text-color-dark.text-w-bold 1 730 грн
           .row.justify-content-center
-            a.btn оплатить
-            a.btn записаться
+            +btnPen('записаться')
+            +btnCaset('оплатить')
       .col-md-4
         .c-content.p-4.border
           h4.h4-title.text-color-dark.text-w-bold.text-center.mb-4 Maximum
@@ -52,5 +52,6 @@ section.section.discount
               p.paragraph-text.text-color-dark.text-w-bold 2 000 грн
               p.paragraph-text.text-color-dark.text-w-bold 1 730 грн
           .row.justify-content-center
-            a.btn оплатить
-            a.btn записаться
+            +btnPen('записаться')
+            +btnCaset('оплатить')
+

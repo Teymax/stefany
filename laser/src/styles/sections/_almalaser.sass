@@ -1,36 +1,19 @@
 section.section.laser
   position: relative
   background-color: #EDE1DF
-  overflow: hidden
   .container
-    .c-content
-      max-width: 78%
-    p.extralarge-text-bg
-      bottom: -148px
-      z-index: 10 
-      letter-spacing: -3px
-      span 
-        position: relative
-        left: 69px
-        letter-spacing: 4px
-    h2
-      margin-top: 104px
-    p
-      b 
-        color: #000  
-    p.position
-      &:before
-        content: ''
-        display: block
-        height: 2px
-        width: 90px
-        background-color: rgba(125, 137, 158, 0.39)
-        margin: 1.5rem 0
-        margin-bottom: 2.2rem
     .white-block-design
-      width: 504px
-      height: 674px
-      top: 64px
+      width: 468px
+      height: 657px
       img
-        top: 40px
-
+        top: 60px
+        left: 60px
+    @include mobile-all
+      .white-block-design
+        width: 230px
+        height: 326px
+        img
+          width: 251px
+          height: 248px
+          top: 33px
+          left: 33px

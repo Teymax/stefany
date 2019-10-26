@@ -1,0 +1,128 @@
+section.section.consultation-form
+  background:
+    image: url("../assets/img/background/consultation-form-bg-2.jpg")
+    size: cover
+    position: center
+  .container
+    .main-form
+      max-width: 390px
+      background-color: #EDE1DF
+      border-radius: 5px 5px 0 0
+      border-width: 1px 1px 0 1px
+      border-style: solid
+      border-color: #000
+      .btn-callback
+        max-width: 100%
+        & > span
+          max-width: 100%
+          padding-right: 40px
+          svg
+            .cls-1
+              transition: 0.3s ease 0.1s
+        &:hover
+          & > span
+            svg
+              .cls-1
+                fill: $color-purple
+      .form-control
+        background-color: rgba(77, 82, 89, .2)
+        width: 252px
+      &-bg
+        padding: 65px 65px 115px
+        max-width: 396px
+        background:
+          image: url("../assets/img/background/form-bg.png")
+          size: cover
+        form
+          padding: 0
+          border-radius: 0
+          border: none !important
+          background: transparent
+          .form-control
+            background-color: rgba(255, 255, 255, 0.1)
+            width: 100%
+            border: none !important
+            outline: none !important
+            color: rgba(255, 255, 255, 0.66) !important
+            transition: 0.3s ease
+            @include placeholder
+              transition: 0.3s ease
+              color: rgba(255, 255, 255, 0.66) !important
+            &:hover, &:focus
+              border: none !important
+              outline: none !important
+              box-shadow: none !important
+              @include placeholder
+                color: rgba(255, 255, 255, 1) !important
+    .small-label
+      @include font(Circe, 400, 12, 22)
+.consultation-form .container-xxl
+    padding-left: 340px
+.timer
+    &-item
+        position: relative
+        width: 64px
+        height: 64px
+        background: $color-purple
+        &:not(:last-child)::before
+            content: ':'
+            position: absolute
+            right: -11px
+            color: rgba(77, 82, 89, 0.36)
+            
+.c-title-item
+    @include font('CormorantGaramond-Regular', 300, 44, 55)
+    color: $soc-btn
+    span
+      @include font('CormorantGaramond-Bold', 700, 44, 55)
+.c-subtitle
+  letter-spacing: 1px
+@media(max-width: 1100px)
+  section.section.consultation-form .container .main-form-bg
+    padding: 40px 35px
+@media(max-width: 992px)
+  .consultation-form .container-xxl
+    padding-left: 205px
+@media(max-width: 870px)
+  .consultation-form .container-xxl
+    padding-left: 205px
+@media(max-width: 830px)
+  .consultation-form .container-xxl
+    padding-left: 75px
+@media(max-width: 730px)
+  .consultation-form .container-xxl
+    padding-left: 15px
+  .c-title-item, .c-title-item span
+    font-size: 30px
+    line-height: 30px
+  .c-title-item span.span-bigger 
+    display: block
+  .span-bigger
+    font-size: 60px
+  .form-content
+    max-width: 315px !important
+    margin-left: auto !important
+    margin-right: auto !important
+  .main-form-bg 
+    padding: 35px 25px !important
+@media(max-width: 400px)
+  .consultation-form .container-xxl
+    padding: 0 !important
+  .consultation-form .c-content
+    padding-left: 15px !important
+    padding-right: 15px !important
+@include tablet
+  section.section.consultation-form
+    .container
+      .main-form
+        border-radius: 0
+        border: none
+
+@include mobile-all
+  section.section.consultation-form
+    .container
+      max-width: 100%
+      .media-gutters
+        padding: 0
+      .main-form
+        max-width: 100%
