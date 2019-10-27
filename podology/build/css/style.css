@@ -622,6 +622,9 @@
 .section-bg-dark {
   background-color: #2D3745; }
 
+section.section-services {
+  margin: 2.5rem 0; }
+
 .page-title {
   color: #3A405B;
   font-family: "Circe";
@@ -655,7 +658,8 @@
   color: #3A405B; }
 
 ul.list-blue-bullets {
-  list-style: none; }
+  list-style: none;
+  padding-left: 1rem; }
   ul.list-blue-bullets li::before {
     content: "•";
     color: #4F79CA;
