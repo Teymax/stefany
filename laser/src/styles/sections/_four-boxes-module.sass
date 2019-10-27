@@ -1,6 +1,13 @@
 section.section.four-boxes-01
+  padding-top: 58px
+  padding-bottom: 78px
   background-image: url("../assets/img/background/advantages-bg.jpg")
   background-size: cover
+  @include media-breakpoint-down(lg)
+    padding-top: 86px
+  @include media-breakpoint-down(xs)
+    padding-top: 49px
+    padding-bottom: 50px
   .container
     .c-boxes
       .c-card
@@ -16,6 +23,12 @@ section.section.four-boxes-01
         @include mobile-all
           max-width: 300px
           margin: 0 auto
+        .c-desc
+          @include media-breakpoint-down(lg)
+            max-width: 427px
+          @include media-breakpoint-down(xs)
+            max-width: 395px
+
 
 section.section.four-boxes-02
   background-image: url("../assets/img/background/advantages-bg.jpg")

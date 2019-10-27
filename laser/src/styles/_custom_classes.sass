@@ -25,17 +25,16 @@
 .paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
-.h1-title
-  @include font (CormorantGaramond, bold, 44, 53)
-  color: $text-color-white
 .h2-title
-  @include font (CormorantGaramond, bold, 34, 53)
+  @include font (CormorantGaramond, bold, 44, 45)
   color: $text-color-white
 .h3-title
+  @include font (CormorantGaramond, bold, 34, 53)
+  color: $text-color-white
+.h4-title
   @include font(Circe, 400, 20, 24)
   color: $text-color-white
-
-.h4-title
+.h5-title
   @include font(CormorantGaramond, 400, 24, 34)
   color: $text-color-white
 
@@ -48,8 +47,11 @@
 .extralarge-text-bg
   white-space: nowrap
   position: absolute
-  @include font(Circe, 900, 321, 377)
+  @include font(Circe, 900, 321, 0)
   color: $text-color-white
+  z-index: 10
+  @include media-breakpoint-down(xs)
+    font-size: 159.63px
 
 .custom-icon-number
   display: inline-flex
@@ -84,7 +86,15 @@
     color: #9FA6BA
 
 
-
+.d-line
+  display: block
+  width: 89px
+  height: 2px
+  background: rgba(125, 137, 158, 0.39)
+  margin-top: 25px
+  margin-bottom: 32px
+  @include media-breakpoint-down(xs)
+    margin-bottom: 29px
 // list - style ****
 .info-list
   li
@@ -101,13 +111,14 @@
       border-radius: 50%
 
 
-@include mobile-small
+@include media-breakpoint-down(xs)
   .paragraph-text
     @include font(Circe, 400, 14, 22)
   .h1-title
     @include font (CormorantGaramond, bold, 34, 30)
   .h2-title
-
+    font-size: 30px
+    line-height: 40px
   .h3-title
   .h4-title
 
