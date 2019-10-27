@@ -661,7 +661,12 @@ ul.list-blue-bullets {
     color: #4F79CA;
     font-weight: bold;
     display: inline-block;
-    width: 1rem; }
+    width: 1rem;
+    margin-left: -1rem;
+    margin-top: -0.1rem;
+    font-size: 1.8rem;
+    line-height: 1rem;
+    vertical-align: middle; }
 
 header {
   position: relative;
@@ -11299,7 +11304,14 @@ template {
       padding: 65px 45px 40px 45px; } }
 
 .feets-and-hands-bg-img {
-  background: url("../assets/img/services-warts/feets-and-hands.png"); }
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.symptoms-message-line {
+  background-color: #4F79CA; }
+
+.line-height-100 {
+  line-height: 100%; }
 
 /**
  * Owl Carousel v2.3.4
