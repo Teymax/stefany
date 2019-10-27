@@ -109,12 +109,14 @@
     left: -252px !important
     bottom: 18px !important
 .info-list-item
+	p
+		line-height: 25px
 	.info-list-number
 		width: 37px
 		min-width: 37px
 		height: 37px
 		margin-top: -7px
-		margin-right: 31px
+		margin-right: 21px
   	color: $color-white !important
 		background: $list-number
 		border-radius: 50%
@@ -125,8 +127,12 @@
 			color: $color-white
 .light-orange-bg
 	background: $spec-bg !important
+.white-bg
+	background: $color-white !important
 .light-purple-bg
 	background: $btn-bg !important
+.light-green-bg
+	background: $dark-gren-bg !important
 .no-bg-blk
 	background: transparent !important
 .info-block .behind-bg
@@ -151,7 +157,108 @@
   .info-block-wrap .big-text
     bottom: -58px !important
     left: -23px !important
-@media(max-width: 1200px)
+.info-block-6
+  padding-top: 63px !important
+  padding-bottom: 78px !important
+  border-bottom: 99px solid $color-white
+  .info-block-wrap
+    max-width: 1196px !important
+  .col-info
+    z-index: 5 !important
+    padding: 0 0 0 50px !important
+    max-width: 605px !important
+    margin-left: 600px !important
+  .col-img
+    max-width: 603px !important
+    padding: 73px 0 15px 72px !important
+    top: 0 !important
+  .info-block-wrap .big-text
+    top: 137px !important
+    bottom: auto !important
+    left: auto !important
+    right: -320px !important
+    transform: rotate(-90deg)
+  .info-list
+    padding-top: 40px
+  .behind-bg
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff 79%, transparent 0, transparent)
+.info-block-7
+  padding-top: 86px !important
+  padding-bottom: 165px !important
+  .info-block-wrap
+    max-width: 1260px !important
+  .col-info
+    padding: 0 0px 0 111px !important
+    max-width: 626px !important
+    margin-right: 600px !important
+  .col-img
+    max-width: 610px !important
+    left: auto !important
+    right: 0
+    top: -132px !important
+  .behind-bg
+    padding: 0 70px 76px 0px !important
+    background: -webkit-linear-gradient(right, #ffffff, #ffffff 82%, transparent 0, transparent)
+  .btn-simple
+    max-width: 159px
+.info-block-8
+  background: transparent
+  padding-top: 86px !important
+  .container
+    max-width: 1220px !important
+  .col-img
+    top: -137px !important
+    max-width: 612px !important
+  .col-info
+    max-width: 770px !important
+    padding: 39px 0 165px 235px !important
+  .border-el::before
+    top: -55px !important
+    left: -111px !important
+    width: calc(100% + 115px) !important
+    height: calc(100% + 136px) !important
+.info-block-9
+	padding: 60px 0 !important
+	.col-info
+		padding: 0 0 0 53px
+	.col-img
+		position: static  !important
+		max-width: 538px !important
+.info-block-3-1
+  .border-el
+    margin-bottom: 76px
+    &::before
+      top: -34px
+      right: -91px
+      left: auto
+      width: calc(100% + 115px)
+      height: calc(100% + 72px)
+  .col-info
+    padding: 88px 160px 80px 100px !important
+    margin-left:  0 !important
+  .col-img
+    left: auto !important
+    right: 0 !important
+  .big-text
+    z-index: 0 !important
+    bottom: 23px !important
+    left: -135px !important
+  .big-text-2
+    right: 101px
+    left: auto !important
+    bottom: 28px !important
+    z-index: 2
+@media(max-width: 1199px)
+  .info-block-8
+    .col-img
+      max-width: 657px !important
+      min-height: 397px !important
+      max-height: 397px !important
+      overflow: hidden
+  .border-el::before
+    display: none !important
+  .border-el
+    margin-bottom: 0 !important
   .info-block
     background: $color-white !important
     padding:  0 !important
@@ -160,6 +267,7 @@
     padding-right: 15px !important
   .info-block .container .col-info
     margin-left: 0 !important
+    margin-right: 0 !important
     padding: 35px 0 40px!important
     max-width: 100% !important
     .section-title
@@ -175,6 +283,55 @@
     bottom: 0 !important
     right: 0 !important
     left: auto !important
+  .mob-hidden-item
+    display: none !important
+  .info-block-6
+    padding-top: 65px !important
+    padding-bottom: 15px !important
+    border-bottom: none !important
+    &.light-orange-bg
+      background: $spec-bg !important
+  .info-block-7
+    &.light-green-bg
+      background: $dark-gren-bg !important
+    .col-img
+      min-height: 290px !important
+      max-height: 209px
+      max-width: 658px !important
+      margin-top: -20px !important
+      margin-bottom: 40px !important
+      overflow: hidden
+      order: 1 !important
+      box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
+    .col-info
+      margin-right: 0 !important
+      order: 2 !important
+  .info-block-3-1
+    .col-info
+      padding-top: 0 !important
+    .big-text-2
+      z-index: 4 !important
+      display: block !important
+      left: 50% !important
+      transform: translate(-50%)
+      bottom: 0 !important
 @media(max-width: 767px)
-	.big-text
-		display: none !important
+  .big-text
+    display: none !important
+  .info-block-6
+    padding-bottom: 60px !important
+  .info-block-8
+    .col-img
+      height: auto !important
+      min-height: auto !important
+      max-height: 100% !important
+      overflow: inherit !important
+  .info-block-7 .col-img
+    margin-top: -50px !important
+    height: auto !important
+    min-height: auto !important
+    max-height: 100% !important
+    box-shadow: none !important
+    overflow: inherit !important
+  .info-list-item .info-list-number
+    margin-right: 14px !important

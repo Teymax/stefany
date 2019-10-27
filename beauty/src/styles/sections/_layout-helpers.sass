@@ -154,7 +154,7 @@ p, .p-text, .paragraph-text
   color: $section-title-color
 
 .bg-rose
-    background: $bg-rose
+  background: $bg-rose
     
 .grid-number
   display: block
@@ -168,6 +168,10 @@ p, .p-text, .paragraph-text
 
 .white-text
   color: $color-white !important
+.light-orange-text
+  color: $spec-bg !important
+.light-green-text
+  color: $dark-gren-bg !important
 
 .h-center
   text-align: center
@@ -177,12 +181,17 @@ p, .p-text, .paragraph-text
   text-transform: uppercase
   letter-spacing: 2px
   @include font('CormorantGaramond-Bold', 700, 75, 75)
-
 .bnf-title
   padding-bottom: 20px
   text-transform: uppercase
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
+.benefits .bnf-title-small
+  padding-bottom: 15px
+  font-size: 14px
+  text-transform: inherit
+  letter-spacing: 0
+  font-weight: bold
 
 // buttons - style *******
 .btn-callback, .btn-send
@@ -227,7 +236,9 @@ p, .p-text, .paragraph-text
   background-repeat: no-repeat
   background-size: 45px 100%
   background-position: top right
-  border: 2px solid $color-white
+  border: 2px solid $color-white !important
+  &:focus
+    border: 2px solid $color-white !important
   & > span
     span
       color: $color-white 
