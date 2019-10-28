@@ -623,7 +623,7 @@
   background-color: #2D3745; }
 
 section.section-services {
-  margin: 2.5rem 0; }
+  padding: 2.5rem 0; }
 
 .page-title {
   color: #3A405B;
@@ -656,6 +656,9 @@ section.section-services {
 
 .text-dark-1 {
   color: #3A405B; }
+
+.section-services-treatment-row-padding {
+  padding: 67px 0; }
 
 ul.list-blue-bullets {
   list-style: none;
@@ -11307,18 +11310,25 @@ template {
     .descr-row--padding {
       padding: 65px 45px 40px 45px; } }
 
-.feets-and-hands-bg-img {
-  background-repeat: no-repeat;
-  background-position: right; }
+@media (min-width: 1200px) {
+  .feets-and-hands-bg-img-desktop {
+    background-image: url("../assets/img/services-warts/feets-and-hands.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 656px 582px; } }
+
+@media (max-width: 767px) {
+  .feets-and-hands-bg-img-mobile {
+    background-image: url("../assets/img/services-warts/feets-and-hands.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 656px 582px; } }
 
 .symptoms-message-line {
   background-color: #4F79CA; }
 
 .line-height-100 {
   line-height: 100%; }
-
-.section-services-treatment {
-  padding: 67px 0; }
 
 .disease-treatment-img-container {
   background-position: center;
