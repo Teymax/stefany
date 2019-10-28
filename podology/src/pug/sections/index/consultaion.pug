@@ -11,5 +11,6 @@ section.section.consultaion
         form(method="post" action="/")
           input(type="text" placeholder="Имя")
           input(type="email" placeholder="Email")
-          input(type="tel" placeholder="Телефон")
-          input(type="submit" value="Перезвонить мне")
+          input(type="tel" placeholder="Телефон").mb-4
+          input(type="submit" style="display: none")
+          +btnCallback('перезвонить мне')

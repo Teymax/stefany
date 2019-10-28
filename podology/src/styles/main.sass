@@ -5,15 +5,16 @@
 /* Common
 @import "pages/common/variables"
 @import "pages/common/mixins"
+@import "pages/common/fonts"
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints"
 @import 'pages/common/custom_classes'
 @import 'pages/common/header'
 @import 'pages/common/footer'
 @import "pages/common/media"
-@import "pages/common/fonts"
 @import "pages/common/reset"
 @import "pages/common/spacing-helpers"
 @import "pages/common/grid"
+@import "pages/common/callback-card"
 
 /* Home Page
 @import 'pages/index/introduce'
@@ -25,24 +26,33 @@
 @import 'pages/index/aboutDoctors'
 @import 'pages/index/consultaion'
 @import 'pages/index/client-feedback'
+@import 'pages/index/doctors'
+@import 'pages/index/salon'
+@import 'pages/index/callMe'
 
 /* About
-//@import "pages/about/"
+@import 'pages/about/about'
 
-/****************
-/*   MODULES
-/****************
-// bootstrap connection
+/***************
+/*  BOOTSTRAP
+/***************
 
 @import "../../node_modules/bootstrap/scss/bootstrap"
 @import "../../node_modules/bootstrap/scss/bootstrap-grid"
 @import "../../node_modules/bootstrap/scss/bootstrap-reboot"
 
+/****************
+/*   MODULES
+/****************
+
 @import 'modules/accordion'
+@import 'modules/button'
 @import 'modules/overlay'
 @import 'modules/numbered-section'
 @import 'modules/numbered-section'
 @import 'modules/breadcrumbs'
+@import 'modules/video'
+@import 'modules/accordion'
 
 /****************
 /*     LIBS
@@ -51,6 +61,7 @@
 @import 'lib/all'
 
 /* Ne bug, a feature
+
 @media only screen and (min-width: 1200px)
 	.container
 		max-width: 1280px !important

@@ -1,8 +1,8 @@
 section.section.introduce
-  img(src="assets/img/introduce-cover.png")#feetOne.feet
-  img(src="assets/img/feet-2.png")#feetTwo.feet
+  img(src="images/img/introduce-cover.png")#feetOne.feet
+  img(src="images/img/feet-2.png")#feetTwo.feet
   .container
-    img(src="assets/img/common/circles-with-hr.png")#circles.circles
+    img(src="images/img/common/circles-with-hr.png")#circles.circles
     .card.col-12.col-sm-11.col-lg-6
       h1.paragraph-text Врач подолог<br>
         strong в Житомире
@@ -17,5 +17,5 @@ section.section.introduce
         li
           p.paragraph-text Корректируем положение стопы с помощью стелек и силиконовых протезов
 
-      button.call-me(onclick="alert('clicked')") Перезвоните мне
-      img(src="assets/img/common/dash.png").dashes.intro-dashes
+      +btnCallback('Перезвоните мне')
+      img(src="images/img/common/dash.png").dashes.intro-dashes
