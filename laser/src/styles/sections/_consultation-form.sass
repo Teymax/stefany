@@ -1,9 +1,11 @@
 section.section.consultation-form
+  padding-top: 66px
   background:
     image: url("../assets/img/background/consultation-form-bg.jpg")
     size: cover
   .container
     .c-content
+      margin-top: 65px
       .c-title
         width: 100%
         max-width: 500px
@@ -14,9 +16,6 @@ section.section.consultation-form
       max-width: 390px
       background-color: #EDE1DF
       border-radius: 5px 5px 0 0
-      border-width: 1px 1px 0 1px
-      border-style: solid
-      border-color: #000
       .form-control
         background-color: rgba(77, 82, 89, .2)
         width: 252px
@@ -25,14 +24,13 @@ section.section.consultation-form
     .input::placeholder
       color: $text-color-white
 
-@include tablet
+@include media-breakpoint-down(lg)
   section.section.consultation-form
     .container
       .main-form
         border-radius: 0
-        border: none
 
-@include mobile-all
+@include media-breakpoint-down(xs)
   section.section.consultation-form
     .container
       max-width: 100%

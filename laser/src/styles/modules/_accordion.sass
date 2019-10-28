@@ -1,5 +1,6 @@
 section.section.accordion-answer
-
+  padding-top: 72px
+  padding-bottom: 84px
   .card-header
     display: flex
     justify-content: space-between
@@ -10,7 +11,7 @@ section.section.accordion-answer
     background-color: rgba(85,98,120,.3)
     padding: 0
     p
-     padding: .75rem 1.25rem
+     padding: .35rem 1.25rem
      margin-bottom: 0
     .card-header
       //height: 70px
@@ -42,3 +43,29 @@ section.section.accordion-answer
   .btn:focus
     outline: none !important
     box-shadow: none !important
+@include media-breakpoint-down(lg)
+  section.section.accordion-answer
+    padding-top: 72px
+    padding-bottom: 77px
+    .card-header p
+      max-width: 480px
+      margin: 0 auto
+    .card-arrpw
+      width: 64px
+      height: 64px
+      &:before
+        width: 13px
+        height: 9px
+@include media-breakpoint-down(xs)
+  section.section.accordion-answer
+    padding-top: 70px
+    padding-bottom: 48px
+    .card-header p
+      max-width: 250px
+      margin: 0 auto
+    .card-arrpw
+      width: 76px
+      height: 76px
+      &:before
+        width: 13px
+        height: 9px
