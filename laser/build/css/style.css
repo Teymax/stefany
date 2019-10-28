@@ -1470,87 +1470,106 @@ section.section.service-laser-service-list {
           height: 20px;
           margin: 10px 0; }
 
-section.section.service-laser-service-list-tablet {
+section.section.service-laser-service-list-tablet1 {
   background: url(../assets/img/service-laser-page/list-image-tablet.png);
   background-size: cover; }
-  section.section.service-laser-service-list-tablet .container.d-lg-none .sale img p {
+  section.section.service-laser-service-list-tablet1 #sale-p {
     font-family: "CormorantGaramond";
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 90px;
     color: #ffffff;
-    text-align: center; }
+    text-align: center;
+    position: absolute;
+    top: 34px;
+    left: 50px; }
 
-section.section.service-after-laserepila {
-  overflow: hidden; }
-  section.section.service-after-laserepila .custom-icon-number, section.section.service-after-laserepila .custom-icon-number-dark {
-    width: 27px;
-    height: 27px; }
-    section.section.service-after-laserepila .custom-icon-number p, section.section.service-after-laserepila .custom-icon-number-dark p {
-      font-family: "Circe";
-      font-style: normal;
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 26px; }
-  section.section.service-after-laserepila .consultation-top {
-    background-color: #9FA6BA; }
-    section.section.service-after-laserepila .consultation-top .container p.extralarge-text-bg {
+section.section.service-laser-service-list-tablet2 {
+  background: url(../assets/img/service-laser-page/service-laser-list-bg-tablet.png);
+  background-size: cover; }
+  section.section.service-laser-service-list-tablet2 #radio-container {
+    width: 100px;
+    height: 36px;
+    background: #9FA6BA;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18);
+    border-radius: 100px; }
+    section.section.service-laser-service-list-tablet2 #radio-container input {
+      width: 30px;
+      height: 30px; }
+  section.section.service-laser-service-list-tablet2 .checkbox-group {
+    width: 100%; }
+
+section.section.service-laser-service-list-tablet3.d-flex.d-lg-none.py-0.flex-column {
+  background: #6f7682; }
+
+section.section.service-after-laserepila .custom-icon-number, section.section.service-after-laserepila .custom-icon-number-dark {
+  width: 27px;
+  height: 27px; }
+  section.section.service-after-laserepila .custom-icon-number p, section.section.service-after-laserepila .custom-icon-number-dark p {
+    font-family: "Circe";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px; }
+
+section.section.service-after-laserepila .consultation-top {
+  background-color: #9FA6BA; }
+  section.section.service-after-laserepila .consultation-top .container h2.before {
+    margin-bottom: 2.5rem; }
+    section.section.service-after-laserepila .consultation-top .container h2.before::before {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 90px;
+      background-color: rgba(255, 255, 255, 0.26);
+      position: relative;
+      top: 76px; }
+  section.section.service-after-laserepila .consultation-top .container .white-block-design {
+    width: 504px;
+    height: 675px; }
+    section.section.service-after-laserepila .consultation-top .container .white-block-design h1.extralarge-text-bg {
       position: absolute;
       z-index: 10;
-      top: 494px;
-      left: 443px; }
-    section.section.service-after-laserepila .consultation-top .container h2.before {
-      margin-bottom: 2.5rem; }
-      section.section.service-after-laserepila .consultation-top .container h2.before::before {
-        content: '';
-        display: block;
-        height: 2px;
-        width: 90px;
-        background-color: rgba(255, 255, 255, 0.26);
-        position: relative;
-        top: 76px; }
-    section.section.service-after-laserepila .consultation-top .container .white-block-design {
-      margin-top: 69px;
-      margin-left: 189px;
-      width: 504px;
-      height: 674px; }
-      section.section.service-after-laserepila .consultation-top .container .white-block-design img {
-        top: 72px;
-        left: -174px; }
-  section.section.service-after-laserepila .consultation-middle {
-    background-color: #EDE1DF; }
-    section.section.service-after-laserepila .consultation-middle .container h2.before {
-      line-height: 38px; }
-      section.section.service-after-laserepila .consultation-middle .container h2.before::before {
-        content: '';
-        display: block;
-        height: 2px;
-        width: 90px;
-        background-color: rgba(0, 0, 0, 0.26);
-        position: relative;
-        top: 105px; }
-    section.section.service-after-laserepila .consultation-middle .container .white-block-design {
-      width: 573px;
-      height: 687px;
-      margin-left: 30px; }
-      section.section.service-after-laserepila .consultation-middle .container .white-block-design img {
-        top: -65px;
-        left: -34px; }
-  section.section.service-after-laserepila .consultation-bottom {
-    background-color: #A9A8C6; }
-    section.section.service-after-laserepila .consultation-bottom .container p.extralarge-text-bg {
+      top: 0px;
+      left: 43px;
+      margin-left: -308px;
+      margin-top: 420px; }
+
+section.section.service-after-laserepila .consultation-middle {
+  background-color: #EDE1DF; }
+  section.section.service-after-laserepila .consultation-middle .container h2.before {
+    line-height: 38px; }
+    section.section.service-after-laserepila .consultation-middle .container h2.before::before {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 90px;
+      background-color: rgba(0, 0, 0, 0.26);
+      position: relative;
+      top: 105px; }
+  section.section.service-after-laserepila .consultation-middle .container .white-block-design {
+    width: 573px;
+    height: 687px;
+    margin-left: 30px; }
+    section.section.service-after-laserepila .consultation-middle .container .white-block-design img {
+      top: -65px;
+      left: -34px; }
+
+section.section.service-after-laserepila .consultation-bottom {
+  background-color: #A9A8C6; }
+  section.section.service-after-laserepila .consultation-bottom .container .white-block-design {
+    width: 498px;
+    height: 503px;
+    margin-left: auto; }
+    section.section.service-after-laserepila .consultation-bottom .container .white-block-design img {
+      top: 30px;
+      left: -175px; }
+    section.section.service-after-laserepila .consultation-bottom .container .white-block-design h1.extralarge-text-bg {
       position: absolute;
       z-index: 10;
-      top: 281px;
-      left: 662px; }
-    section.section.service-after-laserepila .consultation-bottom .container .white-block-design {
-      width: 498px;
-      height: 503px;
-      margin-left: auto; }
-      section.section.service-after-laserepila .consultation-bottom .container .white-block-design img {
-        top: 30px;
-        left: -175px; }
+      margin-top: 242px;
+      margin-left: -106px; }
 
 section.section.service-laser-whatToDo {
   background: url(../assets/img/service-list/whatToDoBg.png);
@@ -1581,11 +1600,12 @@ section.section.service-laser-whatToDo {
     color: #000; }
 
 section.section.service-laser-contraindications {
-  background-color: #9FA6BA; }
+  background-color: #9FA6BA;
+  overflow: initial; }
   section.section.service-laser-contraindications .container .white-block-mobile .white-block-design {
     width: 489px;
     height: 489px;
-    top: -32px;
+    top: -81px;
     left: 184px; }
     section.section.service-laser-contraindications .container .white-block-mobile .white-block-design img {
       top: -76px;

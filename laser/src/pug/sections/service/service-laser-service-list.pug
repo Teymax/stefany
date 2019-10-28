@@ -60,11 +60,47 @@ section.section.service-laser-service-list.d-none.d-lg-block
                     .button-group.d-flex.justify-content-between.mt-3
                         +btnPen('записаться')
                         +btnCaset('оплатить')
-section.section.service-laser-service-list-tablet.d-block.d-lg-none.py-0
+section.section.service-laser-service-list-tablet1.d-block.d-lg-none.py-0
     .container
         .col-12.sale
             .sale-container.d-flex
                 img.mt-3(src="assets/img/service-laser-page/Ellipse.png")
-                    p  -40%
                 h1.h2.h1-title.text-color-light.mb-0.align-self-center на ВСЕ зоны лазерной эпиляции
-
+                p#sale-p.text-color-light  -40%
+section.section.service-laser-service-list-tablet2.d-flex.d-lg-none.py-0.flex-column
+    .container 
+        .col-12.px-6.d-flex.align-items-center.flex-column
+            #radio-container.d-flex.justify-content-around.align-items-center.mt-5
+                input(
+                    type='radio'
+                    name='sex'
+                    value='male'
+                )
+                input(
+                    type='radio'
+                    name='sex'
+                    value='famale'
+                )
+            .checkbox-group.d-flex.flex-column.mt-4.mb-6.justify-content-between
+                h2.h2-title.text-color-dark.mt-3.mb-3.align-self-center Область лица
+                each service in arr
+                    .checkbox-row.d-flex.align-items-center.justify-content-between
+                        .column-right.d-flex
+                            input.align-self-center(
+                                type='checkbox'
+                                name='servise'
+                                checked
+                            )
+                            p.paragraph-text.text-w-light.text-color-dark.ml-3 #{service.name}
+                        .column-left.d-flex.justify-content-end
+                            p.paragraph-text.text-w-bold.text-color-dark #{service.price}
+section.section.service-laser-service-list-tablet3.d-flex.d-lg-none.py-0.flex-column
+    .container.d-flex.justify-content-around.py-5
+        p.paragraph-text.text-color-light.text-w-light.mb-0.align-self-center Список услуг
+        .price-block.d-flex.justify-content-center.align-items-center                                     
+            img(src="assets/img/service-laser-page/price.png")
+            p.paragraph-text.text-w-bold.text-color-white.ml-2.mb-0 3000грн
+        +btnPen('записаться')
+        +btnCaset('оплатить')
+    
+    
