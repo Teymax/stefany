@@ -3,11 +3,43 @@
 
 @include tablet
 
-
-
+@media(max-width: 880px)
+	.grid-number
+		top: 25px
+		left: 18px
+		letter-spacing: 1px
+@media(max-width: 767px)
+    .section-title
+      font-size: 30px
+      line-height: 34px
+    p, .p-bold
+      font-size: 14px
+    .grid-number
+      top: 62px
+      left: 15px
+      letter-spacing: 2px
+@media(max-width: 575px)
+  .c-logo
+    svg
+      width: 87px !important
+      height: 48px !important
+  header .container
+    padding-top: 11px
+    padding-bottom: 11px
+    .slider-pad
+      padding: 0 !important
+  .slider-block
+    .owl-nav
+      position: static
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-top: 25px
+      transform: translate(0) !important
+      button
+        &.owl-prev
+          margin-right: 60px
 @include mobile-medium
-
-
 
 @include desktop
 
