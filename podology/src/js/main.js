@@ -31,6 +31,7 @@ $( document ).ready( function () {
     $( this ).toggleClass( 'open' )
     $( 'header' ).toggleClass( 'open' )
   } )
+
   $( '.drop-menu' ).click( function ( e ) {
     e.preventDefault()
     $( '.drop-menu:not(.open)' ).removeClass( 'open' )
@@ -96,15 +97,8 @@ $( document ).ready( function () {
     }
   } )
 
-  $( '.menu-trigger' ).click( function ( e ) {
-    $( this ).toggleClass( 'open' )
-    $( 'header' ).toggleClass( 'open' )
-    $( 'body' ).toggleClass( 'fixed' )
-  } )
-
-  $( '.drop-menu' ).click( function () {
-    $( '.drop-menu' ).not( $( this ) ).removeClass( 'open' )
-    $( this ).toggleClass( 'open' )
+  $( '.card-header' ).on( 'click', function () {
+    $( this ).toggleClass( 'active' ).siblings().removeClass( 'active' )
   } )
 
   $( '.reviews-slider' ).owlCarousel( {

@@ -1,14 +1,16 @@
-section.section.accordion-answer
+section.section.faq
 	padding-top: 72px
 	padding-bottom: 84px
+	background: url(../images/img/background/faq-bg.png) no-repeat
+	background-size: cover
 
 	.card-header
 		display: flex
 		justify-content: space-between
+		align-items: center
 		cursor: pointer
 		margin-bottom: 1rem
 		position: relative
-		border-radius: 100px !important
 		background-color: rgba(85, 98, 120, .3)
 		padding: 0
 
@@ -17,22 +19,33 @@ section.section.accordion-answer
 			margin-bottom: 0
 
 		.card-header
-			//height: 70px
 			display: none
 
-	.card-header.active
-		.card-arrow
-			background-color: $secondary-header-color
-			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+	.card-body
+		background: $card-body
+		margin-bottom: 1rem
 
-			&:before
-				transform: rotate(180deg)
+		h3
+			font-size: 16px
+
+		hr
+			background: #fff
+			color: #fff
+			opacity: .5
+
+	.card-header
+		&.active
+			.card-arrow
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+
+				&:before
+					transform: rotate(180deg)
 
 	.card-arrow
 		width: 64px
 		height: 64px
-		border-radius: 50%
-		background-color: $secondary-header-color
+		//border-radius: 50%
+		background-color: $card-body
 		display: flex
 		align-items: center
 		justify-content: center
@@ -40,7 +53,7 @@ section.section.accordion-answer
 		&:before
 			content: ' '
 			display: block
-			background-image: url("../assets/icon/accordion-arrow.png")
+			background-image: url("../images/icon/accordion-arrow.png")
 			background-repeat: no-repeat
 			width: 13px
 			height: 9px
