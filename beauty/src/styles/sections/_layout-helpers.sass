@@ -5,7 +5,7 @@
 .container-xs
   max-width: 975px !important
 .container-m
-  max-width: 1260px !important
+  max-width: 1290px !important
 .container-l
   max-width: 1270px !important
 .container-xl
@@ -21,6 +21,8 @@
     box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
 body
   overflow-x: hidden
+  &.fixed
+    overflow: hidden
 
 // text - style *******
 	
@@ -136,6 +138,7 @@ p, .p-text, .paragraph-text
   width: 100%
   margin-bottom: 20px
   @include font('Circe-Light', 400, 20, 21)
+  letter-spacing: .6px
   color: $section-title-color
 .h3-title
   @include font('Circe-Light', 400, 20, 24)
@@ -150,6 +153,9 @@ p, .p-text, .paragraph-text
   @include font('CormorantGaramond-Bold', 700, 30, 35)
   color: $section-title-color
 
+.bg-rose
+  background: $bg-rose
+    
 .grid-number
   display: block
   position: absolute
@@ -162,6 +168,10 @@ p, .p-text, .paragraph-text
 
 .white-text
   color: $color-white !important
+.light-orange-text
+  color: $spec-bg !important
+.light-green-text
+  color: $dark-gren-bg !important
 
 .h-center
   text-align: center
@@ -171,12 +181,17 @@ p, .p-text, .paragraph-text
   text-transform: uppercase
   letter-spacing: 2px
   @include font('CormorantGaramond-Bold', 700, 75, 75)
-
 .bnf-title
   padding-bottom: 20px
   text-transform: uppercase
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
+.benefits .bnf-title-small
+  padding-bottom: 15px
+  font-size: 14px
+  text-transform: inherit
+  letter-spacing: 0
+  font-weight: bold
 
 // buttons - style *******
 .btn-callback, .btn-send
@@ -185,18 +200,17 @@ p, .p-text, .paragraph-text
   height: 38px
   padding-right: 18px
   padding-left: 20px
-  background: url('../assets/img/background/callback-btn.png')
+  background: url('../images/img/background/callback-btn.png')
   background-repeat: no-repeat
   background-size: 45px 100%
   background-position: top right
   border: 2px solid $color-purple
   text-decoration: none
   border-radius: 100px
-  transition: 0.2s linear
   & > span 
     text-decoration: none
     width: 100%
-    max-width: 120px
+    max-width: 109px
     svg
       width: 13px
       height: 13px
@@ -205,45 +219,35 @@ p, .p-text, .paragraph-text
       height: 19px
     .st0 
       fill: $color-purple-text
-      transition: 0.3s ease 0.2s
     span 
       padding-top: 2px
       @include font ('Circe-ExtraBold', 900, 10, 10)
       text-transform: uppercase
       letter-spacing: 2px
       color: $color-purple-text
-      transition: 0.3s ease
   & > svg 
     width: 14px
     height: 11px
     .st0 
       fill: $color-white
-  &:hover 
-    background-size: 100% 100%
-    text-decoration: none
-    & > span 
-      .st0 
-        fill: $color-white
-      span
-        color: $color-white
-.btn-callback-white
-  background: url('../assets/img/background/callback-btn-white.jpg')
+// header btn
+.btn-callback-white, header.open .btn-callback
+  background: url('../images/img/background/callback-btn-white.jpg')
   background-repeat: no-repeat
   background-size: 45px 100%
   background-position: top right
-  border: 2px solid $color-white
+  border: 2px solid $color-white !important
+  &:focus
+    border: 2px solid $color-white !important
   & > span
     span
       color: $color-white 
+    svg 
+      .st0
+        fill: $color-white  !important
   & > svg 
     .st0 
       fill: $color-purple
-  &:hover    
-    background-size: 100% 100%
-    text-decoration: none
-    & > span
-      span
-        color: $color-purple
 .btn-callback-simple
 	width: auto
 	max-width: 100%
@@ -329,13 +333,25 @@ p, .p-text, .paragraph-text
       background: $breadcrump-color
       border-radius: 50%
 
-// Icons - style *********
+// Icons - style header *********
 
 .icon
   margin-right: 10px
 .icon-loc
   width: 13px
   height: 17px
+svg.icon-loc
+  width: 16px !important
+  height: 13px !important
+  margin-right: 6px !important
+  margin-left: 0 !important
+svg.icon-phone
+  width: 15px !important
+  height: 15px !important
+  margin-right: 6px !important
+  margin-left: 0 !important
+  path
+    fill: #3a405b
 .icon-phone
   width: 17px
   height: 16px
@@ -348,15 +364,19 @@ p, .p-text, .paragraph-text
 .icon-arrow
   width: 12px
   margin-left: 6px
-.icon-arrow
-  width: 12px
-  margin-left: 6px
+svg.icon-arrow
+  width: 10px !important
+  height: 7px !important
+  margin-right: 0 !important
+  margin-left: 6px !important
+  path
+    fill: #3a405b
 .icon-large
   width: 40px
   height: 40px
 .icon-facebook
-  width: 11px
-  height: 18px
+    width: 14px
+    height: 15px
 .icon-inst
   width: 17px
   height: 17px
@@ -473,11 +493,11 @@ textarea.field
       height: 30px
       opacity: .4
       &.owl-prev
-	      background-image: url('../assets/icon/slider-left-arrow.png') !important
+	      background-image: url('../images/icon/slider-left-arrow.png') !important
 	      background-repeat: no-repeat  !important
 	      background-size: contain !important
       &.owl-next
-	      background-image: url('../assets/icon/slider-right-arrow.png') !important
+	      background-image: url('../images/icon/slider-right-arrow.png') !important
 	      background-repeat: no-repeat  !important
 	      background-size: contain !important
   &.video-slider
@@ -491,15 +511,15 @@ textarea.field
 	    padding-top: 0 !important
 	    button
         &.owl-prev
-          background-image: url('../assets/icon/aroow-left-gray.png') !important
+          background-image: url('../images/icon/aroow-left-gray.png') !important
           background-repeat: no-repeat  !important
           background-size: contain !important
         &.owl-next
-          background-image: url('../assets/icon/aroow-right-gray.png') !important
+          background-image: url('../images/icon/aroow-right-gray.png') !important
           background-repeat: no-repeat  !important
           background-size: contain !important
 
-// menu - stely **
+// menu - style -- header **
 .menu-trigger 
   transition: 0.45s ease
   cursor: pointer
@@ -525,15 +545,21 @@ textarea.field
 .menu-trigger.open span:nth-child(3) 
   transform: rotate(40deg)
 
-// dropdown-menu - style
+// dropdown-menu - style header
 
 .drop-menu
   cursor: pointer
   position: relative
+  svg
+    width: 12px
+    height: 8px
+    margin-left: 10px 
+    .cls-1
+      fill: #4D5259 !important
   .icon-arrow
     transition: 0.2s ease
 .drop-menu.open
-  .icon-arrow
+  .icon-arrow, svg.icon-arrow
     transform: rotate(180deg)
   ul.dropdown-menu-list
     display: flex !important
