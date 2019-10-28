@@ -11302,7 +11302,7 @@ template {
 .services-about-sm-divider {
   height: 2px;
   width: 88px;
-  background-color: #7D899E; }
+  background-color: rgba(125, 137, 158, 0.39); }
 
 .descr-row--padding {
   padding: 65px 0 40px 90px; }
@@ -11360,6 +11360,76 @@ template {
     background-image: url("../assets/img/services-warts/four.png"); }
   .text-px-desktop {
     padding: 0 235px; } }
+
+@media (min-width: 768px) {
+  .custom-px {
+    padding: 0 95px; } }
+
+@media (min-width: 992px) {
+  .custom-px {
+    padding: 0 250px; } }
+
+@media (min-width: 1200px) {
+  .custom-px {
+    padding: 0 370px; } }
+
+.services-treatment-divider {
+  background-color: rgba(125, 137, 158, 0.39);
+  width: 89px;
+  height: 4px; }
+
+.circles-bg {
+  background-image: url("../assets/img/services-warts/circles.png");
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: center -170px; }
+  @media (min-width: 768px) {
+    .circles-bg {
+      background-size: 1500px;
+      background-position: center -242px; } }
+
+.paragraph-title {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase; }
+
+@media (min-width: 768px) {
+  .custom-padding-treatment {
+    padding: 0 20px; } }
+
+@media (min-width: 1200px) {
+  .custom-padding-treatment {
+    padding: 0 250px; } }
+
+.treatment-service-name {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: #8DA0BE;
+  text-transform: uppercase; }
+
+.treatment-price {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 17px;
+  color: #3A405B;
+  text-transform: uppercase; }
+
+.treatment-duration {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 17px;
+  color: #CCD1D9;
+  text-transform: uppercase; }
 
 /**
  * Owl Carousel v2.3.4
