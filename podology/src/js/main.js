@@ -4,7 +4,6 @@ $( document ).ready( function () {
     var idx = $e.index()
     var itemsPerSlide = 4
     var totalItems = $( '.carousel-item' ).length
-
     if ( idx >= totalItems - ( itemsPerSlide - 1 ) ) {
       var it = itemsPerSlide - ( totalItems - idx )
       for ( var i = 0; i < it; i++ ) {
@@ -135,6 +134,6 @@ $( document ).ready( function () {
   } )
 
   $( '#closeOverlay' ).click( function ( e ) {
-    $('#overlay').hide()
+    $( '#overlay' ).hide()
   } )
 } )
