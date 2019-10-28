@@ -10,6 +10,10 @@
 	color: #fff
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
 	text-transform: uppercase
+	cursor: pointer
+
+	&:active
+		box-shadow: none
 
 	&.no-svg
 		width: 11em
@@ -36,9 +40,11 @@
 
 		svg
 			margin-right: .7em
+			path
+				fill: #fff
 
 		span
-			margin-top: .1em
+			margin-top: .15em
 
 		span
 			@include font(Circe, 400, 11, 20)

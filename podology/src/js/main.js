@@ -72,6 +72,49 @@ $( document ).ready( function () {
     }
   } )
 
+  $( '.salon-photos-slider' ).owlCarousel( {
+    center    : true,
+    items     : 3,
+    loop      : true,
+    margin    : 15,
+    responsive: {
+      0   : {
+        items: 1
+      },
+      575 : {
+        items: 1
+      },
+      993 : {
+        items: 1.5
+      },
+      1400: {
+        items: 2
+      },
+      2000: {
+        items: 4
+      }
+    }
+  } )
+
+  $( '.menu-trigger' ).click( function ( e ) {
+    $( this ).toggleClass( 'open' )
+    $( 'header' ).toggleClass( 'open' )
+    $( 'body' ).toggleClass( 'fixed' )
+  } )
+
+  $( '.drop-menu' ).click( function () {
+    $( '.drop-menu' ).not( $( this ) ).removeClass( 'open' )
+    $( this ).toggleClass( 'open' )
+  } )
+
+  $( '.reviews-slider' ).owlCarousel( {
+    loop  : true,
+    margin: 0,
+    nav   : true,
+    dots  : false,
+    items : 1
+  } )
+
   $( '.specialists-slider' ).owlCarousel( {
     loop      : true,
     margin    : 20,
