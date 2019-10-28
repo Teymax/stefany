@@ -1,8 +1,8 @@
-section.section.service-laser-service-list
+section.section.service-laser-service-list.d-none.d-lg-block
     .container
         .row
-            .col-12.col-lg-8.d-flex.justify-content-center.flex-column.align-items-center.left
-                .radio-container.d-flex.justify-content-around.align-items-center.mt-6
+            .col-12.col-lg-8.d-flex.justify-content-center.flex-column.align-items-center.left.pt-lg-6
+                .radio-container.d-flex.justify-content-around.align-items-center
                     input(
                         type='radio'
                         name='sex'
@@ -58,6 +58,13 @@ section.section.service-laser-service-list
                             img(src="assets/img/service-laser-page/price.png")
                             p.paragraph-text.text-w-bold.text-color-white.ml-2 3000грн
                     .button-group.d-flex.justify-content-between.mt-3
-                        button.paragraph-text.text-w-bold.text-color-dark.p-2 Оплатить
-                        button.paragraph-text.text-w-bold.text-color-dark.p-2 Записаться
+                        +btnPen('записаться')
+                        +btnCaset('оплатить')
+section.section.service-laser-service-list-tablet.d-block.d-lg-none.py-0
+    .container
+        .col-12.sale
+            .sale-container.d-flex
+                img.mt-3(src="assets/img/service-laser-page/Ellipse.png")
+                    p  -40%
+                h1.h2.h1-title.text-color-light.mb-0.align-self-center на ВСЕ зоны лазерной эпиляции
 

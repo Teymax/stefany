@@ -1,21 +1,16 @@
 section.section.service-consultation
-  overflow: hidden
   padding-bottom: 0
-  .custom-icon-number
+  & .custom-icon-number
     width: 21px
     height: 21px
     background-color: #4D5259
     p
       @include font (Circe, bold, 16, 26)
-  .consultation-top
+  & .consultation-top
     background-color: #9FA6BA
+    margin-bottom: 167px
     .container
       position: relative
-      .extralarge-text-bg
-        bottom: -148px
-        margin-left: 679px
-        z-index: 10 
-        letter-spacing: -3px  
       p.before
         margin-bottom: 2.5rem
         &::before
@@ -29,15 +24,18 @@ section.section.service-consultation
 
 
       .white-block-design
-        margin-top: 101px
         width: 465px
-        height: 671px
+        height: 669px
         img
-          top: 51px
+        & .extralarge-text-bg
+          z-index: 10 
+          margin-left: 42px
+          margin-top: 422px
+          
 
-  .consultation-middle
+  & .consultation-middle
     background-color: #A9A8C6
-    .container
+    & .container
       p.before
         margin-bottom: 2.5rem
         &::before
@@ -60,11 +58,11 @@ section.section.service-consultation
       .white-block-design
         width: 563px
         height: 731px
-        left: 40px
+        margin-left: 30px
         img
           top: -69px
           left: -37px
-  .info-list
+  & .info-list
     li
       &:before
         background: $text-color-white

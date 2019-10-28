@@ -3,6 +3,7 @@ section.section.service-laser-service-list
     background:  url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
     background-repeat: repeat-y
     background-position: top center
+    overflow: initial
     .checkbox-group 
         width: 100%
         .checkbox-row
@@ -34,10 +35,8 @@ section.section.service-laser-service-list
                            // width: 100%
             .right
                 .stash
-                    width: 90%
-                    margin: 0 auto
                     position: sticky
-                    top: 0
+                    top: -20px
                     .sale-container
                         width: 324px
                         height: 215px
@@ -57,13 +56,6 @@ section.section.service-laser-service-list
                             @include font('CormorantGaramond', 700, 48, 90)
                             color: $text-color-white
                             text-align: center
-                        button
-                            box-sizing: border-box
-                            border: 1px solid #fff !important
-                            border-radius: 20px
-                            font-size: 13px
-                            width: 42%
-                            padding: 4px
                         h4 
                             width: 42%
                             line-height: 23px
@@ -89,10 +81,17 @@ section.section.service-laser-service-list
                                 width: 20px
                                 height: 20px
                                 margin: 10px 0
-                    .button-group
-                        width: 77%
-                        button 
-                            width: 40%
-                            background-color: #ffffff 
-                            border: 1px solid #ffffff
-                            border-radius: 20px
+section.section.service-laser-service-list-tablet
+    background: url(../assets/img/service-laser-page/list-image-tablet.png)
+    background-size: cover
+    & .container.d-lg-none
+        & .sale
+            img 
+                p
+                    font-family: "CormorantGaramond"
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 48px
+                    line-height: 90px
+                    color: #ffffff
+                    text-align: center

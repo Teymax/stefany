@@ -1032,6 +1032,18 @@ section.section.four-boxes-03 {
   overflow: hidden;
   background-color: #fff;
   background-size: cover; }
+  section.section.four-boxes-03 .c-boxes:nth-of-type(1) img {
+    position: absolute;
+    left: -30px; }
+  section.section.four-boxes-03 .c-boxes:nth-of-type(2) img {
+    position: absolute;
+    left: -30px; }
+  section.section.four-boxes-03 .c-boxes:nth-of-type(3) img {
+    position: absolute;
+    left: -86px; }
+  section.section.four-boxes-03 .c-boxes:nth-of-type(4) img {
+    position: absolute;
+    left: -55px; }
 
 section.section.laser {
   position: relative;
@@ -1267,7 +1279,6 @@ section.section.about-steffany {
   padding: 4rem 0; }
 
 section.section.service-consultation {
-  overflow: hidden;
   padding-bottom: 0; }
   section.section.service-consultation .custom-icon-number, section.section.service-consultation .custom-icon-number-dark {
     width: 21px;
@@ -1280,14 +1291,10 @@ section.section.service-consultation {
       font-size: 16px;
       line-height: 26px; }
   section.section.service-consultation .consultation-top {
-    background-color: #9FA6BA; }
+    background-color: #9FA6BA;
+    margin-bottom: 167px; }
     section.section.service-consultation .consultation-top .container {
       position: relative; }
-      section.section.service-consultation .consultation-top .container .extralarge-text-bg {
-        bottom: -148px;
-        margin-left: 679px;
-        z-index: 10;
-        letter-spacing: -3px; }
       section.section.service-consultation .consultation-top .container p.before {
         margin-bottom: 2.5rem; }
         section.section.service-consultation .consultation-top .container p.before::before {
@@ -1299,11 +1306,12 @@ section.section.service-consultation {
           position: relative;
           top: 45px; }
       section.section.service-consultation .consultation-top .container .white-block-design {
-        margin-top: 101px;
         width: 465px;
-        height: 671px; }
-        section.section.service-consultation .consultation-top .container .white-block-design img {
-          top: 51px; }
+        height: 669px; }
+        section.section.service-consultation .consultation-top .container .white-block-design .extralarge-text-bg {
+          z-index: 10;
+          margin-left: 42px;
+          margin-top: 422px; }
   section.section.service-consultation .consultation-middle {
     background-color: #A9A8C6; }
     section.section.service-consultation .consultation-middle .container p.before {
@@ -1326,7 +1334,7 @@ section.section.service-consultation {
     section.section.service-consultation .consultation-middle .container .white-block-design {
       width: 563px;
       height: 731px;
-      left: 40px; }
+      margin-left: 30px; }
       section.section.service-consultation .consultation-middle .container .white-block-design img {
         top: -69px;
         left: -37px; }
@@ -1337,18 +1345,8 @@ section.section.service-laser {
   position: relative;
   background-color: #EDE1DF;
   overflow: hidden; }
-  section.section.service-laser .container .c-content {
-    max-width: 78%; }
-  section.section.service-laser .container p.extralarge-text-bg {
-    bottom: -148px;
-    z-index: 10;
-    letter-spacing: -3px; }
-    section.section.service-laser .container p.extralarge-text-bg span {
-      position: relative;
-      left: 69px;
-      letter-spacing: 8px; }
   section.section.service-laser .container h2 {
-    margin-top: 104px; }
+    margin-top: 44px; }
   section.section.service-laser .container p b {
     color: #000; }
   section.section.service-laser .container p.position:before {
@@ -1360,17 +1358,44 @@ section.section.service-laser {
     margin: 1.5rem 0;
     margin-bottom: 2.2rem; }
   section.section.service-laser .container .white-block-design {
-    width: 504px;
-    height: 674px;
-    top: 64px; }
+    width: 475px;
+    height: 648px;
+    top: 6px;
+    left: 33px; }
     section.section.service-laser .container .white-block-design img {
-      top: 40px; }
+      top: 22px;
+      left: -22px; }
+    section.section.service-laser .container .white-block-design p.extralarge-text-bg {
+      top: 364px;
+      left: -296px;
+      z-index: 10;
+      letter-spacing: -3px;
+      white-space: nowrap;
+      position: absolute;
+      font-family: "Circe";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 321px;
+      line-height: 377px;
+      color: #ffffff; }
+      section.section.service-laser .container .white-block-design p.extralarge-text-bg span {
+        position: relative;
+        left: 69px;
+        letter-spacing: 8px; }
+  @media (min-width: 992px) {
+    section.section.service-laser p#large.extralarge-text-bg {
+      left: -730px;
+      top: 404px;
+      letter-spacing: 10px; }
+    section.section.service-laser #large.white-block-design {
+      height: 665px; } }
 
 section.section.service-laser-service-list {
   padding-top: 0;
   background: url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%);
   background-repeat: repeat-y;
-  background-position: top center; }
+  background-position: top center;
+  overflow: initial; }
   section.section.service-laser-service-list .checkbox-group {
     width: 100%; }
     section.section.service-laser-service-list .checkbox-group .checkbox-row {
@@ -1394,10 +1419,8 @@ section.section.service-laser-service-list {
     section.section.service-laser-service-list .container .row .left .service-list-group h2 {
       font-size: 30px; }
   section.section.service-laser-service-list .container .row .right .stash {
-    width: 90%;
-    margin: 0 auto;
     position: sticky;
-    top: 0; }
+    top: -20px; }
     section.section.service-laser-service-list .container .row .right .stash .sale-container {
       width: 324px;
       height: 215px;
@@ -1421,13 +1444,6 @@ section.section.service-laser-service-list {
         line-height: 90px;
         color: #ffffff;
         text-align: center; }
-      section.section.service-laser-service-list .container .row .right .stash .sale-container button {
-        box-sizing: border-box;
-        border: 1px solid #fff !important;
-        border-radius: 20px;
-        font-size: 13px;
-        width: 42%;
-        padding: 4px; }
       section.section.service-laser-service-list .container .row .right .stash .sale-container h4 {
         width: 42%;
         line-height: 23px; }
@@ -1453,13 +1469,18 @@ section.section.service-laser-service-list {
           width: 20px;
           height: 20px;
           margin: 10px 0; }
-    section.section.service-laser-service-list .container .row .right .stash .button-group {
-      width: 77%; }
-      section.section.service-laser-service-list .container .row .right .stash .button-group button {
-        width: 40%;
-        background-color: #ffffff;
-        border: 1px solid #ffffff;
-        border-radius: 20px; }
+
+section.section.service-laser-service-list-tablet {
+  background: url(../assets/img/service-laser-page/list-image-tablet.png);
+  background-size: cover; }
+  section.section.service-laser-service-list-tablet .container.d-lg-none .sale img p {
+    font-family: "CormorantGaramond";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 90px;
+    color: #ffffff;
+    text-align: center; }
 
 section.section.service-after-laserepila {
   overflow: hidden; }
@@ -1625,6 +1646,63 @@ section.section.service-consultation-form {
       padding: 0; }
     section.section.consultation-form .container .main-form {
       max-width: 100%; } }
+
+section.section.service-laser-personal {
+  background: url("../assets/img/specialists/specialists-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left; }
+  section.section.service-laser-personal-info {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #EDE1DF;
+    transition: 0.25s linear;
+    opacity: 0; }
+  section.section.service-laser-personal .specialists-item-container {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; }
+    section.section.service-laser-personal .specialists-item-container .specialists-img {
+      height: 100%; }
+    section.section.service-laser-personal .specialists-item-container:hover .specialists-info {
+      opacity: 1; }
+
+section.section.service-laser-results {
+  background-color: #fff; }
+  section.section.service-laser-results .headline h1 {
+    line-height: 35px; }
+  section.section.service-laser-results .container .container .diploma-slider .slider-item-footer {
+    height: 37px;
+    background: #EDE1DF;
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 8px 8px; }
+  section.section.service-laser-results .container .container .diploma-slider .owl-dots {
+    padding-top: 40px; }
+
+section.section.service-laser-interests {
+  background-color: #fff; }
+  section.section.service-laser-interests .headline h1 {
+    line-height: 35px; }
+  section.section.service-laser-interests .container .container .diploma-slider .owl-dots {
+    padding-top: 40px; }
+  section.section.service-laser-interests .container .container .diploma-slider .owl-stage-outer .diploma-item:hover .main-image {
+    opacity: 0; }
+  section.section.service-laser-interests .container .container .diploma-slider .owl-stage-outer .diploma-item:hover .hover-image {
+    opacity: 1; }
+  section.section.service-laser-interests .container .container .diploma-slider .owl-stage-outer .diploma-item .main-image {
+    transition: 1.5s; }
+  section.section.service-laser-interests .container .container .diploma-slider .owl-stage-outer .diploma-item .slider-item-footer {
+    height: 37px;
+    background: #EDE1DF;
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 8px 8px; }
+  section.section.service-laser-interests .container .container .diploma-slider .owl-stage-outer .diploma-item .hover-image {
+    position: absolute;
+    top: 0px;
+    transition: 1.5s;
+    opacity: 0; }
 
 section.section.diploma {
   background-color: #4D5259; }
