@@ -31,10 +31,7 @@ $(document).ready(function(){
 		$(city).addClass('city-active');
 	});
 
-	$('.menu-trigger').click(function(e){
-		$(this).toggleClass('open');
-		$('header').toggleClass('open');
-	});
+
 
 	$('.diploma-slider').owlCarousel({
 		loop:true,
@@ -74,6 +71,17 @@ $(document).ready(function(){
 
   $(".card-header").on('click', function(){
     $(this).toggleClass('active').siblings().removeClass('active')
+  });
+
+  $('.menu-trigger').click(function(e){
+    $(this).toggleClass('open');
+    $('header').toggleClass('open');
+    $('body').toggleClass('fixed');
+  });
+
+  $('.drop-menu').click(function(){
+    $('.drop-menu').not($(this)).removeClass('open');
+    $(this).toggleClass('open');
   });
 });
 

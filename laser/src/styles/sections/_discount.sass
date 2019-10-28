@@ -1,6 +1,13 @@
 section.section.discount
-  background-color: $color-white
+  padding-top: 75px
+  padding-bottom: 72px
+  background:
+    image: url("../assets/img/background/discount-bg.jpg")
+    size: cover
   .container
+    .timer-text
+      @include font (Circe, 900, 26, 73)
+      color: #F6AE9F
     .info-list
       li
         &:before
@@ -25,7 +32,9 @@ section.section.discount
           right: auto
           bottom: 30px
       .c-btn
-        margin: 0 auto
+        margin-left:  auto
+        margin-right: auto
+        margin-top: 76px
         max-width: 320px
         display: flex
         justify-content: space-between
@@ -35,25 +44,29 @@ section.section.discount
 
 
 @include media-breakpoint-down(lg)
-section.section.discount
-  .container
-    .c-content
-      .d-discount
-        max-width: 430px
-        margin:
-          left: auto
-          right: auto
-          bottom: 30px
-      .c-btn
+  section.section.discount
+    padding-top: 107px
+    padding-bottom: 30px
+    .container
+      .c-content
+        .d-discount
+          max-width: 430px
+          margin:
+            left: auto
+            right: auto
+            bottom: 30px
+        .c-btn
 
 @include media-breakpoint-down(xs)
-section.section.discount
-  .container
-    .c-content
-      .d-discount
-        max-width: 430px
-        margin:
-          left: auto
-          right: auto
-          bottom: 30px
-      .c-btn
+  section.section.discount
+    padding-top: 65px
+    padding-bottom: 25px
+    .container
+      .c-content
+        .d-discount
+          max-width: 430px
+          margin:
+            left: auto
+            right: auto
+            bottom: 30px
+        .c-btn
