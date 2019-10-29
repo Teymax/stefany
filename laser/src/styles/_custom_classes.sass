@@ -25,11 +25,13 @@
 .paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
+.paragraph-text b
+  font-weight: 900
 .h1-title
   @include font (CormorantGaramond, bold, 44, 53)
   color: $text-color-white
 .h2-title
-  @include font (CormorantGaramond, bold, 34, 53)
+  @include font (CormorantGaramond, bold, 44, 53)
   color: $text-color-white
 .h3-title
   @include font(Circe, 400, 20, 24)
@@ -38,7 +40,8 @@
 .h4-title
   @include font(CormorantGaramond, 400, 24, 34)
   color: $text-color-white
-
+.sub-title
+  font-size: 20px
 .bnf-number
   //padding-bottom: 20px
   //text-transform: uppercase
