@@ -1,7 +1,7 @@
 section.section.consultation-form
   padding-top: 66px
   background:
-    image: url("../assets/img/background/consultation-form-bg.jpg")
+    image: url("../images/img/background/consultation-form-bg.jpg")
     size: cover
   .container
     .c-content
@@ -16,13 +16,20 @@ section.section.consultation-form
       max-width: 390px
       background-color: #EDE1DF
       border-radius: 5px 5px 0 0
+      &:before
+        content: url("../images/img/logo-bg.png")
+        position: absolute
+        bottom: -7px
       .form-control
         background-color: rgba(77, 82, 89, .2)
         width: 252px
+
     .small-label
       @include font(Circe, 400, 12, 22)
+      margin-bottom: 96px
     .input::placeholder
       color: $text-color-white
+
 
 @include media-breakpoint-down(lg)
   section.section.consultation-form
