@@ -1,0 +1,63 @@
+.metodists
+  background: 
+    image: url("../assets/img/padalogy/learning/metodists-bg.png")
+    size: cover
+    position: top -120px center
+    repeat: no-repeat
+  padding: 69px 0 72px
+  .container
+    max-width: 1290px !important
+  .section-title
+    padding-bottom: 30px
+    margin-bottom: 55px
+    @include font('Circe-Bold', bold, 28, 28)
+    color: #556278
+  .text-border-b
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 100%
+        left: calc(50% - 44.5px)
+        display: block
+        width: 100%
+        max-width: 89px
+        height: 4px
+        background: rgba(125, 137, 158, 0.39)
+  .metodist-block
+    max-width: 610px !important
+    .extrabold
+      font-size: 20px !important
+  .metodist-img
+    max-width: 287px !important
+  .metodist-cnt
+		margin-top: -9px
+    max-width: 304px !important
+    padding-left: 10px !important
+  .info-list-item
+    position: relative
+    padding-left: 20px !important
+    padding-bottom: 8px !important
+    &:before
+      position: absolute
+      left: 3px
+      top: 9px
+      content: ''
+      width: 4px
+      height: 4px
+      background: $breadcrump-color
+      border-radius: 50%
+@media(max-width: 1199px)
+  .metodists .metodist-block
+    max-width: 100% !important
+    margin-bottom: 50px !important
+    .metodist-img
+      margin-right: 15px
+    & > .row
+      justify-content: flex-start !important
+@media(max-width: 630px)
+  .metodists .metodist-block .metodist-img
+    margin-right: 0 !important
+    margin-bottom: 30px !important
+    max-width: 100% !important
+		width: 100% !important

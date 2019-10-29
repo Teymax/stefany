@@ -5,4 +5,8 @@ node_modules/
 .history/*
 */build
 */build/*
+<<<<<<< HEAD
 package-lock.json
+=======
+package-lock.json
+>>>>>>> feature/homepage-beauty
