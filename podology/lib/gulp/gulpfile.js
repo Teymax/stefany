@@ -11,12 +11,12 @@ const gulp = require('gulp'),
     pug = require('gulp-pug')
 
 function moveImages(){
-    return gulp.src('../../src/images/**/*.*')
-        .pipe(gulp.dest('../../build/images'));
+    return gulp.src('../../src/assets/img/**/*.*')
+        .pipe(gulp.dest('../../build/assets/img'));
 }
 function moveFonts(){
-    return gulp.src('../../src/styles/fonts/**/*.*')
-        .pipe(gulp.dest('../../build/css/fonts'));
+    return gulp.src('../../src/assets/fonts/**/*.*')
+        .pipe(gulp.dest('../../build/assets/fonts'));
 }
 
 //порядок подключения CSS файлов
