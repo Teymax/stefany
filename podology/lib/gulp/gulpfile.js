@@ -14,6 +14,10 @@ function moveImages(){
     return gulp.src('../../src/assets/img/**/*.*')
         .pipe(gulp.dest('../../build/assets/img'));
 }
+function moveIcons(){
+    return gulp.src('../../src/assets/icon/**/*.*')
+        .pipe(gulp.dest('../../build/assets/icon'));
+}
 function moveFonts(){
     return gulp.src('../../src/assets/fonts/**/*.*')
         .pipe(gulp.dest('../../build/assets/fonts'));
@@ -93,9 +97,11 @@ function watch() {
     // следит за CSS файлами
     gulp.watch('../../src/styles/**/*.sass', styles)
     // следит за Fonts файлами
-    gulp.watch('../../src/styles/fonts/**/*.*', moveFonts)
+    gulp.watch('../../src/assets/fonts/**/*.*', moveFonts)
     // следит за Images файлами
-    gulp.watch('../../src/images/**/*.*', moveImages)
+    gulp.watch('../../src/assets/img/**/*.*', moveImages)
+    // следит за Icon файлами
+    gulp.watch('../../src/assets/icon/**/*.*', moveIcons)
     // следит за JS файлами
     gulp.watch('../../src/js/**/*.js', scripts)
     // при изменении HTML запустить синхронизацию
@@ -113,6 +119,6 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 
 // таск для удаления файлов в папке build и паралельного запуска styles и scripts
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, moveImages, moveFonts, movePug)));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, moveImages, moveIcons, moveFonts, movePug)));
 
 gulp.task('dev', gulp.series('build', 'watch'))
