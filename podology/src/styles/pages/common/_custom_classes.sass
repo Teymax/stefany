@@ -1,208 +1,208 @@
 .icon
-	display: inline-block
-	width: 30px
-	height: 30px
+  display: inline-block
+  width: 30px
+  height: 30px
 
 button:focus
 	outline: none
 
 .circles
-	position: absolute
-	z-index: 1
-	opacity: .3
-	pointer-events: none
+  position: absolute
+  z-index: 1
+  opacity: .3
+  pointer-events: none
 
 .text-dashed
-	border-bottom: 1px dashed #000080
+  border-bottom: 1px dashed #000080
 
 .centered-content
-	display: flex
-	justify-content: center
-	align-items: center
-	flex-direction: column
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
 
 .small-text
-	@include font(Circe, 400, 14, 22)
-	color: $text-color-dark
+  @include font(Circe, 400, 14, 22)
+  color: $text-color-dark
 
 .dark-block
-	background: $bg-color-section-dark-blue
+  background: $bg-color-section-dark-blue
 
 .light-darkness-block
-	background: $text-color-dark
+  background: $text-color-dark
 
 .light-block
-	background: $light-bg
+  background: $light-bg
 
 .info-block
-	padding: 1em 2em
+  padding: 1em 2em
 
 .text-w-bold
-	font-weight: 700 !important
+  font-weight: 700 !important
 
 .text-w-light
-	font-weight: 300 !important
+  font-weight: 300 !important
 
 .info-section
-	padding: 2em 4em
+  padding: 2em 4em
 
-	.row
-		width: 100%
-		margin-bottom: 2em
+  .row
+    width: 100%
+    margin-bottom: 2em
 
-		img
-			display: block
-			width: 5em
+    img
+      display: block
+      width: 5em
 
-		.wrapper
-			display: flex
-			flex: 1
-			margin-left: 1em
-			align-items: center
+    .wrapper
+      display: flex
+      flex: 1
+      margin-left: 1em
+      align-items: center
 
-			span
-				color: #fff
-				text-transform: uppercase
-				@include font(Circe, 600, 13, 20)
+      span
+        color: #fff
+        text-transform: uppercase
+        @include font(Circe, 600, 13, 20)
 
-	p
-		color: #fff
-		@include font(Circe, 100, 14, 24)
+  p
+    color: #fff
+    @include font(Circe, 100, 14, 24)
 
 .text-w-regular
-	font-weight: 400 !important
+  font-weight: 400 !important
 
 .text-color-light
-	color: $text-color-white !important
+  color: $text-color-white !important
 
 .text-color-lightgray
-	color: $text-color-lightgrey
+  color: $text-color-lightgrey
 
 .text-color-dark
-	color: $text-color-dark !important
+  color: $text-color-dark !important
 
 .paragraph-text
-	@include font(Circe, 400, 16, 26)
-	color: $text-color-white
+  @include font(Circe, 400, 16, 26)
+  color: $text-color-white
 
 .h1-title
-	@include font(CormorantGaramond, bold, 44, 53)
-	color: $text-color-white
+  @include font(CormorantGaramond, bold, 44, 53)
+  color: $text-color-white
 
 .h2-title
-	@include font(CormorantGaramond, bold, 34, 53)
-	color: $text-color-white
+  @include font(CormorantGaramond, bold, 34, 53)
+  color: $text-color-white
 
 .h3-title
-	@include font(Circe, 400, 20, 24)
-	color: $text-color-white
+  @include font(Circe, 400, 20, 24)
+  color: $text-color-white
 
 .shadow
-	box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
+  box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
 
 .row-numbered
-	display: flex
-	flex-wrap: wrap
+  display: flex
+  flex-wrap: wrap
 
-	div
-		display: flex
-		flex-direction: column
-		align-items: center
-		position: relative
+  div
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
 
-		&:nth-child(1)
-			img
-				width: 15em
+    &:nth-child(1)
+      img
+        width: 15em
 
-		&:nth-child(2)
-			img
-				width: 8em
+    &:nth-child(2)
+      img
+        width: 8em
 
-		&:nth-child(3)
-			img
-				width: 8em
+    &:nth-child(3)
+      img
+        width: 8em
 
-		&:nth-child(4)
-			img
-				width: 14em
+    &:nth-child(4)
+      img
+        width: 14em
 
-		img
-			height: auto
-			position: absolute
+    img
+      height: auto
+      position: absolute
 
-		h3
-			text-transform: uppercase
-			text-align: center
-			margin-top: 10.8em
-			@include font(Circe, 600, 20, 30)
-			color: $dark-gray
+    h3
+      text-transform: uppercase
+      text-align: center
+      margin-top: 10.8em
+      @include font(Circe, 600, 20, 30)
+      color: $dark-gray
 
-		p
-			text-align: center
-			@include font(Circe, 400, 14, 20)
-			color: $secondary-header-color
+    p
+      text-align: center
+      @include font(Circe, 400, 14, 20)
+      color: $secondary-header-color
 
 .h4-title
-	@include font(CormorantGaramond, 400, 24, 34)
-	color: $text-color-white
+  @include font(CormorantGaramond, 400, 24, 34)
+  color: $text-color-white
 
 .bnf-number
-	//padding-bottom: 20px
-	//text-transform: uppercase
-	//letter-spacing: 2px
-	@include font('CormorantGaramond', 700, 75, 75)
-	color: $text-color-white
+  //padding-bottom: 20px
+  //text-transform: uppercase
+  //letter-spacing: 2px
+  @include font('CormorantGaramond', 700, 75, 75)
+  color: $text-color-white
 
 .extralarge-text-bg
-	white-space: nowrap
-	position: absolute
-	@include font(Circe, 900, 321, 377)
-	color: $text-color-white
+  white-space: nowrap
+  position: absolute
+  @include font(Circe, 900, 321, 377)
+  color: $text-color-white
 
 .custom-icon-number
-	display: inline-flex
-	justify-content: center
-	align-items: center
-	width: 55px
-	height: 55px
-	background-color: #EDE1DF
-	border-radius: 50%
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 55px
+  height: 55px
+  background-color: #EDE1DF
+  border-radius: 50%
 
-	p
-		@include font(Circe, 900, 27, 42)
-		color: $text-color-dark
-		transform: translateY(9px)
+  p
+    @include font(Circe, 900, 27, 42)
+    color: $text-color-dark
+    transform: translateY(9px)
 
 .white-block-design
-	position: relative
-	background-color: #fff
+  position: relative
+  background-color: #fff
 
-	img
-		position: absolute
+  img
+    position: absolute
 
-	p
-		@include font(Circe, bold, 27, 42)
-		color: #9FA6BA
+  p
+    @include font(Circe, bold, 27, 42)
+    color: #9FA6BA
 
 .custom-bg-dark
-	background-color: #9FA6BA
+  background-color: #9FA6BA
 
-	p
-		color: #EDE1DF
+  p
+    color: #EDE1DF
 
 .custom-bg-light
-	background-color: #EDE1DF
+  background-color: #EDE1DF
 
-	p
-		color: #9FA6BA
+  p
+    color: #9FA6BA
 
 @include mobile-small
-	.paragraph-text
-		@include font(Circe, 400, 14, 22)
-	.h1-title
-		@include font(CormorantGaramond, bold, 34, 30)
-	.h3-title
-		@include font(Circe, 400, 16, 20)
+  .paragraph-text
+    @include font(Circe, 400, 14, 22)
+  .h1-title
+    @include font(CormorantGaramond, bold, 34, 30)
+  .h3-title
+    @include font(Circe, 400, 16, 20)
 
 //////////////////////////////////////////////
 
@@ -281,136 +281,136 @@ button:focus
 					align-items: center
 
 .custom-icon-number-dark
-	@extend .custom-icon-number
-	background-color: #9FA6BA
+  @extend .custom-icon-number
+  background-color: #9FA6BA
 
 .white-text
-	color: $color-white
+  color: $color-white
 
 .h-center
-	text-align: center
+  text-align: center
 
 .bnf-title
-	padding-bottom: 20px
-	text-transform: uppercase
-	letter-spacing: 2px
-	@include font('Circe-Regular', 400, 20, 24)
+  padding-bottom: 20px
+  text-transform: uppercase
+  letter-spacing: 2px
+  @include font('Circe-Regular', 400, 20, 24)
 
 // bg - style ********
 .bg-settings
-	background-repeat: no-repeat !important
-	background-size: cover !important
-	background-position: center !important
+  background-repeat: no-repeat !important
+  background-size: cover !important
+  background-position: center !important
 
 .no-bg
-	background: transparent !important
+  background: transparent !important
 
 .dashes
-	width: 15em
-	position: absolute
-	pointer-events: none
-	@include mobile-all
+  width: 15em
+  position: absolute
+  pointer-events: none
+  @include mobile-all
 
 .dark-blue
-	color: $secondary-header-color
+  color: $secondary-header-color
 
 .dash
-	width: 5em
-	height: .3em
-	margin-top: 1em
-	margin-bottom: 1.5em
-	background: rgba(125, 137, 158, 0.39)
-	@include mobile-all
-		display: flex
-		align-self: center
+  width: 5em
+  height: .3em
+  margin-top: 1em
+  margin-bottom: 1.5em
+  background: rgba(125, 137, 158, 0.39)
+  @include mobile-all
+    display: flex
+    align-self: center
 
 // list - style ****
 .info-list
-	li
-		position: relative
-		padding-left: 20px
+  li
+    position: relative
+    padding-left: 20px
 
-		&:before
-			position: absolute
-			left: 0
-			top: 9px
-			content: ''
-			width: 5px
-			height: 5px
-			background: $text-color-dark
-			border-radius: 50%
+    &:before
+      position: absolute
+      left: 0
+      top: 9px
+      content: ''
+      width: 5px
+      height: 5px
+      background: $text-color-dark
+      border-radius: 50%
 
 // Icons - style *********
 .icon
-	margin-right: 10px
+  margin-right: 10px
 
 .icon-loc
-	width: 13px
-	height: 17px
+  width: 13px
+  height: 17px
 
 .icon-phone
-	width: 17px
-	height: 16px
+  width: 17px
+  height: 16px
 
 .icon-time
-	width: 17px
-	height: 17px
+  width: 17px
+  height: 17px
 
 .icon-mail
-	width: 17px
-	height: 13px
+  width: 17px
+  height: 13px
 
 .icon-arrow
-	width: 12px
-	margin-left: 6px
+  width: 12px
+  margin-left: 6px
 
 // Play-button - style ********
 .play-btn
-	position: absolute
+  position: absolute
 
-	width: 92px
-	height: 92px
-	background: rgba(58, 64, 91, .8)
-	border-radius: 50%
+  width: 92px
+  height: 92px
+  background: rgba(58, 64, 91, .8)
+  border-radius: 50%
 
-	&-orange
-		background: $color-orange-opacity
+  &-orange
+    background: $color-orange-opacity
 
-	span
-		width: 20px
-		height: 20px
-		background: $play-btn-color
-		clip-path: polygon(0 0, 0% 100%, 100% 50%)
+  span
+    width: 20px
+    height: 20px
+    background: $play-btn-color
+    clip-path: polygon(0 0, 0% 100%, 100% 50%)
 
 // border - style ********
 .border-b-light
-	border-bottom: 2px solid $border-bottom-bg
+  border-bottom: 2px solid $border-bottom-bg
 
 .br-100
-	border-radius: 100px
+  border-radius: 100px
 
 // city-items - style ******
 .city-item
-	display: none !important
+  display: none !important
 
 .city-active
-	display: flex !important
+  display: flex !important
 
 // inputs - style ******
 .field
-	padding: 12px 20px
-	background: $input-bg
-	border-radius: 4px
-	border: none !important
-	outline: none !important
+  padding: 12px 20px
+  background: $input-bg
+  border-radius: 4px
+  border: none !important
+  outline: none !important
 
-	&textarea
-		height: 164px
+  &textarea
+    height: 164px
 
 // slider-block - style **
 .slider-pad
-	padding-left: 47px
-	padding-right: 47px
+  padding-left: 47px
+  padding-right: 47px
 
 .slider-block
 	.owl-dots
@@ -469,10 +469,58 @@ button:focus
 				background-size: contain !important
 
 @media (min-width: 1200px)
-	.hidden-item
-		display: none
+  .hidden-item
+    display: none
 
 @media (max-width: 1200px)
-	.px-15
-		padding-left: 15px !important
-		padding-right: 15px !important
+  .px-15
+    padding-left: 15px !important
+    padding-right: 15px !important
+
+// services
+
+.section-bg-dark
+  background-color: $section-bg-dark
+
+section.section-services
+  padding: 2.5rem 0
+
+.page-title
+  color: $secondary-header-color
+  @include font(Circe, 700, 40, 40)
+  @include mobile-all
+    @include font(Circe, 700, 20, 29)
+
+.section-title
+  @include font(Circe, 700, 30, 120%)
+  @include mobile-all
+    @include font(Circe, 700, 20, 120%)
+
+.text-dark-1
+  color: $secondary-header-color
+
+.section-services-treatment-row-padding
+  padding: 67px 0
+
+// end of services
+ul.list-blue-bullets
+  list-style: none
+  padding-left: 1rem
+  li::before
+    content: "\2022"  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $forward-buutton /* Change the color */
+    font-weight: bold /* If you want it to be bold */
+    display: inline-block /* Needed to add space between the bullet and the text */
+    width: 1rem /* Also needed for space (tweak if needed) */
+    margin-left: -1rem
+    margin-top: -0.1rem
+    font-size: 1.8rem
+    line-height: 1rem
+    vertical-align: middle
+
+
+//.paragraph-text
+//  @include font(Circe, 400, 16, 26)
+//  color: $secondary-header-color
+//  @include mobile-all
+//    @include font(Circe, 400, 14, 26)
