@@ -1,5 +1,14 @@
 // Icons - style header *********
-
+header
+	a
+		color: $secondary-header-color
+		text-decoration: none
+		&:hover
+			text-decoration: none
+			color: $secondary-header-color
+	@include media-breakpoint-up(lg)
+		.btn-callback
+			width: 14em
 .icon
 	margin-right: 10px
 
@@ -116,7 +125,10 @@ ul.dropdown-menu-list
 	padding: 30px 25px
 	background: $color-white
 	border-radius: 4px
-	box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15)
+	box-shadow: 0 20px 50px rgba(18, 18, 18, 0.15)
+	margin:
+		top: 2rem
+		bottom: 2rem
 
 	&::before
 		content: ''
@@ -132,6 +144,8 @@ ul.dropdown-menu-list
 	li
 		a
 			white-space: nowrap
+
+			font-weight: normal
 
 		&:not(:last-child)
 			padding-bottom: 15px
