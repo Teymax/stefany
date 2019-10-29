@@ -1,0 +1,68 @@
+section.section.service-consultation
+  padding-bottom: 0
+  & .custom-icon-number
+    width: 21px
+    height: 21px
+    background-color: #4D5259
+    p
+      @include font (Circe, bold, 16, 26)
+  & .consultation-top
+    background-color: #9FA6BA
+    margin-bottom: 167px
+    .container
+      position: relative
+      p.before
+        margin-bottom: 2.5rem
+        &::before
+          content: ''
+          display: block
+          height: 2px
+          width: 90px
+          background-color: rgba(255, 255, 255, 0.26)
+          position: relative
+          top: 45px
+
+
+      .white-block-design
+        width: 465px
+        height: 669px
+        img
+        & .extralarge-text-bg
+          z-index: 10 
+          margin-left: 42px
+          margin-top: 422px
+          
+
+  & .consultation-middle
+    background-color: #A9A8C6
+    & .container
+      p.before
+        margin-bottom: 2.5rem
+        &::before
+          content: ''
+          display: block
+          height: 2px
+          width: 90px
+          background-color: rgba(255, 255, 255, 0.26)
+          position: relative
+          top: -23px
+      .c-li
+        &:nth-of-type(3) 
+          .custom-icon-number
+            position: relative;
+            top: -11px
+          .last-item
+            width: 100%  
+            margin-left: -20px
+            text-indent: 37px     
+      .white-block-design
+        width: 563px
+        height: 731px
+        margin-left: 30px
+        img
+          top: -69px
+          left: -37px
+  & .info-list
+    li
+      &:before
+        background: $text-color-white
