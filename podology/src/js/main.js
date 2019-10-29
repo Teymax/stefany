@@ -4,7 +4,6 @@ $( document ).ready( function () {
     var idx = $e.index()
     var itemsPerSlide = 4
     var totalItems = $( '.carousel-item' ).length
-
     if ( idx >= totalItems - ( itemsPerSlide - 1 ) ) {
       var it = itemsPerSlide - ( totalItems - idx )
       for ( var i = 0; i < it; i++ ) {
@@ -32,6 +31,7 @@ $( document ).ready( function () {
     $( this ).toggleClass( 'open' )
     $( 'header' ).toggleClass( 'open' )
   } )
+
   $( '.drop-menu' ).click( function ( e ) {
     e.preventDefault()
     $( '.drop-menu:not(.open)' ).removeClass( 'open' )
@@ -71,6 +71,42 @@ $( document ).ready( function () {
         items: 4
       }
     }
+  } )
+
+  $( '.salon-photos-slider' ).owlCarousel( {
+    center    : true,
+    items     : 3,
+    loop      : true,
+    margin    : 15,
+    responsive: {
+      0   : {
+        items: 1
+      },
+      575 : {
+        items: 1
+      },
+      993 : {
+        items: 1.5
+      },
+      1400: {
+        items: 2
+      },
+      2000: {
+        items: 4
+      }
+    }
+  } )
+
+  $( '.card-header' ).on( 'click', function () {
+    $( this ).toggleClass( 'active' ).siblings().removeClass( 'active' )
+  } )
+
+  $( '.reviews-slider' ).owlCarousel( {
+    loop  : true,
+    margin: 0,
+    nav   : true,
+    dots  : false,
+    items : 1
   } )
 
   $( '.specialists-slider' ).owlCarousel( {
@@ -135,6 +171,6 @@ $( document ).ready( function () {
   } )
 
   $( '#closeOverlay' ).click( function ( e ) {
-    $('#overlay').hide()
+    $( '#overlay' ).hide()
   } )
 } )

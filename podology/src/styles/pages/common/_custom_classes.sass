@@ -3,6 +3,9 @@
   width: 30px
   height: 30px
 
+button:focus
+	outline: none
+
 .circles
   position: absolute
   z-index: 1
@@ -204,78 +207,78 @@
 //////////////////////////////////////////////
 
 .feet-section
-  display: flex
-  flex-wrap: wrap
+	display: flex
+	flex-wrap: wrap
 
-  .item
-    @include tablet
-      padding: 0
+	.item
+		@include tablet
+			padding: 0
 
-    &:nth-child(1)
-      .c-content
-        padding-left: 4rem
-        background: url('../assets/img/feet-index-1.png') no-repeat center/cover
+		&:nth-child(1)
+			.c-content
+				padding-left: 4rem
+				background: url('../images/img/feet-index-1.png') no-repeat center/cover
 
-    &:nth-child(2)
-      .c-content
-        padding-left: 3rem
-        background: url('../assets/img/feet-index-2.png') no-repeat center/cover
+		&:nth-child(2)
+			.c-content
+				padding-left: 3rem
+				background: url('../images/img/feet-index-2.png') no-repeat center/cover
 
-    &:nth-child(3)
-      .c-content
-        padding-left: 4rem
-        background: url('../assets/img/feet-index-3.png') no-repeat center/cover
+		&:nth-child(3)
+			.c-content
+				padding-left: 4rem
+				background: url('../images/img/feet-index-3.png') no-repeat center/cover
 
-    &:nth-child(4)
-      .c-content
-        padding-left: 3rem
-        background: url('../assets/img/feet-index-4.png') no-repeat center/cover
+		&:nth-child(4)
+			.c-content
+				padding-left: 3rem
+				background: url('../images/img/feet-index-4.png') no-repeat center/cover
 
-    .c-content
-      height: 17em
-      display: flex
-      flex-direction: column
-      justify-content: center
-      padding-left: 1rem
-      position: relative
+		.c-content
+			height: 17em
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding-left: 1rem
+			position: relative
 
-      h3
-        color: $text-color-dark
-        @include font(Circe Bold, 600, 24, 20)
+			h3
+				color: $text-color-dark
+				@include font(Circe Bold, 600, 24, 20)
 
-      p.desc
-        color: $text-color-dark
+			p.desc
+				color: $text-color-dark
 
-      .info-list
-        li
-          color: $text-color-dark
+			.info-list
+				li
+					color: $text-color-dark
 
-          &:before
-            background: $text-color-dark
+					&:before
+						background: $text-color-dark
 
-      .button-forward
-        width: 3em
-        height: 3em
-        background: $forward-buutton
-        border-radius: 50%
-        position: absolute
-        bottom: 1em
-        right: 1em
+			.button-forward
+				width: 3em
+				height: 3em
+				background: $forward-buutton
+				border-radius: 50%
+				position: absolute
+				bottom: 1em
+				right: 1em
 
-        @include mobile-small
-          left: 1em
+				@include mobile-small
+					left: 1em
 
-        &:hover
-          text-decoration: none
+				&:hover
+					text-decoration: none
 
-        &:before
-          content: '→'
-          color: #fff
-          width: 100%
-          height: 100%
-          display: flex
-          justify-content: center
-          align-items: center
+				&:before
+					content: '→'
+					color: #fff
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
 
 .custom-icon-number-dark
   @extend .custom-icon-number
@@ -292,153 +295,6 @@
   text-transform: uppercase
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
-
-// buttons - style *******
-.btn-callback, .btn-send
-  width: 100%
-  max-width: 195px
-  height: 38px
-  padding-right: 18px
-  padding-left: 20px
-  background-imgage: url('../assets/img/background/callback-btn.png')
-  background-repeat: no-repeat
-  background-size: 45px 100%
-  background-position: top right
-  border: 2px solid $color-purple
-  text-decoration: none
-  border-radius: 100px
-  transition: 0.2s linear
-
-  & > span
-    text-decoration: none
-    width: 100%
-    max-width: 120px
-
-    svg
-      width: 13px
-      height: 13px
-
-    .st0
-      fill: $color-purple-text
-      transition: 0.3s ease 0.2s
-
-    span
-      padding-top: 2px
-      @include font('Circe-ExtraBold', 900, 10, 10)
-      text-transform: uppercase
-      letter-spacing: 2px
-      color: $color-purple-text
-      transition: 0.3s ease
-
-  & > svg
-    width: 14px
-    height: 11px
-
-    .st0
-      fill: $color-white
-
-  &:hover
-    background-size: 100% 100%
-    text-decoration: none
-
-    & > span
-      .st0
-        fill: $color-white
-
-      span
-        color: $color-white
-
-.btn-callback-white
-  background: url('../assets/img/background/callback-btn-white.jpg')
-  background-repeat: no-repeat
-  background-size: 45px 100%
-  background-position: top right
-  border: 2px solid $color-white
-
-  & > span
-    span
-      color: $color-white
-
-  & > svg
-    .st0
-      fill: $color-purple
-
-  &:hover
-    background-size: 100% 100%
-    text-decoration: none
-
-    & > span
-      span
-        color: $color-purple
-
-.btn-callback-simple
-  width: auto
-  max-width: 100%
-
-  & > span
-    max-width: 100%
-
-    span
-      padding-right: 23px
-
-.btn-send
-  & > span
-    span
-      padding-left: 8px
-      padding-right: 36px
-
-.button
-  cursor: pointer
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 0 33px
-  height: 38px
-  background: $btn-bg
-  @include font('Circe-ExtraBold', 900, 10, 13)
-  text-transform: uppercase
-  color: $color-white !important
-  letter-spacing: 1.5px
-  border-radius: 100px
-  transition: 0.3s ease
-
-  &:hover
-    box-shadow: 0 0 20px $btn-bg
-
-.soc-btn
-  width: 38px
-  height: 38px
-  background: $soc-btn
-  border-radius: 50%
-  transition: 0.4s ease
-
-  &:hover
-    background: $color-purple
-
-.btn-simple
-  color: $color-white
-  height: 38px
-  padding: 15px 30px
-  font-size: 10px
-  text-transform: uppercase
-  letter-spacing: 2px
-  transition: 0.4s ease
-  background: $color-purple
-
-.btn-simple:hover
-  color: $color-white
-  background: $soc-btn
-
-.btn-simple-light
-  color: $play-btn-color
-  background: transparent
-  border: 2px solid $border-light
-
-  &:hover, &.active
-    color: $color-white
-    background: $color-purple
-    color: $color-white !important
-    border: 2px solid $color-purple
 
 // bg - style ********
 .bg-settings
@@ -557,60 +413,60 @@
   padding-right: 47px
 
 .slider-block
-  .owl-dots
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 100%
-    padding-top: 60px
+	.owl-dots
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		padding-top: 60px
 
-    span
-      display: none
+		span
+			display: none
 
-    .owl-dot
-      width: 8px
-      height: 8px
-      border-radius: 50%
-      background: $border-light
-      transition: 0.3s ease
+		.owl-dot
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: $border-light
+			transition: 0.3s ease
 
-      &:not(:last-child)
-        margin-right: 16px
+			&:not(:last-child)
+				margin-right: 16px
 
-      &:hover, &.active
-        background: $color-purple
+			&:hover, &.active
+				background: $color-purple
 
-      &:focus
-        border: none !important
-        outline: none !important
+			&:focus
+				border: none !important
+				outline: none !important
 
-  .owl-nav
-    position: absolute
-    top: 50%
-    left: 0
-    transform: translateY(-50%)
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 100%
+	.owl-nav
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
 
-    span
-      display: none
+		span
+			display: none
 
-    button
-      width: 30px
-      height: 30px
-      opacity: .4
+		button
+			width: 30px
+			height: 30px
+			opacity: .4
 
-      &.owl-prev
-        background-image: url('../assets/icon/slider-left-arrow.png') !important
-        background-repeat: no-repeat !important
-        background-size: contain !important
+			&.owl-prev
+				background-image: url('../images/icon/slider-left-arrow.png') !important
+				background-repeat: no-repeat !important
+				background-size: contain !important
 
-      &.owl-next
-        background-image: url('../assets/icon/slider-right-arrow.png') !important
-        background-repeat: no-repeat !important
-        background-size: contain !important
+			&.owl-next
+				background-image: url('../images/icon/slider-right-arrow.png') !important
+				background-repeat: no-repeat !important
+				background-size: contain !important
 
 @media (min-width: 1200px)
   .hidden-item

@@ -1,4 +1,17 @@
 section.section.main-laser-service
+  .info-list
+    li
+      position: relative
+      padding-left: 20px
+      &:before
+        position: absolute
+        left: 0
+        top: 9px
+        content: ''
+        width: 5px
+        height: 5px
+        background:
+        border-radius: 50%
   .c-service
     &__service-box
       height: 300px
@@ -23,3 +36,6 @@ section.section.main-laser-service
           image: url("../assets/img/main-service/bg_5.png")
           size: cover
 
+@include mobile-small
+  .h2-title
+    font-size: 34px
