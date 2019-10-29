@@ -14,6 +14,8 @@ section.section.client-feedback
 
 	.slider-block.slider-pad
 		width: 43em
+		@include media-breakpoint-down(md)
+			padding: 0 !important
 
 		.owl-item
 			width: 1195px
@@ -24,6 +26,10 @@ section.section.client-feedback
 					width: 19em
 
 		.owl-nav
+			@include media-breakpoint-down(md)
+				width: 8em
+				top: 6em
+				left: 8em
 			button
 				&.owl-next
 					background: url(../assets/icon/arrow-right-gray.png) !important

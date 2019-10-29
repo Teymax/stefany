@@ -3,12 +3,15 @@ header
 	a
 		color: $secondary-header-color
 		text-decoration: none
+
 		&:hover
 			text-decoration: none
 			color: $secondary-header-color
+
 	@include media-breakpoint-up(lg)
 		.btn-callback
 			width: 14em
+
 .icon
 	margin-right: 10px
 
@@ -142,9 +145,9 @@ ul.dropdown-menu-list
 		background: $color-white
 
 	li
+		margin-bottom: 0 !important
 		a
 			white-space: nowrap
-
 			font-weight: normal
 
 		&:not(:last-child)
@@ -266,7 +269,7 @@ nav.header-nav
 			.dropdown-menu-list
 				width: 100% !important
 				position: static !important
-				display: flex !important
+				display: none !important
 				transform: translateX(0%) !important
 				padding: 0 !important
 				background: transparent !important
@@ -296,6 +299,7 @@ nav.header-nav
 		.drop-menu
 			&.open
 				.dropdown-menu-list
+					display: flex !important
 					padding-top: 10px !important
 
 					li
@@ -372,7 +376,7 @@ nav.header-nav
 		.dropdown-menu-list
 			width: 100% !important
 			position: static !important
-			display: flex !important
+			display: none !important
 			transform: translateX(0%) !important
 			padding: 0 !important
 			background: transparent !important
@@ -408,7 +412,7 @@ nav.header-nav
 		&.open
 			.dropdown-menu-list
 				padding-top: 10px !important
-
+				display: flex
 				li
 					&:not(:last-child)
 						padding-bottom: 5px !important
