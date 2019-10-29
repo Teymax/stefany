@@ -1,19 +1,19 @@
 section.section.consultaion.service-consultation
   .container.d-flex.flex-column.flex-wrap.align-items-center
-    .col-5.d-flex.flex-column.align-items-center
+    .col-12.col-lg-6.d-flex.flex-column.align-items-center
       h2.white-text.text-center.mb-3 Запишись на консультацию <strong>прямо сейчас бесплатно!</strong>
       .dash.dash-white
-    .col-7.d-flex.flex-column.align-items-center
-      p.white-text.text-center.mb-5 Раздел медицины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.
-      +btnCallback('перезвонить мне')
-
-    //.col-12.col-lg-5
-    //  .callback-card
-    //    h3 Оставьте ваши данные
-    //    p и мы вам перезвоним
-    //    form(method="post" action="/")
-    //      input(type="text" placeholder="Имя")
-    //      input(type="email" placeholder="Email")
-    //      input(type="tel" placeholder="Телефон").mb-4
-    //      input(type="submit" style="display: none")
-    //      +btnCallback('перезвонить мне')
+    .col-12.col-lg-7.d-flex.flex-column.align-items-center
+      p.white-text.text-center.mb-5 Раздел медицcины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.
+      .btn-container.d-none.d-md-block.btn-arrow-dark
+        +btnCallback('перезвонить мне').dick
+      .col-12.d-block.d-md-none
+        .callback-card.btn-callback-w-100
+          h3 Оставьте ваши данные
+          p и мы вам перезвоним
+          form(method="post" action="/")
+            input(type="text" placeholder="Имя")
+            input(type="email" placeholder="Email")
+            input(type="tel" placeholder="Телефон").mb-4
+            input(type="submit" style="display: none")
+            +btnCallback('перезвонить мне')
