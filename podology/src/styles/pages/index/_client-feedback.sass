@@ -1,0 +1,38 @@
+section.section.client-feedback
+	.container
+		position: relative
+
+	#quote
+		width: 3em
+		height: auto
+
+	#circles
+		top: -25em
+		width: 87em
+		height: auto
+		display: block
+
+	.slider-block.slider-pad
+		width: 43em
+		@include media-breakpoint-down(md)
+			padding: 0 !important
+
+		.owl-item
+			width: 1195px
+
+			img
+				width: 39em
+				@include media-breakpoint-down(md)
+					width: 19em
+
+		.owl-nav
+			@include media-breakpoint-down(md)
+				width: 8em
+				top: 6em
+				left: 8em
+			button
+				&.owl-next
+					background: url(../assets/icon/arrow-right-gray.png) !important
+
+				&.owl-prev
+					background: url(../assets/icon/arrow-left-gray.png) !important
