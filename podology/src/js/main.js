@@ -119,7 +119,7 @@ $( document ).ready( function () {
         items: 1
       },
       575: {
-        items: 2
+        items: 1
       },
       993: {
         items: 4
@@ -172,5 +172,9 @@ $( document ).ready( function () {
 
   $( '#closeOverlay' ).click( function ( e ) {
     $( '#overlay' ).hide()
+  } )
+
+  $( '#checkbox' ).change( function ( e ) {
+    $( this ).parent().toggleClass( 'checked' )
   } )
 } )

@@ -1,6 +1,8 @@
 .callback-card
 	background: $dark-gray
 	padding: 4em
+	@include media-breakpoint-down(lg)
+		padding: 1.5em
 
 	h3,
 	p
@@ -10,7 +12,7 @@
 		margin-bottom: 2rem
 
 	h3
-		@include font(Circe, 600, 24, 20)
+		@include font(Circe, 600, 24, 26)
 
 	form
 		display: flex
