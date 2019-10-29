@@ -23,16 +23,6 @@ function moveFonts(){
         .pipe(gulp.dest('../../build/assets/fonts'));
 }
 
-function moveImages () {
-  return gulp.src( '../../src/images/**/*.*' )
-             .pipe( gulp.dest( '../../build/images' ) )
-}
-
-function moveFonts () {
-  return gulp.src( '../../src/styles/fonts/**/*.*' )
-             .pipe( gulp.dest( '../../build/css/fonts' ) )
-}
-
 //порядок подключения CSS файлов
 const cssFiles = [
     '../../src/styles/**/*.sass',
