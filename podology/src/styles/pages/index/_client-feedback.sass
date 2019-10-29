@@ -1,0 +1,32 @@
+section.section.client-feedback
+	.container
+		position: relative
+
+	#quote
+		width: 3em
+		height: auto
+
+	#circles
+		top: -25em
+		width: 87em
+		height: auto
+		display: block
+
+	.slider-block.slider-pad
+		width: 43em
+
+		.owl-item
+			width: 1195px
+
+			img
+				width: 39em
+				@include media-breakpoint-down(md)
+					width: 19em
+
+		.owl-nav
+			button
+				&.owl-next
+					background: url(../images/icon/arrow-right-gray.png) !important
+
+				&.owl-prev
+					background: url(../images/icon/arrow-left-gray.png) !important

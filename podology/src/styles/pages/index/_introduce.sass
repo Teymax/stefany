@@ -1,0 +1,65 @@
+section.section.introduce
+	@include media-breakpoint-up(md)
+		height: 84vh
+		.btn-callback
+			width: 14em
+	@include media-breakpoint-down(md)
+		padding: 0
+	.info-list
+		li
+			&:before
+				background: $text-color-dark
+
+	.feet
+		position: absolute
+		z-index: -1
+		display: block
+		@include mobile-all
+			display: none
+
+	#feetOne
+		top: 0
+		right: 0
+		width: 50em
+		height: auto
+
+	#feetTwo
+		top: 2em
+		width: 25em
+
+	.container
+		position: relative
+		@include mobile-all
+			padding: 0 !important
+
+		#circles
+			position: absolute
+			top: 1.9em
+			left: 10em
+			width: 60em
+
+		.card
+			background: #303947
+			padding: 4em 3em
+			position: relative
+			@include mobile-all
+				padding: 1em 3em
+				border-radius: 0
+
+			h1
+				@include font(Circe, 300, 60, 55)
+				@include tablet
+					font-size: 50px
+				@include mobile-all
+					font-size: 40px
+
+				strong
+					color: #4f79ca
+					font-weight: 600
+
+			.call-me
+				margin-bottom: 5em
+
+			.intro-dashes
+				bottom: 0
+				right: 3em

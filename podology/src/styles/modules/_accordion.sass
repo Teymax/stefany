@@ -1,0 +1,64 @@
+section.section.faq
+	padding-top: 72px
+	padding-bottom: 84px
+	background: url(../images/img/background/faq-bg.png) no-repeat
+	background-size: cover
+
+	.card-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		cursor: pointer
+		margin-bottom: 1rem
+		//position: relative
+		background-color: rgba(85, 98, 120, .3)
+		padding: 0
+
+		p
+			padding: .35rem 1.25rem
+			margin-bottom: 0
+
+		.card-header
+			display: none
+
+	.card-body
+		background: $card-body
+		margin-bottom: 1rem
+
+		h3
+			font-size: 16px
+
+		hr
+			background: #fff
+			color: #fff
+			opacity: .5
+
+	.card-header
+		&.active
+			.card-arrow
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+
+				&:before
+					transform: rotate(180deg)
+
+	.card-arrow
+		min-width: 64px
+		width: 64px
+		height: 64px
+		background-color: $card-body
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&:before
+			content: ' '
+			display: block
+			background-image: url("../images/icon/accordion-arrow.png")
+			background-repeat: no-repeat
+			width: 13px
+			height: 9px
+			transition: transform .3s
+
+	.btn:focus
+		outline: none !important
+		box-shadow: none !important
