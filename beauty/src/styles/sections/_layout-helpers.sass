@@ -27,7 +27,7 @@ body
 // text - style *******
 	
 .paragraph-text-light
-  @include font(Circe, 400, 16, 26)
+  @include font ('Circe-Regular', 300, 16, 26)
   color: $text-color-white
 
 .link-text-light
@@ -39,7 +39,7 @@ body
   &:hover
     color: $breadcrump-color !important
 .paragraph-text-dark
-  @include font(Circe, 400, 16, 26)
+  @include font ('Circe-Regular', 300, 16, 26)
   color: $text-color-dark
 .text-lightdark
   color: $breadcrump-color !important
@@ -53,12 +53,12 @@ body
   color: $text-color-white
 
 .section-title-light
-  @include font(Circe, bold, 44, 45)
+  @include font ('Circe-Bold', 700, 44, 45)
   color: $text-color-white
   transition: 0.3s ease
 
 .section-title-dark
-  @include font(Circe, bold, 44, 45)
+  @include font ('Circe-Bold', 700, 44, 45)
   color: $text-color-dark
 
 .proccess-info

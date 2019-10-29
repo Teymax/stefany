@@ -10857,9 +10857,9 @@ body {
     overflow: hidden; }
 
 .paragraph-text-light {
-  font-family: "Circe";
+  font-family: "Circe-Regular";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 26px;
   color: #ffffff; }
@@ -10883,9 +10883,9 @@ body {
     color: #4D5259 !important; }
 
 .paragraph-text-dark {
-  font-family: "Circe";
+  font-family: "Circe-Regular";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 26px;
   color: #556278; }
@@ -10907,9 +10907,9 @@ body {
   color: #ffffff; }
 
 .section-title-light {
-  font-family: "Circe";
+  font-family: "Circe-Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 44px;
   line-height: 45px;
   color: #ffffff;
@@ -10917,9 +10917,9 @@ body {
   transition: 0.3s ease; }
 
 .section-title-dark {
-  font-family: "Circe";
+  font-family: "Circe-Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 44px;
   line-height: 45px;
   color: #556278; }
@@ -12807,13 +12807,19 @@ section.section.consultation-form {
   .specialists-item-container:hover .specialists-info {
     opacity: 1; }
 
+.conteiner-s {
+  max-width: 860px !important; }
+
 .course-info {
-  padding: 57px 0 90px;
-  background: #EBF4FB; }
+  background-image: url("../images/img/padalogy/learning/course-info-bg.png");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 57px 0 64px; }
 
 h2.section-title {
-  padding-bottom: 12px;
-  font-family: "Circe";
+  padding-bottom: 2px;
+  font-family: "Circe-Bold";
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -12821,29 +12827,64 @@ h2.section-title {
   color: #556278; }
 
 h3.section-subtitle {
-  padding-bottom: 57px;
-  font-family: "Circe";
+  padding-bottom: 37px;
+  font-family: "Circe-Regular";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #556278; }
 
-.info-list li {
+.info-list-item {
   position: relative;
-  padding-left: 20px; }
-  .info-list li:before {
+  padding-left: 20px !important; }
+  .info-list-item:before {
     position: absolute;
-    left: 0;
+    left: 3px;
     top: 9px;
     content: '';
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background: #4D5259;
     border-radius: 50%; }
 
 .extrabold {
   font-family: 'Circe-ExtraBold'; }
+
+.course-info-titles {
+  position: relative; }
+  .course-info-titles p {
+    position: relative;
+    z-index: 2; }
+    .course-info-titles p.extrabold {
+      text-transform: uppercase; }
+  .course-info-titles::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: -28px;
+    left: -37px;
+    width: 109px;
+    height: 109px;
+    background: #D3E1EC;
+    border-radius: 100%;
+    opacity: 0; }
+
+.course-info-cnt .info-list-item {
+  padding-bottom: 26px !important; }
+
+@media (max-width: 991px) {
+  .course-info {
+    background: #EBF4FB; } }
+
+@media (max-width: 767px) {
+  .course-info-titles::before {
+    opacity: 1; }
+  .course-info-cnt {
+    max-width: 437px; }
+    .course-info-cnt .l-one {
+      padding-bottom: 60px !important; } }
 
 .program {
   background: url("../images/img/background/program-bg.jpg");
@@ -12963,6 +13004,172 @@ h3.section-subtitle {
     min-width: 50px !important;
     margin-right: 15px !important;
     font-size: 12px !important; } }
+
+.metodists {
+  background-image: url("../images/img/padalogy/learning/metodists-bg.png");
+  background-size: cover;
+  background-position: top -120px center;
+  background-repeat: no-repeat;
+  padding: 69px 0 72px;
+  margin-top: -9px;
+    margin-top-max-width: 304px !important;
+    margin-top-padding-left: 10px !important; }
+  .metodists .container {
+    max-width: 1290px !important; }
+  .metodists .section-title {
+    padding-bottom: 30px;
+    margin-bottom: 55px;
+    font-family: "Circe-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    color: #556278; }
+  .metodists .text-border-b {
+    position: relative; }
+    .metodists .text-border-b::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 44.5px);
+      display: block;
+      width: 100%;
+      max-width: 89px;
+      height: 4px;
+      background: rgba(125, 137, 158, 0.39); }
+  .metodists .metodist-block {
+    max-width: 610px !important; }
+    .metodists .metodist-block .extrabold {
+      font-size: 20px !important; }
+  .metodists .metodist-img {
+    max-width: 287px !important; }
+  .metodists .info-list-item {
+    position: relative;
+    padding-left: 20px !important;
+    padding-bottom: 8px !important; }
+    .metodists .info-list-item:before {
+      position: absolute;
+      left: 3px;
+      top: 9px;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #4D5259;
+      border-radius: 50%; }
+
+@media (max-width: 1199px) {
+  .metodists .metodist-block {
+    max-width: 100% !important;
+    margin-bottom: 50px !important; }
+    .metodists .metodist-block .metodist-img {
+      margin-right: 15px; }
+    .metodists .metodist-block > .row {
+      -webkit-box-pack: start !important;
+              justify-content: flex-start !important; } }
+
+@media (max-width: 630px) {
+  .metodists .metodist-block .metodist-img {
+    margin-right: 0 !important;
+    margin-bottom: 30px !important;
+    max-width: 100% !important; }
+  width: 100% !important; }
+
+.course-benefits {
+  background-image: url("../images/img/padalogy/learning/course-benefits-bg.jpg");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 69px 0 72px; }
+  .course-benefits .contaner {
+    max-width: 1083px !important; }
+  .course-benefits .section-title {
+    padding-bottom: 44px;
+    font-family: "Circe-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    color: #556278; }
+  .course-benefits .btn-callback {
+    max-width: 238px !important;
+    padding-right: 28px;
+    padding-left: 45px;
+    background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 62px, #7B9DDD 0, #7B9DDD); }
+
+.course-benefits-cnt {
+  max-width: 625px;
+  background-image: url("../images/img/padalogy/learning/dash.png");
+  background-size: 294px;
+  background-position: bottom 5px right 80px;
+  background-repeat: no-repeat; }
+  .course-benefits-cnt .info-list-item {
+    position: relative;
+    padding-left: 20px !important;
+    padding-bottom: 11px !important; }
+    .course-benefits-cnt .info-list-item:before {
+      position: absolute;
+      left: 3px;
+      top: 9px;
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #4D5259;
+      border-radius: 50%; }
+
+.course-price {
+  font-family: "Circe-Light";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #556278; }
+  .course-price span {
+    margin-left: 15px;
+    width: 109px;
+    height: 109px;
+    background: transparentize;
+    font-family: "Circe-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2E3746;
+    border-radius: 50%; }
+
+.height-50 {
+  height: 50px !important; }
+
+@media (max-width: 991px) {
+  .course-benefits {
+    background: #EBF4FB; } }
+
+@media (max-width: 767px) {
+  .course-benefits-cnt {
+    background-size: 190px;
+    background-position: bottom 30px right 80px; }
+  .course-price {
+    margin-top: 5px;
+    margin-bottom: 10px; }
+    .course-price span {
+      background: #7B9DDD;
+      font-size: 20px  !important;
+      line-height: 20px !important;
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.11);
+      color: #ffffff !important; } }
+
+@media (max-width: 400px) {
+  .course-price {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column; }
+    .course-price span {
+      margin-left: 0;
+      margin-top: 15px; }
+  .callback-wrap .btn-callback {
+    margin: 0 auto !important; } }
 
 footer.footer {
   padding-top: 30px; }

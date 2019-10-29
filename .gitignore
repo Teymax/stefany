@@ -3,8 +3,6 @@ node_modules/
 .idea/*
 .history/
 .history/*
-./*/build/*
-!./*/build/assets/
-package-lock.json
+*/build
 */build/*
-!*/build/assets
+package-lock.json
