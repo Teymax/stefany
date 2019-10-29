@@ -25,6 +25,18 @@ section.section.discount
         height: 140px
         background-color: #A9A8C6
         transform: rotate(45deg)
+      .c-text
+        position: absolute
+        top: 13px
+        left: 11px
+        transform: rotate(-45deg)
+        .d-text
+          @include font (Circe, 900, 10, 0)
+          color: #fff
+        .d-number
+          @include font (Circe, 900, 18, 0)
+          color: #fff
+
       @include media-breakpoint-down(lg)
         max-width: 430px
         margin:
@@ -57,16 +69,20 @@ section.section.discount
             bottom: 30px
         .c-btn
 
-@include media-breakpoint-down(xs)
+@include media-breakpoint-down(sm)
   section.section.discount
     padding-top: 65px
     padding-bottom: 25px
     .container
       .c-content
+        max-width:  285px
         .d-discount
-          max-width: 430px
-          margin:
-            left: auto
-            right: auto
-            bottom: 30px
         .c-btn
+          position: relative
+          .btn
+            position: absolute
+          .btn-first
+            left: -41px
+          .btn-second
+            right: -44px
+

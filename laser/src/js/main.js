@@ -68,20 +68,24 @@ $(document).ready(function(){
 			}
 		}
 	});
-
+// accordion
   $(".card-header").on('click', function(){
     $(this).toggleClass('active').siblings().removeClass('active')
   });
-
+//menu-trigger
   $('.menu-trigger').click(function(e){
     $(this).toggleClass('open');
     $('header').toggleClass('open');
     $('body').toggleClass('fixed');
   });
-
+//drop-menu
   $('.drop-menu').click(function(){
     $('.drop-menu').not($(this)).removeClass('open');
     $(this).toggleClass('open');
+  });
+//checkbox
+  $( '#checkbox' ).change( function ( e ) {
+    $( this ).parent().toggleClass( 'checked' )
   });
 });
 

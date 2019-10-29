@@ -3,31 +3,63 @@ section.section.four-boxes-01
   padding-bottom: 78px
   background-image: url("../images/img/background/advantages-bg.jpg")
   background-size: cover
-  @include media-breakpoint-down(lg)
-    padding-top: 86px
-  @include media-breakpoint-down(xs)
-    padding-top: 49px
-    padding-bottom: 50px
   .container
     .c-boxes
-      .c-card
+      img
+        position: absolute
+      &:nth-of-type(1)
         img
-          @include mobile-all
-            margin-left: auto
-            margin-right: auto
-            margin-bottom: -156px
-          @include tablet
-            margin-left: -30px
-          @include desktop
-            margin-left: -40px
-        @include mobile-all
-          max-width: 300px
-          margin: 0 auto
+          left: -27px
+      &:nth-of-type(2)
+        img
+          left: -24px
+          top: -20px
+      &:nth-of-type(3)
+        img
+          left: -75px
+      &:nth-of-type(4)
+        img
+          left: -59px
+          top: -37px
+      .c-desc
+        max-width: 395px
+
+
+@include media-breakpoint-down(xs)
+  section.section.four-boxes-01
+    padding-top: 86px
+    .container
+      .c-boxes
+        &:nth-child(1):before
+          content: url("../images/img/four-boxes/four-box_01-mob.png")
+          position: absolute
+          top: -15px
+          right: 100px
+        &:nth-child(2):before
+          content: url("../images/img/four-boxes/four-box_02-mob.png")
+          position: absolute
+          top: -38px
+          right: 108px
+        &:nth-child(3):before
+          content: url("../images/img/four-boxes/four-box_03-mob.png")
+          position: absolute
+          top: -15px
+          right: 62px
+        &:nth-child(4):before
+          content: url("../images/img/four-boxes/four-box_04-mob.png")
+          position: absolute
+          top: -38px
+          right: 119px
+        .c-card
         .c-desc
-          @include media-breakpoint-down(lg)
-            max-width: 427px
-          @include media-breakpoint-down(xs)
-            max-width: 395px
+          max-width: 290px
+          margin:
+            left: auto
+            right: auto
+            top: 90px
+
+
+
 
 
 section.section.four-boxes-02
@@ -54,20 +86,20 @@ section.section.four-boxes-03
   overflow: hidden
   background-color: #fff
   background-size: cover
-  .c-boxes 
+  .c-boxes
     &:nth-of-type(1)
-      img 
+      img
         position: absolute
         left: -30px
     &:nth-of-type(2)
-      img 
+      img
         position: absolute
         left: -30px
     &:nth-of-type(3)
-      img 
+      img
         position: absolute
         left: -86px
     &:nth-of-type(4)
-      img 
+      img
         position: absolute
         left: -55px

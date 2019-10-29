@@ -6,7 +6,7 @@ section.section.service-laser-personal
       .specialists-slider.owl-carousel.slider-block.slider-pad
         - let arrPersonal = [{name:"Ксения Станиславская", img:"slider2"},{name:"Демчук Виктория",img:"slider1"},{name:"Ирина Гутель",img:"slider3"},{name:"Андриевич Ульяна",img:"slider4"},{name:"Ксения Станиславская", img:"slider2"},{name:"Демчук Виктория",img:"slider1"},{name:"Ирина Гутель",img:"slider3"},{name:"Андриевич Ульяна",img:"slider4"}];
             each element in arrPersonal
-                -let path = "./assets/img/service-laser-page/" + element.img + ".png"
+                -let path = "./images/img/service-laser-page/" + element.img + ".png"
                     .specialists-item.d-flex.flex-column.align-items-center
                         .specialists-item-container.mb-3.w-100(href = path, data-fancybox="" )
                             .specialists-img.w-100

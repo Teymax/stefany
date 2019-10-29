@@ -5,7 +5,6 @@ section.section.consultation-form
     size: cover
   .container
     .c-content
-      margin-top: 65px
       .c-title
         width: 100%
         max-width: 500px
@@ -16,29 +15,33 @@ section.section.consultation-form
       max-width: 390px
       background-color: #EDE1DF
       border-radius: 5px 5px 0 0
-      &:before
-        content: url("../images/img/logo-bg.png")
-        position: absolute
-        bottom: -7px
+      overflow: hidden
+      //&:before
+      //  content: url("../images/img/logo-bg.png")
+      //  position: absolute
+      //  bottom: -7px
       .form-control
         background-color: rgba(77, 82, 89, .2)
         width: 252px
 
     .small-label
       @include font(Circe, 400, 12, 22)
-      margin-bottom: 96px
     .input::placeholder
       color: $text-color-white
-
+    .btn-callback
+      background-image: linear-gradient(to right, transparent 81%, #F6AE9F 24%)
+      max-width: 250px
 
 @include media-breakpoint-down(lg)
   section.section.consultation-form
+    padding-top: 63px
     .container
       .main-form
         border-radius: 0
 
 @include media-breakpoint-down(xs)
   section.section.consultation-form
+    padding-top: 65px
     .container
       max-width: 100%
       .media-gutters

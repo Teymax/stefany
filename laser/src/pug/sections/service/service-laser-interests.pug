@@ -9,9 +9,9 @@ section.section.service-laser-interests.pt-0.pb-6
                 .diploma-slider.owl-carousel.slider-block
                     - let arrInterests = [{name:"SPA массажи", img:"interests1",hover:""},{name:"Чистка лица",img:"interests2",hover:"interests2hover"},{name:"Карбокси косметология",img:"interests3",hover:""},{name:"SPA пиллинги",img:"interests4",hover:"interests4hover"},{name:"SPA массажи", img:"interests1",hover:""},{name:"Чистка лица",img:"interests2",hover:"interests2hover"},{name:"Карбокси косметология",img:"interests3",hover:""},{name:"SPA пиллинги",img:"interests4",hover:"interests4hover"},{name:"SPA массажи", img:"interests1",hover:""},{name:"Чистка лица",img:"interests2",hover:"interests2hover"},{name:"Карбокси косметология",img:"interests3",hover:""},{name:"SPA пиллинги",img:"interests4",hover:"interests4hover"},{name:"SPA массажи", img:"interests1",hover:""},{name:"Чистка лица",img:"interests2",hover:"interests2hover"},{name:"Карбокси косметология",img:"interests3",hover:""},{name:"SPA пиллинги",img:"interests4",hover:"interests4hover"}];
                         each element in arrInterests
-                            - let interestsPath = "./assets/img/service-laser-page/" + element.img + ".png"
+                            - let interestsPath = "./images/img/service-laser-page/" + element.img + ".png"
                                 if element.hover
-                                    - let hoverImagepath = "./assets/img/service-laser-page/" + element.hover + ".png"
+                                    - let hoverImagepath = "./images/img/service-laser-page/" + element.hover + ".png"
                                         a.diploma-item(href=interestsPath, data-fancybox="" )
                                             img.main-image.w-100(src=interestsPath, alt="interests-image")
                                             img.hover-image.w-100(src=hoverImagepath, alt="interests-image")
