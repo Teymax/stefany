@@ -1,7 +1,7 @@
 section.section.faq
 	padding-top: 72px
 	padding-bottom: 84px
-	background: url(../images/img/background/faq-bg.png) no-repeat
+	background: url(../assets/img/background/faq-bg.png) no-repeat
 	background-size: cover
 
 	.card-header
@@ -10,7 +10,7 @@ section.section.faq
 		align-items: center
 		cursor: pointer
 		margin-bottom: 1rem
-		position: relative
+		//position: relative
 		background-color: rgba(85, 98, 120, .3)
 		padding: 0
 
@@ -28,7 +28,7 @@ section.section.faq
 		h3
 			font-size: 16px
 
-		hr
+		h
 			background: #fff
 			color: #fff
 			opacity: .5
@@ -42,9 +42,9 @@ section.section.faq
 					transform: rotate(180deg)
 
 	.card-arrow
+		min-width: 64px
 		width: 64px
 		height: 64px
-		//border-radius: 50%
 		background-color: $card-body
 		display: flex
 		align-items: center
@@ -53,7 +53,7 @@ section.section.faq
 		&:before
 			content: ' '
 			display: block
-			background-image: url("../images/icon/accordion-arrow.png")
+			background-image: url("../assets/icon/accordion-arrow.png")
 			background-repeat: no-repeat
 			width: 13px
 			height: 9px
@@ -62,37 +62,3 @@ section.section.faq
 	.btn:focus
 		outline: none !important
 		box-shadow: none !important
-
-@include media-breakpoint-down(lg)
-	section.section.accordion-answer
-		padding-top: 72px
-		padding-bottom: 77px
-
-		.card-header p
-			max-width: 480px
-			margin: 0 auto
-
-		.card-arrpw
-			width: 64px
-			height: 64px
-
-			&:before
-				width: 13px
-				height: 9px
-
-@include media-breakpoint-down(xs)
-	section.section.accordion-answer
-		padding-top: 70px
-		padding-bottom: 48px
-
-		.card-header p
-			max-width: 250px
-			margin: 0 auto
-
-		.card-arrpw
-			width: 76px
-			height: 7664
-
-			&:before
-				width: 13px
-				height: 9px

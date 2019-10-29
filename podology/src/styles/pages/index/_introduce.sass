@@ -1,6 +1,10 @@
 section.section.introduce
-	height: 84vh
-
+	@include media-breakpoint-up(md)
+		height: 84vh
+		.btn-callback
+			width: 14em
+	@include media-breakpoint-down(md)
+		padding: 0
 	.info-list
 		li
 			&:before

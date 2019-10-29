@@ -1,24 +1,51 @@
 section.section.safety
-  padding: 5rem 0
+  padding-top: 76px
+  padding-bottom: 75px
   background:
-    image: url("../assets/img/background/safety-bg.jpg")
+    image: url("../images/img/background/safety-bg.jpg")
     size: cover
   .container
     .c-safety
       .safety-box
         max-width: 517px
+        margin: 0 auto
         z-index: 0
         position: relative
         &:nth-child(1):before
-          content: url("../assets/img/safety/safety-img_1.png")
+          content: url("../images/img/safety/safety-img_1.svg")
           position: absolute
           left: -83px
           top: -100px
           z-index: -1
         &:nth-child(2):before
-          content: url("../assets/img/safety/safety-img_2.png")
+          content: url("../images/img/safety/safety-img_2.svg")
           position: absolute
           left: -110px
           top: -93px
           z-index: -1
+      .c-content
 
+@include media-breakpoint-down(lg)
+  section.section.safety
+    padding-top: 72px
+    padding-bottom: 92px
+@include media-breakpoint-down(xs)
+  section.section.safety
+    padding-top: 72px
+    padding-bottom: 66px
+    .container
+      .c-safety
+        .safety-box
+          max-width: 280px
+          margin: 0 auto
+          z-index: 0
+          position: relative
+          &:nth-child(1):before
+            content: url("../images/img/safety/safety-img_1-mob.svg")
+            left: -105px
+            top: -100px
+          &:nth-child(2):before
+            content: url("../images/img/safety/safety-img_2-mob.svg")
+            left: -105px
+            top: -100px
+        .c-content

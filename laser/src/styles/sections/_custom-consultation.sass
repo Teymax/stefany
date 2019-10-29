@@ -1,0 +1,55 @@
+section.section.custom-consultation
+  background-color: #EDE1DF
+  padding-top: 64px
+  position: relative
+  z-index: 1
+  .custom-icon-number
+    width: 27px
+    height: 27px
+    p
+      @include font (Circe, bold, 16, 26)
+      color: #fff
+  .container
+    .c-content
+      margin-top: 104px
+    .white-block-design
+      width: 504px
+      height: 704px
+      margin-left: auto
+      z-index: -1
+      img
+        top: 67px
+        right: 63px
+        box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
+      .extralarge-text-bg
+        left: -400px
+        bottom: 57px
+    @include mobile-all
+
+@include media-breakpoint-down(lg)
+  section.section.custom-consultation
+    padding-top: 73px
+    .container
+      .c-content
+        margin-top: 0px
+      .white-block-design
+        z-index: 0
+        img
+
+@include media-breakpoint-down(xs)
+  section.section.custom-consultation
+    padding-top: 54px
+    .container
+      .c-content
+      .white-block-design
+        width: 234px
+        height: 310px
+        img
+          top: 34px
+          right: 43px
+          width: 256px
+          height: 252px
+        .extralarge-text-bg
+          left: -262px
+          bottom: 16px
+

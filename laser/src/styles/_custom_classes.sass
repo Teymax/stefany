@@ -25,17 +25,18 @@
 .paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
-.h1-title
-  @include font (CormorantGaramond, bold, 44, 53)
-  color: $text-color-white
+
+
 .h2-title
-  @include font (CormorantGaramond, bold, 34, 53)
+  @include font (CormorantGaramond, bold, 44, 45)
   color: $text-color-white
 .h3-title
-  @include font(Circe, 400, 20, 24)
+  @include font (CormorantGaramond, bold, 34, 53)
   color: $text-color-white
-
 .h4-title
+  @include font(CormorantGaramond, 400, 24, 37)
+  color: $text-color-white
+.h5-title
   @include font(CormorantGaramond, 400, 24, 34)
   color: $text-color-white
 
@@ -48,8 +49,11 @@
 .extralarge-text-bg
   white-space: nowrap
   position: absolute
-  @include font(Circe, 900, 321, 377)
+  @include font(Circe, 900, 321, 0)
   color: $text-color-white
+  z-index: 10
+  @include media-breakpoint-down(xs)
+    font-size: 159.63px
 
 .custom-icon-number
   display: inline-flex
@@ -69,9 +73,9 @@
   background-color: #fff
   img
     position: absolute
-  p
-    @include font(Circe, bold, 27, 42)
-    color: #9FA6BA
+  //p
+  //  @include font(Circe, bold, 27, 42)
+  //  color: #9FA6BA
 
 .custom-bg-dark
   background-color: #9FA6BA
@@ -84,7 +88,15 @@
     color: #9FA6BA
 
 
-
+.d-line
+  display: block
+  width: 89px
+  height: 2px
+  background: rgba(125, 137, 158, 0.39)
+  margin-top: 25px
+  margin-bottom: 32px
+  @include media-breakpoint-down(xs)
+    margin-bottom: 29px
 // list - style ****
 .info-list
   li
@@ -101,13 +113,14 @@
       border-radius: 50%
 
 
-@include mobile-small
+@include media-breakpoint-down(xs)
   .paragraph-text
     @include font(Circe, 400, 14, 22)
   .h1-title
     @include font (CormorantGaramond, bold, 34, 30)
   .h2-title
-
+    font-size: 30px
+    line-height: 40px
   .h3-title
   .h4-title
 
@@ -142,7 +155,7 @@
 //  height: 38px
 //  padding-right: 18px
 //  padding-left: 20px
-//  background-imgage: url('../assets/img/background/callback-btn.png')
+//  background-imgage: url('../images/img/background/callback-btn.png')
 //  background-repeat: no-repeat
 //  background-size: 45px 100%
 //  background-position: top right
@@ -181,7 +194,7 @@
 //      span
 //        color: $color-white
 //.btn-callback-white
-//  background: url('../assets/img/background/callback-btn-white.jpg')
+//  background: url('../images/img/background/callback-btn-white.jpg')
 //  background-repeat: no-repeat
 //  background-size: 45px 100%
 //  background-position: top right
@@ -265,13 +278,6 @@
 
 .no-bg
   background: transparent !important
-
-
-
-
-
-
-
 
 // Icons - style *********
 .icon
@@ -358,7 +364,8 @@
       &:not(:last-child)
         margin-right: 16px
       &:hover, &.active
-        background: $color-purple
+        background: #A09BCF
+
       &:focus
         border: none !important
         outline: none !important
@@ -378,11 +385,11 @@
       height: 30px
       opacity: .4
       &.owl-prev
-        background-image: url('../assets/icon/slider-left-arrow.png') !important
+        background-image: url('../images/icon/slider-left-arrow.png') !important
         background-repeat: no-repeat  !important
         background-size: contain !important
       &.owl-next
-        background-image: url('../assets/icon/slider-right-arrow.png') !important
+        background-image: url('../images/icon/slider-right-arrow.png') !important
         background-repeat: no-repeat  !important
         background-size: contain !important
 
