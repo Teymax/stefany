@@ -55,7 +55,7 @@ $( document ).ready( function () {
     }
   } )
 
-  $( '.diploma-slider' ).owlCarousel( {
+  $( '.dilpomas-slider' ).owlCarousel( {
     loop      : true,
     margin    : 35,
     nav       : false,
