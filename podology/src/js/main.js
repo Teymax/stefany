@@ -55,7 +55,7 @@ $( document ).ready( function () {
     }
   } )
 
-  $( '.diploma-slider' ).owlCarousel( {
+  $( '.podology-service-slider' ).owlCarousel( {
     loop      : true,
     margin    : 35,
     nav       : false,
@@ -64,10 +64,10 @@ $( document ).ready( function () {
       0  : {
         items: 1
       },
-      575: {
+      768: {
         items: 2
       },
-      993: {
+      1200: {
         items: 4
       }
     }
