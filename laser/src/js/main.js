@@ -31,10 +31,7 @@ $(document).ready(function(){
 		$(city).addClass('city-active');
 	});
 
-	$('.menu-trigger').click(function(e){
-		$(this).toggleClass('open');
-		$('header').toggleClass('open');
-	});
+
 
 	$('.diploma-slider').owlCarousel({
 		loop:true,
@@ -72,8 +69,71 @@ $(document).ready(function(){
 		}
 	});
 
+  var videoSLider = $( '.video-slider' ).owlCarousel( {
+    loop         : false,
+    margin       : 0,
+    nav          : false,
+    dots         : false,
+    items        : 1,
+    dotsContainer: '.video-slider-dots',
+    responsive   : {
+      0   : {
+        nav: true
+      },
+      541 : {
+        nav: false
+      },
+      1200: {
+        nav: false
+      }
+    }
+  } )
+
+  $( '.video-slider-dots .owl-dot' ).click( function ( e ) {
+    e.preventDefault()
+    var itemPosition = $( this ).attr( 'data-pos' )
+    videoSLider.trigger( 'to.owl.carousel', [ itemPosition, 300 ] )
+  } )
+
+  var videoSliderDots = $( '.video-slider-dots' ).owlCarousel( {
+    navContainer: '.video-nav-slider-dots',
+    loop        : false,
+    margin      : 0,
+    nav         : true,
+    dots        : false,
+    items       : 1
+  } )
+
+  $( '.video-nav-slider-dots .owl-next' ).click( function () {
+    videoSliderDots.trigger( 'next.owl.carousel' )
+  } )
+
+  $( '.video-nav-slider-dots .owl-prev' ).click( function () {
+    videoSliderDots.trigger( 'prev.owl.carousel', [ 300 ] )
+  } )
+
+  $( '#closeOverlay' ).click( function ( e ) {
+    $( '#overlay' ).hide()
+  } )
+
+// accordion
   $(".card-header").on('click', function(){
     $(this).toggleClass('active').siblings().removeClass('active')
+  });
+//menu-trigger
+  $('.menu-trigger').click(function(e){
+    $(this).toggleClass('open');
+    $('header').toggleClass('open');
+    $('body').toggleClass('fixed');
+  });
+//drop-menu
+  $('.drop-menu').click(function(){
+    $('.drop-menu').not($(this)).removeClass('open');
+    $(this).toggleClass('open');
+  });
+//checkbox
+  $( '#checkbox' ).change( function ( e ) {
+    $( this ).parent().toggleClass( 'checked' )
   });
 });
 

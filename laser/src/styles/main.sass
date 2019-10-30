@@ -10,24 +10,27 @@
 @import "spacing-helpers"
 @import "grid"
 
-@media only screen and (min-width : 1200px)
-  .container
-    max-width: 1280px !important
 .container
   padding-left: 30px !important
   padding-right: 30px !important
+  @include media-breakpoint-down(xs)
+    padding-left: 18px !important
+    padding-right: 18px !important
+@include media-breakpoint-up(xl)
+  .container
+    max-width: 1280px !important
+
 .section
-  padding: 5rem 0
   overflow: hidden
 
-
-@import 'custom_classes'
 
 @import 'sections/header'
 @import 'sections/four-boxes-module'
 @import 'sections/almalaser'
 @import 'sections/choose-service'
+@import 'sections/choose-service-icon'
 @import 'sections/consultation'
+@import 'sections/custom-consultation'
 @import 'sections/discount'
 @import 'sections/safety'
 @import 'sections/accordion-answer'
@@ -58,8 +61,13 @@
 
 
 @import 'sections/footer'
+@import 'custom_classes'
 
 @import 'modules/accordion'
+@import 'modules/checkbox'
+@import 'modules/buttons'
+
 @import 'lib/all'
 
 @import "media"
+
