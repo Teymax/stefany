@@ -510,7 +510,7 @@
             </div>
           </div>
         </div>
-      </div><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 my-5 btn-callback-blue mx-auto" href="#"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
+      </div><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 my-5 btn-callback-blue mx-auto" href="#" data-toggle="modal" data-target="#firstDayCourse"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
           <style type="text/css">.st0{fill:#D11111;}</style>
           <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8      C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
@@ -722,7 +722,7 @@
             </div>
           </div>
         </div>
-      </div><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 my-5 btn-callback-blue mx-auto" href="#"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
+      </div><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 my-5 btn-callback-blue mx-auto" href="#" data-toggle="modal" data-target="#secondDayCourse"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
         <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
           <style type="text/css">.st0{fill:#D11111;}</style>
           <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8      C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
@@ -783,11 +783,81 @@
           <div class="info-list-item w-100 paragraph-text"> <span class="f-bold">Сертификат </span>об успешном окончании курса с количеством часов теории и практики</div>
           <div class="info-list-item w-100 paragraph-text">Возможность пройти стажировку в центре здоровья ног Steffany и устроиться туда на <span class="f-bold">постоянную работу</span></div>
           <div class="course-price d-flex align-items-center">Стоимость одного курса<span class="d-flex justify-content-center align-items-center">10 000 грн</span></div>
-          <div class="callback-wrap w-100"><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 btn-callback-blue" href="#"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
+          <div class="callback-wrap w-100"><a class="btn-callback btn-callback-simple d-flex align-items-center justify-content-between height-50 btn-callback-blue" href="#" data-toggle="modal" data-target="#chooseDayCourse"><span class="d-flex align-items-center justify-content-between"><span>Занять место</span></span>
               <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
                 <style type="text/css">.st0{fill:#D11111;}</style>
                 <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
               </svg></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="firstDayCourse" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <h4 class="text-center">Введите свои данные </h4>
+          <h5 class="text-center">чтобы занять место в группе</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Имя">
+            <input class="w-100 p-text-light mb-2" type="email" placeholder="Email">
+            <input class="w-100 p-text-light mb-4" type="tel" placeholder="Телефон">
+            <button class="w-100 btn-send btn-callback-simple d-flex align-items-center justify-content-between m-auto m-sm-0 ml-sm-auto" type="button" data-toggle="modal" data-target="#thanksPopup" data-dismiss="modal"><span class="d-flex align-items-center justify-content-between"><span>отправить</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="secondDayCourse" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <h4 class="text-center">Введите свои данные </h4>
+          <h5 class="text-center">чтобы занять место в группе</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Имя">
+            <input class="w-100 p-text-light mb-2" type="email" placeholder="Email">
+            <input class="w-100 p-text-light mb-4" type="tel" placeholder="Телефон">
+            <button class="w-100 btn-send btn-callback-simple d-flex align-items-center justify-content-between m-auto m-sm-0 ml-sm-auto" type="button" data-toggle="modal" data-target="#thanksPopup" data-dismiss="modal"><span class="d-flex align-items-center justify-content-between"><span>отправить</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="chooseDayCourse" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content"> 
+          <h4 class="text-center">Введите свои данные </h4>
+          <h5 class="text-center">чтобы занять место в группе</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Имя">
+            <input class="w-100 p-text-light mb-2" type="email" placeholder="Email">
+            <input class="w-100 p-text-light mb-2" type="tel" placeholder="Телефон">
+            <select class="w-100 p-text-light mb-4" placeholder="Какой курс вы выбираете?">
+              <option class="p-text-light" selected disabled hidden>Какой курс вы выбираете?</option>
+              <option class="p-text-light" value="1">Базовой подологии</option>
+              <option class="p-text-light" value="2">Малой ортопедии и ортониксии</option>
+            </select>
+            <button class="w-100 btn-send btn-callback-simple d-flex align-items-center justify-content-between m-auto m-sm-0 ml-sm-auto" type="button" data-toggle="modal" data-target="#thanksPopup" data-dismiss="modal"><span class="d-flex align-items-center justify-content-between"><span>отправить</span></span>
+              <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8" style="enable-background:new 0 0 11 8;" xml:space="preserve">
+                <style type="text/css">.st0{fill:#D11111;}</style>
+                <path class="st0" d="M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z"></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="thanksPopup" tabindex="-1" role="dialog" aria-labelledby="thanksPopup" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content px-1">
+          <h4 class="text-center">Спасибо! </h4>
+          <h5 class="text-center">Мы свяжемся с вами в ближайшее время!</h5>
         </div>
       </div>
     </div>
