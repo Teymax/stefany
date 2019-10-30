@@ -10,16 +10,18 @@
 @import "spacing-helpers"
 @import "grid"
 
-@media only screen and (min-width : 1200px)
-  .container
-    max-width: 1280px !important
 .container
   padding-left: 30px !important
   padding-right: 30px !important
-.section
-  padding: 5rem 0
-  overflow: hidden
+  @include media-breakpoint-down(xs)
+    padding-left: 18px !important
+    padding-right: 18px !important
+@include media-breakpoint-up(xl)
+  .container
+    max-width: 1280px !important
 
+.section
+  overflow: hidden
 
 @import 'custom_classes'
 
@@ -27,7 +29,9 @@
 @import 'sections/four-boxes-module'
 @import 'sections/almalaser'
 @import 'sections/choose-service'
+@import 'sections/choose-service-icon'
 @import 'sections/consultation'
+@import 'sections/custom-consultation'
 @import 'sections/discount'
 @import 'sections/safety'
 @import 'sections/accordion-answer'
@@ -35,6 +39,23 @@
 @import 'sections/main-laser-service'
 @import 'sections/consultation-form'
 @import 'sections/about-steffany'
+@import 'sections/service/_service-advantages'
+@import 'sections/service/_service-consultation'
+@import 'sections/service/_service-laser-main'
+@import 'sections/service/_service-laser-service-list'
+@import 'sections/service/_service-after-laserepila'
+@import 'sections/service/_service-laser-whatToDo'
+@import 'sections/service/_service-laser-contraindications'
+@import 'sections/service/_service-laser-discount'
+@import 'sections/service/_service-consultation-form'
+@import 'sections/service/_service-laser-personal'
+@import 'sections/service/_service-laser-results'
+@import 'sections/service/_service-laser-interests'
+
+
+
+
+
 @import 'sections/diploma'
 @import 'sections/workers-slider'
 @import 'sections/service-three-boxes_module'
@@ -42,9 +63,9 @@
 
 @import 'sections/footer'
 
-
-
 @import 'modules/accordion'
+@import 'modules/checkbox'
+
 @import 'lib/all'
 
 @import "media"
