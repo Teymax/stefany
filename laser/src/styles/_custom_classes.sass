@@ -148,126 +148,6 @@
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
 
-// buttons - style *******
-//.btn-callback, .btn-send
-//  width: 100%
-//  max-width: 195px
-//  height: 38px
-//  padding-right: 18px
-//  padding-left: 20px
-//  background-imgage: url('../images/img/background/callback-btn.png')
-//  background-repeat: no-repeat
-//  background-size: 45px 100%
-//  background-position: top right
-//  border: 2px solid $color-purple
-//  text-decoration: none
-//  border-radius: 100px
-//  transition: 0.2s linear
-//  & > span
-//    text-decoration: none
-//    width: 100%
-//    max-width: 120px
-//    svg
-//      width: 13px
-//      height: 13px
-//    .st0
-//      fill: $color-purple-text
-//      transition: 0.3s ease 0.2s
-//    span
-//      padding-top: 2px
-//      @include font ('Circe-ExtraBold', 900, 10, 10)
-//      text-transform: uppercase
-//      letter-spacing: 2px
-//      color: $color-purple-text
-//      transition: 0.3s ease
-//  & > svg
-//    width: 14px
-//    height: 11px
-//    .st0
-//      fill: $color-white
-//  &:hover
-//    background-size: 100% 100%
-//    text-decoration: none
-//    & > span
-//      .st0
-//        fill: $color-white
-//      span
-//        color: $color-white
-//.btn-callback-white
-//  background: url('../images/img/background/callback-btn-white.jpg')
-//  background-repeat: no-repeat
-//  background-size: 45px 100%
-//  background-position: top right
-//  border: 2px solid $color-white
-//  & > span
-//    span
-//      color: $color-white
-//  & > svg
-//    .st0
-//      fill: $color-purple
-//  &:hover
-//    background-size: 100% 100%
-//    text-decoration: none
-//    & > span
-//      span
-//        color: $color-purple
-//.btn-callback-simple
-//  width: auto
-//  max-width: 100%
-//  & > span
-//    max-width: 100%
-//    span
-//      padding-right: 23px
-//.btn-send
-//  & > span
-//    span
-//      padding-left: 8px
-//      padding-right: 36px
-//.button
-//  cursor: pointer
-//  display: flex
-//  align-items: center
-//  justify-content: center
-//  padding: 0 33px
-//  height: 38px
-//  background: $btn-bg
-//  @include font('Circe-ExtraBold', 900, 10, 13)
-//  text-transform: uppercase
-//  color: $color-white !important
-//  letter-spacing: 1.5px
-//  border-radius: 100px
-//  transition: 0.3s ease
-//  &:hover
-//    box-shadow: 0 0 20px $btn-bg
-//.soc-btn
-//  width: 38px
-//  height: 38px
-//  background: $soc-btn
-//  border-radius: 50%
-//  transition: 0.4s ease
-//  &:hover
-//    background: $color-purple
-//.btn-simple
-//  color: $color-white
-//  height: 38px
-//  padding: 15px 30px
-//  font-size: 10px
-//  text-transform: uppercase
-//  letter-spacing: 2px
-//  transition: 0.4s ease
-//  background: $color-purple
-//.btn-simple:hover
-//  color: $color-white
-//  background: $soc-btn
-//.btn-simple-light
-//  color: $play-btn-color
-//  background: transparent
-//  border: 2px solid $border-light
-//  &:hover, &.active
-//    color: $color-white
-//    background: $color-purple
-//    color: $color-white !important
-//    border: 2px solid $color-purple
 
 
 // bg - style ********
@@ -404,75 +284,141 @@
 
 // buttons
 // btn-callback
-.btn-callback
-  position: relative
-  width: 100%
-  max-width: 195px
-  height: 38px
-  padding-right: 18px
-  padding-left: 20px
-  background-position: top right
-  text-decoration: none
-  border-radius: 100px
-  border: 2px solid $btn-primary-color !important
-  background-image: linear-gradient(to right, #fff 76% ,$btn-primary-color 24%)
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
-  font:
-    family: Circe !important
-    weight: 900 !important
-    size: 10px !important
-    style: normal
-  line-height: 25px !important
-  letter-spacing: 1.5px
+//.btn-callback
+//  position: relative
+//  width: 100%
+//  max-width: 195px
+//  height: 38px
+//  padding-right: 18px
+//  padding-left: 20px
+//  background-position: top right
+//  text-decoration: none
+//  border-radius: 100px
+//  border: 2px solid $btn-primary-color !important
+//  background-image: linear-gradient(to right, #fff 76% ,$btn-primary-color 24%)
+//  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+//  font:
+//    family: Circe !important
+//    weight: 900 !important
+//    size: 10px !important
+//    style: normal
+//  line-height: 25px !important
+//  letter-spacing: 1.5px
+//
+//  text-transform: uppercase
+//  svg.first-svg
+//    position: absolute
+//    top: 11px
+//    left: 20px
+//  svg.second-svg
+//    position: absolute
+//    top: 14px
+//    right: 20px
+//.btn
+//  position: relative
+//  cursor: pointer
+//  display: flex
+//  align-items: center
+//  justify-content: center
+//  padding-right: 18px !important
+//  padding-left: 25px !important
+//  background-color: $btn-primary-color !important
+//  text-transform: uppercase
+//  color: $text-color-white !important
+//  letter-spacing: 1.5px
+//  border-radius: 100px !important
+//  min-width: 154px
+//  min-height: 38px
+//  font:
+//    family: Circe !important
+//    weight: 900 !important
+//    size: 10px !important
+//    style: normal
+//  line-height: 25px !important
+//  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+//  &:active
+//    box-shadow: none
+//  svg
+//    position: absolute
+//    top: 11px
+//    left: 20px
+//
+//.btn-simple
+//  padding-left: 20px !important
+//
+//.btn-primary-color
+//  background-color: #F6AE9F !important
+//.btn-second-color
+//  background-color: #7F8597 !important
+//.svg-light
+//  fill: #fff !important
+//.svg-dark
+//  fill: #000 !important
 
-  text-transform: uppercase
-  svg.first-svg
+
+.slider-pad
+  padding-left:  47px
+  padding-right: 47px
+.slider-block
+  .owl-dots
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding-top: 60px
+    span
+      display: none
+    .owl-dot
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #000
+      transition: 0.3s ease
+      &:not(:last-child)
+        margin-right: 16px
+      &:hover, &.active
+        background: #000
+      &:focus
+        border: none !important
+        outline: none !important
+  .owl-nav
     position: absolute
-    top: 11px
-    left: 20px
-  svg.second-svg
-    position: absolute
-    top: 14px
-    right: 20px
-.btn
-  position: relative
-  cursor: pointer
-  display: flex
-  align-items: center
-  justify-content: center
-  padding-right: 18px !important
-  padding-left: 25px !important
-  background-color: $btn-primary-color !important
-  text-transform: uppercase
-  color: $text-color-white !important
-  letter-spacing: 1.5px
-  border-radius: 100px !important
-  min-width: 154px
-  min-height: 38px
-  font:
-    family: Circe !important
-    weight: 900 !important
-    size: 10px !important
-    style: normal
-  line-height: 25px !important
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
-  &:active
-    box-shadow: none
-  svg
-    position: absolute
-    top: 11px
-    left: 20px
-
-.btn-simple
-  padding-left: 20px !important
-
-.btn-primary-color
-  background-color: #F6AE9F !important
-.btn-second-color
-  background-color: #7F8597 !important
-.svg-light
-  fill: #fff !important
-.svg-dark
-  fill: #000 !important
-
-
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    span
+      display: none
+    button
+      width: 30px
+      height: 30px
+      opacity: .4
+      &.owl-prev
+        background-image: url('../assets/icon/slider-left-arrow.png') !important
+        background-repeat: no-repeat  !important
+        background-size: contain !important
+      &.owl-next
+        background-image: url('../assets/icon/slider-right-arrow.png') !important
+        background-repeat: no-repeat  !important
+        background-size: contain !important
+  &.video-slider
+    .owl-nav
+      position: absolute !important
+      display: flex
+      top: calc(100% + 26px)
+      left: 0
+      width: 100%
+      margin-top: 0 !important
+      padding-top: 0 !important
+      button
+        &.owl-prev
+          background-image: url('../assets/icon/aroow-left-gray.png') !important
+          background-repeat: no-repeat  !important
+          background-size: contain !important
+        &.owl-next
+          background-image: url('../assets/icon/aroow-right-gray.png') !important
+          background-repeat: no-repeat  !important
+          background-size: contain !important
