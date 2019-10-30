@@ -1,0 +1,11 @@
+mixin breadcrumbs(main, chapter, chapterLink, title, titleLink)
+  p.breadcrumbs
+    a(href="/")= main
+    span.separator /
+    a(href=chapterLink)= chapter
+    span.separator /
+    a(href=titleLink aria-current="page")= title
+
+
+//+breadcrumbs(main, chapter, chapterLink, title, titleLink)
+
