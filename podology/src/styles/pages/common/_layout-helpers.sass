@@ -25,3 +25,78 @@
 			background-image: url('../assets/icon/slider-right-arrow.png') !important
 			background-repeat: no-repeat !important
 			background-size: contain !important
+
+.section-title
+  display: block
+  width: 100%
+  margin-bottom: 20px
+  @include font($Cormorant, 400, 44, 45)
+  color: $section-title-color
+.p-text-light
+	@include font(Circe, 300, 14, 24)
+	color: $breadcrump-color
+.paragraph-text-18
+  margin-bottom: 0 !important
+  @include font(Circe, 400, 18, 1)
+  color: #ffffff
+  transition: 0.3s ease
+  .text-w-bold
+    font-size: 20px
+		line-height: 24px
+.section-title-small
+  width: 100%
+  display: block
+  margin-bottom: 20px
+  padding-bottom: 44px
+  @include font(Circe, 700, 28, 28)
+  color: #556278	
+h3.section-subtitle
+  padding-bottom: 37px
+  @include font(Circe, 400, 20, 30)
+  color: #556278
+.white-text
+  color: $color-white !important
+.h3-title-regular
+  @include font(Circe, 400, 20, 24)
+  color: $text-color-white	
+.paragraph-text-light
+  @include font (Circe, 300, 16, 26)
+  color: $text-color-white
+.paragraph-text-dark
+  @include font (Circe, 400, 16, 26)
+  color: $text-color-dark
+.container-xl
+  max-width: 1283px !important
+.br-100
+  border-radius: 100px 
+// buttons - style *******
+.btn-callback, .btn-send
+  border-radius: 100px !important
+  & > span 
+    text-decoration: none
+    width: 100%
+    max-width: 109px
+    svg
+      width: 13px
+      height: 13px
+    .sendSvg
+      width: 13px
+      height: 19px
+    .st0 
+      fill: $color-purple-text
+    span 
+      padding-top: 2px
+      @include font (Circe, 900, 10, 10)
+      text-transform: uppercase
+      letter-spacing: 2px
+      color: $color-purple-text
+  & > svg 
+    width: 14px
+    height: 11px
+    .st0 
+      fill: $color-white
+
+.f-bold
+  font-weight: bold !important
+.height-50
+	height: 50px
