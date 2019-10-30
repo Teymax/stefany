@@ -1,7 +1,7 @@
 header
   .container.container-m.d-flex.justify-content-between.align-items-center.py-4
     a.c-logo(href="./index.html")
-      img(src="images/img/logo/logo.svg", alt="header-logo")
+      img(src="assets/img/logo/logo.svg", alt="header-logo")
     .row.no-gutters.mob-menu.c-row.w-100.no-gutter.d-block.d-md-flex.flex-column.flex-md-row.align-items-center.justify-content-md-end.m-0
       .col-12.col-md-7.header-nav-wrap.order-md-2
         nav.header-nav.w-100
@@ -14,7 +14,7 @@ header
                 li.mb-2.mb-lg-0
                   a.nav-link-text.paragraph-text.text-color-dark.text-w-bold.paragraph-text.text-color-dark.text-w-bold(href="./about-steffany.html") Про Steffany
                 li.mb-2.mb-lg-0
-                  a.nav-link-text.paragraph-text.text-color-dark.text-w-bold(href="./about-zt.html") Про салон
+                  a.nav-link-text.paragraph-text.text-color-dark.text-w-bold(href="./about-steffany-zt.html") Про салон
             li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
               span.p-text  Услуги и Цены
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -31,12 +31,7 @@ header
             li.d-inline-flex.align-items-center.mr-0
               a.p-text(href="./contact.html") Контакты
       .col-12.col-md-5.nav-callback.order-md-3
-        +btnCallback('записаться').text-color-dark.ml-4
-          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
-            style(type='text/css').
-              .st0{fill:#D11111;}
-            path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
-            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+        +btnCallback('записаться').text-color-dark.ml-4.no-svg.text-section
       .col-12.header-contact-list-wrap.order-md-1
         ul.header-contact-list.d-flex.flex-column.flex-md-row.align-item-center.justify-content-end
           li.d-flex.flex-wrap.flex-md-nowrap.justify-content-center.mb-4.mb-md-0.mr-0.mr-md-3.align-items-center.drop-menu
