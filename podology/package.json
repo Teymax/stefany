@@ -16,7 +16,9 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^4.0.1",
+    "gulp-pug-beautify": "0.0.1",
     "gulp-sass": "^4.0.2",
+    "gulp-sassbeautify": "^0.1.0",
     "gulp-uglify": "^3.0.2",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6"
