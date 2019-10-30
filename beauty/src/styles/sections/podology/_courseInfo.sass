@@ -1,0 +1,63 @@
+.conteiner-s
+  max-width: 860px !important
+.course-info
+  background: 
+    image: url("../assets/img/padalogy/learning/course-info-bg.png")
+    size: cover
+    position: top left
+    repeat: no-repeat
+  padding: 57px 0 64px
+  .info-list-item
+    position: relative
+    padding-left: 20px !important
+    &:before
+      position: absolute
+      left: 3px
+      top: 9px
+      content: ''
+      width: 4px
+      height: 4px
+      background: $breadcrump-color
+      border-radius: 50%
+h2.section-title
+  padding-bottom: 2px
+  @include font('Circe-Bold', bold, 28, 28)
+  color: #556278
+h3.section-subtitle
+  padding-bottom: 37px
+  @include font('Circe-Regular', 400, 20, 30)
+  color: #556278
+.extrabold
+  font-family: 'Circe-ExtraBold'
+.course-info-titles
+  position: relative
+  p
+    position: relative
+    z-index: 2
+    &.extrabold
+      text-transform: uppercase
+  &::before
+    content: ''
+    position: absolute
+    z-index: 1
+    display: block
+    top: -28px
+    left: -37px
+    width: 109px
+    height: 109px
+    background: #D3E1EC
+    border-radius: 100%
+    opacity: 0
+.course-info-cnt
+  .info-list-item
+    padding-bottom: 26px !important
+@media(max-width: 991px)
+  .course-info
+    background: #EBF4FB
+@media(max-width: 767px)
+  .course-info-titles::before
+    opacity: 1
+  .course-info-cnt
+    max-width: 437px
+    .l-one
+      padding-bottom: 60px !important

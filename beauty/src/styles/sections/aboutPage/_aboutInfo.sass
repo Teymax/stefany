@@ -1,5 +1,9 @@
 .about
 	padding-bottom: 50px
+	&-salon
+		padding-top: 17px
+	.section-title
+		margin-bottom: 35px
 	.video
 		position: relative
 		display: block
@@ -7,6 +11,14 @@
 		box-shadow: 0 21px 40px $box-shadow-lightgray
 		img
 			width: 100%
+	.about-content
+		flex-flow: row nowrap !important
+	.video-item-cnt
+    max-width: 757px !important
+    padding-right: 36px !important
+	.about-block-cnt
+		max-width: 503px !important
+		flex: auto !important
 .video-slider.owl-carousel.slider-block
 	box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
 	.owl-nav, .owl-dots
@@ -93,7 +105,12 @@
 					opacity: 1
 				.owl-dot-bg
 					opacity: 0
-
+@media(max-width: 992px)
+  .about .about-content
+  	flex-flow: row wrap !important
+  .about .video-item-cnt, .about .about-block-cnt
+    max-width: 100% !important
+    padding-right: 0 !important
 @media(max-width: 730px)
 	.line-margin
 		margin-top: 75px

@@ -5,7 +5,7 @@
 .container-xs
   max-width: 975px !important
 .container-m
-  max-width: 1260px !important
+  max-width: 1290px !important
 .container-l
   max-width: 1270px !important
 .container-xl
@@ -15,11 +15,19 @@
 .double-grid-container 
   max-width: 630px !important
   box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+.four-grid-container 
+  max-width: 1261px !important
+  .grid-block
+    box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+body
+  overflow-x: hidden
+  &.fixed
+    overflow: hidden
 
 // text - style *******
 	
 .paragraph-text-light
-  @include font(Circe, 400, 16, 26)
+  @include font ('Circe-Regular', 300, 16, 26)
   color: $text-color-white
 
 .link-text-light
@@ -31,9 +39,10 @@
   &:hover
     color: $breadcrump-color !important
 .paragraph-text-dark
-  @include font(Circe, 400, 16, 26)
+  @include font ('Circe-Regular', 300, 16, 26)
   color: $text-color-dark
-	
+.text-lightdark
+  color: $breadcrump-color !important
 .text-dashed
   border-bottom: 1px dashed #e4e4e4
 
@@ -44,12 +53,12 @@
   color: $text-color-white
 
 .section-title-light
-  @include font(Circe, bold, 44, 45)
+  @include font ('Circe-Bold', 700, 44, 45)
   color: $text-color-white
   transition: 0.3s ease
 
 .section-title-dark
-  @include font(Circe, bold, 44, 45)
+  @include font ('Circe-Bold', 700, 44, 45)
   color: $text-color-dark
 
 .proccess-info
@@ -71,6 +80,8 @@
 
 .text-color-dark
   color: $text-color-dark !important
+.text-color-for-list
+  color: $list-number !important
 .f-bold
   font-weight: bold !important
 .f-light
@@ -127,6 +138,7 @@ p, .p-text, .paragraph-text
   width: 100%
   margin-bottom: 20px
   @include font('Circe-Light', 400, 20, 21)
+  letter-spacing: .6px
   color: $section-title-color
 .h3-title
   @include font('Circe-Light', 400, 20, 24)
@@ -141,6 +153,9 @@ p, .p-text, .paragraph-text
   @include font('CormorantGaramond-Bold', 700, 30, 35)
   color: $section-title-color
 
+.bg-rose
+  background: $bg-rose
+    
 .grid-number
   display: block
   position: absolute
@@ -153,6 +168,10 @@ p, .p-text, .paragraph-text
 
 .white-text
   color: $color-white !important
+.light-orange-text
+  color: $spec-bg !important
+.light-green-text
+  color: $dark-gren-bg !important
 
 .h-center
   text-align: center
@@ -162,12 +181,17 @@ p, .p-text, .paragraph-text
   text-transform: uppercase
   letter-spacing: 2px
   @include font('CormorantGaramond-Bold', 700, 75, 75)
-
 .bnf-title
   padding-bottom: 20px
   text-transform: uppercase
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
+.benefits .bnf-title-small
+  padding-bottom: 15px
+  font-size: 14px
+  text-transform: inherit
+  letter-spacing: 0
+  font-weight: bold
 
 // buttons - style *******
 .btn-callback, .btn-send
@@ -183,11 +207,10 @@ p, .p-text, .paragraph-text
   border: 2px solid $color-purple
   text-decoration: none
   border-radius: 100px
-  transition: 0.2s linear
   & > span 
     text-decoration: none
     width: 100%
-    max-width: 120px
+    max-width: 109px
     svg
       width: 13px
       height: 13px
@@ -196,45 +219,35 @@ p, .p-text, .paragraph-text
       height: 19px
     .st0 
       fill: $color-purple-text
-      transition: 0.3s ease 0.2s
     span 
       padding-top: 2px
       @include font ('Circe-ExtraBold', 900, 10, 10)
       text-transform: uppercase
       letter-spacing: 2px
       color: $color-purple-text
-      transition: 0.3s ease
   & > svg 
     width: 14px
     height: 11px
     .st0 
       fill: $color-white
-  &:hover 
-    background-size: 100% 100%
-    text-decoration: none
-    & > span 
-      .st0 
-        fill: $color-white
-      span
-        color: $color-white
-.btn-callback-white
+// header btn
+.btn-callback-white, header.open .btn-callback
   background: url('../assets/img/background/callback-btn-white.jpg')
   background-repeat: no-repeat
   background-size: 45px 100%
   background-position: top right
-  border: 2px solid $color-white
+  border: 2px solid $color-white !important
+  &:focus
+    border: 2px solid $color-white !important
   & > span
     span
       color: $color-white 
+    svg 
+      .st0
+        fill: $color-white  !important
   & > svg 
     .st0 
       fill: $color-purple
-  &:hover    
-    background-size: 100% 100%
-    text-decoration: none
-    & > span
-      span
-        color: $color-purple
 .btn-callback-simple
 	width: auto
 	max-width: 100%
@@ -320,13 +333,25 @@ p, .p-text, .paragraph-text
       background: $breadcrump-color
       border-radius: 50%
 
-// Icons - style *********
+// Icons - style header *********
 
 .icon
   margin-right: 10px
 .icon-loc
   width: 13px
   height: 17px
+svg.icon-loc
+  width: 16px !important
+  height: 13px !important
+  margin-right: 6px !important
+  margin-left: 0 !important
+svg.icon-phone
+  width: 15px !important
+  height: 15px !important
+  margin-right: 6px !important
+  margin-left: 0 !important
+  path
+    fill: #3a405b
 .icon-phone
   width: 17px
   height: 16px
@@ -339,15 +364,19 @@ p, .p-text, .paragraph-text
 .icon-arrow
   width: 12px
   margin-left: 6px
-.icon-arrow
-  width: 12px
-  margin-left: 6px
+svg.icon-arrow
+  width: 10px !important
+  height: 7px !important
+  margin-right: 0 !important
+  margin-left: 6px !important
+  path
+    fill: #3a405b
 .icon-large
   width: 40px
   height: 40px
 .icon-facebook
-  width: 11px
-  height: 18px
+    width: 14px
+    height: 15px
 .icon-inst
   width: 17px
   height: 17px
@@ -490,7 +519,7 @@ textarea.field
           background-repeat: no-repeat  !important
           background-size: contain !important
 
-// menu - stely **
+// menu - style -- header **
 .menu-trigger 
   transition: 0.45s ease
   cursor: pointer
@@ -516,24 +545,29 @@ textarea.field
 .menu-trigger.open span:nth-child(3) 
   transform: rotate(40deg)
 
-// dropdown-menu - style
+// dropdown-menu - style header
 
 .drop-menu
   cursor: pointer
   position: relative
+  svg
+    width: 12px
+    height: 8px
+    margin-left: 10px 
+    .cls-1
+      fill: #4D5259 !important
   .icon-arrow
-    transition: 0.3s ease
+    transition: 0.2s ease
 .drop-menu.open
-  .icon-arrow
+  .icon-arrow, svg.icon-arrow
     transform: rotate(180deg)
   ul.dropdown-menu-list
-    z-index: 2
-    opacity: 1
+    display: flex !important
 
 ul.dropdown-menu-list
   position: absolute
-  z-index: -10
-  opacity: 0
+  z-index: 10
+  display: none !important
   top: calc(100% + 20px)
   left: 50%
   transform: translateX(-50%)

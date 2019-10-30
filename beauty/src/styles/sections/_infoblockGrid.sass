@@ -7,8 +7,11 @@
 .info-block-grid
 	overflow: hidden
 	.container
-		max-width: 880px
-		box-shadow: 0 0 70px $box-shadow-lightgray
+		max-width: 940px
+		padding-left: 30px !important
+		padding-right: 30px !important
+		.grid-shodow
+		  box-shadow: 0 0 70px $box-shadow-lightgray
 		.grid-cnt
 			z-index: 2
 			background: $color-white
@@ -61,6 +64,11 @@
 		box-shadow: none !important
 	.grid-cnt-hover
 		padding: 30px 25px 40px 25px !important
+.fourGrid
+	.container
+	  max-width: 1321px !important
+	.grid-cnt-hover
+		padding-bottom: 20px !important
 .grid-img-hover
 	position: relative
 	&::before
@@ -79,7 +87,7 @@
   height: 310px
   overflow: hidden
   &-bigger
-    height: 439px
+    height: 438px
   &-smaller
     height: auto
   .grid-number
@@ -121,7 +129,9 @@
         display: none !important
       .btn-callback
         display: flex !important
-@media(max-width: 992px)
+@media(max-width: 991px)
+	.four-grid-container
+		max-width: 630px !important
 	.grid-block-2, .info-block-grid
 		height: auto !important
 		& .grid-cnt
@@ -150,11 +160,15 @@
 	.info-block-grid .container .grid-cnt.col-md-4
     	padding: 15px 15px 15px 45px
 @media(max-width: 767px)
+	.info-block-grid
+		padding-bottom: 0 !important
+	.info-block-2
+		padding-bottom: 0
 	.info-block-grid .container .grid-cnt.grid-cnt-big
 		p.thin-text
 			display: none
 	.grid-bg-1
-		padding: 0
+		padding: 80px 15px
 	.info-block-grid .container .grid-cnt.col-md-6
 		padding: 50px 30px 50px 30px
 	.info-block-grid .container .grid-cnt.col-md-4
@@ -164,17 +178,23 @@
 		left: calc(50% - 22px)
 		width: 44px
 		height: 44px
-@media(max-width: 575px)
+	.info-block-grid .container
+		padding-left: 0 !important
+		padding-right: 0 !important
   .grid-block
     height: auto !important
-  .grid-block-2
-    .grid-cnt
-      padding-left: 50px !important
   .grid-cnt
     height:  auto !important
     order: 1 !important
   .grid-img
     order: 2 !important
+@media(max-width: 575px)
+  .info-block-grid
+	  padding-left: 0 !important
+	  padding-right: 0 !important
+  .grid-block-2
+    .grid-cnt
+      padding-left: 50px !important
   .info-block-grid .container .grid-cnt::before
     top: calc(100% - 15px) !important
     left: 37px !important
