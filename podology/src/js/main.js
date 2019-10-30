@@ -119,7 +119,7 @@ $( document ).ready( function () {
         items: 1
       },
       575: {
-        items: 1
+        items: 2
       },
       993: {
         items: 4

@@ -11,6 +11,7 @@ button:focus
 	z-index: 1
 	opacity: .3
 	pointer-events: none
+	height: auto
 
 .text-dashed
 	border-bottom: 1px dashed #000080
@@ -112,31 +113,14 @@ button:focus
 		align-items: center
 		position: relative
 
-		&:nth-child(1)
-			img
-				width: 15em
-
-		&:nth-child(2)
-			img
-				width: 8em
-
-		&:nth-child(3)
-			img
-				width: 8.1em
-				top: -0.6em
-
-		&:nth-child(4)
-			img
-				width: 13.5em
-
 		img
+			width: 10em
 			height: auto
-			position: absolute
 
 		h3
 			text-transform: uppercase
 			text-align: center
-			margin-top: 10.8em
+			margin-top: 1em
 			@include font(Circe, 600, 20, 30)
 			color: $dark-gray
 
@@ -231,7 +215,7 @@ button:focus
 				background-size: cover
 				@include media-breakpoint-down(sm)
 					height: 19em
-				//background: url("../assets/img/feet-index-1.png") no-repeat -19em 10px
+		//background: url("../assets/img/feet-index-1.png") no-repeat -19em 10px
 
 		&:nth-child(2)
 			.c-content
@@ -239,7 +223,7 @@ button:focus
 				background: url('../assets/img/feet-index-2.png') no-repeat center/cover
 				@include media-breakpoint-down(sm)
 					height: 19em
-					//background: url('../assets/img/feet-index-2.png') no-repeat -19em 10px
+		//background: url('../assets/img/feet-index-2.png') no-repeat -19em 10px
 
 		&:nth-child(3)
 			.c-content
@@ -341,8 +325,8 @@ button:focus
 	background: rgba(125, 137, 158, 0.39)
 
 	&.center
-		align-self: center
-		@include mobile-all
+		@include media-breakpoint-down(md)
+			align-self: center
 			display: flex
 
 .dash-white
