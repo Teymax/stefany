@@ -1,0 +1,17 @@
+section.section.service-laser-results.pt-0.pb-5
+  .container
+    .headline.px-6.text-center.mt-4
+      h1.h2-title.text-color-dark.text-center Посмотрите фото результатов клиентов,
+      p.paragraph-text.text-color-dark.mb-0 которые уже прошли полный курс лазерной эпиляции
+    .container.container-m.slider-wrap
+      .row.no-gutters
+        .h1-title.h-center.mb-50.white-text Дипломы и сертификаты
+      .row.no-gutters
+        .diploma-slider.owl-carousel.slider-block
+          - let arrResult = [{name:"Удаление мозолей / ДО", img:"slider-img-1"},{name:"Удаление мозолей / после",img:"slider-img-2"},{name:"Обработка бородавки / ДО",img:"slider-img-3"},{name:"Обработка бородавки / после",img:"slider-img-4"},{name:"Удаление мозолей / ДО", img:"slider-img-1"},{name:"Удаление мозолей / после",img:"slider-img-2"},{name:"Обработка бородавки / ДО",img:"slider-img-3"},{name:"Обработка бородавки / после",img:"slider-img-4"},{name:"Удаление мозолей / ДО", img:"slider-img-1"},{name:"Удаление мозолей / после",img:"slider-img-2"},{name:"Обработка бородавки / ДО",img:"slider-img-3"},{name:"Обработка бородавки / после",img:"slider-img-4"},{name:"Удаление мозолей / ДО", img:"slider-img-1"},{name:"Удаление мозолей / после",img:"slider-img-2"},{name:"Обработка бородавки / ДО",img:"slider-img-3"},{name:"Обработка бородавки / после",img:"slider-img-4"}];
+            each element in arrResult
+              - let resultPath = "./assets/img/services-warts/slider-1/" + element.img + ".png"
+              a.diploma-item(href=resultPath, data-fancybox="")
+                img.w-100(src=resultPath, alt="result-image")
+                .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
+                  p.paragraph-text.text-color-dark.mb-0 #{element.name}
