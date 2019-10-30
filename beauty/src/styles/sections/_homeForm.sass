@@ -12,7 +12,7 @@ section.section.consultation-form
       border-style: solid
       border-color: #000
       .form-group
-        margin-bottom: 23px !important
+        margin-bottom: 12px !important
       .btn-callback
         max-width: 100%
         & > span
@@ -42,7 +42,10 @@ section.section.consultation-form
             outline: none !important
             color: rgba(255, 255, 255, 0.66) !important
             transition: 0.3s ease
+            font-size: 14px !important
+            height: 40px !important
             @include placeholder
+              font-size: 14px !important
               transition: 0.3s ease
               color: rgba(255, 255, 255, 0.66) !important
             &:hover, &:focus
@@ -53,6 +56,8 @@ section.section.consultation-form
                 color: rgba(255, 255, 255, 1) !important
     .small-label
       @include font(Circe, 400, 12, 22)
+    .text-small
+      color: rgba(255, 255, 255, 0.64) !important
 .consultation-form .container-xxl
     padding-left: 273px
 .form-content
@@ -63,6 +68,7 @@ section.section.consultation-form
         width: 64px
         height: 64px
         background: $color-purple
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
         &:not(:last-child)::before
             content: ':'
             position: absolute
@@ -82,6 +88,8 @@ section.section.consultation-form
 @media(max-width: 992px)
   .consultation-form .container-xxl
     padding-left: 205px
+  .service-list .row .service-item .service-btn-wrap span
+    letter-spacing: 6px
 @media(max-width: 870px)
   .consultation-form .container-xxl
     padding-left: 205px

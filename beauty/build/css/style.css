@@ -11686,7 +11686,7 @@ section.section.discount {
   .service-list .row .service-item-bigger {
     padding-left: 89px;
     padding-top: 51px;
-    padding-bottom: 60px; }
+    padding-bottom: 45px; }
   .service-list .row .service-item-3 {
     padding-left: 89px; }
   .service-list .row .service-item .service-btn-wrap {
@@ -11721,7 +11721,8 @@ section.section.discount {
 
 .service-list .row .service-item-2 .button {
   background: #9FA6BA;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18); }
   .service-list .row .service-item-2 .button:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
 
@@ -12323,7 +12324,7 @@ section.section.consultation-form {
     border-style: solid;
     border-color: #000; }
     section.section.consultation-form .container .main-form .form-group {
-      margin-bottom: 23px !important; }
+      margin-bottom: 12px !important; }
     section.section.consultation-form .container .main-form .btn-callback {
       max-width: 100%; }
       section.section.consultation-form .container .main-form .btn-callback > span {
@@ -12352,20 +12353,26 @@ section.section.consultation-form {
           outline: none !important;
           color: rgba(255, 255, 255, 0.66) !important;
           -webkit-transition: 0.3s ease;
-          transition: 0.3s ease; }
+          transition: 0.3s ease;
+          font-size: 14px !important;
+          height: 40px !important; }
           section.section.consultation-form .container .main-form-bg form .form-control:placeholder {
+            font-size: 14px !important;
             -webkit-transition: 0.3s ease;
             transition: 0.3s ease;
             color: rgba(255, 255, 255, 0.66) !important; }
           section.section.consultation-form .container .main-form-bg form .form-control:-moz-placeholder {
+            font-size: 14px !important;
             -webkit-transition: 0.3s ease;
             transition: 0.3s ease;
             color: rgba(255, 255, 255, 0.66) !important; }
           section.section.consultation-form .container .main-form-bg form .form-control::-moz-placeholder {
+            font-size: 14px !important;
             -webkit-transition: 0.3s ease;
             transition: 0.3s ease;
             color: rgba(255, 255, 255, 0.66) !important; }
           section.section.consultation-form .container .main-form-bg form .form-control::-webkit-input-placeholder {
+            font-size: 14px !important;
             -webkit-transition: 0.3s ease;
             transition: 0.3s ease;
             color: rgba(255, 255, 255, 0.66) !important; }
@@ -12387,6 +12394,8 @@ section.section.consultation-form {
     font-weight: 400;
     font-size: 12px;
     line-height: 22px; }
+  section.section.consultation-form .container .text-small {
+    color: rgba(255, 255, 255, 0.64) !important; }
 
 .consultation-form .container-xxl {
   padding-left: 273px; }
@@ -12398,7 +12407,8 @@ section.section.consultation-form {
   position: relative;
   width: 64px;
   height: 64px;
-  background: #A09BCF; }
+  background: #A09BCF;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18); }
   .timer-item:not(:last-child)::before {
     content: ':';
     position: absolute;
@@ -12428,7 +12438,9 @@ section.section.consultation-form {
 
 @media (max-width: 992px) {
   .consultation-form .container-xxl {
-    padding-left: 205px; } }
+    padding-left: 205px; }
+  .service-list .row .service-item .service-btn-wrap span {
+    letter-spacing: 6px; } }
 
 @media (max-width: 870px) {
   .consultation-form .container-xxl {
@@ -12480,6 +12492,8 @@ section.section.consultation-form {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
+  .questions.section.accordion-answer {
+    padding-top: 75px !important; }
   .questions .card-header {
     border-radius: 0;
     background: none;
@@ -12714,16 +12728,19 @@ section.section.consultation-form {
     max-width: 1283px; }
     .benefits .container .bnf {
       position: relative;
-      padding-left: 235px; }
+      padding-left: 220px; }
       .benefits .container .bnf .bnf-img {
         position: absolute;
-        left: 0;
+        top: -13px;
+        left: 7px;
         z-index: 1;
         width: 100%;
         max-width: 238px; }
+        .benefits .container .bnf .bnf-img.bnf-img-4 {
+          left: 30px;
+          top: -20px; }
         .benefits .container .bnf .bnf-img img {
-          max-width: 100%;
-          width: 100%; }
+          max-width: 100%; }
       .benefits .container .bnf .bnf-cnt {
         z-index: 2;
         width: 100%;
