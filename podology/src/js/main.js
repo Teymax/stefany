@@ -33,7 +33,6 @@ $( document ).ready( function () {
   } )
 
   $( '.drop-menu' ).click( function ( e ) {
-    e.preventDefault()
     $( '.drop-menu:not(.open)' ).removeClass( 'open' )
     $( this ).toggleClass( 'open' )
   } )
