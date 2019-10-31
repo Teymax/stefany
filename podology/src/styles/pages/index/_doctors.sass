@@ -2,6 +2,10 @@ section.section.doctors-list
 	background: url('../assets/img/background/doctor-bg.png') no-repeat top left
 	background-size: cover
 
+	@include media-breakpoint-down(sm)
+		.slider-pad
+			padding: 0
+
 	.light-white
 		color: rgba(255, 255, 255, .46)
 		font-size: 1em
@@ -33,6 +37,7 @@ section.section.doctors-list
 
 		.specialists-img
 			height: 100%
+
 	@include media-breakpoint-down(md)
 		.owl-nav
 			top: 100%

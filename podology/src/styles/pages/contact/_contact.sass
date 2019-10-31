@@ -1,0 +1,44 @@
+section.section.contact
+	@include media-breakpoint-up(lg)
+		padding-bottom: 27em !important
+
+	.mini-map
+		//background: url('../assets/img/common/mobile-map.png') no-repeat -31em -4em
+		background: url('../assets/img/common/mobile-map.png') no-repeat center center
+		background-size: 80em
+		height: 20em
+		margin-top: 3em
+
+	.btn-callback
+		width: 12em
+
+.feedback-form
+	div
+		padding: 0 !important
+	display: flex
+	flex-wrap: wrap
+	align-items: stretch
+
+	textarea
+		height: 100%
+		resize: none
+		box-sizing: border-box
+
+	input,
+	textarea
+		display: block
+		appearance: none
+		outline: none
+		width: 100%
+		padding: .5em
+		border: 1px solid #D2DBE9
+
+		&:not(:last-child)
+			margin-bottom: 1rem
+
+		&::placeholder
+			@include font(Circe, 400, 14, 20)
+
+	@include media-breakpoint-up(lg)
+		input
+			width: 90%

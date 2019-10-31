@@ -1,14 +1,21 @@
 section.section.about-doctors
+
+	@include media-breakpoint-down(md)
+		.container:first-child
+			padding: 0 !important
+
 	@include media-breakpoint-up(md)
 		.btn-callback
 			width: 11em
+
 	> .container
 		position: relative
 
 		#circles3
 			z-index: -1
 			top: -2em
-			right: 0
+			left: 50%
+			transform: translateX(-50%)
 
 		#dashes3
 			top: 21em

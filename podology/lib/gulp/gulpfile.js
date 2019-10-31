@@ -7,7 +7,9 @@ const gulp         = require( 'gulp' ),
       del          = require( 'del' ),
       browserSync  = require( 'browser-sync' ).create(),
       sass         = require( 'gulp-sass' ),
-      pug          = require( 'gulp-pug' )
+      pug          = require( 'gulp-pug' ),
+      beautifySass = require( 'gulp-sassbeautify' ),
+      beautifyPug  = require( 'gulp-pug-beautify' )
 
 function moveImages () {
   return gulp.src( '../../src/assets/img/**/*.*' )
@@ -49,6 +51,10 @@ function styles () {
              .pipe( concat( 'style.css' ) )
              // добовление префиксов
              .pipe( autoprefixer() )
+             // Beautify
+             .pipe( beautifySass( {
+               indent: 2
+             } ) )
              //минификация sass
              // .pipe(cleanCSS({
              //   level: 2
@@ -83,6 +89,7 @@ function movePug () {
              .pipe( pug( {
                pretty: true
              } ) )
+             .pipe( beautifyPug( { tab_size: 1 } ) )
              .pipe( gulp.dest( '../../build' ) )
 }
 
