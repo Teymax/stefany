@@ -19,9 +19,13 @@
 			height: 194px
 			background: #4F79CA
 			border-radius: 50%
-		&-2
-			&::before
-				top: -27px !important
+	.ort-title-gray
+		&::before
+			top: -50px
+			display: block
+			width: 140px
+			height: 140px
+			background: #EBF1FB
 	.ort-cnt
 		position: relative
 		z-index: 2
@@ -33,13 +37,29 @@
 		background-repeat: no-repeat
 		background-position: top left
 		max-width: 506px !important
+	&.ingrown-cnt
+		padding: 65px 0 0 !important
+		& > .row 
+			padding-top: 0 !important
+		p, span, li, h3
+			color: #3A405B !important
+		&-2
+			padding: 0 !important
+			.container
+				max-width: 1320px !important
+				.ort-title-gray
+					&::before
+						left: -25px
 @media(max-width: 991px)
+	.ort-treatment .mb-80
+		margin-bottom: 40px !important
 	.ort-treatment .ort-block
 		max-width: 415px !important
-		margin: 0 auto
-	.ort-treatment .ort-block-1
-		margin-top: 55px !important
-		margin-bottom: 55px !important
+		margin: 30px auto 0 !important
+	.ingrown-cnt .ort-block
+		max-width: 500px !important
+	.ort-treatment.ingrown-cnt .ort-block-1
+		margin-bottom: 0 !important
 @media(max-width: 767px)
 	.ort-treatment .container
 		padding: 0 15px 0 15px !important
