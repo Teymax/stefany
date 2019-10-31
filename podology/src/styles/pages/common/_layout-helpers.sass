@@ -25,13 +25,6 @@
 			background-image: url('../assets/icon/slider-right-arrow.png') !important
 			background-repeat: no-repeat !important
 			background-size: contain !important
-
-.section-title
-  display: block
-  width: 100%
-  margin-bottom: 20px
-  @include font($Cormorant, 400, 44, 45)
-  color: $section-title-color
 .p-text-light
 	@include font(Circe, 300, 14, 24)
 	color: $breadcrump-color
@@ -43,6 +36,8 @@
   .text-w-bold
     font-size: 20px
 		line-height: 24px
+.f-bold
+  font-weight: bold !important
 .section-title-small
   width: 100%
   display: block
@@ -50,6 +45,9 @@
   padding-bottom: 44px
   @include font(Circe, 700, 28, 28)
   color: #556278	
+.blue-block
+  padding: 17px 0
+  background: #4F79CA
 h3.section-subtitle
   padding-bottom: 37px
   @include font(Circe, 400, 20, 30)
@@ -62,6 +60,11 @@ h3.section-subtitle
 .paragraph-text-light
   @include font (Circe, 300, 16, 26)
   color: $text-color-white
+.paragraph-text-bold
+  @include font (Circe, 700, 16, 26)
+  color: $text-color-white
+.text-dark-1
+  color: #3A405B !important
 .paragraph-text-dark
   @include font (Circe, 400, 16, 26)
   color: $text-color-dark
@@ -69,6 +72,10 @@ h3.section-subtitle
   max-width: 1283px !important
 .br-100
   border-radius: 100px 
+.mb-65
+  margin-bottom: 65px !important
+.lightblue-bg
+  background: #EBF4FB !important
 // buttons - style *******
 .btn-callback, .btn-send
   border-radius: 100px !important
