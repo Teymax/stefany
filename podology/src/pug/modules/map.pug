@@ -1,0 +1,125 @@
+section.section.map
+  .container
+    .row.no-gutters.px-15.mb-5.p-0.px-xl-3
+      .col.d-flex.align-items-center.justify-content-start.flex-wrap.map-cnt.m-auto.m-xl-0.px-15
+        a.btn-simple-map.mb-3.mb-md-0.mr-3.city-popup(href="") Все города
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-1") Киев
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3.active(href="", data-city="city-item-2") Ивано-фракновск
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-3") Львов
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger(href="", data-city="city-item-4") Ровно
+    .row.no-gutters.city-item.city-item-1
+      .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Киев
+        .row.no-gutters.mb-5
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-phone(src="assets/icon/phone-black.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.text-color-dark(href="tel:0980070753") 098 007 07 53
+              .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
+                img.icon.icon-mail(src="assets/icon/common/mail.svg" alt="h-map")
+                a.paragraoh-text.text-color-dark(href="mail-to:info@steffany.ua") info@steffany.ua
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-loc(src="assets/icon/common/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Киевская, 84
+              .col-12.d-flex.align-items-center.height-25
+                img.icon.icon-time(src="assets/icon/common/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
+        .row.no-gutters.mb-5
+          .video.video-overlay
+          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            img.w-100(src="assets/img/about-video.png", alt="about-video")
+            img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
+        .row.no-gutters
+          +customBtn('подробнее про салон')
+      .col-12.col-xl-7
+        img.w-100(src="assets/img/common/map.png" alt="map")
+    .row.no-gutters.city-item.city-item-2.city-active
+      .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Ивано-фракновск
+        .row.no-gutters.mb-5
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-phone(src="assets/icon/phone-black.svg" alt="h-map")
+                a.paragraph-text.text-color-dark(href="tel:0980070753") 098 007 07 53
+              .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
+                img.icon.icon-mail(src="assets/icon/common/mail.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-loc(src="assets/icon/common/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Киевская, 84
+              .col-12.d-flex.align-items-center.height-25
+                img.icon.icon-time(src="assets/icon/common/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
+        .row.no-gutters.mb-5
+          .video.video-overlay
+          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            img.w-100(src="assets/img/about-video.png", alt="about-video")
+            img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
+        .row.no-gutters
+          +customBtn('подробнее про салон')
+      .col-12.col-xl-7
+        img.w-100(src="assets/img/common/map.png" alt="map")
+    .row.no-gutters.city-item.city-item-3
+      .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Львов
+        .row.no-gutters.mb-5
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-phone(src="assets/icon/phone-black.svg" alt="h-map")
+                a.paragraph-text.text-color-dark(href="tel:0980070753") 098 007 07 53
+              .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
+                img.icon.icon-mail(src="assets/icon/common/mail.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-loc(src="assets/icon/common/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Киевская, 84
+              .col-12.d-flex.align-items-center.height-25
+                img.icon.icon-time(src="assets/icon/common/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
+        .row.no-gutters.mb-5
+          .video.video-overlay
+          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            img.w-100(src="assets/img/about-video.png", alt="about-video")
+            img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
+        .row.no-gutters
+          +customBtn('подробнее про салон')
+      .col-12.col-xl-7
+        img.w-100(src="assets/img/common/map.png" alt="map")
+    .row.no-gutters.city-item.city-item-4
+      .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Ровно
+        .row.no-gutters.mb-5
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-phone(src="assets/icon/phone-black.svg" alt="h-map")
+                a.paragraph-text.text-color-dark(href="tel:0980070753") 098 007 07 53
+              .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
+                img.icon.icon-mail(src="assets/icon/common/mail.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+          .col-12.col-md-6
+            .row.no-gutters
+              .col-12.d-flex.align-items-center.mb-3.height-25
+                img.icon.icon-loc(src="assets/icon/common/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Киевская, 84
+              .col-12.d-flex.align-items-center.height-25
+                img.icon.icon-time(src="assets/icon/common/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
+        .row.no-gutters.mb-5
+          .video.video-overlay
+          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            img.w-100(src="assets/img/about-video.png", alt="about-video")
+            img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
+        .row.no-gutters
+          +customBtn('подробнее про салон')
+      .col-12.col-xl-7
+        img.w-100(src="assets/img/common/map.png" alt="map")
