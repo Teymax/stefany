@@ -33,7 +33,6 @@ $( document ).ready( function () {
   } )
 
   $( '.drop-menu' ).click( function ( e ) {
-    e.preventDefault()
     $( '.drop-menu:not(.open)' ).removeClass( 'open' )
     $( this ).toggleClass( 'open' )
   } )
@@ -69,6 +68,24 @@ $( document ).ready( function () {
         items: 2
       },
       1200: {
+        items: 4
+      }
+    }
+  } )
+
+  $( '.podology-service-slider' ).owlCarousel( {
+    loop      : true,
+    margin    : 35,
+    nav       : false,
+    dots      : true,
+    responsive: {
+      0  : {
+        items: 1
+      },
+      575: {
+        items: 2
+      },
+      993: {
         items: 4
       }
     }
