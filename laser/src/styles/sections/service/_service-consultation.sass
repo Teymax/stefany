@@ -19,7 +19,7 @@ section.section.consultation
         background: #fff
 .consultation-01
   overflow: hidden
-  padding-top: 114px
+  padding-top: 45px
   background-color: #9FA6BA
   margin-bottom: 142px
   @include media-breakpoint-down(lg)
@@ -31,6 +31,7 @@ section.section.consultation
     .white-block-design
       width: 465px
       height: 700px
+      bottom: -89px
       img
         top: 60px
         left: 60px
@@ -38,6 +39,11 @@ section.section.consultation
       @include media-breakpoint-down(lg)
         margin-left: auto
         margin-right: 30px
+      @include media-breakpoint-down(md)
+        margin: 0 0 0 65px
+        width: 465px
+        height: 687px
+        bottom: 0
       @include media-breakpoint-down(xs)
         margin-left: 0
         width: 230px
@@ -49,22 +55,29 @@ section.section.consultation
           left: 30px
     .extralarge-text-bg
       bottom: 67px
-      left: 27px
+      @include media-breakpoint-down(md)
+      left: 17px
       @include media-breakpoint-down(xs)
         font-size: 152.762px
         bottom: 15px
         left: 8px
 .consultation-02
   background-color: #A9A8C6
+  padding-bottom: 80px
   .container
     .c-content
       padding-top: 116px
     .white-block-design
-      width: 527px
-      height: 600px
+      width: 520px
+      height: 721px
       img
+        width: 540px
+        height: 710px
         top: -57px
         left: -84px
+        @include media-breakpoint-down(md)
+          width: 520px
+          height: 542px
 @include media-breakpoint-down(lg)
   .consultation-02
     padding-bottom: 78px
@@ -72,8 +85,9 @@ section.section.consultation
       .c-content
         padding-top: 66px
       .white-block-design
-        width: 527px
-        height: 607px
+        width: 507px
+        height: 557px
+        margin-left: 91px
         img
           top: -48px
           left: -78px
