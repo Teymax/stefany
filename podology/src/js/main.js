@@ -74,6 +74,24 @@ $( document ).ready( function () {
     }
   } )
 
+  $( '.podology-service-slider' ).owlCarousel( {
+    loop      : true,
+    margin    : 35,
+    nav       : false,
+    dots      : true,
+    responsive: {
+      0  : {
+        items: 1
+      },
+      575: {
+        items: 2
+      },
+      993: {
+        items: 4
+      }
+    }
+  } )
+
   $( '.salon-photos-slider' ).owlCarousel( {
     center    : true,
     items     : 3,
