@@ -1,4 +1,7 @@
 section.section.contact
+	@include media-breakpoint-up(lg)
+		padding-bottom: 27em !important
+
 	.mini-map
 		//background: url('../assets/img/common/mobile-map.png') no-repeat -31em -4em
 		background: url('../assets/img/common/mobile-map.png') no-repeat center center
@@ -36,6 +39,6 @@ section.section.contact
 		&::placeholder
 			@include font(Circe, 400, 14, 20)
 
-	@include media-breakpoint-down(sm)
+	@include media-breakpoint-up(lg)
 		input
-			width: 100%
+			width: 90%
