@@ -57,3 +57,37 @@ mixin btnCaset(text)
       +casetSvg
       span= text
 
+mixin accordeon(header, description, items, expandedRequired, expandedIndex)
+  .container
+    h2.white-text.text-center.mb-3= header
+    p.h4-title.text-center.d-none.d-md-block.mb-5= description
+    #accordion.accordion.mt-3
+      if expandedRequired
+        each item, index in items
+          if index === expandedIndex
+            .card-header.active(data-toggle='collapse', data-target='#collapse' + index, aria-controls='collapse' + index, aria-expanded='true' id="header" + index)
+              p.paragraph-text.text-w-bold= item.title
+              .card-arrow
+          else
+            .card-header(data-toggle='collapse', data-target='#collapse' + index, aria-controls='collapse' + index, aria-expanded='false' id="header" + index)
+              p.paragraph-text.text-w-bold= item.title
+              .card-arrow
+          if index === expandedIndex
+            .collapse.show(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
+              .card-body
+                h3.white-text= item.title
+                p.paragraph-text.text-w-light= item.body
+          else
+            .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
+              .card-body
+                h3.white-text= item.title
+                p.paragraph-text.text-w-light= item.body
+      else
+        each item, index in items
+          .card-header(data-toggle='collapse', data-target='#collapse' + index, aria-controls='collapse' + index, aria-expanded='false' id="header" + index)
+            p.paragraph-text.text-w-bold= item.title
+            .card-arrow
+          .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
+            .card-body
+              h3.white-text= item.title
+              p.paragraph-text.text-w-light= item.body
