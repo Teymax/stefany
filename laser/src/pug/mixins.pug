@@ -27,7 +27,7 @@ mixin customBtn(text, className)
     .arrow-section
       +arrowSvg
 mixin btnCallback(text, className)
-  .btn-callback(class!=attributes.class)= className
+  .btn-callback(class!=attributes.class href=href)= className
     .text-section
       +penSvg
       span= text
@@ -42,10 +42,11 @@ mixin btnCallbackForm(text)
       +arrowSvg
 
 
-mixin btnSimple(text, className)
-  .btn-simple(class!=attributes.class)= className
-    .text-section
-      span= text
+mixin btnSimple(text, href, className )
+  a(href=href)
+    .btn-simple(class!=attributes.class)= className
+      .text-section
+        span= text
 mixin btnPen(text)
   .button.btn-second.btn-simple.svg.pen
     .text-section
