@@ -97,7 +97,8 @@ function movePug () {
              .pipe( gulp.dest( '../../build' ) )
 }
 
-const compress = () => gulp.src( '../../build/*' ).pipe( zip( 'build.zip' ) ).pipe(gulp.dest('../../'))
+const compress = () => gulp.src( '../../build/*' ).pipe( zip( 'build.zip' ) )
+                           .pipe( gulp.dest( '../../' ) )
 
 function watch () {
   browserSync.init( {
@@ -138,6 +139,7 @@ gulp.task( 'watch', watch )
 // билд в архив
 gulp.task( 'comp', compress )
 
+gulp.task( 'prod', gulp.series( clean, styles, scripts, moveImages, moveIcons, moveFonts, movePug, compress ) )
 // таск для удаления файлов в папке build и паралельного запуска styles и
 // scripts
 gulp.task( 'build', gulp.series( clean, gulp.parallel( styles, scripts, moveImages, moveIcons, moveFonts, movePug ) ) )
