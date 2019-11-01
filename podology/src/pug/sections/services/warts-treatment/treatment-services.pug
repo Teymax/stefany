@@ -2,10 +2,9 @@ section.section-services
   .container.circles-bg
     .row
       .col.d-flex.flex-column.align-items-center
-        h3.section-title.mb-4.text-dark-1.text-center Услуги по лечению мозолей и бородавок
+        h3.section-title-services.mb-4.text-dark-1.text-center Услуги по лечению мозолей и бородавок
         .services-treatment-divider.mb-4
         p.paragraph-text.text-dark-1.text-center.mb-4.mb-md-5.custom-px В нашем центре вы сможете за один или несколько сеансов удалить беспокоящие вас новообразования. А самое главное — в Steffany вы найдете причину, которая спровоцировала появление мозолей или бородавок.
-        //.separator.mb-5
         .row.custom-padding-treatment.mt-md-4.mb-5
           .col-12.col-md-6.px-4
             .paragraph-container.mb-5
@@ -66,26 +65,8 @@ section.section-services
                 p.treatment-price 350 грн
               .col-4.col-md-2.p-0
                 p.treatment-duration 45 мин
-
-          +btnPen('записаться')
-
-          //.row
-          //  .col-12.col-md-8
-          //    p.treatment-service-name Удаления мозоли (дополнительная услуга)
-          //.row
-          //  .col-12.col-lg-8
-          //    p.treatment-service-name Удаление стержневой мозоли за единицу. Удаление мозолей цена
-          //.row
-          //  .col-12.col-lg-8
-          //    p.treatment-service-name Удаление подногтевой и околоногтевой мозоли на одном пальце цена
-          //.row
-          //  .col-12.col-lg58
-          //    p.treatment-service-name Обработка бородавки на стопе Cryoderm System цена5//.col-12.col5//  p.treatment-price 255//  p.treatment-price 305//  p.treatment-price 20
-          //  p.treatment-price 45
-          //  p.treatment-price 350 грн
-          //.col-12.col-lg-2
-          //  p.treatment-duration 45 мин
-          //  p.treatment-duration 1 час
-          //  p.treatment-duration 30 мин
-          //  p.treatment-duration 1 час
-          //  p.treatment-duration 45 мин
+          .services-btn-container
+            +btnPen('записаться')
+    .headline.px-xl-6.text-center.my-5
+      h3.section-title-services.text-color-dark.text-center Фото до и после
+    include ../slider

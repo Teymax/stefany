@@ -1,0 +1,13 @@
+section.section.podology-slider
+  .container.mt-3.mb-5
+    h3.section-title.text-color-dark.text-center.mb-5 Вас также может заинтересовать
+    .slider-wrap
+      .row.no-gutters
+        .podology-service-slider.owl-carousel.slider-block
+          each element in [{name:"Удаление мозолей", img:"pd-feet-1"},{name:"Удаление натоптышей",img:"pd-feet-2"},{name:"Лечение грибка",img:"pd-feet-3"},{name:"Обработка трещин",img:"pd-feet-4"},{name:"Удаление мозолей", img:"pd-feet-1"},{name:"Удаление натоптышей",img:"pd-feet-2"},{name:"Лечение грибка",img:"pd-feet-3"},{name:"Обработка трещин",img:"pd-feet-4"}]
+            - let resultPath = "./assets/img/" + element.img + ".png"
+            a.diploma-item(href=resultPath, data-fancybox="")
+              img.w-100(src=resultPath, alt="result-image")
+              .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
+                .section-bg-dark.w-100.p-1
+                  p.paragraph-text.text-center.mb-0 #{element.name}

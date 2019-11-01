@@ -1,4 +1,20 @@
 section.section.activity
+	position: relative
+
+	@include media-breakpoint-down(md)
+		padding: 0 0 1em
+		.container
+			padding: 0 !important
+
+	.circles
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		width: 55em
+		display: block
+		z-index: -1
+
 	.container
 		div
 			h2
@@ -10,6 +26,6 @@ section.section.activity
 			&:nth-child(2)
 				position: relative
 
-				img
-					width: 100%
-					box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
+			img
+				width: 100%
+				box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)

@@ -145,7 +145,6 @@ ul.dropdown-menu-list
 		background: $color-white
 
 	li
-		margin-bottom: 0 !important
 		a
 			white-space: nowrap
 			font-weight: normal
@@ -251,7 +250,8 @@ nav.header-nav
 		max-width: 100% !important
 		height: 100vh
 		padding: 150px 15px 150px !important
-		background: #A09BCF
+		background: url(../assets/img/background/menu.png) no-repeat center center
+		background-size: cover
 		transition: 0.45s ease
 
 		.nav-link-text
@@ -352,13 +352,14 @@ nav.header-nav
 	.header-nav-wrap
 		position: static !important
 		opacity: 1 !important
-		display: flex
+		display: flex !important
 		align-items: center
 		width: 100% !important
 		max-width: 100% !important
 		height: auto !important
 		padding: 0 !important
 		background: transparent
+		justify-content: center
 	.mob-menu
 		position: fixed !important
 		z-index: -20
@@ -370,7 +371,8 @@ nav.header-nav
 		max-width: 100% !important
 		height: 100vh
 		padding: 150px 15px 150px !important
-		background: #A09BCF
+		background: url(../assets/img/background/menu.png) no-repeat center center
+		background-size: cover
 		transition: 0.45s ease
 
 		.dropdown-menu-list
@@ -413,6 +415,7 @@ nav.header-nav
 			.dropdown-menu-list
 				padding-top: 10px !important
 				display: flex
+
 				li
 					&:not(:last-child)
 						padding-bottom: 5px !important
@@ -429,9 +432,23 @@ nav.header-nav
 				z-index: 22
 
 			.mob-menu
+				display: flex !important
+				justify-content: center
 				visibility: visible
 				z-index: 20
 				opacity: 1
+
+				.header-nav-wrap
+					margin-bottom: 0 !important
+
+				.nav-callback
+					margin-bottom: 4em
+
+				.btn-callback
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					width: 15em
 	header .c-row ul.header-contact-list > li:not(:last-child)
 		margin-right: 0 !important
 	header .header-contact-list span, header .header-contact-list > li > a

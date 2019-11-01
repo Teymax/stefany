@@ -7,7 +7,12 @@ const gulp         = require( 'gulp' ),
       del          = require( 'del' ),
       browserSync  = require( 'browser-sync' ).create(),
       sass         = require( 'gulp-sass' ),
-      pug          = require( 'gulp-pug' )
+      pug          = require( 'gulp-pug' ),
+      beautifySass = require( 'gulp-sassbeautify' ),
+      beautifyPug  = require( 'gulp-pug-beautify' ),
+      cssmin       = require( 'gulp-cssmin' ),
+      htmlmin      = require( 'gulp-htmlmin' ),
+      zip          = require( 'gulp-zip' )
 
 function moveImages () {
   return gulp.src( '../../src/assets/img/**/*.*' )
@@ -27,8 +32,6 @@ function moveFonts () {
 //порядок подключения CSS файлов
 const cssFiles = [
   '../../src/styles/**/*.sass'
-  // '../materialize/css/materialize/css'
-  // './src/sass/_media.sass'
 ]
 //порядок подключения JS файлов
 const jsFiles = [
@@ -49,10 +52,16 @@ function styles () {
              .pipe( concat( 'style.css' ) )
              // добовление префиксов
              .pipe( autoprefixer() )
+             // Beautify
+             .pipe( beautifySass( {
+               indent: 2
+             } ) )
              //минификация sass
-             // .pipe(cleanCSS({
-             //   level: 2
-             // }))
+             .pipe( cleanCSS( {
+               level: 2
+             } ) )
+             // Минификация css
+             .pipe( cssmin() )
              //Выходная папка для стилей
              .pipe( gulp.dest( '../../build/css' ) )
              .pipe( browserSync.stream() )
@@ -83,8 +92,13 @@ function movePug () {
              .pipe( pug( {
                pretty: true
              } ) )
+             .pipe( beautifyPug( { tab_size: 1 } ) )
+             .pipe( htmlmin( { collapseWhitespace: true } ) )
              .pipe( gulp.dest( '../../build' ) )
 }
+
+const compress = () => gulp.src( '../../build/*' ).pipe( zip( 'build.zip' ) )
+                           .pipe( gulp.dest( '../../' ) )
 
 function watch () {
   browserSync.init( {
@@ -99,6 +113,7 @@ function watch () {
                } ) )
                .pipe( gulp.dest( '../../build' ) )
   } )
+
   // следит за CSS файлами
   gulp.watch( '../../src/styles/**/*.sass', styles )
   // следит за Fonts файлами
@@ -121,7 +136,10 @@ gulp.task( 'scripts', scripts )
 gulp.task( 'del', clean )
 // таск для отслеживания изменений
 gulp.task( 'watch', watch )
+// билд в архив
+gulp.task( 'comp', compress )
 
+gulp.task( 'prod', gulp.series( clean, styles, scripts, moveImages, moveIcons, moveFonts, movePug, compress ) )
 // таск для удаления файлов в папке build и паралельного запуска styles и
 // scripts
 gulp.task( 'build', gulp.series( clean, gulp.parallel( styles, scripts, moveImages, moveIcons, moveFonts, movePug ) ) )
