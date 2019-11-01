@@ -1,10 +1,124 @@
+h1
+	@include font(Circe, bold, 40, 92)
+	letter-spacing: .03em
+	color: $secondary-header-color
+
 .icon
 	display: inline-block
 	width: 30px
 	height: 30px
 
+.container.list-section
+	padding:
+		top: 2em !important
+		bottom: 2em !important
+
+	h2, p
+		color: $text-color-dark
+
+	h2
+		@include font(Circe, bold, 16, 20)
+		text-transform: uppercase
+
+	p
+		@include font(Circe, 200, 16, 19)
+
+		strong
+			font-weight: bold
+
+	ul
+		li
+			padding-left: 1.5em
+			position: relative
+			margin-bottom: 2em
+
+			h3
+				margin-bottom: 1em
+				color: $text-color-dark
+				@include font(Circe, bold, 16, 20)
+
+			p
+				@include font(Circe, 200, 16, 19)
+
+			&:before
+				content: '•'
+				color: $text-color-dark
+				position: absolute
+				left: 0
+				top: 0
+
+.special-contact-padding
+	@include media-breakpoint-up(lg)
+		padding-bottom: 8em !important
+
 button:focus
 	outline: none
+
+.mini-map
+	background: url('../assets/img/common/mobile-map.png') no-repeat center center
+	background-size: 80em
+	height: 20em
+	margin-top: 3em
+
+.accordion
+	.card-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		cursor: pointer
+		margin-bottom: 1rem
+		background-color: rgba(85, 98, 120, .3)
+		padding: 0
+
+		p
+			padding: 1em
+			margin-bottom: 0
+
+		.card-header
+			display: none
+
+	.card-body
+		background: $card-body
+		margin-bottom: 1rem
+
+		h3
+			font-size: 16px
+
+		h
+			background: #fff
+			color: #fff
+			opacity: .5
+
+	.card-header
+		&.active
+			margin-bottom: 0
+			background: rgba(114, 126, 146, 0.3)
+			.card-arrow
+				&:before
+					transform: rotate(180deg)
+
+	.card-arrow
+		min-width: 64px
+		width: 64px
+		height: inherit
+		align-self: stretch
+		background-color: $card-body
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&:before
+			content: ' '
+			display: block
+			background-image: url("../assets/icon/accordion-arrow.png")
+			background-repeat: no-repeat
+			width: 13px
+			height: 9px
+			transition: transform .3s
+
+	.btn:focus
+		outline: none !important
+		box-shadow: none !important
 
 .circles
 	position: absolute
@@ -130,7 +244,7 @@ button:focus
 			color: $secondary-header-color
 
 .h4-title
-	@include font(CormorantGaramond, 400, 24, 34)
+	@include font(Circe, 400, 24, 34)
 	color: $text-color-white
 
 .bnf-number
@@ -515,7 +629,55 @@ section.section-services
 	padding: 67px 0
 
 .services-btn-container
-  width: 232px
+	width: 232px
+
+.width-180
+	width: 180px !important
+
+.py-80
+	padding: 80px 0
+
+.py-55-mobile
+	@include media-breakpoint-down(md)
+	padding: 55px 0
+
+// end of services
+
+.light-white
+	color: rgba(255, 255, 255, .46)
+	font-size: 1em
+	text-transform: uppercase
+
+.specialists
+	&-item
+		&-container
+			position: relative
+			cursor: pointer
+			overflow: hidden
+
+	&-info
+		position: absolute !important
+		top: 0
+		left: 0
+		height: 100%
+		background: $spec-bg
+		transition: 0.25s linear
+		opacity: 0
+
+		&:hover
+			opacity: 1
+
+	.specialists-item-container
+		position: relative
+		cursor: pointer
+		overflow: hidden
+
+	.specialists-img
+		height: 100%
+
+	@include media-breakpoint-down(md)
+		.owl-nav
+			top: 100%
 
 .btn-arrow-dark .btn-callback .arrow-section
 	background-color: $bg-color-section-dark-blue
