@@ -8,34 +8,55 @@ section.section.discount-page
       display: flex
       justify-content: flex-end
       align-items: flex-end
-    .position-block
-      max-width: 500px
-      .custopm-text
-        &__small
-          @include font (Circe, 400, 28.75, 45)
-          color: $text-color-lightgrey
-          margin-bottom: 40px
-          &:before
-            content: url("../assets/img/main-service/d-block-3.svg")
-            position: absolute
-            top: -28px
-            right: 92px
-        &__bold
-          @include font (Circe, 900, 28.75, 45)
-          color: $text-color-lightgrey
-        &__through
-          @include font (Circe, 300, 17.25, 25)
-          color: $text-color-lightgrey
-          text-decoration: line-through
+    .c-desc
+      @include media-breakpoint-down(xs)
+        max-width: 280px
+    .side-bar
+      min-height: 580px
+      padding-top: 33px
+      padding-left: 30px
+      background:
+        image: url("../assets/img/discount-page/sidebar-bg.jpg")
+        size: cover
+        position: bottom
+      .title
+        @include  font (CormorantGaramond, 700, 30, 30)
+      .subtitle
+        color: $text-color-lightgrey
+      .position-block
+        max-width: 500px
+        .custopm-text
+          &__small
+            @include font (Circe, 300, 20, 31)
+            color: $text-color-lightgrey
+            margin-bottom: 40px
+            margin-left: -2rem
+            margin-top: -1rem
+          &__bold
+            @include font (Circe, 900, 20, 31)
+            color: $text-color-lightgrey
+          &__through
+            @include font (Circe, 300, 12, 19)
+            color: $text-color-lightgrey
+            text-decoration: line-through
+
+  .info-list
+    li
+      @include font (Circe, 400, 14, 22)
+      white-space: nowrap
+      &:before
+        background-color: #A9A8C6
+
+
   .btn-callback
     margin: 0px 35px 28px 0px
-
     .text-section
-      color: #fff
+      color: $text-color-white
       svg
-        fill: #fff
+        fill: $text-color-white
+    @include media-breakpoint-down(xs)
 
-@include media-breakpoint-down(lg)
-  section.section.discount-page
-    .container
-
+      .text-section
+        color: $text-color-dark
+        svg
+          fill: $text-color-dark
