@@ -97,7 +97,7 @@ function movePug () {
              .pipe( gulp.dest( '../../build' ) )
 }
 
-const compress = () => gulp.src( '../../build/*' ).pipe( zip( 'build.zip' ) )
+const compress = () => gulp.src( '../../build/**' ).pipe( zip( 'build.zip' ) )
                            .pipe( gulp.dest( '../../' ) )
 
 function watch () {
