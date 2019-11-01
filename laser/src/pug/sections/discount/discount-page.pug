@@ -1,14 +1,17 @@
 section.section.discount-page
   .container
-    h2.h2-title Оплатите 3 сеанса и получите 4-й в подарок
+    h2.h2-title.text-color-dark.mb-5.mb-md-3.mb-xl-0 Оплатите 3 сеанса и получите 4-й в подарок
     .row
       .col-12.col-lg-9
-        .c-content
-          //+btnCallback('записаться')
+        .c-content.mb-4
+          +btnCallback('записаться')
         .c-desc
-          p.paragraph-text.tect-color-dark.text-w-bold Действует постоянно
-          p.paragraph-text.tect-color-dark.text-w-light Хотите сделать лазерную эпиляцию определенной зоны? Оплатите три процедуры наперед и четвертую сделайте бесплатно! Акция действует для каждой четвертой процедуры при условии, если перед ней вы сразу оплатите три сеанса лазерной эпиляции для одной зоны наперед.
-          //+btn-simple('подробнее')
+          p.paragraph-text.text-color-dark.text-w-bold.mb-4 Действует постоянно
+          p.paragraph-text.text-color-dark.text-w-light Хотите сделать лазерную эпиляцию определенной зоны? Оплатите три процедуры наперед и четвертую сделайте бесплатно! Акция действует для каждой четвертой процедуры при условии, если перед ней вы сразу оплатите три сеанса лазерной эпиляции для одной зоны наперед.
+          +btnSimple('подробнее')(class='ml-auto')
+
+
+
 
       .col-12.col-lg-3.d-none.d-lg-block.side-bar
         h1.h1-main-title.text-w-bold.text-color-lightgray Комплексные зоны <br> для эпиляции

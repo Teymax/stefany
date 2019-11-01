@@ -26,9 +26,9 @@ mixin customBtn(text, className)
       span= text
     .arrow-section
       +arrowSvg
-mixin btnCallback(text)
+mixin btnCallback(text, className)
   .btn-callback
-    .text-section
+    .text-section(class!=attributes.class)= className
       +penSvg
       span= text
     .arrow-section
