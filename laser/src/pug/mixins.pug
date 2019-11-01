@@ -75,12 +75,10 @@ mixin accordeon(header, description, items, expandedRequired, expandedIndex)
           if index === expandedIndex
             .collapse.show(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
               .card-body
-                h3.white-text= item.title
                 p.paragraph-text.text-w-light= item.body
           else
             .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
               .card-body
-                h3.white-text= item.title
                 p.paragraph-text.text-w-light= item.body
       else
         each item, index in items
@@ -89,5 +87,4 @@ mixin accordeon(header, description, items, expandedRequired, expandedIndex)
             .card-arrow
           .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
             .card-body
-              h3.white-text= item.title
               p.paragraph-text.text-w-light= item.body
