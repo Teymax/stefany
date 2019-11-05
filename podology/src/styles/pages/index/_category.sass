@@ -1,14 +1,22 @@
 section.section.category
+	.wrapper
+		&--dark
+			background: $bg-color-section-dark-blue
+
+		&--mixed
+			background: linear-gradient(right, $text-color-dark 50%, $light-bg 50%)
+
 	.description
 		background: url("../assets/img/background/category-people-bg.png") no-repeat center/cover
+
 		.container
 			height: 100%
+
 		h2
 			color: #ffffff
+
 		p
 			text-align: center
 			font-weight: 100
-			@include desktop
-				width: 40em
-			@include laptop
+			@include media-breakpoint-up(md)
 				width: 40em

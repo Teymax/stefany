@@ -78,9 +78,9 @@ button:focus
 			display: none
 
 	.card-body
-		background: $card-body
+		//background: transparent
 		margin-bottom: 1rem
-
+		background-color: rgba(85, 98, 120, .3)
 		h3
 			font-size: 16px
 
@@ -93,6 +93,7 @@ button:focus
 		&.active
 			margin-bottom: 0
 			background: rgba(114, 126, 146, 0.3)
+
 			.card-arrow
 				&:before
 					transform: rotate(180deg)
@@ -328,7 +329,7 @@ button:focus
 				background: url('../assets/img/feet-index-1.png') no-repeat right
 				background-size: cover
 				@include media-breakpoint-down(sm)
-					height: 19em
+					height: 21em
 		//background: url("../assets/img/feet-index-1.png") no-repeat -19em 10px
 
 		&:nth-child(2)
@@ -369,7 +370,7 @@ button:focus
 			.info-list
 				li
 					color: $text-color-dark
-
+					font-family: Circe
 					&:before
 						background: $text-color-dark
 
