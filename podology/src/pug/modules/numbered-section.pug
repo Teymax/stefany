@@ -20,16 +20,17 @@ mixin numberedSection(title1, text1, title2, text2, title3, text3, title4, text4
       .description
         h3.title.f-bold= title4
         p.desc= text4
-    .col-sm-12.col-lg-6.numbered-cnt
-      img(src="assets/icon/common/num-5.png")
-      .description
-        h3.title.f-bold= title5
-        p.desc= text5
-    .col-sm-12.col-lg-6.numbered-cnt
-      img(src="assets/icon/common/num-6.png")
-      .description
-        h3.title.f-bold= title6
-        p.desc= text6
+    if text4 && text5
+      .col-sm-12.col-lg-6.numbered-cnt
+        img(src="assets/icon/common/num-5.png")
+        .description
+          h3.title.f-bold= title5
+          p.desc= text5
+      .col-sm-12.col-lg-6.numbered-cnt
+        img(src="assets/icon/common/num-6.png")
+        .description
+          h3.title.f-bold= title6
+          p.desc= text6
 mixin numberedSection2(title1, text1, title2, text2)
   .numbered-section
     .col-sm-12.col-lg-6.numbered-cnt
