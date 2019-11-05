@@ -1,25 +1,4 @@
-section.section.block-answer-before
-  overflow: visible
-  background-color: #A9A8C6
-  padding-top: 92px
-  padding-bottom: 87px
-  @include media-breakpoint-down(lg)
-    padding-top: 0px
-    padding-bottom: 91px
-  @include media-breakpoint-down(xs)
-    padding-bottom: 82px
-  .container
-    .d-line
-      background: rgba(255, 255, 255, 0.39)
-
-    img
-      width: 100%
-      max-width: 540px
-      max-height: 510px
-      box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
-      @include media-breakpoint-down(jg)
-        margin-top: -60px
-      @include media-breakpoint-down(xs)
+section.section.custom-block-answer-before
   .custom-icon-number
     width: 27px
     height: 27px
@@ -27,3 +6,37 @@ section.section.block-answer-before
     p
       @include font (Circe, bold, 16, 26)
       color: #fff
+
+  .c-content-first
+    padding-top: 70px
+    background-color: #EDE1DF
+    margin-bottom: 139px
+    @include media-breakpoint-down(lg)
+      padding-top: 103px
+      margin-bottom: 144px
+    @include media-breakpoint-down(xs)
+      padding-top: 43px
+      margin-bottom: 99px
+    .container
+      .d-line
+        background: rgba(85, 98, 120, 0.39)
+      img
+        width: 100%
+        max-width: 540px
+        max-height: 510px
+        box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+        @include media-breakpoint-down(jg)
+          margin-top: -60px
+        @include media-breakpoint-down(xs)
+
+
+  .c-content-second
+    background-color: #A9A8C6
+    padding-bottom: 98px
+    @include media-breakpoint-down(lg)
+      padding-bottom: 96px
+    @include media-breakpoint-down(xs)
+      padding-bottom: 38px
+
+    .container
+
