@@ -1,52 +1,79 @@
-section.section.service-laser-whatToDo
+.service-laser-whatToDo
   background: url(../assets/img/service-list/whatToDoBg.png)
-  padding-top: 114px
-  padding-bottom: 90px
-  .container
-    .todo-subtitle
-      @include font(Circe, bold, 18, 22)
+  //padding-top: 114px
+  //padding-bottom: 90px
+  margin-bottom: 90px
+  margin-top: 115px
+  @include media-breakpoint-down(md)
+    margin-bottom: 180px
 
-    .items-container
-      img
+  .todo-subtitle
+    @include font(Circe, bold, 18, 22)
 
-      .text-container1
-        p
-          &:nth-of-type(1)
-            margin-top: 52px
+  .text-container1
+    p
+      &:nth-of-type(1)
+        margin-top: 52px
 
-          &:nth-of-type(2)
-            margin-top: 87px
+      &:nth-of-type(2)
+        margin-top: 87px
 
-          &:nth-of-type(3)
-            margin-top: 68px
+      &:nth-of-type(3)
+        margin-top: 68px
 
-          span
-            color: #000
+      span
+        color: #000
 
-      .text-container2
-        p
-          &:nth-of-type(1)
-            margin-top: 52px
+  .text-container2
+    p
+      &:nth-of-type(1)
+        margin-top: 52px
 
-          &:nth-of-type(2)
-            margin-top: 101px
+      &:nth-of-type(2)
+        margin-top: 101px
 
-          &:nth-of-type(3)
-            margin-top: 57px
+      &:nth-of-type(3)
+        margin-top: 57px
 
-          span
-            color: #000
+      span
+        color: #000
 
-      .text-container-hide
-        p
-          &:nth-of-type(1)
-            margin-top: 52px
+  .text-container-hide
+    p
+      &:nth-of-type(1)
+        margin-top: 52px
 
-          &:nth-of-type(2)
-            margin-top: 119px
+      &:nth-of-type(2)
+        margin-top: 119px
 
-          &:nth-of-type(3)
-            margin-top: 79px
+      &:nth-of-type(3)
+        margin-top: 79px
 
-          span
-            color: #000
+      span
+        color: #000
+
+  .custom-row-height
+    height: 205px
+
+  .circle
+    background-image: url("../assets/img/service-laser-page/circle-1.png")
+    background-repeat: no-repeat
+    background-size: 205px 199px
+    background-position: center 20px
+    @include media-breakpoint-down(md)
+      background-size: 146px 142px
+      background-position: center 20px
+
+  .circle-1
+    background-image: url("../assets/img/service-laser-page/circle-1.png")
+
+  .circle-2
+    background-image: url("../assets/img/service-laser-page/circle-2.png")
+
+  .circle-3
+    background-image: url("../assets/img/service-laser-page/circle-3.png")
+
+
+  .text-xl-center
+    @include media-breakpoint-up(xl)
+      text-align: center !important
