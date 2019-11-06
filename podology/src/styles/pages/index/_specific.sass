@@ -1,0 +1,28 @@
+section.section.specific
+	position: relative
+	margin-bottom: -4em
+
+	.circles
+		z-index: -1
+		left: 50%
+		transform: translateX(-50%)
+		top: -17em
+		width: 90em
+		@include media-breakpoint-down(sm)
+			width: 50em
+			height: 42em
+			top: 0
+
+	p
+		color: $text-color-dark
+
+	h3
+		@include font(Circe, 600, 20, 20)
+		margin:
+			top: 1em
+			bottom: 2em
+
+	.person-wrapper
+		img
+			width: 4em
+			height: auto

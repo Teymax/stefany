@@ -1,0 +1,134 @@
+.owl-nav
+	position: absolute
+	top: 50%
+	left: 0
+	transform: translateY(-50%)
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+
+	span
+		display: none
+
+	button
+		width: 30px
+		height: 30px
+		opacity: .4
+
+		&.owl-prev
+			background-image: url('../assets/icon/slider-left-arrow.png') !important
+			background-repeat: no-repeat !important
+			background-size: contain !important
+
+		&.owl-next
+			background-image: url('../assets/icon/slider-right-arrow.png') !important
+			background-repeat: no-repeat !important
+			background-size: contain !important
+
+.section-services.container-fluid
+	padding-top: 0 !important
+	padding-bottom: 0 !important
+
+.p-text-light
+	@include font(Circe, 300, 14, 24)
+	color: $breadcrump-color
+
+.paragraph-text-18
+	margin-bottom: 0 !important
+	@include font(Circe, 400, 18, 1)
+	color: #ffffff
+	transition: 0.3s ease
+
+	.text-w-bold
+		font-size: 20px
+	line-height: 24px
+
+.f-bold
+	font-weight: bold !important
+
+.dark-color
+	color: #3A405B !important
+
+.section-title-small
+	width: 100%
+	display: block
+	margin-bottom: 20px
+	padding-bottom: 44px
+	@include font(Circe, 700, 28, 28)
+	color: #556278
+
+.mb-80
+	margin-bottom: 80px !important
+
+.blue-block
+	padding: 17px 0
+	background: #4F79CA
+
+h3.section-subtitle
+	padding-bottom: 37px
+	@include font(Circe, 400, 20, 30)
+	color: #556278
+
+.white-text
+	color: $color-white !important
+
+.h3-title-regular
+	@include font(Circe, 400, 20, 24)
+	color: $text-color-white
+
+.paragraph-text-light
+	@include font(Circe, 300, 16, 26)
+	color: $text-color-white
+
+.paragraph-text-bold
+	@include font(Circe, 700, 16, 26)
+	color: $text-color-white
+
+.text-dark-1
+	color: #3A405B !important
+
+.paragraph-text-dark
+	@include font(Circe, 400, 16, 26)
+	color: $text-color-dark
+
+.container-xl
+	max-width: 1283px !important
+
+.br-100
+	border-radius: 100px
+
+.mb-65
+	margin-bottom: 65px !important
+
+.lightblue-bg
+	background: #EBF4FB !important
+// buttons - style *******
+.btn-callback, .btn-send
+	border-radius: 100px !important
+
+	& > span
+		text-decoration: none
+		width: 100%
+		max-width: 109px
+
+		svg
+			width: 13px
+			height: 13px
+
+		.sendSvg
+			width: 13px
+			height: 19px
+
+		.st0
+			fill: $color-purple-text
+
+	& > svg
+		width: 14px
+		height: 11px
+
+		.st0
+			fill: $color-white
+
+.height-50
+	height: 50px

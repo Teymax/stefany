@@ -1,0 +1,58 @@
+.custom-px
+	width: 70%
+	@include media-breakpoint-down(md)
+		width: 100%
+
+.custom-px-2
+	@include media-breakpoint-up(md)
+	padding: 0 35px
+
+	@include media-breakpoint-up(lg)
+		padding: 0 130px
+
+	@include media-breakpoint-up(xl)
+		padding: 0 250px
+
+.services-treatment-divider
+	background-color: $separator-bg-color
+	width: 89px
+	height: 4px
+
+.circles-bg
+	background-image: url("../assets/img/services-warts/circles.png")
+	background-size: 180%
+	background-repeat: no-repeat
+	background-position: center -58px
+	@include media-breakpoint-up(md)
+		background-size: 1500px
+		background-position: center -32px
+
+.paragraph-title
+	@include font(Circe, 700, 14, 22)
+	text-transform: uppercase
+	color: $secondary-header-color
+
+.custom-padding-treatment
+	@include media-breakpoint-up(md)
+		padding: 0 20px
+	@include media-breakpoint-up(xl)
+		padding: 0 220px
+
+.treatment-service-name
+	@include font(Circe, 700, 12, 18)
+	color: $service-treatment-color
+	text-transform: uppercase
+
+.treatment-price
+	@include font(Circe, 700, 18, 17)
+	color: $secondary-header-color
+	text-transform: uppercase
+
+.treatment-duration
+	@include font(Circe, 700, 18, 17)
+	color: #CCD1D9
+	text-transform: uppercase
+//.separator
+//  background-color: $separator-bg-color
+//  height: 1px
+//  width: 100%

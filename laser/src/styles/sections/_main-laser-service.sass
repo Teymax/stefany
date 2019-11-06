@@ -1,0 +1,105 @@
+//section.section.main-laser-service
+//  .info-list
+//    li
+//      &:before
+//        background-color: #A9A8C6
+//  .h1-title
+//    @include font (CormorantGaramond, 700, 44, 30)
+//    color: #fff
+//  .c-service
+//    &__service-box
+//      height: 300px
+//      &_bg-1
+//        background:
+//          image: url("../assets/img/main-service/bg_1.png")
+//          size: cover
+//      &_bg-2
+//        background:
+//          image: url("../assets/img/main-service/bg_2.png")
+//          size: cover
+//      &_bg-3
+//        background:
+//          image: url("../assets/img/main-service/bg_3.jpg")
+//          size: cover
+//      &_bg-4
+//        background:
+//          image: url("../assets/img/main-service/bg_4.jpg")
+//          size: cover
+//      &_bg-5
+//        background:
+//          image: url("../assets/img/main-service/bg_5.png")
+//          size: cover
+//
+//@include media-breakpoint-down(lg)
+//
+//
+//
+//@include media-breakpoint-down(xs)
+//  .h2-title
+//    font-size: 34px
+section.section.main-laser-service
+  position: relative
+  background-image: url(../assets/img/main-service/main-bg.jpg)
+  background-size: cover
+  padding-top: 68px
+  padding-bottom: 109px
+  img.bg-elem
+    position: absolute
+    top: 0
+    right: 0
+  .container
+    .h1-main-title
+      @include font (CormorantGaramond, 400, 80, 60)
+      color: $text-color-lightgrey
+      margin-bottom: 60px
+
+    .info-list
+      li.list-item
+        @include font (Circe, 400, 20, 31)
+        color: $text-color-lightgrey
+        &:before
+          width: 7.71px
+          height: 7.71px
+          background: #A9A8C6
+    .subtitle
+      @include font (Circe, 400, 24, 37)
+      color: $text-color-lightgrey
+    .position-block
+      max-width: 500px
+      .custopm-text
+        &__small
+          @include font (Circe, 400, 28.75, 45)
+          color: $text-color-lightgrey
+          margin-bottom: 40px
+          &:before
+            content: url("../assets/img/main-service/d-block-3.svg")
+            position: absolute
+            top: -28px
+            right: 92px
+        &__bold
+          @include font (Circe, 900, 28.75, 45)
+          color: $text-color-lightgrey
+        &__through
+          @include font (Circe, 300, 17.25, 25)
+          color: $text-color-lightgrey
+          text-decoration: line-through
+      .c-span
+        position: relative
+        margin-left: 43px
+        &:before
+          content: url("../assets/img/main-service/d-block-1.svg")
+          position: absolute
+          top: -15px
+          left: -42px
+        &:after
+          content: url("../assets/img/main-service/d-block-2.svg")
+          position: absolute
+          top: -18px
+          right: -23px
+
+@include media-breakpoint-down(lg)
+
+
+
+@include media-breakpoint-down(xs)
+

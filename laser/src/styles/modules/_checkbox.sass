@@ -1,0 +1,61 @@
+.checkbox-wrapper
+  width: 76px
+  height: 36px
+  background: #9FA6BA
+  border-radius: 3em
+  padding: .3em
+  position: relative
+  transition: .25s linear all
+  transition-duration: 0.1s
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+  &:before
+    content: ''
+    background: url("../assets/icon/male.svg") no-repeat
+    background-size: contain
+    position: absolute
+    left: 14px
+    top: 11px
+    z-index: 5
+    width: 12px
+    height: 25px
+    pointer-events: none
+
+  &:after
+    content: ''
+    background: url(../assets/icon/female.svg) no-repeat
+    background-size: contain
+    position: absolute
+    pointer-events: none
+    z-index: 5
+    left: 47px
+    top: 12px
+    width: 24px
+    height: 16px
+  &.checked
+    input[type="checkbox"]
+      margin-left: 0
+
+      &:before
+        left: 41px
+
+  input[type="checkbox"]
+    appearance: none
+    width: 30px
+    height: 30px
+    margin-left: 35px
+    outline: none
+    border: none
+    cursor: pointer
+    &:before
+      content: ''
+      display: block
+      width: 24px
+      height: 24px
+      background: #F6AE9F
+      border-radius: 50%
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      transition: .15s ease-in
+      left: 9px
+      pointer-events: none

@@ -1,0 +1,76 @@
+.numbered-block
+	margin-top: -75px
+	padding-bottom: 70px !important
+	@include media-breakpoint-down(md)
+		margin-top: 0px !important
+	h2
+		margin-bottom: 55px !important
+.numbered-items
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		z-index: 2
+		display: block
+		@include media-breakpoint-down(md)
+			display: none !important
+	h3
+		text-transform: none !important
+	h3, p 
+		position: relative
+		z-index: 3
+	.numbered-items-number
+		position: relative
+		z-index: 1
+		width: 130px
+		height: 130px
+		border-radius: 50%
+		background: #EBF1FB
+		margin-bottom: 25px !important
+		img
+			position: static !important
+			width: auto !important
+.numbered-item-1
+	&::before
+		top: 50px
+		right: -30px
+		width: 255px
+		height: 123px
+		background: url('../assets/icon/common/numbed-dash-1.png')
+			position:  center
+			repeat: no-repeat
+	.numbered-items-number img
+		margin-right: 30px
+.numbered-item-2
+	&::before
+		top: 50px
+		right: calc(50% - 60px)
+		width: 123px
+		height: 255px
+		background: url('../assets/icon/common/numbed-dash-2.png')
+			position:  bottom center
+			repeat: no-repeat
+	.numbered-items-number img
+		margin-right: 7px
+.numbered-item-3
+	&::before
+		top: 0
+		right: calc(50% - 60px)
+		width: 123px
+		height: 255px
+		background: url('../assets/icon/common/numbed-dash-3.png')
+			position:  top center
+			repeat: no-repeat
+	.numbered-items-number img
+		margin-right: 9px
+.numbered-item-4
+	&::before
+		bottom: 50px
+		right: 0px
+		width: 255px
+		height: 123px
+		background: url('../assets/icon/common/numbed-dash-4.png')
+			position:  bottom 50px right
+			repeat: no-repeat
+	.numbered-items-number img
+		margin-right: 11px

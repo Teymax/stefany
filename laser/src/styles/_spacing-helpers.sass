@@ -1,35 +1,96 @@
-$spaceAmounts: (1, 2, 3, 4, 5, 6, 10)
+$spaceAmounts: (6, 7, 8, 9, 10)
 $sides: (top, bottom, left, right)
-
-@each $space in $spaceAmounts
-  @each $side in $sides
-    .m#{str-slice($side, 0, 1)}-#{$space}
-      margin-#{$side}: #{$space}rem !important
-
-
-    .p#{str-slice($side, 0, 1)}-#{$space}
-      padding-#{$side}: #{$space}rem !important
+@media (max-width: 991px)
+  @each $space in $spaceAmounts
+    @each $side in $sides
+      .m#{str-slice($side, 0, 1)}-#{$space}
+        margin-#{$side}: #{$space}rem !important
 
 
-  .m-#{$space}
-    margin: #{$space}rem !important
+      .p#{str-slice($side, 0, 1)}-#{$space}
+        padding-#{$side}: #{$space}rem !important
 
-  .p-#{$space}
-    padding: #{$space}rem !important
 
-  .my-#{$space}
-    margin: #{$space}rem  0 !important
+    .m-#{$space}
+      margin: #{$space}rem !important
 
-  .mx-#{$space}
-    margin: 0 #{$space}rem  !important
+    .p-#{$space}
+      padding: #{$space}rem !important
 
-  .py-#{$space}
-    padding: #{$space}rem  0 !important
+    .my-#{$space}
+      margin: #{$space}rem  0 !important
 
-  .px-#{$space}
-    padding: 0 #{$space}rem  !important
+    .mx-#{$space}
+      margin: 0 #{$space}rem  !important
 
-  .ma
-    margin: 0 auto  !important
+    .py-#{$space}
+      padding: #{$space}rem  0 !important
 
+    .px-#{$space}
+      padding: 0 #{$space}rem  !important
+
+    .ma
+      margin: 0 auto  !important
+
+@media (min-width: 576px)
+  @each $space in $spaceAmounts
+    @each $side in $sides
+      .m#{str-slice($side, 0, 1) + (-sm)}-#{$space}
+        margin-#{$side}: #{$space}rem !important
+
+
+      .p#{str-slice($side, 0, 1) + (-lg)}-#{$space}
+        padding-#{$side}: #{$space}rem !important
+
+    .m-lg-#{$space}
+      margin: #{$space}rem !important
+
+    .p-lg-#{$space}
+      padding: #{$space}rem !important
+
+    .my-lg-#{$space}
+      margin: #{$space}rem  0 !important
+
+    .mx-lg-#{$space}
+      margin: 0 #{$space}rem  !important
+
+    .py-lg-#{$space}
+      padding: #{$space}rem  0 !important
+
+    .px-lg-#{$space}
+      padding: 0 #{$space}rem  !important
+
+    .ma-lg
+      margin: 0 auto  !important
+
+@media (min-width: 992px)
+  @each $space in $spaceAmounts
+    @each $side in $sides
+      .m#{str-slice($side, 0, 1) + (-lg)}-#{$space}
+        margin-#{$side}: #{$space}rem !important
+
+
+      .p#{str-slice($side, 0, 1) + (-lg)}-#{$space}
+        padding-#{$side}: #{$space}rem !important
+
+    .m-lg-#{$space}
+      margin: #{$space}rem !important
+
+    .p-lg-#{$space}
+      padding: #{$space}rem !important
+
+    .my-lg-#{$space}
+      margin: #{$space}rem  0 !important
+
+    .mx-lg-#{$space}
+      margin: 0 #{$space}rem  !important
+
+    .py-lg-#{$space}
+      padding: #{$space}rem  0 !important
+
+    .px-lg-#{$space}
+      padding: 0 #{$space}rem  !important
+
+    .ma-lg
+      margin: 0 auto  !important
 

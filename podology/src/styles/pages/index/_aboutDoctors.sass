@@ -1,0 +1,45 @@
+section.section.about-doctors
+
+	@include media-breakpoint-up(md)
+		.btn-callback
+			width: 11em
+
+	> .container
+		position: relative
+
+		#circles3
+			z-index: -1
+			top: -2em
+			left: 50%
+			transform: translateX(-50%)
+			opacity: .2
+
+		#dashes3
+			top: 21em
+			left: 36em
+
+		.video
+			width: 100%
+			height: auto
+			position: relative
+
+			.custom-play-btn
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 6em
+				height: 6em
+				opacity: .85
+
+		h2
+			color: $secondary-header-color
+			@include font(Circe, 600, 25, 28)
+			@include mobile-all
+				margin-top: 1rem
+
+	.container
+		&:nth-child(2)
+			width: 45em
+			@include mobile-all
+				width: 100%

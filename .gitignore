@@ -1,6 +1,13 @@
 node_modules/
-idea/
-history/
-./*/build/*
-!./*/build/assets/
+.idea/
+.idea/*
+.idea
+.history/
+.history/*
+*/build
+*/build/*
 package-lock.json
+*.zip
+**/.DS_Store
+*/.DS_Store
+.DS_Store

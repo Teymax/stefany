@@ -1,19 +1,14 @@
+// bootstrap connection
+@import "../../node_modules/bootstrap/scss/bootstrap"
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot"
+
 @import "variables"
 @import "mixins"
 @import "fonts"
 @import "reset"
 @import "spacing-helpers"
 @import "grid"
-
-
-
-.container
-  max-width: 1440px
-  width: 100%
-  margin-left: auto
-  margin-right: auto
-
-
-@import sections/header
-
+@import "sections/all"
+@import "lib/all"
 @import "media"

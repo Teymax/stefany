@@ -1,0 +1,89 @@
+.course-benefits
+	h2
+		text-transform: initial
+
+	background:
+		image: url("../assets/img/padalogy/learning/course-benefits-bg.jpg")
+		size: cover
+		position: top left
+		repeat: no-repeat
+	padding: 69px 0 72px
+
+	.contaner
+		max-width: 1083px !important
+
+	.btn-callback
+		max-width: 19em
+
+.course-benefits-cnt
+	max-width: 625px
+	background:
+		image: url("../assets/img/padalogy/learning/dash.png")
+		size: 294px
+		position: bottom 5px right 80px
+		repeat: no-repeat
+
+	.info-list-item
+		position: relative
+		padding-left: 20px !important
+		padding-bottom: 11px !important
+
+		&:before
+			position: absolute
+			left: 3px
+			top: 9px
+			content: ''
+			width: 4px
+			height: 4px
+			background: $breadcrump-color
+			border-radius: 50%
+
+.course-price
+	@include font(Circe, 300, 20, 24)
+	color: #556278
+
+	span
+		margin-left: 15px
+		width: 109px
+		height: 109px
+		background: transparentize
+		@include font(Circe, 700, 24, 24)
+		color: #2E3746
+		border-radius: 50%
+
+.height-50
+	height: 50px !important
+
+@media(max-width: 991px)
+	.course-benefits
+		background: #EBF4FB
+
+@media(max-width: 767px)
+	.course-benefits-cnt
+		background-size: 190px
+		background-position: bottom 30px right 80px
+	.course-price
+		margin-top: 5px
+		margin-bottom: 10px
+
+		span
+			background: #7B9DDD
+			font-size: 20px !important
+			line-height: 20px !important
+			box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.11)
+			color: #ffffff !important
+
+@media(max-width: 400px)
+	.course-price
+		margin-top: 25px
+		margin-bottom: 25px
+		width: 100%
+		flex-direction: column
+
+		span
+			margin-left: 0
+			margin-top: 15px
+	.callback-wrap
+		.btn-callback
+			margin: 0 auto !important
+

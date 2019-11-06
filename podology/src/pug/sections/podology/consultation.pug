@@ -1,0 +1,18 @@
+section.section.podology-consultation
+  .container.d-flex.flex-wrap
+    .col-12.col-lg-12.d-flex.flex-column.justify-content-center.align-items-center
+      h2.white-text.text-center Запишись на консультацию <strong>прямо сейчас бесплатно!</strong>
+      .dash.align-self-center
+      p.white-text.text-center Раздел медицины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.
+      span.d-none.d-lg-block
+        +btnCallback('перезвонить мне')
+    .col-12.col-lg-5.d-block.d-lg-none
+      .callback-card
+        h3 Оставьте ваши данные
+        p и мы вам перезвоним
+        form(method="post" action="/")
+          input(type="text" placeholder="Имя")
+          input(type="email" placeholder="Email")
+          input(type="tel" placeholder="Телефон").mb-4
+          input(type="submit" style="display: none")
+          +btnCallback('перезвонить мне')

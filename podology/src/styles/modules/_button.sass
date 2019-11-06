@@ -1,0 +1,74 @@
+.btn-callback
+	display: flex
+	justify-content: center
+	width: 100%
+	max-width: 100%
+	text-decoration: none
+	border-radius: 100px
+	border: none
+
+	color: #fff
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+	text-transform: uppercase
+	cursor: pointer
+
+	&:active
+		box-shadow: none
+
+	&.no-svg
+		width: 100%
+
+		.text-section
+			width: 75%
+
+		.arrow-section
+			width: 25%
+
+	.text-section
+		background: $btn-primary-bg
+		border:
+			top:
+				left-radius: inherit
+				right-radius: 0
+			bottom:
+				left-radius: inherit
+				right-radius: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: .6em
+		@include media-breakpoint-down(md)
+			padding: .6em
+		width: 80%
+
+		svg
+			margin-right: .7em
+
+			path
+				fill: #fff
+
+		span
+			margin-top: .15em
+			letter-spacing: 0.25em
+
+		span
+			@include font(Circe, 400, 11, 20)
+			@include media-breakpoint-down(md)
+				font-size: 14px
+
+	.arrow-section
+		width: 20%
+		padding: .6em
+		@include media-breakpoint-down(md)
+			padding: .6em
+		border:
+			top:
+				left-radius: 0
+				right-radius: inherit
+			bottom:
+				left-radius: 0
+				right-radius: inherit
+		background: $btn-primary-arrow-bg
+		display: flex
+		justify-content: center
+		align-items: center

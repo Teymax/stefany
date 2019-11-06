@@ -1,0 +1,62 @@
+section.section.map
+	padding-top: 64px
+	padding-bottom: 59px
+
+	.container
+		.btn-simple-map
+			@include font(Circe, 700, 12, 14)
+			color: #3A405B
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 44px
+			text-decoration: none
+			border-radius: 100px
+			background: #fff
+			border: 1px solid #D2DBE9
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+			text-transform: uppercase
+			cursor: pointer
+			padding: 0 33px
+
+			&.active
+				background: $secondary-header-color
+				color: #fff
+
+			&:hover
+				background: $secondary-header-color
+				border: 1px solid $secondary-header-color
+				color: #fff
+
+			&:focus
+				background: $secondary-header-color
+				color: #fff
+
+			&:active
+				box-shadow: none
+
+		p
+			margin-bottom: 0
+
+		.btn-callback
+			max-width: 300px
+			height: 50px
+
+			.text-section
+				width: 82%
+				@include media-breakpoint-down(sm)
+					span
+						font-size: 12px
+
+			.arrow-section
+				width: 23%
+
+@include media-breakpoint-down(lg)
+	section.section.map
+		padding-top: 38px
+		padding-bottom: 37px
+
+@include media-breakpoint-down(xs)
+	section.section.map
+		padding-top: 49px
+		padding-bottom: 53px

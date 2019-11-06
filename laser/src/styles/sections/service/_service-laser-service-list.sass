@@ -1,0 +1,113 @@
+section.section.service-laser-service-list
+    padding-top: 0
+    background:  url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
+    background-repeat: repeat-y
+    background-position: top center
+    overflow: initial
+    .checkbox-group
+        width: 100%
+        .checkbox-row
+            width: 100%
+            input
+                width: 15px
+                height: 15px
+                margin-bottom: 1.2rem
+    .container
+        .row
+            .left
+                .radio-container
+                    width: 100px
+                    height: 36px
+                    background: #9FA6BA
+                    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+                    border-radius: 100px
+                    input
+                        width: 30px
+                        height: 30px
+                .service-list-group
+                    width: 100%
+                    padding: 0 60px
+                    h2
+                        font-size: 30px
+                    //.checkbox-group
+                       // width: 100%
+                        //.checkbox-row
+                           // width: 100%
+            .right
+                .stash
+                    position: sticky
+                    top: -20px
+                    .sale-container
+                        width: 324px
+                        height: 215px
+                        background:  url(../assets/img/service-laser-page/sale.png)
+                        background-size: cover
+                        background-repeat: no-repeat
+                        &:before
+                            content: '-40%'
+                            display: block
+                            height: 100px
+                            width: 100px
+                            background-color: #9FA6BA
+                            border-radius: 50%
+                            position: absolute
+                            top: 50px
+                            left: -6px
+                            @include font('CormorantGaramond', 700, 48, 90)
+                            color: $text-color-white
+                            text-align: center
+                        h4
+                            width: 42%
+                            line-height: 23px
+                    .checkbox-group
+                        width: 77%
+                        box-sizing: border-box
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+                    .sale-group
+                        width: 77%
+                        box-sizing: border-box
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+                        p
+                            margin: 20px 0
+                            &:nth-of-type(1)
+                                margin-left: 2rem
+                    .price-group
+                        width: 77%
+                        .price-block
+                            width: 50%
+                            p
+                                margin: 10px 0
+                            img
+                                width: 20px
+                                height: 20px
+                                margin: 10px 0
+section.section.service-laser-service-list-tablet1
+    background: url(../assets/img/service-laser-page/list-image-tablet.png)
+    background-size: cover
+    #sale-p
+        font-family: "CormorantGaramond"
+        font-style: normal
+        font-weight: 700
+        font-size: 48px
+        line-height: 90px
+        color: #ffffff
+        text-align: center
+        position: absolute
+        top: 34px
+        left: 50px
+section.section.service-laser-service-list-tablet2
+    background: url(../assets/img/service-laser-page/service-laser-list-bg-tablet.png)
+    background-size: cover
+    #radio-container
+        width: 100px
+        height: 36px
+        background: #9FA6BA
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+        border-radius: 100px
+        input
+            width: 30px
+            height: 30px
+    .checkbox-group
+        width: 100%
+section.section.service-laser-service-list-tablet3.d-flex.d-lg-none.py-0.flex-column
+    background: #6f7682
