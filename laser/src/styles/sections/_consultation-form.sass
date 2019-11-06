@@ -3,6 +3,8 @@ section.section.consultation-form
   background:
     image: url("../assets/img/background/consultation-form-bg.jpg")
     size: cover
+  .btn-callback
+    box-shadow: none
   .container
     .c-content
       padding-top: 106px
@@ -18,7 +20,7 @@ section.section.consultation-form
           @include media-breakpoint-down(lg)
             font-size: 65px
     .main-form
-      max-width: 390px
+      max-width: 396px
       background-color: #EDE1DF
       border-radius: 5px 5px 0 0
       overflow: hidden
@@ -29,7 +31,7 @@ section.section.consultation-form
 
     .small-label
       @include font(Circe, 400, 12, 22)
-      color: $text-color-dark
+      color: $text-color-lightdark
     .form-control::placeholder
       @include font(Circe, 300, 14, 22)
       color: $text-color-white
@@ -38,6 +40,9 @@ section.section.consultation-form
       background-image: linear-gradient(to right, transparent 81%, #F6AE9F 24%)
       max-width: 250px
       margin-top: 37px
+
+  .mb-44
+    margin-bottom: 44px
 @include media-breakpoint-down(lg)
   section.section.consultation-form
     padding-top: 63px

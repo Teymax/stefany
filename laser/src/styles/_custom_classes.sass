@@ -7,10 +7,14 @@ iframe
   width: 100%
   height: 100%
 .text-dashed
-  border-bottom: 1px dashed #000080
+  background:
+    image: linear-gradient(to right, black 24%, rgba(255, 255, 255, 0) 0%)
+    position: bottom
+    size: 5px 1px
+    repeat: repeat-x
 .small-text
   @include font(Circe, 400, 14, 22)
-  color: $text-color-dark
+  color: #4D5259
 .text-w-bold
   font-weight: 700 !important
 .text-w-light
@@ -19,11 +23,14 @@ iframe
   font-weight: 400 !important
 .text-color-light
   color: $text-color-white !important
-.text-color-lightgray
-  color: $text-color-lightgrey
 .text-color-dark
   color: $text-color-dark !important
-
+.text-color-lightgray
+  color: $text-color-lightgrey
+.text-color-lightdark
+  color: $text-color-lightdark !important
+.text-color-lightdark-header
+  color: #4D5259 !important
 .paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
@@ -68,7 +75,7 @@ iframe
   border-radius: 50%
   p
     @include font(Circe, 900, 27, 42)
-    color: $text-color-dark
+    color: $text-color-lightdark
     transform: translateY(9px)
 
 .white-block-design
@@ -112,7 +119,7 @@ iframe
       content: ''
       width: 5px
       height: 5px
-      background: $text-color-dark
+      background: $text-color-lightdark
       border-radius: 50%
 
 

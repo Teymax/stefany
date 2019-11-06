@@ -17,10 +17,10 @@ section.section.service-laser-service-list.d-none.d-lg-block
                       type='checkbox'
                       name='servise'
                     )
-                    p.paragraph-text.text-color-dark.ml-3 #{service.name}
+                    p.paragraph-text.text-color-lightdark.ml-3 #{service.name}
                   .column-left.d-flex.justify-content-end
-                    p.paragraph-text.text-color-dark.mr-3 #{service.time}
-                    p.paragraph-text.text-color-dark #{service.price}
+                    p.paragraph-text.text-color-lightdark.mr-3 #{service.time}
+                    p.paragraph-text.text-color-lightdark #{service.price}
       .col-12.col-lg-4.right
         .stash.d-flex.flex-column.align-items-center.pb-5
           .sale-container.d-flex.flex-column.align-items-center.mt-5
@@ -64,17 +64,8 @@ section.section.service-laser-service-list-tablet1.d-block.d-lg-none.py-0
 section.section.service-laser-service-list-tablet2.d-flex.d-lg-none.py-0.flex-column
   .container
     .col-12.px-6.d-flex.align-items-center.flex-column
-      #radio-container.d-flex.justify-content-around.align-items-center.mt-5
-        input(
-          type='radio'
-          name='sex'
-          value='male'
-        )
-        input(
-          type='radio'
-          name='sex'
-          value='famale'
-        )
+      .checkbox-wrapper.d-flex.justify-content-around.align-items-center.mt-5
+        input(type="checkbox" class="checkbox")
       .checkbox-group.d-flex.flex-column.mt-4.mb-6.justify-content-between
         h2.h2-title.text-color-dark.mt-3.mb-3.align-self-center Цены на процедуры шугаринга
         each service in arr
@@ -85,9 +76,9 @@ section.section.service-laser-service-list-tablet2.d-flex.d-lg-none.py-0.flex-co
                 name='servise'
                 checked
               )
-              p.paragraph-text.text-w-light.text-color-dark.ml-3 #{service.name}
+              p.paragraph-text.text-w-light.text-color-lightdark.ml-3 #{service.name}
             .column-left.d-flex.justify-content-end
-              p.paragraph-text.text-w-bold.text-color-dark #{service.price}
+              p.paragraph-text.text-w-bold.text-color-lightdark #{service.price}
 section.section.service-laser-service-list-tablet3.d-flex.d-lg-none.py-0.flex-column
   .container.d-flex.justify-content-around.py-5
     p.paragraph-text.text-color-light.text-w-light.mb-0.align-self-center Список услуг
