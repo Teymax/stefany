@@ -99,13 +99,41 @@ section.section.service-after-laserepila
 
   .consultation-bottom
     background-color: #A9A8C6
-
     .container
       .white-block-design
         width: 498px
-        height: 503px
+        height: 516px
         margin-left: auto
-
+        @include media-breakpoint-down(lg)
+          width: 465px
+          height: 515px
+        @include media-breakpoint-down(sm)
+          width: 250px
+          height: 275px
         img
-          top: 30px
-          left: -175px
+          object-fit: cover
+          width: 537px
+          height: 384px
+          top: 74px
+          right: 72px
+          box-shadow: $shadow-image
+          @include media-breakpoint-down(lg)
+            width: 522px
+            height: 410px
+            top: 47px
+            right: 32px
+          @include media-breakpoint-down(sm)
+            width: 255px
+            height: 200px
+            top: 30px
+            right: 30px
+        .extralarge-text-bg
+          bottom: 55px
+          left: -107px
+          @include media-breakpoint-down(lg)
+            bottom: 55px
+            left: -75px
+          @include media-breakpoint-down(sm)
+            font-size: 173px
+            bottom: 24px
+            left: -75px
