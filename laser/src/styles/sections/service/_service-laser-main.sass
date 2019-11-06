@@ -1,53 +1,100 @@
+//section.section.service-laser
+//  position: relative
+//  background-color: #EDE1DF
+//  overflow: hidden
+//  & .container
+//    & .c-content
+//    & h2
+//      margin-top: 44px
+//    & p
+//      & b
+//        color: #000
+//    & p.position
+//      &:before
+//        content: ''
+//        display: block
+//        height: 2px
+//        width: 90px
+//        background-color: rgba(125, 137, 158, 0.39)
+//        margin: 1.5rem 0
+//        margin-bottom: 2.2rem
+//    & .white-block-design
+//      width: 475px
+//      height: 648px
+//      top: 6px
+//      left: 33px
+//      img
+//        top: 22px
+//        left: -22px
+//      p.extralarge-text-bg
+//        top: 364px
+//        left: -296px
+//        z-index: 10
+//        letter-spacing: -3px
+//        white-space: nowrap
+//        position: absolute
+//        font-family: "Circe"
+//        font-style: normal
+//        font-weight: 900
+//        font-size: 321px
+//        line-height: 377px
+//        color: #ffffff
+//        span
+//          position: relative
+//          left: 69px
+//          letter-spacing: 8px
+//  @media (min-width: 992px)
+//    p#large.extralarge-text-bg
+//      left: -730px
+//      top: 404px
+//      letter-spacing: 10px
+//    #large.white-block-design
+//      height: 665px
+//
 section.section.service-laser
-  position: relative
   background-color: #EDE1DF
-  overflow: hidden
-  & .container
-    & .c-content
-    & h2
-      margin-top: 44px
-    & p
-      & b 
-        color: #000  
-    & p.position
-      &:before
-        content: ''
-        display: block
-        height: 2px
-        width: 90px
-        background-color: rgba(125, 137, 158, 0.39)
-        margin: 1.5rem 0
-        margin-bottom: 2.2rem
-    & .white-block-design
-      width: 475px
-      height: 648px
-      top: 6px
-      left: 33px
+  padding-top: 64px
+  .container
+    .c-content
+      max-width: 466px
+      padding-top: 96px
+      @include media-breakpoint-down(lg)
+        padding-top: 0px
+        margin-bottom: 36px
+      @include media-breakpoint-down(sm)
+    .white-block-design
+      margin-right: auto
+      width: 504px
+      height: 674px
+      @include media-breakpoint-down(lg)
+        width: 465px
+        height: 626px
+      @include media-breakpoint-down(sm)
+        width: 232px
+        height: 310px
       img
-        top: 22px
-        left: -22px
-      p.extralarge-text-bg
-        top: 364px
-        left: -296px
-        z-index: 10 
-        letter-spacing: -3px
-        white-space: nowrap
-        position: absolute
-        font-family: "Circe"
-        font-style: normal
-        font-weight: 900
-        font-size: 321px
-        line-height: 377px
-        color: #ffffff
-        span 
-          position: relative
-          left: 69px
-          letter-spacing: 8px
-  @media (min-width: 992px)
-    p#large.extralarge-text-bg
-      left: -730px
-      top: 404px
-      letter-spacing: 10px
-    #large.white-block-design 
-      height: 665px
-
+        box-shadow: $shadow-image
+        width: 540px
+        height: 513px
+        object-fit: cover
+        top: 46px
+        left: 44px
+        @include media-breakpoint-down(lg)
+          width: 520px
+          height: 513px
+        @include media-breakpoint-down(sm)
+          width: 259px
+          height: 255px
+          top: 29px
+          left: 27px
+      .extralarge-text-bg
+        font-size: 377px
+        bottom: 51px
+        right: -374px
+        @include media-breakpoint-down(lg)
+          bottom: 51px
+          right: -802px
+        @include media-breakpoint-down(sm)
+          font-size: 166px
+          bottom: 26px
+          right: -332px

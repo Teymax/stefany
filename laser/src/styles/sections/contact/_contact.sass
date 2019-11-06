@@ -1,0 +1,55 @@
+section.section.contact
+  background: url('../assets/img/contact/bg.jpg')
+  overflow: visible
+  .btn-callback
+    width: 12em
+  .mini-map
+    //background: url('../assets/img/common/mobile-map.png') no-repeat -31em -4em
+    background: url('../assets/img/common/mobile-map.png') no-repeat center center
+    background-size: 80em
+    height: 20em
+    margin-top: 3em
+  .form-title
+    @include font (CormorantGaramond, 700, 26, 31)
+.feedback-form
+  div
+    //padding: 0 !important
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  padding-top: 36px
+  padding-bottom: 36px
+  textarea
+    height: 100%
+    resize: none
+    box-sizing: border-box
+
+  input,
+  textarea
+    display: block
+    appearance: none
+    outline: none
+    width: 100%
+    padding: .5em
+    background-color: #F8F8F8
+    border-radius: 4px
+    border: none
+    &:not(:last-child)
+      margin-bottom: 1rem
+
+    &::placeholder
+      @include font(Circe, 400, 14, 20)
+
+  @include media-breakpoint-up(lg)
+    input
+      width: 90%
+
+
+
+@include media-breakpoint-down(lg)
+  section.section.contact
+
+@include media-breakpoint-down(xs)
+  section.section.contact
+    .form-title
+      font-size: 20px

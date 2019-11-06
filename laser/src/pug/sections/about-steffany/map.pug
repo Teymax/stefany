@@ -1,153 +1,125 @@
-.map.pt-5
-  .container.container-l.pb-5.border-b-light.px-0.px-xl-1
+section.section.map
+  .container
     .row.no-gutters.px-15.mb-5.p-0.px-xl-3
       .col.d-flex.align-items-center.justify-content-start.flex-wrap.map-cnt.m-auto.m-xl-0.px-15
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.mr-3.city-popup(href="") Все города
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-1") Киев
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger.mr-3.active(href="", data-city="city-item-2") Ивано-фракновск
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-3") Львов
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger(href="", data-city="city-item-4") Ровно
+        a.btn-simple-map.mb-3.mb-md-0.mr-3.city-popup(href="") Все города
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-1") Киев
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3.active(href="", data-city="city-item-2") Ивано-фракновск
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-3") Львов
+        a.btn-simple-map.mb-3.mb-md-0.city-trigger(href="", data-city="city-item-4") Ровно
     .row.no-gutters.city-item.city-item-1
       .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
-        p.p-text.fs-12.p-bold.text-uppercase.mb-40 Киев
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Киев
         .row.no-gutters.mb-5
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")
-                a.p-text(href="tel:0980070753") 098 007 07 53
+                img.icon.icon-phone(src="assets/icon/phone.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.text-color-dark(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
-                img.icon.icon-mail(src="assets/icon/mail.png" alt="h-map")
-                a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+                img.icon.icon-mail(src="assets/icon/mail.svg" alt="h-map")
+                a.paragraoh-text.text-color-dark(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")
-                p.p-text.thin-text ул. Киевская, 84
+                img.icon.icon-loc(src="assets/icon/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Киевская, 84
               .col-12.d-flex.align-items-center.height-25
-                img.icon.icon-time(src="assets/icon/time.png" alt="h-map")
-                p.p-text 9:00 – 20:00
+                img.icon.icon-time(src="assets/icon/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
         .row.no-gutters
-          a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-xl-0(href="#")
-            span.d-flex.align-items-center.justify-content-between
-              span подробнее про салон
-            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
-              style(type='text/css').
-                .st0{fill:#D11111;}
-              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
-              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+          +customBtn('подробнее про салон')
       .col-12.col-xl-7
-        img.w-100(src="assets/img/map.jpg" alt="map")
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-2.city-active
       .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
-        p.p-text.fs-12.p-bold.text-uppercase.mb-40 Ивано-фракновск
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Ивано-фракновск
         .row.no-gutters.mb-5
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")
-                a.p-text(href="tel:0980070753") 098 007 07 53
+                img.icon.icon-phone(src="assets/icon/phone.svg" alt="h-map")
+                a.paragraph-text.text-color-dark(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
-                img.icon.icon-mail(src="assets/icon/mail.png" alt="h-map")
-                a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+                img.icon.icon-mail(src="assets/icon/mail.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")
-                p.p-text.thin-text ул. Киевская, 84
+                img.icon.icon-loc(src="assets/icon/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Ивана Франка, 25
               .col-12.d-flex.align-items-center.height-25
-                img.icon.icon-time(src="assets/icon/time.png" alt="h-map")
-                p.p-text 9:00 – 20:00
+                img.icon.icon-time(src="assets/icon/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
         .row.no-gutters
-          a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-xl-0(href="#")
-            span.d-flex.align-items-center.justify-content-between
-              span подробнее про салон
-            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
-              style(type='text/css').
-                .st0{fill:#D11111;}
-              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
-              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+          +customBtn('подробнее про салон')
       .col-12.col-xl-7
-        img.w-100(src="assets/img/map.jpg" alt="map")
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-3
       .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
-        p.p-text.fs-12.p-bold.text-uppercase.mb-40 Львов
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Львов
         .row.no-gutters.mb-5
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")
-                a.p-text(href="tel:0980070753") 098 007 07 53
+                img.icon.icon-phone(src="assets/icon/phone.svg" alt="h-map")
+                a.paragraph-text.text-color-dark(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
-                img.icon.icon-mail(src="assets/icon/mail.png" alt="h-map")
-                a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+                img.icon.icon-mail(src="assets/icon/mail.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")
-                p.p-text.thin-text ул. Киевская, 84
+                img.icon.icon-loc(src="assets/icon/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Гулака-Артемовского, 2
               .col-12.d-flex.align-items-center.height-25
-                img.icon.icon-time(src="assets/icon/time.png" alt="h-map")
-                p.p-text 9:00 – 20:00
+                img.icon.icon-time(src="assets/icon/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
         .row.no-gutters
-          a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-xl-0(href="#")
-            span.d-flex.align-items-center.justify-content-between
-              span подробнее про салон
-            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
-              style(type='text/css').
-                .st0{fill:#D11111;}
-              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
-              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+          +customBtn('подробнее про салон')
       .col-12.col-xl-7
-        img.w-100(src="assets/img/map.jpg" alt="map")
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-4
       .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
-        p.p-text.fs-12.p-bold.text-uppercase.mb-40 Ровно
+        p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Ровно
         .row.no-gutters.mb-5
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-phone(src="assets/icon/phone.png" alt="h-map")
-                a.p-text(href="tel:0980070753") 098 007 07 53
+                img.icon.icon-phone(src="assets/icon/phone.svg" alt="h-map")
+                a.paragraph-text.text-color-dark(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
-                img.icon.icon-mail(src="assets/icon/mail.png" alt="h-map")
-                a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
+                img.icon.icon-mail(src="assets/icon/mail.svg" alt="h-map")
+                a.paragraph-text.text-color-dark.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-md-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
-                img.icon.icon-loc(src="assets/icon/map.png" alt="h-map")
-                p.p-text.thin-text ул. Киевская, 84
+                img.icon.icon-loc(src="assets/icon/map.svg" alt="h-map")
+                p.paragraph-text.text-color-dark.thin-text ул. Киевская, 4
               .col-12.d-flex.align-items-center.height-25
-                img.icon.icon-time(src="assets/icon/time.png" alt="h-map")
-                p.p-text 9:00 – 20:00
+                img.icon.icon-time(src="assets/icon/time.svg" alt="h-map")
+                p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
         .row.no-gutters
-          a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-xl-0(href="#")
-            span.d-flex.align-items-center.justify-content-between
-              span подробнее про салон
-            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
-              style(type='text/css').
-                .st0{fill:#D11111;}
-              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
-              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+          +customBtn('подробнее про салон')
       .col-12.col-xl-7
-        img.w-100(src="assets/img/map.jpg" alt="map")
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')

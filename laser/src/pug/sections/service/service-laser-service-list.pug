@@ -1,106 +1,100 @@
 section.section.service-laser-service-list.d-none.d-lg-block
-    .container
-        .row
-            .col-12.col-lg-8.d-flex.justify-content-center.flex-column.align-items-center.left.pt-lg-6
-                .radio-container.d-flex.justify-content-around.align-items-center
-                    input(
-                        type='radio'
-                        name='sex'
-                        value='male'
+  .container
+    .row
+      .col-12.col-lg-8.d-flex.justify-content-center.flex-column.align-items-center.left.pt-lg-6
+        .checkbox-wrapper
+          input(type="checkbox" class="checkbox")
+        .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
+          - let arr = [{name:"Верхняя губа",price:"210 грн",time:"15 мин"},{name:"Подбородок",price:"220 грн",time:"15 мин"},{name:"Межбровье",price:"200 грн",time:"15 мин"},{name:"Скулы",price:"200 грн",time:"15 мин"},{name:"Щеки",price:"300 грн",time:"15 мин"},{name:"Шея",price:"450 грн",time:"15 мин"},{name:"Подмышечные области",price:"300 грн",time:"15 мин"},{name:"Руки",price:"220 грн",time:"15 мин"},{name:"Голени",price:"220 грн",time:"15 мин"}, {name:"Бедра",price:"450 грн",time:"15 мин"}, {name:"Бикини",price:"450 грн",time:"15 мин"}, {name:"Глубокое бикини",price:"450 грн",time:"15 мин"}];
+          - let arr1 =["Цены на процедуры шугаринга"]
+          each element in arr1
+            h2.h2-title.text-color-dark.mt-3 #{element}
+            .checkbox-group.d-flex.flex-column.align-items-center
+              each service in arr
+                .checkbox-row.d-flex.align-items-center.justify-content-between
+                  .column-right.d-flex
+                    input.align-self-center.mb-3(
+                      type='checkbox'
+                      name='servise'
                     )
-                    input(
-                        type='radio'
-                        name='sex'
-                        value='famale'
-                    )
-                .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
-                    - let arr = [{name:"Все лицо",price:"740 грн",time:"15 мин"},{name:"Верхняя губа",price:"210 грн",time:"15 мин"},{name:"Подбородок",price:"220 грн",time:"15 мин"},{name:"Межбровье",price:"200 грн",time:"15 мин"},{name:"Брови",price:"200 грн",time:"15 мин"},{name:"Линия лба",price:"230 грн",time:"15 мин"},{name:"Щеки",price:"300 грн",time:"15 мин"},{name:"Виски",price:"220 грн",time:"15 мин"},{name:"Уши",price:"220 грн",time:"15 мин"},{name:"Шея",price:"450 грн",time:"15 мин"}];
-                    - let arr1 =["Область Лица","Область рук","Область спины и живота","Область бикини","Область ног"]
-                        each element in arr1
-                            h2.h2-title.text-color-dark.mt-3 #{element}
-                            .checkbox-group.d-flex.flex-column.align-items-center
-                                each service in arr
-                                    .checkbox-row.d-flex.align-items-center.justify-content-between
-                                        .column-right.d-flex
-                                            input.align-self-center.mb-3(
-                                                type='checkbox'
-                                                name='servise'
-                                            )
-                                            p.paragraph-text.text-color-dark.ml-3 #{service.name}
-                                        .column-left.d-flex.justify-content-end
-                                            p.paragraph-text.text-color-dark.mr-3 #{service.time}
-                                            p.paragraph-text.text-color-dark #{service.price}
-            .col-12.col-lg-4.right
-                .stash.d-flex.flex-column.align-items-center.pb-5
-                    .sale-container.d-flex.flex-column.align-items-center.mt-5
-                        h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
-                        button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
-                    .checkbox-group.d-flex.flex-column.align-items-center.mt-4
-                        each service in arr
-                            .checkbox-row.d-flex.align-items-center.justify-content-between
-                                .column-right.d-flex
-                                    input.align-self-center(
-                                        type='checkbox'
-                                        name='servise'
-                                        checked
-                                    )
-                                    p.paragraph-text.text-w-light.text-color-white.ml-3 #{service.name}
-                                .column-left.d-flex.justify-content-end
-                                    p.paragraph-text.text-w-bold.text-color-white #{service.price}
-                    .sale-group.d-flex.justify-content-between
-                        p.paragraph-text.text-w-light.text-color-white Акция
-                        p.paragraph-text.text-w-bold.text-color-white 40%
-                    .price-group.d-flex.justify-content-between
-                        .price-block.d-flex.justify-content-start
-                            img(src="assets/img/service-laser-page/time.png")
-                            p.paragraph-text.text-w-bold.text-color-white.ml-2 30 мин
-                        .price-block.d-flex.justify-content-end
-                            img(src="assets/img/service-laser-page/price.png")
-                            p.paragraph-text.text-w-bold.text-color-white.ml-2 3000грн
-                    .button-group.d-flex.justify-content-between.mt-3
-                        //+btnPen('записаться')
-                        //+btnCaset('оплатить')
+                    p.paragraph-text.text-color-dark.ml-3 #{service.name}
+                  .column-left.d-flex.justify-content-end
+                    p.paragraph-text.text-color-dark.mr-3 #{service.time}
+                    p.paragraph-text.text-color-dark #{service.price}
+      .col-12.col-lg-4.right
+        .stash.d-flex.flex-column.align-items-center.pb-5
+          .sale-container.d-flex.flex-column.align-items-center.mt-5
+            h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
+            button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
+          .checkbox-group.d-flex.flex-column.align-items-center.mt-4
+            each service in arr
+              .checkbox-row.d-flex.align-items-center.justify-content-between
+                .column-right.d-flex
+                  input.align-self-center(
+                    type='checkbox'
+                    name='servise'
+                    checked
+                  )
+                  p.paragraph-text.text-w-light.text-color-white.ml-3 #{service.name}
+                .column-left.d-flex.justify-content-end
+                  p.paragraph-text.text-w-bold.text-color-white #{service.price}
+          .sale-group.d-flex.justify-content-between
+            p.paragraph-text.text-w-light.text-color-white Акция
+            p.paragraph-text.text-w-bold.text-color-white 40%
+          .price-group.d-flex.justify-content-between
+            .price-block.d-flex.justify-content-start
+              img(src="assets/img/service-laser-page/time.png")
+              p.paragraph-text.text-w-bold.text-color-white.ml-2 30 мин
+            .price-block.d-flex.justify-content-end
+              img(src="assets/img/service-laser-page/price.png")
+              p.paragraph-text.text-w-bold.text-color-white.ml-2 3000грн
+          .button-group.d-flex.justify-content-between.mt-3
+            //+btnPen('записаться')
+            //+btnCaset('оплатить')
 section.section.service-laser-service-list-tablet1.d-block.d-lg-none.py-0
-    .container
-        .col-12.sale
-            .sale-container.d-flex
-                img.mt-3(src="assets/img/service-laser-page/Ellipse.png")
-                h1.h2.h1-title.text-color-light.mb-0.align-self-center на ВСЕ зоны лазерной эпиляции
-                p#sale-p.text-color-light  -40%
+  .container
+    .col-12.sale
+      .sale-container.d-flex.align-items-center
+        img.mt-3(src="assets/img/service-laser-page/Ellipse.png")
+        h3.h3-title.text-color-light.mb-0.align-self-center на ВСЕ зоны лазерной эпиляции
+        p#sale-p.text-color-light  -40%
+    .col-12.sale
+      .sale-container.d-flex.align-items-center.justify-content-center
+        button.btn ПОДРОБНЕЕ
 section.section.service-laser-service-list-tablet2.d-flex.d-lg-none.py-0.flex-column
-    .container
-        .col-12.px-6.d-flex.align-items-center.flex-column
-            #radio-container.d-flex.justify-content-around.align-items-center.mt-5
-                input(
-                    type='radio'
-                    name='sex'
-                    value='male'
-                )
-                input(
-                    type='radio'
-                    name='sex'
-                    value='famale'
-                )
-            .checkbox-group.d-flex.flex-column.mt-4.mb-6.justify-content-between
-                h2.h2-title.text-color-dark.mt-3.mb-3.align-self-center Область лица
-                each service in arr
-                    .checkbox-row.d-flex.align-items-center.justify-content-between
-                        .column-right.d-flex
-                            input.align-self-center(
-                                type='checkbox'
-                                name='servise'
-                                checked
-                            )
-                            p.paragraph-text.text-w-light.text-color-dark.ml-3 #{service.name}
-                        .column-left.d-flex.justify-content-end
-                            p.paragraph-text.text-w-bold.text-color-dark #{service.price}
+  .container
+    .col-12.px-6.d-flex.align-items-center.flex-column
+      #radio-container.d-flex.justify-content-around.align-items-center.mt-5
+        input(
+          type='radio'
+          name='sex'
+          value='male'
+        )
+        input(
+          type='radio'
+          name='sex'
+          value='famale'
+        )
+      .checkbox-group.d-flex.flex-column.mt-4.mb-6.justify-content-between
+        h2.h2-title.text-color-dark.mt-3.mb-3.align-self-center Цены на процедуры шугаринга
+        each service in arr
+          .checkbox-row.d-flex.align-items-center.justify-content-between
+            .column-right.d-flex
+              input.align-self-center(
+                type='checkbox'
+                name='servise'
+                checked
+              )
+              p.paragraph-text.text-w-light.text-color-dark.ml-3 #{service.name}
+            .column-left.d-flex.justify-content-end
+              p.paragraph-text.text-w-bold.text-color-dark #{service.price}
 section.section.service-laser-service-list-tablet3.d-flex.d-lg-none.py-0.flex-column
-    .container.d-flex.justify-content-around.py-5
-        p.paragraph-text.text-color-light.text-w-light.mb-0.align-self-center Список услуг
-        .price-block.d-flex.justify-content-center.align-items-center
-            img(src="assets/img/service-laser-page/price.png")
-            p.paragraph-text.text-w-bold.text-color-white.ml-2.mb-0 3000грн
-        //+btnPen('записаться')
-        //+btnCaset('оплатить')
+  .container.d-flex.justify-content-around.py-5
+    p.paragraph-text.text-color-light.text-w-light.mb-0.align-self-center Список услуг
+    .price-block.d-flex.justify-content-center.align-items-center
+      img(src="assets/img/service-laser-page/price.png")
+      p.paragraph-text.text-w-bold.text-color-white.ml-2.mb-0 3000грн
+    //+btnPen('записаться')
+    //+btnCaset('оплатить')
 
 

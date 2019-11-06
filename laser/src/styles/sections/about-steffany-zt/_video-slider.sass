@@ -1,0 +1,143 @@
+.about
+  padding-bottom: 50px
+  &-salon
+    padding-top: 17px
+  .section-title
+    margin-bottom: 35px
+  .video
+    position: relative
+    display: block
+    width: 100%
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    img
+      width: 100%
+  .about-content
+    flex-flow: row nowrap !important
+  .video-item-cnt
+    max-width: 757px !important
+    padding-right: 36px !important
+  .about-block-cnt
+    max-width: 503px !important
+    flex: auto !important
+.video-slider.owl-carousel.slider-block
+  box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+  .owl-nav, .owl-dots
+    display: none
+
+.slider-block .owl-nav button.owl-prev .owl-nav
+  button
+    background-image: url(../assets/icon/aroow-right-gray.png) !important
+.video-slider-dots-wrap
+  position: relative
+  padding-right: 108px
+  @media(max-width: 992px)
+    padding-right: 44px !important
+  button.owl-dot
+    display: none !important
+  .video-nav-slider-dots
+    position: absolute
+    top: 50%
+    right: 0
+    width: 65px
+    min-width: 65px
+    height: 31px
+    transform: translateY(-50%)
+    button
+      position: absolute
+      left: 0
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      padding: 0 !important
+      width: 100%
+      height: 100%
+      background: none !important
+      border: none !important
+      &.disabled
+        display: none !important
+      &::after
+        content: ''
+        position: relative
+        z-index: 1
+        display: block
+        width: 31px
+        height: 31px
+        border-radius: 100%
+        background: #F6AE9F
+      span
+        position: relative
+        z-index: 2
+        display: block
+        font-size: 0
+        color: transparent
+        margin-right: -9px
+        width: 40px
+        min-width: 40px
+        height: 9px
+        background: url('../assets/icon/long-arrow.svg')
+          repeat: no-repeat
+          size: contain
+          position: center
+      &.owl-prev
+        span
+          transform: rotate(180deg)
+
+  .owl-dots-item
+    .owl-dot
+      position: relative
+      width: 100%
+      // max-width: 179px
+      max-width: 30%
+      max-height: 100px
+      overflow: hidden
+      .play-btn
+        opacity: 0
+      .owl-dot-bg
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 1
+        transition: 0.4s ease
+        background: rgba(255, 255, 255, 0.7)
+          mix-blend-mode: soft-light
+      &:hover
+        .play-btn
+          opacity: 1
+        .owl-dot-bg
+          opacity: 0
+@media(max-width: 992px)
+  .about .about-content
+    flex-flow: row wrap !important
+  .about .video-item-cnt, .about .about-block-cnt
+    max-width: 100% !important
+    padding-right: 0 !important
+@media(max-width: 730px)
+  .line-margin
+    margin-top: 75px
+@media(max-width: 540px)
+  .video-slider.owl-carousel.slider-block .owl-nav
+    display: flex !important
+
+
+// Play-button - style ********
+.play-btn
+  position: absolute
+
+  width: 92px
+  height: 92px
+  background: rgba(242, 223, 225, .8)
+  border-radius: 50%
+  &-orange
+    background: $color-orange-opacity
+  span
+    width: 20px
+    height: 20px
+    background: $play-btn-color
+    clip-path: polygon(0 0, 0% 100%, 100% 50%)
+.play-btn-small
+  width: 42px
+  height: 42px
+  span
+    width: 10px
+    height: 10px
+// border - style ********

@@ -1,4 +1,4 @@
-section.section.four-boxes-01
+section.section.four-boxes
   padding-top: 58px
   padding-bottom: 78px
   background-image: url("../assets/img/background/advantages-bg.jpg")
@@ -23,34 +23,28 @@ section.section.four-boxes-01
           top: -37px
       .c-desc
         max-width: 395px
-
-
-@include media-breakpoint-down(xs)
-  section.section.four-boxes-01
+@include media-breakpoint-down(sm)
+  section.section.four-boxes
     padding-top: 86px
     .container
       .c-boxes
-        &:nth-child(1):before
-          content: url("../assets/img/four-boxes/four-box_01-mob.png")
+        img
           position: absolute
-          top: -15px
-          right: 100px
-        &:nth-child(2):before
-          content: url("../assets/img/four-boxes/four-box_02-mob.png")
-          position: absolute
-          top: -38px
-          right: 108px
-        &:nth-child(3):before
-          content: url("../assets/img/four-boxes/four-box_03-mob.png")
-          position: absolute
-          top: -15px
-          right: 62px
-        &:nth-child(4):before
-          content: url("../assets/img/four-boxes/four-box_04-mob.png")
-          position: absolute
-          top: -38px
-          right: 119px
-        .c-card
+        &:nth-of-type(1)
+          img
+            left: 143px
+        &:nth-of-type(2)
+          img
+            left: 142px
+            top: -39px
+        &:nth-of-type(3)
+          img
+            left: 64px
+            top: -29px
+        &:nth-of-type(4)
+          img
+            left: 113px
+            top: -37px
         .c-desc
           max-width: 290px
           margin:
@@ -62,25 +56,60 @@ section.section.four-boxes-01
 
 
 
-section.section.four-boxes-02
-  background-image: url("../assets/img/background/advantages-bg.jpg")
-  background-size: cover
+
+
+section.section.four-boxes-service-laser
+  padding-top: 58px
+  padding-bottom: 78px
+  background-color: #fff
   .container
-    h2.h1-title.text-color-light
-    p.advantages-count
-      @include font(CormorantGaramond, 700, 75, 80)
-      color: $text-color-white
-    .h3-title
-      text-transform: uppercase
     .c-boxes
-      position: relative
-      z-index: 1
-      max-width: 400px
-      margin-left: 200px
       img
         position: absolute
-        z-index: -1
-        left: -245px
+      &:nth-of-type(1)
+        img
+          left: -27px
+      &:nth-of-type(2)
+        img
+          left: -24px
+          top: -20px
+      &:nth-of-type(3)
+        img
+          left: -75px
+      &:nth-of-type(4)
+        img
+          left: -59px
+          top: -37px
+      .c-desc
+        max-width: 395px
+@include media-breakpoint-down(sm)
+  section.section.four-boxes-service-laser
+    padding-top: 86px
+    .container
+      .c-boxes
+        img
+          position: absolute
+        &:nth-of-type(1)
+          img
+            left: 143px
+        &:nth-of-type(2)
+          img
+            left: 142px
+            top: -39px
+        &:nth-of-type(3)
+          img
+            left: 64px
+            top: -29px
+        &:nth-of-type(4)
+          img
+            left: 113px
+            top: -37px
+        .c-desc
+          max-width: 290px
+          margin:
+            left: auto
+            right: auto
+            top: 90px
 
 section.section.four-boxes-03
   overflow: hidden
