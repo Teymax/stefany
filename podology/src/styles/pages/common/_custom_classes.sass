@@ -13,6 +13,80 @@ h1
 		top: 2em !important
 		bottom: 2em !important
 
+iframe
+	width: 100%
+	height: 100%
+
+.arrows
+	.feet-section
+		> div
+			height: 15em
+
+			.c-content
+				height: 100%
+
+				.button-forward
+					width: 3em
+					height: 3em
+					background: $forward-buutton
+					border-radius: 50%
+					position: absolute
+					bottom: 1em
+					right: 1em
+
+					@include media-breakpoint-down(sm)
+						left: 1em
+
+					&:hover
+						text-decoration: none
+
+					&:before
+						content: url(../assets/icon/common/arrow.svg)
+						color: #fff
+						width: 100%
+						height: 100%
+						display: flex
+						justify-content: center
+						align-items: center
+
+.crutch-text
+	color: #fff
+	@include font(Circe, normal, 20, 29)
+	width: 70%
+	text-align: center
+
+.light-blue
+	font-weight: 400
+	font-size: 20px
+	line-height: 29px
+	color: #7b9ddd
+
+	strong
+		color: inherit
+
+.very-special-row
+	@include media-breakpoint-down(lg)
+		margin: 0
+
+body .very-special-container
+	@include media-breakpoint-down(lg)
+		padding: 0 !important
+		max-width: 100%
+
+body section h2
+	font-size: 28px
+	text-transform: initial
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+li,
+div
+	font-family: Circe !important
+
 	h2, p
 		color: $text-color-dark
 
@@ -26,19 +100,19 @@ h1
 		strong
 			font-weight: bold
 
-	ul
-		li
-			padding-left: 1.5em
-			position: relative
-			margin-bottom: 2em
+ul.info-list
+	li
+		padding-left: 1.5em
+		position: relative
+		margin-bottom: 2em
 
-			h3
-				margin-bottom: 1em
-				color: $text-color-dark
-				@include font(Circe, bold, 16, 20)
+		h3
+			margin-bottom: 1em
+			color: $text-color-dark
+			@include font(Circe, bold, 16, 20)
 
-			p
-				@include font(Circe, 200, 16, 19)
+		p
+			@include font(Circe, 200, 16, 19)
 
 			&:before
 				content: '•'
@@ -318,87 +392,58 @@ button:focus
 			padding: .8em !important
 
 	.item
-		@include tablet
-			padding: 0
-			.c-content
-				padding-left: 1.5em !important
-
 		&:nth-child(1)
 			.c-content
-				padding-left: 4rem
+				//padding-left: 4rem
 				//background: url('../assets/img/feet-index-1.png') no-repeat center/cover
 				background: url('../assets/img/feet-index-1.png') no-repeat right
 				background-size: cover
-				@include media-breakpoint-down(sm)
-					height: 21em
 		//background: url("../assets/img/feet-index-1.png") no-repeat -19em 10px
 
 		&:nth-child(2)
 			.c-content
-				padding-left: 3rem
 				background: url('../assets/img/feet-index-2.png') no-repeat center/cover
-				@include media-breakpoint-down(sm)
-					height: 19em
 		//background: url('../assets/img/feet-index-2.png') no-repeat -19em 10px
 
 		&:nth-child(3)
 			.c-content
-				padding-left: 4rem
 				background: url('../assets/img/feet-index-3.png') no-repeat center/cover
-				@include media-breakpoint-down(sm)
-					height: 17em
 
 		&:nth-child(4)
 			.c-content
-				padding-left: 3rem
 				background: url('../assets/img/feet-index-4.png') no-repeat center/cover
 
 		.c-content
-			height: 17em
 			display: flex
 			flex-direction: column
-			justify-content: center
-			padding-left: 1rem
+			justify-content: flex-start
 			position: relative
+			height: 25em
+			padding: 2em
+
+			h3, p, ul
+				margin: 0
 
 			h3
 				color: $text-color-dark
 				@include font(Circe, 600, 24, 20)
+				padding-bottom: 1rem
 
 			p.desc
 				color: $text-color-dark
+				padding-bottom: 1rem
 
-			.info-list
+			ul.info-list
 				li
 					color: $text-color-dark
 					font-family: Circe
+					margin-bottom: 0
 
 					&:before
 						background: $text-color-dark
 
-			.button-forward
-				width: 3em
-				height: 3em
-				background: $forward-buutton
-				border-radius: 50%
-				position: absolute
-				bottom: 1em
-				right: 1em
-
-				@include mobile-small
-					left: 1em
-
-				&:hover
-					text-decoration: none
-
-				&:before
-					content: '→'
-					color: #fff
-					width: 100%
-					height: 100%
-					display: flex
-					justify-content: center
-					align-items: center
+			.btn-callback
+				margin-top: auto
 
 .custom-icon-number-dark
 	@extend .custom-icon-number
@@ -637,7 +682,7 @@ section.section-services
 	padding: 67px 0
 
 .services-btn-container
-	width: 232px
+	width: 19em
 
 .width-180
 	width: 180px !important
@@ -686,9 +731,6 @@ section.section-services
 	@include media-breakpoint-down(md)
 		.owl-nav
 			top: 100%
-
-.btn-arrow-dark .btn-callback .arrow-section
-	background-color: $bg-color-section-dark-blue
 
 // end of services
 ul.list-blue-bullets

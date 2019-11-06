@@ -4,14 +4,14 @@ mixin contactForm(title)
       .col-12.col-lg-6
         h1= title
         .cnt-info.mt-4
-          .row.d-flex.flex-wrap.mb-0.mb-lg-3
+          .row.d-flex.flex-wrap.mb-0.mb-lg-3.no-gutters
             .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
               img(src="assets/icon/phone-black.svg" alt="Phone").d-block.mr-3
               a(href="tel:380980070753").text-color-dark 098-007-07-53
             .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
               img(src="assets/icon/common/map.svg" alt="Map").d-block.mr-3
               p.text-color-dark.mb-0 ул. Киевская, 84
-          .row.d-flex.flex-wrap
+          .row.d-flex.flex-wrap.no-gutters
             .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
               img(src="assets/icon/common/mail.svg" alt="Mail").d-block.mr-3
               a(href="mailto:info@steffany.ua").text-color-dark info@steffany.ua
@@ -31,5 +31,5 @@ mixin contactForm(title)
           .row.d-flex.justify-content-center.justify-content-lg-end.no-gutters.mt-5.mt-sm-5
             +customBtn('отправить')
       .col-12.col-lg-6
-        img(src="assets/img/common/map.png").w-100.mt-3.mt-lg-0.ml-0.ml-lg-4.d-none.d-lg-block
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='').w-100.mt-3.mt-lg-0.ml-0.ml-lg-4.d-none.d-lg-block
   .mini-map.d-block.d-lg-none

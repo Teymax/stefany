@@ -3,8 +3,14 @@ section.section.category
 		&--dark
 			background: $bg-color-section-dark-blue
 
+			&--reversed
+				background: $text-color-dark
+
 		&--mixed
 			background: linear-gradient(right, $text-color-dark 50%, $light-bg 50%)
+
+			&--special
+				background: linear-gradient(right, $bg-color-section-dark-blue 50%, $light-bg 50%)
 
 	.description
 		background: url("../assets/img/background/category-people-bg.png") no-repeat center/cover

@@ -1,15 +1,27 @@
 $transparent-bg-color: rgba(21, 28, 39, 0.4)
 
+.remove-arrow
+	.program-container
+		margin-bottom: 0
+		background: transparent
+		p
+			background: transparent
+	.card-arrow
+		&:before
+			content: none !important
+
 .program
-	background: url('../assets/img/background/program-bg.jpg')
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: top left
+	background:
+		image: url('../assets/img/background/program-bg.jpg')
+		repeat: no-repeat
+		size: cover
+		position: top left
 	padding-left: 20px
 	padding-right: 20px
 
 	.btn-callback
 		width: 17em
+		margin-bottom: 10rem
 
 	.program-item-wrap
 		max-width: 1104px

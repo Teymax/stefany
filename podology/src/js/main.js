@@ -56,22 +56,22 @@ $( document ).ready( function () {
 
   $( '.dilpomas-slider' ).owlCarousel( {
     loop      : true,
+    margin    : 20,
     nav       : false,
     dots      : true,
-    margin    : 35,
+    // FIXME: need to be fixed
     responsive: {
-      0   : {
+      0  : {
         items: 1
       },
-      768 : {
-        items: 2
+      575: {
+        items: 2.35
       },
       1200: {
-        items: 4
+        items: 4.35
       }
     }
   } )
-
 
   $( '.podology-service-slider' ).owlCarousel( {
     loop      : true,
