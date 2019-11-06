@@ -12,13 +12,13 @@ mixin phoneSvg
 
 mixin customBtn(text)
   .btn-callback.no-svg
-    .text-section
+    .text-section&attributes(attributes)
       span= text
     .arrow-section
       +arrowSvg
 mixin btnCallback(text)
   .btn-callback
-    .text-section
+    .text-section&attributes(attributes)
       +phoneSvg
       span= text
     .arrow-section
@@ -26,7 +26,7 @@ mixin btnCallback(text)
 
 mixin btnPen(text)
   .btn-callback
-    .text-section
+    .text-section&attributes(attributes)
       +penSvg
       span= text
     .arrow-section
@@ -35,8 +35,18 @@ mixin btnPen(text)
 
 mixin btnService(text)
   .btn-callback
-    .text-section
+    .text-section&attributes(attributes)
       +penSvg
       span= text
     .arrow-section
       +arrowSvg
+
+mixin sliderServices
+  .podology-service-slider.owl-carousel.slider-block
+    each element in [{name:"Удаление мозолей", img:"pd-feet-1", link: 'warts-treatment.html'},{name:"Удаление натоптышей",img:"pd-feet-2", link: 'warts-treatment.html'},{name:"Лечение грибка",img:"pd-feet-3", link: 'nail-fungus-treatment.html'},{name:"Обработка трещин",img:"pd-feet-4", link: 'cracking.html'},{name:"Удаление мозолей", img:"pd-feet-1", link: 'warts-treatment.html'},{name:"Удаление натоптышей",img:"pd-feet-2", link: 'warts-treatment.html'},{name:"Лечение грибка",img:"pd-feet-3", link: 'nail-fungus-treatment.html'},{name:"Обработка трещин",img:"pd-feet-4", link: 'cracking.html'},{name:"Удаление мозолей", img:"pd-feet-1", link: 'warts-treatment.html'},{name:"Удаление натоптышей",img:"pd-feet-2", link: 'warts-treatment.html'},{name:"Лечение грибка",img:"pd-feet-3", link: 'nail-fungus-treatment.html'},{name:"Обработка трещин",img:"pd-feet-4", link: 'cracking.html'},{name:"Удаление мозолей", img:"pd-feet-1", link: 'warts-treatment.html'},{name:"Удаление натоптышей",img:"pd-feet-2", link: 'warts-treatment.html'},{name:"Лечение грибка",img:"pd-feet-3", link: 'nail-fungus-treatment.html'},{name:"Обработка трещин",img:"pd-feet-4", link: 'cracking.html'}]
+      - let resultPath = "./assets/img/" + element.img + ".png"
+      a.diploma-item(href=element.link)
+        img.w-100(src=resultPath, alt="result-image")
+        .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
+          .section-bg-dark.w-100.p-1
+            p.paragraph-text.text-center.mb-0 #{element.name}

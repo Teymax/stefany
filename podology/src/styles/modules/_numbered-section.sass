@@ -28,8 +28,15 @@
 			color: #3a405b
 			@include font(Circe, 200, 14, 26)
 
-	div
+	div.numbered-cnt
 		margin-bottom: 5em
+
+		img
+			display: block !important
+
+		.description
+			&:before
+				content: none
 
 		&:nth-child(1)
 			img
@@ -49,3 +56,12 @@
 		&:nth-child(4)
 			img
 				width: 15.8em
+
+		&:nth-child(5)
+			img
+				width: 9em
+
+		&:nth-child(6)
+			img
+				width: 10em
+				margin-left: 1em

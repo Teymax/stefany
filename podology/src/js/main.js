@@ -54,6 +54,24 @@ $( document ).ready( function () {
     }
   } )
 
+  $( '.dilpomas-slider' ).owlCarousel( {
+    loop      : true,
+    margin    : 20,
+    nav       : false,
+    dots      : true,
+    // FIXME: need to be fixed
+    responsive: {
+      0  : {
+        items: 1
+      },
+      575: {
+        items: 2.35
+      },
+      1200: {
+        items: 4.35
+      }
+    }
+  } )
 
   $( '.podology-service-slider' ).owlCarousel( {
     loop      : true,
@@ -61,10 +79,10 @@ $( document ).ready( function () {
     nav       : false,
     dots      : true,
     responsive: {
-      0  : {
+      0   : {
         items: 1
       },
-      768: {
+      768 : {
         items: 2
       },
       1200: {
