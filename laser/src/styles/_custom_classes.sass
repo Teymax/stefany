@@ -15,6 +15,16 @@ iframe
 .small-text
   @include font(Circe, 400, 14, 22)
   color: #4D5259
+
+//hotfix
+.letter-spacing-15
+  letter-spacing: 0.15px !important
+.letter-spacing-1
+  letter-spacing: 0.01em
+.text-opacity
+  color: $text-opacity !important
+//
+
 .text-w-bold
   font-weight: 700 !important
 .text-w-light
@@ -38,18 +48,20 @@ iframe
 
 .h2-title
   @include font (CormorantGaramond, bold, 44, 45)
+  letter-spacing: 0.01em
   color: $text-color-white
 .h3-title
   @include font (CormorantGaramond, bold, 34, 53)
   color: $text-color-white
 .h4-title
-  @include font(Circe, 400, 20, 30)
+  @include font(Circe, 400, 20, 45)
   color: $text-color-white
+  letter-spacing: 0.01em
 .h5-title
   @include font(CormorantGaramond, 400, 24, 34)
   color: $text-color-white
 .sub-title
-  font-size: 20px
+  font-size: 27px
 .bnf-number
   //padding-bottom: 20px
   //text-transform: uppercase
@@ -77,6 +89,13 @@ iframe
     @include font(Circe, 900, 27, 42)
     color: $text-color-lightdark
     transform: translateY(9px)
+  &-small
+    @extend .custom-icon-number
+    width: 21.34px
+    height: 21.34px
+    p
+      @include font (Circe, bold, 12.6476, 20)
+      color: #fff
 
 .white-block-design
   position: relative
@@ -119,7 +138,7 @@ iframe
       content: ''
       width: 5px
       height: 5px
-      background: $text-color-lightdark
+      background: $text-color-dark
       border-radius: 50%
 
 

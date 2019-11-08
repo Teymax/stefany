@@ -1,11 +1,6 @@
 section.section.map
-  background:
-    image: url("../assets/img/about-steffany-page/contact-bg.jpg")
-    size: cover
   padding-top: 64px
   .container
-    padding-bottom: 59px
-    border-bottom: 1px solid rgba(58, 64, 91, .3)
     .btn-simple-map
       @include font (Circe, 700, 12, 14)
       color: #3A405B
@@ -34,16 +29,9 @@ section.section.map
       &:active
         box-shadow: none
 
-  p
-   margin-bottom: 0
 
-  .btn-callback
-    max-width: 300px
-    height: 50px
-    .text-section
-      width: 82%
-    .arrow-section
-      width: 23%
+
+
 
 @include media-breakpoint-down(lg)
   section.section.map
@@ -57,7 +45,26 @@ section.section.map
     padding-bottom: 53px
     .container
 
+.bg-wrapper
+  background:
+    image: url("../assets/img/about/contact-bg.jpg")
+    size: cover
+  .container
+    padding-top: 38px
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
 
 
+    .btn-callback
+      max-width: 300px
+      height: 50px
+      .text-section
+        width: 88%
+      .arrow-section
+        width: 21%
+
+  p
+    margin-bottom: 0
 
 

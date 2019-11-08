@@ -1,4 +1,6 @@
 section.section.consultation-homepage
+  .left
+    transform: translateX(-9px)
   .custom-icon-number
     width: 27px
     height: 27px
@@ -7,11 +9,12 @@ section.section.consultation-homepage
       color: #9FA6BA !important
   .container
     .c-content
-      max-width: 620px
+      width: 620px
       margin-top: -10px
       @include media-breakpoint-down(lg)
-        max-width: 655px
 
+      @include media-breakpoint-down(sm)
+        width: 100%
   .consultation-01
     overflow: hidden
     padding-top: 114px
