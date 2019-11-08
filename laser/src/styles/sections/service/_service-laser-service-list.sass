@@ -1,10 +1,17 @@
 section.section.service-laser-service-list
-  background: url(../assets/img/service-list/service-laser-service-list-bg-tablet.svg), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
-  background-repeat: repeat-y
-  background-position: top center
-  overflow: initial
+  background: #EDE1DF
   @include media-breakpoint-up(xl)
-    background: url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
+    background: linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
+  .container
+    background: url(../assets/img/service-list/service-laser-service-list-bg-tablet.svg)
+    background-repeat: no-repeat
+    background-position: top center
+    overflow: initial
+    @include media-breakpoint-up(xl)
+      background: url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
+      background-position: -100px 0
+      background-repeat: no-repeat
+      overflow: initial
 
   .custom-py-services-price
     padding: 72px 0
@@ -27,6 +34,9 @@ section.section.service-laser-service-list
     font-size: 30px
   .checkbox-group
     width: 500px
+    @include media-breakpoint-down(md)
+      width: 100%
+
     .checkbox-row
       width: 100%
       input
