@@ -40,8 +40,6 @@ mixin btnCallbackForm(text)
       span= text
     .arrow-section
       +arrowSvg
-
-
 mixin btnSimple(text, href, className )
   a(href=href)
     .btn-simple(class!=attributes.class)= className
@@ -57,7 +55,13 @@ mixin btnCaset(text)
     .text-section
       +casetSvg
       span= text
-
+mixin defaultCheckbox(color='dark')
+  label.service-checkbox-label
+    input.align-self-center(
+      type='checkbox'
+      name='service'
+    )
+    span.checkmark(class=color)
 mixin accordeon(header, description, items, expandedRequired, expandedIndex)
   .container
     h2.h2-title.text-center.mb-3= header

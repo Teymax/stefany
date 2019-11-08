@@ -343,3 +343,47 @@ iframe
           background-image: url('../assets/icon/aroow-right-gray.png') !important
           background-repeat: no-repeat  !important
           background-size: contain !important
+
+.service-checkbox-label
+  position: relative
+  display: inline-block
+  cursor: pointer
+  width: 16px
+  height: 16px
+  margin-bottom: 0
+  input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+  .checkmark
+    position: absolute
+    top: 0
+    left: 0
+    width: 16px
+    height: 16px
+    border-radius: 2px
+    border-width: 1px
+    border-style: solid
+  .checkmark.dark
+    border-color: #6F7682
+  .checkmark.light
+    border-color: #E8DDDB
+  .checkmark:after
+    position: absolute
+    top: 1px
+    left: 5px
+    display: none
+    content: ''
+    width: 5px
+    height: 10px
+    border-width: 0 3px 3px 0
+    border-style: solid
+    transform: rotate(45deg)
+  .checkmark.dark::after
+    border-color: #6F7682
+  .checkmark.light:after
+    border-color: #E8DDDB
+  input:checked ~ .checkmark:after
+    display: block
