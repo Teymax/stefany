@@ -1,10 +1,10 @@
-section.section.about-page-section
+section.section.about-page-section-nano
   //overflow: visible
   padding-top: 87px
   background-color: #9FA6BA
   @include media-breakpoint-down(lg)
     padding-top: 66px
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     padding-top: 46px
   .extralarge-text-bg
     bottom: 46px
@@ -12,7 +12,11 @@ section.section.about-page-section
   .container
     .c-content
       padding-top: 62px
-      max-width: 575px
+      max-width: 533px
+      margin-left: auto
+      @include media-breakpoint-down(lg)
+        padding-top: 0
+        max-width: 100%
     .d-line
       background: rgba(255, 255, 255, 0.26)
     .white-block-design
@@ -25,88 +29,30 @@ section.section.about-page-section
         margin-top: 42px
       @include media-breakpoint-down(xs)
         width: 224px
-        height: 238px
+        height: 236px
         margin-top: 32px
       .extralarge-text-bg
         position: absolute
-        bottom: 1px
+        bottom: 12px
         left: -82px
         @include media-breakpoint-down(lg)
           bottom: 46px
           left: -118px
         @include media-breakpoint-down(xs)
-          bottom: 27px
+          bottom: 11px
           left: -47px
       img
-        top: 64px
-        left: -108px
+        top: 67px
+        right: 72px
         box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
         @include media-breakpoint-down(lg)
+          top: 48px
+          right: 50px
           width: 477px
           height: 311px
         @include media-breakpoint-down(xs)
-          top: 31px
-          left: -62px
+          top: 29px
+          right: 26px
           width: 256px
           height: 166px
 
-//@include media-breakpoint-down(lg)
-      //  margin-left: 23px
-      //  margin-top: 40px
-      //@include media-breakpoint-down(xs)
-      //  margin-top: 20px
-      //  width: 230px
-      //  height: 326px
-      //  img
-      //    width: 251px
-      //    height: 248px
-      //    top: 33px
-      //    left: 33px
-
-//@include media-breakpoint-down(lg)
-//  section.section.about-page-section
-//    padding-top: 87px
-//    background-color: #9FA6BA
-//    @include media-breakpoint-down(lg)
-//      padding-top: 66px
-//    @include media-breakpoint-down(xs)
-//      padding-top: 46px
-//    .extralarge-text-bg
-//      bottom: 46px
-//      left: 522px
-//    .container
-//      .c-content
-//        max-width: 575px
-//      .white-block-design
-//        position: relative
-//        width: 468px
-//        height: 657px
-//        .extralarge-text-bg
-//          position: absolute
-//          bottom: 46px
-//          left: -251px
-//        img
-//          top: 60px
-//          left: 60px
-//          box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
-//        @include media-breakpoint-down(lg)
-//          margin-left: 23px
-//          margin-top: 40px
-//        @include media-breakpoint-down(xs)
-//          margin-top: 20px
-//
-//          img
-//            width: 251px
-//            height: 248px
-//            top: 33px
-//            left: 33px
-
-
-//@include media-breakpoint-down(xs)
-//  section.section.about-page-section
-//    .container
-//      .c-content
-//      .white-block-design
-//        .extralarge-text-bg
-//          bottom: 9px
-//          left: -122px
