@@ -18,12 +18,13 @@ section.section.service-laser-service-list
         .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
           - let arr = [{name:"Подбородок",price:"220 грн",time:"15 мин"},{name:"Межбровье",price:"200 грн",time:"15 мин"},{name:"Скулы",price:"200 грн",time:"15 мин"},{name:"Щеки",price:"300 грн",time:"15 мин"},{name:"Шея",price:"450 грн",time:"15 мин"},{name:"Подмышечные области",price:"300 грн",time:"15 мин"},{name:"Руки",price:"220 грн",time:"15 мин"},{name:"Голени",price:"220 грн",time:"15 мин"}, {name:"Бедра",price:"450 грн",time:"15 мин"}, {name:"Бикини",price:"450 грн",time:"15 мин"}, {name:"Глубокое бикини",price:"450 грн",time:"15 мин"}];
           - let arr1 =["Цены на процедуры шугаринга"]
+          - let arr2 =[{name: "Все лицо", price: "740 грн"}, {name: "Бикини глубокое (половые губы, лобок, межъягодичная складка, бикини по линии трусиков)", price: "970 грн"}]
           each element in arr1
-            h2.h2-title.text-color-dark.service-section-header-mb.mt-3 #{element}
-            .checkbox-group.d-flex.flex-column.align-items-center
+            h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center #{element}
+            .checkbox-group.d-flex.flex-column.align-items-center.pb-4
               each service in arr
-                .checkbox-row.d-flex.align-items-center.justify-content-between.py-2
-                  .column-right.d-flex.align-items-center
+                .checkbox-row.d-flex.align-items-start.justify-content-between.py-2
+                  .column-right.d-flex.align-items-start
                     +defaultCheckbox('dark')
                     p.paragraph-text.text-color-lightdark.ml-3.mb-0 #{service.name}
                   .column-left.d-flex.justify-content-end
@@ -34,11 +35,11 @@ section.section.service-laser-service-list
           .sale-container.d-flex.flex-column.align-items-center
             h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
             button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
-          .checkbox-group.d-flex.flex-column.align-items-center.mt-4
-            each service in arr
-              .checkbox-row.d-flex.align-items-center.justify-content-between.py-2
-                .column-right.d-flex.align-items-center
-                  +defaultCheckbox('light')
+          .checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
+            each service in arr2
+              .checkbox-row.d-flex.align-items-start.justify-content-between.py-2
+                .column-right.d-flex.align-items-start
+                  +defaultCheckbox('light')(class='')
                   p.paragraph-text.text-w-light.text-color-white.ml-3.mb-0 #{service.name}
                 .column-left.d-flex.justify-content-end
                   p.paragraph-text.text-w-bold.text-color-white.mb-0 #{service.price}
@@ -60,7 +61,7 @@ section.section.service-laser-service-list
 //    .col-12.px-6.d-flex.align-items-center.flex-column
 //      .checkbox-wrapper.d-flex.justify-content-around.align-items-center.mt-5
 //        input(type="checkbox" class="checkbox")
-//      .checkbox-group.d-flex.flex-column.mt-4.mb-6.justify-content-between
+//      .checkbox-group.d-flex.flex-column.mt-4.mb-6.justify-content-between.pb-4
 //        h2.h2-title.text-color-dark.mt-3.mb-3.align-self-center Цены на процедуры шугаринга
 //        each service in arr
 //          .checkbox-row.d-flex.align-items-center.justify-content-between
