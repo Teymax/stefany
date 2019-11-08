@@ -65,10 +65,10 @@ $( document ).ready( function () {
         items: 1
       },
       575: {
-        items: 2.35
+        items: 2
       },
       1200: {
-        items: 4.35
+        items: 4
       }
     }
   } )
