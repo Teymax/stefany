@@ -32,9 +32,14 @@ $( document ).ready( function () {
     $( 'header' ).toggleClass( 'open' )
   } )
 
-  $( '.drop-menu' ).click( function ( e ) {
-    $( '.drop-menu:not(.open)' ).removeClass( 'open' )
-    $( this ).toggleClass( 'open' )
+  $( 'body' ).click( function ( event ) {
+    var dropMenuClosest = event.target.closest( '.drop-menu' )
+    if ( dropMenuClosest ) {
+      $( '.drop-menu' ).not( dropMenuClosest ).removeClass( 'open' )
+      dropMenuClosest.classList.toggle( 'open' )
+    } else {
+      $( '.drop-menu' ).removeClass( 'open' )
+    }
   } )
 
   $( '.questions-item, .program-item .collapse, .program-item  .collapse' )
@@ -61,10 +66,10 @@ $( document ).ready( function () {
     dots      : true,
     // FIXME: need to be fixed
     responsive: {
-      0  : {
+      0   : {
         items: 1
       },
-      575: {
+      575 : {
         items: 2
       },
       1200: {

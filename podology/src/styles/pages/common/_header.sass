@@ -228,6 +228,8 @@ nav.header-nav
 
 	ul.header-nav-list
 		width: 100%
+		@include media-breakpoint-down(sm)
+			margin-bottom: 11rem !important
 
 		li
 			position: relative
@@ -438,7 +440,7 @@ nav.header-nav
 				display: flex !important
 				justify-content: center
 				visibility: visible
-				z-index: 20
+				z-index: 20h
 				opacity: 1
 
 				.header-nav-wrap
@@ -451,7 +453,7 @@ nav.header-nav
 					position: absolute
 					left: 50%
 					transform: translateX(-50%)
-					width: 15em
+					width: 200px
 	header .c-row ul.header-contact-list > li:not(:last-child)
 		margin-right: 0 !important
 	header .header-contact-list span, header .header-contact-list > li > a

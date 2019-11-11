@@ -1,5 +1,13 @@
 section.section.about-network
 	position: relative
+	@include media-breakpoint-down(lg)
+		padding: 0
 
 	.circles
 		z-index: -1
+
+	p
+		@include media-breakpoint-down(lg)
+			width: 75%
+			display: flex
+			align-self: center

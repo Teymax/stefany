@@ -1,14 +1,28 @@
 section.section.introduce
+	.btn-callback
+		width: 264px
+
 	p.paragraph-text
 		font-weight: 200
 		color: #F2F2F2
 
-	@include media-breakpoint-up(lg)
-		height: 93vh
-		.btn-callback
-			width: 17em
+	padding-bottom: 0
+
+	h2.text-center.dark-blue
+		font-size: 40px
+		line-height: 59px
+		letter-spacing: .01em
+		@include media-breakpoint-down(md)
+			font-size: 28px
+			line-height: 41px
+
+	p.text-center.dark-blue
+		font-size: 20px
+		@include media-breakpoint-down(md)
+			font-size: 16px
+			line-height: 24px
+
 	@include media-breakpoint-down(md)
-		height: 70vh
 		padding: 0
 
 	.info-list
@@ -20,8 +34,13 @@ section.section.introduce
 		position: absolute
 		z-index: -1
 		display: block
-		@include mobile-all
+		@include media-breakpoint-down(sm)
 			display: none
+
+	.numbered-cnt
+		&:nth-of-type(5), &:nth-of-type(6)
+			@include media-breakpoint-up(lg)
+				margin-bottom: 0
 
 	#feetOne
 		top: 0
@@ -35,7 +54,7 @@ section.section.introduce
 
 	.container
 		position: relative
-		@include mobile-all
+		@include media-breakpoint-down(md)
 			padding: 0 !important
 
 		#circles
@@ -49,15 +68,15 @@ section.section.introduce
 			background: #303947
 			padding: 4em 3em
 			position: relative
-			@include mobile-all
+			@include media-breakpoint-down(sm)
 				padding: 1em 3em
 				border-radius: 0
 
 			h1
-				@include font(Circe, 300, 60, 55)
-				@include tablet
+				@include font(Circe, 300, 55, 55)
+				@include media-breakpoint-down(md)
 					font-size: 50px
-				@include mobile-all
+				@include media-breakpoint-down(sm)
 					font-size: 40px
 
 				strong
