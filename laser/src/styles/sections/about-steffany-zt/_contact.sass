@@ -1,0 +1,67 @@
+section.section.contact-about-zt
+  background:
+    image: url("../assets/img/about-steffany-zt/bg-contact.png")
+    size: cover
+  padding-top: 52px
+  padding-bottom: 62px
+
+  .btn-callback
+    .text-section
+      span
+        color: #848AA4
+  .container
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
+    .btn-callback
+      width: 12em
+    .form-title
+      @include font (CormorantGaramond, 700, 26, 31)
+      color:
+      margin-bottom: 35px
+.feedback-form
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  padding-top: 36px
+  padding-bottom: 36px
+  @include media-breakpoint-down(lg)
+  @include media-breakpoint-down(sm)
+    padding-top: 18px
+    padding-bottom: 18px
+
+
+  textarea
+    height: 100%
+    resize: none
+    box-sizing: border-box
+
+  input,
+  textarea
+    display: block
+    appearance: none
+    outline: none
+    width: 100%
+    padding: .5em
+    background-color: #F8F8F8
+    border-radius: 4px
+    border: none
+    &:not(:last-child)
+      margin-bottom: 1rem
+
+    &::placeholder
+      @include font(Circe, 400, 14, 20)
+
+  @include media-breakpoint-up(lg)
+    input
+      width: 90%
+
+
+
+@include media-breakpoint-down(lg)
+  section.section.contact
+
+@include media-breakpoint-down(xs)
+  section.section.contact
+    .form-title
+      font-size: 20px
