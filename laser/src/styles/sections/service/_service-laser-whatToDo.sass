@@ -1,15 +1,16 @@
 .service-laser-whatToDo
-  background: url(../assets/img/service-list/whatToDoBg.png)
+  background: url("../assets/img/todo-bg.jpg")
   //padding-top: 114px
   //padding-bottom: 90px
   margin-bottom: 90px
   margin-top: 115px
   @include media-breakpoint-down(md)
     margin-bottom: 180px
-
+  .light-span
+    color: #A9A8C6
   .todo-subtitle
-    @include font(Circe, bold, 18, 22)
-
+    @include font(Circe, 400, 18, 22)
+    letter-spacing: 0.01em
   .text-container1
     p
       &:nth-of-type(1)
