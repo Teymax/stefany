@@ -14,6 +14,7 @@ section.section.service-three-boxes_01
           right: auto
           bottom: -100px
 
+
 @include media-breakpoint-down(lg)
   section.section.service-three-boxes_01
     padding-top: 93px
@@ -22,6 +23,7 @@ section.section.service-three-boxes_01
     .c-three-box
       width: 430px
       margin: 0 auto
+
 @include media-breakpoint-down(xs)
   section.section.service-three-boxes_01
     padding-top: 63px
@@ -30,14 +32,125 @@ section.section.service-three-boxes_01
       .c-three-box
         width: 290px
 
+
+
+
 section.section.service-three-boxes-nano
   padding-top: 80px
   padding-bottom: 66px
-  .c-three-box
-    img
-      min-height: 274px
+  .container
+    .three-box-title
+      @include font(CormorantGaramond, 700, 44, 45)
+      color: $text-color-lightdark
+      @include media-breakpoint-down(xs)
+        @include font(CormorantGaramond, 700, 30, 30)
+    .c-three-box
+      .img-position
+        min-height: 270px
+        margin-bottom: -100px
+        &-01
+          transform: translateY(0px)
+        &-02
+          transform: translateY(-32px)
+        &-03
+          transform: translateY(10px)
+      .d-img
+        margin:
+          left: auto
+          right: auto
 
-section.section.service-three-boxes_02
 
-section.section.service-three-boxes_03
+section.section.service-three-boxes-shugaring
+  padding-top: 80px
+  padding-bottom: 66px
+  .container
+    .three-box-title
+      @include font(CormorantGaramond, 700, 44, 45)
+      color: $text-color-lightdark
+      @include media-breakpoint-down(xs)
+        @include font(CormorantGaramond, 700, 30, 30)
+    .c-three-box
+      .d-width
+        width: 395px
+        @include media-breakpoint-down(lg)
+          width: 430px
+        @include media-breakpoint-down(sm)
+          width: 280px
 
+      .img-position
+        min-height: 270px
+        margin-bottom: -100px
+        &-01
+          transform: translateY(0px)
+        &-02
+          transform: translateY(0px)
+        &-03
+          transform: translateY(13px)
+      .d-img
+        margin:
+          left: auto
+          right: auto
+
+
+section.section.service-three-boxes-waxing
+  padding-top: 80px
+  padding-bottom: 66px
+  .container
+    .three-box-title
+      @include font(CormorantGaramond, 700, 44, 45)
+      color: $text-color-lightdark
+      @include media-breakpoint-down(xs)
+        @include font(CormorantGaramond, 700, 30, 30)
+    .c-three-box
+      .d-width
+        width: 395px
+        @include media-breakpoint-down(lg)
+          width: 430px
+        @include media-breakpoint-down(sm)
+          width: 280px
+
+      .img-position
+        min-height: 270px
+        margin-bottom: -100px
+        &-01
+          transform: translateY(0px)
+        &-02
+          transform: translateY(0px)
+        &-03
+          transform: translateY(13px)
+      .d-img
+        margin:
+          left: auto
+          right: auto
+
+
+section.section.service-three-boxes-dark-theme
+  padding-top: 80px
+  padding-bottom: 66px
+  .container
+    .three-box-title
+      @include font(CormorantGaramond, 700, 44, 45)
+      color: $text-color-white
+      @include media-breakpoint-down(xs)
+        @include font(CormorantGaramond, 700, 30, 30)
+    .c-three-box
+      .d-width
+        width: 395px
+        @include media-breakpoint-down(lg)
+          width: 430px
+        @include media-breakpoint-down(sm)
+          width: 280px
+
+      .img-position
+        min-height: 270px
+        margin-bottom: -100px
+        &-01
+          transform: translateY(0px)
+        &-02
+          transform: translateY(0px)
+        &-03
+          transform: translateY(13px)
+      .d-img
+        margin:
+          left: auto
+          right: auto
