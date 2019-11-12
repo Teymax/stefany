@@ -8,9 +8,14 @@ header
 			text-decoration: none
 			color: $secondary-header-color
 
+	.btn-callback
+		width: 200px
+		height: 38px
+		box-shadow: none
+
 	@include media-breakpoint-up(lg)
 		.btn-callback
-			width: 17em
+			width: 200px
 
 .icon
 	margin-right: 10px
@@ -440,7 +445,7 @@ nav.header-nav
 				display: flex !important
 				justify-content: center
 				visibility: visible
-				z-index: 20h
+				z-index: 20 h
 				opacity: 1
 
 				.header-nav-wrap
@@ -454,6 +459,7 @@ nav.header-nav
 					left: 50%
 					transform: translateX(-50%)
 					width: 200px
+					height: 38px
 	header .c-row ul.header-contact-list > li:not(:last-child)
 		margin-right: 0 !important
 	header .header-contact-list span, header .header-contact-list > li > a

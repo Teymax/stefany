@@ -102,6 +102,7 @@ const compress = () => gulp.src( '../../build/**' ).pipe( zip( 'build.zip' ) )
 
 function watch () {
   browserSync.init( {
+    ghostMode: false,
     server: {
       baseDir: '../../build'
     }
