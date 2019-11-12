@@ -9,9 +9,13 @@ section.section.block-answer-after-shugaring
     padding-top: 45px
     padding-bottom: 82px
   .container
-    .h2-title
-      @include media-breakpoint-up(xl)
-        width: 75%
+    .c-content
+      width: 526px
+      @include media-breakpoint-down(lg)
+        width: 100%
+      .h2-title
+        @include media-breakpoint-up(xl)
+          width: 75%
     img
       width: 100%
       max-width: 502px
