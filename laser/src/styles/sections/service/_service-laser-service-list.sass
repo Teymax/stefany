@@ -13,6 +13,11 @@ section.section.service-laser-service-list
       background-repeat: no-repeat
       overflow: initial
 
+  .column-left
+    .paragraph-text
+      white-space: nowrap
+
+
   .custom-py-services-price
     padding: 72px 0
 
@@ -58,6 +63,8 @@ section.section.service-laser-service-list
         .service-list-group
           width: 100%
           padding: 0 60px
+          @include media-breakpoint-down(sm)
+            padding: 0 15px
           h2
             font-size: 30px
       //.checkbox-group
@@ -171,6 +178,15 @@ section.section.service-laser-service-list-tablet2
     width: 100%
 section.section.service-laser-service-list-tablet3
   background: #6f7682
+  .c-btn
+    display: none
+    display: inline-flex
+    justify-content: space-between
+    @include media-breakpoint-down(sm)
+      flex-direction: column
+      align-items: center
+
 
 .w-332
   width: 332px
+

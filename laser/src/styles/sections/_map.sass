@@ -1,5 +1,13 @@
-section.section.map
+section.section.map-slider
   padding-top: 64px
+  padding-bottom: 63px
+  @include media-breakpoint-down(lg)
+    padding-top: 38px
+    padding-bottom: 30px
+  @include media-breakpoint-down(sm)
+    padding-top: 49px
+    padding-bottom: 15px
+
   .container
     .btn-simple-map
       @include font (Circe, 700, 12, 14)
@@ -28,29 +36,25 @@ section.section.map
         color: #fff
       &:active
         box-shadow: none
+      @include media-breakpoint-down(lg)
+        margin-bottom: 19px
 
 
 
-
-
-@include media-breakpoint-down(lg)
-  section.section.map
-    padding-top: 38px
-    padding-bottom: 37px
-    .container
-
-@include media-breakpoint-down(xs)
-  section.section.map
-    padding-top: 49px
-    padding-bottom: 53px
-    .container
 
 .bg-wrapper
   background:
     image: url("../assets/img/about/contact-bg.jpg")
     size: cover
+  .map
+    @include media-breakpoint-down(lg)
+      height: 329px
+    @include media-breakpoint-down(sm)
+
   .container
-    padding-top: 38px
+    //padding-top: 28px // fix bg
+    //@include media-breakpoint-down(lg)
+    //  padding-top: 0
     .sub-title
       @include font(CormorantGaramond, 700, 24, 29)
       color: $text-color-dark
@@ -58,6 +62,7 @@ section.section.map
 
     .btn-callback
       max-width: 300px
+      min-width: 268px
       height: 50px
       .text-section
         width: 88%

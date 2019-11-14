@@ -4,11 +4,29 @@ section.section.contact-about-zt
     size: cover
   padding-top: 52px
   padding-bottom: 62px
-
+  @include media-breakpoint-down(lg)
+    padding-top: 47px
+    padding-bottom: 0px
+  @include media-breakpoint-down(sm)
+    padding-top: 33px
+  .container-fluid
+    @include media-breakpoint-down(lg)
+      padding: 0
+  .map
+    @include media-breakpoint-down(lg)
+      height: 296px
+    @include media-breakpoint-down(sm)
+      height: 329px
   .btn-callback
+    margin-top: 30px
+    @include media-breakpoint-down(sm)
+      margin-top: 51px //
     .text-section
       span
         color: #848AA4
+  .tablet-container
+    @include media-breakpoint-down(lg)
+      max-width: 448px
   .container
     .sub-title
       @include font(CormorantGaramond, 700, 24, 29)
@@ -17,24 +35,28 @@ section.section.contact-about-zt
       width: 12em
     .form-title
       @include font (CormorantGaramond, 700, 26, 31)
-      color:
+      color: $text-color-second-dark
       margin-bottom: 35px
-.feedback-form
-  display: flex
-  flex-wrap: wrap
-  align-items: stretch
-  padding-top: 36px
-  padding-bottom: 36px
-  @include media-breakpoint-down(lg)
-  @include media-breakpoint-down(sm)
-    padding-top: 18px
-    padding-bottom: 18px
+      letter-spacing: 0.01em
+      @include media-breakpoint-down(sm)
+        @include font (CormorantGaramond, 700, 21, 24)
+  .map
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      padding-top: 18px
+    input, textarea
+      padding: 12px 20px
 
 
   textarea
     height: 100%
+    min-height: 144px
     resize: none
     box-sizing: border-box
+
 
   input,
   textarea

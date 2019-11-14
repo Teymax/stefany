@@ -1,6 +1,19 @@
 section.section.about-salon-zt
-  padding-top: 48px
-  padding-bottom: 50px
+  padding-top: 49px
+  padding-bottom: 74px
+  @include media-breakpoint-down(lg)
+    padding-top: 23px
+    padding-bottom: 73px
+  @include media-breakpoint-down(sm)
+    padding-top: 18px
+    padding-bottom: 64px
+  .h2-title
+    margin-bottom: 21px
+    @include media-breakpoint-down(lg)
+      width: 600px
+    @include media-breakpoint-down(sm)
+      width: 100%
+      line-height: 30px
   .w-500
     width: 500px
     @include media-breakpoint-down(lg)
@@ -18,10 +31,10 @@ section.section.about-salon-zt
       width: 100%
       object-fit: cover
   .about-content
-    //flex-flow: row nowrap !important
   .video-item-cnt
-    //max-width: 757px !important
-    padding-right: 36px !important
+    padding-right: 36px
+    @include media-breakpoint-down(lg)
+      padding-right: 0
   .about-block-cnt
     max-width: 503px !important
     flex: auto !important
@@ -32,7 +45,7 @@ section.section.about-salon-zt
 
 .slider-block .owl-nav button.owl-prev .owl-nav
   button
-    background-image: url(../assets/icon/aroow-right-gray.png) !important
+    background-image: url("../assets/icon/aroow-right-gray.png") !important
 .video-slider-dots-wrap
   position: relative
   padding-right: 108px
@@ -147,3 +160,7 @@ section.section.about-salon-zt
     width: 10px
     height: 10px
 // border - style ********
+
+
+
+

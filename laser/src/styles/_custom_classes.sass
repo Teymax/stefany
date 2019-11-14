@@ -73,6 +73,7 @@ iframe
 .extralarge-text-bg
   white-space: nowrap
   position: absolute
+  letter-spacing: 0.01em
   @include font(Circe, 900, 321, 0)
   color: $text-color-white
   z-index: 10
@@ -151,7 +152,7 @@ iframe
     @include font (CormorantGaramond, bold, 34, 30)
   .h2-title
     font-size: 30px
-    line-height: 40px
+    line-height: 30px
   .h3-title
   .h4-title
 
@@ -274,6 +275,10 @@ iframe
     justify-content: space-between
     width: 100%
     z-index: -1
+    @include media-breakpoint-down(sm)
+      top: 100% !important
+      width: 100px
+      margin-bottom: 60px
     span
       display: none
     button
@@ -284,11 +289,14 @@ iframe
         background-image: url('../assets/icon/slider-left-arrow.png') !important
         background-repeat: no-repeat  !important
         background-size: contain !important
+        @include media-breakpoint-down(sm)
+          margin-left: 33%
       &.owl-next
         background-image: url('../assets/icon/slider-right-arrow.png') !important
         background-repeat: no-repeat  !important
         background-size: contain !important
-
+        @include media-breakpoint-down(sm)
+          margin-right: 33%
 @media (min-width: 1200px)
   .hidden-item
     display: none
@@ -346,6 +354,8 @@ iframe
         background-image: url('../assets/icon/slider-right-arrow.png') !important
         background-repeat: no-repeat  !important
         background-size: contain !important
+
+  // VIDEO SLIDER
   &.video-slider
     .owl-nav
       position: absolute !important
@@ -355,15 +365,22 @@ iframe
       width: 100%
       margin-top: 0 !important
       padding-top: 0 !important
+      margin-top: 50px !important
       button
         &.owl-prev
           background-image: url('../assets/icon/aroow-left-gray.png') !important
           background-repeat: no-repeat  !important
           background-size: contain !important
+          @include media-breakpoint-down(sm)
+            background-image: url('../assets/icon/slider-left-arrow-mob.svg') !important
+
         &.owl-next
           background-image: url('../assets/icon/aroow-right-gray.png') !important
           background-repeat: no-repeat  !important
           background-size: contain !important
+          @include media-breakpoint-down(sm)
+            background-image: url('../assets/icon/slider-right-arrow-mob.svg') !important
+
 
 .service-checkbox-label
   position: relative

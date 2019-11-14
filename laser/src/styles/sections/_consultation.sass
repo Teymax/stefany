@@ -1,6 +1,11 @@
 section.section.consultation-homepage
+  .c-margin
+    margin-bottom: 39px
+
   .left
     transform: translateX(-9px)
+    @include media-breakpoint-down(lg)
+      transform: translateX(0px)
   .custom-icon-number
     width: 27px
     height: 27px
@@ -10,9 +15,10 @@ section.section.consultation-homepage
   .container
     .c-content
       width: 620px
-      margin-top: -10px
+      margin-top: -22px
       @include media-breakpoint-down(lg)
-
+        margin-top: 0
+        width: 666px
       @include media-breakpoint-down(sm)
         width: 100%
   .consultation-01
@@ -30,11 +36,15 @@ section.section.consultation-homepage
         width: 489px
         height: 697px
         @include media-breakpoint-down(lg)
+          margin-left: auto
+          margin-right: 30px
           width: 465px
           height: 669px
         @include media-breakpoint-down(sm)
           width: 221px
           height: 315px
+          margin-left: 0
+          margin-right: 0
         img
           box-shadow: $shadow-image
           width: 540px
@@ -67,26 +77,31 @@ section.section.consultation-homepage
       padding-bottom: 62px
     .c-content
       padding-top: 116px
+      @include media-breakpoint-down(lg)
+        padding-top: 69px
+      @include media-breakpoint-down(sm)
+        padding-top: 46px
+
     .white-block-design
       width: 540px
-      height: 607px
+      height: 587px
       @include media-breakpoint-down(lg)
         width: 527px
-        height: 607px
+        height: 587px
       @include media-breakpoint-down(sm)
-        width: 260.3px
-        height: 299.81px
+        width: 260px
+        height: 267px
       img
         box-shadow: $shadow-image
         width: 540px
-        height: 585px
+        height: 587px
         right: 72px
         bottom: 72px
         @include media-breakpoint-down(lg)
           width: 520px
           height: 585px
           right: 61px
-          bottom: 72px
+          bottom: 73px
         @include media-breakpoint-down(sm)
           width: 256.84px
           height: 288.94px
