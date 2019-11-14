@@ -1,6 +1,6 @@
 section.section.discount-page
   .container
-    h2.h2-title.text-color-dark.mb-5.mb-md-3.mb-xl-4 Оплатите 3 сеанса и получите 4-й в подарок
+    h2.h2-title.text-color-dark Оплатите 3 сеанса и получите 4-й в подарок
     .row.wrapper
       .col-12.col-xl-9
         .c-content.mb-4
@@ -8,24 +8,26 @@ section.section.discount-page
         +btnCallback('записаться')(class='d-flex d-md-none mx-auto')
         .c-desc
           p.paragraph-text.text-color-dark.text-w-bold.mb-4 Действует постоянно
-          p.paragraph-text.text-color-dark.text-w-light Хотите сделать лазерную эпиляцию определенной зоны? Оплатите три процедуры наперед и четвертую сделайте бесплатно! Акция действует для каждой четвертой процедуры при условии, если перед ней вы сразу оплатите три сеанса лазерной эпиляции для одной зоны наперед.
-        +btnSimple('подробнее')(class='mx-auto mx-md-0 ml-md-auto')
+          p.paragraph-text.text-color-lightdark.text-w-light Хотите сделать лазерную эпиляцию определенной зоны? Оплатите три процедуры наперед и четвертую сделайте бесплатно! Акция действует для каждой четвертой процедуры при условии, если перед ней вы сразу оплатите три сеанса лазерной эпиляции для одной зоны наперед.
+        +btnSimple('подробнее')(class='mx-auto mx-md-0 ml-md-auto btn-left')
       .col-12.col-xl-3.d-none.d-xl-block.side-bar
-        h1.title.text-w-bold.text-color-lightgray.mb-3 Комплексные зоны <br> для эпиляции
-        p.subtitle.paragraph-text.text-w-bold.mb-3 Maximum
-        .position-block
-          .row
-            .col-6
-              ul.info-list
-                li.list-item.text-color-lightgray.mb-2 Руки
-                li.list-item.text-color-lightgray.mb-2 Голени
-                li.list-item.text-color-lightgray.mb-2 Подмышки
-                li.list-item.text-color-lightgray.mb-4 Бикини глубокое
+        .c-content-sidbar
+          h1.title.text-w-bold.text-color-light.text-center.mb-3 Комплексные зоны <br> для эпиляции
+          p.subtitle.paragraph-text.text-w-bold.mb-3 Maximum
+          .position-block
+            .row
+              .col-6
+                ul.info-list
+                  li.list-item.text-color-lightgray.mb-1 Руки
+                  li.list-item.text-color-lightgray.mb-1 Голени
+                  li.list-item.text-color-lightgray.mb-1 Подмышки
+                  li.list-item.text-color-lightgray.mb-4 Бикини глубокое
 
-            .col-6
-              p.custopm-text.custopm-text__small <b>15</b> минут
-              .c-span.ml-4
-                p.custopm-text.custopm-text__through.ml-2.mb-0 2 000 грн
-                p.custopm-text.custopm-text__bold 1 730 грн
+              .col-6
+                p.custopm-text.custopm-text__small.text-color-light.text-w-bold 15
+                  span.paragraph-text.text-color-light.ml-1 мин
+                .c-span.ml-4
+                  p.custopm-text.custopm-text__through.ml-2.mb-0 2 000 грн
+                  p.custopm-text.custopm-text__bold.text-color-light 1 730 грн
             +btnSimple('подробнее')(class='mx-auto')
           //+btnSimple('подробнее')

@@ -1,16 +1,17 @@
-section.section.service-laser-results.pt-0.pb-5
-    .container
-        .headline.px-6.text-center.mt-4
-            h1.h2-title.text-color-dark.text-center Вас также может заинтересовать
-        .container.container-m.slider-wrap
-            .row.no-gutters
-                .h1-title.h-center.mb-50.white-text Дипломы и сертификаты
-            .row.no-gutters
-                .diploma-slider.owl-carousel.slider-block
-                    - let arrResult = [{name:"SPA массажи", img:"shugaring1"},{name:"Чистка лица",img:"shugaring2"},{name:"Карбокси косметология",img:"shugaring3"},{name:"SPA пиллинги",img:"shugaring4"},{name:"Лазерная эпиляция / ДО", img:"shugaring1"},{name:"Лазерная эпиляция / после",img:"shugaring2"},{name:"Маска для кожи вокруг глаз / ДО",img:"shugaring3"},{name:"Маска для кожи вокруг глаз / после",img:"shugaring4"},{name:"Лазерная эпиляция / ДО", img:"shugaring1"},{name:"Лазерная эпиляция / после",img:"shugaring2"},{name:"Маска для кожи вокруг глаз / ДО",img:"shugaring3"},{name:"Маска для кожи вокруг глаз / после",img:"shugaring4"}];
-                        each element in arrResult
-                            - let resultPath = "./assets/img/service-laser-page/" + element.img + ".png"
-                                a.diploma-item(href=resultPath, data-fancybox="" )
-                                    img.w-100(src=resultPath, alt="result-image")
-                                    .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
-                                        p.paragraph-text.text-color-dark.mb-0 #{element.name}
+section.section.service-laser-results-nano
+  .container
+    .headline.px-6.text-center
+      h1.h2-title.text-color-dark.text-center.mb-4 Вас также может заинтересовать
+      //p.paragraph-text.text-color-lightdark.mb-0 которые уже прошли полный курс лазерной эпиляции
+    .container.slider-wrap
+      .row.no-gutters
+        .h1-title.h-center.mb-50.white-text Дипломы и сертификаты
+      .row.no-gutters
+        .diploma-slider.owl-carousel.slider-block
+          - let arrResult = [{name:"SPA массажи", img:"test"},{name:"Чистка лица",img:"test"},{name:"Карбокси косметология",img:"test"},{name:"SPA пиллинги",img:"test"},{name:"Лазерная эпиляция / ДО", img:"test"},{name:"Лазерная эпиляция / после",img:"test"}];
+            each element in arrResult
+              - let resultPath = "./assets/img/" + element.img + ".jpg"
+              a.diploma-item(href=resultPath, data-fancybox="" )
+                img.w-100(src=resultPath, alt="result-image")
+                .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
+                  p.paragraph-text.text-w-bold.text-color-dark.m-0.py-2 #{element.name}

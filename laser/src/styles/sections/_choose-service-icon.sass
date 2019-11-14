@@ -2,7 +2,7 @@ section.section.choose-service-icon
   padding-bottom: 120px
   .container
     .h2-title
-      padding-bottom: 50px
+      padding-bottom: 43px
     .c-content
       display: flex
       .c-card
@@ -13,13 +13,21 @@ section.section.choose-service-icon
         cursor: pointer
         &:hover .choose-title
           color: #F6AE9F !important
+        .img-01
+          transform: translate(-6px, 7px)
+        .img-02
+          transform: translate(0px, 0px)
         .img-03
-          margin-top: -4px
+          transform: translate(0px, -4px)
+        .img-04
+          transform: translate(0px, 6px)
+        .img-05
+          transform: translate(0px, 7px)
         .img-06
-          margin-top: -30px
+          transform: translate(0px, -27px)
     .choose-title
       @include font (CormorantGaramond, 700, 24, 24)
-      color: $text-color-dark
+      color: $text-color-lightdark
 @include media-breakpoint-down(lg)
   section.section.choose-service-icon
     padding-bottom: 120px

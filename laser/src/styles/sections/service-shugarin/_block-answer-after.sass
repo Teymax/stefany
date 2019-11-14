@@ -1,5 +1,5 @@
-section.section.block-answer-after
-  background-image: url('../assets/img/shugaring-page/bg.jpg')
+section.section.block-answer-after-shugaring
+  background-image: url('../assets/img/shugaring-page/bg-after.jpg')
   padding-top: 92px
   padding-bottom: 87px
   @include media-breakpoint-down(lg)
@@ -9,9 +9,15 @@ section.section.block-answer-after
     padding-top: 45px
     padding-bottom: 82px
   .container
-    .h2-title
-      @include media-breakpoint-up(xl)
-        width: 75%
+    .c-content
+      max-width: 526px
+      margin-left: auto
+      @include media-breakpoint-down(lg)
+        max-width: 682px
+        margin-left: 0
+      .h2-title
+        @include media-breakpoint-up(xl)
+          width: 75%
     img
       width: 100%
       max-width: 502px

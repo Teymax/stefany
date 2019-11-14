@@ -1,4 +1,4 @@
-section.section.consultation
+section.section.consultation-service
   .custom-icon-number
     background: #4D5259
     min-width: 27px
@@ -8,10 +8,9 @@ section.section.consultation
       @include font (Circe, bold, 16, 26)
       color: #fff !important
   .container
-    .h2-title
-      max-width: 400px
-      @include media-breakpoint-down(lg)
-        max-width: 100%
+    .sub-title
+      @include font (Circe, 400, 20, 45)
+
     .c-content
       max-width: 620px
       @include media-breakpoint-down(lg)
@@ -24,93 +23,110 @@ section.section.consultation
         background: #fff
   .consultation-01
     overflow: hidden
-    padding-top: 45px
+    padding-top: 90px
     background-color: #9FA6BA
     margin-bottom: 142px
     @include media-breakpoint-down(lg)
       padding-top: 75px
       margin-bottom: 122px
-    @include media-breakpoint-down(xs)
+    @include media-breakpoint-down(sm)
       margin-bottom: 102px
     .container
-      .white-block-design
-        width: 465px
-        height: 700px
-        bottom: -89px
-        img
-          top: 60px
-          left: 60px
-          box-shadow: $shadow-image
+      .h2-title
+        max-width: 400px
         @include media-breakpoint-down(lg)
-          margin-left: auto
-          margin-right: 30px
-        @include media-breakpoint-down(md)
-          margin: 0 0 0 65px
+          max-width: 100%
+      .white-block-design
+        margin-top: 26px
+        width: 540px
+        height: 684px
+        @include media-breakpoint-down(lg)
           width: 465px
-          height: 687px
-          bottom: 0
-        @include media-breakpoint-down(xs)
-          margin-left: 0
-          width: 230px
-          height: 300px
-          img
-            width: 240px
-            height: 254px
-            top: 30px
-            left: 30px
-      .extralarge-text-bg
-        bottom: 67px
-        @include media-breakpoint-down(md)
-        left: 17px
-        @include media-breakpoint-down(xs)
-          font-size: 152.762px
-          bottom: 15px
-          left: 8px
+          height: 649px
+          margin-left: 5%
+        @include media-breakpoint-down(sm)
+          width: 223px
+          height: 329px
+        img
+          width: 540px
+          height: 513px
+          top: 75px
+          left: 72px
+          @include media-breakpoint-down(lg)
+            top: 48px
+            left: 62px
+          @include media-breakpoint-down(sm)
+            width: 250px
+            height: 246px
+            top: 35px
+            left: 36px
+        .extralarge-text-bg
+          bottom: 45px
+          left: 39px
+          @include media-breakpoint-down(md)
+            left: 17px
+          @include media-breakpoint-down(sm)
+            font-size: 152.762px
+            bottom: 15px
+            left: 8px
   .consultation-02
     background-color: #A9A8C6
     padding-bottom: 80px
+    @include media-breakpoint-down(lg)
+      padding-bottom: 78px
+    @include media-breakpoint-down(sm)
+      padding-bottom: 66px
     .container
+      .h2-title
+        width: 605px
+        @include media-breakpoint-down(lg)
+          width: 100%
       .c-content
         padding-top: 116px
         @include media-breakpoint-down(lg)
           padding-top: 66px
-
       .white-block-design
         width: 520px
         height: 721px
         @include media-breakpoint-down(lg)
           width: 507px
           height: 557px
-          margin-left: 91px
+          margin: 0 auto
+        @include media-breakpoint-down(sm)
+          width: 251px
+          height: 250px
         img
           width: 540px
           height: 710px
-          top: -57px
-          left: -84px
-          @include media-breakpoint-down(md)
+          bottom: 72px
+          right: 72px
+          @include media-breakpoint-down(lg)
             width: 520px
-            height: 542px
+            height: 541px
+            right: 62px
+            bottom: 63px
+          @include media-breakpoint-down(sm)
+            width: 252.85px
+            height: 263.55px
+            right: 30px
+            bottom: 30px
+        .extralarge-text-bg
+          bottom: 45px
+          left: 39px
+          @include media-breakpoint-down(md)
+            left: 17px
+          @include media-breakpoint-down(sm)
+            font-size: 152.762px
+            bottom: 15px
+            left: 8px
 @include media-breakpoint-down(lg)
   .consultation-02
-    padding-bottom: 78px
     .container
       .white-block-design
-        img
-          top: -48px
-          left: -78px
-@include media-breakpoint-down(xs)
+
+@include media-breakpoint-down(sm)
   .consultation-02
-    padding-bottom: 66px
     .container
       .c-content
-        padding-top: 42px
-      .white-block-design
-        margin-left: auto
-        margin-top: -28px
-        width: 260px
-        height: 300px
-        img
-          width: 256px
-          height: 288px
-          top: -25px
-          left: -22px
+        //padding-top: 42px
+
