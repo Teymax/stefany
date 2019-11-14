@@ -8,7 +8,7 @@ section.section.map
         a.btn-simple-map.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-3") Львов
         a.btn-simple-map.mb-3.mb-md-0.city-trigger(href="", data-city="city-item-4") Ровно
     .row.no-gutters.city-item.city-item-all
-      .city.w-100.d-flex.mb-5
+      .city.w-100.d-flex.mb-5.flex-wrap
         .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
           p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Киев
           .row.no-gutters.mb-5
@@ -25,19 +25,18 @@ section.section.map
                 .col-12.d-flex.align-items-center.mb-3.height-25
                   img.icon.icon-loc(src="assets/icon/common/map.svg" alt="h-map")
                   p.paragraph-text.text-color-dark.thin-text ул. Киевская, 84
-                .col-12.d-flex.align-items-center.height-25
-                  img.icon.icon-time(src="assets/icon/common/time.svg" alt="h-map")
+                .col-12.d-flex.align-items-center.height-25b
                   p.paragraph-text.text-color-dark 9:00 – 20:00
           .row.no-gutters.mb-5
             .video.video-overlay
-            a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
               img.w-100(src="assets/img/about-video.png", alt="about-video")
               img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
           .row.no-gutters
-            +customBtn('подробнее про салон')
+            +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
         .col-12.col-xl-7
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
-      .city.w-100.d-flex.mb-5
+      .city.w-100.d-flex.mb-5.flex-wrap
         .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
           p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Ивано-фракновск
           .row.no-gutters.mb-5
@@ -59,14 +58,14 @@ section.section.map
                   p.paragraph-text.text-color-dark 9:00 – 20:00
           .row.no-gutters.mb-5
             .video.video-overlay
-            a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
               img.w-100(src="assets/img/about-video.png", alt="about-video")
               img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
           .row.no-gutters
-            +customBtn('подробнее про салон')
+            +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
         .col-12.col-xl-7
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
-      .city.w-100.d-flex.mb-5
+      .city.w-100.d-flex.mb-5.flex-wrap
         .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
           p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Львов
           .row.no-gutters.mb-5
@@ -88,14 +87,14 @@ section.section.map
                   p.paragraph-text.text-color-dark 9:00 – 20:00
           .row.no-gutters.mb-5
             .video.video-overlay
-            a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
               img.w-100(src="assets/img/about-video.png", alt="about-video")
               img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
           .row.no-gutters
-            +customBtn('подробнее про салон')
+            +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
         .col-12.col-xl-7
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
-      .city.w-100.d-flex.mb-5
+      .city.w-100.d-flex.mb-5.flex-wrap
         .col-12.col-xl-5.pr-xl-5.mb-5.mb-xl-0.mx-auto.mx-xl-0.px-15.justify-content-center.map-cnt
           p.paragraph-text.text-color-dark.text-w-bold.text-uppercase.mb-4 Ровно
           .row.no-gutters.mb-5
@@ -117,11 +116,11 @@ section.section.map
                   p.paragraph-text.text-color-dark 9:00 – 20:00
           .row.no-gutters.mb-5
             .video.video-overlay
-            a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
               img.w-100(src="assets/img/about-video.png", alt="about-video")
               img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
           .row.no-gutters
-            +customBtn('подробнее про салон')
+            +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
         .col-12.col-xl-7
           iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-1
@@ -146,11 +145,11 @@ section.section.map
                 p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           .video.video-overlay
-          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+          a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
             img.w-100(src="assets/img/about-video.png", alt="about-video")
             img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
         .row.no-gutters
-          +customBtn('подробнее про салон')
+          +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
       .col-12.col-xl-7
         iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-2.city-active
@@ -175,11 +174,11 @@ section.section.map
                 p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           .video.video-overlay
-          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+          a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
             img.w-100(src="assets/img/about-video.png", alt="about-video")
             img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
         .row.no-gutters
-          +customBtn('подробнее про салон')
+          +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
       .col-12.col-xl-7
         iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-3
@@ -204,11 +203,11 @@ section.section.map
                 p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           .video.video-overlay
-          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+          a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
             img.w-100(src="assets/img/about-video.png", alt="about-video")
             img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
         .row.no-gutters
-          +customBtn('подробнее про салон')
+          +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
       .col-12.col-xl-7
         iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')
     .row.no-gutters.city-item.city-item-4
@@ -233,10 +232,10 @@ section.section.map
                 p.paragraph-text.text-color-dark 9:00 – 20:00
         .row.no-gutters.mb-5
           .video.video-overlay
-          a.video.d-flex.align-items-center.justify-content-center.shadow(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+          a.video.d-flex.align-items-center.justify-content-center(data-fancybox="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
             img.w-100(src="assets/img/about-video.png", alt="about-video")
             img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
         .row.no-gutters
-          +customBtn('подробнее про салон')
+          +customBtn('подробнее про салон')(data-role="href" data-link="./about-salon.html")
       .col-12.col-xl-7
         iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.5423558912544!2d28.66077601561521!3d50.263131108725574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64bf0ad4dfd9%3A0xef77527de08f8cac!2z0YPQuy4g0KHRgtC10L_QsNC90LAg0JHQsNC90LTQtdGA0YssIDcsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1572945903243!5m2!1sru!2sua' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='')

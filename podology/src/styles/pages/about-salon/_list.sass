@@ -1,6 +1,11 @@
 section.section.about-salon-list
 	position: relative
 	overflow: hidden
+	> .container
+		@include media-breakpoint-up(md)
+			padding:
+				right: 9rem !important
+				left: 9rem!important
 	.circles
 		width: 70em
 		top: -5em

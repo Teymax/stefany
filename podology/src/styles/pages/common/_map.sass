@@ -3,6 +3,8 @@ section.section.map
 	padding-bottom: 59px
 
 	.container
+		.btn-callback
+			box-shadow: none
 		.btn-simple-map
 			@include font(Circe, 700, 12, 14)
 			color: #3A405B
@@ -14,13 +16,13 @@ section.section.map
 			border-radius: 100px
 			background: #fff
 			border: 1px solid #D2DBE9
-			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
 			text-transform: uppercase
 			cursor: pointer
 			padding: 0 33px
 
 			&.active
 				background: $secondary-header-color
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
 				color: #fff
 
 			&:hover
