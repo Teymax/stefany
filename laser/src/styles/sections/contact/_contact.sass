@@ -1,5 +1,20 @@
 section.section.contact
+  @include media-breakpoint-down(lg)
+    background:
+      image: url("../assets/img/contact/bg-tablet.png")
+      background-size: cover
+  .map
+    @include media-breakpoint-down(lg)
+      margin-top: 45px
+      height: 296px
+    @include media-breakpoint-down(sm)
+      margin-top: 33px
+      height: 329px
   .btn-callback
+    margin-top: 30px
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      margin-top: 51px
     .text-section
       span
         color: $text-color-lightdark
@@ -29,6 +44,7 @@ section.section.contact
 
   textarea
     height: 100%
+    min-height: 144px
     resize: none
     box-sizing: border-box
 

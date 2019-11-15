@@ -1,7 +1,28 @@
 section.section.accordion-answer-dark-theme
-  padding-top: 72px
-  padding-bottom: 84px
+  padding-top: 62px
+  padding-bottom: 65px
   background-color: #6F7682
+  @include media-breakpoint-down(lg)
+    padding-top: 62px
+    padding-bottom: 61px
+  @include media-breakpoint-down(sm)
+    padding-top: 52px
+    padding-bottom: 33px
+
+  .h2-title
+    margin-bottom: 11px
+    @include media-breakpoint-down(lg)
+      margin-bottom: 11px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 36px
+
+  .h4-title
+    margin-bottom: 55px
+    @include media-breakpoint-down(lg)
+      margin-bottom: 31px
+    @include media-breakpoint-down(sm)
+      display: none
+
   .card-header
     display: flex
     justify-content: space-between
@@ -10,13 +31,22 @@ section.section.accordion-answer-dark-theme
     position: relative
     border-radius: 100px !important
     background-color: rgba(85, 98, 120, .3)
-
     padding: 0
-    p
+    @include media-breakpoint-down(lg)
+
+    @include media-breakpoint-down(sm)
+      min-height: 64px
+    .paragraph-text
       display: flex
       align-items: center
       padding: .35rem 1.70rem
       margin-bottom: 0
+      @include media-breakpoint-down(lg)
+        max-width: 603px
+      @include media-breakpoint-down(sm)
+        max-width: 300px
+        line-height: 14px
+
   .card-header.active
     background: rgba(159, 166, 186, 0.28)
     .card-arrow
@@ -27,10 +57,12 @@ section.section.accordion-answer-dark-theme
   .card-body
     padding-top: 0
   .card-arrow
-    width: 64px
-    height: 64px
+    min-width: 64px
+    min-height: 64px
+    max-width: 64px
+    max-height: 64px
     border-radius: 50%
-    background-color: $btn-second-color
+    background-color: #4D5259
     display: flex
     align-items: center
     justify-content: center
@@ -46,27 +78,4 @@ section.section.accordion-answer-dark-theme
   .btn:focus
     outline: none !important
     box-shadow: none !important
-@include media-breakpoint-down(lg)
-  section.section.accordion-answer
-    padding-top: 72px
-    padding-bottom: 77px
-    .card-header p
-      max-width: 480px
-    .card-arrow
-      width: 64px
-      height: 64px
-      &:before
-        width: 13px
-        height: 9px
-@include media-breakpoint-down(xs)
-  section.section.accordion-answer
-    padding-top: 70px
-    padding-bottom: 48px
-    .card-header p
-      max-width: 250px
-    .card-arrow
-      width: 76px
-      height: 76px
-      &:before
-        width: 13px
-        height: 9px
+

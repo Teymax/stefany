@@ -14,19 +14,23 @@ section.section.contact-about-zt
       padding: 0
   .map
     @include media-breakpoint-down(lg)
+      margin-top: 45px
       height: 296px
     @include media-breakpoint-down(sm)
+      margin-top: 33px
       height: 329px
+
   .btn-callback
-    margin-top: 30px
+    margin-top: 40px
+    @include media-breakpoint-down(lg)
+      margin-top: 40px
+
     @include media-breakpoint-down(sm)
-      margin-top: 51px //
+      margin-top: 51px
     .text-section
       span
         color: #848AA4
-  .tablet-container
-    @include media-breakpoint-down(lg)
-      max-width: 448px
+
   .container
     .sub-title
       @include font(CormorantGaramond, 700, 24, 29)
@@ -87,3 +91,7 @@ section.section.contact-about-zt
   section.section.contact
     .form-title
       font-size: 20px
+
+.tablet-container
+  @include media-breakpoint-down(lg)
+    max-width: 448px
