@@ -14,7 +14,7 @@ section.section-services.lightblue-bg.legs-bg
           | с помощью протезирования вкладками — протезирующий материал защищает тело ногтя и корректирует направление роста пластины.
           | Если вы не знаете, какая процедура нужна именно в вашем случае, просто запишитесь на прием. Специалист подберет вам нужное лечение и определит количество процедур.
         .services-btn-container.btn-wrapper
-          +btnPen('записаться')
+          +btnPen('записаться')(data-toggle='modal', data-target='#callbackModal')
         .row.mt-md-4.mb-5
           .col-12.col-md-6.px-4
             .paragraph-container.mb-5
@@ -130,4 +130,4 @@ section.section-services.lightblue-bg.legs-bg
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 45 мин
           .services-btn-container
-            +btnPen('записаться')
+            +btnPen('записаться')(data-toggle='modal', data-target='#callbackModal')

@@ -54,7 +54,8 @@
 
 		.d-flex
 			p
-				width: 40em
+				@include media-breakpoint-up(sm)
+					width: 40em
 
 		& > .row
 			padding-top: 0 !important
