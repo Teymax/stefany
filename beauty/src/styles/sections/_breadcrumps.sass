@@ -1,7 +1,11 @@
 .breadcrumb-blk
 	padding-top: 35px
-	padding-bottom: 20px
+	padding-bottom: 18px
 	.breadcrumb
 		li, a
 			@include font('Circe-Light', 300, 16, 16)
 			color: $breadcrump-color
+		.breadcrumb-item+.breadcrumb-item
+			padding-left: .3rem
+			&::before
+				padding-right: 0.2rem

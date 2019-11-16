@@ -94,7 +94,7 @@ body
 
 p, .p-text, .paragraph-text
   margin-bottom: 0 !important
-  @include font('Circe-Regular', 400, 16, 23)
+  @include font('Circe-Regular', 400, 16, 25)
   color: $text-color-dark
   transition: 0.3s ease
 .p-text-light
@@ -108,7 +108,7 @@ p, .p-text, .paragraph-text
   @include font ('Circe-Bold', 700, 26, 26)
   color: $color-white
 .p-bold
-  @include font('Circe-Bold', 700, 16, 23)
+  @include font('Circe-Bold', 700, 16, 24)
 .text-uppercase
 	text-transform: uppercase !important
 .fs-12
@@ -126,6 +126,7 @@ p, .p-text, .paragraph-text
   width: 100%
   margin-bottom: 20px
   @include font('CormorantGaramond-Bold', 700, 44, 45)
+  letter-spacing: 0.41px
   color: $section-title-color
 
 .section-title-s
@@ -177,12 +178,12 @@ p, .p-text, .paragraph-text
   text-align: center
 
 .bnf-number
-  padding-bottom: 20px
+  padding-bottom: 17px
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: 0px
   @include font('CormorantGaramond-Bold', 700, 75, 75)
 .bnf-title
-  padding-bottom: 20px
+  padding-bottom: 17px
   text-transform: uppercase
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
@@ -198,11 +199,11 @@ p, .p-text, .paragraph-text
   width: 100%
   max-width: 195px
   height: 38px
-  padding-right: 18px
-  padding-left: 20px
+  padding-right: 16px
+  padding-left: 15px
   background: url('../assets/img/background/callback-btn.png')
   background-repeat: no-repeat
-  background-size: 45px 100%
+  background-size: 42px 100%
   background-position: top right
   border: 2px solid $color-purple
   text-decoration: none
@@ -210,7 +211,7 @@ p, .p-text, .paragraph-text
   & > span 
     text-decoration: none
     width: 100%
-    max-width: 109px
+    max-width: 115px
     svg
       width: 13px
       height: 13px
@@ -223,7 +224,7 @@ p, .p-text, .paragraph-text
       padding-top: 2px
       @include font ('Circe-ExtraBold', 900, 10, 10)
       text-transform: uppercase
-      letter-spacing: 2px
+      letter-spacing: 2.3px
       color: $color-purple-text
   & > svg 
     width: 14px
@@ -287,10 +288,10 @@ p, .p-text, .paragraph-text
 .btn-simple
   color: $color-white
   height: 38px
-  padding: 15px 30px
+  padding: 15px 22px !important
   font-size: 10px
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: 2.5px
   transition: 0.4s ease
   background: $color-purple
 .btn-simple:hover
@@ -320,9 +321,10 @@ p, .p-text, .paragraph-text
 // list - style ****
 
 .info-list
+  margin-bottom: 22px
   li
     position: relative
-    padding-left: 20px
+    padding-left: 19px
     &:before
       position: absolute
       left: 0
@@ -348,7 +350,7 @@ svg.icon-loc
 svg.icon-phone
   width: 15px !important
   height: 15px !important
-  margin-right: 6px !important
+  margin-right: 15px !important
   margin-left: 0 !important
   path
     fill: #3a405b
@@ -416,16 +418,33 @@ svg.icon-arrow
   border-radius: 100px 
 
 // margings + paddings ********
+
+.pr-20
+  padding-right: 20px !important
+.mt-7
+  margin-top: 7px !important
+.mt-11
+  margin-top: 11px !important
 .mt-30
   margin-top: 30px !important
+.mb-15
+  margin-bottom: 15px !important
+.mb-16
+  margin-bottom: 16px !important
+.mb-20
+  margin-bottom: 20px !important
+.mb-24
+  margin-bottom: 24px !important
 .mb-40
   margin-bottom: 40px !important
 .mb-50
   margin-bottom: 50px
-.mb-20
-  margin-bottom: 20px !important
+.mb-59
+  margin-bottom: 59px
 .mr-10
   margin-right: 10px !important
+.mr-41
+  margin-right: 41px !important
 
 // height
 .height-25
@@ -461,7 +480,7 @@ textarea.field
     align-items: center
     justify-content: center
     width: 100%
-    padding-top: 60px
+    padding-top: 74px
     span
       display: none
     .owl-dot

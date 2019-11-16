@@ -2,31 +2,32 @@ header
   position: relative
   z-index: 5
   .container
-    padding-top: 30px
-    padding-bottom: 6px
+    padding-top: 12px
   .c-logo
     width: 100%
     max-width: 152px
     img
       width: 100%
     svg
-      width: 185px
-      height: 95px
+      width: 152px
+      height: 104px
       path
         fill: #556278
       line
         stroke: #556278
 
   .c-row
-    max-width: 555px
+    max-width: 564px
     ul.header-contact-list
-      margin-bottom: 20px !important
+      margin-bottom: 18px !important
       &:nth-last-child(1)
       & > li
         position: relative
         cursor: pointer
         &:not(:last-child),
           margin-right: 40px !important
+        &:first-child
+          margin-right: 34px !important
         &.header-lang-wrap
           margin-right: 0 !important
         & > a
@@ -38,13 +39,16 @@ header
             margin-left: 6px
 nav.header-nav
   width: 100%
-  max-width: 320px
+  max-width: 332px
   margin-right: 5px
   ul.header-nav-list
     width: 100%
     li
       position: relative
-      cursor: pointer    
+      cursor: pointer  
+.mob-menu .nav-callback
+  margin-top: 5px
+  margin-bottom: 5px  
 @media(max-width: 991px)
   .header-nav-wrap
     position: fixed !important
