@@ -3,6 +3,9 @@
 	background-repeat: no-repeat 
 	background-size: cover
 	background-position: top left
+	.bnf-cnt
+		p
+			line-height: 26px
 	&.word-bg
 		background-image: url('../assets/img/background/benefits-bg-2.png') !important
 		background-repeat: no-repeat  !important
@@ -29,12 +32,17 @@
 		.bnf-img-wrap
 			margin-left: -15px
 .benefits
-	padding: 56px 0 44px
+	padding: 60px 0 23px
 	.container
-		max-width: 1283px
+		max-width: 1297px
+		& > .row 
+			justify-content: space-between !important
+			align-items: flex-start !important
 		.bnf
 			position: relative
-			padding-left: 220px
+			padding-left: 235px
+			max-width: 647px
+			margin-bottom: 48px
 			.bnf-img
 				position: absolute
 				top: -13px
@@ -42,15 +50,29 @@
 				z-index: 1
 				width: 100%
 				max-width: 238px
-				&.bnf-img-4
-					left: 30px
+				&.bnf-img-1
+					max-width: 239px
+					left: 25px
 					top: -20px
+				&.bnf-img-2
+					max-width: 267px
+					top: -18px
+					left: -2px
+				&.bnf-img-3
+					max-width: 268px
+					top: -19px
+					left: -2px
+				&.bnf-img-4
+					left: 48px
+					top: -20px
+					max-width: 244px
 				img
 					max-width: 100%
+					width: 100%
 			.bnf-cnt
 				z-index: 2
 				width: 100%
-				max-width: 394px
+				max-width: 396px
 				position: relative
 		.bnf-two
 			padding-left: 0 !important
