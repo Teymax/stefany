@@ -3012,13 +3012,13 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     -moz-appearance: none;
          appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-moz-range-thumb {
-        -webkit-transition: none;
+        -moz-transition: none;
         transition: none; } }
     .custom-range::-moz-range-thumb:active {
       background-color: #b3d7ff; }
@@ -3039,12 +3039,12 @@ input[type="button"].btn-block {
     background-color: #007bff;
     border: 0;
     border-radius: 1rem;
-    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none; }
     @media (prefers-reduced-motion: reduce) {
       .custom-range::-ms-thumb {
-        -webkit-transition: none;
+        -ms-transition: none;
         transition: none; } }
     .custom-range::-ms-thumb:active {
       background-color: #b3d7ff; }
@@ -12045,16 +12045,44 @@ section.section.discount {
   background-color: #fff; }
   .d-white-bg .d-border {
     position: absolute;
-    border: 2px solid #BECDD4; }
+    border: 3px solid #BECDD4; }
   .d-white-bg img {
     box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13);
     position: absolute;
     -o-object-fit: cover;
        object-fit: cover; }
 
-.extralarge-text-bg {
+.big-text {
   position: absolute;
-  line-height: 0; }
+  bottom: -18px;
+  left: -160px;
+  z-index: 2;
+  max-width: 100%;
+  font-family: "Circe-ExtraBold";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 322px;
+  line-height: 130px;
+  letter-spacing: 5px;
+  color: #ffffff; }
+
+.big-text-rotate {
+  position: absolute;
+  z-index: 2;
+  max-width: 100%;
+  font-family: "Circe-ExtraBold";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 322px;
+  line-height: 130px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  position: absolute;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  width: 10%;
+  right: 14px;
+  bottom: -27px; }
 
 .serviceInfoBlock-border {
   position: relative;
@@ -12062,20 +12090,30 @@ section.section.discount {
   background-color: #A8A4CD; }
   @media (max-width: 1199.98px) {
     .serviceInfoBlock-border {
-      padding-top: 49px;
-      margin-bottom: 310px; } }
+      padding-top: 51px;
+      margin-bottom: 320px; } }
   @media (max-width: 767.98px) {
     .serviceInfoBlock-border {
       padding-top: 31px;
       margin-bottom: 60px; } }
-  .serviceInfoBlock-border .section-title-dark {
+  @media (max-width: 1199.98px) {
+    .serviceInfoBlock-border .c-desc {
+      max-width: 649px; } }
+  @media (max-width: 767.98px) {
+    .serviceInfoBlock-border .c-desc {
+      max-width: 274px; } }
+  .serviceInfoBlock-border .c-desc .section-title {
     margin-bottom: 64px; }
     @media (max-width: 1199.98px) {
-      .serviceInfoBlock-border .section-title-dark {
-        margin-bottom: 20px; } }
+      .serviceInfoBlock-border .c-desc .section-title {
+        margin-bottom: 20.23px; } }
     @media (max-width: 767.98px) {
-      .serviceInfoBlock-border .section-title-dark {
-        margin-bottom: 24px; } }
+      .serviceInfoBlock-border .c-desc .section-title {
+        margin-bottom: 15px;
+        line-height: 30px; } }
+  @media (max-width: 767.98px) {
+    .serviceInfoBlock-border .c-desc .thin-text {
+      line-height: 22px; } }
   @media (max-width: 1199.98px) {
     .serviceInfoBlock-border .container {
       max-width: 100%;
@@ -12088,7 +12126,7 @@ section.section.discount {
     margin-right: 72px; }
     @media (max-width: 1199.98px) {
       .serviceInfoBlock-border .d-white-bg {
-        padding: 18px 47px 0 18px;
+        padding: 35px 30px  0 30px;
         width: 100%;
         height: 513px; } }
     @media (max-width: 767.98px) {
@@ -12112,26 +12150,28 @@ section.section.discount {
         .serviceInfoBlock-border .d-white-bg img {
           width: 681px;
           height: 509.8px;
-          top: 319px;
+          top: 322px;
           right: 0;
-          left: 132px; } }
+          left: 145px;
+          z-index: 2; } }
       @media (max-width: 767.98px) {
         .serviceInfoBlock-border .d-white-bg img {
           position: static;
-          margin: 0 auto;
-          width: 285.3px;
-          height: 223px;
           margin-top: 31px;
-          margin-bottom: -60px; } }
-    .serviceInfoBlock-border .d-white-bg .extralarge-text-bg {
+          margin-right: auto;
+          margin-bottom: -60px;
+          margin-left: auto;
+          width: 285.3px;
+          height: 223px; } }
+    .serviceInfoBlock-border .d-white-bg .big-text {
       display: none; }
       @media (max-width: 1199.98px) {
-        .serviceInfoBlock-border .d-white-bg .extralarge-text-bg {
+        .serviceInfoBlock-border .d-white-bg .big-text {
           display: block;
-          bottom: -279px;
+          bottom: -321px;
           left: 100px; } }
       @media (max-width: 767.98px) {
-        .serviceInfoBlock-border .d-white-bg .extralarge-text-bg {
+        .serviceInfoBlock-border .d-white-bg .big-text {
           display: none; } }
 
 @media (max-width: 1199px) {
@@ -12488,12 +12528,12 @@ section.section.consultation-form {
             color: rgba(255, 255, 255, 0.66) !important; }
           section.section.consultation-form .container .main-form-bg form .form-control:-moz-placeholder {
             font-size: 14px !important;
-            -webkit-transition: 0.3s ease;
+            -moz-transition: 0.3s ease;
             transition: 0.3s ease;
             color: rgba(255, 255, 255, 0.66) !important; }
           section.section.consultation-form .container .main-form-bg form .form-control::-moz-placeholder {
             font-size: 14px !important;
-            -webkit-transition: 0.3s ease;
+            -moz-transition: 0.3s ease;
             transition: 0.3s ease;
             color: rgba(255, 255, 255, 0.66) !important; }
           section.section.consultation-form .container .main-form-bg form .form-control::-webkit-input-placeholder {
