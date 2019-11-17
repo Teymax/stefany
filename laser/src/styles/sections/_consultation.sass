@@ -1,3 +1,8 @@
+.left
+  transform: translateX(-9px)
+  @include media-breakpoint-down(lg)
+    transform: translateX(0px)
+
 section.section.consultation-homepage
   .h2-title
     @include media-breakpoint-down(lg)
@@ -5,10 +10,7 @@ section.section.consultation-homepage
   .c-margin
     margin-bottom: 39px
 
-  .left
-    transform: translateX(-9px)
-    @include media-breakpoint-down(lg)
-      transform: translateX(0px)
+
   .custom-icon-number
     width: 27px
     height: 27px

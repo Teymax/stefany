@@ -163,8 +163,19 @@ header
     color: #4D5259 !important
   .btn-callback
     margin-left: auto
+    @include media-breakpoint-down(lg)
+
+    @include media-breakpoint-down(sm)
+      margin-left: auto
+      margin-left: auto
+      margin-right: auto
     span
       color: rgba(132, 138, 164, 1)
+      @include media-breakpoint-down(sm)
+        color: #fff
+    svg
+      @include media-breakpoint-down(sm)
+        fill: #fff !important
   .c-row
     max-width: 555px
     ul.header-contact-list
@@ -213,14 +224,14 @@ nav.header-nav
       line-height: 13px !important
     .header-nav
       max-width: 100% !important
-      li, span, .p-text
+      li, span, a, .p-text
         color: $color-white !important
         font-size: 24px !important
         line-height: 24px !important
       .dropdown-menu-list
         width:  100% !important
         position: static !important
-        display: flex !important
+        display: none !important
         transform: translateX(0%) !important
         padding: 0 !important
         background: transparent !important
@@ -308,6 +319,10 @@ nav.header-nav
     padding: 150px 15px 150px !important
     background: #A09BCF
     transition: 0.45s ease
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     .dropdown-menu-list
       width:  100% !important
       position: static !important
@@ -369,6 +384,5 @@ nav.header-nav
 
 @media(max-width: 575px)
   .mob-menu
-    padding: 100px 15px 20px !important
     overflow-y: scroll !important
 

@@ -2,7 +2,7 @@ section.section.block-answer-before-nano
   overflow: visible
   background-color: #A9A8C6
   padding-top: 92px
-  padding-bottom: 87px
+  padding-bottom: 70px
 
   @include media-breakpoint-down(lg)
     padding-top: 0px
@@ -12,7 +12,11 @@ section.section.block-answer-before-nano
 
   .container
     .c-content
-      max-width: 533px
+      max-width: 520px
+      @include media-breakpoint-down(lg)
+        max-width: 660px
+      @include media-breakpoint-down(sm)
+
     .d-line
       background: rgba(255, 255, 255, 0.39)
 
