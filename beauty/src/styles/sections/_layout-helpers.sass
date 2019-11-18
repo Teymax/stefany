@@ -117,6 +117,10 @@ p, .p-text, .paragraph-text
 	text-transform: uppercase !important
 .fs-12
 	font-size: 12px !important
+.fs-13
+	font-size: 13px !important
+.fs-14
+	font-size: 14px !important
 .fs-16
 	font-size: 16px !important
 .regular-text
@@ -139,6 +143,10 @@ p, .p-text, .paragraph-text
   color: $breadcrump-color
   display: block
   @include font('CormorantGaramond-Bold', 700, 26, 31)
+  @media(max-width: 767px)
+    font-size: 20px
+    letter-spacing: 0.2px
+    line-height: 27px
 
 .section-subtitle
   display: block
@@ -478,8 +486,11 @@ textarea.field
 
 // slider-block - style **
 .slider-pad
-  padding-left:  47px
-  padding-right: 47px
+  padding-left:  55px
+  padding-right: 55px
+  @media(max-width: 767px)
+    padding-left: 0
+    padding-right: 0
 .slider-block
   .owl-dots
     display: flex

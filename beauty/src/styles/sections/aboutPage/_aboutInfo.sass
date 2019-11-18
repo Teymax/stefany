@@ -72,7 +72,6 @@
 	box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
 	.owl-nav, .owl-dots
 		display: none
-
 .slider-block .owl-nav button.owl-prev .owl-nav
 	button
 		background-image: url(../assets/icon/aroow-right-gray.png) !important
@@ -154,6 +153,29 @@
 					opacity: 1
 				.owl-dot-bg
 					opacity: 0
+.about-salon
+	@media(max-width: 767px)
+		padding-top: 0
+	.video-item-cnt
+		max-width: 735px !important
+		& .video-slider
+			margin-bottom: 37px
+	.about-block-cnt
+		padding-top: 6px
+		@media(max-width: 767px)
+			padding-top: 0
+		.section-title
+			margin-bottom: 19px
+			line-height: 52px
+			@media(max-width: 767px)
+				list-height: 31px
+	.video-slider-dots-wrap .owl-dots-item .owl-dot
+		margin-bottom: 40px
+	.video-slider-dots
+		margin-bottom: 10px
+@media(max-width: 1199px)
+	.about .about-block-cnt
+		max-width: 100% !important
 @media(max-width: 992px)
 	.about .about-content
 		flex-flow: row wrap !important
@@ -162,7 +184,7 @@
 		padding-right: 0 !important
 @media(max-width: 730px)
 	.line-margin
-		margin-top: 75px
+		margin-top: 97px
 @media(max-width: 540px)
 	.video-slider.owl-carousel.slider-block .owl-nav
 		display: flex !important

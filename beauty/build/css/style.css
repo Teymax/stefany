@@ -11023,6 +11023,12 @@ p, .p-text, .paragraph-text {
 .fs-12 {
   font-size: 12px !important; }
 
+.fs-13 {
+  font-size: 13px !important; }
+
+.fs-14 {
+  font-size: 14px !important; }
+
 .fs-16 {
   font-size: 16px !important; }
 
@@ -11058,6 +11064,11 @@ p, .p-text, .paragraph-text {
   font-weight: 700;
   font-size: 26px;
   line-height: 31px; }
+  @media (max-width: 767px) {
+    .section-title-s {
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      line-height: 27px; } }
 
 .section-subtitle {
   display: block;
@@ -11460,8 +11471,12 @@ textarea.field {
   height: 175px; }
 
 .slider-pad {
-  padding-left: 47px;
-  padding-right: 47px; }
+  padding-left: 55px;
+  padding-right: 55px; }
+  @media (max-width: 767px) {
+    .slider-pad {
+      padding-left: 0;
+      padding-right: 0; } }
 
 .slider-block .owl-dots {
   display: -webkit-box;
@@ -12942,6 +12957,37 @@ section.section.consultation-form {
     .video-slider-dots-wrap .owl-dots-item .owl-dot:hover .owl-dot-bg {
       opacity: 0; }
 
+@media (max-width: 767px) {
+  .about-salon {
+    padding-top: 0; } }
+
+.about-salon .video-item-cnt {
+  max-width: 735px !important; }
+  .about-salon .video-item-cnt .video-slider {
+    margin-bottom: 37px; }
+
+.about-salon .about-block-cnt {
+  padding-top: 6px; }
+  @media (max-width: 767px) {
+    .about-salon .about-block-cnt {
+      padding-top: 0; } }
+  .about-salon .about-block-cnt .section-title {
+    margin-bottom: 19px;
+    line-height: 52px; }
+    @media (max-width: 767px) {
+      .about-salon .about-block-cnt .section-title {
+        list-height: 31px; } }
+
+.about-salon .video-slider-dots-wrap .owl-dots-item .owl-dot {
+  margin-bottom: 40px; }
+
+.about-salon .video-slider-dots {
+  margin-bottom: 10px; }
+
+@media (max-width: 1199px) {
+  .about .about-block-cnt {
+    max-width: 100% !important; } }
+
 @media (max-width: 992px) {
   .about .about-content {
     -webkit-box-orient: horizontal !important;
@@ -12953,7 +12999,7 @@ section.section.consultation-form {
 
 @media (max-width: 730px) {
   .line-margin {
-    margin-top: 75px; } }
+    margin-top: 97px; } }
 
 @media (max-width: 540px) {
   .video-slider.owl-carousel.slider-block .owl-nav {
@@ -13149,6 +13195,7 @@ section.section.consultation-form {
   padding-bottom: 51px; }
   @media (max-width: 1199px) {
     .map {
+      padding-top: 33px;
       padding-bottom: 33px; }
       .map .container {
         padding-bottom: 0 !important;
@@ -13196,24 +13243,40 @@ section.section.consultation-form {
   padding: 0 15px !important; }
 
 .specialists {
+  padding-top: 66px;
+  padding-bottom: 69px;
   background: url("../assets/img/specialists/specialists-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
+  @media (max-width: 767px) {
+    .specialists {
+      padding-top: 46px;
+      padding-bottom: 49px; } }
+  .specialists .section-title {
+    margin-bottom: 41px; }
+    @media (max-width: 767px) {
+      .specialists .section-title {
+        margin-bottom: 30px; } }
   .specialists-info {
     position: absolute !important;
     top: 0;
     left: 0;
     height: 100%;
+    padding: 33px 10px 28px 25px !important;
     background: #EDE1DF;
     -webkit-transition: 0.25s linear;
     transition: 0.25s linear;
     opacity: 0; }
+  .specialists .specialists-item .h3-title.fs-13 {
+    letter-spacing: 0.5px;
+    line-height: 21px; }
 
 .specialists-item-container {
   position: relative;
   cursor: pointer;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 23px; }
   .specialists-item-container .specialists-img {
     height: 100%; }
   .specialists-item-container:hover .specialists-info {
@@ -13265,16 +13328,18 @@ footer.footer {
           margin-right: 35px;
           margin-bottom: 0 !important; } }
   footer.footer .container .icon-phone {
-    width: 21px;
-    height: 20px;
+    width: 19px;
+    height: 18px;
     margin-right: 12px !important; }
   footer.footer .container .icon-loc {
-    width: 21px;
-    height: 21px;
+    width: 14px;
+    height: 17px;
     margin-right: 9px !important; }
   footer.footer .container .icon-facebook {
-    width: 25px;
-    height: 21px;
+    width: 9px;
+    min-width: 9px;
+    max-width: 9px;
+    height: 16px;
     margin-right: -4px !important; }
   footer.footer .container .drop-menu .icon-arrow {
     margin-left: 5px !important;
