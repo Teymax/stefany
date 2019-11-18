@@ -11046,7 +11046,7 @@ p, .p-text, .paragraph-text {
   line-height: 45px;
   letter-spacing: 0.41px;
   color: #58606C; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .section-title {
       line-height: 53px; } }
 
@@ -11624,11 +11624,11 @@ ul.dropdown-menu-list {
   .drop-menu-top ul.dropdown-menu-list::before {
     top: calc(100% - 8px); }
 
-@media (min-width: 1200px) {
+@media (min-width: 1199px) {
   .hidden-item {
     display: none; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .px-15 {
     padding-left: 15px !important;
     padding-right: 15px !important; } }
@@ -12723,7 +12723,7 @@ section.section.consultation-form {
 .breadcrumb-blk {
   padding-top: 35px;
   padding-bottom: 18px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .breadcrumb-blk {
       padding-top: 19px;
       padding-bottom: 8px; } }
@@ -12760,7 +12760,7 @@ section.section.consultation-form {
     padding-top: 17px; }
   .about .section-title {
     margin-bottom: 37px; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .about .section-title {
         margin-bottom: 10px; } }
   .about .video {
@@ -12773,8 +12773,10 @@ section.section.consultation-form {
   .about .video-item-cnt {
     max-width: 757px !important;
     padding-right: 15px !important; }
-    @media (max-width: 991px) {
+    @media (max-width: 1199px) {
       .about .video-item-cnt {
+        max-width: 100% !important;
+        padding-right: 0 !important;
         -webkit-box-ordinal-group: 4;
                 order: 3; } }
     @media (max-width: 767px) {
@@ -12782,7 +12784,7 @@ section.section.consultation-form {
         margin-bottom: 24px;
         -webkit-box-ordinal-group: 3;
                 order: 2; } }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     .about .about-block-btns {
       -webkit-box-ordinal-group: 3;
               order: 2;
@@ -12805,8 +12807,9 @@ section.section.consultation-form {
     max-width: 504px !important;
     -webkit-box-flex: 1 !important;
             flex: auto !important; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .about .about-block-cnt {
+        max-width: 100% !important;
         margin-top: 0 !important;
         margin-bottom: 49px;
         -webkit-box-ordinal-group: 2;
@@ -13066,7 +13069,10 @@ section.section.consultation-form {
         border-radius: 100%;
         background: #EDE1DF; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  .benefits .container .bnf {
+    margin-left: auto;
+    margin-right: auto; }
   .bnf-cnt {
     max-width: 100% !important;
     padding-bottom: 15px; }
@@ -13078,8 +13084,10 @@ section.section.consultation-form {
   .benefits {
     padding-top: 25px; }
   .benefits .container .bnf {
+    padding-left: 15px !important;
     margin-bottom: 0px; }
   .benefits .container .bnf .bnf-img {
+    position: static !important;
     margin-left: -101px; }
   .benefits .container .bnf .bnf-img.bnf-img-2, .benefits .container .bnf .bnf-img.bnf-img-3 {
     margin-left: -76px; }
@@ -13101,12 +13109,6 @@ section.section.consultation-form {
   .benefits .bnf-cnt p {
     line-height: 22px; } }
 
-@media (max-width: 575px) {
-  .bnf-img {
-    position: static !important; }
-  .benefits .bnf:not(.bnf-two) {
-    padding: 0 15px !important; } }
-
 .diploma {
   padding-top: 75px;
   padding-bottom: 82px;
@@ -13124,7 +13126,7 @@ section.section.consultation-form {
 .map {
   padding-top: 65px;
   padding-bottom: 51px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .map {
       padding-bottom: 33px; }
       .map .container {
@@ -13136,7 +13138,7 @@ section.section.consultation-form {
 
 .city-triggers-wrap {
   margin-bottom: 62px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .city-triggers-wrap {
       margin-bottom: 13px; } }
   .city-triggers-wrap .btn-simple {
@@ -13150,7 +13152,7 @@ section.section.consultation-form {
 .city-name {
   margin-bottom: 31px !important;
   font-size: 14px !important; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .city-name {
       font-size: 13px !important; } }
 
@@ -13165,7 +13167,7 @@ section.section.consultation-form {
 
 .map-img {
   max-width: 721px !important; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .map-img {
       max-width: 100% !important; } }
 
@@ -13629,7 +13631,7 @@ h3.section-subtitle {
 
 footer.footer {
   padding-top: 39px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     footer.footer {
       padding-top: 0; } }
   footer.footer .container .c-logo-f img {
@@ -13643,7 +13645,7 @@ footer.footer {
         margin-bottom: 19px !important; } }
   footer.footer .container .footer-col-3 {
     padding-left: 26px; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       footer.footer .container .footer-col-3 {
         padding-left: 0px; } }
     @media (max-width: 767px) {
@@ -13652,13 +13654,13 @@ footer.footer {
       footer.footer .container .footer-col-3 h3 {
         margin-top: 23px !important;
         margin-bottom: 27px !important; } }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     footer.footer .container .footer-col-4 {
       padding-left: 40px; } }
   footer.footer .container .footer-col-5 {
     padding-left: 26px;
     margin-top: -2px; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       footer.footer .container .footer-col-5 {
         margin-top: 0px;
         margin-bottom: 3px;
@@ -13667,7 +13669,7 @@ footer.footer {
         border-top: 1px solid rgba(0, 0, 0, 0.1); } }
     footer.footer .container .footer-col-5 p {
       letter-spacing: 0.4px; }
-      @media (max-width: 1200px) {
+      @media (max-width: 1199px) {
         footer.footer .container .footer-col-5 p {
           letter-spacing: -0.57px;
           margin-right: 35px;
@@ -13723,7 +13725,7 @@ footer.footer {
 .footer-icon-blk {
   height: 18px; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   footer br {
     display: none; } }
 
