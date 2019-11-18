@@ -10933,7 +10933,7 @@ body {
   font-weight: 900;
   font-size: 11px;
   line-height: 11px;
-  letter-spacing: 2px;
+  letter-spacing: 3.3px;
   text-transform: uppercase;
   color: #A09BCF;
   -webkit-transition: 0.3s ease;
@@ -11068,7 +11068,7 @@ p, .p-text, .paragraph-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 21px;
-  letter-spacing: .6px;
+  letter-spacing: .22px;
   color: #58606C; }
 
 .h3-title {
@@ -11089,7 +11089,7 @@ p, .p-text, .paragraph-text {
 
 .grid-title {
   display: -webkit-box;
-  margin-bottom: 15px;
+  margin-bottom: 31px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-family: "CormorantGaramond-Bold";
@@ -11105,8 +11105,8 @@ p, .p-text, .paragraph-text {
 .grid-number {
   display: block;
   position: absolute;
-  top: 64px;
-  left: 25px;
+  top: 67px;
+  left: 28px;
   letter-spacing: 4px;
   color: #58606C;
   -webkit-transition: 0.3s ease;
@@ -11694,7 +11694,7 @@ section.section.discount {
 .service-list .section-title {
   position: relative;
   z-index: 2;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   line-height: 33px !important;
   color: #ffffff;
   display: -webkit-box  !important;
@@ -11714,20 +11714,21 @@ section.section.discount {
 
 .service-list .button {
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  padding: 0 39px; }
 
 .service-list .row .service-item {
   height: 309px;
   overflow: hidden;
-  padding-top: 33px;
+  padding-top: 36px;
   padding-bottom: 45px;
   padding-left: 36px; }
   .service-list .row .service-item-bigger {
-    padding-left: 89px;
+    padding-left: 81px;
     padding-top: 51px;
-    padding-bottom: 45px; }
+    padding-bottom: 61px; }
   .service-list .row .service-item-3 {
-    padding-left: 89px; }
+    padding-left: 81px; }
   .service-list .row .service-item .service-btn-wrap {
     position: relative;
     z-index: 2; }
@@ -11735,7 +11736,7 @@ section.section.discount {
       cursor: pointer;
       width: 38px;
       height: 38px;
-      margin-right: 25px;
+      margin-right: 27px;
       padding: 0; }
       .service-list .row .service-item .service-btn-wrap .button svg {
         width: 13px;
@@ -11749,7 +11750,8 @@ section.section.discount {
       font-size: 12px;
       line-height: 12px;
       color: #ffffff;
-      letter-spacing: 3px; }
+      letter-spacing: 3.7px;
+      text-transform: uppercase; }
   .service-list .row .service-item > img {
     position: absolute;
     left: 0;
@@ -12272,7 +12274,7 @@ section.section.discount {
     margin-right: 14px !important; } }
 
 .grid-bg-1 {
-  padding: 68px 0;
+  padding: 68px 0 69px;
   background: url("../assets/img/infoblock/infoblockGrid-bg-1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12292,6 +12294,10 @@ section.section.discount {
       position: relative;
       -webkit-transition: 0.3s ease;
       transition: 0.3s ease; }
+      .info-block-grid .container .grid-cnt .section-title {
+        margin-bottom: 23px;
+        line-height: 43px;
+        letter-spacing: 0; }
       .info-block-grid .container .grid-cnt .btn-callback {
         max-width: 178px;
         padding-left: 24px; }
@@ -12309,26 +12315,23 @@ section.section.discount {
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease; }
       .info-block-grid .container .grid-cnt.grid-cnt-big {
-        padding: 54px 120px 85px 74px; }
+        padding: 54px 110px 85px 79px; }
         .info-block-grid .container .grid-cnt.grid-cnt-big::before {
           right: -22px;
           top: 30px; }
         .info-block-grid .container .grid-cnt.grid-cnt-big .proccess-info {
-          padding-bottom: 20px; }
+          padding-bottom: 22px; }
       .info-block-grid .container .grid-cnt.grid-cnt-small {
         min-height: 292px !important;
-        padding: 50px 40px 40px 74px; }
+        padding: 53px 40px 36px 81px; }
         .info-block-grid .container .grid-cnt.grid-cnt-small::before {
           width: 30px;
           min-width: 30px;
           height: 30px;
           min-height: 30px; }
-        .info-block-grid .container .grid-cnt.grid-cnt-small:nth-child(1)::before {
-          left: calc(50% - 15px);
+        .info-block-grid .container .grid-cnt.grid-cnt-small.grid-cnt-down:nth-child(1)::before {
+          right: 44px;
           top: calc(100% - 15px); }
-        .info-block-grid .container .grid-cnt.grid-cnt-small:nth-child(2)::before {
-          left: calc(50% - 15px);
-          top: -14px; }
     .info-block-grid .container .grid-img {
       position: relative;
       z-index: 1; }
@@ -12487,6 +12490,7 @@ section.section.discount {
       padding-right: 15px; } }
 
 section.section.consultation-form {
+  padding-top: 71px;
   background-image: url("../assets/img/background/consultation-form-bg-2.jpg");
   background-size: cover;
   background-position: center; }
@@ -12500,18 +12504,24 @@ section.section.consultation-form {
     section.section.consultation-form .container .main-form .form-group {
       margin-bottom: 12px !important; }
     section.section.consultation-form .container .main-form .btn-callback {
-      max-width: 100%; }
+      max-width: 100%;
+      margin-top: 26px;
+      margin-bottom: 22px; }
       section.section.consultation-form .container .main-form .btn-callback > span {
         max-width: 100%;
         padding-right: 40px; }
         section.section.consultation-form .container .main-form .btn-callback > span svg .cls-1 {
           -webkit-transition: 0.3s ease 0.1s;
           transition: 0.3s ease 0.1s; }
+    section.section.consultation-form .container .main-form > .paragraph-text {
+      margin-bottom: 35px !important; }
     section.section.consultation-form .container .main-form .form-control {
       background-color: rgba(77, 82, 89, 0.2);
-      width: 252px; }
+      width: 252px;
+      padding: .375rem 23px;
+      margin-right: 0; }
     section.section.consultation-form .container .main-form-bg {
-      padding: 65px 65px 115px;
+      padding: 62px 65px 81px !important;
       max-width: 396px;
       background-image: url("../assets/img/background/form-bg.png");
       background-size: cover; }
@@ -12569,13 +12579,15 @@ section.section.consultation-form {
     font-size: 12px;
     line-height: 22px; }
   section.section.consultation-form .container .text-small {
+    letter-spacing: 0.55px;
     color: rgba(255, 255, 255, 0.64) !important; }
 
 .consultation-form .container-xxl {
   padding-left: 273px; }
 
 .form-content {
-  padding-top: 30px; }
+  padding-top: 60px;
+  padding-left: 11px !important; }
 
 .timer-item {
   position: relative;
@@ -12583,18 +12595,20 @@ section.section.consultation-form {
   height: 64px;
   background: #A09BCF;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18); }
-  .timer-item:not(:last-child)::before {
-    content: ':';
-    position: absolute;
-    right: -11px;
-    color: rgba(77, 82, 89, 0.36); }
+  .timer-item:not(:last-child) {
+    margin-right: 26px; }
+    .timer-item:not(:last-child)::before {
+      content: ':';
+      position: absolute;
+      right: -17px;
+      color: rgba(77, 82, 89, 0.36); }
 
 .c-title-item {
   font-family: "CormorantGaramond-Regular";
   font-style: normal;
   font-weight: 300;
   font-size: 44px;
-  line-height: 55px;
+  line-height: 44px;
   color: #6F7682; }
   .c-title-item span {
     font-family: "CormorantGaramond-Bold";
@@ -12604,7 +12618,8 @@ section.section.consultation-form {
     line-height: 55px; }
 
 .c-subtitle {
-  letter-spacing: 1px; }
+  letter-spacing: 0.6px;
+  margin-bottom: 14px !important; }
 
 @media (max-width: 1100px) {
   section.section.consultation-form .container .main-form-bg {
@@ -12667,7 +12682,9 @@ section.section.consultation-form {
   background-size: cover;
   background-position: top left; }
   .questions.section.accordion-answer {
-    padding-top: 75px !important; }
+    padding-top: 66px !important; }
+  .questions .container-xl {
+    max-width: 1300px !important; }
   .questions .card-header {
     border-radius: 0;
     background: none;
@@ -12948,6 +12965,10 @@ section.section.consultation-form {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left; }
+  .benefits .section-title {
+    margin-bottom: 13px; }
+  .benefits .benefits-head {
+    margin-bottom: 18px; }
   .benefits .bnf-cnt p {
     line-height: 26px; }
   .benefits.word-bg {
@@ -13198,439 +13219,8 @@ section.section.consultation-form {
   .specialists-item-container:hover .specialists-info {
     opacity: 1; }
 
-.conteiner-s {
-  max-width: 860px !important; }
-
-.course-info {
-  background-image: url("../assets/img/padalogy/learning/course-info-bg.png");
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
-  padding: 57px 0 64px; }
-  .course-info .info-list-item {
-    position: relative;
-    padding-left: 20px !important; }
-    .course-info .info-list-item:before {
-      position: absolute;
-      left: 3px;
-      top: 9px;
-      content: '';
-      width: 4px;
-      height: 4px;
-      background: #4D5259;
-      border-radius: 50%; }
-
-h2.section-title {
-  padding-bottom: 2px;
-  font-family: "Circe-Bold";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 28px;
-  color: #556278; }
-
-h3.section-subtitle {
-  padding-bottom: 37px;
-  font-family: "Circe-Regular";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #556278; }
-
-.extrabold {
-  font-family: 'Circe-ExtraBold'; }
-
-.course-info-titles {
-  position: relative; }
-  .course-info-titles p {
-    position: relative;
-    z-index: 2; }
-    .course-info-titles p.extrabold {
-      text-transform: uppercase; }
-  .course-info-titles::before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    display: block;
-    top: -28px;
-    left: -37px;
-    width: 109px;
-    height: 109px;
-    background: #D3E1EC;
-    border-radius: 100%;
-    opacity: 0; }
-
-.course-info-cnt .info-list-item {
-  padding-bottom: 26px !important; }
-
-@media (max-width: 991px) {
-  .course-info {
-    background: #EBF4FB; } }
-
-@media (max-width: 767px) {
-  .course-info-titles::before {
-    opacity: 1; }
-  .course-info-cnt {
-    max-width: 437px; }
-    .course-info-cnt .l-one {
-      padding-bottom: 60px !important; } }
-
-.program {
-  background: url("../assets/img/background/program-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
-  padding-left: 20px;
-  padding-right: 20px; }
-  .program .program-item-wrap {
-    max-width: 1104px;
-    border: 10px solid rgba(79, 121, 202, 0.29); }
-  .program .text-border-b {
-    position: relative; }
-    .program .text-border-b::before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: calc(50% - 44.5px);
-      display: block;
-      width: 100%;
-      max-width: 89px;
-      height: 4px;
-      background: rgba(125, 137, 158, 0.39); }
-  .program .card-header {
-    position: relative; }
-  .program-head {
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease; }
-    .program-head svg {
-      position: absolute;
-      right: 48px;
-      width: 15px;
-      height: 15px;
-      -webkit-transition: 0.3s ease;
-      transition: 0.3s ease; }
-      .program-head svg .cls-1 {
-        fill: #ffffff; }
-    .program-head .card-arrow {
-      width: 240px;
-      min-width: 240px;
-      height: 100%;
-      min-height: 96px;
-      margin-right: 62px;
-      margin-bottom: 0;
-      text-transform: uppercase !important;
-      -webkit-transition: 0.3s ease;
-      transition: 0.3s ease; }
-  .program-answer {
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    background: rgba(21, 28, 39, 0.4); }
-    .program-answer .card-body {
-      padding-left: 48px; }
-  .program-item {
-    cursor: pointer; }
-    .program-item:nth-last-child(even) .program-head {
-      background: rgba(85, 98, 120, 0.3) !important; }
-    .program-item:nth-last-child(even) .card-arrow {
-      background: rgba(37, 43, 52, 0.3) !important; }
-    .program-item:nth-last-child(odd) .program-head {
-      background: rgba(32, 39, 51, 0.2); }
-    .program-item:nth-last-child(odd) .card-arrow {
-      background: rgba(32, 39, 51, 0.4) !important; }
-    .program-item .paragraph-text-18 {
-      padding-right: 60px; }
-    .program-item.active .program-answer {
-      padding-top: 24px !important;
-      padding-bottom: 24px !important; }
-    .program-item.active .program-head svg {
-      -webkit-transform: rotate(-180deg);
-              transform: rotate(-180deg); }
-    .program-item.active .program-head .card-arrow {
-      box-shadow: none !important; }
-
-.paragraph-text-18 {
-  margin-bottom: 0 !important;
-  font-family: "Circe-Regular";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1px;
-  color: #ffffff;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  line-height: 24px; }
-  .paragraph-text-18 .text-w-bold {
-    font-size: 20px; }
-
-@media (max-width: 992px) {
-  .program-head .card-arrow {
-    width: 120px;
-    min-width: 120px;
-    margin-right: 20px; }
-  .program-item .paragraph-text-18 {
-    padding-right: 30px; }
-  .program-head svg {
-    right: 8px; }
-  .program-answer .card-body {
-    padding-left: 20px; } }
-
-.btn-callback-blue {
-  background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 45px, #7B9DDD 0, #7B9DDD);
-  max-width: 182px !important;
-  border: 0px solid transparent; }
-  .btn-callback-blue span span {
-    color: #ffffff !important; }
-
-@media (max-width: 700px) {
-  .program-item .paragraph-text-18 {
-    font-size: 13px; }
-    .program-item .paragraph-text-18 .text-w-bold {
-      font-size: 14px; }
-  .program-head .card-arrow {
-    width: 50px !important;
-    min-width: 50px !important;
-    margin-right: 15px !important;
-    font-size: 12px !important; } }
-
-.metodists {
-  background-image: url("../assets/img/padalogy/learning/metodists-bg.png");
-  background-size: cover;
-  background-position: top -120px center;
-  background-repeat: no-repeat;
-  padding: 69px 0 72px;
-  margin-top: -9px;
-    margin-top-max-width: 304px !important;
-    margin-top-padding-left: 10px !important; }
-  .metodists .container {
-    max-width: 1290px !important; }
-  .metodists .section-title {
-    padding-bottom: 30px;
-    margin-bottom: 55px;
-    font-family: "Circe-Bold";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 28px;
-    color: #556278; }
-  .metodists .text-border-b {
-    position: relative; }
-    .metodists .text-border-b::before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: calc(50% - 44.5px);
-      display: block;
-      width: 100%;
-      max-width: 89px;
-      height: 4px;
-      background: rgba(125, 137, 158, 0.39); }
-  .metodists .metodist-block {
-    max-width: 610px !important; }
-    .metodists .metodist-block .extrabold {
-      font-size: 20px !important; }
-  .metodists .metodist-img {
-    max-width: 287px !important; }
-  .metodists .info-list-item {
-    position: relative;
-    padding-left: 20px !important;
-    padding-bottom: 8px !important; }
-    .metodists .info-list-item:before {
-      position: absolute;
-      left: 3px;
-      top: 9px;
-      content: '';
-      width: 4px;
-      height: 4px;
-      background: #4D5259;
-      border-radius: 50%; }
-
-@media (max-width: 1199px) {
-  .metodists .metodist-block {
-    max-width: 100% !important;
-    margin-bottom: 50px !important; }
-    .metodists .metodist-block .metodist-img {
-      margin-right: 15px; }
-    .metodists .metodist-block > .row {
-      -webkit-box-pack: start !important;
-              justify-content: flex-start !important; } }
-
-@media (max-width: 630px) {
-  .metodists .metodist-block .metodist-img {
-    margin-right: 0 !important;
-    margin-bottom: 30px !important;
-    max-width: 100% !important; }
-  width: 100% !important; }
-
-.course-benefits {
-  background-image: url("../assets/img/padalogy/learning/course-benefits-bg.jpg");
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
-  padding: 69px 0 72px; }
-  .course-benefits .contaner {
-    max-width: 1083px !important; }
-  .course-benefits .section-title {
-    padding-bottom: 44px;
-    font-family: "Circe-Bold";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 28px;
-    color: #556278; }
-  .course-benefits .btn-callback {
-    max-width: 238px !important;
-    padding-right: 28px;
-    padding-left: 45px;
-    background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 62px, #7B9DDD 0, #7B9DDD); }
-
-.course-benefits-cnt {
-  max-width: 625px;
-  background-image: url("../assets/img/padalogy/learning/dash.png");
-  background-size: 294px;
-  background-position: bottom 5px right 80px;
-  background-repeat: no-repeat; }
-  .course-benefits-cnt .info-list-item {
-    position: relative;
-    padding-left: 20px !important;
-    padding-bottom: 11px !important; }
-    .course-benefits-cnt .info-list-item:before {
-      position: absolute;
-      left: 3px;
-      top: 9px;
-      content: '';
-      width: 4px;
-      height: 4px;
-      background: #4D5259;
-      border-radius: 50%; }
-
-.course-price {
-  font-family: "Circe-Light";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #556278; }
-  .course-price span {
-    margin-left: 15px;
-    width: 109px;
-    height: 109px;
-    background: transparentize;
-    font-family: "Circe-Bold";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    color: #2E3746;
-    border-radius: 50%; }
-
-.height-50 {
-  height: 50px !important; }
-
-@media (max-width: 991px) {
-  .course-benefits {
-    background: #EBF4FB; } }
-
-@media (max-width: 767px) {
-  .course-benefits-cnt {
-    background-size: 190px;
-    background-position: bottom 30px right 80px; }
-  .course-price {
-    margin-top: 5px;
-    margin-bottom: 10px; }
-    .course-price span {
-      background: #7B9DDD;
-      font-size: 20px  !important;
-      line-height: 20px !important;
-      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.11);
-      color: #ffffff !important; } }
-
-@media (max-width: 400px) {
-  .course-price {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column; }
-    .course-price span {
-      margin-left: 0;
-      margin-top: 15px; }
-  .callback-wrap .btn-callback {
-    margin: 0 auto !important; } }
-
-.modal-popup {
-  max-width: 396px !important; }
-  .modal-popup .modal-content {
-    padding-top: 53px;
-    padding-bottom: 50px;
-    width: 100% !important;
-    background: #2F3847 !important; }
-    .modal-popup .modal-content:not(.px-1) {
-      padding-left: 73px !important;
-      padding-right: 73px !important; }
-    .modal-popup .modal-content h4 {
-      padding-bottom: 10px;
-      font-family: "Circe-Bold";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 20px;
-      color: #ffffff;
-      text-transform: uppercase; }
-    .modal-popup .modal-content h5 {
-      font-family: "Circe-Regular";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 16px;
-      padding-bottom: 32px;
-      color: #ffffff; }
-    .modal-popup .modal-content form input, .modal-popup .modal-content form select {
-      padding: 12px 20px;
-      background: #F8F8F8;
-      border-radius: 4px;
-      border: none !important;
-      outline: none !important;
-      background: rgba(255, 255, 255, 0.2);
-      color: rgba(255, 255, 255, 0.66) !important; }
-      .modal-popup .modal-content form input:placeholder, .modal-popup .modal-content form select:placeholder {
-        color: rgba(255, 255, 255, 0.66) !important; }
-      .modal-popup .modal-content form input:-moz-placeholder, .modal-popup .modal-content form select:-moz-placeholder {
-        color: rgba(255, 255, 255, 0.66) !important; }
-      .modal-popup .modal-content form input::-moz-placeholder, .modal-popup .modal-content form select::-moz-placeholder {
-        color: rgba(255, 255, 255, 0.66) !important; }
-      .modal-popup .modal-content form input::-webkit-input-placeholder, .modal-popup .modal-content form select::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, 0.66) !important; }
-    .modal-popup .modal-content form select {
-      padding-right: 35px !important;
-      background-image: url("../assets/img/padalogy/learning/arrow.svg");
-      background-repeat: no-repeat;
-      background-position: center right 15px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      text-indent: 1px;
-      text-overflow: ''; }
-    .modal-popup .modal-content form .btn-send {
-      height: 50px !important;
-      padding-right: 28px;
-      padding-left: 45px;
-      border: none !important;
-      background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 64px, #7B9DDD 0, #7B9DDD); }
-      .modal-popup .modal-content form .btn-send span span {
-        color: #ffffff !important; }
-
-#thanksPopup .modal-content {
-  height: 430px;
-  background: url("../assets/img/padalogy/learning/modalThanks.png") !important;
-  background-size: cover !important;
-  background-position: bottom center !important;
-  background-repeat: no-repeat !important; }
-
 footer.footer {
-  padding-top: 39px; }
+  padding-top: 25px; }
   @media (max-width: 1199px) {
     footer.footer {
       padding-top: 0; } }

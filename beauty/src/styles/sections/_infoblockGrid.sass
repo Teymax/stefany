@@ -1,5 +1,5 @@
 .grid-bg-1
-	padding: 68px 0
+	padding: 68px 0 69px
 	background: url('../assets/img/infoblock/infoblockGrid-bg-1.png')
 	background-repeat: no-repeat 
 	background-size: cover
@@ -17,6 +17,10 @@
 			background: $color-white
 			position: relative
 			transition: 0.3s ease
+			.section-title
+				margin-bottom: 23px
+				line-height: 43px
+				letter-spacing: 0
 			.btn-callback
 				max-width: 178px
 				padding-left: 24px
@@ -32,28 +36,24 @@
 				background: $color-white
 				transition: 0.3s ease
 			&.grid-cnt-big
-				padding: 54px 120px 85px 74px
+				padding: 54px 110px 85px 79px
 				&::before
 					right: -22px
 					top: 30px
 				.proccess-info
-					padding-bottom: 20px
+					padding-bottom: 22px
 			&.grid-cnt-small
 				min-height: 292px !important
-				padding: 50px 40px 40px 74px
+				padding: 53px 40px 36px 81px
 				&::before
 					width: 30px
 					min-width: 30px
 					height: 30px
 					min-height: 30px
-				&:nth-child(1)
+				&.grid-cnt-down:nth-child(1)
 					&::before
-						left: calc(50% - 15px)
+						right: 44px
 						top: calc(100% - 15px)
-				&:nth-child(2)
-					&::before
-						left: calc(50% - 15px)
-						top: -14px
 		.grid-img
 			position: relative
 			z-index: 1
