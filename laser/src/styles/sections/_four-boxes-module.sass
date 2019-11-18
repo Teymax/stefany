@@ -16,7 +16,6 @@ section.section.four-boxes
     @include media-breakpoint-down(lg)
       width: 100%
     @include media-breakpoint-down(sm)
-      margin-bottom: 37px
   .container
     .c-boxes
       img
@@ -70,8 +69,17 @@ section.section.four-boxes-service-laser
   padding-top: 58px
   padding-bottom: 78px
   background-color: #fff
+  @include media-breakpoint-down(lg)
+    padding-bottom: 92px
+    padding-top: 67px
+  @include media-breakpoint-down(sm)
+    padding-bottom: 62px
+    padding-top: 57px
+
   .h2-title
     margin-bottom: 7px
+    @include media-breakpoint-up(lg)
+      margin-bottom: 9px
   .c-content
     margin: 0 auto
   .container
@@ -96,7 +104,6 @@ section.section.four-boxes-service-laser
         max-width: 395px
 @include media-breakpoint-down(sm)
   section.section.four-boxes-service-laser
-    padding-top: 86px
     .container
       .c-boxes
         img
