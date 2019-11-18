@@ -99,6 +99,8 @@ p, .p-text, .paragraph-text
   @include font('Circe-Regular', 400, 16, 25)
   color: $text-color-dark
   transition: 0.3s ease
+  @media(max-width: 767px)
+    line-height: 22px
 .p-text-light
 	@include font('Circe-Light', 300, 14, 24)
 	color: $breadcrump-color
@@ -130,6 +132,8 @@ p, .p-text, .paragraph-text
   @include font('CormorantGaramond-Bold', 700, 44, 45)
   letter-spacing: 0.41px
   color: $section-title-color
+  @media(max-width: 1200px)
+    line-height: 53px
 
 .section-title-s
   color: $breadcrump-color
@@ -483,6 +487,8 @@ textarea.field
     justify-content: center
     width: 100%
     padding-top: 74px
+    @media(max-width: 767px)
+      padding-top: 41px
     span
       display: none
     .owl-dot

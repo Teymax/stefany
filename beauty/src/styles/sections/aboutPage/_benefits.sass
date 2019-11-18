@@ -54,21 +54,37 @@
 					max-width: 239px
 					left: 25px
 					top: -20px
+					@media(max-width: 767px)
+						min-width: 338px
 				&.bnf-img-2
 					max-width: 267px
 					top: -18px
 					left: -2px
+					@media(max-width: 767px)
+						min-width: 323px
 				&.bnf-img-3
 					max-width: 268px
 					top: -19px
 					left: -2px
+					@media(max-width: 767px)
+						min-width: 347px
 				&.bnf-img-4
 					left: 48px
 					top: -20px
 					max-width: 244px
+					@media(max-width: 767px)
+						min-width: 375px
 				img
 					max-width: 100%
 					width: 100%
+				& .bnf-img-item-1
+					display: block
+					@media(max-width: 767px)
+						display: none
+				& .bnf-img-item-2
+					display: none
+					@media(max-width: 767px)
+						display: block
 			.bnf-cnt
 				z-index: 2
 				width: 100%
@@ -101,13 +117,39 @@
 				border-radius: 100%
 				background: $spec-bg
  
-@media(max-width: 992px)
+@media(max-width: 1200px)
 	.bnf-cnt
 		max-width: 100% !important
-		padding-bottom: 40px
+		padding-bottom: 15px
 	.bnf-two
 		padding: 0 !important
 		max-width: 500px !important
+@media(max-width: 767px)
+	.benefits
+		padding-top: 25px
+	.benefits .container .bnf
+		margin-bottom: 0px
+	.benefits .container .bnf .bnf-img
+		margin-left: -101px
+	.benefits .container .bnf .bnf-img.bnf-img-2, .benefits .container .bnf .bnf-img.bnf-img-3
+		margin-left: -76px
+	.benefits .container .bnf .bnf-img.bnf-img-4
+		margin-left: -46px
+	.bnf-cnt
+		margin-top: -194px
+		max-width: 100%
+	.bnf-item-2 .bnf-cnt
+		margin-top: -125px
+	.bnf-item-3 .bnf-cnt
+		margin-top: -160px
+	.benefits .bnf-cnt .bnf-number, .benefits .bnf-cnt .bnf-title, .benefits .bnf-cnt p
+		text-align: left !important
+	.bnf-title
+		letter-spacing: 1.8px
+		font-size: 18px
+		line-height: 20px
+	.benefits .bnf-cnt p
+		line-height: 22px
 @media(max-width: 575px)
 	.bnf-img
 		position: static !important

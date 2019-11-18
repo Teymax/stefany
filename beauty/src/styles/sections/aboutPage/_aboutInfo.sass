@@ -1,9 +1,13 @@
 .about
 	padding-bottom: 54px
+	@media(max-width: 767px)
+		padding-bottom: 0
 	&-salon
 		padding-top: 17px
 	.section-title
 		margin-bottom: 37px
+		@media(max-width: 1200px)
+			margin-bottom: 10px
 	.video
 		position: relative
 		display: block
@@ -16,12 +20,19 @@
 		padding-right: 15px !important
 		@media(max-width: 991px)
 			order: 3
+		@media(max-width: 767px)
+			margin-bottom: 24px
+			order: 2
 	.about-block-btns
 		@media(max-width: 991px)
 			order: 2
 			margin-top: 0 !important
 			margin-bottom: 43px !important
+		@media(max-width: 767px)
+			order: 3
 		.btn-simple
+			@media(max-width: 767px)
+				margin-bottom: 21px
 			@media ( min-width: 650px )
 				margin-right: 27px
 			@media ( min-width: 540px )
@@ -29,10 +40,25 @@
 	.about-block-cnt
 		max-width: 504px !important
 		flex: auto !important
-		@media(max-width: 991px)
+		@media(max-width: 1200px)
 			margin-top: 0 !important
-			margin-bottom: 55px
+			margin-bottom: 49px
 			order: 1
+			& > p.p-bold
+				margin-top: 62px
+		@media(max-width: 767px)
+			margin-bottom: 20px
+			& .mb-16
+				margin-bottom: 14px
+			& .info-list
+				margin-top: -4px
+				margin-bottom: 11px
+			& li
+				font-size: 14px
+				line-height: 22px
+			& > p.p-bold
+				margin-top: 0
+
 	.soc-btn
 		&.mr-41
 			@media ( min-width: 650px  )
