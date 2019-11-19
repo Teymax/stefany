@@ -408,6 +408,9 @@ svg.icon-arrow
   position: absolute
   width: 92px
   height: 92px
+  @media(max-width: 767px)
+    width: 47px
+    height: 47px
   &-orange
     background: $color-orange-opacity
   span
@@ -415,6 +418,9 @@ svg.icon-arrow
     height: 20px
     clip-path: polygon(0 0, 0% 100%, 100% 50%)
     background: $play-btn-color
+    @media(max-width: 767px)
+      width: 7px
+      height: 6px
 .play-btn-small
   width: 42px
   height: 42px
@@ -435,10 +441,16 @@ svg.icon-arrow
 
 .pr-20
   padding-right: 20px !important
+.pl-three
+  padding-left: 3px !important
+.pb-15
+  padding-bottom: 15px !important
 .mt-7
   margin-top: 7px !important
 .mt-11
   margin-top: 11px !important
+.mt-22
+  margin-top: 22px !important
 .mt-30
   margin-top: 30px !important
 .mb-15
@@ -447,8 +459,12 @@ svg.icon-arrow
   margin-bottom: 16px !important
 .mb-20
   margin-bottom: 20px !important
+.mb-22
+  margin-bottom: 24px !important
 .mb-24
   margin-bottom: 24px !important
+.mb-30
+  margin-bottom: 30px !important
 .mb-40
   margin-bottom: 40px !important
 .mb-50

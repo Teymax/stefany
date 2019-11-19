@@ -9,12 +9,17 @@
 		padding-bottom: 0px
 		ol
 			margin-bottom: 10px
+	& .breadcrumb .breadcrumb-item + .breadcrumb-item
+		@media(max-width: 767px)
+			padding-left: 0.2rem
 	.breadcrumb
 		li, a
 			@include font('Circe-Light', 300, 16, 16)
 			color: $breadcrump-color
 			@media(max-width: 767px)
 				font-size: 14px
+				&::before
+					padding-right: 0.2rem
 		.breadcrumb-item+.breadcrumb-item
 			padding-left: .3rem
 			&::before

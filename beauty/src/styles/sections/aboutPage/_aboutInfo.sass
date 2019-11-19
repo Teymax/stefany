@@ -37,7 +37,7 @@
 				margin-bottom: 21px
 			@media ( min-width: 650px )
 				margin-right: 27px
-			@media ( min-width: 540px )
+			@media ( max-width: 650px )
 				margin-right: 10px
 	.about-block-cnt
 		max-width: 504px !important
@@ -50,9 +50,11 @@
 			& > p.p-bold
 				margin-top: 62px
 		@media(max-width: 767px)
-			margin-bottom: 20px
+			margin-bottom: 17px
+			& .pl-three
+				padding-left: 0
 			& .mb-16
-				margin-bottom: 14px
+				margin-bottom: 15px !important
 			& .info-list
 				margin-top: -4px
 				margin-bottom: 11px
@@ -66,7 +68,7 @@
 		&.mr-41
 			@media ( min-width: 650px  )
 				margin-right: 41px !important
-			@media ( min-width: 540px  )
+			@media ( max-width: 540px  )
 				margin-right: 15px !important
 .video-slider.owl-carousel.slider-block
 	box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
@@ -154,25 +156,42 @@
 				.owl-dot-bg
 					opacity: 0
 .about-salon
+	padding-bottom: 36px
 	@media(max-width: 767px)
-		padding-top: 0
+		padding-top: 5px
+		padding-bottom: 5px
 	.video-item-cnt
 		max-width: 735px !important
 		& .video-slider
 			margin-bottom: 37px
+	.info-list li
+		padding-left: 24px
 	.about-block-cnt
-		padding-top: 6px
 		@media(max-width: 767px)
 			padding-top: 0
 		.section-title
-			margin-bottom: 19px
-			line-height: 52px
+			margin-bottom: 18px
+			line-height: 54px
 			@media(max-width: 767px)
-				list-height: 31px
+				margin-bottom: 15px
+				line-height: 31px
 	.video-slider-dots-wrap .owl-dots-item .owl-dot
-		margin-bottom: 40px
+		margin-bottom: 28px
 	.video-slider-dots
-		margin-bottom: 10px
+		margin-bottom: 20px
+	.mb-20
+		@media(max-width: 767px)
+			margin-bottom: 13px !important
+	.info-list
+		li
+			@media(max-width: 767px)
+				font-size: 14px
+			.pb-15
+				@media(max-width: 767px)
+					padding-bottom: 13px !important
+			p
+				@media(max-width: 767px)
+					font-size: 14px
 @media(max-width: 1199px)
 	.about .about-block-cnt
 		max-width: 100% !important
@@ -184,7 +203,7 @@
 		padding-right: 0 !important
 @media(max-width: 730px)
 	.line-margin
-		margin-top: 97px
+		margin-top: 91px
 @media(max-width: 540px)
 	.video-slider.owl-carousel.slider-block .owl-nav
 		display: flex !important
