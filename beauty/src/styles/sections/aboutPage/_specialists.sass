@@ -1,20 +1,35 @@
 .specialists	
+	padding-top: 66px
+	padding-bottom: 69px
 	background: url('../assets/img/specialists/specialists-bg.jpg')
 	background-repeat: no-repeat 
 	background-size: cover
 	background-position: top left
+	@media(max-width: 767px)
+		padding-top: 46px
+		padding-bottom: 49px
+	.section-title
+		margin-bottom: 41px
+		@media(max-width: 767px)
+			margin-bottom: 30px
 	&-info
 		position: absolute !important
 		top: 0
 		left: 0
 		height: 100%
+		padding: 33px 10px 28px 25px !important
 		background: $spec-bg
 		transition: 0.25s linear
 		opacity: 0
+	.specialists-item
+		.h3-title.fs-13
+			letter-spacing: 0.5px
+			line-height: 21px
 .specialists-item-container
 	position: relative
 	cursor: pointer
 	overflow: hidden
+	margin-bottom: 23px
 	.specialists-img
 		height: 100%
 	&:hover
