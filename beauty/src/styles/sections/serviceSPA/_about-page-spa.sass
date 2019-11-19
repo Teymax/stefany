@@ -1,0 +1,82 @@
+.about-page-spa
+  position: relative
+  padding-top: 113px
+  background-color: #A8A4CD
+  @include media-breakpoint-down(lg)
+    padding-top: 51px
+    margin-bottom: 320px
+  @include media-breakpoint-down(sm)
+    padding-top: 31px
+    margin-bottom: 60px
+
+  .c-desc
+    @include media-breakpoint-down(lg)
+      max-width: 649px
+    @include media-breakpoint-down(sm)
+      max-width: 274px
+    .section-title
+      margin-bottom: 64px
+      @include media-breakpoint-down(lg)
+        margin-bottom: 20.23px
+      @include media-breakpoint-down(sm)
+        margin-bottom: 15px
+        line-height: 30px
+    .thin-text
+      @include media-breakpoint-down(sm)
+        line-height: 22px
+
+  .container
+    @include media-breakpoint-down(lg)
+      max-width: 720px //вынести для общего контейнера
+    @include media-breakpoint-down(sm)
+      max-width: 100%
+      padding: 0
+  .d-white-bg
+    width: 720px
+    height: 527px
+    padding: 57px 106px 104px 159px
+    margin-left: auto
+    margin-right: 72px
+    @include media-breakpoint-down(lg)
+      padding: 35px 30px  0 30px
+      width: 100%
+      height: 513px
+    @include media-breakpoint-down(sm)
+      height: 529px
+      padding: 35px 18px  0 18px
+    .d-border
+      width: 604px
+      height: 256px
+      bottom: 353px
+      right: 106px
+      @include media-breakpoint-down(lg)
+        display: none
+    img
+      width: 468px
+      height: 504px
+      right: 612px
+      bottom: 81px
+      @include media-breakpoint-down(lg)
+        width: 681px
+        height: 509.8px
+        top: 322px
+        right: 0
+        left: 145px
+        z-index: 2 // для тени падающей на следующую секцию
+      @include media-breakpoint-down(sm)
+        position: static
+        margin:
+          top: 31px
+          right: auto
+          bottom: -60px
+          left: auto
+        width: 285.3px
+        height: 223px
+    .big-text
+      display: none
+      @include media-breakpoint-down(lg)
+        display: block
+        bottom: -321px
+        left: 100px
+      @include media-breakpoint-down(sm)
+        display: none
