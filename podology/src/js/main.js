@@ -381,7 +381,169 @@ function initMap ( node ) {
   } )
 }
 
+window.i18n = localStorage.getItem( 'i18n' ) || '' // regexp for url
+window.town = localStorage.getItem( 'town' ) || ''
+window.towns = {
+  zt  : {
+    ua: {
+      rest   : {
+        kiev: 'Київ',
+        if  : 'Івано-Франківськ'
+      },
+      current: 'Житомир'
+    },
+    ru: {
+      rest   : {
+        kiev: 'Киев',
+        if  : 'Ивано-Франковск'
+      },
+      current: 'Житомир'
+    }
+  },
+  kiev: {
+    ua: {
+      rest   : {
+        zt: 'Житомир',
+        if: 'Івано-Франківськ'
+      },
+      current: 'Київ'
+    },
+    ru: {
+      rest   : {
+        zt: 'Житомир',
+        if: 'Ивано-Франковск'
+      },
+      current: 'Киев'
+    }
+  },
+  if  : {
+    ua: {
+      rest   : {
+        zt  : 'Житомир',
+        kiev: 'Київ'
+      },
+      current: 'Івано-Франківськ'
+    },
+    ru: {
+      rest   : {
+        zt  : 'Житомир',
+        kiev: 'Киев'
+      },
+      current: 'Ивано-Франковск'
+    }
+  }
+}
+window.i18ns = {
+  ua: {
+    text: 'UA',
+    rest: {
+      ru: 'RU',
+      en: 'EN'
+    }
+  },
+  ru: {
+    text: 'RU',
+    rest: {
+      ua: 'UA',
+      en: 'EN'
+    }
+  },
+  en: {
+    text: 'EN',
+    rest: {
+      ua: 'UA',
+      ru: 'RU'
+    }
+  }
+}
+/**
+ * TODO: test redirect to i18n page
+ */
+
+// if ( !!i18n ) {
+//   console.log( 'Shit in ls' )
+//   console.log( !location.pathname.split( '/' ).includes( i18n ) )
+//   if ( !location.pathname.split( '/' ).includes( i18n ) ) {
+//     var link = location.pathname.split( '/' ).slice( 1 ),
+//         to = link[ 1 ] || ''
+//     if ( link[ 0 ] !== i18n ) location.href = '/' + i18n + '/' + to
+//   }
+// } else {
+//   localStorage.setItem( 'i18n', 'ru' )
+// }
+
+// if ( !location.pathname.split( '/' ).includes( i18n ) && !!i18n ) {
+//   console.log( location )
+// }
+
 $( document ).ready( function () {
+
+  // if ( i18n && town ) {
+  $( '.current-town' ).each( function ( index ) {
+    this.innerText = towns[ town ][ i18n ].current
+  } )
+
+  console.log( i18ns[ i18n ] )
+
+  $( '.i18n-switch.current' )[ 0 ].innerText = i18ns[ i18n ].text
+
+  // $('.i18n-switcher')
+  for ( var item in i18ns[ i18n ].rest ) {
+    console.log( item, i18ns[ i18n ].rest[ item ] )
+    var li = document.createElement( 'li' ),
+        a  = document.createElement( 'a' )
+    a.classList.add( 'nav-link-text', 'i18n-switch', 'change' )
+    li.dataset.i18n = a.dataset.i18n = item
+    a.innerText = i18ns[ i18n ].rest[ item ]
+    $( '.i18n-switcher' )[ 0 ].appendChild( li ).appendChild( a )
+  }
+
+  $( '.towns-list' ).each( function ( index ) {
+    // console.log( this.classList )
+    // console.log( towns[ town ][ i18n ].rest )
+    for ( var item in towns[ town ][ i18n ].rest ) {
+      var li = document.createElement( 'li' )
+      li.classList.add( 'mt-2' )
+      var a = document.createElement( 'a' )
+      a.classList.add( 'nav-link-text' )
+      li.dataset.town = a.dataset.town = item
+      a.innerText = towns[ town ][ i18n ].rest[ item ]
+      this.appendChild( li ).appendChild( a )
+      // console.log( towns[ town ][ i18n ].rest[ item ] )
+    }
+    // li.dataset.town = towns[]
+    // li.innerText
+  } )
+  // }
+
+  if ( !!window.town ) {
+    $( '#overlay' ).hide()
+  }
+
+  $( '[data-town]' ).on( 'click', function ( event ) {
+    // console.log( event.target.dataset )
+    if ( event.target.dataset.town ) {
+      console.log( 'Set', event.target.dataset.town )
+      localStorage.setItem( 'town', event.target.dataset.town )
+      location.reload()
+    }
+  } )
+
+  $( '[data-i18n]' ).on( 'click', function ( e ) {
+    e.preventDefault()
+    // console.log(e.target.dataset.i18n)
+    localStorage.setItem( 'i18n', e.target.dataset.i18n )
+    location.reload()
+  } )
+
+  $( '.selectpicker' ).selectpicker()
+  $( '.selectpicker' )
+    .on( 'changed.bs.select', function ( e, clickedIndex, isSelected, previousValue ) {
+      // console.log( arguments )
+      // console.log( e.target.children[clickedIndex].value )
+      localStorage.setItem( 'town', e.target.children[ clickedIndex ].value )
+      location.reload()
+    } )
   var maps = document.querySelectorAll( '.g-map' )
   Array.prototype.forEach.call( maps, function ( item ) { initMap( item )} )
   $( '#carouselExample' ).on( 'slide.bs.carousel', function ( e ) {
