@@ -381,7 +381,10 @@ function initMap ( node ) {
   } )
 }
 
-window.i18n = localStorage.getItem( 'i18n' ) || '' // regexp for url
+console.log( location )
+
+// window.i18n = localStorage.getItem( 'i18n' ) || location.pathname.match( /(ru|ua)/g )[ 0 ]
+window.i18n = localStorage.getItem( 'i18n' ) || ''
 window.town = localStorage.getItem( 'town' ) || ''
 window.towns = {
   zt  : {
@@ -460,12 +463,13 @@ window.i18ns = {
  * TODO: test redirect to i18n page
  */
 
+
+
 // if ( !!i18n ) {
-//   console.log( 'Shit in ls' )
 //   console.log( !location.pathname.split( '/' ).includes( i18n ) )
 //   if ( !location.pathname.split( '/' ).includes( i18n ) ) {
 //     var link = location.pathname.split( '/' ).slice( 1 ),
-//         to = link[ 1 ] || ''
+//         to   = link[ 1 ] || ''
 //     if ( link[ 0 ] !== i18n ) location.href = '/' + i18n + '/' + to
 //   }
 // } else {
@@ -473,21 +477,24 @@ window.i18ns = {
 // }
 
 // if ( !location.pathname.split( '/' ).includes( i18n ) && !!i18n ) {
-//   console.log( location )
+//   // console.log( location )
 // }
 
 $( document ).ready( function () {
 
-  // if ( i18n && town ) {
+  if ( !town ) {
+    console.log( 'No town' )
+    $( '#overlay' ).fadeIn( 'fast', function () {
+      this.style.display = 'flex'
+    } )
+  }
+
   $( '.current-town' ).each( function ( index ) {
     this.innerText = towns[ town ][ i18n ].current
   } )
 
-  console.log( i18ns[ i18n ] )
-
   $( '.i18n-switch.current' )[ 0 ].innerText = i18ns[ i18n ].text
 
-  // $('.i18n-switcher')
   for ( var item in i18ns[ i18n ].rest ) {
     console.log( item, i18ns[ i18n ].rest[ item ] )
     var li = document.createElement( 'li' ),
@@ -509,12 +516,8 @@ $( document ).ready( function () {
       li.dataset.town = a.dataset.town = item
       a.innerText = towns[ town ][ i18n ].rest[ item ]
       this.appendChild( li ).appendChild( a )
-      // console.log( towns[ town ][ i18n ].rest[ item ] )
     }
-    // li.dataset.town = towns[]
-    // li.innerText
   } )
-  // }
 
   if ( !!window.town ) {
     $( '#overlay' ).hide()
@@ -531,7 +534,6 @@ $( document ).ready( function () {
 
   $( '[data-i18n]' ).on( 'click', function ( e ) {
     e.preventDefault()
-    // console.log(e.target.dataset.i18n)
     localStorage.setItem( 'i18n', e.target.dataset.i18n )
     location.reload()
   } )
@@ -768,7 +770,7 @@ $( document ).ready( function () {
   } )
 
   $( '#closeOverlay' ).click( function ( e ) {
-    $( '#overlay' ).hide()
+    $( '#overlay' ).fadeOut( 'fast' )
   } )
 
   $( '#checkbox' ).change( function ( e ) {
