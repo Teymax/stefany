@@ -37,7 +37,7 @@
 			z-index: 2
 			max-width: 100%
 			@include font('Circe-ExtraBold', 900, 322, 130)
-			letter-spacing: 5px
+			letter-spacing: 3.85px
 			color: $color-white
 	.container-info
 		position: relative
@@ -61,25 +61,27 @@
 .info-block-1
 	padding-bottom: 55px
 .info-block-2
-	padding-top: 61px
+	padding-top: 0
 	padding-bottom: 65px
 	background: url('../assets/img/infoblock/infoblock-bg-2.jpg')
 	background-repeat: no-repeat
-	background-size: 100% 90%
+	background-size: 100% calc(100% - 24px)
 	background-position: bottom left
 	.container
 		.row
 			.col-img
 				left: auto
 				right: 0
-				max-width: 447px
+				max-width: 470px
 			.col-info
-				max-width: 739px
-				padding: 45px 141px 58px 51px
+				max-width: 758px
+				padding: 36px 158px 0 42px
+				@media(max-width: 767px)
+					padding-top: 20px !important
 	.big-text
-		left: auto
-		right: -235px
-		top: -96px
+		left: auto !important
+		right: -215px
+		top: -90px
 		text-align: right
 .info-block-3, .info-block-4
 	padding-top: 73px
@@ -87,7 +89,7 @@
 	.col-img
 		top: auto !important
 		&:not(.behind-bg)
-		  max-width: 504px !important
+			max-width: 504px !important
 	.col-info
 		margin-left: 430px
 		padding: 57px 133px 136px 109px !important
@@ -96,29 +98,37 @@
 		bottom: -24px !important
 		left: -65px !important
 .info-block-5
-  padding-top: 115px !important
-  .section-title
-    margin-bottom: 37px !important
-  .col-info
-    max-width: 756px !important
-    padding: 61px 73px 82px 119px !important
-    margin-left: 394px
-  .container .col-img
-    max-width: 467px !important
-    top: -55px !important
-  .big-text
-    left: -252px !important
-    bottom: 18px !important
+	padding-top: 115px !important
+	.section-title
+		margin-bottom: 37px !important
+	.col-info
+		max-width: 756px !important
+		padding: 61px 73px 82px 119px !important
+		margin-left: 394px
+	.container .col-img
+		max-width: 467px !important
+		top: -55px !important
+	.big-text
+		left: -252px !important
+		bottom: 18px !important
 .info-list-item
+	&:not(:last-child)
+		margin-bottom: 14px
 	p
 		line-height: 25px
+		@media(max-width: 767px)
+			line-height: 22px
+	.p-bold
+		padding-bottom: 15px
+		@media(max-width: 767px)
+			padding-bottom: 16px
 	.info-list-number
 		width: 37px
 		min-width: 37px
 		height: 37px
 		margin-top: -7px
-		margin-right: 21px
-  	color: $color-white !important
+		margin-right: 30px
+		color: $color-white !important
 		background: $list-number
 		border-radius: 50%
 		@include font('CormorantGaramond-Bold', 700, 42, 42)
@@ -145,155 +155,155 @@
 	img
 		box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
 .info-block-4
-  padding-top: 115px !important
-  padding-bottom: 30px !important
-  .border-el::before
-    top: -60px
-    left: -140px
-    width: calc(100% + 75px)
-    height: calc(100% + 100px)
-  .col-info
-    max-width: 505px !important
-    padding: 0 0 110px !important
-  .info-block-wrap .big-text
-    bottom: -58px !important
-    left: -23px !important
+	padding-top: 115px !important
+	padding-bottom: 30px !important
+	.border-el::before
+		top: -60px
+		left: -140px
+		width: calc(100% + 75px)
+		height: calc(100% + 100px)
+	.col-info
+		max-width: 505px !important
+		padding: 0 0 110px !important
+	.info-block-wrap .big-text
+		bottom: -58px !important
+		left: -23px !important
 .info-block-6
-  padding-top: 63px !important
-  padding-bottom: 78px !important
-  border-bottom: 99px solid $color-white
-  .info-block-wrap
-    max-width: 1196px !important
-  .col-info
-    z-index: 5 !important
-    padding: 0 0 0 50px !important
-    max-width: 605px !important
-    margin-left: 600px !important
-  .col-img
-    max-width: 603px !important
-    padding: 73px 0 15px 72px !important
-    top: 0 !important
-  .info-block-wrap .big-text
-    top: 137px !important
-    bottom: auto !important
-    left: auto !important
-    right: -320px !important
-    transform: rotate(-90deg)
-  .info-list
-    padding-top: 40px
-  .behind-bg
-    background: -webkit-linear-gradient(left, #ffffff, #ffffff 79%, transparent 0, transparent)
+	padding-top: 63px !important
+	padding-bottom: 78px !important
+	border-bottom: 99px solid $color-white
+	.info-block-wrap
+		max-width: 1196px !important
+	.col-info
+		z-index: 5 !important
+		padding: 0 0 0 50px !important
+		max-width: 605px !important
+		margin-left: 600px !important
+	.col-img
+		max-width: 603px !important
+		padding: 73px 0 15px 72px !important
+		top: 0 !important
+	.info-block-wrap .big-text
+		top: 137px !important
+		bottom: auto !important
+		left: auto !important
+		right: -320px !important
+		transform: rotate(-90deg)
+	.info-list
+		padding-top: 40px
+	.behind-bg
+		background: -webkit-linear-gradient(left, #ffffff, #ffffff 79%, transparent 0, transparent)
 .info-block-7
-  padding-top: 86px !important
-  padding-bottom: 165px !important
-  .info-block-wrap
-    max-width: 1260px !important
-  .col-info
-    padding: 0 0px 0 111px !important
-    max-width: 626px !important
-    margin-right: 600px !important
-  .col-img
-    max-width: 610px !important
-    left: auto !important
-    right: 0
-    top: -132px !important
-  .behind-bg
-    padding: 0 70px 76px 0px !important
-    background: -webkit-linear-gradient(right, #ffffff, #ffffff 82%, transparent 0, transparent)
-  .btn-simple
-    max-width: 159px
+	padding-top: 86px !important
+	padding-bottom: 165px !important
+	.info-block-wrap
+		max-width: 1260px !important
+	.col-info
+		padding: 0 0px 0 111px !important
+		max-width: 626px !important
+		margin-right: 600px !important
+	.col-img
+		max-width: 610px !important
+		left: auto !important
+		right: 0
+		top: -132px !important
+	.behind-bg
+		padding: 0 70px 76px 0px !important
+		background: -webkit-linear-gradient(right, #ffffff, #ffffff 82%, transparent 0, transparent)
+	.btn-simple
+		max-width: 159px
 .info-block-8
-  background: transparent
-  padding-top: 86px !important
-  .container
-    max-width: 1220px !important
-  .col-img
-    top: -137px !important
-    max-width: 612px !important
-  .col-info
-    max-width: 770px !important
-    padding: 39px 0 165px 235px !important
-  .border-el::before
-    top: -55px !important
-    left: -111px !important
-    width: calc(100% + 115px) !important
-    height: calc(100% + 136px) !important
+	background: transparent
+	padding-top: 86px !important
+	.container
+		max-width: 1220px !important
+	.col-img
+		top: -137px !important
+		max-width: 612px !important
+	.col-info
+		max-width: 770px !important
+		padding: 39px 0 165px 235px !important
+	.border-el::before
+		top: -55px !important
+		left: -111px !important
+		width: calc(100% + 115px) !important
+		height: calc(100% + 136px) !important
 .info-block-9
 	padding: 60px 0 !important
 	.col-info
 		padding: 0 0 0 53px
 	.col-img
-		position: static  !important
+		position: static	!important
 		max-width: 538px !important
 .info-block-3-1
-  .border-el
-    margin-bottom: 76px
-    &::before
-      top: -34px
-      right: -91px
-      left: auto
-      width: calc(100% + 115px)
-      height: calc(100% + 72px)
-  .col-info
-    padding: 88px 160px 80px 100px !important
-    margin-left:  0 !important
-  .col-img
-    left: auto !important
-    right: 0 !important
-  .big-text
-    z-index: 0 !important
-    bottom: 23px !important
-    left: -135px !important
-  .big-text-2
-    right: 101px
-    left: auto !important
-    bottom: 28px !important
-    z-index: 2
+	.border-el
+		margin-bottom: 76px
+		&::before
+			top: -34px
+			right: -91px
+			left: auto
+			width: calc(100% + 115px)
+			height: calc(100% + 72px)
+	.col-info
+		padding: 88px 160px 80px 100px !important
+		margin-left:	0 !important
+	.col-img
+		left: auto !important
+		right: 0 !important
+	.big-text
+		z-index: 0 !important
+		bottom: 23px !important
+		left: -135px !important
+	.big-text-2
+		right: 101px
+		left: auto !important
+		bottom: 28px !important
+		z-index: 2
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 .d-white-bg
-  position: relative
-  background-color: #fff
-  .d-border
-    position: absolute
-    border:  3px solid #BECDD4
-  img
-    box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
-    position: absolute
-    object-fit: cover
+	position: relative
+	background-color: #fff
+	.d-border
+		position: absolute
+		border:	3px solid #BECDD4
+	img
+		box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+		position: absolute
+		object-fit: cover
 // не работает из за вложености
 .big-text
-  position: absolute
-  //bottom: -18px
-  //left: -160px
-  z-index: 2
-  max-width: 100%
-  font-family: "Circe-ExtraBold"
-  font-style: normal
-  font-weight: 900
-  font-size: 322px
-  line-height: 130px
-  letter-spacing: 5px
-  color: #ffffff
+	position: absolute
+	//bottom: -18px
+	//left: -160px
+	z-index: 2
+	max-width: 100%
+	font-family: "Circe-ExtraBold"
+	font-style: normal
+	font-weight: 900
+	font-size: 322px
+	line-height: 130px
+	letter-spacing: 5px
+	color: #ffffff
 // нужен небольшой рефакт
 .big-text-rotate
-  //@extend .big-text
-  position: absolute
-  z-index: 2
-  max-width: 100%
-  font-family: "Circe-ExtraBold"
-  font-style: normal
-  font-weight: 900
-  font-size: 322px
-  line-height: 130px
-  letter-spacing: 5px
-  color: #ffffff
-  position: absolute
-  transform: rotate(270deg)
-  width: 10%
-  right: 14px
-  bottom: -27px
+	//@extend .big-text
+	position: absolute
+	z-index: 2
+	max-width: 100%
+	font-family: "Circe-ExtraBold"
+	font-style: normal
+	font-weight: 900
+	font-size: 322px
+	line-height: 130px
+	letter-spacing: 5px
+	color: #ffffff
+	position: absolute
+	transform: rotate(270deg)
+	width: 10%
+	right: 14px
+	bottom: -27px
 ////////////////////////////////////////////////////////////
 
 
@@ -303,89 +313,91 @@
 
 
 @media(max-width: 1199px)
-  .info-block-8
-    .col-img
-      max-width: 657px !important
-      min-height: 397px !important
-      max-height: 397px !important
-      overflow: hidden
-  .border-el::before
-    display: none !important
-  .border-el
-    margin-bottom: 0 !important
-  .info-block
-    background: $color-white !important
-    padding:  0 !important
-  .container-info
-    padding-left: 15px !important
-    padding-right: 15px !important
-  .info-block .container .col-info
-    margin-left: 0 !important
-    margin-right: 0 !important
-    padding: 35px 0 40px!important
-    max-width: 100% !important
-    .section-title
-      margin-bottom: 20px !important
-      &::before, br
-        display: none
-  .col-img, .info-block .behind-bg
-    position: static !important
-    max-height: 504px
-    padding: 0 !important
-    background: transparent
-  .info-block .container .big-text
-    bottom: 0 !important
-    right: 0 !important
-    left: auto !important
-  .mob-hidden-item
-    display: none !important
-  .info-block-6
-    padding-top: 65px !important
-    padding-bottom: 15px !important
-    border-bottom: none !important
-    &.light-orange-bg
-      background: $spec-bg !important
-  .info-block-7
-    &.light-green-bg
-      background: $dark-gren-bg !important
-    .col-img
-      min-height: 290px !important
-      max-height: 209px
-      max-width: 658px !important
-      margin-top: -20px !important
-      margin-bottom: 40px !important
-      overflow: hidden
-      order: 1 !important
-      box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
-    .col-info
-      margin-right: 0 !important
-      order: 2 !important
-  .info-block-3-1
-    .col-info
-      padding-top: 0 !important
-    .big-text-2
-      z-index: 4 !important
-      display: block !important
-      left: 50% !important
-      transform: translate(-50%)
-      bottom: 0 !important
+	.info-block-8
+		.col-img
+			max-width: 657px !important
+			min-height: 397px !important
+			max-height: 397px !important
+			overflow: hidden
+	.border-el::before
+		display: none !important
+	.border-el
+		margin-bottom: 0 !important
+	.info-block
+		background: $color-white !important
+		padding:	0 !important
+	.container-info
+		padding-left: 15px !important
+		padding-right: 15px !important
+	.info-block .container .col-info
+		margin-left: 0 !important
+		margin-right: 0 !important
+		padding: 35px 0 40px!important
+		max-width: 100% !important
+		.section-title
+			margin-bottom: 20px !important
+			&::before, br
+				display: none
+	.col-img, .info-block .behind-bg
+		position: static !important
+		max-height: 504px
+		padding: 0 !important
+		background: transparent
+	.info-block .container .big-text
+		bottom: 0 !important
+		right: 0 !important
+		left: auto !important
+	.mob-hidden-item
+		display: none !important
+	.info-block-6
+		padding-top: 65px !important
+		padding-bottom: 15px !important
+		border-bottom: none !important
+		&.light-orange-bg
+			background: $spec-bg !important
+	.info-block-7
+		&.light-green-bg
+			background: $dark-gren-bg !important
+		.col-img
+			min-height: 290px !important
+			max-height: 209px
+			max-width: 658px !important
+			margin-top: -20px !important
+			margin-bottom: 40px !important
+			overflow: hidden
+			order: 1 !important
+			box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
+		.col-info
+			margin-right: 0 !important
+			order: 2 !important
+	.info-block-3-1
+		.col-info
+			padding-top: 0 !important
+		.big-text-2
+			z-index: 4 !important
+			display: block !important
+			left: 50% !important
+			transform: translate(-50%)
+			bottom: 0 !important
 @media(max-width: 767px)
-  .big-text
-    display: none !important
-  .info-block-6
-    padding-bottom: 60px !important
-  .info-block-8
-    .col-img
-      height: auto !important
-      min-height: auto !important
-      max-height: 100% !important
-      overflow: inherit !important
-  .info-block-7 .col-img
-    margin-top: -50px !important
-    height: auto !important
-    min-height: auto !important
-    max-height: 100% !important
-    box-shadow: none !important
-    overflow: inherit !important
-  .info-list-item .info-list-number
-    margin-right: 14px !important
+	.big-text
+		display: none !important
+	.info-block-6
+		padding-bottom: 60px !important
+	.info-block-8
+		.col-img
+			height: auto !important
+			min-height: auto !important
+			max-height: 100% !important
+			overflow: inherit !important
+	.info-block-7 .col-img
+		margin-top: -50px !important
+		height: auto !important
+		min-height: auto !important
+		max-height: 100% !important
+		box-shadow: none !important
+		overflow: inherit !important
+	.info-list-item .info-list-number
+		margin-right: 23px !important
+	.info-block-2
+		padding-top: 37px !important

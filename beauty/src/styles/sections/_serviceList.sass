@@ -7,7 +7,7 @@
 		margin-bottom: 15px
 		line-height: 33px !important
 		color: $color-white
-		display: -webkit-box  !important
+		display: -webkit-box	!important
 		-webkit-line-clamp: 3 !important
 		overflow: hidden !important
 		-webkit-box-orient: vertical !important
@@ -26,15 +26,16 @@
 		padding: 0 39px
 	.row
 		.service-item
+			min-height: 248px
 			height: 309px
 			overflow: hidden
 			padding-top: 36px
 			padding-bottom: 45px
 			padding-left: 36px
 			&-bigger
-        padding-left: 81px
-        padding-top: 51px
-        padding-bottom: 61px
+				padding-left: 81px
+				padding-top: 51px
+				padding-bottom: 61px
 			&-3
 				padding-left: 81px
 			.service-btn-wrap
@@ -48,7 +49,7 @@
 					padding: 0
 					& svg 
 						width: 13px
-    				height: 13px
+						height: 13px
 						.st0 
 							fill: $color-white
 				span
@@ -63,6 +64,18 @@
 				z-index: 1
 				width: 100%
 				max-width: 100%
+			&-1
+				@media(min-width: 991px)
+					flex: 0 0 64%
+					max-width: 64%
+			&-2, &-5
+				@media(min-width: 991px)
+					flex: 0 0 36%
+					max-width: 36%
+			&-3, &-4
+				@media(min-width: 991px)
+					flex: 0 0 32%
+					max-width: 32%
 		.service-item-2
 			.button 
 				background: #9FA6BA
@@ -73,3 +86,25 @@
 @media(max-width: 991px)
 	.service-list .row .service-item
 		padding-left: 25px
+@media(max-width: 767px)
+	.service-list .row .service-item
+		padding-left: 15px
+		padding-top: 40px
+		padding-bottom: 69px
+		padding-right: 15px
+		&-2
+			height: 248px
+			padding: 49px 30px 64px 14px
+		&-3
+			height: 252px
+			padding: 35px 30px 48px 14px
+		&-4
+			height: 255px
+			padding: 35px 15px 46px 14px
+		&-5
+			height: 275px
+			padding: 29px 15px 40px 15px
+	.service-list .section-title
+		margin-bottom: 18px
+		br
+			display: none
