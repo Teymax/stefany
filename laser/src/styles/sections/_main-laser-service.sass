@@ -1,13 +1,24 @@
 section.section.main-laser-service
   position: relative
-  background-image: url(../assets/img/main-service/main-bg.jpg)
-  background-size: cover
-  padding-top: 68px
+  background:
+    image: url(../assets/img/main-service/main-bg.jpg)
+    size: cover
+  padding-top: 61px
   padding-bottom: 109px
   min-height: 651px
   //@media(min-width: 1920px)
   //  background-image: url(../assets/img/main-service/main-bg-hd.jpg)
 
+  @include media-breakpoint-down(lg)
+    padding-top: 41px
+    background:
+      image: url(../assets/img/main-service/main-bg-tablet.jpg)
+      position-x: -517px
+  @media (min-width: 992px) and (max-width: 1200px)
+    background:
+      position-x: -411px
+  @include media-breakpoint-down(sm)
+    padding-top: 17px
   img.bg-elem
     position: absolute
     top: 0
@@ -19,6 +30,15 @@ section.section.main-laser-service
       @include font (CormorantGaramond, 400, 80, 60)
       color: $text-color-lightgrey
       margin-bottom: 64px
+      @include media-breakpoint-down(lg)
+        font-size: 55px
+        line-height: 50px
+        margin-bottom: 37px
+      @include media-breakpoint-down(sm)
+        font-size: 35px
+        line-height: 35px
+        margin-bottom: 18px
+
 
     .info-list
       li.list-item
@@ -28,9 +48,20 @@ section.section.main-laser-service
           width: 7.71px
           height: 7.71px
           background: #A9A8C6
+        @include media-breakpoint-down(lg)
+
+        @include media-breakpoint-down(sm)
+          font-size: 16px
+          line-height: 25px
     .subtitle
-      @include font (Circe, 400, 24, 37)
+      @include font (Circe, 700, 24, 37)
       color: $text-color-lightgrey
+      letter-spacing: 0.231429px
+      @include media-breakpoint-down(lg)
+      @include media-breakpoint-down(sm)
+        font-size: 18px
+        line-height: 27px
+
     .position-block
       max-width: 500px
       .custopm-text
@@ -38,6 +69,9 @@ section.section.main-laser-service
           @include font (Circe, 400, 28.75, 45)
           color: $text-color-lightgrey
           margin-bottom: 40px
+          @include media-breakpoint-down(sm)
+            font-size: 20px
+            line-height: 31px
           &_size
             @include font (Circe, 400, 23, 45)
             color: $text-color-lightgrey
@@ -47,14 +81,22 @@ section.section.main-laser-service
             content: url("../assets/img/main-service/d-block-3.svg")
             position: absolute
             top: -28px
-            right: 92px
+            right: 85px
+            @include media-breakpoint-down(sm)
+              right: -22px
         &__bold
           @include font (Circe, 900, 28.75, 45)
           color: $text-color-lightgrey
+          @include media-breakpoint-down(sm)
+            font-size: 19px
+            line-height: 30px
         &__through
           @include font (Circe, 300, 17.25, 25)
           color: $text-color-lightgrey
           text-decoration: line-through
+          @include media-breakpoint-down(sm)
+            font-size: 12px
+            line-height: 19px
       .c-span
         position: relative
         margin-left: 43px
@@ -68,10 +110,9 @@ section.section.main-laser-service
           position: absolute
           top: -18px
           right: -44px
+          @include media-breakpoint-down(sm)
+            display: none
 
-@include media-breakpoint-down(lg)
 
 
-
-@include media-breakpoint-down(xs)
 
