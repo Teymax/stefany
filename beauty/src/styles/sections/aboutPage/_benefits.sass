@@ -16,19 +16,43 @@
 		background-size: cover !important
 		background-position: top 100px left !important
 	&.serviceBenefits:not(.doubleBnf)
+		padding-top: 70px
+		padding-bottom: 0
 		background: $color-white
+		.section-title
+			margin-bottom: 19px
+		.section-subtitle
+			margin-bottom: 30px
+			letter-spacing: 0
+		.bnf-title
+			padding-bottom: 22px
+			@include font('Circe-Medium', 500, 16, 16)
+			letter-spacing: 0
+			text-transform: inherit
+		.bnf-cnt
+			p
+				line-height: 25px
 		.container
 			max-width: 1353px
 			padding-left: 20px
 			padding-right: 20px
+		
 	&.bg-white
 		background: $color-white !important
 	&.doubleBnf
 		padding-top: 0 !important
+		padding-bottom: 15px
 		.container
-			max-width: 1100px
-			.bnf-cnt
-				max-width: 400px
+			max-width: 1127px
+			padding-left: 0
+			margin: 0 0 0 auto !important
+			padding-right: 43px
+			.bnf
+				.bnf-title
+					padding-bottom: 12px
+				.bnf-cnt
+					margin-top: -219px
+					max-width: 400px
   &.two-benefits
 		.bnf-cnt
 			margin-top: -217px
@@ -65,19 +89,19 @@
 					top: -28px
 					left: 10px
 					@media(max-width: 767px)
-						min-width: 355px
+						min-width: 347px
 				&.bnf-img-3
 					max-width: 268px
 					top: -19px
 					left: -2px
 					@media(max-width: 767px)
-						min-width: 347px
+						min-width: 344px
 				&.bnf-img-4
 					left: 72px
 					top: -20px
 					max-width: 190px
 					@media(max-width: 767px)
-						min-width: 375px
+						min-width: 347px
 				img
 					max-width: 100%
 					width: 100%
@@ -109,6 +133,8 @@
 			.bnf-cnt
 				margin-top: -155px
 		.bnf-three
+			display: flex
+			justify-content: center
 			padding-left: 0
 			.bnf-cnt
 				max-width: 396px
@@ -120,7 +146,16 @@
 				font-size: 100px
 				border-radius: 100%
 				background: $spec-bg
- 
+		.bnf-number
+			.bnf-number-one
+				padding-left: 18px
+    			padding-bottom: 20px
+			.bnf-number-two
+				padding-left: 10px
+    			padding-bottom: 39px
+			.bnf-number-three
+				padding-left: 0
+    			padding-bottom: 22px
 @media(max-width: 1199px)
 	.benefits .container .bnf
 		margin-left: auto
@@ -133,8 +168,10 @@
 		max-width: 500px !important
 @media(max-width: 767px)
 	.benefits
-		padding-top: 29px
-		padding-bottom: 37px
+		padding-top: 43px
+		padding-bottom: 45px
+		.section-subtitle
+			margin-bottom: 0
 	.benefits .container .bnf
 		padding-left: 15px !important
 		margin-bottom: 0px

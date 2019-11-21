@@ -48,7 +48,7 @@
 			max-width: 1150px
 .border-el
 	position: relative
-	margin-bottom: 70px
+	margin-bottom: 66px
 	&::before
 		content: ''
 		position: absolute
@@ -98,18 +98,23 @@
 		bottom: -24px !important
 		left: -65px !important
 .info-block-5
-	padding-top: 115px !important
+	padding-top: 118px !important
+	.info-block-wrap
+		max-width: 1216px !important
+		padding-left: 100px
 	.section-title
 		margin-bottom: 37px !important
 	.col-info
 		max-width: 756px !important
-		padding: 61px 73px 82px 119px !important
+		padding: 62px 73px 69px 118px !important
 		margin-left: 394px
+		p:not(:last-child)
+			padding-bottom: 14px
 	.container .col-img
 		max-width: 467px !important
 		top: -55px !important
 	.big-text
-		left: -252px !important
+		left: -150px !important
 		bottom: 18px !important
 .info-list-item
 	&:not(:last-child)
@@ -155,25 +160,36 @@
 	img
 		box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
 .info-block-4
-	padding-top: 115px !important
-	padding-bottom: 30px !important
+	padding-top: 124px !important
+	padding-bottom: 32px !important
+	.container-info
+		.info-block-wrap
+			max-width: 1180px
+			@media(min-width: 1200px)
+				padding-left: 27px
+	.section-title
+		padding-top: 8px
 	.border-el::before
 		top: -60px
-		left: -140px
+		left: -144px
 		width: calc(100% + 75px)
-		height: calc(100% + 100px)
+		height: calc(100% + 92px)
 	.col-info
+		z-index: 2 !important
 		max-width: 505px !important
 		padding: 0 0 110px !important
 	.info-block-wrap .big-text
-		bottom: -58px !important
-		left: -23px !important
+		bottom: -40px !important
+		left: 4px !important
 .info-block-6
 	padding-top: 63px !important
-	padding-bottom: 78px !important
+	padding-bottom: 48px !important
 	border-bottom: 99px solid $color-white
+	.section-title
+		margin-bottom: 17px
 	.info-block-wrap
-		max-width: 1196px !important
+		max-width: 1234px !important
+    	padding-left: 27px
 	.col-info
 		z-index: 5 !important
 		padding: 0 0 0 50px !important
