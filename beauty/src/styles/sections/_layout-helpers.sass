@@ -157,6 +157,9 @@ p, .p-text, .paragraph-text
   @include font('Circe-Light', 400, 20, 21)
   letter-spacing: .22px
   color: $section-title-color
+  @media(max-width: 767px)
+    font-size: 16px
+    line-height: 18px
 .h3-title
   @include font('Circe-Light', 400, 20, 24)
   color: $text-color-white
@@ -350,6 +353,8 @@ p, .p-text, .paragraph-text
       height: 5px
       background: $breadcrump-color
       border-radius: 50%
+    @media(max-width: 767px)
+      font-size: 14px
 
 // Icons - style header *********
 
@@ -449,6 +454,8 @@ svg.icon-arrow
   padding-top: 18px !important
 .pb-15
   padding-bottom: 15px !important
+.pb-42
+  padding-bottom: 42px !important
 .mt-7
   margin-top: 7px !important
 .mt-9

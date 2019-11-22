@@ -99,9 +99,13 @@
 		left: -65px !important
 .info-block-5
 	padding-top: 118px !important
+	@media(max-width: 1199px)
+		padding-bottom: 25px !important
 	.info-block-wrap
 		max-width: 1216px !important
 		padding-left: 100px
+		@media(max-width: 1199px)
+			padding-left: 0px
 	.section-title
 		margin-bottom: 37px !important
 	.col-info
@@ -110,9 +114,10 @@
 		margin-left: 394px
 		p:not(:last-child)
 			padding-bottom: 14px
-	.container .col-img
-		max-width: 467px !important
-		top: -55px !important
+	.container 
+		.col-img
+			max-width: 467px !important
+			top: -55px !important
 	.big-text
 		left: -150px !important
 		bottom: 18px !important
@@ -162,67 +167,93 @@
 .info-block-4
 	padding-top: 124px !important
 	padding-bottom: 32px !important
+	@media(max-width: 1199px)
+		border-top: 46px solid #EDE1DF
 	.container-info
 		.info-block-wrap
 			max-width: 1180px
 			@media(min-width: 1200px)
 				padding-left: 27px
-	.section-title
-		padding-top: 8px
-	.border-el::before
-		top: -60px
-		left: -144px
-		width: calc(100% + 75px)
-		height: calc(100% + 92px)
-	.col-info
-		z-index: 2 !important
-		max-width: 505px !important
-		padding: 0 0 110px !important
+		.col-info
+			z-index: 2 !important
+			max-width: 505px !important
+			padding: 0 0 110px !important
+		.section-title
+			@media(min-width: 1200px)
+				padding-top: 8px
+			@media(max-width: 1199px)
+				margin-bottom: 9px !important
+		.border-el::before
+			top: -60px
+			left: -144px
+			width: calc(100% + 75px)
+			height: calc(100% + 92px)
 	.info-block-wrap .big-text
 		bottom: -40px !important
 		left: 4px !important
-.info-block-6
-	padding-top: 63px !important
-	padding-bottom: 48px !important
-	border-bottom: 99px solid $color-white
-	.section-title
-		margin-bottom: 17px
-	.info-block-wrap
-		max-width: 1234px !important
-    	padding-left: 27px
-	.col-info
-		z-index: 5 !important
-		padding: 0 0 0 50px !important
-		max-width: 605px !important
-		margin-left: 600px !important
-	.col-img
-		max-width: 603px !important
-		padding: 73px 0 15px 72px !important
-		top: 0 !important
-	.info-block-wrap .big-text
-		top: 137px !important
-		bottom: auto !important
-		left: auto !important
-		right: -320px !important
-		transform: rotate(-90deg)
-	.info-list
-		padding-top: 40px
-	.behind-bg
-		background: -webkit-linear-gradient(left, #ffffff, #ffffff 79%, transparent 0, transparent)
+.info-block
+	&.info-block-6
+		padding-bottom: 39px !important
+		border-bottom: 111px solid $color-white
+		padding-top: 63px !important
+		@media(max-width: 1199px)
+			padding-top: 25px !important
+		.section-title
+			margin-bottom: 17px
+			@media(max-width: 1199px)
+				margin-bottom: 12px !important
+				br
+					display: none
+		.info-block-wrap
+			max-width: 1234px !important
+			padding-left: 27px
+		.col-info
+			z-index: 5 !important
+			padding: 0 0 0 50px !important
+			max-width: 605px !important
+			margin-left: 600px !important
+		.col-img
+			max-width: 603px !important
+			padding: 73px 0 15px 72px !important
+			top: 0 !important
+		.info-block-wrap .big-text
+			top: 135px !important
+			bottom: auto !important
+			left: auto !important
+			right: -340px !important
+			transform: rotate(-90deg)
+		.info-list
+			padding-top: 36px
+			.info-list-number
+				margin-right: 16px
+			.info-list-item
+				margin-bottom: 18px
+				@media(max-width: 1199px)
+					&:not(:last-child)
+						
+		.behind-bg
+			background: -webkit-linear-gradient(left, #ffffff, #ffffff 83%, transparent 0, transparent)
 .info-block-7
-	padding-top: 86px !important
-	padding-bottom: 165px !important
+	padding-top: 83px !important
+	padding-bottom: 103px !important
 	.info-block-wrap
-		max-width: 1260px !important
+		max-width: 1287px !important
 	.col-info
-		padding: 0 0px 0 111px !important
-		max-width: 626px !important
-		margin-right: 600px !important
+		padding: 0 0px 0 140px !important
+		max-width: 670px !important
+		margin-right: 0 !important
 	.col-img
-		max-width: 610px !important
+		max-width: 613px !important
 		left: auto !important
 		right: 0
-		top: -132px !important
+		top: -143px !important
+	.info-list-item .info-list-number
+		margin-right: 17px
+	.info-list-item:not(:last-child)
+		margin-bottom: 33px
+	.list-p-text
+		padding-top: 5px
+		padding-bottom: 15px
 	.behind-bg
 		padding: 0 70px 76px 0px !important
 		background: -webkit-linear-gradient(right, #ffffff, #ffffff 82%, transparent 0, transparent)
@@ -230,50 +261,69 @@
 		max-width: 159px
 .info-block-8
 	background: transparent
-	padding-top: 86px !important
+	padding-top: 84px !important
 	.container
-		max-width: 1220px !important
+		max-width: 1289px !important
+		padding-right: 91px
+	.border-el
+		margin-bottom: 60px
+	.section-title
+		line-height: 42px
+		padding-bottom: 15px
+	.control-width
+		max-width: 445px
 	.col-img
 		top: -137px !important
 		max-width: 612px !important
 	.col-info
 		max-width: 770px !important
-		padding: 39px 0 165px 235px !important
+		padding: 39px 0 121px 235px !important
 	.border-el::before
 		top: -55px !important
-		left: -111px !important
+		left: -109px !important
 		width: calc(100% + 115px) !important
-		height: calc(100% + 136px) !important
+		height: calc(100% + 98px) !important
 .info-block-9
-	padding: 60px 0 !important
-	.col-info
-		padding: 0 0 0 53px
-	.col-img
-		position: static	!important
-		max-width: 538px !important
+	padding: 60px 0 57px !important
+	.container
+		max-width: 1106px
+		.col-info
+			padding: 0 0 0 91px
+			padding-top: 26px
+		.col-img
+			position: static	!important
+			max-width: 538px !important
 .info-block-3-1
+	padding-top: 52px
+	.container-info 
+		.info-block-wrap
+			max-width: 1160px
+			padding-left: 56px
 	.border-el
-		margin-bottom: 76px
+		margin-bottom: 65px
 		&::before
 			top: -34px
-			right: -91px
+			right: -106px
 			left: auto
-			width: calc(100% + 115px)
-			height: calc(100% + 72px)
+			width: calc(100% + 130px)
+			height: calc(100% + 58px)
 	.col-info
-		padding: 88px 160px 80px 100px !important
+		max-width: 716px !important
+		padding: 89px 173px 69px 96px !important
 		margin-left:	0 !important
-	.col-img
+	.col-img:not(.behind-bg)
+		top: 102px !important
 		left: auto !important
-		right: 0 !important
+		right: 24px !important
+		max-width: 468px !important
 	.big-text
 		z-index: 0 !important
 		bottom: 23px !important
-		left: -135px !important
+		left: -88px !important
 	.big-text-2
-		right: 101px
+		right: 55px
 		left: auto !important
-		bottom: 28px !important
+		bottom: 24px !important
 		z-index: 2
 
 
@@ -329,7 +379,13 @@
 
 
 @media(max-width: 1199px)
+	.info-block-9
+		.col-info
+			padding-top: 27px !important
+			padding-bottom: 33px !important
 	.info-block-8
+		.col-info
+			padding-top: 53px !important
 		.col-img
 			max-width: 657px !important
 			min-height: 397px !important
@@ -366,11 +422,22 @@
 	.mob-hidden-item
 		display: none !important
 	.info-block-6
-		padding-top: 65px !important
+		padding-top: 24px !important
 		padding-bottom: 15px !important
 		border-bottom: none !important
+		.container .col-info
+			padding-bottom: 0  !important
+
 		&.light-orange-bg
 			background: $spec-bg !important
+			.section-title
+				margin-bottom: 11px !important
+			.info-list
+				padding-top: 37px
+				.info-list-number
+					margin-right: 16px
+				.info-list-item:not(:last-child)
+					margin-bottom: 44px
 	.info-block-7
 		&.light-green-bg
 			background: $dark-gren-bg !important
@@ -385,10 +452,23 @@
 			box-shadow: 0 10px 74px rgba(0, 0, 0, 0.15)
 		.col-info
 			margin-right: 0 !important
+			padding-bottom: 66px !important
 			order: 2 !important
+		.pb-42
+			padding-bottom: 30px !important
 	.info-block-3-1
+		border-top: 49px solid #A8A4CD !important
+		padding-top: 4px !important
+		.container-info .info-block-wrap
+			padding-left: 0
+		.container .big-text
+			bottom: 62px !important
+			right: -35px !important
 		.col-info
 			padding-top: 0 !important
+			padding-bottom: 57px !important
+			.info-list
+				margin-bottom: 14px
 		.big-text-2
 			z-index: 4 !important
 			display: block !important
@@ -417,3 +497,11 @@
 		margin-right: 23px !important
 	.info-block-2
 		padding-top: 37px !important
+	.info-block-4
+		border-top: 30px solid #EDE1DF
+		.container-info 
+			.col-info
+				padding: 20px 0 10px !important
+			.section-title
+				margin-bottom: 14px !important
+				line-height: 31px
