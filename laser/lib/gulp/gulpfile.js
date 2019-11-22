@@ -12,7 +12,8 @@ const gulp         = require( 'gulp' ),
       beautifyPug  = require( 'gulp-pug-beautify' ),
       // cssmin       = require( 'gulp-cssmin' ),
       htmlmin      = require( 'gulp-htmlmin' ),
-      zip          = require( 'gulp-zip' )
+      zip          = require( 'gulp-zip' ),
+      babel        = require( 'gulp-babel')
 
 function moveImages () {
   return gulp.src( '../../src/assets/img/**/*.*' )
@@ -72,6 +73,9 @@ function scripts () {
   //шаблоны для поиска файлов JS
   //Все файлы по шаблону './src/js/**/*.js'
   return gulp.src( jsFiles )
+              .pipe(babel({
+                presets: ['@babel/env']
+              }))
              //объединение файлов в один
              .pipe( concat( 'main.js' ) )
              // минификация JS
