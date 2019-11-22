@@ -10,10 +10,13 @@
 @import "spacing-helpers"
 @import "grid"
 
+html
+  overflow-x: hidden
 .container
-  padding-left: 15px !important
-  padding-right: 15px !important
-  @include media-breakpoint-down(xs)
+  //@include media-breakpoint-down(lg)
+  //  padding-left: 15px !important
+  //  padding-right: 15px !important
+  @include media-breakpoint-down(sm)
     padding-left: 18px !important
     padding-right: 18px !important
 
@@ -24,8 +27,7 @@
   .container
     max-width: 1280px !important
 
-.section
-  overflow: hidden
+
 
 
 @import 'sections/header'
@@ -71,6 +73,7 @@
 //about-steffany
 @import 'sections/about-steffany/four-boxes-about-steffany'
 @import 'sections/about-steffany/diploma'
+@import 'sections/about-steffany/video-about-steffany'
 
 
 //service-shugaring
@@ -91,7 +94,6 @@
 
 @import 'sections/diploma'
 @import 'sections/workers-slider'
-@import 'sections/service-three-boxes_module'
 
 
 @import 'sections/footer'
@@ -104,6 +106,8 @@
 @import 'modules/buttons'
 @import 'modules/carousel'
 @import 'modules/breadcrubms'
+@import 'modules/service-three-boxes_module'
+
 
 @import 'lib/all'
 

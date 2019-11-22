@@ -15,6 +15,9 @@ section.section.almalaser
   .container
     .c-content
       max-width: 575px
+      @include  media-breakpoint-down(lg)
+        max-width: 590px
+
     .white-block-design
       width: 468px
       height: 657px
@@ -22,7 +25,11 @@ section.section.almalaser
       .extralarge-text-bg
         position: absolute
         bottom: 46px
-        left: -251px
+        left: -268px
+        @include media-breakpoint-down(lg)
+        @include media-breakpoint-down(sm)
+          font-size: 159.63px
+          left: -132px
       img
         top: 60px
         left: 60px

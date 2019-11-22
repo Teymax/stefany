@@ -1,11 +1,18 @@
 section.section.service-laser-contraindications
   padding-bottom: 101px
   background-color: #9FA6BA
-  overflow: initial
+  @include media-breakpoint-down(lg)
+    padding-bottom: 71px
+  @include media-breakpoint-down(sm)
+    padding-bottom: 51px
   .container
 
     .c-content
       padding-top: 46px
+      @include media-breakpoint-down(lg)
+        padding-top: 61px
+      @include media-breakpoint-down(sm)
+        padding-top: 42px
 
     .white-block-design
       width: 540px

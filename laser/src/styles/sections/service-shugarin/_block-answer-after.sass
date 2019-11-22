@@ -10,11 +10,13 @@ section.section.block-answer-after-shugaring
     padding-bottom: 82px
   .container
     .c-content
-      max-width: 526px
+      max-width: 512px
       margin-left: auto
       @include media-breakpoint-down(lg)
         max-width: 682px
         margin-left: 0
+      @include media-breakpoint-down(sm)
+        //max-width: 285px
       .h2-title
         @include media-breakpoint-up(xl)
           width: 75%
