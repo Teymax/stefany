@@ -207,6 +207,8 @@
 		.info-block-wrap
 			max-width: 1234px !important
 			padding-left: 27px
+			@media(max-width: 767px)
+				padding-left: 0
 		.col-info
 			z-index: 5 !important
 			padding: 0 0 0 50px !important
@@ -224,6 +226,8 @@
 			transform: rotate(-90deg)
 		.info-list
 			padding-top: 36px
+			@media(max-width: 767px)
+				padding-top: 20px
 			.info-list-number
 				margin-right: 16px
 			.info-list-item
@@ -265,11 +269,16 @@
 	.container
 		max-width: 1289px !important
 		padding-right: 91px
+		@media(max-width: 767px)
+			padding-right: 0
 	.border-el
 		margin-bottom: 60px
 	.section-title
 		line-height: 42px
 		padding-bottom: 15px
+		@media(max-width: 767px)
+			padding-bottom: 0
+			margin-bottom: 17px !important
 	.control-width
 		max-width: 445px
 	.col-img
@@ -503,5 +512,25 @@
 			.col-info
 				padding: 20px 0 10px !important
 			.section-title
-				margin-bottom: 14px !important
+				margin-bottom: 13px !important
 				line-height: 31px
+	.info-block-7 .col-img
+		margin-bottom: 11px !important
+	.info-list-item .info-list-number
+		margin-right: 16px
+	.info-block-3-1
+		border-top: 0px solid transparent !important
+		padding-top: 4px !important
+		.container 
+			.col-img
+				margin-bottom: 67px
+			.big-text
+				bottom: -41px !important
+    		right: -71px !important
+	.benefits.doubleBnf.doubleBnfDark .container 
+		.bnf 
+			.bnf-cnt
+				margin-top: -126px !important
+			.bnf-img
+				min-width: 340px
+				margin-left: -69px !important

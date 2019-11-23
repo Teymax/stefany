@@ -11057,7 +11057,9 @@ p, .p-text, .paragraph-text {
   color: #58606C; }
   @media (max-width: 1199px) {
     .section-title {
-      line-height: 53px; } }
+      line-height: 53px; }
+      .section-title br {
+        display: none; } }
 
 .section-title-s {
   color: #4D5259;
@@ -12111,6 +12113,9 @@ section.section.discount {
   .info-block.info-block-6 .info-block-wrap {
     max-width: 1234px !important;
     padding-left: 27px; }
+    @media (max-width: 767px) {
+      .info-block.info-block-6 .info-block-wrap {
+        padding-left: 0; } }
   .info-block.info-block-6 .col-info {
     z-index: 5 !important;
     padding: 0 0 0 50px !important;
@@ -12129,6 +12134,9 @@ section.section.discount {
             transform: rotate(-90deg); }
   .info-block.info-block-6 .info-list {
     padding-top: 36px; }
+    @media (max-width: 767px) {
+      .info-block.info-block-6 .info-list {
+        padding-top: 20px; } }
     .info-block.info-block-6 .info-list .info-list-number {
       margin-right: 16px; }
     .info-block.info-block-6 .info-list .info-list-item {
@@ -12169,11 +12177,18 @@ section.section.discount {
   .info-block-8 .container {
     max-width: 1289px !important;
     padding-right: 91px; }
+    @media (max-width: 767px) {
+      .info-block-8 .container {
+        padding-right: 0; } }
   .info-block-8 .border-el {
     margin-bottom: 60px; }
   .info-block-8 .section-title {
     line-height: 42px;
     padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .info-block-8 .section-title {
+        padding-bottom: 0;
+        margin-bottom: 17px !important; } }
   .info-block-8 .control-width {
     max-width: 445px; }
   .info-block-8 .col-img {
@@ -12396,8 +12411,25 @@ section.section.discount {
     .info-block-4 .container-info .col-info {
       padding: 20px 0 10px !important; }
     .info-block-4 .container-info .section-title {
-      margin-bottom: 14px !important;
-      line-height: 31px; } }
+      margin-bottom: 13px !important;
+      line-height: 31px; }
+  .info-block-7 .col-img {
+    margin-bottom: 11px !important; }
+  .info-list-item .info-list-number {
+    margin-right: 16px; }
+  .info-block-3-1 {
+    border-top: 0px solid transparent !important;
+    padding-top: 4px !important; }
+    .info-block-3-1 .container .col-img {
+      margin-bottom: 67px; }
+    .info-block-3-1 .container .big-text {
+      bottom: -41px !important;
+        bottom-right: -71px !important; }
+  .benefits.doubleBnf.doubleBnfDark .container .bnf .bnf-cnt {
+    margin-top: -126px !important; }
+  .benefits.doubleBnf.doubleBnfDark .container .bnf .bnf-img {
+    min-width: 340px;
+    margin-left: -69px !important; } }
 
 .grid-bg-1 {
   padding: 68px 0 70px;
@@ -12650,7 +12682,20 @@ section.section.discount {
     -webkit-box-ordinal-group: 3 !important;
             order: 2 !important; }
   .info-block-grid .container .grid-block-smaller .grid-img, .info-block-grid .container .grid-cnt.grid-cnt-small {
-    max-height: 100% !important; } }
+    max-height: 100% !important; }
+  .grid-bg-1 {
+    padding-top: 15px;
+    padding-bottom: 21px !important; }
+  .info-block-grid .container .grid-shodow {
+    box-shadow: none; }
+  .info-block-grid .container .grid-cnt.col-md-6 {
+    min-height: 249px; }
+    .info-block-grid .container .grid-cnt.col-md-6 .grid-title {
+      margin-bottom: 10px !important; }
+  .info-block-grid .row.no-gutters.mb-5 {
+    margin-bottom: 10px !important; }
+  .info-block .section-title {
+    line-height: 33px; } }
 
 @media (max-width: 575px) {
   .info-block-grid {
@@ -12971,6 +13016,9 @@ section.section.consultation-form {
 
 .text-info {
   padding: 15px 0; }
+  @media (max-width: 767px) {
+    .text-info p {
+      font-size: 14px !important; } }
 
 .about {
   padding-bottom: 54px; }
@@ -13464,7 +13512,7 @@ section.section.consultation-form {
     margin-bottom: 0px; }
   .benefits .container .bnf .bnf-img {
     position: static !important;
-    margin-left: -101px; }
+    margin-left: -100px; }
   .benefits .container .bnf .bnf-img.bnf-img-2, .benefits .container .bnf .bnf-img.bnf-img-3 {
     margin-left: -76px; }
   .benefits .container .bnf .bnf-img.bnf-img-4 {
@@ -13508,14 +13556,29 @@ section.section.consultation-form {
     line-height: 156%; }
   .benefits.serviceBenefits:not(.doubleBnf) .bnf-three {
     margin-bottom: 0 !important; }
-  .bnf-number {
-    margin-bottom: 22px; }
+  .benefits .container .bnf-three .bnf-number {
+    margin-bottom: 22px;
+    line-height: 69px; }
   .benefits.doubleBnf.two-benefits {
     padding-top: 0; }
   .benefits.two-benefits .bnf-img-wrap {
     margin-left: 27px; }
-  .bnf-number {
-    line-height: 69px; } }
+  .benefits .container .bnf {
+    padding-left: 0 !important; }
+  .benefits.doubleBnf .container .bnf .bnf-title {
+    padding-bottom: 9px; }
+  .benefits .bnf-cnt p {
+    margin-bottom: 3px !important; }
+  .benefits .bnf-cnt .info-list {
+    margin-bottom: 14px; }
+  .benefits.doubleBnf .container .bnf .bnf-cnt {
+    margin-top: -228px !important; }
+  .benefits .container .bnf-three .bnf-number {
+    font-size: 80px; }
+  .benefits.serviceProccesBenefits:not(.doubleBnf) .container .bnf-three .bnf-number {
+    margin-bottom: 20px; }
+  .benefits.serviceProccesBenefits:not(.doubleBnf) .container .bnf-three .bnf-title {
+    font-size: 14px; } }
 
 .diploma {
   padding-top: 75px;
