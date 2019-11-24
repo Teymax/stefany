@@ -11184,7 +11184,7 @@ p, .p-text, .paragraph-text {
   padding-left: 15px;
   background: url("../assets/img/background/callback-btn.png");
   background-repeat: no-repeat;
-  background-size: 42px 100%;
+  background-size: 42px 104%;
   background-position: top right;
   border: 2px solid #A09BCF;
   text-decoration: none;
@@ -11220,7 +11220,7 @@ p, .p-text, .paragraph-text {
 .btn-callback-white, header.open .btn-callback {
   background: url("../assets/img/background/callback-btn-white.jpg");
   background-repeat: no-repeat;
-  background-size: 45px 100%;
+  background-size: 45px 104%;
   background-position: top right;
   border: 2px solid #ffffff !important; }
   .btn-callback-white:focus, header.open .btn-callback:focus {
@@ -12067,21 +12067,6 @@ section.section.discount {
     margin-top: -6px;
     color: #ffffff; }
 
-.light-orange-bg {
-  background: #EDE1DF !important; }
-
-.white-bg {
-  background: #ffffff !important; }
-
-.light-purple-bg {
-  background: #A8A4CD !important; }
-
-.light-green-bg {
-  background: #BECDD4 !important; }
-
-.no-bg-blk {
-  background: transparent !important; }
-
 .info-block .behind-bg {
   padding: 59px 0 100px 63px !important;
   background: -webkit-linear-gradient(left, #ffffff, #ffffff 70%, transparent 0, transparent);
@@ -12459,6 +12444,24 @@ section.section.discount {
     padding: 0; }
   .info-block-9-2 .container .col-img {
     max-width: 100% !important; }
+
+.light-orange-bg {
+  background: #EDE1DF !important; }
+
+.white-bg {
+  background: #ffffff !important; }
+
+.light-purple-bg {
+  background: #A8A4CD !important; }
+
+.light-green-bg {
+  background: #BECDD4 !important; }
+
+.no-bg-blk {
+  background: transparent !important; }
+
+.border-darkgray::before {
+  border-color: #9FA6BA !important; }
 
 @media (min-width: 1200px) {
   .border-block-item, .border-block-item2, .border-block-item3 {
@@ -13525,9 +13528,9 @@ section.section.consultation-form {
       letter-spacing: 0; }
     .benefits.serviceBenefits:not(.doubleBnf) .bnf-title {
       padding-bottom: 22px;
-      font-family: "Circe-Medium";
+      font-family: "Circe-Bold";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 16px;
       line-height: 16px;
       letter-spacing: 0;
@@ -14624,6 +14627,85 @@ nav.header-nav {
     border-radius: 30px; }
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #869791; }
+
+.modal-popup {
+  max-width: 396px !important; }
+  .modal-popup .modal-content {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    width: 100% !important;
+    background-image: url("../assets/img/form-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .modal-popup .modal-content:not(.px-1) {
+      padding-left: 15px !important;
+      padding-right: 15px !important; }
+    .modal-popup .modal-content h4 {
+      font-family: "Circe-Bold";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      color: #ffffff;
+      text-transform: uppercase; }
+    .modal-popup .modal-content h5 {
+      font-family: "Circe-Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      padding-bottom: 3px;
+      color: #ffffff; }
+    .modal-popup .modal-content form {
+      max-width: 252px;
+      margin: 0 auto; }
+      .modal-popup .modal-content form input, .modal-popup .modal-content form select {
+        padding: 8px 20px;
+        background: #F8F8F8;
+        border-radius: 4px;
+        border: none !important;
+        outline: none !important;
+        background: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.66) !important; }
+        .modal-popup .modal-content form input:placeholder, .modal-popup .modal-content form select:placeholder {
+          color: rgba(255, 255, 255, 0.66) !important; }
+        .modal-popup .modal-content form input:-moz-placeholder, .modal-popup .modal-content form select:-moz-placeholder {
+          color: rgba(255, 255, 255, 0.66) !important; }
+        .modal-popup .modal-content form input::-moz-placeholder, .modal-popup .modal-content form select::-moz-placeholder {
+          color: rgba(255, 255, 255, 0.66) !important; }
+        .modal-popup .modal-content form input::-webkit-input-placeholder, .modal-popup .modal-content form select::-webkit-input-placeholder {
+          color: rgba(255, 255, 255, 0.66) !important; }
+      .modal-popup .modal-content form select {
+        padding-right: 35px !important;
+        background-image: url("../assets/img/padalogy/learning/arrow.svg");
+        background-repeat: no-repeat;
+        background-position: center right 15px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: ''; }
+      .modal-popup .modal-content form .thin-text {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.64);
+        margin-top: 15px;
+        text-align: center; }
+  .modal-popup button {
+    max-width: 100% !important; }
+    .modal-popup button > span {
+      -webkit-box-pack: justify !important;
+              justify-content: space-between !important;
+      padding-right: 38px;
+      max-width: 100% !important; }
+      .modal-popup button > span svg {
+        width: 31px;
+        height: 17px; }
+
+#thanksPopup .modal-content {
+  height: 430px;
+  padding-top: 127px;
+  background-image: url("../assets/img/thanks-form-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 @media (max-width: 880px) {
   .grid-number {
