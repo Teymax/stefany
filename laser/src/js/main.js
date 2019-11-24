@@ -183,7 +183,10 @@ function refreshPrice() {
       let serv = data.services.find(service => service.id === +id)
       return accum + serv.price_max
     }, 0)
-    document.querySelector("p.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0").textContent = sum + ' грн'
+    $('.serviceListSum').each(function(e) {
+      this.textContent = sum + ' грн';
+    })
+    // [...document.querySelectorAll("class")].forEach(item => item.textContent = sum + ' грн')
   })
 }
 

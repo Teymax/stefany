@@ -1,16 +1,23 @@
-button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal')
-  | Launch demo modal
-
-
-#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-  .modal-dialog(role='document')
+#modalServiceList.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
-      .modal-header
-        h5#exampleModalLabel.modal-title Modal title
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') &times;
-      .modal-body
-        | ...
-      .modal-footer
-        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-        button.btn.btn-primary(type='button') Save changes
+      h4.text-center Введите свои данные
+      h5.text-center чтобы занять место в группе
+      form
+        input.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
+        input.w-100.p-text-light.mb-2(type="email", placeholder="Email")
+        input.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
+        select.w-100.p-text-light.mb-4(placeholder="Какой курс вы выбираете?")
+          option.p-text-light(selected disabled hidden) Какой курс вы выбираете?
+          option.p-text-light(value="1") Базовой подологии
+          option.p-text-light(value="2") Малой ортопедии и ортониксии
+        button.w-100.btn-send.btn-callback-simple.d-flex.align-items-center.justify-content-between.m-auto.m-sm-0.ml-sm-auto(type="button", data-toggle='modal', data-target='#thanksPopup', data-dismiss="modal")
+          span.d-flex.align-items-center.justify-content-between
+            span отправить
+          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
+            style(type='text/css').
+              .st0 {
+                fill: #D11111;
+              }
+            path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
+            C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
