@@ -3,36 +3,35 @@ $(document).ready(function () {
     zt: {
       ru: {
         cityName: 'Житомир',
-        address: 'ул. Киевская, 84',
-        images: [
-          {
-            img: 'assets/img/about-steffany-zt/video-slider-0.jpg',
-            img2x: 'assets/img/about-steffany-zt/video-slider-01@2x.jpg 2x'
-          }
-        ]
+        cityNameIn: 'Салон в Житомире',
+        address: 'ул. Киевская, 84'
       }
     },
     if: {
       ru: {
         cityName: 'Ивано-Франковск',
+        cityNameIn: 'Салон в Ивано-Франковске',
         address: 'ул. Ивана Франка, 25'
       }
     },
     lutsk: {
       ru: {
         cityName: 'Луцк',
+        cityNameIn: 'Салон в Луцке',
         address: 'пр. Воли, 10'
       }
     },
     lviv: {
       ru: {
         cityName: 'Львов',
+        cityNameIn: 'Салон в Львове',
         address: 'ул. Гулака-Артемовского, 2'
       }
     },
     rovno: {
       ru: {
         cityName: 'Ровно',
+        cityNameIn: 'Салон в Ровно',
         address: 'ул. Киевская, 4'
       }
     }
@@ -55,6 +54,10 @@ $(document).ready(function () {
 
     $('.city-dynamic').each(function(e) {
       this.innerText = citiesData[city][localization].cityName;
+    });
+
+    $('.breadcrumbs-city').each(function(e) {
+      this.innerText = citiesData[city][localization].cityNameIn;
     });
 
     $('.address-dynamic').each(function(e) {
@@ -82,7 +85,7 @@ $(document).ready(function () {
     city = localStorage.getItem('city');
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
-      if(closestDropdown) {
+      if(closestDropdown && e.target.classList.contains('nav-link-text')) {
         city = e.target.dataset.city;
         localStorage.setItem('city', city);
         changeDataForCity();
