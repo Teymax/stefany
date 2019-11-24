@@ -8,22 +8,27 @@ footer.footer
         ul.d-flex.d-sm-block.flex-column.align-items-center.mb-0
           li.mb-3.text-center.text-lg-left.d-flex.align-items-center
             img.icon.icon-phone.mr-3(src="assets/icon/phone.svg")
-            a.paragraph-text-light.text-color-dark.text-w-light(href='tel:+0980070753') 098-007-07-53
-          li.mb-3.text-center.text-lg-left.d-flex.align-items-center.drop-menu.drop-menu-top
+            a.telephone-dynamic.paragraph-text-light.text-color-dark.text-w-light(href='tel:+0980070753') 098-007-07-53
+          li.mb-3.text-center.text-lg-left.d-flex.align-items-cent.drop-menu.drop-menu-top
             img.icon.mr-3.icon-loc(src="assets/icon/map.svg" alt="icon-map-f")
-            span.paragraph-text-light.text-color-dark.text-w-light Ивано-Франковск
+            span#cityFooter.city-dynamic.paragraph-text-light.text-color-dark.text-w-light Ивано-Франковск
             img.icon-arrow.ml-2(src="assets/icon/drop-arrow-down.svg" alt="drop-arrow-down")
-            ul.dropdown-menu-list.d-flex.flex-column
+            ul#selectCityDropdownFooter.select-city-dropdown.dropdown-menu-list.d-flex.flex-column
               li
-                a.nav-link-text.text-color-lightdark(href="#") Львов
+                span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="zt") Житомир
               li
-                a.nav-link-text.text-color-lightdark(href="#") Львов
+                span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="if") Ивано-Франковск
               li
-                a.nav-link-text.text-color-lightdark(href="#") Львов
+                span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="lutsk") Луцк
+              li
+                span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="lviv") Львов
+              li
+                span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="rovno") Ровно
+
           li.mb-3.text-center.text-lg-left.d-flex.align-items-center.footer-icon-blk
-            a.mr-3(href="https://www.facebook.com/steffany.ua/")
+            a#fbFooter.fb-dynamic.mr-3(href="https://www.facebook.com/steffany.ua/")
               img.icon.icon-facebook(src="assets/icon/facebook-icon.svg")
-            a(href="https://www.instagram.com/steffany.zhytomyr/?hl=ru")
+            a#instFooter.inst-dynamic(href="https://www.instagram.com/steffany.zhytomyr/?hl=ru")
               img.icon.icon-inst.mr-0(src="assets/icon/inst.svg")
       .col-12.col-sm-3.col-lg-2.mb-.mb-sm-3
         a.paragraph-text.text-color-lightdark.text-w-light.text-center.text-sm-left.mb-3.d-block(href="") Steffany Beauty
