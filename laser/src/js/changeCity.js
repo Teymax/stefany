@@ -86,7 +86,7 @@ $(document).ready(function () {
         city = e.target.dataset.city;
         localStorage.setItem('city', city);
         changeDataForCity();
-        changeImages();
+        // changeImages();
       }
     });
   }

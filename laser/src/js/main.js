@@ -154,18 +154,21 @@ const partnerId = 111624;
 const managerId = 819601;
 let headers;
 let servicesArr = [];
+let phoneInput;
+let fullNameInput;
+let emailInput;
 
 const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 window.onload = function () {
   servicesBlock = document.querySelector("div.service-list-group")
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
-  // phoneInput = document.getElementById("phone");
-  // fullNameInput = document.getElementById("fullname");
-  // emailInput = document.getElementById("email");
-  let payButtons = document.querySelectorAll("#pay_button");
+  phoneInput = document.getElementById("phone");
+  fullNameInput = document.getElementById("fullname");
+  emailInput = document.getElementById("email");
+  let payButtons = document.querySelectorAll(".pay_button");
   [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
-  let orderButtons = document.querySelectorAll("#order_button");
+  let orderButtons = document.querySelectorAll(".order_button");
   [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
   getServices();
   let checking = document.querySelectorAll('label.service-checkbox-label input');
@@ -186,7 +189,6 @@ function refreshPrice() {
     $('.serviceListSum').each(function(e) {
       this.textContent = sum + ' грн';
     })
-    // [...document.querySelectorAll("class")].forEach(item => item.textContent = sum + ' грн')
   })
 }
 
@@ -245,14 +247,14 @@ function getFormParams() {
   console.log(services)
 
   return {
-    // phone: phoneInput.value.length > 0 ? phoneInput.value : false,
-    // fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
-    // email: emailInput.value.length > 0 ? emailInput.value : false,
+    phone: phoneInput.value.length > 0 ? phoneInput.value : false,
+    fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
+    email: emailInput.value.length > 0 ? emailInput.value : false,
     services: services.length > 0 ? services : false,
-    phone: '+380974724612',
-    fullName: 'Vlad M',
-    email: "malanivvlad@gmail.com",
-    services: services.length > 0 ? services : false
+    // phone: '+380974724612',
+    // fullName: 'Vlad M',
+    // email: "malanivvlad@gmail.com",
+    // services: services.length > 0 ? services : false
   }
 }
 
