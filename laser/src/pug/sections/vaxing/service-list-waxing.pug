@@ -11,18 +11,16 @@ section.section.service-laser-service-list-tablet1.d-block.d-xl-none.pt-3.pb-4
         button.btn ПОДРОБНЕЕ
 section.section.service-laser-service-list.nano-service-list
   .container
-    //include ../../modules/modal
-
     .row.main-block
       .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.man-symbol-bg
         .checkbox-wrapper
           input(type="checkbox" class="checkbox" id="checkboxServiceList")
         .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
-          - let arrServiceShugaringFeale= [{"id": 1415211, "title": "Шугаринг верхней губы"},{"id": 1415213, "title": "Шугаринг подбородка"},{"id": 2271100, "title": "Шугаринг межьбровье"}, {"id": 1415216, "title": "Шугаринг скулы"},{"id": 2271102, "title": "Шугаринг щеки"},{"id": 2271101, "title": "Шугаринг шеи"},{"id": 1415208,"title": "Шугаринг бакенбарды"},{"id": 1415215, "title": "Шугаринг рук"},{"id": 1415214, "title": "Шугаринг подмышек"},{"id": 1415209, "title": "Шугаринг бедер"},{ "id": 1415212,"title": "Шугаринг голени"}, {"id": 1415210,"title": "Шугаринг бикини"},{"id": 2271104, "title": "шугаринг глубокое бикини"}]
-          - let arrServiceShugaringMale= [{"id": 1415211,"title": "Шугаринг верхней губы"},{"id": 1415213,"title": "Шугаринг подбородка"},{"id": 2271100,"title": "Шугаринг межьбровье"},{"id": 1415216,"title": "Шугаринг скулы", }, { "id": 2271102, "title": "Шугаринг щеки", }, {"id": 2271101, "title": "Шугаринг шеи"}, {"id": 1415208,"title": "Шугаринг бакенбарды"},{"id": 1415215,"title": "Шугаринг рук", },{"id": 1415214, "title": "Шугаринг подмышек"},{"id": 1415209,"title": "Шугаринг бедер"},{"id": 1415212, "title": "Шугаринг голени", }, { "id": 1415210, "title": "Шугаринг бикини" },{ "id": 2271104, "title": "шугаринг глубокое бикини"}, {"id": 2271097,"title": "Коррекция бровей (мужчины)"}, {"id": 2271098,"title": "Моделирование бровей (мужчины)" }, {"id": 4299803,"title": "шугаринг  спина муж"}]
+          - let arrServiceWaxingFemale = [{"id": 1415174,"title": "Восковая эпиляция верхней губы"}, { "id": 1415177, "title": "Восковая эпиляция подбородка", }, { "id": 1415179, "title": "Восковая эпиляция рук", }, { "id": 1415178, "title": "Восковая эпиляция подмышек", }, { "id": 1415172, "title": "Восковая эпиляция белой линии живота", }, { "id": 1415175, "title": "Восковая эпиляция глубокое бикини", }, { "id": 1415173, "title": "Восковая эпиляция бикини", }, { "id": 1415176, "title": "Восковая эпиляция ног", }, { "id": 1415180, "title": "Восковая єпиляция голени", }, { "id": 3293896, "title": "Восковая эпиляция ягодиц", }, { "id": 3293903, "title": "Восковая эпиляция живота", }, { "id": 3293907, "title": "Восковая эпиляция поясница", }, { "id": 3293912, "title": "Восковая эпиляция скулы", }, { "id": 3828379, "title": "Восковая эпиляция грудь", }, { "id": 3942706, "title": "Восковая эпиляция бедро частично", }, { "id": 4430902, "title": "воск уши", }, { "id": 4430917, "title": "воск брови", }, { "id": 4430933, "title": "воск нос", } ]
+          - let arrServiceWaxingMale =[{"id": 1415174,"title": "Восковая эпиляция верхней губы"}, { "id": 1415177, "title": "Восковая эпиляция подбородка", }, { "id": 1415179, "title": "Восковая эпиляция рук", }, { "id": 1415178, "title": "Восковая эпиляция подмышек", }, { "id": 1415172, "title": "Восковая эпиляция белой линии живота", }, { "id": 1415175, "title": "Восковая эпиляция глубокое бикини", }, { "id": 1415173, "title": "Восковая эпиляция бикини", }, { "id": 1415176, "title": "Восковая эпиляция ног", }, { "id": 1415180, "title": "Восковая єпиляция голени", }, { "id": 3293896, "title": "Восковая эпиляция ягодиц", }, { "id": 3293903, "title": "Восковая эпиляция живота", }, { "id": 3293907, "title": "Восковая эпиляция поясница", }, { "id": 3293912, "title": "Восковая эпиляция скулы", }, { "id": 3828379, "title": "Восковая эпиляция грудь", }, { "id": 3942706, "title": "Восковая эпиляция бедро частично", }, { "id": 4430902, "title": "воск уши", }, { "id": 4430917, "title": "воск брови", }, { "id": 4430933, "title": "воск нос", },{ "id": 1415198, "title": " восковая эпиляция спины",},{ "id": 1415197, "title": " восковая эпиляция подмышек",},{ "id": 1415196, "title": " восковая эпиляция живота",},{ "id": 1415195, "title": " восковая эпиляция груди",},]
           .list-female
             .checkbox-group.pb-4
-              each service in arrServiceShugaringFeale
+              each service in arrServiceWaxingFemale
                 .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
                   .column-right.d-flex.align-items-start
                     +defaultCheckbox('dark')
@@ -32,7 +30,7 @@ section.section.service-laser-service-list.nano-service-list
                     p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
           .list-male
             .checkbox-group.pb-4
-              each service in arrServiceShugaringMale
+              each service in arrServiceWaxingMale
                 .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
                   .column-right.d-flex.align-items-start
                     +defaultCheckbox('dark')
@@ -48,13 +46,13 @@ section.section.service-laser-service-list.nano-service-list
             h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
             button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
           .checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
-            each service in arrServiceShugaringFeale
+            each service in arrServiceWaxingFemale
               //.checkbox-row.d-flex.align-items-start.justify-content-between.py-2
-              //  .column-right.d-flex.align-items-start
-              //    +defaultCheckbox('light')(class='')
-              //    p.paragraph-text.text-w-light.text-color-white.ml-3.mb-0 #{service.title}
-              //  .column-left.d-flex.justify-content-end
-              //    p.paragraph-text.text-w-bold.text-color-white.mb-0.item-price
+                .column-right.d-flex.align-items-start
+                  +defaultCheckbox('light')(class='')
+                  //p.paragraph-text.text-w-light.text-color-white.ml-3.mb-0 #{service.title}
+                .column-left.d-flex.justify-content-end
+                  p.paragraph-text.text-w-bold.text-color-white.mb-0.item-price
           .sale-group.d-flex.justify-content-between
             p.paragraph-text.text-w-light.text-color-white Акция
             p.paragraph-text.text-w-bold.text-color-white 40%

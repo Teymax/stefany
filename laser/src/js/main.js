@@ -246,7 +246,7 @@ function getFormParams() {
     // phone: phoneInput.value.length > 0 ? phoneInput.value : false,
     // fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
     // email: emailInput.value.length > 0 ? emailInput.value : false,
-    // services: services.length > 0 ? services : false
+    services: services.length > 0 ? services : false,
     phone: '+380974724612',
     fullName: 'Vlad M',
     email: "malanivvlad@gmail.com",
