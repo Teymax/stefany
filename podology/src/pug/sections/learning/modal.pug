@@ -22,6 +22,8 @@
       h4.text-center.pb-4(style="font-size: 16px;") Запись на прием происходит в телефонном режиме
       h5.text-center.pb-4 укажите телефон, для звонка и согласования деталей
       form.pb-4
+        input.w-100.p-text-light.mb-4(type="text", placeholder="Имя")
+        input.w-100.p-text-light.mb-4(type="email", placeholder="Email")
         input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон")
         button.w-100.btn-send.btn-callback-simple.d-flex.align-items-center.justify-content-between.m-auto.m-sm-0.ml-sm-auto(type="button", data-toggle='modal', data-target='#thanksPopup', data-dismiss="modal")
           span.d-flex.align-items-center.justify-content-between
