@@ -767,6 +767,11 @@ $(document).ready(function () {
         var partnerId = 240913;
         var managerId = 823619;
         var date = new Date();
+        var payload = {
+            "phone": $('#consultPhone').val(),
+            "name": $('#consultName').val(),
+            "email": $('#consultEmail').val(),
+        };
         date.setDate(date.getDate() + 1)
         var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
         var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + "?service_ids=3354786";
@@ -779,7 +784,7 @@ $(document).ready(function () {
 
         request.done(function (msg) {
             console.log('Time: ', msg[0].datetime)
-            writeClient(msg[0].datetime)
+            writeClient(msg[0].datetime, payload)
         });
 
         request.fail(function (jqXHR, textStatus) {
@@ -787,15 +792,15 @@ $(document).ready(function () {
         });
     })
 
-    function writeClient(time) {
+    function writeClient(time, data) {
         var bearer_token = "f5wujgx5yn6cagtk9fg2";
         var partnerId = 240913;
         var managerId = 823619;
         var headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
         var payload = {
-            "phone": $('#consultPhone').val(),
-            "fullname": $('#consultName').val(),
-            "email": $('#consultEmail').val(),
+            "phone": data.phone,
+            "fullname": data.name,
+            "email": data.email,
             "appointments": [
                 {
                     "id": new Date().getTime(),
@@ -809,7 +814,7 @@ $(document).ready(function () {
         var request = $.ajax({
             url: 'https://api.yclients.com/api/v1/book_record/' + partnerId,
             type: "POST",
-            data: payload,
+            data: JSON.stringify(payload),
             headers: headers
         });
 
