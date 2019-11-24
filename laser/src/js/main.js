@@ -138,36 +138,45 @@ $(document).ready(function () {
   $('.checkbox').change(function (e) {
     $(this).parent().toggleClass('checked')
   });
-//checkbox service list male/female
-  $('#checkboxServiceList').click(function(){
-    if ($(this).is(':checked')) {
-      $('.list-female').toggleClass('hidden')
-      $('.list-male').toggleClass('visible')
-    } else {
-      $('.list-female').toggleClass('hidden')
-      $('.list-male').toggleClass('visible')
-    }
-  });
 });
-let phoneInput, fullNameInput, emailInput, phoneForm, codeForm, servicesBlock, codeInput, payButton, mainBlocks,
-  servicesStat;
+let  mainBlocks, servicesStat, userParams, servicesBlock;
 const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
 let headers;
+let servicesArr = [];
+
 const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 window.onload = function () {
+  servicesBlock = document.querySelector("div.service-list-group")
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
   // phoneInput = document.getElementById("phone");
   // fullNameInput = document.getElementById("fullname");
   // emailInput = document.getElementById("email");
-  // servicesBlock = document.getElementById("services");
-  // codeInput = document.getElementById("code");
-  // payButton = document.getElementById("pay_button");
-  // payButton.addEventListener("click", bookRecord);
+  let payButtons = document.querySelectorAll("#pay_button");
+  [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
+  let orderButtons = document.querySelectorAll("#order_button");
+  [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
   getServices();
+  let checking = document.querySelectorAll('label.service-checkbox-label input');
+  [...checking].forEach(box => box.addEventListener("click", refreshPrice));
 };
+
+function refreshPrice() {
+  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id=' + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, function (json) {
+    let data = getData(json);
+    let serviceCheckboxes = document.querySelectorAll(" input:checked");
+    let sum = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
+      const parent = current.closest('.checkbox-row')
+      let id = parent.getAttribute('id')
+      let serv = data.services.find(service => service.id === +id)
+      return accum + serv.price_max
+    }, 0)
+    document.querySelector("p.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0").textContent = sum + ' грн'
+  })
+}
 
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
@@ -176,63 +185,22 @@ function getServices() {
 
 function displayServices(json) {
   let data = getData(json);
-  //console.log(data.services);
+  let services = data.services
+
   mainBlocks = document.getElementsByClassName("checkbox-row")
   servicesStat = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
   servicesStat = servicesStat.filter(service => !!service)
   for (let i = 0; i < servicesStat.length; i++) {
-    data.services.map(function (service) {
-      console.log(service.id)
-      if(+servicesStat[i]===service.id)
+    services.map(function (service) {
+      if (+servicesStat[i] === service.id)
         mainBlocks[i].querySelector("p.item-price").textContent = service.price_max;
-      mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length/60;
+      mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length / 60;
+      servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
 
     })
   }
-  // let services = data.services.map(function (service) {
-  //   let obj = servicesStat.find(function (serviceName) {
-  //     return serviceName.id === service.id;
-  //   });
-  //   console.log(obj)
-  //   return {
-  //     id: service.id,
-  //     price_max: service.price_max,
-  //     seance_length: service.seance_length,
-  //     // title: name ? name.name : service.title,
-  //     // sex: name ? name.sex : null,
-  //     // category: service.category_id
-  //   };
-  // });
-  // console.log(JSON.stringify(services))
-  // services.forEach(function (service) {
-  //   servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 3600};
-  //   // let tr = document.createElement("TR");
-  //   // let idTd = document.createElement("td");
-  //   // idTd.textContent = service.id;
-  //   // let nameTd = document.createElement("td");
-  //   // nameTd.textContent = service.title;
-  //   // let priceTd = document.createElement("td");
-  //   // priceTd.textContent = service.price_min + "-" + service.price_max;
-  //   // let timeTd = document.createElement("td");
-  //   // timeTd.textContent = service.seance_length / 60;
-  //   // tr.appendChild(idTd)
-  //   // tr.appendChild(nameTd)
-  //   // tr.appendChild(priceTd)
-  //   // tr.appendChild(timeTd)
-  //   //
-  //   // document.getElementById("table").appendChild(tr);
-  //   let label = document.createElement("LABEL");
-  //   label.setAttribute("for", "service-" + service.id);
-  //   label.textContent = service.title + "(price: " + service.price_max + " UAH, duration: " + parseFloat(service.seance_length) / 60 + " mins)";
-  //   let checkbox = document.createElement("INPUT");
-  //   checkbox.setAttribute("type", "checkbox");
-  //   checkbox.setAttribute("name", service.id);
-  //   checkbox.setAttribute("id", "service-" + service.id);
-  //
-  //
-  // });
 }
 
 function getData(data) {
@@ -253,15 +221,25 @@ function getData(data) {
   return answer;
 }
 
+
 function getFormParams() {
   let serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
   let services = [...serviceCheckboxes].map(function (service) {
-    return parseInt(service.name);
+    let main = service.closest('.checkbox-row');
+    let id = main.getAttribute('id');
+    // console.log(id);
+    return parseInt(id);
   });
+  console.log(services)
+
   return {
-    phone: phoneInput.value.length > 0 ? phoneInput.value : false,
-    fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
-    email: emailInput.value.length > 0 ? emailInput.value : false,
+    // phone: phoneInput.value.length > 0 ? phoneInput.value : false,
+    // fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
+    // email: emailInput.value.length > 0 ? emailInput.value : false,
+    // services: services.length > 0 ? services : false
+    phone: '+380974724612',
+    fullName: 'Vlad M',
+    email: "malanivvlad@gmail.com",
     services: services.length > 0 ? services : false
   }
 }
@@ -279,5 +257,144 @@ function ajax(method, headers, url, params, callback) {
   xmlhttp.send(JSON.stringify(params));
 }
 
+function processErrors(data) {
+  let msg;
+  if (!data.error) return false;
+  msg = data.error.message;
+
+
+  alert(msg)
+  return true;
+}
+
+var loadJS = function(url, implementationCode, location){
+  //url is URL of external file, implementationCode is the code
+  //to be called from the file, location is the location to
+  //insert the <script> element
+
+  var scriptTag = document.createElement('script');
+  scriptTag.src = url;
+
+  scriptTag.onload = implementationCode;
+  scriptTag.onreadystatechange = implementationCode;
+
+  location.appendChild(scriptTag);
+};
+var yourCodeToBeCalled = function(){
+//your code goes here
+}
+
+function bookRecord(event, plusDate = 0) {
+  loadJS('https://api.fondy.eu/static_common/v1/checkout/ipsp.js', function () {
+    event.preventDefault();
+    let date = new Date();
+    if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+    let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+    let params = getFormParams();
+    let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+    url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
+    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+    ajax('GET', headers, url, null,
+        function (data) {
+          let dataArr = getData(data);
+          if (processErrors(dataArr)) return alert("Error");
+          if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+          else {
+            // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
+            writeClient(dataArr[0].datetime, event.target.id === "pay_button")
+          }
+        });
+  }, document.body);
+}
+
+function writeClient(time, isPayment = false) {
+  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  let params = getFormParams();
+  if (!params.phone || !params.fullName || !params.email || !params.services) {
+    alert("smth went wrong, please reload the page and try again");
+    return;
+  }
+  let date = new Date();
+  userParams = {
+    "phone": params.phone,
+    "fullname": params.fullName,
+    "email": params.email,
+    "comment": isPayment ? "online order+payment" : "online order",
+    "appointments": [
+      {
+        "id": date.getTime(),
+        "services": params.services,
+        "staff_id": managerId,
+        "datetime": time
+      }
+    ]
+  };
+  ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams, function (data) {
+    let err = processErrors(getData(data));
+    if (!err) {
+      alert("Success");
+    }
+  });
+  if (isPayment)
+    preparePayButton();
+}
+
+function preparePayButton() {
+  let params = getFormParams();
+  if (!params.phone || !params.fullName || !params.email || !params.services) {
+    alert("we haven`t all data for payment");
+    return;
+  }
+  let price = 0;
+  // console.log(servicesArr);
+  // console.log(params.services);
+  for (let i in params.services) {
+    price += servicesArr[params.services[i]].price;
+  }
+  let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
+  let order = createOrder(price, desc, params.fullName, params.services.join(","), params.email, params.phone);
+  console.log(order)
+  location.replace(createOrder(price, desc, params.fullName, params.services.join(","), params.email, params.phone));
+}
+
+function createOrder(amount, order_desc, name, services, email, phone) {
+  var button = $ipsp.get('button');
+  button.setMerchantId(1432749);
+  button.setAmount(amount, 'UAH');
+  button.setResponseUrl('http://stefany.teymax.com/?payed=true');
+  button.setHost('api.fondy.eu');
+  button.addField({
+    label: 'Описание платежа',
+    name: 'description',
+    value: order_desc,
+    readonly: true
+  });
+  button.addField({
+    label: 'name',
+    name: 'user_name',
+    value: name,
+    readonly: true
+  });
+  button.addField({
+    label: 'email',
+    name: 'user_email',
+    value: email,
+    readonly: true
+  });
+  button.addField({
+    label: 'phone',
+    name: 'user_phone',
+    value: phone,
+    readonly: true
+  });
+  button.addField({
+    label: 'services',
+    name: 'user_services',
+    value: services,
+    readonly: true
+  });
+  console.log(button);
+  return button.getUrl();
+}
 
 
