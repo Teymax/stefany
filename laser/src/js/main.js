@@ -138,6 +138,16 @@ $(document).ready(function () {
   $('.checkbox').change(function (e) {
     $(this).parent().toggleClass('checked')
   });
+//checkbox service list male/female
+  $('#checkboxServiceList').click(function(){
+    if ($(this).is(':checked')) {
+      $('.list-female').toggleClass('hidden')
+      $('.list-male').toggleClass('visible')
+    } else {
+      $('.list-female').toggleClass('hidden')
+      $('.list-male').toggleClass('visible')
+    }
+  });
 });
 let  mainBlocks, servicesStat, userParams, servicesBlock;
 const bearer_token = "f5wujgx5yn6cagtk9fg2";

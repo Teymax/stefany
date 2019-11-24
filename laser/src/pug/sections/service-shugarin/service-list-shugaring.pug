@@ -16,18 +16,9 @@ section.section.service-laser-service-list.nano-service-list
         .checkbox-wrapper
           input(type="checkbox" class="checkbox" id="checkboxServiceList")
         .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
-          - let arrStomachFemale={name: "Живот и спина", services: [{"id":2426299,"title":"Крестцовая область"},{"id":2426300,"title":" ареола молочных желез"},{"id":2426303,"title":" белая линия живота"},{"id":2426308,"title":" верхняя часть спины и плечи"},{"id":2426316,"title":" живот "},{"id":2426312,"title":" грудь "},{"id":2426314,"title":" декольте"},{"id":2426328,"title":" плечи"},{"id":2426337,"title":" спина"}]}
-          - let arrStomachMale={name: "Живот и спина", services: [{"id":2426299,"title":"Крестцовая область"},{"id":2426300,"title":" ареола молочных желез"},{"id":2426303,"title":" белая линия живота"},{"id":2426308,"title":" верхняя часть спины и плечи"},{"id":2426317,"title":" живот "},{"id":2426313,"title":" грудь "},{"id":2426315,"title":" декольте "},{"id":2426328,"title":" плечи"},{"id":2426337,"title":" спина"}]}
-          - let arrLegsFemale={name: "Область ног", services: [{"id":2426301,"title":" бедра"},{"id":2426302,"title":" бедра частично (наружная)"},{"id":2426310,"title":" голени"},{"id":2426311,"title":" голени с коленями"},{"id":2426321,"title":" колени"},{"id":2426325,"title":" ноги "},{"id":2426327,"title":" пальцы ног"}]}
-          - let arrLegsMale={name: "Область ног", services: [{"id":242630,"title":" бедра"},{"id":2426302,"title":" бедра частично (наружная"},{"id":2426310,"title":" голени"},{"id":2426311,"title":" голени с коленями"},{"id":2426321,"title":" колени"},{"id":2426327,"title":" пальцы ног"}]}
-          - let arrBikiniFemale = {name: "Бикини", services: [{"id":2426304,"title":" бикини глубокое"},{"id":2426306,"title":" бикини не глубокое (бикини по линии трусиков)"},{"id":2426324,"title":" межьягодичная складка"},{"id":2426341,"title":" ягодицы"}]}
-          - let arrBikiniMale = {name: "Бикини", services: [{"id":2426305,"title":" бикини глубокое ( )"},{"id":2426306,"title":" бикини не глубокое (бикини по линии трусиков)"},{"id":2426318,"title":" зона лобка для "},{"id":2426324,"title":" межьягодичная складка"},{"id":2426341,"title":" ягодицы"}]}
-          - let arrArmsFemale ={name: "Область рук", services: [{"id":2426335,"title":" руки полностью ( у )"},{"id":2426319,"title":" кисти рук + пальцы "},{"id":2426331,"title":" подмышки "},{"id":2426334,"title":" предплечья "}]}
-          - let arrArmsMale = {name: "Область рук", services: [{"id":2426336,"title":" руки полностью "},{"id":2426320,"title":" кисти рук + пальцы "},{"id":2426332,"title":" подмышки "},{"id":2426333,"title":" предплечья ( у )"}]}
-          - let arrFaceFemale = {name: "Область лица", services: [{"id":2426298,"title":"Все лицо"},{"id":2426296,"title":"Верхняя губа "},{"id":2426307,"title":" брови"},{"id":2426309,"title":" виски"},{"id":2426322,"title":" линия лба"},{"id":2426323,"title":" межбровье"},{"id":2426329,"title":" подбородок "},{"id":2426338,"title":" уши"},{"id":2426339,"title":" шея (задняя или передняя часть)"},{"id":2426340,"title":" щеки"}]}
-          - let arrFaceMale = {name: "Область лица", services: [{"id":2426298,"title":"Все лицо"},{"id":2426297,"title":"Верхняя губа "},{"id":2426307,"title":" брови"},{"id":2426309,"title":" виски"},{"id":2426322,"title":" линия лба"},{"id":2426323,"title":" межбровье"},{"id":2426330,"title":" подбородок "},{"id":2426339,"title":" шея (задняя или передняя часть)"},{"id":2426340,"title":" щеки"}]}
-          - let allCategoryFemale = [arrFaceFemale,  arrArmsFemale, arrBikiniFemale, arrLegsFemale, arrStomachFemale]
-          - let allCategoryMale = [arrFaceMale,  arrArmsMale, arrBikiniMale, arrLegsMale, arrStomachMale]
+          - let arrServiceShugaringFemale
+          - let arrServiceShugaringMale
+
           .list-female
             each category in allCategoryFemale
               h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center #{category.name}
