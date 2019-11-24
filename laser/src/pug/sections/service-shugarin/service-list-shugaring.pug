@@ -11,7 +11,7 @@ section.section.service-laser-service-list-tablet1.d-block.d-xl-none.pt-3.pb-4
         button.btn ПОДРОБНЕЕ
 section.section.service-laser-service-list.nano-service-list
   .container
-    //include ../../modules/modal
+
 
     .row.main-block
       .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.man-symbol-bg
@@ -66,11 +66,11 @@ section.section.service-laser-service-list.nano-service-list
               img(src="assets/img/laser-page/price.png")
               p.paragraph-text.text-w-bold.text-color-white.ml-2 3000грн
           .c-btn.mt-3.d-flex.justify-content-between.w-332
-            .button.btn-first.btn-simple.svg.caset#vlad
+            .button.btn-first.btn-simple.svg.caset(type='button', data-toggle='modal', data-target='#exampleModal')
               .text-section
                 +casetSvg
                 span оплатить
-            .button.btn-second.btn-simple.svg.pen
+            .button.btn-second.btn-simple.svg.pen(type='button', data-toggle='modal', data-target='#exampleModal')
               .text-section
                 +penSvg
                 span записаться
@@ -84,6 +84,31 @@ section.section.service-laser-service-list-tablet3.d-flex.d-xl-none.py-0.flex-co
             path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
         p.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0 1 026 грн.
       .c-btn.w-332
-        +btnCaset('оплатить')
-        +btnPen('записаться')
+        .button.btn-first.btn-simple.svg.caset(type='button', data-toggle='modal', data-target='#exampleModal')
+          .text-section
+            +casetSvg
+            span оплатить
+        .button.btn-second.btn-simple.svg.pen(type='button', data-toggle='modal', data-target='#exampleModal')
+          .text-section
+            +penSvg
+            span записаться
 
+
+
+
+button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal')
+  | Launch demo modal
+
+
+#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Modal title
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        | ...
+      .modal-footer
+        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Save changes
