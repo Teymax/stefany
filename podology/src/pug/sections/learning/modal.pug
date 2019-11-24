@@ -22,10 +22,10 @@
       h4.text-center.pb-4(style="font-size: 16px;") Запись на прием происходит в телефонном режиме
       h5.text-center.pb-4 укажите телефон, для звонка и согласования деталей
       form.pb-4
-        input.w-100.p-text-light.mb-4(type="text", placeholder="Имя")
-        input.w-100.p-text-light.mb-4(type="email", placeholder="Email")
-        input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон")
-        button.w-100.btn-send.btn-callback-simple.d-flex.align-items-center.justify-content-between.m-auto.m-sm-0.ml-sm-auto(type="button", data-toggle='modal', data-target='#thanksPopup', data-dismiss="modal")
+        input.w-100.p-text-light.mb-4(type="text", placeholder="Имя" id='consultName')
+        input.w-100.p-text-light.mb-4(type="email", placeholder="Email" id='consultEmail')
+        input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон" id='consultPhone')
+        button.w-100.btn-send.btn-callback-simple.d-flex.align-items-center.justify-content-between.m-auto.m-sm-0.ml-sm-auto(type="button", data-toggle='modal', data-target='#thanksPopup', data-dismiss="modal" id='sendConsultation')
           span.d-flex.align-items-center.justify-content-between
             span отправить
           svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')

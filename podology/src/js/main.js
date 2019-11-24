@@ -468,7 +468,9 @@
 // }
 
 $( document ).ready( function () {
-
+  const bearer_token = "f5wujgx5yn6cagtk9fg2";
+  const partnerId = 240913;
+  const managerId = 823619;
   // if ( !town ) {
   //   console.log( 'No town' )
   //   $( '#overlay' ).fadeIn( 'fast', function () {
@@ -763,4 +765,34 @@ $( document ).ready( function () {
   $( '#checkbox' ).change( function ( e ) {
     $( this ).parent().toggleClass( 'checked' )
   } )
+  $('#sendConsultation').click(function( e ) {
+    var payload = {
+      name: $('#consultName').val(),
+      email: $('#consultEmail').val(),
+      phone: $('#consultPhone').val()
+    };
+    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+    let date = new Date();
+    userParams = {
+      "phone": params.phone,
+      "fullname": params.fullName,
+      "email": params.email,
+      "comment": isPayment ? "online order+payment" : "online order",
+      "appointments": [
+        {
+          "id": date.getTime(),
+          "services": params.services,
+          "staff_id": managerId,
+          "datetime": time
+        }
+      ]
+    };
+    ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams, function (data) {
+      let err = processErrors(getData(data));
+      if (!err) {
+        alert("Success");
+      }
+    });
+  });
+
 } )
