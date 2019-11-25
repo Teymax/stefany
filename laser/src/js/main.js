@@ -167,6 +167,7 @@ window.onload = function () {
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.getElementById("phone");
+  console.log(phoneInput)
   fullNameInput = document.getElementById("fullname");
   emailInput = document.getElementById("email");
   let payButtons = document.querySelectorAll(".pay_button");
