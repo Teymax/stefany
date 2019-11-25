@@ -1,3 +1,11 @@
+window.mail = {
+  Host    : 'smtp.gmail.com',
+  Username: 'four.progs@gmail.com',
+  Password: 'Htndeth0614',
+  To      : 'help@steffany.ua',
+  From    : 'help@steffany.ua'
+}
+
 $(document).ready(function () {
 
   $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -473,4 +481,9 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   return button.getUrl();
 }
 
-
+function sendEmail ( details ) {
+  Email.send( {
+    ...mail,
+    ...details
+  } )
+}
