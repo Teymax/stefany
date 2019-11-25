@@ -148,11 +148,12 @@ $(document).ready(function () {
     }
   });
 });
-let mainBlocks, servicesStat, userParams, servicesBlock;
+let mainBlocks, servicesStatic, userParams, servicesBlock;
 const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
 let headers;
+let servicesAll = [];
 let servicesArr = [];
 let phoneInput;
 let fullNameInput;
@@ -213,19 +214,32 @@ function refreshPrice(e) {
       </div>
       `;
   })
-  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id=' + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, function (json) {
-    let data = getData(json);
-    let serviceCheckboxes = document.querySelectorAll(" input:checked");
-    let sum = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
-      const parent = current.closest('.checkbox-row')
-      let id = parent.getAttribute('id')
-      let serv = data.services.find(service => service.id === +id)
-      return accum + serv.price_max
-    }, 0)
-    $('.serviceListSum').each(function (e) {
-      this.textContent = sum + ' грн';
-    })
+  let serviceCheckboxes = document.querySelectorAll(" input:checked");
+  let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
+    const parent = current.closest('.checkbox-row')
+    let id = parent.getAttribute('id')
+    let serv = servicesAll.find(service => service.id === +id)
+    console.log(serv)
+    return accum + serv.price_max
+  }, 0)
+  let genTime = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
+    const parent = current.closest('.checkbox-row')
+    let id = parent.getAttribute('id')
+    let serv = servicesAll.find(service => service.id === +id)
+    return accum + serv.seance_length
+  }, 0)
+  $('.serviceListTime').each(function (e) {
+    if (genTime % 3600 === 0)
+      this.textContent = genTime / 3600 + ' ч';
+    else {
+      let minutes = genTime % 3600
+      let hours = (genTime - minutes) / 3600
+      this.textContent = hours + " ч" + minutes + " мин"
+    }
+
+  })
+  $('.serviceListSum').each(function (e) {
+    this.textContent = genPrice + ' грн';
   })
 }
 
@@ -236,19 +250,20 @@ function getServices() {
 
 function displayServices(json) {
   let data = getData(json);
-  let services = data.services
-
+  servicesAll = data.services
+  console.log(servicesAll)
   mainBlocks = document.getElementsByClassName("checkbox-row")
-  servicesStat = Array.prototype.map.call(mainBlocks, block => {
+  servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
-  servicesStat = servicesStat.filter(service => !!service)
-  for (let i = 0; i < servicesStat.length; i++) {
-    services.map(function (service) {
-      if (+servicesStat[i] === service.id)
+  servicesStatic = servicesStatic.filter(service => !!service)
+  for (let i = 0; i < servicesStatic.length; i++) {
+    servicesAll.map(function (service) {
+      if (+servicesStatic[i] === service.id) {
         mainBlocks[i].querySelector("p.item-price").textContent = service.price_max;
-      mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length / 60;
-      servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
+        mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length / 60;
+        servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
+      }
 
     })
   }
@@ -278,7 +293,6 @@ function getFormParams() {
   let services = [...serviceCheckboxes].map(function (service) {
     let main = service.closest('.checkbox-row');
     let id = main.getAttribute('id');
-    // console.log(id);
     return parseInt(id);
   });
   console.log(services)
@@ -346,15 +360,15 @@ function bookRecord(event, plusDate = 0) {
     url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
     ajax('GET', headers, url, null,
-        function (data) {
-          let dataArr = getData(data);
-          if (processErrors(dataArr)) return alert("Error");
-          if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-          else {
-            // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-            writeClient(dataArr[0].datetime, event.target.id === "pay_button")
-          }
-        });
+      function (data) {
+        let dataArr = getData(data);
+        if (processErrors(dataArr)) return alert("Error");
+        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+        else {
+          // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
+          writeClient(dataArr[0].datetime, event.target.id === "pay_button")
+        }
+      });
   }, document.body);
 }
 
