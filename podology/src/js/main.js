@@ -2,8 +2,8 @@ window.mail = {
   Host    : 'smtp.gmail.com',
   Username: 'four.progs@gmail.com',
   Password: 'Htndeth0614',
-  To      : 'he4then.mail@gmail.com',
-  From    : 'info@steffany.ua'
+  To      : 'help@steffany.ua',
+  From    : 'help@steffany.ua'
 }
 
 // function initMap ( node ) {
@@ -485,6 +485,7 @@ $( document ).ready( function () {
   // e.target.children[ clickedIndex ].value ) location.reload() } ) var maps =
   // document.querySelectorAll( '.g-map' ) Array.prototype.forEach.call( maps,
   // function ( item ) { initMap( item )} )
+
   $( '#carouselExample' ).on( 'slide.bs.carousel', function ( e ) {
     var $e = $( e.relatedTarget )
     var idx = $e.index()
@@ -652,6 +653,10 @@ $( document ).ready( function () {
           .val() }<br>Телефон: ${ $( '[data-feedback-phone]' )
           .val() }<br>Сообщение: ${ $( '[data-feedback-message]' ).val() }`
       } )
+      $( '[data-feedback-name]' ).val( '' )
+      $( '[data-feedback-email]' ).val( '' )
+      $( '[data-feedback-phone]' ).val( '' )
+      $( '[data-feedback-message]' ).val( '' )
     } )
   }
 
@@ -854,4 +859,11 @@ function sendEmail ( details ) {
     ...mail,
     ...details
   } )
+  closeAllModals()
+}
+
+function closeAllModals () {
+  setTimeout( () => {
+    $( '.modal' ).modal( 'hide' )
+  }, 3000 )
 }

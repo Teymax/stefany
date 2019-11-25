@@ -8,7 +8,7 @@
         input.w-100.p-text-light.mb-2(type="email", placeholder="Email" data-email)
         input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон" data-phone)
         input(type="submit" style="display: none;" data-f-day-s-btn)
-        +customBtn('отправить')(data-f-day-c-btn data-toggle='modal', data-target='#thanksPopup')
+        +customBtn('отправить')(data-f-day-c-btn data-toggle='modal' data-target='#thanksPopup')
 
 #callbackModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='callbackModal', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -20,7 +20,7 @@
         input.w-100.p-text-light.mb-4(type="email", placeholder="Email" id='consultEmail' data-email)
         input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон" id='consultPhone' data-phone)
         input(type="submit" style="display: none;" data-s-day-s-btn)
-        +customBtn('отправить')(data-s-day-c-btn data-toggle='modal', data-target='#thanksPopup')
+        +customBtn('отправить')(data-s-day-c-btn data-toggle='modal' data-target='#thanksPopup')
 
 #secondDayCourse.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -32,7 +32,7 @@
         input.w-100.p-text-light.mb-2(type="email", placeholder="Email" data-email)
         input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон" data-phone)
         input(type="submit" style="display: none;" data-t-day-s-btn)
-        +customBtn('отправить')(data-t-day-c-btn data-toggle='modal', data-target='#thanksPopup')
+        +customBtn('отправить')(data-t-day-c-btn data-toggle='modal' data-target='#thanksPopup')
 
 #chooseDayCourse.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -48,7 +48,7 @@
           option.p-text-light(value="1") Базовой подологии
           option.p-text-light(value="2") Малой ортопедии и ортониксии
         input(type="submit" style="display: none;" data-fr-day-s-btn)
-        +customBtn('отправить')(data-fr-day-c-btn data-toggle='modal', data-target='#thanksPopup')
+        +customBtn('отправить')(data-fr-day-c-btn data-toggle='modal' data-target='#thanksPopup')
 #thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content.px-1
