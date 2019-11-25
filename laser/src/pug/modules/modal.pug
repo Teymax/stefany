@@ -1,4 +1,4 @@
-#modalServiceList.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+#modalServiceListPay.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
       h4.text-center Введите свои данные
@@ -7,13 +7,21 @@
         input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
         input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email")
         input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
-        .c-btn.mt-3.d-flex.justify-content-between.w-332
-          .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceList')
-            .text-section
-              +casetSvg
-              span оплатить
-          .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceList')
-            .text-section
-              +penSvg
-              span записаться
+        .button.btn-first.btn-simple.svg.caset.mx-auto(data-toggle='modal', data-target='#modalServiceList')
+          .text-section
+            +casetSvg
+            span оплатить
 
+#modalServiceListSinugUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
+    .modal-content
+      h4.text-center Введите свои данные
+      h5.text-center чтобы занять место в группе
+      form
+        input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
+        input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email")
+        input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
+        .button.btn-second.btn-simple.svg.pen.mx-auto(data-toggle='modal', data-target='#modalServiceList')
+          .text-section
+            +penSvg
+            span записаться
