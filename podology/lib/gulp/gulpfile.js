@@ -10,9 +10,10 @@ const gulp         = require( 'gulp' ),
       pug          = require( 'gulp-pug' ),
       beautifySass = require( 'gulp-sassbeautify' ),
       beautifyPug  = require( 'gulp-pug-beautify' ),
-      cssmin       = require( 'gulp-cssmin' ),
+      // cssmin       = require( 'gulp-cssmin' ),
       htmlmin      = require( 'gulp-htmlmin' ),
-      zip          = require( 'gulp-zip' )
+      zip          = require( 'gulp-zip' ),
+      babel        = require( 'gulp-babel')
 
 function moveImages () {
   return gulp.src( '../../src/assets/img/**/*.*' )
@@ -57,11 +58,11 @@ function styles () {
                indent: 2
              } ) )
              //минификация sass
-             .pipe( cleanCSS( {
-               level: 2
-             } ) )
+             // .pipe( cleanCSS( {
+             //   level: 2
+             // } ) )
              // Минификация css
-             .pipe( cssmin() )
+             // .pipe( cssmin() ) ////////////////////
              //Выходная папка для стилей
              .pipe( gulp.dest( '../../build/css' ) )
              .pipe( browserSync.stream() )
@@ -72,6 +73,9 @@ function scripts () {
   //шаблоны для поиска файлов JS
   //Все файлы по шаблону './src/js/**/*.js'
   return gulp.src( jsFiles )
+              .pipe(babel({
+                presets: ['@babel/env']
+              }))
              //объединение файлов в один
              .pipe( concat( 'main.js' ) )
              // минификация JS
@@ -102,7 +106,6 @@ const compress = () => gulp.src( '../../build/**' ).pipe( zip( 'build.zip' ) )
 
 function watch () {
   browserSync.init( {
-    ghostMode: false,
     server: {
       baseDir: '../../build'
     }
