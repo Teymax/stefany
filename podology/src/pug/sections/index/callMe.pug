@@ -5,12 +5,4 @@ section.section.call-me
       .dash.center
       p.white-text.text-center.text-lg-left Раздел медицины, занимающийся лечением заболеваний стопы и голени, объединяющий знания по ортопедии, травматологии, сосудистой и гнойной хирургии, нейрохирургии.
     .col-12.col-lg-5
-      .callback-card
-        h3 Оставьте ваши данные
-        p и мы вам перезвоним
-        form(method="post" action="/")
-          input(type="text" placeholder="Имя")
-          input(type="email" placeholder="Email")
-          input(type="tel" placeholder="Телефон").mb-4
-          input(type="submit" style="display: none")
-          +btnCallback('перезвонить мне')
+      +writeClientForm

@@ -8,12 +8,4 @@ section.section.consultaion.service-consultation
       .services-btn-container.d-none.d-md-flex.justify-content-center
         +btnCallback('перезвонить мне')(data-toggle='modal', data-target='#callbackModal')
       .col-12.d-block.d-md-none
-        .callback-card.btn-callback-w-100
-          h3 Оставьте ваши данные
-          p и мы вам перезвоним
-          form(method="post" action="/")
-            input(type="text" placeholder="Имя")
-            input(type="email" placeholder="Email")
-            input(type="tel" placeholder="Телефон").mb-4
-            input(type="submit" style="display: none")
-            +btnCallback('перезвонить мне')
+        +writeClientForm.btn-callback-w-100

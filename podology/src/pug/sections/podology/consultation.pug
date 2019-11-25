@@ -7,12 +7,4 @@ section.section.podology-consultation
       span.d-none.d-lg-block
         +btnCallback('перезвонить мне')(data-toggle='modal', data-target='#callbackModal')
     .col-12.col-lg-5.d-block.d-lg-none
-      .callback-card
-        h3 Оставьте ваши данные
-        p и мы вам перезвоним
-        form(method="post" action="/")
-          input(type="text" placeholder="Имя")
-          input(type="email" placeholder="Email")
-          input(type="tel" placeholder="Телефон").mb-4
-          input(type="submit" style="display: none")
-          +btnCallback('перезвонить мне')
+      +writeClientForm

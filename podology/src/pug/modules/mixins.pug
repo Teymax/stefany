@@ -12,13 +12,15 @@ mixin phoneSvg
 
 mixin customBtn(text)
   .btn-callback.no-svg
-    .text-section&attributes(attributes)
+    .text-section&attributes(
+      attributes)
       span= text
     .arrow-section
       +arrowSvg
 mixin btnCallback(text)
   .btn-callback
-    .text-section&attributes(attributes)
+    .text-section&attributes(
+      attributes)
       +phoneSvg
       span= text
     .arrow-section
@@ -26,7 +28,8 @@ mixin btnCallback(text)
 
 mixin btnPen(text)
   .btn-callback
-    .text-section&attributes(attributes)
+    .text-section&attributes(
+      attributes)
       +penSvg
       span= text
     .arrow-section
@@ -35,7 +38,8 @@ mixin btnPen(text)
 
 mixin btnService(text)
   .btn-callback
-    .text-section&attributes(attributes)
+    .text-section&attributes(
+      attributes)
       +penSvg
       span= text
     .arrow-section
@@ -50,3 +54,61 @@ mixin sliderServices
         .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
           .section-bg-dark.w-100.p-1
             p.paragraph-text.text-center.mb-0 #{element.name}
+
+
+mixin writeClientForm
+  .callback-card&attributes(attributes)
+    h3 Оставьте ваши данные
+    p.text-lowercase и мы вам перезвоним
+    form(method="post" action="/")
+      input(type="text" placeholder="Имя" data-client-name)
+      input(type="email" placeholder="Email" data-client-email)
+      input(type="tel" placeholder="Телефон" data-client-phone).mb-4
+      input(type="submit" style="display: none" data-btn-submit)
+      +btnCallback('перезвонить мне')(data-toggle='modal', data-target='#thanksPopup')
+      script(type="text/javascript")
+        | (() => {
+        | const form = document.currentScript.parentElement
+        | const submitBtn = form.querySelector('[data-btn-submit]')
+        | const triggerBtn = form.querySelector('.btn-callback')
+        | form.addEventListener('submit', e => {
+        |   e.preventDefault()
+        |   console.log(e)
+        |   const name = form.querySelector('[data-client-name]').value,
+        |         email = form.querySelector('[data-client-email]').value,
+        |         phone = form.querySelector('[data-client-phone]').value
+        |   console.log(name, email, phone)
+        |   var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+        |     var partnerId = 240913
+        |     var managerId = 823619
+        |     var date = new Date()
+        |     var payload = { phone, name, email }
+        |     date.setDate( date.getDate() + 1 )
+        |     var dateString = date.getFullYear() + '-' + ( ( date.getMonth() ) + 1 < 10 ? '0' + ( date.getMonth() + 1 ) : date.getMonth() + 1 ) + '-' + ( date.getDate() < 10 ? '0' + date.getDate() : date.getDate() )
+        |     var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=3354786'
+        |     var headers = {
+        |       'Content-Type' : 'application/json',
+        |       'Authorization': 'Bearer ' + bearer_token
+        |     }
+        |     var request = $.ajax( {
+        |       url    : url,
+        |       type   : 'GET',
+        |       headers: headers
+        |     } )
+        |
+        |     request.done( function ( msg ) {
+        |       console.log( 'Time: ', msg[ 0 ].datetime )
+        |       writeClient( msg[ 0 ].datetime, payload )
+        |       form.querySelector('[data-client-name]').value = ''
+        |       form.querySelector('[data-client-email]').value = ''
+        |       form.querySelector('[data-client-phone]').value = ''
+        |     } )
+        |
+        |     request.fail( function ( jqXHR, textStatus ) {
+        |       alert( 'Request failed: ' + textStatus )
+        |     } )
+        | })
+        | triggerBtn.addEventListener('click', e => {
+        |   submitBtn.click()
+        | })
+        | })()
