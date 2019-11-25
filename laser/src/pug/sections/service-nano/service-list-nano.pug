@@ -43,7 +43,7 @@ section.section.service-laser-service-list.nano-service-list
                       p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
           .list-male
             each category in allCategoryMale
-              h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center.list-male #{category.name}
+              h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center #{category.name}
               .checkbox-group.pb-4
                 each service in category.services
                   .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
@@ -60,14 +60,8 @@ section.section.service-laser-service-list.nano-service-list
           .sale-container.d-flex.flex-column.align-items-center
             h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
             button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
-          .checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
-            each service in arrStomachFemale, allCategoryMale
-              //.checkbox-row.d-flex.align-items-start.justify-content-between.py-2
-              //  .column-right.d-flex.align-items-start
-              //    +defaultCheckbox('light')(class='')
-              //    p.paragraph-text.text-w-light.text-color-white.ml-3.mb-0 #{service.name}
-              //  .column-left.d-flex.justify-content-end
-              //    p.paragraph-text.text-w-bold.text-color-white.mb-0 #{service.price}
+          #choosenServices.checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
+
           .sale-group.d-flex.justify-content-between
             p.paragraph-text.text-w-light.text-color-white Акция
             p.paragraph-text.text-w-bold.text-color-white 40%
@@ -87,7 +81,6 @@ section.section.service-laser-service-list.nano-service-list
               .text-section
                 +penSvg
                 span записаться
-          .c-content
 
 
 section.section.service-laser-service-list-tablet3.d-flex.d-xl-none.py-0.flex-column.pt-4.py-3

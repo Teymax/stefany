@@ -138,7 +138,7 @@ $(document).ready(function () {
     $(this).parent().toggleClass('checked')
   });
 //checkbox service list male/female
-  $('#checkboxServiceList').click(function(){
+  $('#checkboxServiceList').click(function () {
     if ($(this).is(':checked')) {
       $('.list-female').toggleClass('hidden')
       $('.list-male').toggleClass('visible')
@@ -148,7 +148,7 @@ $(document).ready(function () {
     }
   });
 });
-let  mainBlocks, servicesStat, userParams, servicesBlock;
+let mainBlocks, servicesStat, userParams, servicesBlock;
 const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
@@ -157,10 +157,12 @@ let servicesArr = [];
 let phoneInput;
 let fullNameInput;
 let emailInput;
+let choosenServices = [];
 
 const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 window.onload = function () {
   servicesBlock = document.querySelector("div.service-list-group")
+
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.getElementById("phone");
@@ -175,7 +177,42 @@ window.onload = function () {
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
 };
 
-function refreshPrice() {
+function refreshPrice(e) {
+  // let orderChecked = document.createElement('div')
+  // orderChecked.classList.add(['checkbox-row']);
+  // $('#choosenServices').append(orderChecked);
+
+  const parent = e.target.closest('.checkbox-row');
+  console.log(parent);
+  let id = parent.getAttribute('id')
+  let serviceName = parent.querySelector('.paragraph-text').innerHTML;
+  let price = parent.querySelector('.item-price').innerHTML;
+  console.log(serviceName, price);
+  choosenServices.push({
+    id,
+    serviceName,
+    price
+  });
+  console.log(choosenServices);
+  $("#choosenServices")[0].innerHTML = '';
+  choosenServices.forEach(item => {
+    $("#choosenServices")[0].innerHTML += `
+       <div class="">
+        <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
+          <label class="service-checkbox-label">
+            <input class="align-self-center" type="checkbox" name="service"/>
+            <span class="checkmark light"></span>
+          </label>
+          <div class="column-right d-flex align-items-start">
+              <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
+          </div>
+          <div class="column-left d-flex justify-content-end">
+              <p class="paragraph-text text-w-bold text-color-white mb-0">${item.price}</p>
+          </div>
+        </div>
+      </div>
+      `;
+  })
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id=' + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, function (json) {
     let data = getData(json);
@@ -186,7 +223,7 @@ function refreshPrice() {
       let serv = data.services.find(service => service.id === +id)
       return accum + serv.price_max
     }, 0)
-    $('.serviceListSum').each(function(e) {
+    $('.serviceListSum').each(function (e) {
       this.textContent = sum + ' грн';
     })
   })
@@ -281,7 +318,7 @@ function processErrors(data) {
   return true;
 }
 
-var loadJS = function(url, implementationCode, location){
+var loadJS = function (url, implementationCode, location) {
   //url is URL of external file, implementationCode is the code
   //to be called from the file, location is the location to
   //insert the <script> element
@@ -294,7 +331,7 @@ var loadJS = function(url, implementationCode, location){
 
   location.appendChild(scriptTag);
 };
-var yourCodeToBeCalled = function(){
+var yourCodeToBeCalled = function () {
 //your code goes here
 }
 
