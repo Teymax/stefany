@@ -26,6 +26,7 @@ $(document).ready(function () {
     $('.city-item').removeClass('city-active');
     $(this).addClass('active');
     $(city).addClass('city-active');
+
   });
 
 

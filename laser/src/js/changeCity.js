@@ -148,6 +148,7 @@ $(document).ready(function () {
   function changeDataForCity() {
     $('.city-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].cityName;
+      console.log(citiesData);
     });
 
     $('.city-in-dynamic').each(function (e) {
