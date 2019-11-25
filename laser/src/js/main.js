@@ -421,7 +421,7 @@ function preparePayButton() {
 
 function createOrder(amount, order_desc, name, services, email, phone) {
   var button = $ipsp.get('button');
-  button.setMerchantId(1432749);
+  button.setMerchantId(1397120);
   button.setAmount(amount, 'UAH');
   button.setResponseUrl('http://stefany.teymax.com/?payed=true');
   button.setHost('api.fondy.eu');
