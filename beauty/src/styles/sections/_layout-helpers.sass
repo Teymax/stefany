@@ -175,6 +175,19 @@ p, .p-text, .paragraph-text
   @include font('CormorantGaramond-Bold', 700, 30, 35)
   color: $section-title-color
 
+.underline-title
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 100%
+    left: 0
+    display: block
+    width: 100%
+    max-width: 89px
+    height: 2px
+    background: rgba(85, 98, 120, 0.39)
+
 .bg-rose
   background: $bg-rose
     
