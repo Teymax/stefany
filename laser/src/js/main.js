@@ -184,26 +184,36 @@ function refreshPrice(e) {
   // $('#choosenServices').append(orderChecked);
 
   const parent = e.target.closest('.checkbox-row');
-  console.log(parent);
+  // console.log(parent);
   let id = parent.getAttribute('id')
   let serviceName = parent.querySelector('.paragraph-text').innerHTML;
   let price = parent.querySelector('.item-price').innerHTML;
-  console.log(serviceName, price);
-  choosenServices.push({
-    id,
-    serviceName,
-    price
-  });
-  console.log(choosenServices);
+  let checkbox = parent.querySelector('input[name="service"]');
+  console.log(checkbox);
+  if(checkbox.checked) {
+    choosenServices.push({
+      id,
+      serviceName,
+      price
+    });
+  } else {
+    choosenServices = choosenServices.filter(function(item) {
+      return item.id !== id
+    })
+  }
+
+  // choosenServices = choosenServices.filter(function(item, pos) {
+  //   return choosenServices.indexOf(item) == pos;
+  // })
   $("#choosenServices")[0].innerHTML = '';
   choosenServices.forEach(item => {
     $("#choosenServices")[0].innerHTML += `
        <div class="">
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
-          <label class="service-checkbox-label">
-            <input class="align-self-center" type="checkbox" name="service"/>
-            <span class="checkmark light"></span>
-          </label>
+<!--          <label class="service-checkbox-label">-->
+<!--            <input class="align-self-center" type="checkbox" name="service"/>-->
+<!--            <span class="checkmark light"></span>-->
+<!--          </label>-->
           <div class="column-right d-flex align-items-start">
               <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
           </div>
@@ -295,7 +305,7 @@ function getFormParams() {
     let id = main.getAttribute('id');
     return parseInt(id);
   });
-  console.log(services)
+  // console.log(services)
 
   return {
     phone: phoneInput.value.length > 0 ? phoneInput.value : false,
