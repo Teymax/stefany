@@ -154,9 +154,9 @@ window.onload = function () {
   console.log(phoneInput)
   fullNameInput = document.getElementById("fullname");
   emailInput = document.getElementById("email");
-  let payButtons = document.querySelectorAll(".pay_button");
+  let payButtons = document.querySelectorAll("#pay_button");
   [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
-  let orderButtons = document.querySelectorAll(".order_button");
+  let orderButtons = document.querySelectorAll("#order_button");
   [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
   getServices();
   let checking = document.querySelectorAll('label.service-checkbox-label input');
@@ -169,20 +169,19 @@ function refreshPrice(e) {
   // $('#choosenServices').append(orderChecked);
 
   const parent = e.target.closest('.checkbox-row');
-  // console.log(parent);
   let id = parent.getAttribute('id')
   let serviceName = parent.querySelector('.paragraph-text').innerHTML;
   let price = parent.querySelector('.item-price').innerHTML;
   let checkbox = parent.querySelector('input[name="service"]');
   console.log(checkbox);
-  if(checkbox.checked) {
+  if (checkbox.checked) {
     choosenServices.push({
       id,
       serviceName,
       price
     });
   } else {
-    choosenServices = choosenServices.filter(function(item) {
+    choosenServices = choosenServices.filter(function (item) {
       return item.id !== id
     })
   }
@@ -345,26 +344,25 @@ var yourCodeToBeCalled = function () {
 }
 
 function bookRecord(event, plusDate = 0) {
-  loadJS('https://api.fondy.eu/static_common/v1/checkout/ipsp.js', function () {
-    event.preventDefault();
-    let date = new Date();
-    if (plusDate > 0) date.setDate(date.getDate() + plusDate);
-    let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-    let params = getFormParams();
-    let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
-    url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
-    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-    ajax('GET', headers, url, null,
-      function (data) {
-        let dataArr = getData(data);
-        if (processErrors(dataArr)) return alert("Error");
-        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-        else {
-          // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-          writeClient(dataArr[0].datetime, event.target.id === "pay_button")
-        }
-      });
-  }, document.body);
+  event.preventDefault();
+  let date = new Date();
+  console.log(event)
+  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+  let params = getFormParams();
+  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+  url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
+  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, url, null,
+    function (data) {
+      let dataArr = getData(data);
+      if (processErrors(dataArr)) return alert("Error");
+      if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+      else {
+        // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
+        writeClient(dataArr[0].datetime, event.target.id === "pay_button")
+      }
+    });
 }
 
 function writeClient(time, isPayment = false) {
@@ -392,11 +390,15 @@ function writeClient(time, isPayment = false) {
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams, function (data) {
     let err = processErrors(getData(data));
     if (!err) {
+
       alert("Success");
     }
   });
-  if (isPayment)
+  if (isPayment) {
+    console.log("uh")
+
     preparePayButton();
+  }
 }
 
 function preparePayButton() {
