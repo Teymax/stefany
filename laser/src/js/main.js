@@ -254,7 +254,7 @@ function displayServices(json) {
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
       if (+servicesStatic[i] === service.id) {
-        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
+        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max } грн`
         mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
         servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
       }
