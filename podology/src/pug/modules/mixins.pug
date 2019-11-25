@@ -12,15 +12,13 @@ mixin phoneSvg
 
 mixin customBtn(text)
   .btn-callback.no-svg
-    .text-section&attributes(
-      attributes)
+    .text-section&attributes(attributes)
       span= text
     .arrow-section
       +arrowSvg
 mixin btnCallback(text)
   .btn-callback
-    .text-section&attributes(
-      attributes)
+    .text-section&attributes(attributes)
       +phoneSvg
       span= text
     .arrow-section
@@ -28,8 +26,7 @@ mixin btnCallback(text)
 
 mixin btnPen(text)
   .btn-callback
-    .text-section&attributes(
-      attributes)
+    .text-section&attributes(attributes)
       +penSvg
       span= text
     .arrow-section

@@ -1,3 +1,11 @@
+window.mail = {
+  Host    : 'smtp.gmail.com',
+  Username: 'four.progs@gmail.com',
+  Password: 'Htndeth0614',
+  To      : 'he4then.mail@gmail.com',
+  From    : 'info@steffany.ua'
+}
+
 // function initMap ( node ) {
 //   google.maps.event.addDomListener( window, 'load', function () {
 //     var coords = new google.maps.LatLng( 50.2479782, 28.6852178 )
@@ -391,7 +399,8 @@
 // 'Ивано-Франковск' }, current: 'Киев' } }, if  : { ua: { rest   : { zt  :
 // 'Житомир', kiev: 'Київ' }, current: 'Івано-Франківськ' }, ru: { rest   : {
 // zt  : 'Житомир', kiev: 'Киев' }, current: 'Ивано-Франковск' } } }
-// window.i18ns = { ua: { text: 'UA', rest: { ru: 'RU' } }, ru: { text: 'RU', rest: { ua: 'UA' } } }
+// window.i18ns = { ua: { text: 'UA', rest: { ru: 'RU' } }, ru: { text: 'RU',
+// rest: { ua: 'UA' } } }
 /**
  * TODO: test redirect to i18n page
  */
@@ -582,6 +591,70 @@ $( document ).ready( function () {
     }
   } )
 
+  const firstDayCourse = $( '#firstDayCourse' )[ 0 ]
+
+  if ( firstDayCourse ) {
+    $( '[data-f-day-c-btn]' )
+      .on( 'click', _ => $( '[data-f-day-s-btn]' ).click() )
+
+    firstDayCourse.addEventListener( 'submit', e => {
+      e.preventDefault()
+      sendEmail( {
+        Subject: 'Обучение',
+        Body   : `Имя: ${ firstDayCourse.querySelector( '[data-name]' ).value }<br>Email: ${ firstDayCourse.querySelector( '[data-email]' ).value }<br>Телефон: ${ firstDayCourse.querySelector( '[data-phone]' ).value }<br>Курс: ${ firstDayCourse.querySelector( 'select' ).selectedOptions[ 0 ].innerText }`
+      } )
+    } )
+  }
+
+  const secondDayCourse = $( '#secondDayCourse' )[ 0 ]
+
+  if ( secondDayCourse ) {
+    $( '[data-s-day-c-btn]' )
+      .on( 'click', _ => $( '[data-s-day-s-btn]' ).click() )
+
+    secondDayCourse.addEventListener( 'submit', e => {
+      e.preventDefault()
+      sendEmail( {
+        Subject: 'Обучение',
+        Body   : `Имя: ${ secondDayCourse.querySelector( '[data-name]' ).value }<br>Email: ${ secondDayCourse.querySelector( '[data-email]' ).value }<br>Телефон: ${ secondDayCourse.querySelector( '[data-phone]' ).value }<br>Курс: ${ secondDayCourse.querySelector( 'select' ).selectedOptions[ 0 ].innerText }`
+      } )
+    } )
+  }
+
+  const chooseDayCourse = $( '#chooseDayCourse' )[ 0 ]
+
+  if ( chooseDayCourse ) {
+    $( '[data-fr-day-c-btn]' )
+      .on( 'click', _ => $( '[data-fr-day-s-btn]' ).click() )
+    chooseDayCourse.addEventListener( 'submit', e => {
+      e.preventDefault()
+      sendEmail( {
+        Subject: 'Обучение',
+        Body   : `Имя: ${ chooseDayCourse.querySelector( '[data-name]' ).value }<br>Email: ${ chooseDayCourse.querySelector( '[data-email]' ).value }<br>Телефон: ${ chooseDayCourse.querySelector( '[data-phone]' ).value }<br>Курс: ${ chooseDayCourse.querySelector( 'select' ).selectedOptions[ 0 ].innerText }`
+      } )
+    } )
+  }
+
+  const contactForm = document.querySelector( '.feedback-form' )
+
+  if ( contactForm ) {
+    $( '[data-btn-contact-submit]' ).on( 'click', e => {
+      $( '[data-contact-submit]' ).click()
+    } )
+
+    contactForm.addEventListener( 'submit', e => {
+      e.preventDefault()
+      Email.send( {
+        ...mail,
+        Subject: 'Обратная связь',
+        Body   : `Имя: ${ $( '[data-feedback-name]' )
+          .val() }<br>Email: ${ $( '[data-feedback-email]' )
+          .val() }<br>Телефон: ${ $( '[data-feedback-phone]' )
+          .val() }<br>Сообщение: ${ $( '[data-feedback-message]' ).val() }`
+      } )
+    } )
+  }
+
   $( '.podology-service-slider' ).owlCarousel( {
     loop      : true,
     margin    : 35,
@@ -739,39 +812,46 @@ $( document ).ready( function () {
 } )
 
 window.writeClient = ( time, data ) => {
-    var bearer_token = 'f5wujgx5yn6cagtk9fg2'
-    var partnerId = 240913
-    var managerId = 823619
-    var headers = {
-        'Content-Type' : 'application/json',
-        'Authorization': 'Bearer ' + bearer_token
-    }
-    var payload = {
-        'phone'       : data.phone,
-        'fullname'    : data.name,
-        'email'       : data.email,
-        'appointments': [
-            {
-                'id'      : new Date().getTime(),
-                'services': [ 3354786 ],
-                'staff_id': managerId,
-                'datetime': time
-            }
-        ]
-    }
-    console.log( 'Payload: ', payload.appointments )
-    var request = $.ajax( {
-        url    : 'https://api.yclients.com/api/v1/book_record/' + partnerId,
-        type   : 'POST',
-        data   : JSON.stringify( payload ),
-        headers: headers
-    } )
+  var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+  var partnerId = 240913
+  var managerId = 823619
+  var headers = {
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer ' + bearer_token
+  }
+  var payload = {
+    'phone'       : data.phone,
+    'fullname'    : data.name,
+    'email'       : data.email,
+    'appointments': [
+      {
+        'id'      : new Date().getTime(),
+        'services': [ 3354786 ],
+        'staff_id': managerId,
+        'datetime': time
+      }
+    ]
+  }
+  console.log( 'Payload: ', payload.appointments )
+  var request = $.ajax( {
+    url    : 'https://api.yclients.com/api/v1/book_record/' + partnerId,
+    type   : 'POST',
+    data   : JSON.stringify( payload ),
+    headers: headers
+  } )
 
-    request.done( function ( msg ) {
-        console.log( 'Send: ', msg )
-    } )
+  request.done( function ( msg ) {
+    console.log( 'Send: ', msg )
+  } )
 
-    request.fail( function ( jqXHR, textStatus ) {
-        alert( 'Request failed: ' + textStatus )
-    } )
+  request.fail( function ( jqXHR, textStatus ) {
+    alert( 'Request failed: ' + textStatus )
+  } )
+}
+
+function sendEmail ( details ) {
+  Email.send( {
+    ...mail,
+    ...details
+  } )
 }
