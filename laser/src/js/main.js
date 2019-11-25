@@ -122,7 +122,7 @@ $(document).ready(function () {
     $(this).parent().toggleClass('checked')
   });
 //checkbox service list male/female
-  $('#checkboxServiceList').click(function(){
+  $('#checkboxServiceList').click(function () {
     if ($(this).is(':checked')) {
       $('.list-female').toggleClass('hidden')
       $('.list-male').toggleClass('visible')
@@ -132,22 +132,26 @@ $(document).ready(function () {
     }
   });
 });
-let  mainBlocks, servicesStat, userParams, servicesBlock;
+let mainBlocks, servicesStatic, userParams, servicesBlock;
 const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
 let headers;
+let servicesAll = [];
 let servicesArr = [];
 let phoneInput;
 let fullNameInput;
 let emailInput;
+let choosenServices = [];
 
 const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 window.onload = function () {
   servicesBlock = document.querySelector("div.service-list-group")
+
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.getElementById("phone");
+  console.log(phoneInput)
   fullNameInput = document.getElementById("fullname");
   emailInput = document.getElementById("email");
   let payButtons = document.querySelectorAll(".pay_button");
@@ -159,20 +163,78 @@ window.onload = function () {
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
 };
 
-function refreshPrice() {
-  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id=' + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, function (json) {
-    let data = getData(json);
-    let serviceCheckboxes = document.querySelectorAll(" input:checked");
-    let sum = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
-      const parent = current.closest('.checkbox-row')
-      let id = parent.getAttribute('id')
-      let serv = data.services.find(service => service.id === +id)
-      return accum + serv.price_max
-    }, 0)
-    $('.serviceListSum').each(function(e) {
-      this.textContent = sum + ' грн';
+function refreshPrice(e) {
+  // let orderChecked = document.createElement('div')
+  // orderChecked.classList.add(['checkbox-row']);
+  // $('#choosenServices').append(orderChecked);
+
+  const parent = e.target.closest('.checkbox-row');
+  // console.log(parent);
+  let id = parent.getAttribute('id')
+  let serviceName = parent.querySelector('.paragraph-text').innerHTML;
+  let price = parent.querySelector('.item-price').innerHTML;
+  let checkbox = parent.querySelector('input[name="service"]');
+  console.log(checkbox);
+  if(checkbox.checked) {
+    choosenServices.push({
+      id,
+      serviceName,
+      price
+    });
+  } else {
+    choosenServices = choosenServices.filter(function(item) {
+      return item.id !== id
     })
+  }
+
+  // choosenServices = choosenServices.filter(function(item, pos) {
+  //   return choosenServices.indexOf(item) == pos;
+  // })
+  $("#choosenServices")[0].innerHTML = '';
+  choosenServices.forEach(item => {
+    $("#choosenServices")[0].innerHTML += `
+       <div class="">
+        <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
+<!--          <label class="service-checkbox-label">-->
+<!--            <input class="align-self-center" type="checkbox" name="service"/>-->
+<!--            <span class="checkmark light"></span>-->
+<!--          </label>-->
+          <div class="column-right d-flex align-items-start">
+              <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
+          </div>
+          <div class="column-left d-flex justify-content-end">
+              <p class="paragraph-text text-w-bold text-color-white mb-0">${item.price}</p>
+          </div>
+        </div>
+      </div>
+      `;
+  })
+  let serviceCheckboxes = document.querySelectorAll(" input:checked");
+  let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
+    const parent = current.closest('.checkbox-row')
+    let id = parent.getAttribute('id')
+    let serv = servicesAll.find(service => service.id === +id)
+    console.log(serv)
+    return accum + serv.price_max
+  }, 0)
+  let genTime = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
+    const parent = current.closest('.checkbox-row')
+    let id = parent.getAttribute('id')
+    let serv = servicesAll.find(service => service.id === +id)
+    return accum + serv.seance_length
+  }, 0)
+  $('.serviceListTime').each(function (e) {
+    if (genTime % 3600 === 0)
+      this.textContent = genTime / 3600 + ' ч';
+    else {
+      let minutes = genTime % 3600
+      let hours = (genTime - minutes) / 3600
+      this.textContent = hours + " ч" + minutes + " мин"
+    }
+
+  })
+  $('.serviceListSum').each(function (e) {
+    this.textContent = genPrice + ' грн';
   })
 }
 
@@ -183,19 +245,20 @@ function getServices() {
 
 function displayServices(json) {
   let data = getData(json);
-  let services = data.services
-
+  servicesAll = data.services
+  console.log(servicesAll)
   mainBlocks = document.getElementsByClassName("checkbox-row")
-  servicesStat = Array.prototype.map.call(mainBlocks, block => {
+  servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
-  servicesStat = servicesStat.filter(service => !!service)
-  for (let i = 0; i < servicesStat.length; i++) {
-    services.map(function (service) {
-      if (+servicesStat[i] === service.id)
+  servicesStatic = servicesStatic.filter(service => !!service)
+  for (let i = 0; i < servicesStatic.length; i++) {
+    servicesAll.map(function (service) {
+      if (+servicesStatic[i] === service.id) {
         mainBlocks[i].querySelector("p.item-price").textContent = service.price_max;
-      mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length / 60;
-      servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
+        mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length / 60;
+        servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
+      }
 
     })
   }
@@ -225,10 +288,9 @@ function getFormParams() {
   let services = [...serviceCheckboxes].map(function (service) {
     let main = service.closest('.checkbox-row');
     let id = main.getAttribute('id');
-    // console.log(id);
     return parseInt(id);
   });
-  console.log(services)
+  // console.log(services)
 
   return {
     phone: phoneInput.value.length > 0 ? phoneInput.value : false,
@@ -265,7 +327,7 @@ function processErrors(data) {
   return true;
 }
 
-var loadJS = function(url, implementationCode, location){
+var loadJS = function (url, implementationCode, location) {
   //url is URL of external file, implementationCode is the code
   //to be called from the file, location is the location to
   //insert the <script> element
@@ -278,7 +340,7 @@ var loadJS = function(url, implementationCode, location){
 
   location.appendChild(scriptTag);
 };
-var yourCodeToBeCalled = function(){
+var yourCodeToBeCalled = function () {
 //your code goes here
 }
 
@@ -293,15 +355,15 @@ function bookRecord(event, plusDate = 0) {
     url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
     ajax('GET', headers, url, null,
-        function (data) {
-          let dataArr = getData(data);
-          if (processErrors(dataArr)) return alert("Error");
-          if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-          else {
-            // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-            writeClient(dataArr[0].datetime, event.target.id === "pay_button")
-          }
-        });
+      function (data) {
+        let dataArr = getData(data);
+        if (processErrors(dataArr)) return alert("Error");
+        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+        else {
+          // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
+          writeClient(dataArr[0].datetime, event.target.id === "pay_button")
+        }
+      });
   }, document.body);
 }
 
