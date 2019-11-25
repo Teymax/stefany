@@ -47,66 +47,50 @@ $(document).ready(function () {
     }
   });
 
-  $('.specialists-slider').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      731: {
-        items: 2
-      },
-      1200: {
-        items: 4
-      }
-    }
-  });
 
-  var videoSLider = $('.video-slider').owlCarousel({
-    loop: false,
-    margin: 0,
-    nav: false,
-    dots: false,
-    items: 1,
-    dotsContainer: '.video-slider-dots',
-    responsive: {
-      0: {
-        nav: true
-      },
-      541: {
-        nav: false
-      },
-      1200: {
-        nav: false
-      }
-    }
-  })
-
-  $('.video-slider-dots .owl-dot').click(function (e) {
-    e.preventDefault()
-    var itemPosition = $(this).attr('data-pos')
-    videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
-  })
-
-  var videoSliderDots = $('.video-slider-dots').owlCarousel({
-    navContainer: '.video-nav-slider-dots',
-    loop: false,
-    margin: 0,
-    nav: true,
-    dots: false,
-    items: 1
-  })
-
-  $('.video-nav-slider-dots .owl-next').click(function () {
-    videoSliderDots.trigger('next.owl.carousel')
-  })
-
-  $('.video-nav-slider-dots .owl-prev').click(function () {
-    videoSliderDots.trigger('prev.owl.carousel', [300])
-  })
+  //
+  // var videoSLider = $('.video-slider').owlCarousel({
+  //   loop: false,
+  //   margin: 0,
+  //   nav: false,
+  //   dots: false,
+  //   items: 1,
+  //   dotsContainer: '.video-slider-dots',
+  //   responsive: {
+  //     0: {
+  //       nav: true
+  //     },
+  //     541: {
+  //       nav: false
+  //     },
+  //     1200: {
+  //       nav: false
+  //     }
+  //   }
+  // })
+  //
+  // $('.video-slider-dots .owl-dot').click(function (e) {
+  //   e.preventDefault()
+  //   var itemPosition = $(this).attr('data-pos')
+  //   videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
+  // })
+  //
+  // var videoSliderDots = $('.video-slider-dots').owlCarousel({
+  //   navContainer: '.video-nav-slider-dots',
+  //   loop: false,
+  //   margin: 0,
+  //   nav: true,
+  //   dots: false,
+  //   items: 1
+  // })
+  //
+  // $('.video-nav-slider-dots .owl-next').click(function () {
+  //   videoSliderDots.trigger('next.owl.carousel')
+  // })
+  //
+  // $('.video-nav-slider-dots .owl-prev').click(function () {
+  //   videoSliderDots.trigger('prev.owl.carousel', [300])
+  // })
 
   $('#closeOverlay').click(function (e) {
     $('#overlay').hide()
