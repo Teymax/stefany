@@ -150,10 +150,10 @@ window.onload = function () {
 
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
-  phoneInput = document.getElementById("phone");
+  phoneInput = document.querySelectorAll("#phone");
   console.log(phoneInput)
-  fullNameInput = document.getElementById("fullname");
-  emailInput = document.getElementById("email");
+  fullNameInput = document.querySelectorAll("#fullname");
+  emailInput = document.querySelectorAll("#email");
   let payButtons = document.querySelectorAll("#pay_button");
   [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
   let orderButtons = document.querySelectorAll("#order_button");
@@ -239,7 +239,8 @@ function refreshPrice(e) {
 
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id=' + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
+  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
+    + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
 }
 
 function displayServices(json) {
@@ -254,7 +255,7 @@ function displayServices(json) {
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
       if (+servicesStatic[i] === service.id) {
-        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max } грн`
+        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
         mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
         servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
       }
@@ -282,7 +283,7 @@ function getData(data) {
 }
 
 
-function getFormParams() {
+function getFormParams(inputNum) {
   let serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
   let services = [...serviceCheckboxes].map(function (service) {
     let main = service.closest('.checkbox-row');
@@ -290,11 +291,20 @@ function getFormParams() {
     return parseInt(id);
   });
   console.log(services)
+  // phoneInput = Array.from(phoneInput)
+  // fullNameInput = Array.from(fullNameInput)
+  // emailInput = Array.from(emailInput)
 
+  let phone = [...phoneInput][inputNum].value
+  let email = [...emailInput][inputNum].value
+  let fullName = [...fullNameInput][inputNum].value
+  console.log(phone)
+  console.log(email)
+  console.log(fullName)
   return {
-    phone: phoneInput.value.length > 0 ? phoneInput.value : false,
-    fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
-    email: emailInput.value.length > 0 ? emailInput.value : false,
+    phone: phone.length > 0 ? phone : false,
+    fullName: fullName.length > 0 ? fullName : false,
+    email: email.length > 0 ? email : false,
     services: services.length > 0 ? services : false,
     // phone: '+380974724612',
     // fullName: 'Vlad M',
@@ -326,29 +336,20 @@ function processErrors(data) {
   return true;
 }
 
-var loadJS = function (url, implementationCode, location) {
-  //url is URL of external file, implementationCode is the code
-  //to be called from the file, location is the location to
-  //insert the <script> element
-
-  var scriptTag = document.createElement('script');
-  scriptTag.src = url;
-
-  scriptTag.onload = implementationCode;
-  scriptTag.onreadystatechange = implementationCode;
-
-  location.appendChild(scriptTag);
-};
-var yourCodeToBeCalled = function () {
-//your code goes here
-}
-
 function bookRecord(event, plusDate = 0) {
+  let inputNum;
   event.preventDefault();
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
-  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-  let params = getFormParams();
+  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+  let params
+  if (event.target.id === "pay_button")
+    inputNum= 0
+  else
+    inputNum= 1
+  params = getFormParams(inputNum);
+
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
@@ -359,14 +360,14 @@ function bookRecord(event, plusDate = 0) {
       if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
       else {
         // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-        writeClient(dataArr[0].datetime, event.target.id === "pay_button")
+        writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
       }
     });
 }
 
-function writeClient(time, isPayment = false) {
+function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  let params = getFormParams();
+  let params = getFormParams(inputNum);
   console.log(params)
   if (!params.phone || !params.fullName || !params.email || !params.services) {
     alert("smth went wrong, please reload the page and try again");
@@ -387,7 +388,8 @@ function writeClient(time, isPayment = false) {
       }
     ]
   };
-  ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams, function (data) {
+  ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+    function (data) {
     let err = processErrors(getData(data));
     if (!err) {
 
@@ -397,12 +399,12 @@ function writeClient(time, isPayment = false) {
   if (isPayment) {
     console.log("uh")
 
-    preparePayButton();
+    preparePayButton(inputNum);
   }
 }
 
-function preparePayButton() {
-  let params = getFormParams();
+function preparePayButton(inputNum) {
+  let params = getFormParams(inputNum);
   if (!params.phone || !params.fullName || !params.email || !params.services) {
     alert("we haven`t all data for payment");
     return;
@@ -423,7 +425,7 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   var button = $ipsp.get('button');
   button.setMerchantId(1397120);
   button.setAmount(amount, 'UAH');
-  button.setResponseUrl('http://stefany.teymax.com/?payed=true');
+  button.setResponseUrl('http://steffany.dotwork.digital/laser/?payed=true');
   button.setHost('api.fondy.eu');
   button.addField({
     label: 'Описание платежа',
