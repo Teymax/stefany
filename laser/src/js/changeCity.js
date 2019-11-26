@@ -78,7 +78,7 @@ $(document).ready(function () {
         cityName: 'Львов',
         cityNameIn: 'Львове',
         address: 'ул. Гулака-Артемовского, 2',
-        imagesAmount: 0,
+        imagesAmount: 11,
         imagesAmountSpecialists: null,
         specialists: []
       }
