@@ -228,7 +228,7 @@ function refreshPrice(e) {
     else {
       let minutes = genTime % 3600
       let hours = (genTime - minutes) / 3600
-      this.textContent = hours + " ч" + minutes / 60 + " мин"
+      this.textContent = hours + " ч " + minutes / 60 + " мин"
     }
 
   })
@@ -289,7 +289,7 @@ function getFormParams() {
     let id = main.getAttribute('id');
     return parseInt(id);
   });
-  // console.log(services)
+  console.log(services)
 
   return {
     phone: phoneInput.value.length > 0 ? phoneInput.value : false,
@@ -367,6 +367,7 @@ function bookRecord(event, plusDate = 0) {
 function writeClient(time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams();
+  console.log(params)
   if (!params.phone || !params.fullName || !params.email || !params.services) {
     alert("smth went wrong, please reload the page and try again");
     return;
@@ -448,11 +449,11 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value: phone,
     readonly: true
   });
-  const names = services.map(service => {
+  let names = services.map(service => {
     const tempService = servicesAll.find(item => item.id === service)
     return tempService.title
   })
-  names.join(', ')
+  names = names.join(', ')
   console.log(names)
   button.addField({
     label: 'services',
