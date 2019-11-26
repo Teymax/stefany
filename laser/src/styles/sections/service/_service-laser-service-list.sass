@@ -14,6 +14,9 @@ section.section.service-laser-service-list
       overflow: initial
 
   .column-left
+    width: 69px
+    display: flex
+    justify-content: space-between
     .paragraph-text
       white-space: nowrap
 
@@ -38,6 +41,9 @@ section.section.service-laser-service-list
   h3
     font-size: 30px
   .checkbox-group
+    display: flex
+    flex-direction: column
+    align-items: center
     width: 500px
     @include media-breakpoint-down(md)
       width: 100%
@@ -48,6 +54,8 @@ section.section.service-laser-service-list
         width: 15px
         height: 15px
         //margin-bottom: 1.2rem
+  .list-male
+    display: none
   .container
     .row
       .left
@@ -73,12 +81,12 @@ section.section.service-laser-service-list
              // width: 100%
       .right
         .stash
-          position: sticky
-          top: -20px
+          //position: sticky
+          //top: -20px
           .sale-container
             width: 324px
             height: 215px
-            background:  url(../assets/img/service-laser-page/sale.png)
+            background-image:  url(../assets/img/service-laser-page/sale.png)
             background-size: cover
             background-repeat: no-repeat
             &:before

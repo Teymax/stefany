@@ -1,0 +1,119 @@
+section.section.service-laser-service-list-tablet1.d-block.d-xl-none.pt-3.pb-4
+  .container
+    .col-12.sale
+      .sale-container.d-flex.flex-column.align-items-center.align-items-md-start.flex-md-row.justify-content-md-center
+        .sale-img-container.d-flex
+          p#sale-p.text-color-light  -40%
+          //img.mt-3(src="assets/img/service-laser-page/Ellipse.png")
+        h3.h3-title.text-color-light.mb-0.align-self-center.text-center на ВСЕ зоны лазерной эпиляции
+    .col-12.sale
+      .sale-container.d-flex.align-items-center.justify-content-center
+        button.btn ПОДРОБНЕЕ
+section.section.service-laser-service-list.nano-service-list
+  .container
+    .row.main-block
+      .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.man-symbol-bg
+        .checkbox-wrapper
+          input(type="checkbox" class="checkbox" id="checkboxServiceList")
+        .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
+          - let arrStomachFemale={name: "Живот и спина", services: [{"id": 1415305,"title": "Верхняя часть спины + плечи"}, {"id": 1415349,"title": "Спина "}, {"id": 1415323,"title": "Крестцовая область "}, {"id": 1415343,"title": "Поясничная область"}, {"id": 1415314,"title": "Декольте "}, {"id": 1415312,"title": "Грудь "}, {"id": 1415332, "title": "Ореола молочных желез"}, {"id": 1415316,"title": "Живот "}, {"id": 1415296,"title": "Белая линия живота"},]}
+
+          - let arrStomachMale={name: "Живот и спина", services: [{"id": 1415305, "title": "Верхняя часть спины + плечи"}, {"id": 1415350,"title": "Спина "}, {"id": 1415324,"title": "Крестцовая область "}, {"id": 1415343,"title": "Поясничная область",}, {"id": 1415315,"title": "Декольте "}, {"id": 1415313,"title": "Грудь "}, {"id": 1415332,"title": "Ореола молочных желез"}, {"id": 1415317,"title": "Живот "}, {"id": 1415296,"title": "Белая линия живота"},]}
+
+          - let arrLegsFemale={name: "Область ног", services: [{"id": 1415330,"title": "Ноги "}, {"id": 1415355,"title": "Ягодицы "}, {"id": 1415294,"title": "Бедра"}, {"id": 1415322,"title": "Колени"}, {"id": 1415309,"title": "Голени "}, {"id": 1415311,"title": "Голени с коленями"}, {"id": 1415333,"title": "Пальцы ног"}, {"id": 1415351,"title": "Стопы"}, {"id": 1415335,"title": "Плечи"}]}
+
+          - let arrLegsMale={name: "Область ног", services: [{"id": 1415331,"title": "Ноги "}, {"id": 1415294,"title": "Бедра"}, {"id": 4000384,"title": "ягодицы"}, {"id": 1415322,"title": "Колени"}, {"id": 1415310,"title": "Голени "}, {"id": 1415311,"title": "Голени с коленями"}, {"id": 1415333,"title": "Пальцы ног"}, {"id": 1415351,"title": "Стопы"}]}
+
+          - let arrBikiniFemale = {name: "Бикини", services: [{"id": 1415298,"title": "Бикини глубокое   (половые губы"}, {"id": 1415300,"title": "Бикини не глубокое  (бикини по линии трусиков)"}, {"id": 1415318,"title": "Зона лобка "}, {"id": 1415342,"title": "Половые губы"}, {"id": 1415327,"title": "Межъягодичная складка"}]}
+
+          - let arrBikiniMale = {name: "Бикини", services: [{"id": 1415299,"title": "\"Бикини глубокое   (волосы по всей интимной области"}, {"id": 1415301,"title": "Бикини не глубокое  (бикини по линии трусиков)"}, {"id": 1415319,"title": "Зона лобка "}, {"id": 1415329,"title": "Мошонка"}, {"id": 1415327,"title": "Межъягодичная складка"}]}
+
+          - let arrArmsFemale ={name: "Область рук", services: [{"id": 1415347, "title": "Руки полностью "}, {"id": 1415340,"title": "Подмышечные области "}, {"id": 1415346,"title": "Руки до локтя "},  {"id": 1415320,"title": "Кисти рук + пальцы "  }, {"id": 1415334,"title": "Пальцы рук",  }, {"id": 1415336,"title": "Плечи ",  }, {"id": 1415344,"title": "Предплечья "  },  {"id": 1415335,"title": "Плечи"  }]}
+
+          - let arrArmsMale = {name: "Область рук", services: [{"id": 1415348, "title": "Руки полностью "},  {"id": 1415341,"title": "Подмышечные области "  },  {"id": 1415321,"title": "Кисти рук + пальцы "  },  {"id": 1415334,"title": "Пальцы рук"  }, {"id": 1415337,"title": "Плечи "  },  {"id": 1415345,"title": "Предплечья ",  },  {"id": 1415335,"title": "Плечи"  }]}
+
+          - let arrFaceFemale = {name: "Область лица", services: [{"id": 1415307,"title": "Все лицо"}, {"id": 1415325,"title": "Линия лба"}, {"id": 1415302,"title": "Брови"}, {"id": 1415326,"title": "Межбровье"}, {"id": 1415306,"title": "Виски"}, {"id": 1415352,"title": "Уши"}, {"id": 1415354,"title": "Щеки"}, {"id": 1415303,"title": "Верхняя губа "}, {"id": 1415338,"title": "Подбородок "}, {"id": 1415353,"title": "Шея (передняя или задняя часть)"}]}
+
+          - let arrFaceMale = {name: "Область лица", services: [{"id": 1415308,"title": "Все лицо "}, {"id": 1415325,"title": "Линия лба"}, {"id": 1415302,"title": "Брови"}, {"id": 1415326,"title": "Межбровье"}, {"id": 1415306,"title": "Виски"}, {"id": 1415352,"title": "Уши"}, {"id": 1415354,"title": "Щеки"}, {"id": 1415304,"title": "Верхняя губа "}, {"id": 1415339,"title": "Подбородок "}, {"id": 1415353,"title": "Шея (передняя или задняя часть)"}]}
+
+          - let allCategoryFemale = [arrFaceFemale,  arrArmsFemale, arrBikiniFemale, arrLegsFemale, arrStomachFemale]
+          - let allCategoryMale = [arrFaceMale,  arrArmsMale, arrBikiniMale, arrLegsMale, arrStomachMale]
+
+          .list-female
+            each category in allCategoryFemale
+              h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center #{category.name}
+              .checkbox-group.pb-4
+                each service in category.services
+                  .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
+                    .column-right.d-flex.align-items-start
+                      +defaultCheckbox('dark')
+                      p.paragraph-text.text-color-lightdark.ml-3.mb-0 #{service.title}
+                    .column-left
+                      p.paragraph-text.text-color-lightdark.mr-3.mb-0.item-time
+                      p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
+          .list-male
+            each category in allCategoryMale
+              h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center.list-male #{category.name}
+              .checkbox-group.pb-4
+                each service in category.services
+                  .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
+                    .column-right.d-flex.align-items-start
+                      +defaultCheckbox('dark')
+                      p.paragraph-text.text-color-lightdark.ml-3.mb-0 #{service.title}
+                    .column-left
+                      p.paragraph-text.text-color-lightdark.mr-3.mb-0.item-time
+                      p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
+
+
+      .col-12.col-xl-4.right.custom-py-services-price.d-none.d-xl-block
+        .stash.d-flex.flex-column.align-items-center.pb-5
+          .sale-container.d-flex.flex-column.align-items-center
+            h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
+            button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
+          .checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
+            each service in arrStomachFemale
+              //.checkbox-row.d-flex.align-items-start.justify-content-between.py-2
+              //  .column-right.d-flex.align-items-start
+              //    +defaultCheckbox('light')(class='')
+              //    p.paragraph-text.text-w-light.text-color-white.ml-3.mb-0 #{service.name}
+              //  .column-left.d-flex.justify-content-end
+              //    p.paragraph-text.text-w-bold.text-color-white.mb-0 #{service.price}
+          .sale-group.d-flex.justify-content-between
+            p.paragraph-text.text-w-light.text-color-white Акция
+            p.paragraph-text.text-w-bold.text-color-white 40%
+          .price-group.d-flex.justify-content-between
+            .price-block.d-flex.justify-content-start
+              img(src="assets/img/laser-page/time.png")
+              p.paragraph-text.text-w-bold.text-color-white.ml-2 30 мин
+            .price-block.d-flex.justify-content-end
+              img(src="assets/img/laser-page/price.png")
+              p.serviceListSum.paragraph-text.text-w-bold.text-color-white.ml-2 0 грн
+          .c-btn.mt-3.d-flex.justify-content-between.w-332
+            .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceList')
+              .text-section
+                +casetSvg
+                span оплатить
+            .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceList')
+              .text-section
+                +penSvg
+                span записаться
+
+
+section.section.service-laser-service-list-tablet3.d-flex.d-xl-none.py-0.flex-column.pt-4.py-3
+  .container
+    .d-flex.flex-column.align-items-center.flex-md-row.justify-content-md-center
+      .d-flex.mb-3.mb-md-0.align-items-center
+        p.paragraph-text.d-inline-flex.align-items-center.mr-5.mb-0.drop-menu Список услуг
+          svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='white', xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
+        p.serviceListSum.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0 0 грн.
+      .c-btn.w-332
+        .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceList')
+          .text-section
+            +casetSvg
+            span оплатить
+        .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceList')
+          .text-section
+            +penSvg
+            span записаться
+
