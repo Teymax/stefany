@@ -58,7 +58,7 @@ $(document).ready(function () {
         cityName: 'Ивано-Франковск',
         cityNameIn: 'Ивано-Франковске',
         address: 'ул. Ивана Франка, 25',
-        imagesAmount: 5,
+        imagesAmount: 9,
         imagesAmountSpecialists: null,
         specialists: []
       }
@@ -78,7 +78,7 @@ $(document).ready(function () {
         cityName: 'Львов',
         cityNameIn: 'Львове',
         address: 'ул. Гулака-Артемовского, 2',
-        imagesAmount: 11,
+        imagesAmount: 10,
         imagesAmountSpecialists: null,
         specialists: []
       }
