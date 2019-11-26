@@ -25,7 +25,7 @@ mixin contactForm(title)
             .col-12.col-lg-6
               input(type="text" placeholder="Имя" name="name" data-feedback-name)
               input(type="tel" placeholder="Телефона" name="phone" data-feedback-phone)
-              input(type="email" placeholder="Email" name="email" data-feedback-email)
+              input.mb-0(type="email" placeholder="Email" name="email" data-feedback-email)
               input(type="submit" data-contact-submit style="display: none;")
             .col-12.col-lg-6
               textarea(placeholder="Ваше сообщение..." name="message" data-feedback-message).mt-4.mt-lg-0
