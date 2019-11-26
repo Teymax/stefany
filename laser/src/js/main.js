@@ -362,7 +362,6 @@ var yourCodeToBeCalled = function () {
 function bookRecord(event, plusDate = 0) {
   event.preventDefault();
   let date = new Date();
-  console.log(event)
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params = getFormParams();
@@ -430,9 +429,9 @@ function preparePayButton() {
     price += servicesArr[params.services[i]].price;
   }
   let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
-  let order = createOrder(price, desc, params.fullName, params.services.join(","), params.email, params.phone);
+  let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
   console.log(order)
-  location.replace(createOrder(price, desc, params.fullName, params.services.join(","), params.email, params.phone));
+  location.replace(createOrder(price, desc, params.fullName, params.services, params.email, params.phone));
 }
 
 function createOrder(amount, order_desc, name, services, email, phone) {
@@ -465,10 +464,16 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value: phone,
     readonly: true
   });
+  const names = services.map(service => {
+    const tempService = servicesAll.find(item => item.id === service)
+    return tempService.title
+  })
+  names.join(', ')
+  console.log(names)
   button.addField({
     label: 'services',
     name: 'user_services',
-    value: services,
+    value: names,
     readonly: true
   });
   console.log(button);
