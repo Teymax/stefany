@@ -288,10 +288,12 @@
 .info-block-8
 	background: transparent
 	padding-top: 84px !important
+	@media(max-width: 1199px)
+		padding-top: 35px !important
 	.container
 		max-width: 1289px !important
 		padding-right: 91px
-		@media(max-width: 767px)
+		@media(max-width: 1199px)
 			padding-right: 0
 		.col-img
 			top: -137px !important
@@ -304,6 +306,9 @@
 			max-width: 770px !important
 			padding: 39px 0 121px 235px !important
 			background: transparent 
+			@media(max-width: 1199px)
+				max-width: 100% !important
+				padding: 0 0 25px !important
 	.border-el
 		margin-bottom: 60px
 	.section-title
@@ -417,16 +422,31 @@
 				top: 93px !important
 				right: 51px !important
 				max-width: 434px !important
+				@media(max-width: 1310px)
+					right: -25px !important
 		.big-text
 			left: -80px !important
-			bottom: 10px 
+			bottom: 10px
+			@media(max-width: 1300px)
+				left: -110px !important
 		.big-text-2
 			right: 45px
 			left: auto !important
 			bottom: 10px !important
+			@media(max-width: 1310px)
+				right: -40px
 .info-block-3-4
 	padding-top: 73px
 	border-bottom: 122px solid #ffffff
+	@media(max-width: 1199px)
+		background: #ffffff !important
+		padding-top: 35px !important
+		padding-bottom: 35px !important
+		border-top: 50px solid #BECDD4
+		border-bottom: none
+	@media(max-width: 767px)
+		padding-top: 20px !important
+		border-top: 25px solid #BECDD4
 	.container-info
 		.info-block-wrap
 			max-width: 1108px !important
@@ -446,11 +466,18 @@
 				padding: 59px 104px 49px 108px !important
 				margin-bottom: 0
 				max-width: 649px !important
+				@media(max-width: 1199px)
+					padding: 0 0 35px !important
+					max-width: 100% !important
+					.under-border
+						padding-top: 0
+
 			.big-text
 				transform: rotate(0)
 				left: -80px
 				top: auto
 				bottom: -51px
+				
 .info-block-5-1
 	padding-top: 172px !important
 	border-bottom: 85px solid #ffffff
@@ -479,6 +506,44 @@
 	.big-text
 		left: -99px !important
 		bottom: 8px !important
+.info-block-5-2
+	padding-top: 160px !important
+	border-bottom: 51px solid #ffffff
+	@media(max-width: 1199px)
+		padding-top: 0px !important
+		background: #ffffff !important
+		border-top: 43px solid #BECDD4  !important
+		border-bottom: 0px solid #ffffff
+	@media(max-width: 767px)
+		border-top: 0px solid transparent !important
+	.container
+		.info-block-wrap
+			max-width: 1179px !important
+			padding-left: 26px
+			@media(max-width: 1199px)
+				padding-left: 0
+			.col-img
+				max-width: 612px !important
+				top: -71px !important
+			.col-info
+				padding: 91px 114px 20px 146px !important
+				max-width: 651px !important
+				margin-left: 0
+				@media(max-width: 1199px)
+					padding: 35px 0 0px !important
+					max-width: 100% !important
+				@media(max-width: 767px)
+					padding: 10px 0 0px !important
+				.section-title
+					margin-bottom: 27px !important
+					@media(max-width: 767px)
+						margin-bottom: 18px !important
+	.big-text
+		left: auto !important
+		right: -475px
+		bottom: 412px !important
+		z-index: 0 !important
+		transform: rotate(-90deg)
 .info-block.info-block-6-1
 	padding-top: 91px !important
 	border-bottom: 113px solid #ffffff
@@ -515,8 +580,12 @@
 .info-block.info-block-6-2
 	padding-bottom: 58px !important
 	border-bottom: 81px solid #ffffff
+	@media(max-width: 767px)
+		padding-bottom: 35px !important
 	.info-block-wrap
 		padding-left: 26px
+		@media(max-width: 1199px)
+			padding-left: 0
 		.col-img
 			padding: 73px 0 0 72px !important
 			top: -40px !important
@@ -539,7 +608,7 @@
 		background: #A8A4CD !important
 		padding-bottom: 27px !important
 	@media(max-width: 767px)
-		padding-bottom: 0 !important
+		padding-bottom: 30px !important
 	.info-block-wrap
 		max-width: 1186px !important
 		.behind-bg
@@ -563,20 +632,60 @@
 .info-block-7-2
 	border-bottom: 168px solid #ffffff
 	padding-bottom: 31px !important
+	@media(max-width: 1199px)
+		padding-top: 0 !important
+		padding-bottom: 0px !important
+		background: #EDE1DF !important
+		border-bottom: 0 solid #ffffff
 	.container
 		.info-block-wrap
 			max-width: 1282px !important
 			padding-left: 29px
+			@media(max-width: 1199px)
+				padding-left: 0
 		.behind-bg
 			top: -13px !important
 			right: -3px
 			padding: 70px 69px 0 0px !important
 			max-width: 611px !important
 			background: -webkit-linear-gradient(right, #ffffff, #ffffff 82%, transparent 0, transparent)
+			@media(max-width: 1310px)
+				right: -115px
+			@media(max-width: 1199px)
+				max-height: inherit
+				height: auto
+				padding: 0 0 84px 84px !important
+				margin-top: 0 !important
+				margin-bottom: -200px !important
+				overflow: inherit
+				min-height: auto !important
+				position: relative !important
+				right: 0
+				top: auto !important
+				order: 2 !important
+				background: none
+				&::before
+					content: ''
+					position: absolute
+					z-index: -1
+					bottom: 0
+					left: 0
+					width: 80%
+					height: 80%
+					background: #ffffff
+			@media(max-width: 767px)
+				position: static !important
+				padding: 0 !important
+				&::before
+					display: none
 		.col-info
 			padding: 58px 0px 0 105px !important
 			max-width: 615px !important
 			z-index: 3
+			@media(max-width: 1199px)
+				padding: 30px 0 35px !important
+				max-width: 100% !important
+				order: 1 !important
 			.border-el
 				margin-bottom: 62px
 				&::before
@@ -593,16 +702,25 @@
 			left: -367px
 .info-block-7-3
 	padding-top: 76px !important
+	@media(max-width: 1199px)
+		padding-top: 230px !important
+		padding-bottom: 0px !important
 	.container
 		.info-block-wrap
 			max-width: 1259px !important
 			padding-left: 27px
+			@media(max-width: 1199px)
+				padding-left: 0
 		.behind-bg
 			left: 0 !important
 			padding: 0 0 76px 70px !important
 			background: -webkit-linear-gradient(left, #ffffff, #ffffff 87%, transparent 0, transparent)
 			max-width: 646px !important
 			top: -130px !important
+			@media(max-width: 1310px)
+				left: -90px !important
+			@media(max-width: 1199px)
+				display: none
 		.big-text
 			transform: rotate(-90deg)
 			top: auto
@@ -613,6 +731,10 @@
 	padding-top: 59px !important
 	border-bottom: 102px solid #ffffff
 	overflow: hidden
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		padding-bottom: 35px !important
+		border-bottom: none
 	.container 
 		.behind-bg
 			top: 23px !important
@@ -620,6 +742,8 @@
 			background: -webkit-linear-gradient(right, #ffffff, #ffffff 88%, transparent 0, transparent)
 		.col-info
 			padding: 46px 0px 67px 105px !important
+			@media(max-width: 1199px)
+				padding: 0 !important
 			.list-p-text
 				padding-bottom: 11px
 			.border-el
@@ -635,6 +759,9 @@
 			z-index: 0
 .info-block-7-5
 	padding-top: 84px !important
+	@media(max-width: 1199px)
+		padding-top: 50px !important
+		padding-bottom: 50px !important
 	.container 
 		.behind-bg
 			background: -webkit-linear-gradient(left, #ffffff, #ffffff 82%, transparent 0, transparent)
@@ -642,31 +769,55 @@
 			top: -141px !important
 		.col-info
 			padding: 0 0px 0 85px !important
+			@media(max-width: 1199px)
+				padding: 0 !important
 			.btn-simple
 				margin-top: 40px
 .info-block-7-6
 	padding-top: 50px !important
 	padding-bottom: 0px !important
 	border: none !important
+	@media(max-width: 1199px)
+		padding-top: 50px !important
+		padding-bottom: 50px !important
+		overflow: initial
 	.container
 		.behind-bg
 			background: none
 			top: 63px !important
 			right: 0px
 			padding: 0px 72px 91px 0px !important
+			@media(max-width: 1310px)
+				right: 110px
+			@media(max-width: 1199px)
+				position: static !important
+				margin-bottom: -230px
+				padding: 84px 84px 0 0px !important
+				background: -webkit-linear-gradient(right, #ffffff, #ffffff 82%, transparent 0, transparent)
+				&::before
+					display: none
+			@media(max-width: 767px)
+				padding: 20px 20px 0 0px !important
 		.big-text
 			top: 201px
 			left: -367px
 		.col-info
 			padding: 46px 0px 67px 70px !important
+			@media(max-width: 1199px)
+				padding: 0 0 35px !important
 .info-block-7-7
 	padding-bottom: 165px !important
+	@media(max-width: 1199px)
+		padding-top: 50px !important
+		padding-bottom: 50px !important
 	.container-info 
 		.info-block-wrap
 			max-width: 1286px !important
 			.col-img
 				top: -79px !important
 				padding: 73px 73px 0 0px !important
+				@media(max-width: 1310px)
+					right: -110px
 				&.behind-white-bg
 					&::before
 						top: 0
@@ -674,23 +825,45 @@
 						height: 77%
 			.col-info
 				padding: 27px 34px 0 26px !important
+				@media(max-width: 1199px)
+					padding: 0 !important
 .info-block-7-8
 	padding-top: 71px !important
 	padding-bottom: 75px !important
+	@media(max-width: 767px)
+		padding-top: 35px !important
+		padding-bottom: 35px !important
 	.info-block-wrap 
 		max-width: 1287px !important
 		.col-img
 			top: -148px !important
 			right: 0
 			padding: 0 73px 83px 0px !important
+			@media(max-width: 1199px)
+				margin-top: 0px !important
+				order: 2 !important
+			@media(max-width: 767px)
+				padding: 0 !important
 		.col-info
 			padding: 0 39px 0 133px !important
+			@media(max-width: 1300px)
+				padding: 0 46px 0 0 !important
+			@media(max-width: 1199px)
+				padding: 0 0 30px !important
+				order: 1 !important
+			@media(max-width: 767px)
+				padding: 0 0 30px !important
 .info-block-8-1
 	padding-bottom: 108px
+	@media(max-width: 1199px)
+		padding: 30px 0 !important
 	.container
 		max-width: 1226px !important
 		padding-left: 89px
 		padding-right: 0
+		@media(max-width: 1199px)
+			padding-left: 15px
+			padding-right: 15px
 		.col-img
 			top: -86px !important
 			max-width: 505px !important
@@ -698,22 +871,58 @@
 			margin-top: -6px
 			max-width: 523px !important
 			padding: 0 !important
+			@media(max-width: 1199px)
+				margin-top: 0px
+				max-width: 100% !important
 .info-block-8-2
 	padding-top: 121px !important
 	padding-bottom: 138px
+	@media(max-width: 1199px)
+		padding-top: 240px !important
+		padding-bottom: 60px !important
+	@media(max-width: 767px)
+		padding-top: 200px !important
 	.container
-		padding-left: 0
-		padding-right: 0
+		padding-left: 15px
+		padding-right: 15px
 		max-width: 1260px !important
 		.col-img
 			top: -52px !important
 			max-width: 607px !important
+			@media(max-width: 1310px)
+				left: -60px
 		.col-info
 			max-width: 610px !important
 			padding: 0 !important
+			@media(max-width: 1199px)
+				max-width: 100% !important
 			.section-title
 				padding-bottom: 29px
 				margin-bottom: 28px
+.info-block-8-3
+	padding-top: 53px !important
+	padding-bottom: 30px
+	@media(max-width: 767px)
+		padding-top: 20px !important
+	.container
+		padding-left: 15px
+		padding-right: 15px
+		max-width: 1258px !important
+		.col-img
+			right: 0
+			left:  auto !important
+			top: -55px !important
+			max-width: 613px !important
+		.col-info
+			margin-top: 0
+			max-width: 538px !important
+			padding: 0 0 50px 107px !important
+			@media(max-width: 1199px)
+				padding: 35px 0 0 0 !important
+				max-width: 100% !important
+			.section-title
+				line-height: 44px
+				padding-bottom: 0
 .info-block-9-1
 	padding-top: 0 !important
 	padding-bottom: 11px !important
@@ -722,7 +931,6 @@
 	.container 
 		max-width: 1266px
 		padding-right: 72px
-		margin: 0 0 0 auto
 		@media(max-width: 1199px)
 			padding-right: 15px
 		.col-info
@@ -750,21 +958,18 @@
 			padding: 0
 		.col-img
 			max-width: 100% !important
-.light-orange-bg
-	background: $spec-bg !important
-.white-bg
-	background: $color-white !important
-.light-purple-bg
-	background: $btn-bg !important
-.light-green-bg
-	background: $dark-gren-bg !important
-.no-bg-blk
-	background: transparent !important
+
+.infoblock-words-bg
+	padding-bottom: 40px !important
+	background: url('../assets/img/infoblock/infoblock-words-bg.png')
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: bottom left
 .border-darkgray
 	&::before
 		border-color: #9FA6BA !important
 @media(min-width: 1200px)
-	.border-block-item, .border-block-item2, .border-block-item3
+	.border-block-item, .border-block-item2, .border-block-item3, .border-block-item4
 		position: relative
 		&::before
 			content: ''
@@ -800,6 +1005,16 @@
 		.under-border
 			padding-top: 57px
 			padding-bottom: 15px
+	.border-block-item4
+		&::before
+			top: 59px
+			right: 72px
+			width: 541px
+			height: 206px
+			border: 3px solid #9FA6BA
+		.under-border
+			padding-top: 57px
+			padding-bottom: 0
 
 
 
@@ -947,6 +1162,17 @@
 			left: 50% !important
 			transform: translate(-50%)
 			bottom: 0 !important
+	.info-block-3-3
+		border-top: 0 solid transparent !important
+		border-bottom: 0 solid transparent !important
+		padding-top: 40px !important
+		padding-bottom: 40px !important
+		background: none !important
+		.container-info 
+			.info-block-wrap
+				.col-info
+					max-width: 100% !important
+					padding: 0 0 40px !important
 	.info-block-5-1
 		border-top: 50px solid #BECDD4
 		padding: 0 !important
@@ -987,10 +1213,16 @@
 		margin-right: 16px
 	.info-block-3-1
 		border-top: 0px solid transparent !important
-		padding-top: 4px !important
+		padding-top: 25px !important
 		.container 
 			.col-img
 				margin-bottom: 67px
 			.big-text
 				bottom: 50px !important
 				right: -53px !important
+	.info-block-3-3
+		.container 
+			.col-img
+				margin-bottom: 0px
+			.big-text
+				display: none !important

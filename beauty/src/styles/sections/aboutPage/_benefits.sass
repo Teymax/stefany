@@ -118,6 +118,8 @@
 		& > .row 
 			justify-content: space-between !important
 			align-items: flex-start !important
+			@media(max-width: 1199px)
+				justify-content: center !important
 		.bnf
 			position: relative
 			padding-left: 235px
@@ -278,11 +280,12 @@
 		line-height: 22px
 	.benefits.serviceBenefits:not(.doubleBnf)
 		padding-top: 29px
-	.bnf
-		padding-left: 15px !important
-		.bnf-cnt
-			margin-top: -194px
-			max-width: 100%
+	.benefits:not(.serviceBenefits2)
+		.bnf
+			padding-left: 15px !important
+			.bnf-cnt
+				margin-top: -194px
+				max-width: 100%
 	.benefits.serviceBenefits:not(.doubleBnf)
 		.section-title
 			line-height: 33px
@@ -306,7 +309,7 @@
 	.benefits.two-benefits .bnf-img-wrap
 		margin-left: 27px
 	.benefits .container .bnf
-		padding-left: 15px !important
+		padding-left: 0 !important
 	.benefits.doubleBnf .container .bnf .bnf-title
 		padding-bottom: 9px
 	.benefits .bnf-cnt p
