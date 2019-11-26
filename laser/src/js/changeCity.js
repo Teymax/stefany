@@ -58,7 +58,7 @@ $(document).ready(function () {
         cityName: 'Ивано-Франковск',
         cityNameIn: 'Ивано-Франковске',
         address: 'ул. Ивана Франка, 25',
-        imagesAmount: 5,
+        imagesAmount: 9,
         imagesAmountSpecialists: null,
         specialists: []
       }
@@ -78,7 +78,7 @@ $(document).ready(function () {
         cityName: 'Львов',
         cityNameIn: 'Львове',
         address: 'ул. Гулака-Артемовского, 2',
-        imagesAmount: 0,
+        imagesAmount: 10,
         imagesAmountSpecialists: null,
         specialists: []
       }
@@ -161,12 +161,21 @@ $(document).ready(function () {
 
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles();
+    const videoSlider = $('.video-slider');
+    const owlDots = $('.small-owl-images-container .owl-dots-item');
+    const specialistsSlider = $('.specialists-slider');
+    console.log(videoSlider);
+    if (videoSlider) {
+      videoSlider.html(carouselsHTML.videoCarousel);
+    }
+    if (owlDots) {
+      owlDots.html(carouselsHTML.videoCarouselSmall);
+    }
+    if (specialistsSlider) {
+      specialistsSlider.html(carouselsHTML.specialistsCarousel);
+    }
 
-    $('.video-slider')[0].innerHTML = carouselsHTML.videoCarousel;
-    $('.small-owl-images-container .owl-dots-item')[0].innerHTML = carouselsHTML.videoCarouselSmall;
-    $('.specialists-slider')[0].innerHTML = carouselsHTML.specialistsCarousel;
-
-    var videoSLider = $('.video-slider').owlCarousel({
+    var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop: false,
       margin: 0,
       nav: false,
@@ -189,7 +198,7 @@ $(document).ready(function () {
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
-      videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
+      videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
 
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
@@ -284,7 +293,6 @@ $(document).ready(function () {
   }
 
   function initCities() {
-
     initCarousels();
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
@@ -293,8 +301,6 @@ $(document).ready(function () {
         localStorage.setItem('city', city);
         changeDataForCity();
         location.reload();
-        console.log(city)
-
       }
     });
   }
