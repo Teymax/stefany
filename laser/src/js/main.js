@@ -26,7 +26,6 @@ $(document).ready(function () {
     $('.city-item').removeClass('city-active');
     $(this).addClass('active');
     $(city).addClass('city-active');
-
   });
 
 
@@ -229,7 +228,7 @@ function refreshPrice(e) {
     else {
       let minutes = genTime % 3600
       let hours = (genTime - minutes) / 3600
-      this.textContent = hours + " ч" + minutes / 60 + " мин"
+      this.textContent = hours + " ч " + minutes / 60 + " мин"
     }
 
   })

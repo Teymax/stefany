@@ -285,7 +285,6 @@ $(document).ready(function () {
   }
 
   function initCities() {
-    city = localStorage.getItem('city');
     initCarousels();
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
