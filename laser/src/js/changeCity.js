@@ -58,7 +58,7 @@ $(document).ready(function () {
         cityName: 'Ивано-Франковск',
         cityNameIn: 'Ивано-Франковске',
         address: 'ул. Ивана Франка, 25',
-        imagesAmount: 0,
+        imagesAmount: 5,
         imagesAmountSpecialists: null,
         specialists: []
       }
@@ -68,7 +68,7 @@ $(document).ready(function () {
         cityName: 'Луцк',
         cityNameIn: 'Луцке',
         address: 'пр. Воли, 10',
-        imagesAmount: 0,
+        imagesAmount: 9,
         imagesAmountSpecialists: null,
         specialists: []
       }
@@ -148,7 +148,6 @@ $(document).ready(function () {
   function changeDataForCity() {
     $('.city-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].cityName;
-      console.log(citiesData);
     });
 
     $('.city-in-dynamic').each(function (e) {
@@ -256,7 +255,7 @@ $(document).ready(function () {
     }
 
     for (let i = 0; i < imagesAmountSpecialists; i++) {
-      console.log('specialist', specialistsData[i]);
+      // console.log('specialist', specialistsData[i]);
       imagesSpecialists += `
         <div class="specialists-item">
             <div class="specialists-item-container mb-3 w-100" data-fancybox="">
@@ -285,6 +284,7 @@ $(document).ready(function () {
   }
 
   function initCities() {
+
     initCarousels();
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
@@ -293,6 +293,8 @@ $(document).ready(function () {
         localStorage.setItem('city', city);
         changeDataForCity();
         location.reload();
+        console.log(city)
+
       }
     });
   }
