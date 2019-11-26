@@ -47,66 +47,50 @@ $(document).ready(function () {
     }
   });
 
-  $('.specialists-slider').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      731: {
-        items: 2
-      },
-      1200: {
-        items: 4
-      }
-    }
-  });
 
-  var videoSLider = $('.video-slider').owlCarousel({
-    loop: false,
-    margin: 0,
-    nav: false,
-    dots: false,
-    items: 1,
-    dotsContainer: '.video-slider-dots',
-    responsive: {
-      0: {
-        nav: true
-      },
-      541: {
-        nav: false
-      },
-      1200: {
-        nav: false
-      }
-    }
-  })
-
-  $('.video-slider-dots .owl-dot').click(function (e) {
-    e.preventDefault()
-    var itemPosition = $(this).attr('data-pos')
-    videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
-  })
-
-  var videoSliderDots = $('.video-slider-dots').owlCarousel({
-    navContainer: '.video-nav-slider-dots',
-    loop: false,
-    margin: 0,
-    nav: true,
-    dots: false,
-    items: 1
-  })
-
-  $('.video-nav-slider-dots .owl-next').click(function () {
-    videoSliderDots.trigger('next.owl.carousel')
-  })
-
-  $('.video-nav-slider-dots .owl-prev').click(function () {
-    videoSliderDots.trigger('prev.owl.carousel', [300])
-  })
+  //
+  // var videoSLider = $('.video-slider').owlCarousel({
+  //   loop: false,
+  //   margin: 0,
+  //   nav: false,
+  //   dots: false,
+  //   items: 1,
+  //   dotsContainer: '.video-slider-dots',
+  //   responsive: {
+  //     0: {
+  //       nav: true
+  //     },
+  //     541: {
+  //       nav: false
+  //     },
+  //     1200: {
+  //       nav: false
+  //     }
+  //   }
+  // })
+  //
+  // $('.video-slider-dots .owl-dot').click(function (e) {
+  //   e.preventDefault()
+  //   var itemPosition = $(this).attr('data-pos')
+  //   videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
+  // })
+  //
+  // var videoSliderDots = $('.video-slider-dots').owlCarousel({
+  //   navContainer: '.video-nav-slider-dots',
+  //   loop: false,
+  //   margin: 0,
+  //   nav: true,
+  //   dots: false,
+  //   items: 1
+  // })
+  //
+  // $('.video-nav-slider-dots .owl-next').click(function () {
+  //   videoSliderDots.trigger('next.owl.carousel')
+  // })
+  //
+  // $('.video-nav-slider-dots .owl-prev').click(function () {
+  //   videoSliderDots.trigger('prev.owl.carousel', [300])
+  // })
 
   $('#closeOverlay').click(function (e) {
     $('#overlay').hide()
@@ -244,7 +228,7 @@ function refreshPrice(e) {
     else {
       let minutes = genTime % 3600
       let hours = (genTime - minutes) / 3600
-      this.textContent = hours + " ч" + minutes + " мин"
+      this.textContent = hours + " ч" + minutes / 60 + " мин"
     }
 
   })
@@ -270,8 +254,8 @@ function displayServices(json) {
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
       if (+servicesStatic[i] === service.id) {
-        mainBlocks[i].querySelector("p.item-price").textContent = service.price_max;
-        mainBlocks[i].querySelector("p.item-time").textContent = service.seance_length / 60;
+        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max } грн`
+        mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
         servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
       }
 
@@ -436,7 +420,7 @@ function preparePayButton() {
 
 function createOrder(amount, order_desc, name, services, email, phone) {
   var button = $ipsp.get('button');
-  button.setMerchantId(1432749);
+  button.setMerchantId(1397120);
   button.setAmount(amount, 'UAH');
   button.setResponseUrl('http://stefany.teymax.com/?payed=true');
   button.setHost('api.fondy.eu');

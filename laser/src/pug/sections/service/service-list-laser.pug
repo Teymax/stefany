@@ -70,30 +70,24 @@ section.section.service-laser-service-list.nano-service-list
           .sale-container.d-flex.flex-column.align-items-center
             h4.h4-title.text-color-white.text-w-bold.mt-5 на ВСЕ зоны лазерной эпиляции
             button.paragraph-text.text-color-white.text-w-regular.mt-2 ПОДРОБНЕЕ
-          .checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
-            each service in arrStomachFemale
-              //.checkbox-row.d-flex.align-items-start.justify-content-between.py-2
-              //  .column-right.d-flex.align-items-start
-              //    +defaultCheckbox('light')(class='')
-              //    p.paragraph-text.text-w-light.text-color-white.ml-3.mb-0 #{service.name}
-              //  .column-left.d-flex.justify-content-end
-              //    p.paragraph-text.text-w-bold.text-color-white.mb-0 #{service.price}
+          #choosenServices.checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
+
           .sale-group.d-flex.justify-content-between
             p.paragraph-text.text-w-light.text-color-white Акция
             p.paragraph-text.text-w-bold.text-color-white 40%
           .price-group.d-flex.justify-content-between
             .price-block.d-flex.justify-content-start
               img(src="assets/img/laser-page/time.png")
-              p.paragraph-text.text-w-bold.text-color-white.ml-2 30 мин
+              p.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListTime
             .price-block.d-flex.justify-content-end
               img(src="assets/img/laser-page/price.png")
-              p.serviceListSum.paragraph-text.text-w-bold.text-color-white.ml-2 0 грн
+              p.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListSum 0 грн
           .c-btn.mt-3.d-flex.justify-content-between.w-332
-            .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceList')
+            .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
               .text-section
                 +casetSvg
                 span оплатить
-            .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceList')
+            .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceListSinugUp')
               .text-section
                 +penSvg
                 span записаться
@@ -108,12 +102,13 @@ section.section.service-laser-service-list-tablet3.d-flex.d-xl-none.py-0.flex-co
             path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
         p.serviceListSum.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0 0 грн.
       .c-btn.w-332
-        .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceList')
+        .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
           .text-section
             +casetSvg
             span оплатить
-        .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceList')
+        .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceListSinugUp')
           .text-section
             +penSvg
             span записаться
+
 

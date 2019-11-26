@@ -4,10 +4,13 @@ mixin breadcrumbs(main, chapter, chapterLink, title, titleLink)
     span.separator /
     a(href=chapterLink)= chapter
     span.separator /
-    a.breadcrumbs-city(href=titleLink aria-current="page")= title
+    a(href=titleLink aria-current="page")= title
+      span.city-in-dynamic
+
 mixin breadcrumbsSmall(main, title, titleLink)
   p.breadcrumbs
     a(href="/")= main
     span.separator /
-    a.breadcrumbs-city(href=titleLink aria-current="page")= title
+    a(href=titleLink aria-current="page")= title
+      span.city-in-dynamic
 
