@@ -37,6 +37,10 @@ $( document ).ready( function () {
 
     $( '#thanksPopup' ).modal( 'show' )
 
+    $( '#consultPhone' ).val( '' )
+    $( '#consultName' ).val( '' )
+    $( '#consultEmail' ).val( '' )
+
     var headers = {
       'Content-Type' : 'application/json',
       'Authorization': 'Bearer ' + bearer_token
