@@ -370,5 +370,6 @@ $(document).ready(function () {
   }
 
   initCities();
+
 })
 

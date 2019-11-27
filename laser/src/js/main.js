@@ -1,5 +1,7 @@
-$(document).ready(function () {
 
+
+$(document).ready(function () {
+  $('#sendMail').click(sendEmail)
   $('#carouselExample').on('slide.bs.carousel', function (e) {
     var $e = $(e.relatedTarget);
     var idx = $e.index();
@@ -137,6 +139,7 @@ const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
 let headers;
+let contact;
 let servicesAll = [];
 let servicesArr = [];
 let phoneInput;
@@ -244,7 +247,7 @@ function refreshPrice(e) {
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
-    + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
+      + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
 }
 
 function displayServices(json) {
@@ -346,7 +349,7 @@ function bookRecord(event, plusDate = 0) {
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params
   if (event.target.id === "pay_button")
     inputNum = 0
@@ -358,15 +361,15 @@ function bookRecord(event, plusDate = 0) {
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, url, null,
-    function (data) {
-      let dataArr = getData(data);
-      if (processErrors(dataArr)) return alert("Error");
-      if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-      else {
-        // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-        writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
-      }
-    });
+      function (data) {
+        let dataArr = getData(data);
+        if (processErrors(dataArr)) return alert("Error");
+        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+        else {
+          // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
+          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
+        }
+      });
 }
 
 function writeClient(inputNum, time, isPayment = false) {
@@ -393,13 +396,13 @@ function writeClient(inputNum, time, isPayment = false) {
     ]
   };
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-    function (data) {
-      let err = processErrors(getData(data));
-      if (!err) {
+      function (data) {
+        let err = processErrors(getData(data));
+        if (!err) {
 
-        alert("Success");
-      }
-    });
+          alert("Success");
+        }
+      });
   if (isPayment) {
     console.log("uh")
 
@@ -471,13 +474,46 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   return button.getUrl();
 }
 
+// {Subject: '', Body: ''}
+function sendEmail() {
+  console.log('jopa')
+  let comment = document.querySelector("textarea")
+  let phone = document.querySelector('input[name=phone]')
+  let name = document.querySelector('input[name=name]')
+  let email = document.querySelector('input[name=email]')
+  let details = {
+    Subject: 'Users questions and proposals',
+    Body:
+        `Имя: ${  name.value }
+<br>Email: ${ email.value}
+<br>Телефон:  ${ phone.value}
+<br>Сообщение:  ${ comment.value }`
+  }
+  window.mail = {
+    Host: 'smtp.gmail.com',
+    Username: 'four.progs@gmail.com',
+    Password: 'Htndeth0614',
+    To: 'malanivvlad@gmail.com',
+    From: email.value
+  }
+  Email.send({
+    ...mail,
+    ...details
+  })
+  phone.value = ''
+  email.value = ''
+  comment.value = ''
+  name.value = ''
+
+}
+
 function consultWrite(event, plusDate = 0) {
   let date = new Date();
   const service = '1415297';
   event.preventDefault();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
 
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += "?service_ids=" + encodeURIComponent(service);
@@ -490,40 +526,40 @@ function consultWrite(event, plusDate = 0) {
   console.log(fullName)
 
   ajax('GET', headers, url, null,
-    function (data) {
-      let dataArr = getData(data);
-      if (dataArr.length < 1) return consultWrite(event, ++plusDate);
-      if (processErrors(dataArr)) return alert("Error");
-      else {
-        headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-        if (!phone || !fullName || !email || !service) {
-          alert("smth went wrong, please reload the page and try again");
-          return;
+      function (data) {
+        let dataArr = getData(data);
+        if (dataArr.length < 1) return consultWrite(event, ++plusDate);
+        if (processErrors(dataArr)) return alert("Error");
+        else {
+          headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+          if (!phone || !fullName || !email || !service) {
+            alert("smth went wrong, please reload the page and try again");
+            return;
+          }
+          let date = new Date();
+          userParams = {
+            "phone": phone.value,
+            "fullname": fullName.value,
+            "email": email.value,
+            "comment": "consult",
+            "appointments": [
+              {
+                "id": date.getTime(),
+                "services": service,
+                "staff_id": managerId,
+                "datetime": dataArr[0].datetime
+              }
+            ]
+          }
+          ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+              function (data) {
+                let err = processErrors(getData(data));
+                if (!err) {
+                  alert("Success");
+                }
+              });
         }
-        let date = new Date();
-        userParams = {
-          "phone": phone.value,
-          "fullname": fullName.value,
-          "email": email.value,
-          "comment": "consult",
-          "appointments": [
-            {
-              "id": date.getTime(),
-              "services": service,
-              "staff_id": managerId,
-              "datetime": dataArr[0].datetime
-            }
-          ]
-        }
-        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-          function (data) {
-            let err = processErrors(getData(data));
-            if (!err) {
-              alert("Success");
-            }
-          });
-      }
-    })
+      })
 
 }
 
