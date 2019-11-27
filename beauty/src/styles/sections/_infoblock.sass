@@ -213,6 +213,33 @@
 	.info-block-wrap .big-text
 		bottom: -40px !important
 		left: 4px !important
+.info-block-4-1
+	padding-top: 89px !important
+	padding-bottom: 0px !important
+	border-bottom: 60px solid #FFFFFF
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		padding-bottom: 35px !important
+		border-bottom: none
+	.container-info
+		.info-block-wrap
+			.col-info
+				@media(max-width: 1199px)
+					padding: 0 !important
+					max-width: 100% !important
+				.border-el
+					&::before
+						top: -26px
+						left: -144px
+						width: calc(100% + 182px)
+						height: calc(100% + 56px)
+			.behind-bg
+				top: -26px !important
+				padding: 59px 0 0 63px !important
+				@media(max-width: 1199px)
+					padding: 0 !important
+			.big-text
+				bottom: -66px !important
 .info-block
 	&.info-block-6
 		padding-bottom: 39px !important
@@ -503,6 +530,9 @@
 			right: -571px
 .info-block-3-6
 	border-bottom: none !important
+	&-1
+		@media(max-width: 1299px)
+			padding: 0 !important
 	.container-info 
 		.info-block-wrap 
 			.col-info
@@ -513,6 +543,22 @@
 				left: 70px
 				width: 575px
 				height: 214px
+.info-block-3-7
+	padding-top: 88px
+	border-bottom: none !important
+	.container-info 
+		.info-block-wrap
+			max-width: 1217px !important
+			padding-left: 109px
+			@media(max-width: 1250px)
+				padding-left: 25px
+			@media(max-width: 1199px)
+				padding-left: 0px
+			.big-text
+				bottom: -9px
+				left: -16px !important
+			.col-info
+				padding: 49px 29px 86px 108px !important
 .info-block-5-1
 	padding-top: 172px !important
 	border-bottom: 85px solid #ffffff
@@ -579,6 +625,44 @@
 		bottom: 412px !important
 		z-index: 0 !important
 		transform: rotate(-90deg)
+.info-block-5-3
+	padding-top: 172px !important
+	border-bottom: 103px solid #ffffff
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		border-top: 0 solid #ffffff
+		border-bottom: 0 solid #ffffff
+		padding-bottom: 35px !important
+	@media(max-width: 767px)
+		border-top: 0px solid transparent
+	.container
+		.info-block-wrap
+			max-width: 1071px !important
+			padding-left: 98px
+			@media(max-width: 1199px)
+				max-width: 100% !important
+				padding-left: 0
+			.col-img
+				max-width: 433px !important
+				top: -108px !important
+			.col-info
+				max-width: 655px !important
+				margin-left: 0
+				padding: 60px 105px 38px 149px !important
+				@media(max-width: 1199px)
+					padding: 0px !important
+				.fs-20
+					font-size: 20px
+					line-height: 29px
+				.section-title
+					margin-bottom: 20px !important
+					@media(max-width: 767px)
+						margin-bottom: 18px !important
+	.big-text
+		left: -83px !important
+		bottom: 18px !important
+		@media(max-width: 1300px)
+			left: -150px !important
 .info-block.info-block-6-1
 	padding-top: 91px !important
 	border-bottom: 113px solid #ffffff
@@ -636,6 +720,62 @@
 			left: auto !important
 			right: -273px !important
 			top: 267px !important
+.info-block.info-block-6-3
+	border-top: 100px solid #ffffff
+	padding-top: 79px !important
+	border-bottom: 34px solid #ffffff
+	padding-bottom: 62px !important
+	@media(max-width: 1199px)
+		border-top: none 
+		padding-top: 45px !important
+		padding-bottom: 30px !important
+	@media(max-width: 767px)
+		border-bottom: 100px solid #ffffff
+	.info-block-wrap
+		max-width: 1265px !important
+		padding-left: 29px
+		@media(max-width: 1199px)
+			padding-left: 0
+		.col-img
+			top: -135px !important
+			max-width: 430px !important
+			max-height: initial
+			background: none
+			padding: 0 !important
+			@media(max-width: 767px)
+				margin-bottom: -110px
+		.col-info
+			padding: 0 0 0 50px !important
+			max-width: 784px !important
+			margin-left: 0 !important
+			@media(max-width: 1300px)
+				max-width: 710px !important
+			@media(max-width: 1199px)
+				max-width: 100% !important
+				padding: 0 0 30px 0 !important
+		.big-text
+			top: 70px !important
+			right: -284px !important
+.info-block.info-block-6-4
+	padding-bottom: 67px !important
+	border-bottom: 0 solid #ffffff
+	.container
+		.info-block-wrap
+			.col-info
+				max-width: 487px !important
+				margin-left: 0 !important
+				padding: 0 0 0 0 !important
+				@media(max-width: 1199px)
+					max-width: 100% !important
+				.section-title
+					margin-bottom: 25px
+					padding-bottom: 22px
+			.big-text
+				transform: rotate(0deg)
+				top: auto !important
+				bottom: -112px !important
+				left: -182px !important
+				right: auto !important
 .info-block-7-1
 	padding-top: 78px !important
 	padding-bottom: 100px !important
@@ -884,15 +1024,74 @@
 				order: 2 !important
 			@media(max-width: 767px)
 				padding: 0 !important
-		.col-info
+		.col-info	
 			padding: 0 39px 0 133px !important
+			&.pl-sm
+				padding-left: 96px !important
 			@media(max-width: 1300px)
-				padding: 0 46px 0 0 !important
+				padding: 0 148px 0 0 !important
+				&.pl-sm
+					padding: 0 !important
 			@media(max-width: 1199px)
 				padding: 0 0 30px !important
 				order: 1 !important
 			@media(max-width: 767px)
 				padding: 0 0 30px !important
+.info-block-7-9
+	padding-top: 91px !important
+	padding-bottom: 63px !important
+	border-bottom: 83px solid #ffffff
+	@media(max-width: 1199px)
+		padding-top: 230px !important
+		padding-bottom: 0px !important
+		&-mob
+			padding-top: 30px !important
+			border-bottom: none
+	.container
+		.info-block-wrap
+			max-width: 1259px !important
+			padding-left: 27px
+			@media(max-width: 1199px)
+				padding-left: 0
+			.col-info
+				padding: 0 0px 0 89px !important
+				@media(max-width: 1199px)
+					padding: 0 !important
+		.behind-bg
+			left: 0 !important
+			padding: 60px 0 0 57px !important
+			background: -webkit-linear-gradient(left, #ffffff, #ffffff 88%, transparent 0, transparent)
+			max-width: 612px !important
+			top: -28px !important
+			@media(max-width: 1310px)
+				left: -90px !important
+			@media(max-width: 1199px)
+				display: none
+		.big-text
+			transform: rotate(-90deg)
+			top: auto
+			bottom: 207px
+			left: auto
+			right: -346px
+			z-index: 0
+.info-block-7-10
+	border-top: 59px solid #ffffff
+	padding-top: 91px !important
+	padding-bottom: 61px !important
+	@media(max-width: 1199px)
+		border-top: 35px solid #ffffff
+		padding-top: 35px !important
+		padding-bottom: 35px !important
+	.container
+		.info-block-wrap
+			.col-info
+				max-width: 629px !important
+				padding: 0 0px 0 136px !important
+				@media(max-width: 1300px)
+					max-width: 500px !important
+					padding: 0!important
+				@media(max-width: 1199px)
+					max-width: 100% !important
 .info-block-8-1
 	padding-bottom: 108px
 	@media(max-width: 1199px)
@@ -987,6 +1186,110 @@
 			@media(max-width: 1199px)
 				padding: 35px 0 0 0 !important
 				max-width: 100% !important
+.info-block-8-5
+	padding-top: 88px !important
+	padding-bottom: 66px
+	@media(max-width: 1199px)
+		padding-top: 20px !important
+		padding-bottom: 25px
+	.container 
+		.col-img
+			top: 0px !important
+			right: 56px
+			max-width: 539px !important
+			@media(max-width: 1300px)
+				top: 45px !important
+				max-width: 490px !important
+		.col-info
+			max-width: 607px !important
+			padding: 107px 0 0 165px !important
+			.border-el
+				margin-bottom: 75px
+				&::before
+					top: -48px !important
+					left: -72px !important
+					width: calc(100% + 223px) !important
+					height: calc(100% + 88px) !important
+			.fs-20
+				font-size: 20px
+				line-height: 29px
+			.section-title
+				line-height: 51px
+			.btn-simple
+				max-width: 158px
+			@media(max-width: 1199px)
+				padding: 35px 0 0 0 !important
+				max-width: 100% !important
+.info-block-8-6
+	padding-top: 110px !important
+	padding-bottom: 95px
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		padding-bottom: 35px !important
+	@media(max-width: 767px)
+		padding-top: 35px !important
+	.container
+		padding-left: 15px
+		padding-right: 15px
+		max-width: 1260px !important
+		.col-img
+			top: -52px !important
+			left: 58px
+			max-width: 540px !important
+			@media(max-width: 1310px)
+				left: -60px
+		.col-info
+			max-width: 595px !important
+			padding: 53px 92px 0 0 !important
+			@media(max-width: 1199px)
+				max-width: 100% !important
+				padding: 0 !important
+			.border-el
+				&::before
+					top: -47px !important
+					left: -109px !important
+					width: calc(100% + 109px) !important
+					height: calc(100% + 90px) !important
+			.fs-20
+				font-size: 20px
+				line-height: 29px
+			.under-border
+				padding-top: 17px
+			.section-title
+				margin-bottom: 15px
+				padding-bottom: 0
+				line-height: 51px
+.info-block-8-7
+	padding-top: 88px !important
+	padding-bottom: 40px
+	@media(max-width: 1199px)
+		padding-top: 20px !important
+		padding-bottom: 25px
+	.container 
+		.col-img
+			top: 17px !important
+			right: -17px
+			max-width: 612px !important
+			@media(max-width: 1300px)
+				max-width: 575px !important
+		.col-info
+			max-width: 580px !important
+			padding: 49px 0 0 94px !important
+			@media(max-width: 1199px)
+				padding: 35px 0 0 0 !important
+				max-width: 100% !important
+			.border-el
+				margin-bottom: 80px
+				&::before
+					top: -77px !important
+					left: -37px !important
+					width: calc(100% + 162px) !important
+					height: calc(100% + 117px) !important
+			.fs-20
+				font-size: 20px
+				line-height: 29px
+			.section-title
+				line-height: 49px
 .info-block-9-1
 	padding-top: 0 !important
 	padding-bottom: 11px !important
@@ -1034,7 +1337,6 @@
 			padding: 0
 		.col-img
 			max-width: 100% !important
-
 .infoblock-words-bg
 	padding-bottom: 40px !important
 	background: url('../assets/img/infoblock/infoblock-words-bg.png')
@@ -1045,7 +1347,7 @@
 	&::before
 		border-color: #9FA6BA !important
 @media(min-width: 1200px)
-	.border-block-item, .border-block-item2, .border-block-item3, .border-block-item4
+	.border-block-item, .border-block-item2, .border-block-item3, .border-block-item4, .border-block-item5, .border-block-item6
 		position: relative
 		&::before
 			content: ''
@@ -1077,7 +1379,6 @@
 			right: 107px
 			width: 613px
 			height: 342px
-			border: 3px solid #9FA6BA
 		.under-border
 			padding-top: 57px
 			padding-bottom: 15px
@@ -1087,14 +1388,32 @@
 			right: 72px
 			width: 541px
 			height: 206px
-			border: 3px solid #9FA6BA
 		.under-border
 			padding-top: 57px
 			padding-bottom: 0
+	.border-block-item5
+		&::before
+			top: -45px
+			right: 109px
+			width: 580px
+			height: 213px
+		.under-border
+			padding-top: 43px
+	.border-block-item6
+		&::before
+			top: -60px
+			right: 72px
+			width: 538px
+			height: 414px
+		.under-border
+			padding-top: 59px
+			padding-bottom: 0
+.under-border
+	br
+		@media(max-width: 1199px)
+			display: none
 
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////
+////////
 .d-white-bg
 	position: relative
 	background-color: #fff
@@ -1137,13 +1456,6 @@
 	width: 10%
 	right: 14px
 	bottom: -27px
-////////////////////////////////////////////////////////////
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 @media(max-width: 1199px)
 	.info-block-9
@@ -1234,7 +1546,7 @@
 				margin-bottom: 14px
 		.big-text-2
 			z-index: 4 !important
-			display: block !important
+			display: block
 			left: 50% !important
 			transform: translate(-50%)
 			bottom: 0 !important
@@ -1248,7 +1560,7 @@
 			.info-block-wrap
 				.col-info
 					max-width: 100% !important
-					padding: 0 0 40px !important
+					padding: 0px !important
 	.info-block-5-1
 		border-top: 50px solid #BECDD4
 		padding: 0 !important
@@ -1302,3 +1614,9 @@
 				margin-bottom: 0px
 			.big-text
 				display: none !important
+	.info-block-3-7
+		padding-top: 0 !important
+		.container-info
+			.info-block-wrap
+				.col-info
+					padding-bottom: 15px !important

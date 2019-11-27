@@ -79,7 +79,8 @@
 					margin-bottom: 0 !important
 		.container
 			max-width: 1127px
-			padding-left: 0
+			padding-left: 15px
+			padding-right: 15px
 			margin: 0 0 0 auto !important
 			padding-right: 43px
 			.bnf
@@ -94,7 +95,7 @@
 		.container
 			max-width: 1058px
 			margin: 0 auto !important
-			padding-right: 0
+			padding-right: 15px
 			.section-title
 				margin-bottom: 20px
 			.section-subtitle
@@ -111,6 +112,15 @@
 			max-width: 100% !important
 		.bnf-img-wrap
 			margin-left: -15px
+	&.triple-bnfs
+		padding-top: 83px !important
+		@media(max-width: 1199px)
+			padding-top: 35px !important
+			padding-bottom: 35px !important
+		.container 
+			.bnf 
+				.bnf-cnt
+					margin-top: -170px
 .benefits
 	padding: 57px 0 23px
 	.container
@@ -196,6 +206,7 @@
 				letter-spacing: 0
 			.bnf-cnt
 				max-width: 396px
+				padding: 0 5px
 			.bnf-number
 				width: 87px
 				height: 87px
@@ -221,6 +232,7 @@
 			.bnf
 				max-width: 394px
 				padding: 0 !important
+
 @media(max-width: 1199px)
 	.benefits .container .bnf
 		margin-left: auto
