@@ -100,6 +100,8 @@
 	cursor: pointer
 	height: 310px
 	overflow: hidden
+	@media(max-width: 1300px)
+		height: 280px !important
 	&-bigger
 		height: 438px
 	&-smaller
@@ -157,7 +159,7 @@
 							color: $color-white 
 						svg 
 							.st0
-								fill: $color-white  !important
+								fill: $color-white	!important
 					& > svg 
 						.st0 
 							fill: $color-purple
@@ -198,13 +200,13 @@
 			line-height: 19px
 	.grid-title
 		margin-bottom: 10px
-	.info-block-grid .container  .grid-cnt.grid-cnt-small
+	.info-block-grid .container	.grid-cnt.grid-cnt-small
 		max-height: 220px !important
 		min-height: 220px !important
 		padding: 38px 15px 35px 60px
 	.grid-block .grid-number
 		top: 51px
-	.info-block-grid .container .grid-block-smaller  .grid-img
+	.info-block-grid .container .grid-block-smaller	.grid-img
 		max-height: 220px
 	.info-block-grid .container .grid-cnt.grid-cnt-big
 		padding-right: 17px
@@ -252,7 +254,7 @@
 		order: 1 !important
 	.grid-img
 		order: 2 !important
-	.info-block-grid .container .grid-block-smaller .grid-img, .info-block-grid .container  .grid-cnt.grid-cnt-small
+	.info-block-grid .container .grid-block-smaller .grid-img, .info-block-grid .container	.grid-cnt.grid-cnt-small
 		max-height: 100% !important
 	.grid-bg-1
 		padding-top: 15px

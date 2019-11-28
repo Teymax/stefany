@@ -82,6 +82,8 @@ body
 
 .text-color-dark
   color: $text-color-dark !important
+.text-color-dark2
+  color: $play-btn-color !important
 .text-color-for-list
   color: $list-number !important
 .f-bold
@@ -125,6 +127,7 @@ p, .p-text, .paragraph-text
 	font-size: 16px !important
 .fs-20
 	font-size: 20px !important
+  line-height: 29px
 .regular-text
   font-family: 'Circe-Regular' !important
 .thin-text
@@ -162,6 +165,14 @@ p, .p-text, .paragraph-text
   @media(max-width: 767px)
     font-size: 16px
     line-height: 18px
+.text-grid
+  @media(max-width: 1300px)
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    overflow: hidden
+    -webkit-box-orient: vertical
+  @media(max-width: 767px)
+    -webkit-line-clamp: 10
 .h3-title
   @include font('Circe-Light', 400, 20, 24)
   color: $text-color-white
@@ -174,7 +185,14 @@ p, .p-text, .paragraph-text
   transition: 0.3s ease
   @include font('CormorantGaramond-Bold', 700, 30, 35)
   color: $section-title-color
-
+  @media(max-width: 1199px)
+    margin-bottom: 10px
+.step-head
+  @include font('Circe-Regular', 400, 12, 12)
+  text-align: center 
+  text-transform: uppercase
+  letter-spacing: 0.15em
+  color: #9FA6BA
 .underline-title
   position: relative
   &::after   
@@ -200,6 +218,16 @@ p, .p-text, .paragraph-text
 	background: $dark-gren-bg !important
 .no-bg-blk
 	background: transparent !important   
+.gray-word-bg
+  background: url('../assets/img/gray-word-bg.png')
+  background-repeat: no-repeat
+  background-position: center left
+  background-size: contain
+.gray-word-bg2
+  background: url('../assets/img/gray-word-bg2.png')
+  background-repeat: no-repeat
+  background-position: center left
+  background-size: contain
 .grid-number
   display: block
   position: absolute
@@ -483,14 +511,20 @@ svg.icon-arrow
   padding-right: 20px !important
 .pl-three
   padding-left: 3px !important
+.pt-15
+  padding-top: 15px !important
 .pt-18
   padding-top: 18px !important
+.pb-10
+  padding-bottom: 10px !important
 .pb-15
   padding-bottom: 15px !important
 .pb-19
   padding-bottom: 19px !important
 .pb-20
   padding-bottom: 20px !important
+.pb-25
+  padding-bottom: 25px !important
 .pb-42
   padding-bottom: 42px !important
 .mt-7
@@ -501,12 +535,16 @@ svg.icon-arrow
   margin-top: 11px !important
 .mt-15
   margin-top: 15px !important
+.mt-18
+  margin-top: 18px !important
 .mt-22
   margin-top: 22px !important
 .mt-30
   margin-top: 30px !important
 .mb-11
   margin-bottom: 11px !important
+.mb-6
+  margin-bottom: 6px !important
 .mb-15
   margin-bottom: 15px !important
 .mb-16
@@ -536,9 +574,11 @@ svg.icon-arrow
 .mb-40
   margin-bottom: 40px !important
 .mb-50
-  margin-bottom: 50px
+  margin-bottom: 50px !important
 .mb-59
-  margin-bottom: 59px
+  margin-bottom: 59px !important
+.mb-62
+  margin-bottom: 62px !important
 .mr-10
   margin-right: 10px !important
 .mr-41
