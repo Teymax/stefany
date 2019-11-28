@@ -58,8 +58,8 @@ mixin writeClientForm
     h3 Оставьте ваши данные
     p.text-lowercase и мы вам перезвоним
     form(method="post" action="/")
-      input(type="text" placeholder="Имя" data-client-name)
-      input(type="email" placeholder="Email" data-client-email)
+      input(type="text", placeholder="Имя", data-client-name required)
+      input(type="email" placeholder="Email" data-client-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
       input(type="tel" placeholder="Телефон" data-client-phone).mb-4
       input(type="submit" style="display: none" data-btn-submit)
       +btnCallback('перезвонить мне')(data-toggle='modal', data-target='#thanksPopup')
@@ -74,7 +74,7 @@ mixin writeClientForm
         |   const name = form.querySelector('[data-client-name]').value,
         |         email = form.querySelector('[data-client-email]').value,
         |         phone = form.querySelector('[data-client-phone]').value
-        |   console.log(name, email, phone)
+        |   console.log(nacme, email, phone)
         |   var bearer_token = 'f5wujgx5yn6cagtk9fg2'
         |     var partnerId = 240913
         |     var managerId = 823619
