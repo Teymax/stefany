@@ -96,8 +96,27 @@ $(document).ready(function () {
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
 
         imagesAmount: 9,
-        imagesAmountSpecialists: null,
-        specialists: []
+        imagesAmountSpecialists: 3,
+        specialists: [
+          {
+            name: 'Оксана Иваницкая',
+            education: 'По образованию акушерка',
+            experience: 'Работает уже 2,5 месяца',
+            skills: 'Сделает лазерную эпиляцию'
+          },
+          {
+            name: 'Кристина Демедюк',
+            education: ' По образованию',
+            experience: 'Работает уже 2,5 месяца',
+            skills: 'Сделает лазерную эпиляцию'
+          },
+          {
+            name: 'Кристина Демедюк',
+            education: ' По образованию',
+            experience: 'Работает уже 2,5 месяца',
+            skills: 'Сделает лазерную эпиляцию'
+          },
+        ]
       }
     },
     lviv: {
@@ -111,8 +130,21 @@ $(document).ready(function () {
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
 
         imagesAmount: 10,
-        imagesAmountSpecialists: null,
-        specialists: []
+        imagesAmountSpecialists: 2,
+        specialists: [
+        {
+          name: 'Оксана Иваницкая',
+          education: 'По образованию акушерка',
+          experience: 'Работает уже 2,5 месяца',
+          skills: 'Сделает лазерную эпиляцию'
+        },
+          {
+            name: 'Кристина Демедюк',
+            education: ' По образованию',
+            experience: 'Работает уже 2,5 месяца',
+            skills: 'Сделает лазерную эпиляцию'
+          },
+        ]
       }
     },
     rovno: {
@@ -151,24 +183,6 @@ $(document).ready(function () {
             experience: 'Работает уже 18 лет',
             skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
           },
-          {
-            name: 'Инна Степанчук',
-            education: 'По образованию фармацевт.',
-            experience: 'Работает уже 3 года',
-            skills: 'Сделает перманентный макияж, лазерную эпиляцию, восковую депиляцию, шугаринг, чистку и пилинг лица'
-          },
-          {
-            name: 'Александра Бородиян',
-            education: 'По образованию социальный реабилитолог, фельдшер-лаборант.',
-            experience: 'Работает уже 12 лет',
-            skills: 'Сделает все виды чисток, пилингов, уходовые процедуры, лазерную эпиляцию, все виды депиляции, подбор домашнего ухода'
-          },
-          {
-            name: 'Ирина Гутель',
-            education: 'По образованию медсестра и реабилитолог',
-            experience: 'Работает уже 9 лет',
-            skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
-          }
         ]
       }
     }
