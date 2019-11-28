@@ -199,7 +199,6 @@ function refreshPrice(e) {
   $("#choosenServices")[0].innerHTML = '';
   choosenServices.forEach(item => {
     $("#choosenServices")[0].innerHTML += `
-       <div class="">
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
 <!--          <label class="service-checkbox-label">-->
 <!--            <input class="align-self-center" type="checkbox" name="service"/>-->
@@ -212,7 +211,6 @@ function refreshPrice(e) {
               <p class="paragraph-text text-w-bold text-color-white mb-0">${item.price}</p>
           </div>
         </div>
-      </div>
       `;
   })
   let serviceCheckboxes = document.querySelectorAll(" input:checked");
