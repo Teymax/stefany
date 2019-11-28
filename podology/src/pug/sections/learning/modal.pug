@@ -15,12 +15,12 @@
     .modal-content(style="padding-left: 50px!important; padding-right: 50px!important;")
       h4.text-center.pb-4(style="font-size: 16px;") Запись на прием происходит в телефонном режиме
       h5.text-center.pb-4 укажите телефон, для звонка и согласования деталей
-      form.pb-4
+      form.pb-4p
         input.w-100.p-text-light.mb-4(type="text", placeholder="Имя" id='consultName' data-name)
         input.w-100.p-text-light.mb-4(type="email", placeholder="Email" id='consultEmail' data-email)
         input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон" id='consultPhone' data-phone)
-        input(type="submit" style="display: none;" data-s-day-s-btn)
-        +customBtn('отправить')(data-s-day-c-btn data-toggle='modal' data-target='#thanksPopup')
+        input(type="submit" style="display: none;" data-call-day-sub-btn)
+        +customBtn('отправить')(data-call-day-callback-btn data-toggle='modal' data-target='#thanksPopup')
 
 #secondDayCourse.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
