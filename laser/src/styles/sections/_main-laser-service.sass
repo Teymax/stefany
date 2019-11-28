@@ -1,30 +1,33 @@
 section.section.main-laser-service
   position: relative
   background:
-    image:  url("../assets/img/main-service/girl.png"), url("../assets/img/main-service/bg-nogirl.jpg")
-    size: 732px auto, cover
-    position: calc(100% + -79px) bottom, bottom
+    image: url("../assets/img/main-service/main-bg.jpg")
+    //size: 732px auto, cover
+    //position: calc(100% + -79px) bottom, bottom
+    size: cover
     repeat: no-repeat
   padding-top: 61px
   padding-bottom: 109px
   min-height: 651px
   //@media(min-width: 1920px)
   //  background:
-  //    //image:  url("../assets/img/main-service/girl.png"), url("../assets/img/main-service/bg-nogirl-xxl.jpg")
+  //    image:  url("../assets/img/main-service/main-bg-hd.jpg")
   //    position: calc(100% + -282px) bottom, bottom
   //    //size: 732px auto, cover
   @include media-breakpoint-down(lg)
     padding-top: 41px
-    background:
-     image:  url("../assets/img/main-service/girl.png"), url("../assets/img/main-service/main-bg-tablet.jpg")
-     position: calc(100% + 402px) bottom, bottom
-
-
-  @media (min-width: 992px) and (max-width: 1200px)
-    background:
-      position-x: -411px
+    //background:
+    //  image:  url("../assets/img/main-service/girl.png"), url("../assets/img/main-service/main-bg-tablet.jpg")
+    //  position: calc(100% + 402px) bottom, bottom
+    @media (min-width: 992px) and (max-width: 1200px)
+      background:
+        position-x: -411px
+  @include media-breakpoint-down(sm)
+    background-image: url("../assets/img/main-service/bg-mobile.jpg")
   @include media-breakpoint-down(sm)
     padding-top: 17px
+    background-size: 783px
+    background-position-x: -140px
   img.bg-elem
     position: absolute
     top: 0
@@ -32,6 +35,8 @@ section.section.main-laser-service
   .container
     .c-content
       transform: translate(-45px, -19px)
+      @include media-breakpoint-down(sm)
+        transform: translate(-6px, -19px)
     .h1-main-title
       @include font (CormorantGaramond, 400, 80, 60)
       color: $text-color-lightgrey
@@ -43,13 +48,14 @@ section.section.main-laser-service
       @include media-breakpoint-down(sm)
         font-size: 35px
         line-height: 35px
-        margin-bottom: 18px
+        margin-bottom: 42px
 
 
     .info-list
       li.list-item
         @include font (Circe, 400, 20, 31)
         color: $text-color-lightgrey
+        min-width: 150px
         &:before
           width: 7.71px
           height: 7.71px
