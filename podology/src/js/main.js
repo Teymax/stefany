@@ -216,11 +216,17 @@ $( document ).ready( function () {
 
   if ( contactForm ) {
     $( '[data-btn-contact-submit]' ).on( 'click', e => {
-      $( '[data-contact-submit]' ).click()
+      const n = $( '[data-feedback-name]' ).val(),
+            em = $( '[data-feedback-email]' ).val(),
+            p = $( '[data-feedback-phone]' ).val(),
+            m = $( '[data-feedback-message]' ).val()
+      
+      !!n && !!em && !!p && !!m ? $( '[data-contact-submit]' ).click() : $('#thanksPopup').modal('hide')
     } )
 
     contactForm.addEventListener( 'submit', e => {
       e.preventDefault()
+      $('#thanksPopup').modal('show')
       Email.send( {
         ...mail,
         Subject: 'Обратная связь',
@@ -433,3 +439,4 @@ function closeAllModals () {
     $( '.modal' ).modal( 'hide' )
   }, 3000 )
 }
+

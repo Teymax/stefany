@@ -5,7 +5,7 @@
       h5.text-center чтобы занять место в группе
       form
         input.w-100.p-text-light.mb-2(type="text", placeholder="Имя" data-name required)
-        input.w-100.p-text-light.mb-2(type="email" placeholder="Email" data-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
+        input.w-100.p-text-light.mb-2(type="email" placeholder="Email" data-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$" required)
         input.w-100.p-text-light.mb-4(type="tel" pattern="^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$", required, placeholder="Телефон" data-phone)
         input(type="submit" style="display: none;" data-f-day-s-btn)
         +customBtn('отправить')(data-f-day-c-btn data-toggle='modal' data-target='#thanksPopup')
@@ -17,7 +17,7 @@
       h5.text-center.pb-4 укажите телефон, для звонка и согласования деталей
       form.pb-4p
         input.w-100.p-text-light.mb-4(type="text", placeholder="Имя" id='consultName' data-name required)
-        input.w-100.p-text-light.mb-4(type="email" placeholder="Email" id='consultEmail' data-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
+        input.w-100.p-text-light.mb-4(type="email" placeholder="Email" required id='consultEmail' data-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
         input.w-100.p-text-light.mb-4(type="tel" pattern="^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$", required, placeholder="Телефон" id='consultPhone' data-phone)
         input(type="submit" style="display: none;" data-call-day-sub-btn)
         +customBtn('отправить')(data-call-day-callback-btn data-toggle='modal' data-target='#thanksPopup')
@@ -29,7 +29,7 @@
       h5.text-center чтобы занять место в группе
       form
         input.w-100.p-text-light.mb-2(type="text", placeholder="Имя" data-name required)
-        input.w-100.p-text-light.mb-2(type="email" placeholder="Email" data-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
+        input.w-100.p-text-light.mb-2(type="email" placeholder="Email" required data-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
         input.w-100.p-text-light.mb-4(type="tel" pattern="^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$", required , placeholder="Телефон" data-phone)
         input(type="submit" style="display: none;" data-t-day-s-btn)
         +customBtn('отправить')(data-t-day-c-btn data-toggle='modal' data-target='#thanksPopup')
