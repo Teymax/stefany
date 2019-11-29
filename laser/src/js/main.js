@@ -216,11 +216,8 @@ window.onload = function () {
 };
 
 function refreshPrice(e) {
-  // let orderChecked = document.createElement('div')
-  // orderChecked.classList.add(['checkbox-row']);
-  // $('#choosenServices').append(orderChecked);
-
   const parent = e.target.closest('.checkbox-row');
+  let sex = parent.getAttribute('data-sex')
   let id = parent.getAttribute('id')
   let serviceName = parent.querySelector('.paragraph-text').innerHTML;
   let price = parent.querySelector('.item-price').innerHTML;
@@ -230,11 +227,12 @@ function refreshPrice(e) {
     choosenServices.push({
       id,
       serviceName,
-      price
+      price,
+      sex
     });
   } else {
     choosenServices = choosenServices.filter(function (item) {
-      return item.id !== id
+      return item.id !== id || sex !== item.sex
     })
   }
 
@@ -258,7 +256,7 @@ function refreshPrice(e) {
         </div>
       `;
   })
-  let serviceCheckboxes = document.querySelectorAll(" input:checked");
+  let serviceCheckboxes = document.querySelectorAll(".service-list-group input:checked");
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
@@ -268,6 +266,7 @@ function refreshPrice(e) {
   }, 0)
   let genTime = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
     const parent = current.closest('.checkbox-row')
+    console.log(parent)
     let id = parent.getAttribute('id')
     let serv = servicesAll.find(service => service.id === +id)
     return accum + serv.seance_length
