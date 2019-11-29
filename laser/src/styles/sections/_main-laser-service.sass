@@ -7,18 +7,23 @@ section.section.main-laser-service
     size: cover
     repeat: no-repeat
   padding-top: 61px
-  padding-bottom: 109px
+  padding-bottom: 21px
   min-height: 651px
-  //@media(min-width: 1920px)
-  //  background:
-  //    image:  url("../assets/img/main-service/main-bg-hd.jpg")
-  //    position: calc(100% + -282px) bottom, bottom
-  //    //size: 732px auto, cover
-  @include media-breakpoint-down(lg)
+  @media(min-width: 1920px)
+    //background: url("../assets/img/main-service/girl.png") , url("../assets/img/main-service/bg-nogirl.jpg")
+    background: url(../assets/img/main-service/girl.png) 900px 0 no-repeat, url(../assets/img/main-service/bg-nogirl.jpg) 0px 0px round,
+      size: contain
+
+  @include media-breakpoint-down(md)
+    min-height: auto
     padding-top: 41px
-    //background:
-    //  image:  url("../assets/img/main-service/girl.png"), url("../assets/img/main-service/main-bg-tablet.jpg")
-    //  position: calc(100% + 402px) bottom, bottom
+    background-image:  url(../assets/img/main-service/main-bg-tablet.jpg)
+    background-position: calc(100% + 402px) bottom, bottom
+    background-size: 732px auto, 1663px, auto
+    /* background-position: 386px, -517px; */
+    background-position-y: -8px
+    background-size: 1309px
+    background-position-x: -234px
     @media (min-width: 992px) and (max-width: 1200px)
       background:
         position-x: -411px

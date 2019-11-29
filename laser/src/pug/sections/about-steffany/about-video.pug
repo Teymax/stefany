@@ -11,12 +11,18 @@ section.section.about-video
               //  span
           .col-12.order-1
             .c-content
-              a(href="").mr-2
+              a(target="_blank").inst-dynamic.mr-2
                 img(src="assets/icon/about-steffany-video/soc-instagram.svg" alt="soc-instagram.svg")
-              a(href="").mr-4
+              a(target="_blank").fb-dynamic.mr-4
                 img(src="assets/icon/about-steffany-video/soc-facebook.svg" alt="soc-facebook.svg")
-              +btnSimple('steffany podology')(class="fluid mr-4 d-none d-xl-flex")
-              +btnSimple('steffany beauty')(class="fluid d-none d-xl-flex")
+              a(target="_blank" href='http://steffany.dotwork.digital/podology')
+                .btn-simple.fluid.mr-4.d-none.d-xl-flex
+                  .text-section
+                    span steffany podology
+              a(target="_blank" href='http://steffany.dotwork.digital/beauty')
+                .btn-simple.fluid.mr-4.d-none.d-xl-flex
+                  .text-section
+                    span steffany beauty
               +btnCallback('подробнее')(class="fluid d-xl-none ml-auto")
       .col-12.col-xl-5.order-1
         .c-desc
