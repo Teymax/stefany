@@ -130,6 +130,8 @@
 		background: $list-number
 		border-radius: 50%
 		@include font('CormorantGaramond-Bold', 700, 42, 42)
+		&-white
+			background: #ffffff
 		span
 			display: block
 			margin-top: -6px
@@ -282,6 +284,8 @@
 				top: 58px !important
 				left: 27px
 				max-width: 503px !important
+				@media(max-width: 1199px)
+					margin-top: 30px
 			.col-info
 				padding: 59px 104px 49px 108px !important
 				margin-bottom: 0
@@ -291,6 +295,8 @@
 					max-width: 100% !important
 					.under-border
 						padding-top: 0
+				@media(max-width: 767px)
+					padding: 0 0 35px !important
 			.big-text
 				transform: rotate(0)
 				left: -80px
@@ -331,6 +337,8 @@
 			.col-info
 				padding-bottom: 83px !important
 				margin-bottom: 0 !important
+				@media(max-width: 1299px)
+					padding: 0 0 35px !important
 			.border-block-item::before
 				top: 56px
 				left: 70px
@@ -412,6 +420,39 @@
 					padding: 0 0 35px !important
 			.big-text:bot(.big-text2)
 				left: -112px !important
+.info-block-3-10
+	padding-top: 113px
+	@media(max-width: 1199px)
+		border-top: 50px solid #A8A4CD
+	@media(max-width: 1199px)
+		padding-top: 15px
+	.container-info 
+		.info-block-wrap
+			max-width: 1179px
+			@media(max-width: 1199px)
+				max-width: 100%
+			.border-block-item2
+				&::before
+					top: -84px
+					right: 107px
+					width: 603px
+					height: 256px
+				.under-border
+					padding-top: 33px
+					@media(max-width: 1199px)
+						padding-top: 0
+		.col-img
+			left: 98px
+			top: -57px
+			max-width: 469px
+		.col-info
+			max-width: 719px
+			padding: 58px 116px 126px 158px
+		.big-text
+			bottom: 144px
+			left: auto
+			right: -200px
+			transform: rotate(-90deg)
 .info-block-4
 	padding-top: 124px !important
 	padding-bottom: 32px !important
@@ -602,7 +643,7 @@
 					@media(max-width: 767px)
 						margin-bottom: 18px !important
 	.big-text
-		left: -83px !important
+		left: -115px !important
 		bottom: 18px !important
 		@media(max-width: 1300px)
 			left: -150px !important
@@ -635,6 +676,44 @@
 			.big-text
 				left: 3px !important
 				bottom: -54px !important
+.info-block-5-5
+	padding-top: 172px !important
+	border-bottom: 110px solid #ffffff
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		border-top: 0 solid #ffffff
+		border-bottom: 0 solid #ffffff
+		padding-bottom: 35px !important
+	@media(max-width: 767px)
+		border-top: 0px solid transparent
+	.container
+		.info-block-wrap
+			max-width: 1107px !important
+			padding-left: 100px
+			@media(max-width: 1199px)
+				max-width: 100% !important
+				padding-left: 0
+			.col-img
+				max-width: 467px !important
+				top: -108px !important
+			.col-info
+				max-width: 655px !important
+				margin-left: 0
+				padding: 60px 109px 39px 156px !important
+				@media(max-width: 1199px)
+					padding: 0px !important
+				.fs-20
+					font-size: 20px
+					line-height: 29px
+				.section-title
+					margin-bottom: 20px !important
+					@media(max-width: 767px)
+						margin-bottom: 18px !important
+	.big-text
+		left: -83px !important
+		bottom: 18px !important
+		@media(max-width: 1300px)
+			left: -150px !important
 .info-block.info-block-6
 	padding-bottom: 39px !important
 	border-bottom: 111px solid $color-white
@@ -981,6 +1060,23 @@
 			bottom: 370px
 			left: auto
 			right: -609px
+.info-block-7-3-1
+	padding-bottom: 70px !important
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		padding-bottom: 35px !important
+		background: #A8A4CD !important
+	.container
+		.info-block-wrap
+			.behind-bg
+				max-width: 610px !important
+				top: -162px !important
+			.col-info 
+				padding: 21px 0px 0 140px !important
+				max-width: 722px !important
+				@media(max-width: 1199px)
+					max-width: 100% !important
+					padding: 0 !important
 .info-block-7-4
 	padding-top: 59px !important
 	border-bottom: 102px solid #ffffff
@@ -1236,6 +1332,42 @@
 			top: -152px !important
 			@media(max-width: 1300px)
 				left: 0 !important
+.info-block-7-14
+	padding-top: 117px !important
+	padding-bottom: 68px !important
+	border-bottom: 70px solid #ffffff
+	@media(max-width: 1199px)
+		padding-top: 35px !important
+		padding-bottom: 0 !important
+		border-bottom: none
+	.container
+		.info-block-wrap
+			max-width: 1259px !important
+			padding-left: 27px
+			@media(max-width: 1199px)
+				padding-left: 0
+			.col-info
+				z-index: 3
+				padding: 0px !important
+				max-width: 586px !important
+				@media(max-width: 1199px)
+					max-width: 100% !important
+					padding: 0 !important
+		.behind-bg
+			left: 0 !important
+			padding: 0 0 72px 73px !important
+			background: -webkit-linear-gradient(bottom, #ffffff, #ffffff 85%, transparent 0, transparent)
+			max-width: 612px !important
+			top: -29px !important
+			@media(max-width: 1310px)
+				left: -90px !important
+			@media(max-width: 1199px)
+				display: none
+		.big-text
+			top: auto
+			bottom: -58px
+			left: -184px
+			z-index: 2
 .info-block-8
 	background: transparent
 	padding-top: 84px !important
@@ -1307,7 +1439,7 @@
 	.container
 		padding-left: 15px
 		padding-right: 15px
-		max-width: 1260px !important
+		max-width: 1290px !important
 		.col-img
 			top: -52px !important
 			max-width: 607px !important
@@ -1518,13 +1650,76 @@
 			left: auto !important
 			top: -116px !important
 			max-width: 540px !important
+.info-block-8-10
+	padding-top: 84px !important
+	padding-bottom: 232px
+	@media(max-width: 1199px)
+		padding-top: 20px !important
+		padding-bottom: 25px !important
+	.container 
+		.col-img
+			right: -4px
+			left: auto
+			top: -83px !important
+			max-width: 536px !important
+			@media(max-width: 1300px)
+				top: 45px !important
+				max-width: 490px !important
+		.col-info
+			max-width: 620px !important
+			padding: 54px 0 0 174px !important
+			@media(max-width: 1300px)
+				max-width: 587px !important
+			.border-el
+				margin-bottom: 76px
+				&::before
+					top: -35px !important
+					left: -66px !important
+					width: calc(100% + 202px) !important
+					height: calc(100% + 68px) !important
+			.btn-simple
+				max-width: 158px
+			@media(max-width: 1199px)
+				padding: 35px 0 0 0 !important
+				max-width: 100% !important
+.info-block-8-11
+	@media(max-width: 1199px)
+		padding-top: 20px !important
+		padding-bottom: 25px !important
+	.container 
+		padding-right: 15px
+		.col-img
+			top: 32px !important
+			max-width: 539px !important
+			left: auto
+			right: 0
+			@media(max-width: 1300px)
+				top: 15px !important
+				max-width: 490px !important
+		.col-info
+			z-index: 2
+			max-width: 620px !important
+			padding: 70px 0 130px 73px !important
+			.border-el
+				margin-bottom: 85px
+				&::before
+					top: -83px !important
+					left: -74px !important
+					width: calc(100% + 277px) !important
+					height: calc(100% + 126px) !important
+			@media(max-width: 1199px)
+				padding: 0 !important
+				max-width: 100% !important
 .info-block-9
 	padding: 60px 0 57px !important
+	@media(max-width: 1199px)
+		padding: 35px 0 !important
 	.container
 		max-width: 1106px
 		.col-info
-			padding: 0 0 0 91px
-			padding-top: 26px
+			padding: 26px 0 0 91px
+			@media(max-width: 1199px)
+				padding: 0
 		.col-img
 			position: static	!important
 			max-width: 538px !important
@@ -1585,7 +1780,7 @@
 	&::before
 		border-color: #9FA6BA !important
 @media(min-width: 1200px)
-	.border-block-item, .border-block-item2, .border-block-item3, .border-block-item4, .border-block-item5, .border-block-item6, .border-block-item7, .border-block-item8
+	.border-block-item, .border-block-item2, .border-block-item3, .border-block-item4, .border-block-item5, .border-block-item6, .border-block-item7, .border-block-item8, .border-block-item9
 		position: relative
 		&::before
 			content: ''
@@ -1664,6 +1859,14 @@
 		.under-border
 			max-width: 158px
 			margin: 75px  0 0 auto !important
+	.border-block-item9
+		&::before
+			top: -59px
+			right: 36px
+			width: 612px
+			height: 297px
+		.under-border
+			padding-top: 67px
 		
 .under-border
 	br
@@ -1822,6 +2025,7 @@
 		border-top: 50px solid #BECDD4
 		padding: 0 !important
 		background: #ffffff !important
+
 @media(max-width: 767px)
 	.big-text
 		display: none !important

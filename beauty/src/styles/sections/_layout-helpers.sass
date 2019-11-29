@@ -181,7 +181,7 @@ p, .p-text, .paragraph-text
   color: $text-color-white
 .grid-title
   display: -webkit-box
-  margin-bottom: 31px
+  margin-bottom: 15px
   transition: 0.3s ease
   @include font('CormorantGaramond-Bold', 700, 30, 35)
   color: $section-title-color
@@ -219,15 +219,15 @@ p, .p-text, .paragraph-text
 .no-bg-blk
 	background: transparent !important   
 .gray-word-bg
-  background: url('../assets/img/gray-word-bg.png')
-  background-repeat: no-repeat
-  background-position: center left
-  background-size: contain
+  background: url('../assets/img/gray-word-bg.png') !important
+  background-repeat: no-repeat !important
+  background-position: center left !important
+  background-size: contain !important
 .gray-word-bg2
-  background: url('../assets/img/gray-word-bg2.png')
-  background-repeat: no-repeat
-  background-position: center left
-  background-size: contain
+  background: url('../assets/img/gray-word-bg2.png') !important
+  background-repeat: no-repeat !important
+  background-position: center left !important
+  background-size: contain !important
 .grid-number
   display: block
   position: absolute
@@ -244,6 +244,8 @@ p, .p-text, .paragraph-text
   color: $spec-bg !important
 .light-green-text
   color: $dark-gren-bg !important
+.light-purple-text
+  color: $btn-bg !important
 
 .h-center
   text-align: center
@@ -357,6 +359,7 @@ p, .p-text, .paragraph-text
   &:hover
     background: $color-purple
 .btn-simple
+  cursor: pointer
   color: $color-white
   height: 38px
   padding: 15px 22px !important
