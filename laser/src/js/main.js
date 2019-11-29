@@ -1,4 +1,27 @@
 $(document).ready(function () {
+  $('[type="tel"]').mask("000-000-00-00")
+
+  $('#modalServiceListPay form').on('submit', bookRecord )
+  $('#modalServiceList form').on('submit', bookRecord )
+
+  $('#pay_button').on('click', _ => {
+    const n = $('#fullname').val(),
+      em = $('#email').val(),
+      p = $('#phone').val()
+    n && em && p && $('#modalServiceListPaySbm').click()
+    console.log('Clicked')
+    console.log('pay but')
+
+  })
+  $('#order_button').on('click', _ => {
+    const n = $('#fullname').val(),
+      em = $('#email').val(),
+      p = $('#phone').val()
+    n && em && p && $('#modalServiceListSbm').click()
+    console.log('Clicked')
+    console.log('order but')
+
+  })
   const callbackForm = $('form.feedback-form')[0],
     callbackBtn = $('#sendMail')
 
@@ -93,51 +116,6 @@ $(document).ready(function () {
       }
     }
   });
-
-
-  //
-  // var videoSLider = $('.video-slider').owlCarousel({
-  //   loop: false,
-  //   margin: 0,
-  //   nav: false,
-  //   dots: false,
-  //   items: 1,
-  //   dotsContainer: '.video-slider-dots',
-  //   responsive: {
-  //     0: {
-  //       nav: true
-  //     },
-  //     541: {
-  //       nav: false
-  //     },
-  //     1200: {
-  //       nav: false
-  //     }
-  //   }
-  // })
-  //
-  // $('.video-slider-dots .owl-dot').click(function (e) {
-  //   e.preventDefault()
-  //   var itemPosition = $(this).attr('data-pos')
-  //   videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
-  // })
-  //
-  // var videoSliderDots = $('.video-slider-dots').owlCarousel({
-  //   navContainer: '.video-nav-slider-dots',
-  //   loop: false,
-  //   margin: 0,
-  //   nav: true,
-  //   dots: false,
-  //   items: 1
-  // })
-  //
-  // $('.video-nav-slider-dots .owl-next').click(function () {
-  //   videoSliderDots.trigger('next.owl.carousel')
-  // })
-  //
-  // $('.video-nav-slider-dots .owl-prev').click(function () {
-  //   videoSliderDots.trigger('prev.owl.carousel', [300])
-  // })
 
   $('#closeOverlay').click(function (e) {
     $('#overlay').hide()
@@ -384,34 +362,35 @@ function processErrors(data) {
   return true;
 }
 
-function bookRecord(event, plusDate = 0) {
-  let inputNum;
-  event.preventDefault();
-  let date = new Date();
-  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
-  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-  let params
-  if (event.target.id === "pay_button")
-    inputNum = 0
-  else
-    inputNum = 1
-  params = getFormParams(inputNum);
+function bookRecord(event, plusDate = 0)
+  {
+    event.preventDefault()
+    let inputNum;
+    let date = new Date();
+    if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+    let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+    let params
+    if (event.target.id === "pay_button")
+      inputNum = 0
+    else
+      inputNum = 1
+    params = getFormParams(inputNum);
 
-  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
-  url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
-  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  ajax('GET', headers, url, null,
-    function (data) {
-      let dataArr = getData(data);
-      if (processErrors(dataArr)) return alert("Error");
-      if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-      else {
-        // 
-        writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
-      }
-    });
-}
+    let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+    url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
+    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+    ajax('GET', headers, url, null,
+      function (data) {
+        let dataArr = getData(data);
+        if (processErrors(dataArr)) return alert("Error");
+        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+        else {
+          //
+          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
+        }
+      });
+  }
 
 function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
