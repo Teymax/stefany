@@ -171,11 +171,11 @@ $(document).ready(function () {
 //checkbox service list male/female
   $('#checkboxServiceList').click(function () {
     if ($(this).is(':checked')) {
-      $('.list-female').toggleClass('hidden')
-      $('.list-male').toggleClass('visible')
+      $('.list-female').addClass('hidden')
+      $('.list-male').addClass('visible')
     } else {
-      $('.list-female').toggleClass('hidden')
-      $('.list-male').toggleClass('visible')
+      $('.list-female').removeClass('hidden')
+      $('.list-male').removeClass('visible')
     }
   });
 });
