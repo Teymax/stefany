@@ -7,6 +7,7 @@
         input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
         input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email")
         input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
+        input#modalServiceListPaySbm(type="submit" style="display: none;")
         #pay_button.button.btn-first.btn-simple.svg.caset.mx-auto(data-toggle='modal', data-target='#modalServiceList')
           .text-section
             +casetSvg
@@ -21,6 +22,8 @@
         input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
         input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email")
         input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
+        input#modalServiceListSbm(type="submit" style="display: none;")
+
         #order_button.button.btn-second.btn-simple.svg.pen.mx-auto(data-toggle='modal', data-target='#modalServiceList')
           .text-section
             +penSvg
