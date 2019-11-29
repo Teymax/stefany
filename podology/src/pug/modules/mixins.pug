@@ -60,9 +60,9 @@ mixin writeClientForm
     form(method="post" action="/")
       input(type="text", placeholder="Имя", data-client-name required)
       input(type="email" placeholder="Email" data-client-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
-      input(type="tel" placeholder="Телефон" data-client-phone pattern="^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$").mb-4
+      input(type="tel" placeholder="Телефон" data-client-phone required).mb-4
       input(type="submit" style="display: none" data-btn-submit)
-      +btnCallback('перезвонить мне')(data-toggle='modal', data-target='#thanksPopup')
+      +btnCallback('перезвонить мне')
       script(type="text/javascript")
         | (() => {
         | const form = document.currentScript.parentElement
@@ -73,6 +73,7 @@ mixin writeClientForm
         |   const name = form.querySelector('[data-client-name]').value,
         |         email = form.querySelector('[data-client-email]').value,
         |         phone = form.querySelector('[data-client-phone]').value
+        |   $('#thanksPopup').modal('show')
         |   var bearer_token = 'f5wujgx5yn6cagtk9fg2'
         |     var partnerId = 240913
         |     var managerId = 823619
@@ -103,6 +104,9 @@ mixin writeClientForm
         |     } )
         | })
         | triggerBtn.addEventListener('click', e => {
-        |   submitBtn.click()
+        |   const name = form.querySelector('[data-client-name]').value,
+        |         email = form.querySelector('[data-client-email]').value,
+        |         phone = form.querySelector('[data-client-phone]').value
+        |   !!name && !!email && !!phone && submitBtn.click()
         | })
         | })()
