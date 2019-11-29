@@ -21,7 +21,7 @@ section.section.service-laser-service-list.nano-service-list.overflow-visible
           .list-female
             .checkbox-group.pb-4
               each service in arrServiceShugaringFeale
-                .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
+                .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id data-sex='0')
                   .column-right.d-flex.align-items-start
                     +defaultCheckbox('dark')
                     p.paragraph-text.text-color-lightdark.ml-3.mb-0 #{service.title}
@@ -31,7 +31,7 @@ section.section.service-laser-service-list.nano-service-list.overflow-visible
           .list-male
             .checkbox-group.pb-4
               each service in arrServiceShugaringMale
-                .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id)
+                .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id data-sex='1')
                   .column-right.d-flex.align-items-start
                     +defaultCheckbox('dark')
                     p.paragraph-text.text-color-lightdark.ml-3.mb-0 #{service.title}

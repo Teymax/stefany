@@ -53,7 +53,7 @@ section.section.service-laser-service-list.nano-service-list.overflow-visible
                       p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
           .list-male
             each category in allCategoryMale
-              h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center.list-male #{category.name}
+              h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center#{category.name}
               .checkbox-group.pb-4
                 each service in category.services
                   .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id data-sex='1')

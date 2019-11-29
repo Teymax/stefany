@@ -17,9 +17,12 @@ section.section.service-laser-service-list
     width: 69px
     display: flex
     justify-content: space-between
+    @include media-breakpoint-down(sm)
+      width: 100%
     .paragraph-text
       white-space: nowrap
-
+  .column-right
+    width: 100%
 
   .custom-py-services-price
     padding: 72px 0
