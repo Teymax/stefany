@@ -58,6 +58,7 @@ $(document).ready(function () {
         ]
       }
     },
+    
     if: {
       ru: {
         cityName: 'Ивано-Франковск',
@@ -78,7 +79,7 @@ $(document).ready(function () {
           },
           {
             name: 'Кристина Демедюк',
-            education: ' По образованию',
+            education: ' По образованию акушерка',
             experience: 'Работает уже 2,5 месяца',
             skills: 'Сделает лазерную эпиляцию'
           },
@@ -182,7 +183,7 @@ $(document).ready(function () {
             education: 'По образованию медсестра.',
             experience: 'Работает уже 18 лет',
             skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
-          },
+          }
         ]
       }
     }
@@ -278,10 +279,11 @@ $(document).ready(function () {
     })
 
     $('.specialists-slider').owlCarousel({
-      loop: true,
+      loop: false,
       margin: 20,
       nav: true,
       dots: false,
+      navigation: true,
       responsive: {
         0: {
           items: 1
@@ -290,7 +292,7 @@ $(document).ready(function () {
           items: 2
         },
         1200: {
-          items: 2
+          items: 4
         }
       }
     });
