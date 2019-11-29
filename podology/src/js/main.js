@@ -389,28 +389,6 @@ $( document ).ready( function () {
   $( '#checkbox' ).change( function ( e ) {
     $( this ).parent().toggleClass( 'checked' )
   } )
-  // $( '#sendConsultation' ).click( function () {
-  //   var bearer_token = 'f5wujgx5yn6cagtk9fg2'
-  //   var partnerId = 240913
-  //   var managerId = 823619
-  //   var date = new Date()
-  //   var payload = {
-  //     'phone': $( '#consultPhone' ).val(),
-  //     'name' : $( '#consultName' ).val(),
-  //     'email': $( '#consultEmail' ).val()
-  //   }
-  //   date.setDate( date.getDate() + 1 )
-  //   var dateString = date.getFullYear() + '-' + ( ( date.getMonth() ) + 1 <
-  // 10 ? '0' + ( date.getMonth() + 1 ) : date.getMonth() + 1 ) + '-' + (
-  // date.getDate() < 10 ? '0' + date.getDate() : date.getDate() ) var url =
-  // 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' +
-  // managerId + '/' + dateString + '?service_ids=3354786' var headers = {
-  // 'Content-Type' : 'application/json', 'Authorization': 'Bearer ' +
-  // bearer_token } var request = $.ajax( { url    : url, type   : 'GET',
-  // headers: headers } )  request.done( function ( msg ) { console.log( 'Time:
-  // ', msg[ 0 ].datetime ) writeClient( msg[ 0 ].datetime, payload ) } )
-  // request.fail( function ( jqXHR, textStatus ) { alert( 'Request failed: ' +
-  // textStatus ) } ) } )
 } )
 
 window.writeClient = ( time, data ) => {
@@ -463,48 +441,8 @@ function closeAllModals () {
   }, 3000 )
 }
 
-/**
- * jquery.mask.js
- * @version: v1.14.10
- * @author: Igor Escobar
- *
- * Created by Igor Escobar on 2012-03-10. Please report any bug at
- *   http://blog.igorescobar.com
- *
- * Copyright (c) 2012 Igor Escobar http://blog.igorescobar.com
- *
- * The MIT License (http://www.opensource.org/licenses/mit-license.php)
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
-
-/* jshint laxbreak: true */
-/* jshint maxcomplexity:17 */
-/* global define */
-
 'use strict';
 
-// UMD (Universal Module Definition) patterns for JavaScript modules that work
-// everywhere. https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js
 ( function ( factory, jQuery, Zepto ) {
 
   if ( typeof define === 'function' && define.amd ) {
@@ -549,7 +487,6 @@ function closeAllModals () {
             var range,
                 ctrl = el.get( 0 )
 
-            // Firefox, WebKit, etc..
             if ( ctrl.setSelectionRange ) {
               ctrl.setSelectionRange( pos, pos )
             } else { // IE
@@ -583,18 +520,14 @@ function closeAllModals () {
             }
             el.data( 'changed', false )
           } )
-          // it's very important that this callback remains in this position
-          // otherwhise oldValue it's going to work buggy
           .on( 'blur.mask', function () {
             oldValue = p.val()
           } )
-          // select all text on focus
           .on( 'focus.mask', function ( e ) {
             if ( options.selectOnFocus === true ) {
               $( e.target ).select()
             }
           } )
-          // clear the value if it not complete the mask
           .on( 'focusout.mask', function () {
             if ( options.clearIfNotMatch && !regexMask.test( p.val() ) ) {
               p.val( '' )
@@ -668,13 +601,10 @@ function closeAllModals () {
             oValue  = el.data( 'mask-previus-value' ) || '',
             oValueL = oValue.length
 
-        // edge cases when erasing digits
         if ( el.data( 'mask-keycode' ) === 8 && oValue !== newVal ) {
           caretPos = caretPos - ( newVal.slice( 0, caretPos ).length - oValue.slice( 0, caretPos ).length )
 
-          // edge cases when typing new digits
         } else if ( oValue !== newVal ) {
-          // if the cursor is at the end keep it there
           if ( caretPos >= oValueL ) {
             caretPos = newValL
           } else {
@@ -754,9 +684,6 @@ function closeAllModals () {
               }
               m += offset
             } else if ( valDigit === lastUntranslatedMaskChar ) {
-              // matched the last untranslated (raw) mask character that we
-              // encountered likely an insert offset the mask character from
-              // the last entry; fall through and only increment v
               lastUntranslatedMaskChar = undefined
             } else if ( translation.optional ) {
               m += offset
@@ -817,7 +744,6 @@ function closeAllModals () {
 
     mask = typeof mask === 'function' ? mask( p.val(), undefined, el, options ) : mask
 
-    // public methods
     jMask.mask = mask
     jMask.options = options
     jMask.remove = function () {
@@ -828,12 +754,10 @@ function closeAllModals () {
       return el
     }
 
-    // get value without mask
     jMask.getCleanVal = function () {
       return p.getMasked( true )
     }
 
-    // get masked value without the value being in the input or element
     jMask.getMaskedVal = function ( val ) {
       return p.getMasked( false, val )
     }
@@ -858,15 +782,10 @@ function closeAllModals () {
           el.attr( 'placeholder', options.placeholder )
         }
 
-        // this is necessary, otherwise if the user submit the form
-        // and then press the "back" button, the autocomplete will erase
-        // the data. Works fine on IE9+, FF, Opera, Safari.
         if ( el.data( 'mask' ) ) {
           el.attr( 'autocomplete', 'off' )
         }
 
-        // detect if is necessary let the user type freely.
-        // for is a lot faster than forEach.
         for ( var i = 0, maxlength = true; i < mask.length; i++ ) {
           var translation = jMask.translation[ mask.charAt( i ) ]
           if ( translation && translation.recursive ) {
@@ -996,7 +915,6 @@ function closeAllModals () {
     dataMask     : true,
     watchInterval: 300,
     watchInputs  : true,
-    // old versions of chrome dont work great with input event
     useInput     : !/Chrome\/[2-4][0-9]|SamsungBrowser/.test( window.navigator.userAgent ) && eventSupported( 'input' ),
     watchDataMask: false,
     byPassKeys   : [ 9, 16, 17, 18, 36, 37, 38, 39, 40, 91 ],
@@ -1012,7 +930,6 @@ function closeAllModals () {
   $.jMaskGlobals = $.jMaskGlobals || {}
   globals = $.jMaskGlobals = $.extend( true, {}, globals, $.jMaskGlobals )
 
-  // looking for inputs with data-mask attribute
   if ( globals.dataMask ) {
     $.applyDataMask()
   }
