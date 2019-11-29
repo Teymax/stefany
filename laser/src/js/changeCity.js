@@ -337,7 +337,7 @@ $(document).ready(function () {
       imagesSpecialists += `
         <div class="specialists-item">
             <div class="specialists-item-container mb-3 w-100" data-fancybox="">
-                <div class="specialists-img w-100"><img class="w-100" src="${imgPath}/specialists/specialist-${i}.jpg" alt="${specialistsData[i].name}" srcset="${imgPath}/specialists/specialist-${i}@2x.jpg 2x" /></div>
+                <div class="specialists-img w-100"><img class="w-100" src="" alt="${specialistsData[i].name}" srcset="${imgPath}/specialists/specialist-${i}@2x.jpg 2x" /></div>
                 <div class="specialists-info d-flex flex-column align-items-start w-100 p-3">
                     <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].education}</p>
                     <p class="paragraph-text text-color-lightdark text-w-bold">${specialistsData[i].experience}</p>
