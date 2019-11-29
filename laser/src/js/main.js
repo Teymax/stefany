@@ -1,7 +1,52 @@
-
-
 $(document).ready(function () {
-  $('#sendMail').click(sendEmail)
+  const callbackForm = $('form.feedback-form')[0],
+    callbackBtn = $('#sendMail')
+
+  if (callbackBtn) {
+    callbackBtn.on('click', e => {
+      e.stopPropagation()
+      e.preventDefault()
+      $('[data-contact-submit]').click()
+    })
+  }
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', e => {
+      e.preventDefault()
+      e.stopPropagation()
+
+      let comment = document.querySelector("textarea")
+      let phone = document.querySelector('input[name=phone]')
+      let name = document.querySelector('input[name=name]')
+      let email = document.querySelector('input[name=email]')
+
+
+      window.mail = {
+        Host: 'smtp.gmail.com',
+        Username: 'four.progs@gmail.com',
+        Password: 'Htndeth0614',
+        To: 'malanivvlad@gmail.com',
+        From: email.value
+      }
+
+      let details = {
+        Subject: 'Users questions and proposals',
+        Body:
+          `Имя: ${name.value}
+<br>Email: ${email.value}
+<br>Телефон:  ${phone.value}
+<br>Сообщение:  ${comment.value}`
+      }
+
+      Email.send({
+        ...mail,
+        ...details
+      })
+      name.value = ''
+      email.value = ''
+      phone.value = ''
+      comment.value = ''
+    })
+  }
   $('#carouselExample').on('slide.bs.carousel', function (e) {
     var $e = $(e.relatedTarget);
     var idx = $e.index();
@@ -155,7 +200,7 @@ window.onload = function () {
   // phoneForm = document.getElementById("contactForm");
   // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.querySelectorAll("#phone");
-  console.log(phoneInput)
+
   fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
   let payButtons = document.querySelectorAll("#pay_button");
@@ -180,7 +225,7 @@ function refreshPrice(e) {
   let serviceName = parent.querySelector('.paragraph-text').innerHTML;
   let price = parent.querySelector('.item-price').innerHTML;
   let checkbox = parent.querySelector('input[name="service"]');
-  console.log(checkbox);
+
   if (checkbox.checked) {
     choosenServices.push({
       id,
@@ -218,7 +263,7 @@ function refreshPrice(e) {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
     let serv = servicesAll.find(service => service.id === +id)
-    console.log(serv)
+
     return accum + serv.price_max
   }, 0)
   let genTime = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
@@ -245,13 +290,13 @@ function refreshPrice(e) {
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
-      + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
+    + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
 }
 
 function displayServices(json) {
   let data = getData(json);
   servicesAll = data.services
-  console.log(servicesAll)
+
   mainBlocks = document.getElementsByClassName("checkbox-row")
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
@@ -274,7 +319,7 @@ function getData(data) {
   try {
     answer = JSON.parse(data);
   } catch (err) {
-    console.log(err.message + " in " + xmlhttp.responseText);
+
     return {error: err.message, status: answer['errors']['code']};
   }
   if (answer["errors"]) {
@@ -295,7 +340,7 @@ function getFormParams(inputNum) {
     let id = main.getAttribute('id');
     return parseInt(id);
   });
-  console.log(services)
+
   // phoneInput = Array.from(phoneInput)
   // fullNameInput = Array.from(fullNameInput)
   // emailInput = Array.from(emailInput)
@@ -303,9 +348,8 @@ function getFormParams(inputNum) {
   let phone = [...phoneInput][inputNum].value
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
-  console.log(phone)
-  console.log(email)
-  console.log(fullName)
+
+
   return {
     phone: phone.length > 0 ? phone : false,
     fullName: fullName.length > 0 ? fullName : false,
@@ -347,7 +391,7 @@ function bookRecord(event, plusDate = 0) {
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params
   if (event.target.id === "pay_button")
     inputNum = 0
@@ -359,21 +403,21 @@ function bookRecord(event, plusDate = 0) {
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, url, null,
-      function (data) {
-        let dataArr = getData(data);
-        if (processErrors(dataArr)) return alert("Error");
-        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-        else {
-          // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
-        }
-      });
+    function (data) {
+      let dataArr = getData(data);
+      if (processErrors(dataArr)) return alert("Error");
+      if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+      else {
+        // 
+        writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
+      }
+    });
 }
 
 function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams(inputNum);
-  console.log(params)
+
   if (!params.phone || !params.fullName || !params.email || !params.services) {
     alert("smth went wrong, please reload the page and try again");
     return;
@@ -394,15 +438,15 @@ function writeClient(inputNum, time, isPayment = false) {
     ]
   };
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-      function (data) {
-        let err = processErrors(getData(data));
-        if (!err) {
+    function (data) {
+      let err = processErrors(getData(data));
+      if (!err) {
 
-          alert("Success");
-        }
-      });
+        alert("Success");
+      }
+    });
   if (isPayment) {
-    console.log("uh")
+
 
     preparePayButton(inputNum);
   }
@@ -415,14 +459,14 @@ function preparePayButton(inputNum) {
     return;
   }
   let price = 0;
-  // console.log(servicesArr);
-  // console.log(params.services);
+  // 
+  // 
   for (let i in params.services) {
     price += servicesArr[params.services[i]].price;
   }
   let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
   let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
-  console.log(order)
+
   location.replace(createOrder(price, desc, params.fullName, params.services, params.email, params.phone));
 }
 
@@ -461,49 +505,19 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     return tempService.title
   })
   names = names.join(', ')
-  console.log(names)
+
   button.addField({
     label: 'services',
     name: 'user_services',
     value: names,
     readonly: true
   });
-  console.log(button);
+
   return button.getUrl();
 }
 
 // {Subject: '', Body: ''}
-function sendEmail() {
-  console.log('jopa')
-  let comment = document.querySelector("textarea")
-  let phone = document.querySelector('input[name=phone]')
-  let name = document.querySelector('input[name=name]')
-  let email = document.querySelector('input[name=email]')
-  let details = {
-    Subject: 'Users questions and proposals',
-    Body:
-        `Имя: ${  name.value }
-<br>Email: ${ email.value}
-<br>Телефон:  ${ phone.value}
-<br>Сообщение:  ${ comment.value }`
-  }
-  window.mail = {
-    Host: 'smtp.gmail.com',
-    Username: 'four.progs@gmail.com',
-    Password: 'Htndeth0614',
-    To: 'malanivvlad@gmail.com',
-    From: email.value
-  }
-  Email.send({
-    ...mail,
-    ...details
-  })
-  phone.value = ''
-  email.value = ''
-  comment.value = ''
-  name.value = ''
 
-}
 
 function consultWrite(event, plusDate = 0) {
   let date = new Date();
@@ -511,7 +525,7 @@ function consultWrite(event, plusDate = 0) {
   event.preventDefault();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
 
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += "?service_ids=" + encodeURIComponent(service);
@@ -519,45 +533,43 @@ function consultWrite(event, plusDate = 0) {
   let phone = document.getElementById("phoneConsult")
   let email = document.getElementById("emailConsult")
   let fullName = document.getElementById("fullnameConsult")
-  console.log(phone)
-  console.log(email)
-  console.log(fullName)
+
 
   ajax('GET', headers, url, null,
-      function (data) {
-        let dataArr = getData(data);
-        if (dataArr.length < 1) return consultWrite(event, ++plusDate);
-        if (processErrors(dataArr)) return alert("Error");
-        else {
-          headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-          if (!phone || !fullName || !email || !service) {
-            alert("smth went wrong, please reload the page and try again");
-            return;
-          }
-          let date = new Date();
-          userParams = {
-            "phone": phone.value,
-            "fullname": fullName.value,
-            "email": email.value,
-            "comment": "consult",
-            "appointments": [
-              {
-                "id": date.getTime(),
-                "services": service,
-                "staff_id": managerId,
-                "datetime": dataArr[0].datetime
-              }
-            ]
-          }
-          ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-              function (data) {
-                let err = processErrors(getData(data));
-                if (!err) {
-                  alert("Success");
-                }
-              });
+    function (data) {
+      let dataArr = getData(data);
+      if (dataArr.length < 1) return consultWrite(event, ++plusDate);
+      if (processErrors(dataArr)) return alert("Error");
+      else {
+        headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+        if (!phone || !fullName || !email || !service) {
+          alert("smth went wrong, please reload the page and try again");
+          return;
         }
-      })
+        let date = new Date();
+        userParams = {
+          "phone": phone.value,
+          "fullname": fullName.value,
+          "email": email.value,
+          "comment": "consult",
+          "appointments": [
+            {
+              "id": date.getTime(),
+              "services": service,
+              "staff_id": managerId,
+              "datetime": dataArr[0].datetime
+            }
+          ]
+        }
+        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+          function (data) {
+            let err = processErrors(getData(data));
+            if (!err) {
+              alert("Success");
+            }
+          });
+      }
+    })
 
 }
 

@@ -228,7 +228,7 @@ $(document).ready(function () {
     const videoSlider = $('.video-slider');
     const owlDots = $('.small-owl-images-container .owl-dots-item');
     const specialistsSlider = $('.specialists-slider');
-    console.log(videoSlider);
+    // console.log(videoSlider);
     if (videoSlider) {
       videoSlider.html(carouselsHTML.videoCarousel);
     }
