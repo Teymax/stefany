@@ -197,12 +197,11 @@ function refreshPrice(e) {
     })
   }
 
-  // choosenServices = choosenServices.filter(function(item, pos) {
-  //   return choosenServices.indexOf(item) == pos;
-  // })
   $("#choosenServices")[0].innerHTML = '';
+
   choosenServices.forEach(item => {
     $("#choosenServices")[0].innerHTML += `
+
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
 <!--          <label class="service-checkbox-label">-->
 <!--            <input class="align-self-center" type="checkbox" name="service"/>-->
@@ -218,21 +217,30 @@ function refreshPrice(e) {
       `;
   })
   let serviceCheckboxes = document.querySelectorAll(".service-list-group input:checked");
-  let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
+
+  // modal count
+  document.querySelectorAll(".countCheckedService").forEach(function (item){
+    item.textContent = serviceCheckboxes.length
+  })
+
+  let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
     let serv = servicesAll.find(service => service.id === +id)
 
     return accum + serv.price_max
+
   }, 0)
+
   let genTime = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
     const parent = current.closest('.checkbox-row')
-    console.log(parent)
+
     let id = parent.getAttribute('id')
     let serv = servicesAll.find(service => service.id === +id)
     return accum + serv.seance_length
   }, 0)
   $('.serviceListTime').each(function (e) {
+
     if (genTime % 3600 === 0)
       this.textContent = genTime / 3600 + ' ч';
     else {
@@ -298,6 +306,7 @@ function getFormParams(inputNum) {
     let id = main.getAttribute('id');
     return parseInt(id);
   });
+
 
   // phoneInput = Array.from(phoneInput)
   // fullNameInput = Array.from(fullNameInput)
@@ -439,8 +448,8 @@ function preparePayButton(inputNum) {
     return;
   }
   let price = 0;
-  // 
-  // 
+  //
+  //
   for (let i in params.services) {
     price += servicesArr[params.services[i]].price;
   }
