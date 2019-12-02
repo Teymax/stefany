@@ -93,3 +93,25 @@ mixin accordeon(header, description, items, expandedRequired, expandedIndex)
           .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
             .card-body
               p.paragraph-text.text-w-light= item.body
+
+
+mixin modalServiceListInfo
+  .d-flex.justify-content-between
+    span.paragraph-text.text-color-dark.line-height Выбрано услуг
+    span.paragraph-text.text-w-bold.text-color-dark.ml-2.countCheckedService
+  .d-flex.justify-content-between
+    span.paragraph-text.text-color-dark.line-height Общее время
+    span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListTime
+  .d-flex.justify-content-between
+    span.paragraph-text.text-color-dark.line-height Общая сумма
+    span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListSum
+mixin modalServiceListInfo1
+  .d-flex.justify-content-between
+    span.paragraph-text.text-color-dark.line-height Выбрано услуг
+    span.paragraph-text.text-w-bold.text-color-dark.ml-2.countCheckedService1
+  .d-flex.justify-content-between
+    span.paragraph-text.text-color-dark.line-height Общее время
+    span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListTime
+  .d-flex.justify-content-between
+    span.paragraph-text.text-color-dark.line-height Общая сумма
+    span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListSum
