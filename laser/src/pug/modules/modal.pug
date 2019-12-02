@@ -4,10 +4,10 @@
       h4.text-center Оставьте ваши данные
       h5.text-center чтобы занять место в группе
       form
-        input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
-        input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email")
-        input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
-        input#modalServiceListPaySbm(type="submit" style="display: none;")
+        input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя" required)
+        input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email" )
+        input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон" required)
+
         #pay_button.button.btn-first.btn-simple.svg.caset.mx-auto(data-toggle='modal', data-target='#modalServiceList')
           .text-section
             +casetSvg
@@ -19,10 +19,9 @@
       h4.text-center Оставьте ваши данные
       h5.text-center чтобы занять место в группе
       form
-        input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
-        input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email")
-        input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон")
-        input#modalServiceListSbm(type="submit" style="display: none;")
+        input#fullname.w-100.p-text-light.mb-2(type="text", placeholder="Имя" required)
+        input#email.w-100.p-text-light.mb-2(type="email", placeholder="Email" required)
+        input#phone.w-100.p-text-light.mb-2(type="tel", placeholder="Телефон" required )
 
         #order_button.button.btn-second.btn-simple.svg.pen.mx-auto(data-toggle='modal', data-target='#modalServiceList')
           .text-section
