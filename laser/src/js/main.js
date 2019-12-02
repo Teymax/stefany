@@ -331,7 +331,7 @@ function getFormParams(inputNum) {
     }
   if(services.length===0)
   {
-    alert("Yoy didnt choose any service")
+    alert("Yoy didn't choose any service")
     return
   }
   return {
@@ -519,10 +519,23 @@ function consultWrite(event, plusDate = 0) {
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += "?service_ids=" + encodeURIComponent(service);
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  let phone = document.getElementById("phoneConsult")
-  let email = document.getElementById("emailConsult")
-  let fullName = document.getElementById("fullnameConsult")
-
+  let phone = document.getElementById("phoneConsult").value
+  let email = document.getElementById("emailConsult").value
+  let fullName = document.getElementById("fullnameConsult").value
+  if (!phone || !fullName || !email || !service) {
+    alert("smth went wrong, please reload the page and try again");
+    return;
+  }
+  const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+  if (!reg.exec(email)) {
+    alert("Input correct email")
+    return
+  }
+  if (phone.length < 13)
+  {
+    alert('Input correct phone')
+    return
+  }
 
   ajax('GET', headers, url, null,
     function (data) {
@@ -531,15 +544,13 @@ function consultWrite(event, plusDate = 0) {
       if (processErrors(dataArr)) return alert("Error");
       else {
         headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-        if (!phone || !fullName || !email || !service) {
-          alert("smth went wrong, please reload the page and try again");
-          return;
-        }
+
+
         let date = new Date();
         userParams = {
-          "phone": phone.value,
-          "fullname": fullName.value,
-          "email": email.value,
+          "phone": phone,
+          "fullname": fullName,
+          "email": email,
           "comment": "consult",
           "appointments": [
             {
