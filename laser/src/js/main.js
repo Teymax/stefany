@@ -1,27 +1,10 @@
 $(document).ready(function () {
   $('[type="tel"]').mask("000-000-00-00")
+  var payForm = $('#modalServiceListPay form')
+  payForm.on('submit', bookRecord)
+  var submForm = $('#modalServiceListSinugUp form')
+  submForm.on('submit', bookRecord)
 
-  $('#modalServiceListPay form').on('submit', bookRecord )
-  $('#modalServiceList form').on('submit', bookRecord )
-
-  $('#pay_button').on('click', _ => {
-    const n = $('#fullname').val(),
-      em = $('#email').val(),
-      p = $('#phone').val()
-    n && em && p && $('#modalServiceListPaySbm').click()
-    console.log('Clicked')
-    console.log('pay but')
-
-  })
-  $('#order_button').on('click', _ => {
-    const n = $('#fullname').val(),
-      em = $('#email').val(),
-      p = $('#phone').val()
-    n && em && p && $('#modalServiceListSbm').click()
-    console.log('Clicked')
-    console.log('order but')
-
-  })
   const callbackForm = $('form.feedback-form')[0],
     callbackBtn = $('#sendMail')
 
@@ -235,9 +218,11 @@ function refreshPrice(e) {
   })
   let serviceCheckboxes = document.querySelectorAll(".service-list-group input:checked");
 
-  //TODO HARDCOD
-  document.querySelector(".countCheckedService").textContent = serviceCheckboxes.length
-  document.querySelector(".countCheckedService1").textContent = serviceCheckboxes.length
+  // modal count
+  document.querySelectorAll(".countCheckedService").forEach(function (item){
+    item.textContent = serviceCheckboxes.length
+  })
+
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
@@ -279,7 +264,6 @@ function getServices() {
 function displayServices(json) {
   let data = getData(json);
   servicesAll = data.services
-
   mainBlocks = document.getElementsByClassName("checkbox-row")
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
@@ -331,8 +315,25 @@ function getFormParams(inputNum) {
   let phone = [...phoneInput][inputNum].value
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
-
-
+  if (!phone || !fullName || !email || !services) {
+    alert("smth went wrong, please reload the page and try again");
+    return;
+  }
+  const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+  if (!reg.exec(email)) {
+    alert("Input correct email")
+    return
+  }
+  if (phone.length < 13)
+    {
+      alert('Input correct phone')
+      return
+    }
+  if(services.length===0)
+  {
+    alert("Yoy didnt choose any service")
+    return
+  }
   return {
     phone: phone.length > 0 ? phone : false,
     fullName: fullName.length > 0 ? fullName : false,
@@ -368,35 +369,34 @@ function processErrors(data) {
   return true;
 }
 
-function bookRecord(event, plusDate = 0)
-  {
-    event.preventDefault()
-    let inputNum;
-    let date = new Date();
-    if (plusDate > 0) date.setDate(date.getDate() + plusDate);
-    let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-    let params
-    if (event.target.id === "pay_button")
-      inputNum = 0
-    else
-      inputNum = 1
-    params = getFormParams(inputNum);
+function bookRecord(event, plusDate = 0) {
+  event.preventDefault()
+  let inputNum;
+  let date = new Date();
+  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+  let params
+  if (event.target.id === "pay_button")
+    inputNum = 0
+  else
+    inputNum = 1
+  params = getFormParams(inputNum);
 
-    let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
-    url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
-    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-    ajax('GET', headers, url, null,
-      function (data) {
-        let dataArr = getData(data);
-        if (processErrors(dataArr)) return alert("Error");
-        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-        else {
-          //
-          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
-        }
-      });
-  }
+  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+  url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
+  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, url, null,
+    function (data) {
+      let dataArr = getData(data);
+      if (processErrors(dataArr)) return alert("Error");
+      if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+      else {
+
+        writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
+      }
+    });
+}
 
 function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
@@ -405,6 +405,11 @@ function writeClient(inputNum, time, isPayment = false) {
   if (!params.phone || !params.fullName || !params.email || !params.services) {
     alert("smth went wrong, please reload the page and try again");
     return;
+  }
+  const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+  if (!reg.exec(params.email)) {
+    alert("Input correct email")
+    return
   }
   let date = new Date();
   userParams = {
