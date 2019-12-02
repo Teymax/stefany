@@ -1,5 +1,10 @@
 $(document).ready(function () {
-  $('[type="tel"]').mask("000-000-00-00")
+let regex = new RegExp("%3c.*%3e","i");
+let replaceHref = regex.exec(window.location.href);
+if (replaceHref) {
+  window.location.replace = "./404.html";
+}
+  $('[type="tel"]').mask("+38-(000)-000-00-00")
   var payForm = $('#modalServiceListPay form')
   payForm.on('submit', bookRecord)
   var submForm = $('#modalServiceListSinugUp form')
@@ -361,8 +366,8 @@ function ajax(method, headers, url, params, callback) {
 
 function processErrors(data) {
   let msg;
-  if (!data.error) return false;
-  msg = data.error.message;
+  if (!data._error) return false;
+  msg = data._error.message;
 
 
   alert(msg)
