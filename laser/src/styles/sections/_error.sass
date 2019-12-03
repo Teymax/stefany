@@ -1,0 +1,96 @@
+.error
+  //margin-top: -50px
+  position: relative
+  background:
+    image: url("../assets/img/error/error-bg.jpg")
+    size: cover
+  padding-top: 73px
+  overflow: hidden
+  @include media-breakpoint-down(lg)
+    background:
+      image: url("../assets/img/error/error-bg-tablet.jpg")
+    padding-top: 33px
+  @include media-breakpoint-down(sm)
+    padding-top: 13px
+  .c-content
+    padding-top: 40px
+    @include media-breakpoint-down(lg)
+      padding-top: 0px
+    .h2-title
+      margin-bottom: 17px
+      @include media-breakpoint-down(sm)
+        margin-bottom: 14px
+    .subtitle
+      margin-bottom: 40px
+      max-width: 432px
+      @include font(Circe, 300, 20, 24)
+      color: $text-color-white
+      @include media-breakpoint-down(sm)
+        margin-bottom: 19px
+        font-size: 16px
+        line-height: 19px
+    .info-list
+      li.list-item
+        color: #F6AE9F
+        text-decoration: underline
+        &:before
+          background: #F6AE9F
+
+  .white-block-design
+    margin-left: auto
+    width: 504px
+    height: 572px
+    @include media-breakpoint-down(lg)
+      width: 431px
+      height: 537px
+      margin-top: -273px
+      margin-left: 423px
+    @include media-breakpoint-down(sm)
+      width: 312px
+      height: 177px
+      margin-top: 49px
+      margin-left: auto
+      margin-right: auto
+      transform: translateX(-40px)
+    .extralarge-text-bg
+      position: absolute
+      bottom: 115px
+      left: -375px
+      @include media-breakpoint-down(lg)
+        bottom: 87px
+        left: -430px
+      @include media-breakpoint-down(sm)
+        font-size: 129.495px
+        bottom: 25px
+        left: 0px
+    img
+      top: 72px
+      right: 74px
+      box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+      width: 537px
+      height: 419px
+      @include media-breakpoint-down(lg)
+        top: 72px
+        right: 71px
+        width: 445px
+        height: 419px
+      @include media-breakpoint-down(sm)
+        top: -32px
+        right: 0
+        left: 41px
+        width: 285px
+        height: 186px
+
+
+
+  .container
+    @include media-breakpoint-down(lg)
+      display: none
+    @include media-breakpoint-down(sm)
+      display: block
+  .error-tablet
+    display: none
+    @include media-breakpoint-down(lg)
+      display: block
+    @include media-breakpoint-down(sm)
+      display: none
