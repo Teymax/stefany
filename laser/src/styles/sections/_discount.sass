@@ -8,6 +8,24 @@ section.section.discount
     @include  font(Circe, 700, 22, 26)
   .line-through
     text-decoration: line-through
+  .h2-title
+    margin-bottom: 15px
+  .discount-subtitle
+    @include font (Circe, 400, 20, 20)
+    color: #6F7682
+    letter-spacing: 0.03em
+    margin-bottom: 56px
+    margin-top: 56px
+    @include media-breakpoint-down(lg)
+      margin-top: 36px
+
+  .btn-callback
+    margin:
+      top: 17px
+      left: auto
+      right: auto
+
+    max-width: 251px
   .container
     .timer-text
       @include font (Circe, 900, 26, 73)
@@ -24,6 +42,14 @@ section.section.discount
       align-items: center
       width: 395px
       height: 300px
+      box-shadow: 0px 10px 25px rgba(58, 64, 91, 0.15)
+      @include media-breakpoint-down(lg)
+        margin:
+          left: auto
+          right: auto
+          bottom: 30px
+      @include media-breakpoint-down(sm)
+        width: 100%
     .c-content
       position: relative
       width: 357px
@@ -31,13 +57,17 @@ section.section.discount
       border-radius: 10px
       padding: 20px
       border: 1px solid #9FA5B9
+      @include media-breakpoint-down(lg)
+
+      @include media-breakpoint-down(sm)
+        width: 100%
       .discount-title
         @include font (CormorantGaramond, 700, 24, 37)
         letter-spacing: 0.15px
-        color: #4D5259
-        margin-bottom: 42px
+        margin-bottom: 28px
       .paragraph-text
         margin-bottom: 41px
+        line-height: 32px
 
       .button
         max-width: 154px
@@ -55,12 +85,7 @@ section.section.discount
           @include font (Circe, 900, 18, 0)
           color: #fff
 
-      @include media-breakpoint-down(lg)
-        max-width: 430px
-        margin:
-          left: auto
-          right: auto
-          bottom: 30px
+
       .c-btn
         margin-left:  auto
         margin-right: auto
@@ -68,36 +93,39 @@ section.section.discount
         display: flex
         justify-content: space-between
 
-  b
-    color: $text-color-dark
-@include media-breakpoint-down(lg)
-  section.section.discount
-    padding-top: 107px
-    padding-bottom: 30px
-    .container
-      .c-content
-        .d-discount
-          max-width: 430px
-          margin:
-            left: auto
-            right: auto
-            bottom: 30px
-        .c-btn
-
+//@include media-breakpoint-down(lg)
+//  section.section.discount
+//    padding-top: 107px
+//    padding-bottom: 30px
+//    .container
+//      .c-content
+//        .d-discount
+//          max-width: 430px
+//          margin:
+//            left: auto
+//            right: auto
+//            bottom: 30px
+//        .c-btn
+//
 @include media-breakpoint-down(sm)
   section.section.discount
     padding-top: 65px
     padding-bottom: 25px
     .container
+      .box-wrap
+        max-width: 100%
+        overflow: hidden
+        border: 1px solid #9FA5B9
       .c-content
         max-width:  285px
+        border: none
         .d-discount
         .c-btn
           position: relative
           .button
             position: absolute
           .btn-first
-            left: -41px
+            left: -38px
           .btn-second
-            right: -44px
+            right: -38px
 

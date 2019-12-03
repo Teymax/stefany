@@ -16,8 +16,8 @@ section.section.service-laser-service-list.nano-service-list
         .checkbox-wrapper
           input(type="checkbox" class="checkbox" id="checkboxServiceList")
         .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
-          - let arrServiceWaxingFemale = [{"id": 1415174,"title": " Верхняя губа"}, { "id": 1415177, "title": " подбородок", }, { "id": 1415179, "title": " руки", }, { "id": 1415178, "title": " подмышки", }, { "id": 1415172, "title": " белоя линия живота", }, { "id": 1415175, "title": " глубокое бикини", }, { "id": 1415173, "title": " бикини", }, { "id": 1415176, "title": " ноги", }, { "id": 1415180, "title": " голени", }, { "id": 3293896, "title": " ягодицы", }, { "id": 3293903, "title": " живот", }, { "id": 3293907, "title": " поясница", }, { "id": 3293912, "title": " скулы", }, { "id": 3828379, "title": " грудь", }, { "id": 3942706, "title": " бедро частично", }, { "id": 4430902, "title": " уши", }, { "id": 4430917, "title": " брови", }, { "id": 4430933, "title": " нос", } ]
-          - let arrServiceWaxingMale =[{"id": 1415174,"title": " Верхняя губа"}, { "id": 1415177, "title": " подбородок", }, { "id": 1415179, "title": " руки", }, { "id": 1415172, "title": " белоя линия живота", }, { "id": 1415175, "title": " глубокое бикини", }, { "id": 1415173, "title": " бикини", }, { "id": 1415176, "title": " ноги", }, { "id": 1415180, "title": " голени", }, { "id": 3293896, "title": " ягодицы", }, { "id": 3293907, "title": " поясница", }, { "id": 3293912, "title": " скулы", }, { "id": 3942706, "title": " бедро частично", }, { "id": 4430902, "title": " уши", }, { "id": 4430917, "title": " брови", }, { "id": 4430933, "title": " нос", },{ "id": 1415198, "title": " спина",},{ "id": 1415197, "title": " подмышки",},{ "id": 1415196, "title": " живот",},{ "id": 1415195, "title": " грудь",},]
+          - let arrServiceWaxingFemale = [{"id": 1415174,"title": " Верхняя губа"}, { "id": 1415177, "title": " Подбородок", }, { "id": 1415179, "title": "Руки", }, { "id": 1415178, "title": "Подмышки", }, { "id": 1415172, "title": "Белоя линия живота", }, { "id": 1415175, "title": "Глубокое бикини", }, { "id": 1415173, "title": " Бикини", }, { "id": 1415176, "title": " Ноги", }, { "id": 1415180, "title": "Голени", }, { "id": 3293896, "title": " Ягодицы", }, { "id": 3293903, "title": " Живот", }, { "id": 3293907, "title": " Поясница", }, { "id": 3293912, "title": " Скулы", }, { "id": 3828379, "title": " Грудь", }, { "id": 3942706, "title": " Бедро частично", }, { "id": 4430902, "title": " Уши", }, { "id": 4430917, "title": " Брови", }, { "id": 4430933, "title": "Нос", } ]
+          - let arrServiceWaxingMale =[{"id": 1415174,"title": " Верхняя губа"}, { "id": 1415177, "title": " Подбородок", }, { "id": 1415179, "title": "Руки", }, { "id": 1415172, "title": "Белоя линия живота", }, { "id": 1415175, "title": "Глубокое бикини", }, { "id": 1415173, "title": "Бикини", }, { "id": 1415176, "title": "Ноги", }, { "id": 1415180, "title": "Голени", }, { "id": 3293896, "title": "Ягодицы", }, { "id": 3293907, "title": " Поясница", }, { "id": 3293912, "title": " Скулы", }, { "id": 3942706, "title": " Бедро частично", }, { "id": 4430902, "title": " Уши", }, { "id": 4430917, "title": " Брови", }, { "id": 4430933, "title": " Нос", },{ "id": 1415198, "title": " Спина",},{ "id": 1415197, "title": " Подмышки",},{ "id": 1415196, "title": "Живот",},{ "id": 1415195, "title": "Грудь",},]
           .list-female
             .checkbox-group.pb-4
               each service in arrServiceWaxingFemale
@@ -52,10 +52,10 @@ section.section.service-laser-service-list.nano-service-list
             //p.paragraph-text.text-w-bold.text-color-white 40%
           .price-group.d-flex.justify-content-between
             .price-block.d-flex.justify-content-start
-              img(src="assets/img/laser-page/time.png")
+              img(src="assets/img/laser-page/time.svg")
               p.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListTime
             .price-block.d-flex.justify-content-end
-              img(src="assets/img/laser-page/price.png")
+              img(src="assets/img/laser-page/price.svg")
               p.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListSum 0 грн
           .c-btn.mt-3.d-flex.justify-content-between.w-332
             .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
