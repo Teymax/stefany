@@ -174,6 +174,41 @@ window.onload = function () {
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
   consult = document.getElementById('consult')
   consult.addEventListener('click', consultWrite)
+  let curUrl = document.URL
+  if (curUrl.includes('payed=true')) {
+    if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
+      headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+
+      let date = new Date();
+      userParams = {
+        "phone": localStorage.phone,
+        "fullname": localStorage.fullName,
+        "email": localStorage.email,
+        "comment": "online order+payment",
+        "appointments": [
+          {
+            "id": date.getTime(),
+            "services": localStorage.services,
+            "staff_id": managerId,
+            "datetime": localStorage.time
+          }
+        ]
+      };
+
+      ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+        function (data) {
+          let err = processErrors(getData(data));
+          if (!err) {
+            alert("Success");
+          }
+        });
+    }
+  }
+  localStorage.removeItem('time')
+  localStorage.removeItem('fullName')
+  localStorage.removeItem('phone')
+  localStorage.removeItem('email')
+  localStorage.removeItem('services')
 };
 
 function refreshPrice(e) {
@@ -219,7 +254,7 @@ function refreshPrice(e) {
   let serviceCheckboxes = document.querySelectorAll(".service-list-group input:checked");
 
   // modal count
-  document.querySelectorAll(".countCheckedService").forEach(function (item){
+  document.querySelectorAll(".countCheckedService").forEach(function (item) {
     item.textContent = serviceCheckboxes.length
   })
 
@@ -308,15 +343,12 @@ function getFormParams(inputNum) {
   });
 
 
-  // phoneInput = Array.from(phoneInput)
-  // fullNameInput = Array.from(fullNameInput)
-  // emailInput = Array.from(emailInput)
-
   let phone = [...phoneInput][inputNum].value
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
-  if (!phone || !fullName || !email || !services) {
-    alert("smth went wrong, please reload the page and try again");
+  console.log(fullName)
+  if (!fullName) {
+    alert("Input correct name");
     return;
   }
   const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
@@ -324,13 +356,11 @@ function getFormParams(inputNum) {
     alert("Input correct email")
     return
   }
-  if (phone.length < 13)
-    {
-      alert('Input correct phone')
-      return
-    }
-  if(services.length===0)
-  {
+  if (phone.length < 13) {
+    alert('Input correct phone')
+    return
+  }
+  if (services.length === 0) {
     alert("Yoy didn't choose any service")
     return
   }
@@ -392,8 +422,18 @@ function bookRecord(event, plusDate = 0) {
       if (processErrors(dataArr)) return alert("Error");
       if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
       else {
+        if (!inputNum) {
+          localStorage.fullName = params.fullName
+          localStorage.email = params.email
+          localStorage.phone = params.phone
+          localStorage.services = params.services
+          localStorage.time = dataArr[0].datetime
 
-        writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
+          preparePayButton(inputNum);
+
+        }
+        if (inputNum)
+          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
       }
     });
 }
@@ -411,6 +451,7 @@ function writeClient(inputNum, time, isPayment = false) {
     alert("Input correct email")
     return
   }
+
   let date = new Date();
   userParams = {
     "phone": params.phone,
@@ -426,19 +467,15 @@ function writeClient(inputNum, time, isPayment = false) {
       }
     ]
   };
+
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
     function (data) {
       let err = processErrors(getData(data));
       if (!err) {
-
         alert("Success");
       }
     });
-  if (isPayment) {
 
-
-    preparePayButton(inputNum);
-  }
 }
 
 function preparePayButton(inputNum) {
@@ -454,15 +491,17 @@ function preparePayButton(inputNum) {
     price += servicesArr[params.services[i]].price;
   }
   let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
-  let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
+  // let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
 
   location.replace(createOrder(price, desc, params.fullName, params.services, params.email, params.phone));
+
 }
 
 function createOrder(amount, order_desc, name, services, email, phone) {
   var button = $ipsp.get('button');
   button.setMerchantId(1397120);
   button.setAmount(amount, 'UAH');
+  //http://steffany.dotwork.digital/laser/
   button.setResponseUrl('http://steffany.dotwork.digital/laser/?payed=true');
   button.setHost('api.fondy.eu');
   button.addField({
@@ -505,8 +544,6 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   return button.getUrl();
 }
 
-// {Subject: '', Body: ''}
-
 
 function consultWrite(event, plusDate = 0) {
   let date = new Date();
@@ -522,8 +559,8 @@ function consultWrite(event, plusDate = 0) {
   let phone = document.getElementById("phoneConsult").value
   let email = document.getElementById("emailConsult").value
   let fullName = document.getElementById("fullnameConsult").value
-  if (!phone || !fullName || !email || !service) {
-    alert("smth went wrong, please reload the page and try again");
+  if (!fullName || fullName.length < 3) {
+    alert("Input correct name");
     return;
   }
   const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
@@ -531,8 +568,7 @@ function consultWrite(event, plusDate = 0) {
     alert("Input correct email")
     return
   }
-  if (phone.length < 13)
-  {
+  if (phone.length < 13) {
     alert('Input correct phone')
     return
   }
