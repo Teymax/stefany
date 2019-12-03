@@ -4,6 +4,10 @@ section.section.discount
   background:
     image: url("../assets/img/background/discount-bg.jpg")
     size: cover
+  .bold
+    @include  font(Circe, 700, 22, 26)
+  .line-through
+    text-decoration: line-through
   .container
     .timer-text
       @include font (Circe, 900, 26, 73)
@@ -12,20 +16,29 @@ section.section.discount
       li
         &:before
           background: $color-coral
+    .box-wrap
+      background-color: #EDE1DF
+      border-radius: 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 395px
+      height: 300px
     .c-content
       position: relative
-      overflow: hidden
-      height: 320px
-      background-color: #fff
-      .d-discount
-        position: absolute
-        top: -82px
-        left: -82px
-        display: block
-        width: 140px
-        height: 140px
-        background-color: #A9A8C6
-        transform: rotate(45deg)
+      width: 357px
+      height: 261px
+      border-radius: 10px
+      padding: 20px
+      border: 1px solid #9FA5B9
+      .discount-title
+        @include font (CormorantGaramond, 700, 24, 37)
+        letter-spacing: 0.15px
+        color: #4D5259
+        margin-bottom: 42px
+      .paragraph-text
+        margin-bottom: 41px
+
       .button
         max-width: 154px
         .btn-first
@@ -51,7 +64,6 @@ section.section.discount
       .c-btn
         margin-left:  auto
         margin-right: auto
-        margin-top: 76px
         max-width: 320px
         display: flex
         justify-content: space-between
