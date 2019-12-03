@@ -1,13 +1,41 @@
 footer.footer
-  padding-top: 30px
-  .container
-    .c-logo-f
-      //img
-      //  max-width: 264px
-      //  max-height: 100px
-.footer-icon-blk
-  height: 18px
-@media(max-width: 1200px)
-  footer
-    br
-      display: none
+  .footer-end
+    padding: 11px 0
+    background-color: #6F7682
+    display: flex
+    //align-items: center
+    justify-content: space-between
+    .c-content
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+  .footer-top
+    padding: 17px 0
+    align-items: center
+    @include media-breakpoint-down(lg)
+      align-items: start
+    .app-bg
+      padding: 27px 0
+      border-radius: 10px
+      background:
+        image: url("../assets/img/footer/desk-bg.jpg")
+
+      @include media-breakpoint-down(lg)
+        padding: 14px 17px
+        display: flex
+        justify-content: center
+        align-items: center
+      .app-desc
+        margin-bottom: 0
+        margin-right: 10px
+        @include font(Circe, 400, 16, 21)
+        letter-spacing: 0.4px
+        @include media-breakpoint-down(lg)
+          font-size: 14px
+
+.opacity-color
+  color: rgba(255, 255, 255, 0.32)  !important
+
+
+

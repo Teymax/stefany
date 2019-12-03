@@ -1,16 +1,16 @@
 footer.footer
-  .container.container-m
-    .row.no-gutters.footer-cnt.mx-auto.mx-lg-0
-      .col-12.col-lg-3.d-none.d-lg-block
+  .container
+    .footer-top.row.no-gutters.footer-cnt.mx-auto.mx-xl-0
+      .col-12.col-xl-3.d-none.d-xl-block
         a.c-logo-f(href="./index.html")
-          img(src="assets/img/logo/logo-footer.svg", alt="logo-f")
-      .col-12.col-sm-4.col-lg-3.mb-3.mb-lg-0
+          img(src="assets/img/footer/logo.svg", alt="logo-f")
+      .col-12.col-sm-4.col-xl-3.mb-xl-0
         ul.d-flex.d-sm-block.flex-column.align-items-center.mb-0
-          li.mb-3.text-center.text-lg-left.d-flex.align-items-center
-            img.icon.icon-phone.mr-3(src="assets/icon/phone.svg")
+          li.mb-3.text-center.text-xl-left.d-flex.align-items-center
+            img.icon.mr-3(src="assets/img/footer/call.svg" alt="call")
             a.telephone-dynamic.paragraph-text-light.text-color-dark.text-w-light
-          li.mb-3.text-center.text-lg-left.d-flex.align-items-cent.drop-menu.drop-menu-top
-            img.icon.mr-3.icon-loc(src="assets/icon/map.svg" alt="icon-map-f")
+          li.mb-3.text-center.text-xl-left.d-flex.align-items-cent.drop-menu.drop-menu-top.align-items-center
+            img.icon.mr-3(src="assets/img/footer/map.svg" alt="icon-map-f")
             span#cityFooter.city-dynamic.paragraph-text-light.text-color-dark.text-w-light
             img.icon-arrow.ml-2(src="assets/icon/drop-arrow-down.svg" alt="drop-arrow-down")
             ul#selectCityDropdownFooter.select-city-dropdown.dropdown-menu-list.d-flex.flex-column
@@ -24,32 +24,38 @@ footer.footer
                 span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="lviv") Львов
               li
                 span.nav-link-text.paragraph-text.text-color-lightdark-header.text-w-bold(data-city="rovno") Ровно
-
-          li.mb-3.text-center.text-lg-left.d-flex.align-items-center.footer-icon-blk
-            a#fbFooter.fb-dynamic.mr-3(target="_blank" )
-              img.icon.icon-facebook(src="assets/icon/facebook-icon.svg")
-            a#instFooter.inst-dynamic(target="_blank" )
-              img.icon.icon-inst.mr-0(src="assets/icon/inst.svg")
-      .col-12.col-sm-3.col-lg-2.mb-.mb-sm-3
+      .col-12.col-sm-3.col-xl-2.mt-sm-2.mt-xl-0.mb-sm-3
         a.paragraph-text.text-color-lightdark.text-w-light.text-center.text-sm-left.mb-3.d-block( target="_blank" href="http://steffany.dotwork.digital/beauty") Steffany Beauty
         a.paragraph-text.text-color-lightdark.text-w-light.text-center.text-sm-left.d-block( target="_blank" href="http://steffany.dotwork.digital/podology") Steffany Podology
         hr.d-sm-none.my-4
-      .col-12.col-sm-5.d-none.d-sm-flex.flex-column.align-items-center.align-items-sm-start.d-lg-none
-        a.p-text-light.text-dashed.d-inline-block.mb-3.text-color-lightdark(target="_blank" href="./policy.html") Пользовательское соглашение
-      .col-12.col-lg-4.d-none.d-sm-flex.flex-column.justify-content-center.justify-content-sm-between.justify-content-lg-start.flex-lg-column.align-items-lg-center
-        p.paragraph-text.text-color-lightdark.text-center.mb-3
-          | Не хотите звонить? Скачайте приложение <br/>
+      .col-12.col-sm-5.d-none.d-sm-flex.flex-column.align-items-center.align-items-sm-start.d-xl-none
+        .d-flex
+          a#fbFooter.fb-dynamic.mr-3(target="_blank")
+            img.icon(src="assets/img/footer/fb.svg")
+          a#instFooter.inst-dynamic(target="_blank" )
+            img.icon.mr-0(src="assets/img/footer/insta.svg")
+        a.p-text-light.d-inline-block.mb-3.mt-sm-2.mt-xl-0.text-color-lightdark(target="_blank" href="./policy.html") Пользовательское соглашение
+      .app-bg.col-12.col-xl-4
+        p.app-desc.text-color-lightdark.text-center
+          | Не хотите звонить? Скачайте приложение
           | и управляйте своей записью онлайн!
         div.d-none.d-sm-flex.justify-content-center.align-items-center
           a.mr-3(target="_blank" href="https://apps.apple.com/ua/app/steffany/id1342254632?l=ru")
-            img.icon-large(src="assets/icon/mob-f.svg")
+            img(src="assets/img/footer/app.svg")
           a(target="_blank" href="https://play.google.com/store/apps/details?id=com.yclients.widget.g50068")
-            img.icon-large(src="assets/icon/google-play-f.svg")
+            img(src="assets/img/footer/play.svg")
 
-    hr.d-none.d-sm-block.my-3
-    .d-flex.flex-column.align-items-center.flex-lg-row.justify-content-lg-between.mb-3.footer-cnt.mx-auto.mx-lg-0
-      p.mb-3.m-sm-0.p-text-light.order-1.order-lg-0.text-center.text-lg-left.small-text Разработано в &nbsp
-        |
-        a.p-text-light.text-dashed.text-color-lightdark(target="_blank" href="http://dotwork.digital") dotwork
-      a.mb-3.m-sm-0.p-text-light.text-dashed.d-block.d-sm-none.d-lg-block.small-text(target="_blank" href="./policy.html") Пользовательское соглашение
-      p.mb-3.m-sm-0.p-text-light.text-center.text-lg-left.small-text steffany.ua ©2019. Все права защищены
+  .footer-end
+    .container
+      .c-content
+        .d-none.d-xl-flex
+          a#fbFooter.fb-dynamic.mr-3(target="_blank" )
+            img.icon(src="assets/img/footer/fb.svg")
+          a#instFooter.inst-dynamic(target="_blank" )
+            img.icon.mr-0(src="assets/img/footer/insta.svg")
+        a.mb-3.m-sm-0.p-text-light.d-block.d-sm-none.d-xl-block.small-text(target="_blank" href="./policy.html") Пользовательское соглашение
+        p.mb-3.m-sm-0.p-text-light.order-1.order-xl-0.text-center.text-xl-left.small-text Разработано в &nbsp
+          |
+          a.p-text-light(target="_blank" href="http://dotwork.digital") dotwork
+        p.mb-3.m-sm-0.p-text-light.text-center.text-xl-left.small-text.opacity-color steffany.ua ©2019. Все права защищены
+
