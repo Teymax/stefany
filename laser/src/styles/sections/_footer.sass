@@ -5,11 +5,30 @@ footer.footer
     display: flex
     //align-items: center
     justify-content: space-between
+    @include media-breakpoint-down(lg)
+      background-color: #4D5259
     .c-content
       display: flex
       justify-content: space-between
       align-items: center
+  .dotwork
+    display: flex
+    align-items: center
+    @include media-breakpoint-down(sm)
+      justify-content: center
+    span
+      margin-right: 5px
+      margin-top: 2px
+      @include media-breakpoint-down(lg)
+        color: rgba(255, 255, 255, 0.32)  !important
 
+
+  .footer-end-first
+    background-color: #6F7682
+    padding: 10px 0
+  .footer-end-second
+    background-color: #4D5259
+    padding: 10px 0
   .footer-top
     padding: 17px 0
     align-items: center
@@ -20,20 +39,23 @@ footer.footer
       border-radius: 10px
       background:
         image: url("../assets/img/footer/desk-bg.jpg")
-
       @include media-breakpoint-down(lg)
         padding: 14px 17px
         display: flex
         justify-content: center
         align-items: center
+      @include media-breakpoint-down(sm)
+        flex-direction: column
       .app-desc
-        margin-bottom: 0
-        margin-right: 10px
         @include font(Circe, 400, 16, 21)
         letter-spacing: 0.4px
         @include media-breakpoint-down(lg)
           font-size: 14px
-
+          margin-right: 10px
+          margin-bottom: 0
+        @include media-breakpoint-down(sm)
+          margin-right: 0
+          margin-bottom: 10px
 .opacity-color
   color: rgba(255, 255, 255, 0.32)  !important
 
