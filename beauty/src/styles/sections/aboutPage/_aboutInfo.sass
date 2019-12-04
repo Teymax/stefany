@@ -1,9 +1,13 @@
 .about
-	padding-bottom: 50px
+	padding-bottom: 54px
+	@media(max-width: 767px)
+		padding-bottom: 0
 	&-salon
 		padding-top: 17px
 	.section-title
-		margin-bottom: 35px
+		margin-bottom: 37px
+		@media(max-width: 1199px)
+			margin-bottom: 10px
 	.video
 		position: relative
 		display: block
@@ -11,22 +15,68 @@
 		box-shadow: 0 21px 40px $box-shadow-lightgray
 		img
 			width: 100%
-	.about-content
-		flex-flow: row nowrap !important
 	.video-item-cnt
-    max-width: 757px !important
-    padding-right: 36px !important
+		max-width: 757px !important
+		padding-right: 15px !important
+		@media(max-width: 1199px)
+			max-width: 100% !important
+			padding-right: 0 !important
+			order: 3
+		@media(max-width: 767px)
+			margin-bottom: 24px
+			order: 2
+	.about-block-btns
+		@media(max-width: 1199px)
+			order: 2
+			margin-top: 0 !important
+			margin-bottom: 43px !important
+		@media(max-width: 767px)
+			order: 3
+		.btn-simple
+			@media(max-width: 767px)
+				margin-bottom: 21px
+			@media ( min-width: 650px )
+				margin-right: 27px
+			@media ( max-width: 650px )
+				margin-right: 10px
 	.about-block-cnt
-		max-width: 503px !important
+		max-width: 504px !important
 		flex: auto !important
+		@media(max-width: 1199px)
+			max-width: 100% !important
+			margin-top: 0 !important
+			margin-bottom: 49px
+			order: 1
+			& > p.p-bold
+				margin-top: 62px
+		@media(max-width: 767px)
+			margin-bottom: 17px
+			& .pl-three
+				padding-left: 0
+			& .mb-16
+				margin-bottom: 15px !important
+			& .info-list
+				margin-top: -4px
+				margin-bottom: 11px
+			& li
+				font-size: 14px
+				line-height: 22px
+			& > p.p-bold
+				margin-top: 0
+
+	.soc-btn
+		&.mr-41
+			@media ( min-width: 650px  )
+				margin-right: 41px !important
+			@media ( max-width: 540px  )
+				margin-right: 15px !important
 .video-slider.owl-carousel.slider-block
 	box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
 	.owl-nav, .owl-dots
 		display: none
-
 .slider-block .owl-nav button.owl-prev .owl-nav
 	button
-	  background-image: url(../assets/icon/aroow-right-gray.png) !important
+		background-image: url(../assets/icon/aroow-right-gray.png) !important
 .video-slider-dots-wrap
 	position: relative
 	padding-right: 108px
@@ -43,44 +93,44 @@
 		height: 31px
 		transform: translateY(-50%)
 		button
-      position: absolute
-      left: 0
-      display: flex
-      align-items: center
-      justify-content: flex-end
-      padding: 0 !important
-      width: 100%
-      height: 100%
-      background: none !important
-      border: none !important
-      &.disabled
-        display: none !important
-      &::after
-        content: ''
-        position: relative
-        z-index: 1
-        display: block
-        width: 31px
-        height: 31px
-        border-radius: 100%
-        background: $color-purple
-      span				
-        position: relative
-        z-index: 2
-        display: block
-        font-size: 0
-        color: transparent
-        margin-right: -9px
-        width: 40px
-        min-width: 40px
-        height: 9px
-        background: url('../assets/icon/long-arrow.png')
-        background-repeat: no-repeat 
-        background-size: contain
-        background-position: center
-      &.owl-prev
-        span
-          transform: rotate(180deg)
+			position: absolute
+			left: 0
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			padding: 0 !important
+			width: 100%
+			height: 100%
+			background: none !important
+			border: none !important
+			&.disabled
+				display: none !important
+			&::after
+				content: ''
+				position: relative
+				z-index: 1
+				display: block
+				width: 31px
+				height: 31px
+				border-radius: 100%
+				background: $color-purple
+			span				
+				position: relative
+				z-index: 2
+				display: block
+				font-size: 0
+				color: transparent
+				margin-right: -9px
+				width: 40px
+				min-width: 40px
+				height: 9px
+				background: url('../assets/icon/long-arrow.png')
+				background-repeat: no-repeat 
+				background-size: contain
+				background-position: center
+			&.owl-prev
+				span
+					transform: rotate(180deg)
 
 	.owl-dots-item
 		.owl-dot
@@ -99,21 +149,61 @@
 				opacity: 1
 				transition: 0.4s ease
 				background: rgba(142, 185, 235, 0.36)
-        mix-blend-mode: soft-light
+				mix-blend-mode: soft-light
 			&:hover
 				.play-btn
 					opacity: 1
 				.owl-dot-bg
 					opacity: 0
+.about-salon
+	padding-bottom: 36px
+	@media(max-width: 767px)
+		padding-top: 5px
+		padding-bottom: 5px
+	.video-item-cnt
+		max-width: 735px !important
+		& .video-slider
+			margin-bottom: 37px
+	.info-list li
+		padding-left: 24px
+	.about-block-cnt
+		@media(max-width: 767px)
+			padding-top: 0
+		.section-title
+			margin-bottom: 18px
+			line-height: 54px
+			@media(max-width: 767px)
+				margin-bottom: 15px
+				line-height: 31px
+	.video-slider-dots-wrap .owl-dots-item .owl-dot
+		margin-bottom: 28px
+	.video-slider-dots
+		margin-bottom: 20px
+	.mb-20
+		@media(max-width: 767px)
+			margin-bottom: 13px !important
+	.info-list
+		li
+			@media(max-width: 767px)
+				font-size: 14px
+			.pb-15
+				@media(max-width: 767px)
+					padding-bottom: 13px !important
+			p
+				@media(max-width: 767px)
+					font-size: 14px
+@media(max-width: 1199px)
+	.about .about-block-cnt
+		max-width: 100% !important
 @media(max-width: 992px)
-  .about .about-content
-  	flex-flow: row wrap !important
-  .about .video-item-cnt, .about .about-block-cnt
-    max-width: 100% !important
-    padding-right: 0 !important
+	.about .about-content
+		flex-flow: row wrap !important
+	.about .video-item-cnt, .about .about-block-cnt
+		max-width: 100% !important
+		padding-right: 0 !important
 @media(max-width: 730px)
 	.line-margin
-		margin-top: 75px
+		margin-top: 91px
 @media(max-width: 540px)
 	.video-slider.owl-carousel.slider-block .owl-nav
 		display: flex !important

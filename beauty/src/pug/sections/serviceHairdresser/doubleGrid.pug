@@ -1,19 +1,19 @@
 .info-block-grid.grid-bg-1.doubleGrid
   .container.p-0
     .row.no-gutters.mb-5 
-      .section-title.text-center.mb-0 Полный список парикмахерских услуг для волос
+      h2.section-title.text-center.mb-0 Полный список парикмахерских услуг для волос
     .row.no-gutters.grid-shodow.double-grid-container.w-100.mx-auto
       .row.no-gutters.w-100.grid-block
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
               | Стрижки женские  <br/>
               | в Житомире
-            p.thin-text.pb-5.pb-md-0 Мастер выполняет желаемую вами стрижку и укладывает волосы феном
-          .proccess-info.hidden-text.d-flex.align-items-center 
-            span.mr-3 40 минут
+            p.thin-text.pb-5.pb-md-0.text-grid Мастер выполняет желаемую вами стрижку и укладывает волосы феном
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
+            span.mr-3 150 грн
             | 35 минут
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -27,14 +27,14 @@
         .col-12.col-md-6.grid-img.grid-img-hover
           img.w-100(src="assets/img/infoblock/grid-item-6.jpg", srcset="assets/img/infoblock/grid-item-6@2x.jpg  2x", alt="grid-item")
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
               | Стрижка челки
-            p.thin-text.pb-5.pb-md-0 Мастер стрижет челку и выполняет легкую укладку челки
-          .proccess-info.hidden-text.d-flex.align-items-center 
+            p.thin-text.pb-5.pb-md-0.text-grid Мастер стрижет челку и выполняет легкую укладку челки
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 1000-2500 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | 50 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -44,14 +44,14 @@
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
       .row.no-gutters.w-100.grid-block
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
               | Мужские стрижки в Житомире
-            p.thin-text.pb-5.pb-md-0 Мастер моет ваши волосы, выполняет стрижку и затем укладку
-          .proccess-info.hidden-text.d-flex.align-items-center 
+            p.thin-text.pb-5.pb-md-0.text-grid Мастер моет ваши волосы, выполняет стрижку и затем укладку
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 1000-2500 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | 150 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -65,14 +65,13 @@
         .col-12.col-md-6.grid-img.grid-img-hover
           img.w-100(src="assets/img/infoblock/grid-item-8.jpg", srcset="assets/img/infoblock/grid-item-8@2x.jpg  2x", alt="grid-item")
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
-              | Шатуш
-            p.thin-text.pb-5.pb-md-0 Мастер осветляет пряди так, чтобы создать горизонтальный переход цвета на ваших волосах
-          .proccess-info.hidden-text.d-flex.align-items-center 
+              | Стрижка бороды
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 25 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | 50 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -82,14 +81,13 @@
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
       .row.no-gutters.w-100.grid-block
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
-              | Мелирование волос 
-            p.thin-text.pb-5.pb-md-0 Мастер окрашивает ваши волосы стойким красителем по всей длине, чтобы в результате получить однотонный результат
-          .proccess-info.hidden-text.d-flex.align-items-center 
+              | Вечерние или свадебные прически
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 700-2100 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | 300-400 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -103,14 +101,13 @@
         .col-12.col-md-6.grid-img.grid-img-hover
           img.w-100(src="assets/img/infoblock/grid-item-10.jpg", srcset="assets/img/infoblock/grid-item-10@2x.jpg  2x", alt="grid-item")
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
-              | Мелирование <br/> «Эир тач»
-            p.thin-text.pb-5.pb-md-0 Одна из новых техник мелирования, когда мастер с помощью фена создает на волосах плавный переход от одного цвета к другому
-          .proccess-info.hidden-text.d-flex.align-items-center 
+              | Пробные прически в салоне
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 1000-2500 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | 300-400 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -120,14 +117,13 @@
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
       .row.no-gutters.w-100.grid-block
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
-              | Объемное<br/> окрашивание<br/> волос
-            p.thin-text.pb-5.pb-md-0 Мастер создает на волосах градацию цвета, чтобы получить эффект выгоревших на солнце прядей
-          .proccess-info.hidden-text.d-flex.align-items-center 
+              | Накрутка волос
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 1000-2500 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | от 200-300 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -141,14 +137,13 @@
         .col-12.col-md-6.grid-img.grid-img-hover
           img.w-100(src="assets/img/infoblock/grid-item-13.jpg", srcset="assets/img/infoblock/grid-item-13@2x.jpg  2x", alt="grid-item")
         .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
-          .grid-titles
+          .grid-titles.order-1
             .grid-title
-              | Завивка волос <br/> «Estel Niagara»
-            p.thin-text.pb-5.pb-md-0 Мастер осветляет пряди так, чтобы создать горизонтальный переход цвета на ваших волосах
-          .proccess-info.hidden-text.d-flex.align-items-center 
+              | Афро-накрутка
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
             span.mr-3 35 минут
-            | 600-1000 грн
-          a.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between(href="#")
+            | 300-350 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
             span.d-flex.align-items-center.justify-content-between
               span записаться
             svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -156,3 +151,57 @@
                 .st0{fill:#D11111;}
               path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+      .row.no-gutters.w-100.grid-block
+        .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
+          .grid-titles.order-1
+            .grid-title
+              | Плетение на волосах
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
+            span.mr-3 35 минут
+            | от 60 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
+            span.d-flex.align-items-center.justify-content-between
+              span записаться
+            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
+              style(type='text/css').
+                .st0{fill:#D11111;}
+              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
+              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+        .col-12.col-md-6.grid-img.grid-img-hover
+          img.w-100(src="assets/img/infoblock/grid-item-13.jpg", srcset="assets/img/infoblock/grid-item-13@2x.jpg  2x", alt="grid-item")
+      .row.no-gutters.w-100.grid-block
+        .col-12.col-md-6.grid-img.grid-img-hover
+          img.w-100(src="assets/img/infoblock/grid-item-13.jpg", srcset="assets/img/infoblock/grid-item-13@2x.jpg  2x", alt="grid-item")
+        .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
+          .grid-titles.order-1
+            .grid-title
+              | Полировка волос
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
+            span.mr-3 35 минут
+            | от 200-300 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
+            span.d-flex.align-items-center.justify-content-between
+              span записаться
+            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
+              style(type='text/css').
+                .st0{fill:#D11111;}
+              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
+              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+      .row.no-gutters.w-100.grid-block
+        .col-12.col-md-6.grid-cnt.h-auto.h-md-100.grid-cnt-hover.d-flex.flex-column.justify-content-between
+          .grid-titles.order-1
+            .grid-title
+              | Укладка волос 
+          .proccess-info.hidden-text.d-flex.align-items-center.order-3.order-md-2
+            span.mr-3 35 минут
+            | 70-150 грн
+          a.btn-callback.d-flex.align-items-center.justify-content-between.order-2.order-md-3(href="#",  data-toggle='modal', data-target='#appointmentModal')
+            span.d-flex.align-items-center.justify-content-between
+              span записаться
+            svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
+              style(type='text/css').
+                .st0{fill:#D11111;}
+              path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
+              C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+        .col-12.col-md-6.grid-img.grid-img-hover
+          img.w-100(src="assets/img/infoblock/grid-item-13.jpg", srcset="assets/img/infoblock/grid-item-13@2x.jpg  2x", alt="grid-item")

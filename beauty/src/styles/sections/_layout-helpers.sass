@@ -1,4 +1,6 @@
 // container - style *******
+html
+  overflow-x: hidden
 .container
   width: 100% !important
   padding: 0 30px
@@ -63,7 +65,7 @@ body
 
 .proccess-info
 	@include font('Circe-ExtraBold', 900, 11, 11)
-	letter-spacing: 2px
+	letter-spacing: 3.3px
 	text-transform: uppercase
 	color: $color-purple
 	transition: 0.3s ease
@@ -80,6 +82,8 @@ body
 
 .text-color-dark
   color: $text-color-dark !important
+.text-color-dark2
+  color: $play-btn-color !important
 .text-color-for-list
   color: $list-number !important
 .f-bold
@@ -94,9 +98,11 @@ body
 
 p, .p-text, .paragraph-text
   margin-bottom: 0 !important
-  @include font('Circe-Regular', 400, 16, 23)
+  @include font('Circe-Regular', 400, 16, 25)
   color: $text-color-dark
   transition: 0.3s ease
+  @media(max-width: 767px)
+    line-height: 22px
 .p-text-light
 	@include font('Circe-Light', 300, 14, 24)
 	color: $breadcrump-color
@@ -108,13 +114,20 @@ p, .p-text, .paragraph-text
   @include font ('Circe-Bold', 700, 26, 26)
   color: $color-white
 .p-bold
-  @include font('Circe-Bold', 700, 16, 23)
+  @include font('Circe-Bold', 700, 16, 24)
 .text-uppercase
 	text-transform: uppercase !important
 .fs-12
 	font-size: 12px !important
+.fs-13
+	font-size: 13px !important
+.fs-14
+	font-size: 14px !important
 .fs-16
 	font-size: 16px !important
+.fs-20
+  font-size: 20px !important
+  line-height: 29px
 .regular-text
   font-family: 'Circe-Regular' !important
 .thin-text
@@ -126,20 +139,40 @@ p, .p-text, .paragraph-text
   width: 100%
   margin-bottom: 20px
   @include font('CormorantGaramond-Bold', 700, 44, 45)
+  letter-spacing: 0.41px
   color: $section-title-color
+  @media(max-width: 1199px)
+    line-height: 53px
+    br
+      display: none
 
 .section-title-s
   color: $breadcrump-color
   display: block
   @include font('CormorantGaramond-Bold', 700, 26, 31)
+  @media(max-width: 767px)
+    font-size: 20px
+    letter-spacing: 0.2px
+    line-height: 27px
 
 .section-subtitle
   display: block
   width: 100%
   margin-bottom: 20px
   @include font('Circe-Light', 400, 20, 21)
-  letter-spacing: .6px
+  letter-spacing: .22px
   color: $section-title-color
+  @media(max-width: 767px)
+    font-size: 16px
+    line-height: 18px
+.text-grid
+  @media(max-width: 1300px)
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    overflow: hidden
+    -webkit-box-orient: vertical
+  @media(max-width: 767px)
+    -webkit-line-clamp: 10
 .h3-title
   @include font('Circe-Light', 400, 20, 24)
   color: $text-color-white
@@ -152,15 +185,54 @@ p, .p-text, .paragraph-text
   transition: 0.3s ease
   @include font('CormorantGaramond-Bold', 700, 30, 35)
   color: $section-title-color
+  @media(max-width: 1199px)
+    margin-bottom: 10px
+.step-head
+  @include font('Circe-Regular', 400, 12, 12)
+  text-align: center 
+  text-transform: uppercase
+  letter-spacing: 0.15em
+  color: #9FA6BA
+.underline-title
+  position: relative
+  &::after   
+    content: ''
+    position: absolute
+    top: 100%
+    left: 0
+    display: block
+    width: 100%
+    max-width: 89px
+    height: 2px
+    background: rgba(85, 98, 120, 0.39)
 
 .bg-rose
   background: $bg-rose
-    
+.light-orange-bg
+	background: $spec-bg !important
+.white-bg
+	background: $color-white !important
+.light-purple-bg
+	background: $btn-bg !important
+.light-green-bg
+	background: $dark-gren-bg !important
+.no-bg-blk
+	background: transparent !important   
+.gray-word-bg
+  background: url('../assets/img/gray-word-bg.png') !important
+  background-repeat: no-repeat !important
+  background-position: center left !important
+  background-size: contain !important
+.gray-word-bg2
+  background: url('../assets/img/gray-word-bg2.png') !important
+  background-repeat: no-repeat !important
+  background-position: center left !important
+  background-size: contain !important
 .grid-number
   display: block
   position: absolute
-  top: 64px
-  left: 25px
+  top: 67px
+  left: 28px
   letter-spacing: 4px
   color: $section-title-color
   transition: 0.3s ease
@@ -172,17 +244,21 @@ p, .p-text, .paragraph-text
   color: $spec-bg !important
 .light-green-text
   color: $dark-gren-bg !important
+.light-purple-text
+  color: $btn-bg !important
+.light-darkbrown-text
+  color: $soc-btn !important
 
 .h-center
   text-align: center
 
 .bnf-number
-  padding-bottom: 20px
+  padding-bottom: 17px
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: 0px
   @include font('CormorantGaramond-Bold', 700, 75, 75)
 .bnf-title
-  padding-bottom: 20px
+  padding-bottom: 17px
   text-transform: uppercase
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
@@ -198,11 +274,11 @@ p, .p-text, .paragraph-text
   width: 100%
   max-width: 195px
   height: 38px
-  padding-right: 18px
-  padding-left: 20px
+  padding-right: 16px
+  padding-left: 15px
   background: url('../assets/img/background/callback-btn.png')
   background-repeat: no-repeat
-  background-size: 45px 100%
+  background-size: 42px 104%
   background-position: top right
   border: 2px solid $color-purple
   text-decoration: none
@@ -210,7 +286,7 @@ p, .p-text, .paragraph-text
   & > span 
     text-decoration: none
     width: 100%
-    max-width: 109px
+    max-width: 115px
     svg
       width: 13px
       height: 13px
@@ -223,7 +299,7 @@ p, .p-text, .paragraph-text
       padding-top: 2px
       @include font ('Circe-ExtraBold', 900, 10, 10)
       text-transform: uppercase
-      letter-spacing: 2px
+      letter-spacing: 2.3px
       color: $color-purple-text
   & > svg 
     width: 14px
@@ -234,7 +310,7 @@ p, .p-text, .paragraph-text
 .btn-callback-white, header.open .btn-callback
   background: url('../assets/img/background/callback-btn-white.jpg')
   background-repeat: no-repeat
-  background-size: 45px 100%
+  background-size: 45px 104%
   background-position: top right
   border: 2px solid $color-white !important
   &:focus
@@ -285,12 +361,13 @@ p, .p-text, .paragraph-text
   &:hover
     background: $color-purple
 .btn-simple
+  cursor: pointer
   color: $color-white
   height: 38px
-  padding: 15px 30px
+  padding: 15px 22px !important
   font-size: 10px
   text-transform: uppercase
-  letter-spacing: 2px
+  letter-spacing: 2.5px
   transition: 0.4s ease
   background: $color-purple
 .btn-simple:hover
@@ -320,9 +397,10 @@ p, .p-text, .paragraph-text
 // list - style ****
 
 .info-list
+  margin-bottom: 22px
   li
     position: relative
-    padding-left: 20px
+    padding-left: 19px
     &:before
       position: absolute
       left: 0
@@ -332,7 +410,20 @@ p, .p-text, .paragraph-text
       height: 5px
       background: $breadcrump-color
       border-radius: 50%
-
+    &.white-text
+      &:before
+        background: #ffffff
+    @media(max-width: 767px)
+      font-size: 14px
+  &.info-list-purple
+    li
+      &:before
+        background: #A09BCF
+.num-list
+  margin-bottom: 44px
+  li
+    &:not(:last-child)
+      padding-bottom: 16px
 // Icons - style header *********
 
 .icon
@@ -348,7 +439,7 @@ svg.icon-loc
 svg.icon-phone
   width: 15px !important
   height: 15px !important
-  margin-right: 6px !important
+  margin-right: 15px !important
   margin-left: 0 !important
   path
     fill: #3a405b
@@ -392,6 +483,9 @@ svg.icon-arrow
   position: absolute
   width: 92px
   height: 92px
+  @media(max-width: 767px)
+    width: 47px
+    height: 47px
   &-orange
     background: $color-orange-opacity
   span
@@ -399,6 +493,9 @@ svg.icon-arrow
     height: 20px
     clip-path: polygon(0 0, 0% 100%, 100% 50%)
     background: $play-btn-color
+    @media(max-width: 767px)
+      width: 7px
+      height: 6px
 .play-btn-small
   width: 42px
   height: 42px
@@ -416,16 +513,85 @@ svg.icon-arrow
   border-radius: 100px 
 
 // margings + paddings ********
+.px-15
+  padding-left: 15px !important
+  padding-right: 15px !important
+.pr-20
+  padding-right: 20px !important
+.pl-three
+  padding-left: 3px !important
+.pt-15
+  padding-top: 15px !important
+.pt-18
+  padding-top: 18px !important
+.pb-10
+  padding-bottom: 10px !important
+.pb-15
+  padding-bottom: 15px !important
+.pb-19
+  padding-bottom: 19px !important
+.pb-20
+  padding-bottom: 20px !important
+.pb-25
+  padding-bottom: 25px !important
+.pb-42
+  padding-bottom: 42px !important
+.mt-7
+  margin-top: 7px !important
+.mt-9
+  margin-top: 9px !important
+.mt-11
+  margin-top: 11px !important
+.mt-15
+  margin-top: 15px !important
+.mt-18
+  margin-top: 18px !important
+.mt-22
+  margin-top: 22px !important
 .mt-30
   margin-top: 30px !important
+.mb-11
+  margin-bottom: 11px !important
+.mb-6
+  margin-bottom: 6px !important
+.mb-15
+  margin-bottom: 15px !important
+.mb-16
+  margin-bottom: 16px !important
+.mb-20
+  margin-bottom: 20px !important
+.mb-22
+  margin-bottom: 24px !important
+.mb-23
+  margin-bottom: 23px !important
+.mb-24
+  margin-bottom: 24px !important
+.mb-25
+  margin-bottom: 25px !important
+.mb-28
+  margin-bottom: 28px !important
+.mb-30
+  margin-bottom: 30px !important
+.mb-33
+  margin-bottom: 33px !important
+.mb-35
+  margin-bottom: 35px !important
+.mb-35
+  margin-bottom: 35px !important
+.mb-38
+  margin-bottom: 38px !important
 .mb-40
   margin-bottom: 40px !important
 .mb-50
-  margin-bottom: 50px
-.mb-20
-  margin-bottom: 20px !important
+  margin-bottom: 50px !important
+.mb-59
+  margin-bottom: 59px !important
+.mb-62
+  margin-bottom: 62px !important
 .mr-10
   margin-right: 10px !important
+.mr-41
+  margin-right: 41px !important
 
 // height
 .height-25
@@ -453,15 +619,20 @@ textarea.field
 
 // slider-block - style **
 .slider-pad
-  padding-left:  47px
-  padding-right: 47px
+  padding-left:  55px
+  padding-right: 55px
+  @media(max-width: 767px)
+    padding-left: 0
+    padding-right: 0
 .slider-block
   .owl-dots
     display: flex
     align-items: center
     justify-content: center
     width: 100%
-    padding-top: 60px
+    padding-top: 74px
+    @media(max-width: 767px)
+      padding-top: 41px
     span
       display: none
     .owl-dot
@@ -598,11 +769,11 @@ ul.dropdown-menu-list
     bottom: calc(100% + 20px)
     &::before
       top: calc(100% - 8px)
-@media (min-width: 1200px)
+@media (min-width: 1199px)
 	.hidden-item
 	  display: none
 
-@media (max-width: 1200px)
+@media (max-width: 1199px)
 	.px-15
 		padding-left: 15px !important
 		padding-right: 15px !important
