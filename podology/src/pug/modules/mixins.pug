@@ -55,7 +55,8 @@ mixin sliderServices
       | (() => {
       |   const $this = document.currentScript.parentElement,
       |         items = [...$this.querySelectorAll('a')],
-      |         link  = location.pathname.match(/(\b[\w\d-.]+\b)/g)[0]
+      |         _link = location.pathname.match(/(\b[\w\d-.]+\b)/g),
+      |         link  = _link[ _link.length-1 ]
       |   items.forEach(item => item.href.split('/').pop() === link && item.parentElement.removeChild(item))
       | })()
 
