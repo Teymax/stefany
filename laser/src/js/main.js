@@ -1,14 +1,16 @@
 $(document).ready(function () {
-let regex = new RegExp("%3c.*%3e","i");
-let replaceHref = regex.exec(window.location.href);
-if (replaceHref) {
-  window.location.replace = "./404.html";
-}
+  let regex = new RegExp("%3c.*%3e", "i");
+  let replaceHref = regex.exec(window.location.href);
+  if (replaceHref) {
+    window.location.replace = "./404.html";
+  }
   $('[type="tel"]').mask("+38-(000)-000-00-00")
   var payForm = $('#modalServiceListPay form')
-  payForm.on('submit', bookRecord)
+  if (payForm)
+    payForm.on('submit', bookRecord)
   var submForm = $('#modalServiceListSinugUp form')
-  submForm.on('submit', bookRecord)
+  if (submForm)
+    submForm.on('submit', bookRecord)
 
   const callbackForm = $('form.feedback-form')[0],
     callbackBtn = $('#sendMail')
@@ -169,10 +171,10 @@ window.onload = function () {
 
   fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
-  let payButtons = document.querySelectorAll("#pay_button");
-  [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
-  let orderButtons = document.querySelectorAll("#order_button");
-  [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
+  // let payButtons = document.querySelectorAll("#pay_button");
+  // [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
+  // let orderButtons = document.querySelectorAll("#order_button");
+  // [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
   getServices();
 
   let checking = document.querySelectorAll('label.service-checkbox-label input');
@@ -352,23 +354,19 @@ function getFormParams(inputNum) {
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
   console.log(fullName)
-  if (!fullName) {
-    alert("Input correct name");
-    return;
-  }
-  const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-  if (!reg.exec(email)) {
-    alert("Input correct email")
-    return
-  }
-  if (phone.length < 13) {
-    alert('Input correct phone')
-    return
-  }
-  if (services.length === 0) {
-    alert("Yoy didn't choose any service")
-    return
-  }
+  // if (!fullName) {
+  //   alert("Input correct name");
+  //   return;
+  // }
+  //
+  // if (phone.length < 13) {
+  //   alert('Input correct phone')
+  //   return
+  // }
+  // if (services.length === 0) {
+  //   alert("Yoy didn't choose any service")
+  //   return
+  // }
   return {
     phone: phone.length > 0 ? phone : false,
     fullName: fullName.length > 0 ? fullName : false,
@@ -412,7 +410,7 @@ function bookRecord(event, plusDate = 0) {
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
     date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params
-  if (event.target.id === "pay_button")
+  if (event.target.id === "pay_form")
     inputNum = 0
   else
     inputNum = 1
@@ -438,7 +436,7 @@ function bookRecord(event, plusDate = 0) {
 
         }
         if (inputNum)
-          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_button")
+          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_form")
       }
     });
 }
@@ -447,15 +445,11 @@ function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams(inputNum);
 
-  if (!params.phone || !params.fullName || !params.email || !params.services) {
-    alert("smth went wrong, please reload the page and try again");
-    return;
-  }
+  // if (!params.phone || !params.fullName || !params.email || !params.services) {
+  //   alert("smth went wrong, please reload the page and try again");
+  //   return;
+  // }
   const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-  if (!reg.exec(params.email)) {
-    alert("Input correct email")
-    return
-  }
 
   let date = new Date();
   userParams = {

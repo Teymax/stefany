@@ -7,15 +7,19 @@
         span(aria-hidden='true')
       .c-content
         h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
-        form
-          input#fullname.w-100.p-text-light(type="text", placeholder="Имя")
-          input#email.w-100.p-text-light(type="email", placeholder="Email")
-          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон")
-        +modalServiceListInfo
-        #pay_button.button.btn-first.btn-simple.svg.caset.mx-auto(data-toggle='modal', data-target='#modalServiceList')
-          .text-section
-            +casetSvg
-            span оплатить
+        form#pay_form
+          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
+          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
+          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required)
+          input#pay_button(type="submit")
+
+          +modalServiceListInfo
+
+
+//-         #pay_button.button.btn-first.btn-simple.svg.caset.mx-auto(data-toggle='modal', data-target='#modalServiceList')
+//-           .text-section
+//-             +casetSvg
+//-             span оплатить
 
 
 #modalServiceListSinugUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
@@ -27,11 +31,14 @@
       .c-content
         h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
         form
-          input#fullname.w-100.p-text-light(type="text", placeholder="Имя")
-          input#email.w-100.p-text-light(type="email", placeholder="Email")
-          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон")
-        +modalServiceListInfo
-        #order_button.button.btn-second.btn-simple.svg.pen.mx-auto(data-toggle='modal', data-target='#modalServiceList')
-          .text-section
-            +penSvg
-            span записаться
+          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
+          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
+          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required)
+          input#order_button(type="submit")
+
+          +modalServiceListInfo
+
+//-         #order_button.button.btn-second.btn-simple.svg.pen.mx-auto(data-toggle='modal', data-target='#modalServiceList')
+//-           .text-section
+//-             +penSvg
+//-             span записаться
