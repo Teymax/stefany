@@ -12,17 +12,19 @@ section.section.consultation-form
           h4.h4-title.text-uppercase.text-color-dark.text-w-bold.text-center Оставьте ваши данные
           p.paragraph-text.text-color-lightdark.text-center.mb-38 и мы вам перезвоним
           .form-group
-            input#fullnameConsult.form-control(type='text', aria-describedby='emailHelp', placeholder='Имя')
+            input#fullnameConsult.form-control(type='text', aria-describedby='emailHelp', placeholder='Имя' required )
           .form-group
-            input#emailConsult.form-control(type='email', aria-describedby='emailHelp', placeholder='Email')
+            input#emailConsult.form-control(type='email', aria-describedby='emailHelp', placeholder='Email' required )
           .form-group
-            input#phoneConsult.form-control(type='tel', placeholder='Телефон')
+            input#phoneConsult.form-control(type='tel', placeholder='Телефон' required minlength='19')
+            input.btn-callback(type='submit')
           //+btnCallbackForm('перезвоните мне')('etst')
-          #consult.btn-callback
-            .text-section
-              +phoneSvg
-              span перезвоните
-            .arrow-section
-              +arrowSvg
+
           small.small-label.mt-3 * мы наберем вас в течении 15 минут
           img(src="assets/img/logo-bg.png")
+//-           #consult.btn-callback
+//-             .text-section
+//-               +phoneSvg
+//-               span перезвоните
+//-             .arrow-section
+//-               +arrowSvg

@@ -4,14 +4,16 @@ $(document).ready(function () {
   if (replaceHref) {
     window.location.replace = "./404.html";
   }
-  $('[type="tel"]').mask("+38-(000)-000-00-00")
+   $('[type="tel"]').mask("+38-(000)-000-00-00")
   var payForm = $('#modalServiceListPay form')
   if (payForm)
     payForm.on('submit', bookRecord)
   var submForm = $('#modalServiceListSinugUp form')
   if (submForm)
     submForm.on('submit', bookRecord)
-
+  var consultForm = $('form.main-form')
+  if(consultForm)
+    consultForm.on('submit', consultWrite)
   const callbackForm = $('form.feedback-form')[0],
     callbackBtn = $('#sendMail')
 
@@ -179,8 +181,8 @@ window.onload = function () {
 
   let checking = document.querySelectorAll('label.service-checkbox-label input');
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
-  consult = document.getElementById('consult')
-  consult.addEventListener('click', consultWrite)
+  consult = document.querySelector('.main-form')
+  consult.addEventListener('submit', consultWrite)
   let curUrl = document.URL
   if (curUrl.includes('payed=true')) {
     if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
@@ -449,7 +451,6 @@ function writeClient(inputNum, time, isPayment = false) {
   //   alert("smth went wrong, please reload the page and try again");
   //   return;
   // }
-  const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 
   let date = new Date();
   userParams = {
@@ -479,8 +480,8 @@ function writeClient(inputNum, time, isPayment = false) {
 
 function preparePayButton(inputNum) {
   let params = getFormParams(inputNum);
-  if (!params.phone || !params.fullName || !params.email || !params.services) {
-    alert("we haven`t all data for payment");
+  if (!params.services) {
+    alert("Please choose service");
     return;
   }
   let price = 0;
@@ -545,9 +546,9 @@ function createOrder(amount, order_desc, name, services, email, phone) {
 
 
 function consultWrite(event, plusDate = 0) {
+  event.preventDefault()
   let date = new Date();
   const service = '1415297';
-  event.preventDefault();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
     date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
@@ -558,19 +559,9 @@ function consultWrite(event, plusDate = 0) {
   let phone = document.getElementById("phoneConsult").value
   let email = document.getElementById("emailConsult").value
   let fullName = document.getElementById("fullnameConsult").value
-  if (!fullName || fullName.length < 3) {
-    alert("Input correct name");
-    return;
-  }
-  const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-  if (!reg.exec(email)) {
-    alert("Input correct email")
-    return
-  }
-  if (phone.length < 13) {
-    alert('Input correct phone')
-    return
-  }
+
+
+
 
   ajax('GET', headers, url, null,
     function (data) {
@@ -608,3 +599,8 @@ function consultWrite(event, plusDate = 0) {
 
 }
 
+function writeBeauty(event, plusDate = 0) {
+  event.preventDefault();
+  let service = event.target.getAttribute('id');
+
+}
