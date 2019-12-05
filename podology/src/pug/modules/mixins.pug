@@ -51,6 +51,13 @@ mixin sliderServices
         .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
           .section-bg-dark.w-100.p-1
             p.paragraph-text.text-center.mb-0 #{element.name}
+    script
+      | (() => {
+      |   const $this = document.currentScript.parentElement,
+      |         items = [...$this.querySelectorAll('a')],
+      |         link  = location.pathname.match(/(\b[\w\d-.]+\b)/g)[0]
+      |   items.forEach(item => item.href.split('/').pop() === link && item.parentElement.removeChild(item))
+      | })()
 
 
 mixin writeClientForm
