@@ -10,7 +10,6 @@
   //background: transparent
   background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% )
   color: #fff
-  //box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
   text-transform: uppercase
   cursor: pointer
 
@@ -120,3 +119,25 @@
 
 .text-section
   pointer-events: none
+
+.btn-submit
+  padding: 8px 10px !important
+  display: flex !important
+  justify-content: center !important
+  align-items: center !important
+  width: 100% !important
+  height: 38px !important
+  max-width: 160px !important
+  text-decoration: none !important
+  border-radius: 100px !important
+  background: $btn-primary-color !important
+  color: #fff !important
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important
+  text-transform: uppercase !important
+  cursor: pointer !important
+  @include font(Circe, 900, 10, 25)
+  letter-spacing: 0.25em
+  border: none !important
+.modal-dialog
+  .btn-submit
+    margin: 0 auto
