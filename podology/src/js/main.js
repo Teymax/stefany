@@ -7,7 +7,7 @@ window.mail = {
 }
 
 $( document ).ready( function () {
-  $( '[type="tel"]' ).mask( '+38-(000)-00-00' )
+  $( '[type="tel"]' ).mask( '+38-(000)-000-00-00' )
   const callbackForm = $( '#callbackModal form' )[ 0 ],
         callbackBtn  = $( '[data-call-day-callback-btn]' )
 
