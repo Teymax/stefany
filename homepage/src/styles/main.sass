@@ -17,6 +17,7 @@
 	display: flex
 	width: 100vw
 	height: 100vh
+	overflow: hidden
 
 	[class^="baba-"]
 		height: 100%
@@ -77,6 +78,9 @@
 				fill-mode: forwards
 				duration: 1s
 
+			img
+				pointer-events: none
+
 			.bio
 				display: flex
 				flex-direction: column
@@ -101,12 +105,12 @@
 
 	.baba-1
 		img.legs
-			width: 55em
+			width: 186%
 			height: auto
 			position: absolute
 			z-index: 4
-			bottom: 6rem
-			left: -10rem
+			bottom: 10%
+			left: -28%
 			transform: rotate(-24.316deg)
 
 		.default
