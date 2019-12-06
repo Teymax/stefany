@@ -1,0 +1,183 @@
+//@import "../../node_modules/bootstrap/scss/bootstrap"
+@mixin font-face($name, $file, $weight: normal)
+	@font-face
+		font-family: "#{$name}"
+		src: url('../assets/fonts/#{$file}')
+		font-weight: $weight
+
+@include font-face(Circe, 'Circe-Light.woff2', 300)
+@include font-face(Circe, 'Circe-Regular.woff2', 400)
+@include font-face(Circe, 'Circe-Bold.woff2', 700)
+@include font-face(Circe, 'Circe-ExtraBold.woff2', 900)
+@include font-face(Cormorant, 'CormorantGaramond-Regular.woff2', 400)
+@include font-face(Cormorant, 'CormorantGaramond-Bold.woff2', 700)
+
+.desktop
+	background: red
+	display: flex
+	width: 100vw
+	height: 100vh
+
+	[class^="baba-"]
+		height: 100%
+		width: calc(100% / 3)
+		max-width: calc(100% / 3)
+		position: relative
+
+		.default
+			display: block
+			width: 100%
+			height: inherit
+			max-width: 100%
+			background: inherit
+			transition: .25s ease
+			z-index: 5
+			position: relative
+
+			.wrapper
+				background: rgba(0, 0, 0, .75)
+				color: #fff
+				position: absolute
+				height: 100%
+				width: 100%
+				z-index: 6
+
+				h2
+					position: absolute
+					z-index: 7
+					display: flex
+					font-size: 16px
+					font-family: Circe, sans-serif
+					line-height: 22px
+					letter-spacing: 0.3em
+					text-align: center
+					text-transform: uppercase
+					justify-content: center
+					align-items: center
+					width: 100%
+					height: 6rem
+					background: #000
+
+			&:hover
+				background: palevioletred
+
+		.hovered
+			opacity: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 999
+			background:
+				repeat: no-repeat
+				size: cover
+			animation:
+				name: switch-out
+				fill-mode: forwards
+				duration: 1s
+
+			.bio
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-top: 25%
+
+				p
+					font-family: Circe, sans-serif
+					text-align: center
+					font-size: 16px
+					line-height: 25px
+					font-style: normal
+					font-weight: 300
+					width: 60%
+					margin-top: 2rem
+
+			&:hover
+				animation:
+					name: switch-in
+					fill-mode: forwards
+					duration: 1s
+
+	.baba-1
+		img.legs
+			width: 55em
+			height: auto
+			position: absolute
+			z-index: 4
+			bottom: 6rem
+			left: -10rem
+			transform: rotate(-24.316deg)
+
+		.default
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+		.hovered
+			img.legs
+				animation:
+					name: flip-feet-out
+					duration: 1s
+					fill-mode: forwards
+
+				&:hover
+					animation:
+						name: flip-feet-in
+						duration: 1s
+						fill-mode: forwards
+
+			.bio
+				p
+					color: #556278
+
+	.baba-2
+		.default
+
+		.hovered
+			.bio
+				p
+					color: #ffffff
+
+	.baba-3
+		.default
+
+		.hovered
+			.bio
+				p
+					color: #556278
+
+@for $i from 1 through 3
+	.baba-#{$i}
+		background:
+			image: url('../assets/img/bg/#{$i}.jpg')
+			repeat: no-repeat
+			size: cover
+
+		.hovered
+			background: inherit
+
+@keyframes flip-feet-in
+	0%
+		transform: rotate(-24.316deg)
+	100%
+		transform: rotate(-16deg)
+
+@keyframes flip-feet-out
+	0%
+		transform: rotate(-16deg)
+	100%
+		transform: rotate(-24.316deg)
+
+@keyframes switch-in
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes switch-out
+	0%
+		opacity: 1
+	100%
+		opacity: 0
