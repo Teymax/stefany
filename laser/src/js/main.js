@@ -173,10 +173,7 @@ window.onload = function () {
 
   fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
-  // let payButtons = document.querySelectorAll("#pay_button");
-  // [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
-  // let orderButtons = document.querySelectorAll("#order_button");
-  // [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
+
   getServices();
 
   let checking = document.querySelectorAll('label.service-checkbox-label input');
@@ -601,6 +598,7 @@ function consultWrite(event, plusDate = 0) {
 
 function writeBeauty(event, plusDate = 0) {
   event.preventDefault();
-  let service = event.target.getAttribute('id');
+  let box = event.target.closest('form')
+  let service = box.getAttribute('id');
 
 }
