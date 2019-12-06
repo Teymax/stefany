@@ -79,7 +79,7 @@ section.section.service-laser-service-list
       .right
         .sale-container
           position: relative
-          height: 139px
+          height: 110px
           width: 100%
           .sale-title
             @include font(CormorantGaramond, 700, 30, 30)
@@ -92,11 +92,13 @@ section.section.service-laser-service-list
             width: 620px
             height: 180px
             top: -72px
-            left: -113px
+            left: -118px
             background:
-              image: url("../assets/img/laser-page/sale-bg.jpg")
+              image: url("../assets/img/laser-page/sale-bg.png")
               size: cover
             z-index: -1
+            @media(min-width: 1920px)
+              display: none
         .stash
           position: sticky
           top: 71px
@@ -107,7 +109,7 @@ section.section.service-laser-service-list
             box-sizing: border-box
             border-bottom: 1px solid rgba(255, 255, 255, 0.34)
             overflow: auto
-            max-height: 380px
+            max-height: 343px
 
           .sale-group
             width: 77%
