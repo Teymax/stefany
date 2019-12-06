@@ -19,7 +19,7 @@ section.section.contact.py-0
             textarea(placeholder="О чем вы хотите рассказать?" name="message" required ).mt-4.mt-md-0
         .row.d-flex.justify-content-end.no-gutters
         //+customBtn('отправить')
-        #sendMail.btn-callback.no-svg(data-btn-contact-submit data-target="#thanksPopup")
+        #sendMail.btn-callback.no-svg(data-btn-contact-submit data-toggle='modal', data-target='#success')
           .text-section
             span отправить
           .arrow-section
