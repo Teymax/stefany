@@ -1,4 +1,4 @@
-//@import "../../node_modules/bootstrap/scss/bootstrap"
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot"
 @mixin font-face($name, $file, $weight: normal)
 	@font-face
 		font-family: "#{$name}"
@@ -12,12 +12,18 @@
 @include font-face(Cormorant, 'CormorantGaramond-Regular.woff2', 400)
 @include font-face(Cormorant, 'CormorantGaramond-Bold.woff2', 700)
 
+html,
+body
+	padding: 0
+	margin: 0
+
 .desktop
 	background: red
 	display: flex
 	width: 100vw
 	height: 100vh
 	overflow: hidden
+	cursor: pointer
 
 	[class^="baba-"]
 		height: 100%
@@ -76,10 +82,7 @@
 			animation:
 				name: switch-out
 				fill-mode: forwards
-				duration: 1s
-
-			img
-				pointer-events: none
+				duration: .1s
 
 			.bio
 				display: flex
@@ -101,7 +104,7 @@
 				animation:
 					name: switch-in
 					fill-mode: forwards
-					duration: 1s
+					duration: .1s
 
 	.baba-1
 		img.legs
@@ -123,31 +126,122 @@
 			img.legs
 				animation:
 					name: flip-feet-out
-					duration: 1s
+					duration: .3s
 					fill-mode: forwards
 
-				&:hover
-					animation:
-						name: flip-feet-in
-						duration: 1s
-						fill-mode: forwards
+			&:hover
+				img.legs
+					&:hover
+						animation:
+							name: flip-feet-in
+							duration: .3s
+							fill-mode: forwards
 
 			.bio
 				p
 					color: #556278
 
 	.baba-2
+		.baba-crutch
+			width: 265%
+			min-width: 265%
+			max-width: 265%
+			height: 80%
+			position: absolute
+			left: -50%
+			z-index: 111
+			pointer-events: none
+			bottom: 0
+			background:
+				image: url('../assets/img/woman-1.png')
+				size: cover
+				repeat: no-repeat
+			animation:
+				name: golaya-baba-out
+				duration: .3s
+				fill-mode: forwards
+
+		img.woman
+			width: 267%
+			height: auto
+			z-index: 4
+			position: absolute
+			left: -50%
+			bottom: 0
+
 		.default
+			overflow: hidden
 
 		.hovered
+			.baba-crutch
+				animation:
+					name: golaya-baba-out
+					duration: .3s
+					fill-mode: forwards
+
 			.bio
 				p
 					color: #ffffff
 
+			&:hover
+				.baba-crutch
+					animation:
+						name: golaya-baba-in
+						duration: .3s
+						fill-mode: forwards
+
 	.baba-3
+		overflow: hidden
+
+		&:hover
+			overflow: visible
+
+		.baba-crutch
+			width: 137%
+			min-width: 137%
+			max-width: 137%
+			height: 80%
+			position: absolute
+			left: -23%
+			z-index: 111
+			pointer-events: none
+			bottom: 0
+			background:
+				image: url('../assets/img/woman-2.png')
+				size: cover
+				repeat: no-repeat
+			animation:
+				name: pink-baba-out
+				duration: .3s
+				fill-mode: forwards
+
+		img.woman
+			width: 137%
+			height: auto
+			z-index: 4
+			position: absolute
+			left: -23%
+			bottom: 0
+
 		.default
+			.baba-crutch
+				animation:
+					name: pink-baba-out
+					duration: .3s
+					fill-mode: forwards
 
 		.hovered
+			.baba-crutch
+				height: 100%
+
+			&:hover
+
+				.baba-crutch
+					animation:
+						name: pink-baba-in
+						duration: .3s
+						fill-mode: forwards
+
 			.bio
 				p
 					color: #556278
@@ -162,6 +256,9 @@
 		.hovered
 			background: inherit
 
+			> *
+				transform: translate3d(0, 0, 0)
+
 @keyframes flip-feet-in
 	0%
 		transform: rotate(-24.316deg)
@@ -173,6 +270,30 @@
 		transform: rotate(-16deg)
 	100%
 		transform: rotate(-24.316deg)
+
+@keyframes golaya-baba-in
+	0%
+		left: -50%
+	100%
+		left: -100%
+
+@keyframes golaya-baba-out
+	0%
+		left: -100%
+	100%
+		left: -50%
+
+@keyframes pink-baba-in
+	0%
+		left: -23%
+	100%
+		left: -100%
+
+@keyframes pink-baba-out
+	0%
+		left: -100%
+	100%
+		left: -23%
 
 @keyframes switch-in
 	0%
