@@ -96,13 +96,14 @@ mixin accordeon(header, description, items, expandedRequired, expandedIndex)
 
 // modal service list info
 mixin modalServiceListInfo
-  .d-flex.justify-content-between
-    span.paragraph-text.text-color-dark.line-height Выбрано услуг
-    span.paragraph-text.text-w-bold.text-color-dark.ml-2.countCheckedService
-  .d-flex.justify-content-between
-    span.paragraph-text.text-color-dark.line-height Общее время
-    span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListTime
-  .d-flex.justify-content-between
-    span.paragraph-text.text-color-dark.line-height Общая сумма
-    span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListSum
+  .c-content-count
+    .d-flex.justify-content-between
+      span.paragraph-text.text-color-dark.line-height Выбрано услуг
+      span.paragraph-text.text-w-bold.text-color-dark.ml-2.countCheckedService
+    .d-flex.justify-content-between
+      span.paragraph-text.text-color-dark.line-height Общее время
+      span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListTime
+    .d-flex.justify-content-between
+      span.paragraph-text.text-color-dark.line-height Общая сумма
+      span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListSum
 

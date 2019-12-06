@@ -343,7 +343,7 @@
           el.attr( 'autocomplete', 'off' )
         }
 
-        for ( var i = 0, maxlength = true; i < mask.length; i++ ) {
+        for ( var i = 0, maxlength = false; i < mask.length; i++ ) {
           var translation = jMask.translation[ mask.charAt( i ) ]
           if ( translation && translation.recursive ) {
             maxlength = false

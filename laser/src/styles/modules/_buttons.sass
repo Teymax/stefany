@@ -10,7 +10,6 @@
   //background: transparent
   background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% )
   color: #fff
-  //box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
   text-transform: uppercase
   cursor: pointer
 
@@ -120,3 +119,61 @@
 
 .text-section
   pointer-events: none
+
+.btn-submit
+  padding: 8px 10px !important
+  display: flex !important
+  justify-content: center !important
+  align-items: center !important
+  width: 100% !important
+  height: 38px !important
+  text-decoration: none !important
+  border-radius: 100px !important
+  background: $btn-primary-color !important
+  color: #fff !important
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important
+  text-transform: uppercase !important
+  cursor: pointer !important
+  @include font(Circe, 900, 10, 25)
+  letter-spacing: 0.25em
+  border: none !important
+.modal-dialog
+  .btn-submit
+    margin: 24px auto 0 auto
+  .pay
+    background: $btn-primary-color !important
+    &:before
+      display: block
+      content: ' '
+      background-image: url('../assets/icon/svg/caset.svg')
+      background-size: 28px 28px
+      height: 28px
+      width: 28px
+  .order
+    position: relative
+    background: #7F8597 !important
+    &:before
+      display: block
+      content: ' '
+      background-image: url('../assets/icon/svg/pen.svg')
+      background-size: 28px 28px
+      height: 28px
+      width: 28px
+.consultation-form
+  .btn-callback-submit
+    display: flex !important
+    justify-content: center !important
+    width: 100% !important
+    height: 38px !important
+    text-decoration: none !important
+    border-radius: 100px !important
+    border: 1px solid $btn-primary-color !important
+    //background: transparent !important
+    background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% ) !important
+    text-transform: uppercase !important
+    cursor: pointer !important
+    @include font(Circe, 800, 10, 25)
+    color: $text-color-dark !important
+    letter-spacing: 0.25em !important
+    padding: 0px 29px 0 0 !important
+    margin-top: 37px !important

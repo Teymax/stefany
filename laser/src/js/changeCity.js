@@ -317,7 +317,7 @@ $(document).ready(function () {
 
     for (let i = 0; i < imagesAmount; i++) {
       images += `
-        <span data-pos="${i}" data-fancybox="" class="video d-flex align-items-center justify-content-center">
+        <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
           <img src="${imgPath}video-slider-${i}.jpg" srcset="${imgPath}video-slider-${i}@2x.jpg" class="w-100">
         </span>
       `;
@@ -336,7 +336,7 @@ $(document).ready(function () {
       // console.log('specialist', specialistsData[i]);
       imagesSpecialists += `
         <div class="specialists-item">
-            <div class="specialists-item-container mb-3 w-100" data-fancybox="">
+            <div class="specialists-item-container mb-3 w-100">
                 <div class="specialists-img w-100"><img class="w-100" src="" alt="${specialistsData[i].name}" srcset="${imgPath}/specialists/specialist-${i}@2x.jpg 2x" /></div>
                 <div class="specialists-info d-flex flex-column align-items-start w-100 p-3">
                     <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].education}</p>

@@ -2,42 +2,30 @@ section.section.contact.py-0
   .container
     .row
       .col-12.col-xl-5
-        +breadcrumbsSmall('Главная', 'Контакты', '/contact.html')
+        +breadcrumbsSmall('Главная', 'Контакты', 'contact.html')
         .tablet-container
           h2.h2-title.text-color-dark.mb-3 Контакты
           //p.sub-title.letter-spacing-1.mb-4 Steffany Cosmetology
-          .cnt-info.mt-4
-            .d-flex.flex-wrap.mb-0
-              .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
-                img(src="assets/icon/phone.svg" alt="Phone").d-block.mr-3
-                a.telephone-dynamic.paragraph-text.text-color-dark
-              .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
-                img(src="assets/icon/map.svg" alt="Map").d-block.mr-3
-                p.address-dynamic.paragraph-text.text-color-lightdark.text-w-light.mb-0
-            .d-flex.flex-wrap
-              .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
-                img(src="assets/icon/mail.svg" alt="Mail").d-block.mr-3
-                a(href="mailto:info@steffany.ua").paragraph-text.text-color-lightdark.text-w-light info@steffany.ua
-              .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
-                img(src="assets/icon/time.svg" alt="Time").d-block.mr-3
-                p.paragraph-text.text-color-dark.mb-0 9:00 – 20:00
+        +cnt-info
         hr.mt-4.mb-3
         h2.form-title.text-color-dark Хотите связаться лично с собственником Steffany Lazer & Cosmetology?
         form.feedback-form.row
           .col-12.col-md-4.col-xl-5.px-xl-0
             input(type="text" placeholder="Имя" name="name" required)
-            input(type="email" placeholder="Email" name="email" required pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
-            input(type="tel" placeholder="Телефона" name="phone" required)
+            input(type="email" placeholder="Email" name="email" required )
+            input(type="tel" placeholder="Телефона" name="phone" required minlength="19")
             input(type='submit' data-contact-submit style="display:none;")
           .col-12.col-md-8.col-xl-7.pl-xl-0.pr-xl-3
-            textarea(placeholder="О чем вы хотите рассказать?" name="message").mt-4.mt-md-0
+            textarea(placeholder="О чем вы хотите рассказать?" name="message" required ).mt-4.mt-md-0
         .row.d-flex.justify-content-end.no-gutters
         //+customBtn('отправить')
-        #sendMail.btn-callback.no-svg(data-btn-contact-submit data-target="#thanksPopup")
+        #sendMail.btn-callback.no-svg(data-btn-contact-submit data-toggle='modal', data-target='#success')
           .text-section
             span отправить
           .arrow-section
             +arrowSvg
+        //.button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
+
       .col-12.col-xl-7
         .map-dynamic.map.h-100
 
