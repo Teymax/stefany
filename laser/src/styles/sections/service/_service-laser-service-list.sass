@@ -77,21 +77,37 @@ section.section.service-laser-service-list
           h2
             font-size: 30px
       .right
-        .stash
-          position: sticky
-          top: 20px
-          .sale-container
-            width: 100%
+        .sale-container
+          position: relative
+          height: 139px
+          width: 100%
+          .sale-title
+            @include font(CormorantGaramond, 700, 30, 30)
+            letter-spacing: 0.01em
+            color: $text-color-white
+          &:before
+            content: ' '
+            display: block
+            position: absolute
+            width: 620px
+            height: 180px
+            top: -72px
+            left: -113px
             background:
               image: url("../assets/img/laser-page/sale-bg.jpg")
-            h4
-              line-height: 23px
+              size: cover
+            z-index: -1
+        .stash
+          position: sticky
+          top: 71px
+          margin-left: 20%
+
           .checkbox-group
             width: 324px
             box-sizing: border-box
             border-bottom: 1px solid rgba(255, 255, 255, 0.34)
             overflow: auto
-            max-height: 460px
+            max-height: 380px
 
           .sale-group
             width: 77%
