@@ -268,9 +268,9 @@ function refreshPrice(e) {
   })
 
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
-    const parent = current.closest('.checkbox-row')
-    let id = parent.getAttribute('id')
-    let serv = servicesAll.find(service => service.id === +id)
+      const parent = current.closest('.checkbox-row')
+      let id = parent.getAttribute('id')
+      let serv = servicesAll.find(service => service.id === +id)
 
     return accum + serv.price_max
 

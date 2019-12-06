@@ -1,5 +1,4 @@
 #modalServiceListPay.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
-
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
       h4.text-center.mb-0 Оставьте ваши данные
@@ -14,7 +13,7 @@
 
 
           +modalServiceListInfo
-          input#pay_button.btn-submit.pay(type="submit" value="оплатить")
+          input#pay_button.btn-submit.pay(type="submit" value="оплатить" data-toggle="modal" data-target="#myModal")
 
 
 
@@ -35,3 +34,6 @@
 
           +modalServiceListInfo
           input#order_button.btn-submit.order(type="submit" value="заплатить")
+
+
+
