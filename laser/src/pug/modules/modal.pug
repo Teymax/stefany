@@ -13,7 +13,8 @@
 
 
           +modalServiceListInfo
-          input#pay_button.btn-submit.pay(type="submit" value="оплатить")
+          .c-input.pay
+            input#pay_button.btn-submit(type="submit" value="оплатить")
 
 
 
@@ -33,7 +34,8 @@
           input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
 
           +modalServiceListInfo
-          input#order_button.btn-submit.order(type="submit" value="записаться" data-toggle='modal', data-target='#thanksPopup')
+          .c-input.order
+           input#order_button.btn-submit(type="submit" value="записаться" data-toggle='modal', data-target='#thanksPopup')
 
 
 

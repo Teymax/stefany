@@ -147,9 +147,7 @@
       content: ' '
       background-image: url('../assets/icon/svg/caset.svg')
       background-size: 28px 28px
-      height: 28px
-      width: 28px
-  .order
+  &.order
     position: relative
     background: #7F8597 !important
     &:before
@@ -157,6 +155,17 @@
       content: ' '
       background-image: url('../assets/icon/svg/pen.svg')
       background-size: 28px 28px
+  .c-input.pay
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      pointer-events: none
+      background:
+        image: url('../assets/icon/svg/caset.svg')
+        repeat: no-repeat
+        size: cover
       height: 28px
       width: 28px
 .consultation-form
@@ -177,5 +186,27 @@
     letter-spacing: 0.25em !important
     padding: 0px 29px 0 0 !important
     margin-top: 37px !important
-    //&:before
-    //  content: '../assets/icon/svg/time.png'
+  .c-input
+    position: relative
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      pointer-events: none
+      background:
+        repeat: no-repeat
+        size: cover
+    &:before
+      background:
+        image: url('../assets/icon/svg/phone.svg')
+      width: 10px
+      height: 16px
+      left: 22px
+      bottom: 12px
+    &:after
+      background:
+        image: url('../assets/icon/svg/arrow-right.svg')
+      width: 16px
+      height: 10px
+      right: 21px
+      bottom: 14px
