@@ -7,7 +7,6 @@
   text-decoration: none
   border-radius: 100px
   border: 1px solid $btn-primary-color
-  //background: transparent
   background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% )
   color: #fff
   text-transform: uppercase
@@ -25,7 +24,6 @@
     .arrow-section
       width: 25%
       svg
-        //fill: #fff
   .text-section
     border:
       top:
@@ -70,7 +68,6 @@
       bottom:
         left-radius: 0
         right-radius: inherit
-    //background: $btn-primary-color
     display: flex
     justify-content: center
     align-items: center
@@ -89,7 +86,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
   text-transform: uppercase
   cursor: pointer
-  //fluid
   &.fluid
     width: inherit
     max-width: inherit
@@ -142,32 +138,37 @@
     margin: 24px auto 0 auto
   .pay
     background: $btn-primary-color !important
-    &:before
-      display: block
-      content: ' '
-      background-image: url('../assets/icon/svg/caset.svg')
-      background-size: 28px 28px
-  &.order
+  .order
     position: relative
     background: #7F8597 !important
-    &:before
-      display: block
-      content: ' '
-      background-image: url('../assets/icon/svg/pen.svg')
-      background-size: 28px 28px
-  .c-input.pay
+  .c-input-pay, .c-input-order
     position: relative
+  .c-input-pay:before, .c-input-order:before
+    content: ''
+    display: block
+    pointer-events: none
+    position: absolute
+    background:
+      repeat: no-repeat
+      size: cover
+    z-index: 1
+  .c-input-pay
     &:before
-      content: ''
-      display: block
-      position: absolute
-      pointer-events: none
       background:
-        image: url('../assets/icon/svg/caset.svg')
-        repeat: no-repeat
-        size: cover
-      height: 28px
-      width: 28px
+        image: url(../assets/icon/svg/caset.svg)
+      left: 62px
+      top: 10px
+      width: 16px
+      height: 16px
+  .c-input-order
+    &:before
+      background:
+        image: url(../assets/icon/svg/pen.svg)
+      left: 60px
+      top: 12px
+      width: 12px
+      height: 12px
+
 .consultation-form
   .btn-callback-submit
     display: flex !important
@@ -177,7 +178,6 @@
     text-decoration: none !important
     border-radius: 100px !important
     border: 1px solid $btn-primary-color !important
-    //background: transparent !important
     background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% ) !important
     text-transform: uppercase !important
     cursor: pointer !important
