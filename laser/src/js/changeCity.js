@@ -1,4 +1,50 @@
 $(document).ready(function () {
+  const serviceCityData = {
+    zt: {
+      ru: {
+        selectedService:
+            `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
+        `
+      }
+    },
+    if: {
+      ru: {
+        selectedService:
+            `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+        `
+      }
+    },
+    lutsk: {
+      ru: {
+        selectedService:
+            `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
+        `
+      }
+    },
+    lviv: {
+      ru: {
+        selectedService: `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+        `
+      }
+    },
+    rovno: {
+      ru: {
+        selectedService: `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
+        `
+      }
+    }
+  }
   const citiesData = {
     zt: {
       ru: {
@@ -58,7 +104,6 @@ $(document).ready(function () {
         ]
       }
     },
-
     if: {
       ru: {
         cityName: 'Ивано-Франковск',
@@ -225,6 +270,10 @@ $(document).ready(function () {
     $('.map-dynamic').each(function (e) {
       this.innerHTML = citiesData[city][localization].cityMap;
     });
+
+    $('.service-li-dynamic').each(function (e) {
+      this.innerHTML = serviceCityData[city][localization].selectedService;
+    });
   }
 
   function initCarousels() {
@@ -373,7 +422,6 @@ $(document).ready(function () {
       }
     });
   }
-
   initCities();
 
 })

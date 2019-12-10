@@ -103,11 +103,10 @@ section.section.service-laser-service-list
           position: sticky
           top: 71px
           margin-left: 20%
-
+          height: 90vh
           .checkbox-group
             width: 324px
             box-sizing: border-box
-            border-bottom: 1px solid rgba(255, 255, 255, 0.34)
             overflow: auto
             max-height: 343px
 
@@ -115,20 +114,32 @@ section.section.service-laser-service-list
             width: 77%
             box-sizing: border-box
             border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+
             p
               margin: 20px 0
               &:nth-of-type(1)
                 margin-left: 2rem
+          .c-btn
+
           .price-group
-            width: 77%
-            .price-block
-              width: 50%
-              p
-                margin: 10px 0
-              img
-                width: 20px
-                height: 20px
-                margin: 10px 0
+
+          .price-count
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-top: 1px solid rgba(255, 255, 255, 0.34)
+            width: 95%
+            padding-top: 15px
+            margin-top: auto
+            margin-bottom: 24px
+          //.price-block
+          //  width: 50%
+          //  p
+          //    margin: 10px 0
+          //  img
+          //    width: 20px
+          //    height: 20px
+          //    margin: 10px 0
 section.section.service-laser-service-list-tablet1
   background: url(../assets/img/service-laser-page/list-image-tablet.png)
   background-size: cover
