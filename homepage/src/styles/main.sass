@@ -106,11 +106,17 @@ body
 
 
 	.baba-1
+
+		img
+			pointer-events: none
+
 		&:hover
 			z-index: 15
+
 			.default
 				.legs
 					opacity: 0
+
 		img.legs
 			width: 186%
 			height: auto
@@ -127,6 +133,9 @@ body
 				position: relative
 
 		.hovered
+			&:hover
+				~ .default
+					background: #000
 			img.legs
 				display: block
 				pointer-events: none
