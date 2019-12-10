@@ -7,7 +7,7 @@ $(document).ready(function () {
   $('[type="tel"]').mask("+38-(000)-000-00-00")
   var complexForm = $('#complexForm')
   if (complexForm)
-    complexForm.on('submit', co)
+    complexForm.on('submit', sendComplex)
   var payForm = $('#modalServiceListPay form')
   if (payForm)
     payForm.on('submit', bookRecord)
