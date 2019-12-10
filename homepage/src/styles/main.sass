@@ -279,6 +279,9 @@ body
 					width: 60%
 					text-align: center
 					color: #556278
+					margin:
+						top: .5rem
+						bottom: .5rem
 
 				a
 					width: 60px
@@ -351,7 +354,6 @@ body
 				position: relative
 
 				.woman
-					//transform: scaleX(-1)
 					width: 63em
 					top: -17rem
 					position: absolute
@@ -361,6 +363,9 @@ body
 			top: 0
 			left: 0
 			z-index: 12
+
+			p
+				color: #ffffff !important
 
 			a
 				background: #F6AE9F !important
@@ -411,6 +416,183 @@ body
 				bottom: 0
 				position: absolute
 
+
+.mobile
+	display: flex
+	display: none
+	flex-direction: column
+	height: 100vh
+
+	[class^="baba-"]
+		width: 100%
+		flex: 1
+		position: relative
+
+		.hovered
+			opacity: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 10
+			display: flex
+			align-items: center
+			justify-content: center
+
+			.bio
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+
+				p
+					width: 60%
+					text-align: center
+					color: #556278
+					margin:
+						top: .5rem
+						bottom: .5rem
+
+				a
+					width: 60px
+					height: 60px
+					background: #556278
+					box-shadow: 0px 10px 40px rgba(30, 31, 33, 0.42)
+					border-radius: 50%
+
+					&:before
+						content: ''
+						background: url(../assets/icon/arrow.svg) no-repeat center
+						width: 100%
+						height: 100%
+						display: block
+
+
+			&:hover
+				opacity: 1
+
+		.default
+			position: relative
+
+			.wrapper
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 10
+
+		.content
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 5
+			position: absolute
+
+			.legs
+				width: 35em
+				height: auto
+				position: absolute
+				top: -8em
+				left: -21rem
+				transform: rotate(-95deg) scaleX(-1)
+
+	.baba-1
+		.hovered
+			.legs
+				width: 40em
+				height: auto
+				position: absolute
+				top: -8em
+				left: -21rem
+				transform: rotate(-111deg) scaleX(-1)
+				transition: .1s ease-in-out
+				display: block
+				pointer-events: none
+
+			&:hover
+				.legs
+					transform: rotate(-111deg) scaleX(-1)
+					top: 6em
+
+	.baba-2
+		position: relative
+
+		.default
+			overflow: hidden
+
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+				.woman
+					width: 42em
+					top: -6em
+					position: absolute
+					left: -3em
+
+		.hovered
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 12
+
+			p
+				color: #ffffff !important
+
+			a
+				background: #F6AE9F !important
+
+			.woman
+				position: absolute
+				width: 42em
+				top: 3rem
+				left: -3em
+				display: block
+				pointer-events: none
+
+	.baba-3
+		position: relative
+
+		.default
+			overflow: hidden
+
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+				.woman-2
+					width: 22em
+					left: -12rem
+					top: -5rem
+					transform: scaleX(-1)
+					position: absolute
+
+	.hovered
+		position: relative
+
+		a
+			background: #A09BCF !important
+
+		.woman-2
+			width: 22em
+			left: -15rem
+			bottom: 0
+			position: absolute
+			transform: scaleX(-1)
+			transition: .1s ease-in-out
+
+		&:hover
+			.woman-2
+				width: 22em
+				left: -15rem
+				bottom: 0
+				position: absolute
+				transform: scaleX(-1)
+
+
 @for $i from 1 through 3
 	.desktop
 		.baba-#{$i}
@@ -455,6 +637,60 @@ body
 						line-height: 22px
 						letter-spacing: .3em
 						text-transform: uppercase
+
+			.hovered
+				background: inherit
+				animation:
+					name: switch-out
+					fill-mode: forwards
+					duration: .1s
+
+				&:hover
+					animation:
+						name: switch-in
+						fill-mode: forwards
+						duration: .1s
+				//height: 40vh
+
+				> *
+					transform: translate3d(0, 0, 0)
+
+	.mobile
+		.baba-#{$i}
+			&:hover
+				flex-grow: 2
+				z-index: 15
+
+			.hovered
+				z-index: 10
+
+			background:
+				image: url('../assets/img/bg/#{$i + 3}.png')
+				repeat: no-repeat
+				size: cover
+
+			.default
+				height: 100%
+
+				.wrapper
+					height: 100%
+
+					h2
+						height: 100%
+						width: 100%
+						background: rgba(0, 0, 0, .5)
+						display: flex
+						justify-content: center
+						align-items: center
+						color: #fff
+						font-family: Circe, sans-serif
+						font-size: 14px
+						font-weight: bold
+						line-height: 20px
+						letter-spacing: .3em
+						text-transform: uppercase
+						text-align: center
+						padding: 4rem
 
 			.hovered
 				background: inherit
