@@ -6,7 +6,14 @@ window.mail = {
   From:     'a.sergeychuk@dotwork.digital'
 }
 
+let chooseDayText = ''
+
 $(document).ready(function () {
+
+  $('[data-choose-text]').on('click', event => {
+    chooseDayText = event.target.dataset.chooseText
+  })
+
   $('[type="tel"]').mask('+38-(000)-000-00-00')
   const callbackForm = $('#callbackModal form')[0],
         callbackBtn  = $('[data-call-day-callback-btn]')
@@ -184,7 +191,7 @@ $(document).ready(function () {
       e.preventDefault()
       sendEmail({
                   Subject: 'Обучение',
-                  Body:    `Имя: ${firstDayCourse.querySelector('[data-name]').value}<br>Email: ${firstDayCourse.querySelector('[data-email]').value}<br>Телефон: ${firstDayCourse.querySelector('[data-phone]').value}<br>Курс: ${firstDayCourse.querySelector('select').selectedOptions[0].innerText}`
+                  Body:    `Имя: ${firstDayCourse.querySelector('[data-name]').value}<br>Email: ${firstDayCourse.querySelector('[data-email]').value}<br>Телефон: ${firstDayCourse.querySelector('[data-phone]').value}<br>Курс: ${chooseDayText}`
                 })
     })
   }
@@ -203,7 +210,7 @@ $(document).ready(function () {
       e.preventDefault()
       sendEmail({
                   Subject: 'Обучение',
-                  Body:    `Имя: ${secondDayCourse.querySelector('[data-name]').value}<br>Email: ${secondDayCourse.querySelector('[data-email]').value}<br>Телефон: ${secondDayCourse.querySelector('[data-phone]').value}<br>Курс: ${secondDayCourse.querySelector('select').selectedOptions[0].innerText}`
+                  Body:    `Имя: ${secondDayCourse.querySelector('[data-name]').value}<br>Email: ${secondDayCourse.querySelector('[data-email]').value}<br>Телефон: ${secondDayCourse.querySelector('[data-phone]').value}<br>Курс: ${chooseDayText}`
                 })
     })
   }
@@ -216,7 +223,7 @@ $(document).ready(function () {
         const n = chooseDayCourse.querySelector('[data-name]').value,
               e = chooseDayCourse.querySelector('[data-email]').value,
               p = chooseDayCourse.querySelector('[data-phone]').value,
-              c = chooseDayCourse.querySelector('select').value !== 'Какой курс вы выбираете?'
+              c = chooseDayText
 
 
         !!n && !!e && !!p && c && $('[data-fr-day-s-btn]').click()
@@ -227,14 +234,14 @@ $(document).ready(function () {
       const n  = chooseDayCourse.querySelector('[data-name]'),
             em = chooseDayCourse.querySelector('[data-email]'),
             p  = chooseDayCourse.querySelector('[data-phone]'),
-            c  = chooseDayCourse.querySelector('select')
+            c  = chooseDayText
 
       c.value = p.value = em.value = n.value = ''
       $('#chooseDayCourse').modal('hide')
       $('#thanksPopup').modal('show')
       sendEmail({
                   Subject: 'Обучение',
-                  Body:    `Имя: ${chooseDayCourse.querySelector('[data-name]').value}<br>Email: ${chooseDayCourse.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourse.querySelector('[data-phone]').value}<br>Курс: ${chooseDayCourse.querySelector('select').value}`
+                  Body:    `Имя: ${chooseDayCourse.querySelector('[data-name]').value}<br>Email: ${chooseDayCourse.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourse.querySelector('[data-phone]').value}<br>Курс: ${chooseDayText}`
                 })
     })
   }

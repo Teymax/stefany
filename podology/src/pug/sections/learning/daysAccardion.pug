@@ -1,7 +1,7 @@
 section.section.accordion-answer.program.py-5.remove-arrow
   h2.section-title-small.text-center.white-text Программа курса базовой подологии
-  p.h3-title-regular.text-center.mb-4.pb-4.text-border-b.text-w-bold Ближайшая старт — ХХ месяца
-  p.h3-title-regular.text-center.mb-4.text-w-bold Первая неделя
+  p.h3-title-regular.text-center.mb-4.pb-4.text-border-b.text-w-bold Ближайшая старт — 17 февраля
+  p.h3-title-regular.text-center.mb-4.text-w-bold Первая неделя. 17-22 февраля
   .programAccordion.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
       .row.no-gutters.program-item
@@ -136,7 +136,7 @@ section.section.accordion-answer.program.py-5.remove-arrow
             p.card-body.py-0.paragraph-text-dark.white-text
               span.text-w-bold.mb-1 Что вы изучите: <br/>
               span.thin-text Практическая отработка на реальных пациентах Аппараты и инструменты: прибор для аппаратного педикюра Nova3, перевязочные материалы.
-  p.h3-title-regular.text-center.my-5.text-w-bold Вторая неделя
+  p.h3-title-regular.text-center.my-5.text-w-bold Вторая неделя. 16-21 марта
   .programAccordion.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
       .row.no-gutters.program-item
@@ -284,7 +284,7 @@ section.section.accordion-answer.program.py-5.remove-arrow
     p.crutch-text.mb-0 Студентам, прошедшим один курс, дается скидка 10% на последующее обучение. Срок действия скидки — 3 месяца. Дальше скидка будет составлять 5 % в течение 1 года.
     +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
   h2.section-title.text-center.white-text.mt-5.text-w-bold Программа курса малой ортопедии и ортониксии
-  p.h3-title-regular.text-center.mb-4.pb-4.text-border-b.text-w-bolds Ближайшая старт — ХХ месяца
+  p.h3-title-regular.text-center.mb-4.pb-4.text-border-b.text-w-bolds Ближайшая старт — 24 февраля
   p.h3-title-regular.text-center.mb-4.text-w-bold МОДУЛЬ 1: ОРТОНИКСИЯ И МЕТОДИКИ КОРРЕКЦИИ ВРОСШИХ НОГТЕЙ
   .programAccordionTwo.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
@@ -398,6 +398,10 @@ section.section.accordion-answer.program.py-5.remove-arrow
             p.card-body.py-0.paragraph-text-dark.white-text
               span.text-w-bold.mb-1 Что вы изучите: <br/>
               span.thin-text Действие в статике и динамике. Подбор скобы, изготовление заготовок. Материалы и инструменты. Показания и противопоказания для установки скобы. Ошибки мастера. Снятие скобы.
+  .w-100.d-flex.justify-content-center.mt-4.flex-column.align-items-center
+    p.light-blue Стоимость курса&nbsp;
+      strong 12 500 грн
+    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
   p.h3-title-regular.text-center.my-5.text-w-bold МОДУЛЬ 2: ПОДОЛОГИЯ ДЛЯ ПРОФИ
   .programAccordionTwo.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
@@ -422,7 +426,10 @@ section.section.accordion-answer.program.py-5.remove-arrow
             p.card-body.py-0.paragraph-text-dark.white-text
               span.text-w-bold.mb-1 Что вы изучите: <br/>
               span.thin-text Ортезы. Анатомия стопы. Деформации стоп и биомеханические нарушения. Подоскоп, подобарограф. Изготовление индивидуальных ортезов. Жесткость по Шору. Корректирующие и амортизирующие свойства ортезов.
-              span.light-blue.mt-4.d-block Отработка и изготовление ортезов на пациентах — <strong> 3000 грн </strong>
+              span.light-blue.mt-4.d-block(style="color: #7b9ddd; font-weight: 600;") В занятие входят отработка на пациентах и изготовление ортезов
+              span.light-blue.mt-4.d-block(style="color: #7b9ddd; font-weight: 600;") Стоимость 1 дня — <strong>3000 грн</strong>
+
+              +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse' style="margin: 0; margin-left: 40px;")
       .row.no-gutters.program-item
         .row.no-gutters.w-100.program-head
           #programHeadingTwo07.card-header.p-0.w-100.program-container.d-flex.justify-content-start(data-toggle='collapse', data-target='#programCollapseTwo07',   aria-controls='programCollapseTwo07', aria-expanded='true')
@@ -444,10 +451,14 @@ section.section.accordion-answer.program.py-5.remove-arrow
             p.card-body.py-0.paragraph-text-dark.white-text
               span.text-w-bold.mb-1 Что вы изучите: <br/>
               span.thin-text Системы протезирования: медицинский гель, акрил, ногтевая масса (клей), показания и противопоказания, подбор системы, акриловые вкладки как метод коррекции вросших ногтей, частичное и полное протезирование.
-              span.light-blue.mt-4.d-block Отработка на моделях — <strong> 2500 грн в день 2 дня </strong>
-                | , оба курса — <strong> 5000 грн </strong>
-  .w-100.d-flex.justify-content-center.mt-4
-    //+customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
+              span.light-blue.mt-4.d-block(style="color: #7b9ddd; font-weight: 600;") В занятие входит отработка на пациентах
+              span.light-blue.mt-4.d-block(style="color: #7b9ddd; font-weight: 600;") Стоимость 2 дня — <strong>2500 грн</strong>
+
+              +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse' style="margin: 0; margin-left: 40px;")
+  .w-100.d-flex.justify-content-center.mt-4.flex-column.align-items-center
+    p.light-blue Стоимость за 2 дня сразу —&nbsp;
+      strong <del>5 500</del> 5000 грн
+    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
   p.h3-title-regular.text-center.my-5.text-w-bold МОДУЛЬ 3: ОРТОПОДОЛОГИЯ
   .programAccordionThree.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
@@ -472,7 +483,7 @@ section.section.accordion-answer.program.py-5.remove-arrow
             p.card-body.py-0.paragraph-text-dark.white-text
               span.text-w-bold.mb-1 Что вы изучите: <br/>
               span.thin-text анатомия стопы и нижних конечностей. Введение в биомеханику. Когда стопы кричат SOS. Анализ стопы на подоскопе. Пальпирование стопы. Измерение показателей стопы. Функциональные тесты. Нормы и отличия детской и взрослой стопы. Взаимосвязь биомеханических нарушений стоп с основными проблемами в подологии: вросшим ногтем, мозолями, пьезогенными грыжами, трещинами. Стопа с фактором риска: диабетики, ревматоидный артрит. Подоскоп. Подобарограф. Сканер. Зачем нужны стельки. Как проверить, правильно ли подобраны стельки. Разгрузка стопы. Подбор ортопедических изделий.<br>
-              span.light-blue.mt-4.d-block Стоимость обучения:&nbsp;
-                strong 8000 грн.
-  .w-100.d-flex.justify-content-center.mt-4
-    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
+
+  .w-100.d-flex.justify-content-center.mt-5.flex-column.align-items-center
+    p.text-light.text-w-bold Нажмите на кнопку, чтобы узнать стоимость обучения на модуле «Ортоподология»
+    +customBtn('узнать стоимость')(data-toggle='modal', data-target='#chooseDayCourse')
