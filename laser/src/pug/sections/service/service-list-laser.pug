@@ -1,13 +1,12 @@
-section.section.service-laser-service-list-tablet1.d-block.d-xl-none.pt-3.pb-4
-  .container
-    .col-12.sale
-      .sale-container.d-flex.flex-column.align-items-center.align-items-md-start.flex-md-row.justify-content-md-center
-        .sale-img-container.d-flex
-          p#sale-p.text-color-light  -40%
-          //img.mt-3(src="assets/img/service-laser-page/Ellipse.png")
-        h3.h3-title.text-color-light.mb-0.align-self-center.text-center Вы выбрали такие зоны:
-    .col-12.sale
-      .sale-container.d-flex.align-items-center.justify-content-center
+//section.section.service-laser-service-list-tablet1.d-block.d-xl-none.pt-3.pb-4
+//  .container
+//    .col-12.sale
+//      .sale-container.d-flex.flex-column.align-items-center.align-items-md-start.flex-md-row.justify-content-md-center
+//        .sale-img-container.d-flex
+//          p#sale-p.text-color-light  -40%
+//        h3.h3-title.text-color-light.mb-0.align-self-center.text-center Вы выбрали такие зоны:
+//    .col-12.sale
+//      .sale-container.d-flex.align-items-center.justify-content-center
 
 section.section.service-laser-service-list.nano-service-list.overflow-visible
   .container
@@ -76,13 +75,14 @@ section.section.service-laser-service-list.nano-service-list.overflow-visible
             p.paragraph-text.text-w-light.text-color-white Акция
             p.paragraph-text.text-w-bold.text-color-white 40%
           .price-group.d-flex.justify-content-between
+          .price-count
             .price-block.d-flex.justify-content-start
               img(src="assets/img/laser-page/time.svg")
-              p.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListTime
+              span.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListTime 0 мин
             .price-block.d-flex.justify-content-end
               img(src="assets/img/laser-page/price.svg")
-              p.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListSum 0 грн
-          .c-btn.mt-3.d-flex.justify-content-between.w-332
+              span.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListSum 0 грн
+          .c-btn.d-flex.justify-content-between.w-332
             .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
               .text-section
                 +casetSvg

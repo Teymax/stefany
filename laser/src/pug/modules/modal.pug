@@ -13,7 +13,8 @@
 
 
           +modalServiceListInfo
-          input#pay_button.btn-submit.pay(type="submit" value="оплатить")
+          .c-input-pay
+            input#pay_button.btn-submit.pay(type="submit" value="оплатить")
 
 
 
@@ -33,36 +34,30 @@
           input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
 
           +modalServiceListInfo
-          input#order_button.btn-submit.order(type="submit" value="записаться")
+          .c-input-order
+            input#order_button.btn-submit.order(type="submit" value="записаться" data-toggle='modal', data-target='#thanksPopup')
 
 
 
-#modalServiceListSinugUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
-  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
-    .modal-content
-      h4.text-center.mb-0 Оставьте ваши данные
-      button.close(type='button', data-dismiss='modal', aria-label='Close')
-        span(aria-hidden='true')
-      .c-content
-        h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
-        form
-          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
-          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
+//#modalServiceListSinugUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+//  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
+//    .modal-content
+//      h4.text-center.mb-0 Оставьте ваши данные
+//      button.close(type='button', data-dismiss='modal', aria-label='Close')
+//        span(aria-hidden='true')
+//      .c-content
+//        h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
+//        form
+//          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
+//          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
+//          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
+//
+//          +modalServiceListInfo
+//          input#order_button.btn-submit.order(type="submit" value="заплатить")
 
-          +modalServiceListInfo
-          input#order_button.btn-submit.order(type="submit" value="заплатить")
 
-#success.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-  .modal-dialog(role='document')
-    .modal-content
-      .modal-header
-        h5#exampleModalLabel.modal-title Modal title
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') &times;
-      .modal-body
-        | ...
-      .modal-footer
-        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-        button.btn.btn-primary(type='button') Save changes
-
+//#thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
+//  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
+//    .modal-content.px-1
+//      h4.text-center Спасибо!
+//      h5.text-center Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.

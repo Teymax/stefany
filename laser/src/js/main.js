@@ -42,7 +42,7 @@ $(document).ready(function () {
         Host: 'smtp.gmail.com',
         Username: 'four.progs@gmail.com',
         Password: 'Htndeth0614',
-        To: 'malanivvlad@gmail.com',
+        To: 'sergeychuk@dotwork.digital',
         From: email.value
       }
 
