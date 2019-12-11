@@ -59,22 +59,38 @@ section.section.service-laser-service-list.nano-service-list.overflow-visible
                 +penSvg
                 span записаться
 
-section.section.service-laser-service-list-tablet3.d-flex.d-xl-none.py-0.flex-column.pt-4.py-3
+section.section.service-laser-service-list-tablet3.d-flex.d-xl-none.py-0.flex-column
+
+  .sale-container.d-flex.flex-column.align-items-center
+    h4.sale-title.text-color-white Вы выбрали такие зоны:
+
+  .container.drop-content.hidden.scaleY
+    .c-content
+      div(class="choosenServices").checkbox-group.d-flex.flex-column.align-items-center.mt-4.pb-4
+      .price-count.d-flex.justify-content-between
+        span.paragraph-text Общее время
+        .price-block.d-flex.justify-content-start
+          img.mb-1(src="assets/img/laser-page/time.svg")
+          span.paragraph-text.text-w-bold.text-color-white.ml-2.serviceListTime 0 мин
+.bottom-content.d-flex.flex-column.align-items-center.flex-md-row.justify-content-md-center.d-xl-none
   .container
-    .d-flex.flex-column.align-items-center.flex-md-row.justify-content-md-center
-      .d-flex.mb-3.mb-md-0.align-items-center
+    .row
+      .col-12.col-md-6.d-flex.justify-content-between.justify-content-md-center.mb-4.mb-md-0
         p.paragraph-text.d-inline-flex.align-items-center.mr-5.mb-0.drop-menu Список услуг
-          svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='white', xmlns='http://www.w3.org/2000/svg')
-            path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
-        p.serviceListSum.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0 0 грн.
-      .c-btn.w-332
-        .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
-          .text-section
-            +casetSvg
-            span оплатить
-        .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceListSinugUp')
-          .text-section
-            +penSvg
-            span записаться
+          svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', xmlns='http://www.w3.org/2000/svg')
+            path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z')
+        .d-flex
+          img.mr-2.mb-1(src="assets/img/laser-page/price.svg")
+          span.serviceListSum.paragraph-text.d-inline-flex.align-items-center.font-weight-bold.mr-md-5.mb-0 0 грн.
+      .col-12.col-md-6
+        .c-btn
+          .button.btn-first.mr-md-4.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
+            .text-section
+              +casetSvg
+              span оплатить
+          .button.btn-second.btn-simple.svg.pen(data-toggle='modal', data-target='#modalServiceListSinugUp')
+            .text-section
+              +penSvg
+              span записаться
 
 
