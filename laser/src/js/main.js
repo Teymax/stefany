@@ -431,8 +431,6 @@ function bookRecord(event, plusDate = 0) {
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   $('.modal').modal('hide')
-  $('#paymentPopup').modal('show')
-  window.payment = true
   ajax('GET', headers, url, null,
     function (data) {
       let dataArr = getData(data);
@@ -445,7 +443,8 @@ function bookRecord(event, plusDate = 0) {
           localStorage.phone = params.phone
           localStorage.services = params.services
           localStorage.time = dataArr[0].datetime
-
+          $('#paymentPopup').modal('show')
+          window.payment = true
           preparePayButton(inputNum);
 
         }
@@ -502,7 +501,7 @@ function preparePayButton(inputNum) {
   let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
   // let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
 
-  location.replace(createOrder(price, desc, params.fullName, params.services, params.email, params.phone));
+  location.href = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
 
 }
 
