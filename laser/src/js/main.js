@@ -4,7 +4,10 @@ $(document).ready(function () {
   if (replaceHref) {
     window.location.replace = "./404.html";
   }
-   $('[type="tel"]').mask("+38-(000)-000-00-00")
+  $('[type="tel"]').mask("+38-(000)-000-00-00")
+  var complexForm = $('#pay_compl')
+  if (complexForm)
+    complexForm.on('submit', sendComplex)
   var payForm = $('#modalServiceListPay form')
   if (payForm)
     payForm.on('submit', bookRecord)
@@ -12,7 +15,7 @@ $(document).ready(function () {
   if (submForm)
     submForm.on('submit', bookRecord)
   var consultForm = $('form.main-form')
-  if(consultForm)
+  if (consultForm)
     consultForm.on('submit', consultWrite)
   const callbackForm = $('form.feedback-form')[0],
     callbackBtn = $('#sendMail')
@@ -160,7 +163,7 @@ let servicesArr = [];
 let phoneInput;
 let fullNameInput;
 let emailInput;
-let choosenServices = [];
+let chosenServices = [];
 let consult;
 
 const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
@@ -173,10 +176,7 @@ window.onload = function () {
 
   fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
-  // let payButtons = document.querySelectorAll("#pay_button");
-  // [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
-  // let orderButtons = document.querySelectorAll("#order_button");
-  // [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
+
   getServices();
 
   let checking = document.querySelectorAll('label.service-checkbox-label input');
@@ -229,14 +229,14 @@ function refreshPrice(e) {
   let checkbox = parent.querySelector('input[name="service"]');
 
   if (checkbox.checked) {
-    choosenServices.push({
+    chosenServices.push({
       id,
       serviceName,
       price,
       sex
     });
   } else {
-    choosenServices = choosenServices.filter(function (item) {
+    chosenServices = chosenServices.filter(function (item) {
       return item.id !== id || sex !== item.sex
     })
   }
@@ -244,11 +244,12 @@ function refreshPrice(e) {
   document.querySelectorAll(".choosenServices").forEach(function (item) {
     item.innerHTML = '';
   })
-  choosenServices.forEach(item => {
+  chosenServices.forEach(item => {
     document.querySelectorAll(".choosenServices").forEach(function (items) {
       items.innerHTML += `
   
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
+
           <div class="column-right d-flex align-items-start">
               <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
           </div>
@@ -267,9 +268,9 @@ function refreshPrice(e) {
   })
 
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
-      const parent = current.closest('.checkbox-row')
-      let id = parent.getAttribute('id')
-      let serv = servicesAll.find(service => service.id === +id)
+    const parent = current.closest('.checkbox-row')
+    let id = parent.getAttribute('id')
+    let serv = servicesAll.find(service => service.id === +id)
 
     return accum + serv.price_max
 
@@ -325,12 +326,13 @@ function displayServices(json) {
 
 function getData(data) {
   let answer;
-  try {
+  console.log(data);
+  // try {
     answer = JSON.parse(data);
-  } catch (err) {
-
-    return {error: err.message, status: answer['errors']['code']};
-  }
+  // } catch (err) {
+  //   return {error: err.message, status: answer['errors']['code']};
+  // }
+  console.log(answer);
   if (answer["errors"]) {
     if (answer["errors"].length > 1) return {
       error: answer['errors'][0]['message'],
@@ -416,7 +418,6 @@ function bookRecord(event, plusDate = 0) {
   else
     inputNum = 1
   params = getFormParams(inputNum);
-
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
@@ -446,10 +447,6 @@ function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams(inputNum);
 
-  // if (!params.phone || !params.fullName || !params.email || !params.services) {
-  //   alert("smth went wrong, please reload the page and try again");
-  //   return;
-  // }
 
   let date = new Date();
   userParams = {
@@ -531,7 +528,8 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     const tempService = servicesAll.find(item => item.id === service)
     return tempService.title
   })
-  names = names.join(', ')
+  if (names.length > 1)
+    names = names.join(', ')
 
   button.addField({
     label: 'services',
@@ -558,8 +556,6 @@ function consultWrite(event, plusDate = 0) {
   let phone = document.getElementById("phoneConsult").value
   let email = document.getElementById("emailConsult").value
   let fullName = document.getElementById("fullnameConsult").value
-
-
 
 
   ajax('GET', headers, url, null,
@@ -598,8 +594,66 @@ function consultWrite(event, plusDate = 0) {
 
 }
 
-function writeBeauty(event, plusDate = 0) {
-  event.preventDefault();
-  let service = event.target.getAttribute('id');
-
+``
+// function writeBeauty(event, plusDate = 0) {
+//   event.preventDefault();
+//   let box = event.target.closest('form')
+//   let service = box.getAttribute('id');
+//
+// }
+function sendComplex(event, plusDate = 0) {
+  event.preventDefault()
+  let date = new Date();
+  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+  let complexCheckbox = document.querySelector("input:checked");
+  let complex = complexCheckbox.getAttribute('id')
+  let name = document.getElementById('nameC').value
+  let phone = document.getElementById('phoneC').value
+  let email = document.getElementById('emailC').value
+  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+  url += "?service_ids=" + encodeURIComponent(complex);
+  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, url, null, function (data) {
+    let dataArr = getData(data);
+    if (dataArr.length < 1) return sendComplex(event, ++plusDate);
+    if (processErrors(dataArr)) return alert("Error");
+    else {
+      headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+      let date = new Date();
+      userParams = {
+        "phone": phone,
+        "fullname": name,
+        "email": email,
+        "comment": "consult",
+        "appointments": [
+          {
+            "id": date.getTime(),
+            "services": complex,
+            "staff_id": managerId,
+            "datetime": dataArr[0].datetime
+          }
+        ]
+      }
+      if (event.target.id === 'pay_complex') {
+        let price = servicesArr[complex]
+        let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
+        localStorage.fullName = name
+        localStorage.email = email
+        localStorage.phone = phone
+        localStorage.services = complex
+        localStorage.time = dataArr[0].datetime
+        location.replace(createOrder(price, desc, name, complex, email, phone));
+      } else {
+        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+          function (data) {
+            let err = processErrors(getData(data));
+            if (!err) {
+              alert("Success");
+            }
+          });
+      }
+    }
+  })
 }

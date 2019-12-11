@@ -61,3 +61,18 @@
 //    .modal-content.px-1
 //      h4.text-center Спасибо!
 //      h5.text-center Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
+#pay_complex.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
+    .modal-content
+      h4.text-center.mb-0 Оставьте ваши данные
+      button.close(type='button', data-dismiss='modal', aria-label='Close')
+        span(aria-hidden='true')
+      .c-content
+        h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
+        form#pay_compl
+          input#nameC.w-100.p-text-light(type="text", placeholder="Имя" required)
+          input#emailC.w-100.p-text-light(type="email", placeholder="Email" required)
+          input#phoneC.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
+
+          .c-input-pay
+            input#pay_button.btn-submit.pay(type="submit" value="оплатить")
