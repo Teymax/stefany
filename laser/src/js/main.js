@@ -151,6 +151,16 @@ $(document).ready(function () {
       $('.list-male').removeClass('visible')
     }
   });
+
+//srevice drop menu tablet
+  $(".drop-menu").on("click", hidden)
+  function hidden() {
+    $(".drop-content").toggleClass('hidden')
+    setTimeout(function(){
+      $(".drop-content").toggleClass('scaleY')
+    }, 200);
+
+  }
 });
 let mainBlocks, servicesStatic, userParams, servicesBlock;
 const bearer_token = "f5wujgx5yn6cagtk9fg2";
@@ -251,7 +261,7 @@ function refreshPrice(e) {
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
 
           <div class="column-right d-flex align-items-start">
-              <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
+              <p class="paragraph-text text-w-light text-color-white mb-0">${item.serviceName}</p>
           </div>
           <div class="column-left d-flex justify-content-end">
               <p class="paragraph-text text-w-bold text-color-white mb-0">${item.price}</p>
