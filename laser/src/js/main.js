@@ -1,3 +1,5 @@
+window.payment = false
+
 $(document).ready(function () {
   let regex = new RegExp("%3c.*%3e", "i");
   let replaceHref = regex.exec(window.location.href);
@@ -63,6 +65,7 @@ $(document).ready(function () {
       email.value = ''
       phone.value = ''
       comment.value = ''
+      !window.payment && $('#thanksPopup').modal('show')
     })
   }
   $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -218,7 +221,6 @@ window.onload = function () {
         function (data) {
           let err = processErrors(getData(data));
           if (!err) {
-            alert("Success");
           }
         });
     }
@@ -428,6 +430,9 @@ function bookRecord(event, plusDate = 0) {
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  $('.modal').modal('hide')
+  $('#paymentPopup').modal('show')
+  window.payment = true
   ajax('GET', headers, url, null,
     function (data) {
       let dataArr = getData(data);
@@ -446,6 +451,8 @@ function bookRecord(event, plusDate = 0) {
         }
         if (inputNum)
           writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_form")
+        $('#modalServiceListSinugUp').modal('hide')
+        !window.payment && $('#thanksPopup').modal('show')
       }
     });
 }
@@ -475,7 +482,6 @@ function writeClient(inputNum, time, isPayment = false) {
     function (data) {
       let err = processErrors(getData(data));
       if (!err) {
-        alert("Success");
       }
     });
 
@@ -592,9 +598,8 @@ function consultWrite(event, plusDate = 0) {
         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
           function (data) {
             let err = processErrors(getData(data));
-            if (!err) {
-              alert("Success");
-            }
+            if (!err) {}
+            !window.payment && $('#thanksPopup').modal('show')
           });
       }
     })
@@ -657,7 +662,6 @@ function sendComplex(event, plusDate = 0) {
           function (data) {
             let err = processErrors(getData(data));
             if (!err) {
-              alert("Success");
             }
           });
       }
