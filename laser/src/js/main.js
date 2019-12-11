@@ -241,16 +241,14 @@ function refreshPrice(e) {
     })
   }
 
-  $("#choosenServices")[0].innerHTML = '';
-
+  document.querySelectorAll(".choosenServices").forEach(function (item) {
+    item.innerHTML = '';
+  })
   choosenServices.forEach(item => {
-    $("#choosenServices")[0].innerHTML += `
-
+    document.querySelectorAll(".choosenServices").forEach(function (items) {
+      items.innerHTML += `
+  
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
-<!--          <label class="service-checkbox-label">-->
-<!--            <input class="align-self-center" type="checkbox" name="service"/>-->
-<!--            <span class="checkmark light"></span>-->
-<!--          </label>-->
           <div class="column-right d-flex align-items-start">
               <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
           </div>
@@ -259,6 +257,7 @@ function refreshPrice(e) {
           </div>
         </div>
       `;
+    })
   })
   let serviceCheckboxes = document.querySelectorAll(".service-list-group input:checked");
 

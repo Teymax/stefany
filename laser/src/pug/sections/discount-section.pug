@@ -1,3 +1,5 @@
+
+
 section.section.discount
   .container
     h2.h2-title.text-color-dark.text-center Экономьте на лазерной эпиляции
@@ -7,17 +9,31 @@ section.section.discount
         .box-wrap
           .c-content
             h4.discount-title.text-color-dark.text-w-bold.text-center Глубокое бикини
-
+            p.paragraph-text.text-color-dark.text-w-light.text-center
+              input(type='radio', name='prim')
+              | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
+            p.paragraph-text.text-color-dark.text-w-light.text-center
+              input(type='radio', name='prim')
+              | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
             p.paragraph-text.text-color-dark.text-w-light.text-center
               input(type='radio', name='prim')
               | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
             .c-btn
-              +btnCaset('оплатить')
+              .button.btn-first.btn-simple.svg.caset(data-toggle='modal', data-target='#modalServiceListPay')
+                .text-section
+                  +casetSvg
+                  span оплатить
               +btnPen('записаться')
       .col-12.col-xl-4
         .box-wrap
           .c-content
             h4.discount-title.text-color-dark.text-w-bold.text-center Подмышки
+            p.paragraph-text.text-color-dark.text-w-light.text-center
+              input(type='radio', name='prim')
+              | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
+            p.paragraph-text.text-color-dark.text-w-light.text-center
+              input(type='radio', name='prim')
+              | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
             p.paragraph-text.text-color-dark.text-w-light.text-center
               input(type='radio', name='prim')
               | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
@@ -28,6 +44,12 @@ section.section.discount
         .box-wrap
           .c-content
             h4.discount-title.text-color-dark.text-w-bold.text-center Ноги полностью
+            p.paragraph-text.text-color-dark.text-w-light.text-center
+              input(type='radio', name='prim')
+              | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
+            p.paragraph-text.text-color-dark.text-w-light.text-center
+              input(type='radio', name='prim')
+              | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
             p.paragraph-text.text-color-dark.text-w-light.text-center
               input(type='radio', name='prim')
               | Скидка <span class="bold">25%</span>при оплате 4 процедур —  <span class="line-through">3880 </span> <span class="bold"> 2 910 грн </span>
