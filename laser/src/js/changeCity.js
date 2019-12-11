@@ -243,8 +243,6 @@ $(document).ready(function () {
 
   $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
 
-  console.log(city);
-
   function changeDataForCity() {
     $('.inst-dynamic').each(function (e) {
       this.setAttribute('href', `${citiesData[city][localization].cityInstagram}`);
@@ -281,7 +279,6 @@ $(document).ready(function () {
     const videoSlider = $('.video-slider');
     const owlDots = $('.small-owl-images-container .owl-dots-item');
     const specialistsSlider = $('.specialists-slider');
-    // console.log(videoSlider);
     if (videoSlider) {
       videoSlider.html(carouselsHTML.videoCarousel);
     }
@@ -382,7 +379,6 @@ $(document).ready(function () {
     }
 
     for (let i = 0; i < imagesAmountSpecialists; i++) {
-      // console.log('specialist', specialistsData[i]);
       imagesSpecialists += `
         <div class="specialists-item">
             <div class="specialists-item-container mb-3 w-100">
