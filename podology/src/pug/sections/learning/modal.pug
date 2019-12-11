@@ -45,10 +45,26 @@
         input.w-100.p-text-light.mb-2(type="tel" required, placeholder="Телефон" data-phone)
         select.w-100.p-text-light.mb-4(placeholder="Какой курс вы выбираете?")
           option.p-text-light(selected disabled hidden) Какой курс вы выбираете?
-          option.p-text-light(value="1") Базовой подологии
-          option.p-text-light(value="2") Малой ортопедии и ортониксии
+          option.p-text-light(value="1") Программа курса базовой подологии
+          option.p-text-light(value="2") Программа курса малой ортопедии и ортониксии
+          option.p-text-light(value="3") Экспресс-курс аппаратных и инструментальных техник
         input(type="submit" style="display: none;" data-fr-day-s-btn)
         +customBtn('отправить')(data-fr-day-c-btn)
+
+#chooseDayCourseSpecial.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
+    .modal-content
+      h4.text-center Введите свои данные
+      h5.text-center чтобы занять место в группе
+      form
+        input.w-100.p-text-light.mb-2(type="text", placeholder="Имя" data-name required)
+        input.w-100.p-text-light.mb-2(type="email" required, placeholder="Email" data-email)
+        input.w-100.p-text-light.mb-2(type="tel" required, placeholder="Телефон" data-phone)
+        p.text-center.text-white.text-w-bold.my-3 Курс:&nbsp;
+          span.text-white.text-light#placeForCourseText
+        input(type="submit" style="display: none;" data-fr-day-s-btn-special)
+        +customBtn('отправить')(data-fr-day-c-btn-special)
+
 #thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content.px-1

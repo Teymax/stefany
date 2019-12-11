@@ -282,7 +282,7 @@ section.section.accordion-answer.program.py-5.remove-arrow
     p.light-blue Стоимость курса&nbsp;
       strong 12 500 грн
     p.crutch-text.mb-0 Студентам, прошедшим один курс, дается скидка 10% на последующее обучение. Срок действия скидки — 3 месяца. Дальше скидка будет составлять 5 % в течение 1 года.
-    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
+    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourseSpecial' data-choose-text='Программа курса базовой подологии')
   h2.section-title.text-center.white-text.mt-5.text-w-bold Программа курса малой ортопедии и ортониксии
   p.h3-title-regular.text-center.mb-4.pb-4.text-border-b.text-w-bolds Ближайшая старт — 24 февраля
   p.h3-title-regular.text-center.mb-4.text-w-bold МОДУЛЬ 1: ОРТОНИКСИЯ И МЕТОДИКИ КОРРЕКЦИИ ВРОСШИХ НОГТЕЙ
@@ -401,7 +401,7 @@ section.section.accordion-answer.program.py-5.remove-arrow
   .w-100.d-flex.justify-content-center.mt-4.flex-column.align-items-center
     p.light-blue Стоимость курса&nbsp;
       strong 12 500 грн
-    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
+    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourseSpecial' data-choose-text='Программа курса малой ортопедии и ортониксии / Модуль 1')
   p.h3-title-regular.text-center.my-5.text-w-bold МОДУЛЬ 2: ПОДОЛОГИЯ ДЛЯ ПРОФИ
 
   .programAccordionTwo.accordion.m-0
@@ -432,7 +432,7 @@ section.section.accordion-answer.program.py-5.remove-arrow
     p.d-flex.flex-column.align-items-center
       span.light-blue.mt-4.d-block(style="color: #fff; font-weight: 600;") В занятие входят отработка на пациентах и изготовление ортезов
       span.light-blue.mt-4.d-block(style="color: #7b9ddd; font-weight: 600;") Стоимость 1 дня — <strong>3000 грн</strong>
-      +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse' style="margin: 0; margin-left: 40px;")
+      +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourseSpecial' style="margin: 0;" data-choose-text='Программа курса малой ортопедии и ортониксии / Модуль 2 (первый день)')
 
   .programAccordionTwo.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
@@ -461,13 +461,13 @@ section.section.accordion-answer.program.py-5.remove-arrow
     p.d-flex.flex-column.align-items-center
       span.light-blue.mt-4.d-block(style="color: #fff; font-weight: 600;") В занятие входит отработка на пациентах
       span.light-blue.mt-4.d-block(style="color: #7b9ddd; font-weight: 600;") Стоимость 2 дня — <strong>2500 грн</strong>
-      +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse' style="margin: 0;")
+      +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourseSpecial' style="margin: 0;" data-choose-text='Программа курса малой ортопедии и ортониксии / Модуль 2 (второй день)')
 
   .w-100.d-flex.justify-content-center.mt-4.flex-column.align-items-center
     p.light-blue.text-w-bold Стоимость за 2 дня сразу —&nbsp;
       del 5 500&nbsp;
       strong 5000 грн
-    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourse')
+    +customBtn('занять место')(data-toggle='modal', data-target='#chooseDayCourseSpecial' data-choose-text='Программа курса малой ортопедии и ортониксии / Оба Модуля (Полный курс)')
   p.h3-title-regular.text-center.my-5.text-w-bold МОДУЛЬ 3: ОРТОПОДОЛОГИЯ
   .programAccordionThree.accordion.m-0
     .col-12.program-item-wrap.w-100.mx-auto.p-0
@@ -495,4 +495,4 @@ section.section.accordion-answer.program.py-5.remove-arrow
 
   .w-100.d-flex.justify-content-center.mt-5.flex-column.align-items-center
     p.text-w-bold.light-blue Нажмите на кнопку, чтобы узнать стоимость обучения на модуле «Ортоподология»
-    +customBtn('узнать стоимость')(data-toggle='modal', data-target='#chooseDayCourse')
+    +customBtn('узнать стоимость')(data-toggle='modal', data-target='#chooseDayCourseSpecial' data-choose-text='Программа курса малой ортопедии и ортониксии / Модуль 3')
