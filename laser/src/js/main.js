@@ -326,13 +326,11 @@ function displayServices(json) {
 
 function getData(data) {
   let answer;
-  console.log(data);
   // try {
     answer = JSON.parse(data);
   // } catch (err) {
   //   return {error: err.message, status: answer['errors']['code']};
   // }
-  console.log(answer);
   if (answer["errors"]) {
     if (answer["errors"].length > 1) return {
       error: answer['errors'][0]['message'],
@@ -356,7 +354,6 @@ function getFormParams(inputNum) {
   let phone = [...phoneInput][inputNum].value
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
-  console.log(fullName)
   // if (!fullName) {
   //   alert("Input correct name");
   //   return;
