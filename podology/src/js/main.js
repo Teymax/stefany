@@ -2,8 +2,9 @@ window.mail = {
   Host:     'smtp.gmail.com',
   Username: 'four.progs@gmail.com',
   Password: 'Htndeth0614',
-  To:       'a.sergeychuk@dotwork.digital',
-  From:     'a.sergeychuk@dotwork.digital'
+  // To:       'a.sergeychuk@dotwork.digital'
+
+  To: 'he4then.mail@gmail.com'
 }
 
 window.chooseDayText = ''
@@ -164,23 +165,24 @@ $(document).ready(function () {
                                       }
                                     })
 
-  $('.podology-service-slider').owlCarousel({
-                                              loop:       true,
-                                              margin:     35,
-                                              nav:        false,
-                                              dots:       true,
-                                              responsive: {
-                                                0:    {
-                                                  items: 1
-                                                },
-                                                768:  {
-                                                  items: 2
-                                                },
-                                                1200: {
-                                                  items: 4
-                                                }
-                                              }
-                                            })
+  $('.podology-service-slider').owlCarousel(
+    {
+      loop:       true,
+      margin:     35,
+      nav:        false,
+      dots:       true,
+      responsive: {
+        0:    {
+          items: 1
+        },
+        768:  {
+          items: 2
+        },
+        1200: {
+          items: 4
+        }
+      }
+    })
 
   const firstDayCourse = $('#firstDayCourse')[0]
 
@@ -190,10 +192,12 @@ $(document).ready(function () {
 
     firstDayCourse.addEventListener('submit', e => {
       e.preventDefault()
-      sendEmail({
-                  Subject: 'Обучение',
-                  Body:    `Имя: ${firstDayCourse.querySelector('[data-name]').value}<br>Email: ${firstDayCourse.querySelector('[data-email]').value}<br>Телефон: ${firstDayCourse.querySelector('[data-phone]').value}<br>Курс: ${window.chooseDayText}`
-                })
+      sendEmail(
+        {
+          Subject: 'Обучение',
+          From:    `${firstDayCourse.querySelector('[data-email]').value}`,
+          Body:    `Имя: ${firstDayCourse.querySelector('[data-name]').value}<br>Email: ${firstDayCourse.querySelector('[data-email]').value}<br>Телефон: ${firstDayCourse.querySelector('[data-phone]').value}<br>Курс: ${window.chooseDayText}`
+        })
     })
   }
 
@@ -209,10 +213,12 @@ $(document).ready(function () {
 
     secondDayCourse.querySelector('form').addEventListener('submit', e => {
       e.preventDefault()
-      sendEmail({
-                  Subject: 'Обучение',
-                  Body:    `Имя: ${secondDayCourse.querySelector('[data-name]').value}<br>Email: ${secondDayCourse.querySelector('[data-email]').value}<br>Телефон: ${secondDayCourse.querySelector('[data-phone]').value}<br>Курс: ${window.chooseDayText}`
-                })
+      sendEmail(
+        {
+          Subject: 'Обучение',
+          From:    secondDayCourse.querySelector('[data-email]').value,
+          Body:    `Имя: ${secondDayCourse.querySelector('[data-name]').value}<br>Email: ${secondDayCourse.querySelector('[data-email]').value}<br>Телефон: ${secondDayCourse.querySelector('[data-phone]').value}<br>Курс: ${window.chooseDayText}`
+        })
     })
   }
 
@@ -243,6 +249,7 @@ $(document).ready(function () {
       sendEmail(
         {
           Subject: 'Обучение',
+          From:    chooseDayCourse.querySelector('[data-email]').value,
           Body:    `Имя: ${chooseDayCourse.querySelector('[data-name]').value}<br>Email: ${chooseDayCourse.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourse.querySelector('[data-phone]').value}<br>Курс: ${c.options[c.selectedIndex].innerText}`
         })
       c.value = p.value = em.value = n.value = ''
@@ -270,10 +277,12 @@ $(document).ready(function () {
             p  = chooseDayCourseSpecial.querySelector('[data-phone]'),
             c  = window.chooseDayText
 
-      sendEmail({
-                  Subject: 'Обучение',
-                  Body:    `Имя: ${chooseDayCourseSpecial.querySelector('[data-name]').value}<br>Email: ${chooseDayCourseSpecial.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourseSpecial.querySelector('[data-phone]').value}<br>Курс: ${window.chooseDayText}`
-                })
+      sendEmail(
+        {
+          Subject: 'Обучение',
+          From:    chooseDayCourseSpecial.querySelector('[data-email]').value,
+          Body:    `Имя: ${chooseDayCourseSpecial.querySelector('[data-name]').value}<br>Email: ${chooseDayCourseSpecial.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourseSpecial.querySelector('[data-phone]').value}<br>Курс: ${window.chooseDayText}`
+        })
       window.chooseDayText = p.value = em.value = n.value = ''
       $('#chooseDayCourseSpecial').modal('hide')
       $('#thanksPopup').modal('show')
@@ -296,14 +305,16 @@ $(document).ready(function () {
     contactForm.addEventListener('submit', e => {
       e.preventDefault()
       $('#thanksPopup').modal('show')
-      Email.send({
-                   ...mail,
-                   Subject: 'Обратная связь',
-                   Body:    `Имя: ${$('[data-feedback-name]')
-                     .val()}<br>Email: ${$('[data-feedback-email]')
-                     .val()}<br>Телефон: ${$('[data-feedback-phone]')
-                     .val()}<br>Сообщение: ${$('[data-feedback-message]').val()}`
-                 })
+      Email.send(
+        {
+          ...mail,
+          Subject: 'Обратная связь',
+          From:    $('[data-feedback-email]').val(),
+          Body:    `Имя: ${$('[data-feedback-name]')
+            .val()}<br>Email: ${$('[data-feedback-email]')
+            .val()}<br>Телефон: ${$('[data-feedback-phone]')
+            .val()}<br>Сообщение: ${$('[data-feedback-message]').val()}`
+        })
       $('[data-feedback-name]').val('')
       $('[data-feedback-email]').val('')
       $('[data-feedback-phone]').val('')
@@ -472,10 +483,11 @@ window.writeClient = (time, data) => {
 }
 
 function sendEmail(details) {
-  Email.send({
-               ...mail,
-               ...details
-             })
+  Email.send(
+    {
+      ...mail,
+      ...details
+    })
   closeAllModals()
 }
 
