@@ -23,12 +23,12 @@ mixin contactForm(title)
           h2.text-color-dark
           form
             .col-12.col-lg-6.inp-wrapper
-              input(type="text" placeholder="Имя" name="name" data-feedback-name required)
-              input(type="tel" placeholder="Телефон" name="phone" data-feedback-phone required)
-              input.mb-0(type="email" placeholder="Email" name="email" data-feedback-email pattern="^\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b$")
+              input(type="text" placeholder="Имя" name="name" data-feedback-name required autocomplete='on')
+              input(type="email" placeholder="Email" name="email" data-feedback-email required autocomplete='on')
+              input.mb-0(type="tel" placeholder="Телефон" name="phone" data-feedback-phone required minlength="19" maxlength="19" pattern=".{19}" autocomplete='on')
               input(type="submit" data-contact-submit style="display: none;")
             .col-12.col-lg-6
-              textarea(placeholder="Ваше сообщение..." name="message" data-feedback-message).mt-4.mt-lg-0
+              textarea(placeholder="Ваше сообщение..." name="message" data-feedback-message required).mt-4.mt-lg-0
           .row.d-flex.justify-content-center.justify-content-lg-end.no-gutters.mt-5.mt-sm-5
             +customBtn('отправить')(data-btn-contact-submit)
       .col-12.col-lg-6.d-none.d-lg-block

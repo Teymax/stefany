@@ -2,9 +2,7 @@ window.mail = {
   Host:     'smtp.gmail.com',
   Username: 'four.progs@gmail.com',
   Password: 'Htndeth0614',
-  // To:       'a.sergeychuk@dotwork.digital'
-
-  To: 'he4then.mail@gmail.com'
+  To:       'a.sergeychuk@dotwork.digital'
 }
 
 window.chooseDayText = ''
@@ -17,22 +15,21 @@ $(document).ready(function () {
   })
 
   $('[type="tel"]').mask('+38-(000)-000-00-00')
+
   const callbackForm = $('#callbackModal form')[0],
         callbackBtn  = $('[data-call-day-callback-btn]')
 
   callbackBtn.on('click', e => {
-    e.stopPropagation()
     e.preventDefault()
     const n = callbackForm.querySelector('[type="text"]').value,
           m = callbackForm.querySelector('[type="email"]').value,
           p = callbackForm.querySelector('[type="tel"]').value
 
-    n && m && p && $('[data-call-day-sub-btn]').click()
+    $('[data-call-day-sub-btn]').click()
   })
 
   callbackForm.addEventListener('submit', e => {
     e.preventDefault()
-    e.stopPropagation()
     var bearer_token = 'f5wujgx5yn6cagtk9fg2'
     var partnerId = 240913
     var managerId = 823619
@@ -234,7 +231,7 @@ $(document).ready(function () {
               c = chooseDayCourse.querySelector('select').value
 
 
-        !!n && !!e && !!p && c !== 'Какой курс вы выбираете?' && $('[data-fr-day-s-btn]').click()
+        $('[data-fr-day-s-btn]').click()
       })
     chooseDayCourse.addEventListener('submit', e => {
       e.preventDefault()
@@ -244,13 +241,15 @@ $(document).ready(function () {
             p  = chooseDayCourse.querySelector('[data-phone]'),
             c  = chooseDayCourse.querySelector('select')
 
+      const selectedText = c.options[c.selectedIndex].innerText !== 'Какой курс вы выбираете?' ? c.options[c.selectedIndex].innerText : 'Пользователь не выбрал курс'
+
       $('#chooseDayCourse').modal('hide')
       $('#thanksPopup').modal('show')
       sendEmail(
         {
           Subject: 'Обучение',
           From:    chooseDayCourse.querySelector('[data-email]').value,
-          Body:    `Имя: ${chooseDayCourse.querySelector('[data-name]').value}<br>Email: ${chooseDayCourse.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourse.querySelector('[data-phone]').value}<br>Курс: ${c.options[c.selectedIndex].innerText}`
+          Body:    `Имя: ${chooseDayCourse.querySelector('[data-name]').value}<br>Email: ${chooseDayCourse.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourse.querySelector('[data-phone]').value}<br>Курс: ${selectedText}`
         })
       c.value = p.value = em.value = n.value = ''
     })
@@ -267,7 +266,7 @@ $(document).ready(function () {
               p = chooseDayCourseSpecial.querySelector('[data-phone]').value,
               c = window.chooseDayText
 
-        n && e && p && c && $('[data-fr-day-s-btn-special]').click()
+        $('[data-fr-day-s-btn-special]').click()
       })
     chooseDayCourseSpecial.addEventListener('submit', e => {
       e.preventDefault()
@@ -293,13 +292,7 @@ $(document).ready(function () {
 
   if (contactForm) {
     $('[data-btn-contact-submit]').on('click', e => {
-      const n  = $('[data-feedback-name]').val(),
-            em = $('[data-feedback-email]').val(),
-            p  = $('[data-feedback-phone]').val(),
-            m  = $('[data-feedback-message]').val()
-
-      !!n && !!em && !!p && !!m ? $('[data-contact-submit]')
-        .click() : $('#thanksPopup').modal('hide')
+      $('[data-contact-submit]').click()
     })
 
     contactForm.addEventListener('submit', e => {
