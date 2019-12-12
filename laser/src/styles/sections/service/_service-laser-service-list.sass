@@ -18,7 +18,7 @@ section.section.service-laser-service-list
 
 
   .column-left
-    width: 69px
+    //width: 69px
     display: flex
     justify-content: space-between
     @include media-breakpoint-down(sm)
@@ -26,8 +26,15 @@ section.section.service-laser-service-list
     .paragraph-text
       white-space: nowrap
   .column-right
-    width: 100%
-
+    width: 75%
+    @include media-breakpoint-down(lg)
+      width: 100%
+  .column-left
+    width: 25%
+    @include media-breakpoint-down(lg)
+      width: 32%
+    .paragraph-text
+      margin-right: .5rem
   .custom-py-services-price
     padding: 72px 0
     @include media-breakpoint-down(lg)
@@ -96,16 +103,16 @@ section.section.service-laser-service-list
             content: ' '
             display: block
             position: absolute
-            width: 620px
+            width: 444px
             height: 180px
             top: -72px
             left: -118px
-            background:
-              image: url("../assets/img/laser-page/sale-bg.png")
-              size: cover
+            background-image: url(../assets/img/laser-page/sale-bg.png)
+            background-size: 139%
+            background-repeat: repeat
             z-index: -1
-            @media(min-width: 1920px)
-              display: none
+            border-bottom: 2px solid rgba(255, 255, 255, 0.24)
+            border-right: 2px solid rgba(255, 255, 255, 0.24)
         .stash
           position: sticky
           top: 71px
@@ -116,7 +123,8 @@ section.section.service-laser-service-list
             box-sizing: border-box
             overflow: auto
             max-height: 343px
-
+            @media(min-width: 1920px)
+              max-height: 560px !important
           .sale-group
             width: 77%
             box-sizing: border-box
@@ -139,14 +147,6 @@ section.section.service-laser-service-list
             padding-top: 15px
             margin-top: auto
             margin-bottom: 24px
-          //.price-block
-          //  width: 50%
-          //  p
-          //    margin: 10px 0
-          //  img
-          //    width: 20px
-          //    height: 20px
-          //    margin: 10px 0
 section.section.service-laser-service-list-tablet1
   background: url(../assets/img/service-laser-page/list-image-tablet.png)
   background-size: cover

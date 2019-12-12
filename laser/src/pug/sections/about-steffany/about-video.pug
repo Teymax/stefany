@@ -23,7 +23,13 @@ section.section.about-video
                 .btn-simple.fluid.mr-4.d-none.d-xl-flex
                   .text-section
                     span steffany beauty
-              +btnCallback('подробнее')(class="fluid d-xl-none ml-auto")
+              a.fluid.d-xl-none.ml-auto(href="http://steffany.dotwork.digital/homepage/")
+                .btn-callback
+                  .text-section
+                    +penSvg
+                    span подробнее
+                  .arrow-section
+                    +arrowSvg
       .col-12.col-xl-5.order-1
         .c-desc
           h3.h2-title.text-color-dark.mb-50 Давайте знакомиться!

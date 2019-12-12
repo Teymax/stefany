@@ -44,7 +44,7 @@ $(document).ready(function () {
         Host: 'smtp.gmail.com',
         Username: 'four.progs@gmail.com',
         Password: 'Htndeth0614',
-        To: 'sergeychuk@dotwork.digital',
+        To: 'a.sergeychuk@dotwork.digital',
         From: email.value
       }
 
@@ -263,6 +263,7 @@ function refreshPrice(e) {
         <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
 
           <div class="column-right d-flex align-items-start">
+              <img src="./assets/icon/svg/checkbox.svg" class="mt-1 mr-2">
               <p class="paragraph-text text-w-light text-color-white mb-0">${item.serviceName}</p>
           </div>
           <div class="column-left d-flex justify-content-end">
