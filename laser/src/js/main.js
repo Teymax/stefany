@@ -201,11 +201,8 @@ const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject
 window.onload = function () {
   servicesBlock = document.querySelector("div.service-list-group")
 
-  // phoneForm = document.getElementById("contactForm");
-  // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.querySelectorAll("#phone");
-
-    fullNameInput = document.querySelectorAll("#fullname");
+  fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
 
   getServices();
@@ -213,7 +210,7 @@ window.onload = function () {
   let checking = document.querySelectorAll('label.service-checkbox-label input');
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
   consult = document.querySelector('.main-form')
-  consult.addEventListener('submit', consultWrite)
+  // consult.addEventListener('submit', consultWrite)
   let curUrl = document.URL
   if (curUrl.includes('payed=true')) {
     if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
@@ -298,6 +295,8 @@ function refreshPrice(e) {
     item.textContent = serviceCheckboxes.length
   })
 
+
+
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
@@ -330,6 +329,22 @@ function refreshPrice(e) {
   })
 }
 
+// modal complex count
+document.querySelectorAll('input[name="prim"]').forEach(function (item) {
+  item.addEventListener('change', function () {
+  let checkedRadio = document.querySelector('input[name="prim"]:checked')
+    document.querySelectorAll('.complex-checked-order').forEach(function (item) {
+      item.innerHTML =
+          `
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Глубокое бикини - ${checkedRadio.dataset.proc} процедур </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
+      `
+    })
+  })
+})
+
+
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
@@ -344,7 +359,6 @@ function displayServices(json) {
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
-
   servicesStatic = servicesStatic.filter(service => !!service)
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
@@ -387,6 +401,7 @@ function getFormParams(inputNum) {
       let main = service.closest('.checkbox-row');
       id = main.getAttribute('id');
     } else id = service.getAttribute("id");
+    console.log(serviceCheckboxes);
     return parseInt(id);
   });
 
@@ -396,34 +411,19 @@ function getFormParams(inputNum) {
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
 
-  console.log(phone)
 
-
-
-  // if (!fullName) {
-  //   alert("Input correct name");
-  //   return;
-  // }
-  //
-  // if (phone.length < 13) {
-  //   alert('Input correct phone')
-  //   return
-  // }
-  // if (services.length === 0) {
-  //   alert("Yoy didn't choose any service")
-  //   return
-  // }
   return {
     phone: phone.length > 0 ? phone : false,
     fullName: fullName.length > 0 ? fullName : false,
     email: email.length > 0 ? email : false,
     services: services.length > 0 ? services : false,
-    // phone: '+380974724612',
-    // fullName: 'Vlad M',
-    // email: "malanivvlad@gmail.com",
-    // services: services.length > 0 ? services : false
   }
+
+
 }
+
+
+
 
 function ajax(method, headers, url, params, callback) {
   xmlhttp.onreadystatechange = function () {
@@ -611,48 +611,40 @@ function consultWrite(event, plusDate = 0) {
 
 
   ajax('GET', headers, url, null,
-      function (data) {
-        let dataArr = getData(data);
-        if (dataArr.length < 1) return consultWrite(event, ++plusDate);
-        if (processErrors(dataArr)) return alert("Error");
-        else {
-          headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+    function (data) {
+      let dataArr = getData(data);
+      if (dataArr.length < 1) return consultWrite(event, ++plusDate);
+      if (processErrors(dataArr)) return alert("Error");
+      else {
+        headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
 
-          let date = new Date();
-          userParams = {
-            "phone": phone,
-            "fullname": fullName,
-            "email": email,
-            "comment": "consult",
-            "appointments": [
-              {
-                "id": date.getTime(),
-                "services": service,
-                "staff_id": managerId,
-                "datetime": dataArr[0].datetime
-              }
-            ]
-          }
-          ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-              function (data) {
-                let err = processErrors(getData(data));
-                if (!err) {
-                }
-                !window.payment && $('#thanksPopup').modal('show')
-              });
+        let date = new Date();
+        userParams = {
+          "phone": phone,
+          "fullname": fullName,
+          "email": email,
+          "comment": "consult",
+          "appointments": [
+            {
+              "id": date.getTime(),
+              "services": service,
+              "staff_id": managerId,
+              "datetime": dataArr[0].datetime
+            }
+          ]
         }
-      })
-
+        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+            function (data) {
+              let err = processErrors(getData(data));
+              if (!err) {
+              }
+              !window.payment && $('#thanksPopup').modal('show')
+            });
+      }
+    })
 }
 
-``
-// function writeBeauty(event, plusDate = 0) {
-//   event.preventDefault();
-//   let box = event.target.closest('form')
-//   let service = box.getAttribute('id');
-//
-// }
 function sendComplex(event, plusDate = 0) {
   event.preventDefault()
   let date = new Date();
