@@ -1,6 +1,6 @@
 window.payment = false
 
-if(localStorage.getItem('thx')) {
+if (localStorage.getItem('thx')) {
   $('#thanksPopupPay').modal('show')
   setTimeout(() => {
     localStorage.removeItem('thx')
@@ -16,7 +16,10 @@ $(document).ready(function () {
   $('[type="tel"]').mask("+38-(000)-000-00-00")
   var complexForm = $('#pay_compl')
   if (complexForm)
-    complexForm.on('submit', sendComplex)
+    complexForm.on('submit', bookRecord)
+  var complexPayForm = $('#seng_compl  ')
+  if (complexPayForm)
+    complexPayForm.on('submit', bookRecord)
   var payForm = $('#modalServiceListPay form')
   if (payForm)
     payForm.on('submit', bookRecord)
@@ -27,7 +30,7 @@ $(document).ready(function () {
   if (consultForm)
     consultForm.on('submit', consultWrite)
   const callbackForm = $('form.feedback-form')[0],
-    callbackBtn = $('#sendMail')
+      callbackBtn = $('#sendMail')
 
   if (callbackBtn) {
     callbackBtn.on('click', e => {
@@ -58,7 +61,7 @@ $(document).ready(function () {
       let details = {
         Subject: 'Users questions and proposals',
         Body:
-          `Имя: ${name.value}
+            `Имя: ${name.value}
 <br>Email: ${email.value}
 <br>Телефон:  ${phone.value}
 <br>Сообщение:  ${comment.value}`
@@ -160,8 +163,8 @@ $(document).ready(function () {
 //       // $('.list-female').toggleClass('visible')
 //       // $('.custom-py-services-price').toggleClass('')
 //     }
-  $(function(){
-    $("#checkboxServiceList").change(function() {
+  $(function () {
+    $("#checkboxServiceList").change(function () {
       $(".custom-py-services-price").toggleClass("man-symbol-bg", this.checked)
       $('.list-female').toggleClass('hidden', this.checked)
       $('.list-male').toggleClass('visible', this.checked)
@@ -171,9 +174,10 @@ $(document).ready(function () {
 
 //srevice drop menu tablet
   $(".drop-menu").on("click", hidden)
+
   function hidden() {
     $(".drop-content").toggleClass('hidden')
-    setTimeout(function(){
+    setTimeout(function () {
       $(".drop-content").toggleClass('scaleY')
     }, 200);
 
@@ -201,7 +205,7 @@ window.onload = function () {
   // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.querySelectorAll("#phone");
 
-  fullNameInput = document.querySelectorAll("#fullname");
+    fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
 
   getServices();
@@ -232,11 +236,11 @@ window.onload = function () {
       };
 
       ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-        function (data) {
-          let err = processErrors(getData(data));
-          if (!err) {
-          }
-        });
+          function (data) {
+            let err = processErrors(getData(data));
+            if (!err) {
+            }
+          });
     }
   }
   localStorage.removeItem('time')
@@ -329,22 +333,26 @@ function refreshPrice(e) {
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
-    + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
+      + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
 }
 
 function displayServices(json) {
   let data = getData(json);
   servicesAll = data.services
   mainBlocks = document.getElementsByClassName("checkbox-row")
+  if(mainBlocks.length===0) mainBlocks = document.querySelectorAll('input[name="prim"]');
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
+
   servicesStatic = servicesStatic.filter(service => !!service)
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
       if (+servicesStatic[i] === service.id) {
-        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
-        mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+        if(servicesBlock) {
+          mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
+          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+        }
         servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
       }
     })
@@ -354,7 +362,7 @@ function displayServices(json) {
 function getData(data) {
   let answer;
   // try {
-    answer = JSON.parse(data);
+  answer = JSON.parse(data);
   // } catch (err) {
   //   return {error: err.message, status: answer['errors']['code']};
   // }
@@ -370,17 +378,28 @@ function getData(data) {
 
 
 function getFormParams(inputNum) {
-  let serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
+  let serviceCheckboxes
+  if (servicesBlock) serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
+  else serviceCheckboxes = document.querySelectorAll('input[name="prim"]:checked');
   let services = [...serviceCheckboxes].map(function (service) {
-    let main = service.closest('.checkbox-row');
-    let id = main.getAttribute('id');
+    let id;
+    if (servicesBlock) {
+      let main = service.closest('.checkbox-row');
+      id = main.getAttribute('id');
+    } else id = service.getAttribute("id");
     return parseInt(id);
   });
 
-
+  if(![...phoneInput][inputNum].value) inputNum+=2;
+  console.log([...phoneInput][inputNum].value);
   let phone = [...phoneInput][inputNum].value
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
+
+  console.log(phone)
+
+
+
   // if (!fullName) {
   //   alert("Input correct name");
   //   return;
@@ -435,9 +454,9 @@ function bookRecord(event, plusDate = 0) {
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params
-  if (event.target.id === "pay_form")
+  if ( event.target.id === "pay_form" || event.target.id === "pay_compl")
     inputNum = 0
   else
     inputNum = 1
@@ -447,29 +466,34 @@ function bookRecord(event, plusDate = 0) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   $('.modal').modal('hide')
   ajax('GET', headers, url, null,
-    function (data) {
-      let dataArr = getData(data);
-      if (processErrors(dataArr)) return alert("Error");
-      if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-      else {
-        if (!inputNum) {
-          localStorage.fullName = params.fullName
-          localStorage.email = params.email
-          localStorage.phone = params.phone
-          localStorage.services = params.services
-          localStorage.time = dataArr[0].datetime
-          $('#paymentPopup').modal('show')
-          window.payment = true
-          setGreeting()
-          preparePayButton(inputNum);
+      function (data) {
+        let dataArr = getData(data);
+        if (processErrors(dataArr)) return alert("Error");
+        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+        else {
+          if (!inputNum) {
+            console.log("not here");
+            localStorage.fullName = params.fullName
+            localStorage.email = params.email
+            localStorage.phone = params.phone
+            localStorage.services = params.services
+            localStorage.time = dataArr[0].datetime
+            $('#paymentPopup').modal('show')
+            window.payment = true
+            setGreeting()
+            preparePayButton(inputNum);
 
+          }
+          if (inputNum) {
+            console.log("here");
+
+            // let isPayment = !servicesBlock || event.target.id === "pay_form";
+            writeClient(inputNum, dataArr[0].datetime, 0)
+          }
+          $('#modalServiceListSinugUp').modal('hide')
+          !window.payment && $('#thanksPopup').modal('show')
         }
-        if (inputNum)
-          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_form")
-        $('#modalServiceListSinugUp').modal('hide')
-        !window.payment && $('#thanksPopup').modal('show')
-      }
-    });
+      });
 }
 
 function writeClient(inputNum, time, isPayment = false) {
@@ -492,13 +516,13 @@ function writeClient(inputNum, time, isPayment = false) {
       }
     ]
   };
-
+  console.log(userParams)
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-    function (data) {
-      let err = processErrors(getData(data));
-      if (!err) {
-      }
-    });
+      function (data) {
+        let err = processErrors(getData(data));
+        if (!err) {
+        }
+      });
 
 }
 
@@ -576,7 +600,7 @@ function consultWrite(event, plusDate = 0) {
   const service = '1415297';
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
 
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += "?service_ids=" + encodeURIComponent(service);
@@ -587,37 +611,38 @@ function consultWrite(event, plusDate = 0) {
 
 
   ajax('GET', headers, url, null,
-    function (data) {
-      let dataArr = getData(data);
-      if (dataArr.length < 1) return consultWrite(event, ++plusDate);
-      if (processErrors(dataArr)) return alert("Error");
-      else {
-        headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+      function (data) {
+        let dataArr = getData(data);
+        if (dataArr.length < 1) return consultWrite(event, ++plusDate);
+        if (processErrors(dataArr)) return alert("Error");
+        else {
+          headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
 
-        let date = new Date();
-        userParams = {
-          "phone": phone,
-          "fullname": fullName,
-          "email": email,
-          "comment": "consult",
-          "appointments": [
-            {
-              "id": date.getTime(),
-              "services": service,
-              "staff_id": managerId,
-              "datetime": dataArr[0].datetime
-            }
-          ]
+          let date = new Date();
+          userParams = {
+            "phone": phone,
+            "fullname": fullName,
+            "email": email,
+            "comment": "consult",
+            "appointments": [
+              {
+                "id": date.getTime(),
+                "services": service,
+                "staff_id": managerId,
+                "datetime": dataArr[0].datetime
+              }
+            ]
+          }
+          ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+              function (data) {
+                let err = processErrors(getData(data));
+                if (!err) {
+                }
+                !window.payment && $('#thanksPopup').modal('show')
+              });
         }
-        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-          function (data) {
-            let err = processErrors(getData(data));
-            if (!err) {}
-            !window.payment && $('#thanksPopup').modal('show')
-          });
-      }
-    })
+      })
 
 }
 
@@ -633,7 +658,7 @@ function sendComplex(event, plusDate = 0) {
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let complexCheckbox = document.querySelector("input:checked");
   let complex = complexCheckbox.getAttribute('id')
   let name = document.getElementById('nameC').value
@@ -674,11 +699,11 @@ function sendComplex(event, plusDate = 0) {
         location.replace(createOrder(price, desc, name, complex, email, phone));
       } else {
         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-          function (data) {
-            let err = processErrors(getData(data));
-            if (!err) {
-            }
-          });
+            function (data) {
+              let err = processErrors(getData(data));
+              if (!err) {
+              }
+            });
       }
     }
   })
