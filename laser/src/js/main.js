@@ -157,9 +157,10 @@ $(document).ready(function () {
 
 //srevice drop menu tablet
   $(".drop-menu").on("click", hidden)
+
   function hidden() {
     $(".drop-content").toggleClass('hidden')
-    setTimeout(function(){
+    setTimeout(function () {
       $(".drop-content").toggleClass('scaleY')
     }, 200);
 
@@ -340,7 +341,7 @@ function displayServices(json) {
 function getData(data) {
   let answer;
   // try {
-    answer = JSON.parse(data);
+  answer = JSON.parse(data);
   // } catch (err) {
   //   return {error: err.message, status: answer['errors']['code']};
   // }
@@ -537,12 +538,25 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value: phone,
     readonly: true
   });
-  let names = services.map(service => {
-    const tempService = servicesAll.find(item => item.id === service)
-    return tempService.title
-  })
-  if (names.length > 1)
+  let names
+  if (Array.isArray(services)) {
+    names = services.map(service => {
+      const tempService = servicesAll.find(item => item.id === service)
+      return tempService.title
+    })
+    console.log('1')
+
     names = names.join(', ')
+  } else {
+    names = servicesAll.find(item => {
+      if (item.id === services) {
+        console.log(item)
+        return item.title
+      }
+    })
+    console.log('2')
+
+  }
 
   button.addField({
     label: 'services',
@@ -598,7 +612,8 @@ function consultWrite(event, plusDate = 0) {
         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
           function (data) {
             let err = processErrors(getData(data));
-            if (!err) {}
+            if (!err) {
+            }
             !window.payment && $('#thanksPopup').modal('show')
           });
       }
@@ -648,15 +663,15 @@ function sendComplex(event, plusDate = 0) {
           }
         ]
       }
-      if (event.target.id === 'pay_complex') {
-        let price = servicesArr[complex]
+      if (event.target.id === 'pay_compl') {
+        let itemPrice = servicesAll.find(item => item.id === complex)
         let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
         localStorage.fullName = name
         localStorage.email = email
         localStorage.phone = phone
         localStorage.services = complex
         localStorage.time = dataArr[0].datetime
-        location.replace(createOrder(price, desc, name, complex, email, phone));
+        location.replace(createOrder(itemPrice, desc, name, complex, email, phone));
       } else {
         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
           function (data) {
