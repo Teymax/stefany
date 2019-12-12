@@ -1,7 +1,7 @@
 section.section.service-laser-service-list.nano-service-list.overflow-visible
   .container
     .row.main-block
-      .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.man-symbol-bg
+      .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.woman-symbol-bg
         .checkbox-wrapper
           input(type="checkbox" class="checkbox" id="checkboxServiceList")
         .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center.gender-pic
@@ -40,7 +40,7 @@ section.section.service-laser-service-list.nano-service-list.overflow-visible
                     .column-left
                       p.paragraph-text.text-color-lightdark.mr-3.mb-0.item-time
                       p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
-          .list-male
+          .list-male.hidden
             each category in allCategoryMale
               h2.h2-title.text-color-dark.service-section-header-mb.mt-3.text-center #{category.name}
               .checkbox-group.pb-4

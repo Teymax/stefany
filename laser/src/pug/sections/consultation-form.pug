@@ -16,7 +16,7 @@ section.section.consultation-form
           .form-group
             input#emailConsult.form-control(type='email', aria-describedby='emailHelp', placeholder='Email' required )
           .form-group
-            input#phoneConsult.form-control(type='tel', placeholder='Телефон' required minlength='19')
+            input#phoneConsult.form-control(type='tel', placeholder='Телефон' required maxlength="19" minlength="19" pattern=".{19}")
             .c-input
               input.btn-callback-submit(type='submit' value='перезвоните мне')
           //+btnCallbackForm('перезвоните мне')('etst')

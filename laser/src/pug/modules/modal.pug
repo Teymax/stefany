@@ -9,7 +9,7 @@
         form#pay_form
           input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
           input#email.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
+          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
 
 
           +modalServiceListInfo
@@ -27,7 +27,7 @@
         form
           input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
           input#email.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
+          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
 
           +modalServiceListInfo
           .c-input-order
@@ -35,11 +35,19 @@
 
 
 #thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
-  .modal-dialog.modal-popup.modal-dialog-centered(role='document')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document' class="thanks-popup")
     .modal-content.px-1
+      button.close(type='button', data-dismiss='modal', aria-label='Close')
+        span(aria-hidden='true')
       h4.text-center Спасибо!
       h5.text-center Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
-
+#thanksPopupPay.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document' class="thanks-popup")
+    .modal-content.px-1
+      button.close(type='button', data-dismiss='modal', aria-label='Close')
+        span(aria-hidden='true')
+      h4.text-center Благодарим за оплату!
+      h5.text-center мы свяжемся с Вами в ближайшее время
 #pay_complex.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
@@ -51,7 +59,7 @@
         form#pay_compl
           input#nameC.w-100.p-text-light(type="text", placeholder="Имя" required)
           input#emailC.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phoneC.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required minlength='19')
+          input#phoneC.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
 
           .c-input-pay
             input#pay_button.btn-submit.pay.mt-5(type="submit" value="оплатить")
