@@ -310,7 +310,7 @@ $(document).ready(function () {
           ...mail,
           Subject: 'Обратная связь',
           From:    $('[data-feedback-email]').val(),
-          Body:    `Имя: ${$('[data-feedback-name]')
+          Body:    `ФИО: ${$('[data-feedback-name]')
             .val()}<br>Email: ${$('[data-feedback-email]')
             .val()}<br>Телефон: ${$('[data-feedback-phone]')
             .val()}<br>Сообщение: ${$('[data-feedback-message]').val()}`
@@ -322,97 +322,102 @@ $(document).ready(function () {
     })
   }
 
-  $('.podology-service-slider').owlCarousel({
-                                              loop:       true,
-                                              margin:     35,
-                                              nav:        false,
-                                              dots:       true,
-                                              responsive: {
-                                                0:   {
-                                                  items: 1
-                                                },
-                                                575: {
-                                                  items: 2
-                                                },
-                                                993: {
-                                                  items: 4
-                                                }
-                                              }
-                                            })
+  $('.podology-service-slider').owlCarousel(
+    {
+      loop:       true,
+      margin:     35,
+      nav:        false,
+      dots:       true,
+      responsive: {
+        0:   {
+          items: 1
+        },
+        575: {
+          items: 2
+        },
+        993: {
+          items: 4
+        }
+      }
+    })
 
-  $('.salon-photos-slider').owlCarousel({
-                                          center:     true,
-                                          items:      3,
-                                          loop:       true,
-                                          margin:     15,
-                                          responsive: {
-                                            0:    {
-                                              items: 1
-                                            },
-                                            575:  {
-                                              items: 1
-                                            },
-                                            993:  {
-                                              items: 1.5
-                                            },
-                                            1400: {
-                                              items: 2
-                                            },
-                                            2000: {
-                                              items: 4
-                                            }
-                                          }
-                                        })
+  $('.salon-photos-slider').owlCarousel(
+    {
+      center:     true,
+      items:      3,
+      loop:       true,
+      margin:     15,
+      responsive: {
+        0:    {
+          items: 1
+        },
+        575:  {
+          items: 1
+        },
+        993:  {
+          items: 1.5
+        },
+        1400: {
+          items: 2
+        },
+        2000: {
+          items: 4
+        }
+      }
+    })
 
   $('.card-header').on('click', function () {
     $(this).toggleClass('active').siblings().removeClass('active')
   })
 
-  $('.reviews-slider').owlCarousel({
-                                     loop:   true,
-                                     margin: 0,
-                                     nav:    true,
-                                     dots:   false,
-                                     items:  1
-                                   })
+  $('.reviews-slider').owlCarousel(
+    {
+      loop:   true,
+      margin: 0,
+      nav:    true,
+      dots:   false,
+      items:  1
+    })
 
-  $('.specialists-slider').owlCarousel({
-                                         loop:       true,
-                                         margin:     20,
-                                         nav:        true,
-                                         dots:       false,
-                                         responsive: {
-                                           0:   {
-                                             items: 1
-                                           },
-                                           575: {
-                                             items: 2
-                                           },
-                                           993: {
-                                             items: 4
-                                           }
-                                         }
-                                       })
+  $('.specialists-slider').owlCarousel(
+    {
+      loop:       true,
+      margin:     20,
+      nav:        true,
+      dots:       false,
+      responsive: {
+        0:   {
+          items: 1
+        },
+        575: {
+          items: 2
+        },
+        993: {
+          items: 4
+        }
+      }
+    })
 
-  var videoSLider = $('.video-slider').owlCarousel({
-                                                     loop:          false,
-                                                     margin:        0,
-                                                     nav:           false,
-                                                     dots:          false,
-                                                     items:         1,
-                                                     dotsContainer: '.video-slider-dots',
-                                                     responsive:    {
-                                                       0:    {
-                                                         nav: true
-                                                       },
-                                                       541:  {
-                                                         nav: false
-                                                       },
-                                                       1200: {
-                                                         nav: false
-                                                       }
-                                                     }
-                                                   })
+  var videoSLider = $('.video-slider').owlCarousel(
+    {
+      loop:          false,
+      margin:        0,
+      nav:           false,
+      dots:          false,
+      items:         1,
+      dotsContainer: '.video-slider-dots',
+      responsive:    {
+        0:    {
+          nav: true
+        },
+        541:  {
+          nav: false
+        },
+        1200: {
+          nav: false
+        }
+      }
+    })
 
   $('.video-slider-dots .owl-dot').click(function (e) {
     e.preventDefault()
@@ -420,14 +425,15 @@ $(document).ready(function () {
     videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
   })
 
-  var videoSliderDots = $('.video-slider-dots').owlCarousel({
-                                                              navContainer: '.video-nav-slider-dots',
-                                                              loop:         false,
-                                                              margin:       0,
-                                                              nav:          true,
-                                                              dots:         false,
-                                                              items:        1
-                                                            })
+  var videoSliderDots = $('.video-slider-dots').owlCarousel(
+    {
+      navContainer: '.video-nav-slider-dots',
+      loop:         false,
+      margin:       0,
+      nav:          true,
+      dots:         false,
+      items:        1
+    })
 
   $('.video-nav-slider-dots .owl-next').click(function () {
     videoSliderDots.trigger('next.owl.carousel')
