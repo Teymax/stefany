@@ -67,7 +67,7 @@ $(document).ready(function () {
     })
 
     request.fail(function (jqXHR, textStatus) {
-      alert('Request failed: ' + textStatus)
+      // handle
     })
   })
 
@@ -477,7 +477,6 @@ window.writeClient = (time, data) => {
   })
 
   request.fail(function (jqXHR, textStatus) {
-    alert('Request failed: ' + textStatus)
   })
 }
 
