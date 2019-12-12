@@ -1,5 +1,12 @@
 window.payment = false
 
+if(localStorage.getItem('thx')) {
+  $('#thanksPopupPay').modal('show')
+  setTimeout(() => {
+    localStorage.removeItem('thx')
+  }, 0)
+}
+
 $(document).ready(function () {
   let regex = new RegExp("%3c.*%3e", "i");
   let replaceHref = regex.exec(window.location.href);
@@ -145,14 +152,21 @@ $(document).ready(function () {
     $(this).parent().toggleClass('checked')
   });
 //checkbox service list male/female
-  $('#checkboxServiceList').click(function () {
-    if ($(this).is(':checked')) {
-      $('.list-female').addClass('hidden')
-      $('.list-male').addClass('visible')
-    } else {
-      $('.list-female').removeClass('hidden')
-      $('.list-male').removeClass('visible')
-    }
+//   $('#checkboxServiceList').click(function () {
+//     if ($('.checkbox').hasClass('checked')) {
+//       // $('.list-female').toggleClass('hidden')
+//       $('.custom-py-services-price').toggleClass('man-symbol-bg')
+//     } else {
+//       // $('.list-female').toggleClass('visible')
+//       // $('.custom-py-services-price').toggleClass('')
+//     }
+  $(function(){
+    $("#checkboxServiceList").change(function() {
+      $(".custom-py-services-price").toggleClass("man-symbol-bg", this.checked)
+      $('.list-female').toggleClass('hidden', this.checked)
+      $('.list-male').toggleClass('visible', this.checked)
+
+    }).change();
   });
 
 //srevice drop menu tablet
@@ -447,6 +461,7 @@ function bookRecord(event, plusDate = 0) {
           localStorage.time = dataArr[0].datetime
           $('#paymentPopup').modal('show')
           window.payment = true
+          setGreeting()
           preparePayButton(inputNum);
 
         }
@@ -682,4 +697,8 @@ function sendComplex(event, plusDate = 0) {
       }
     }
   })
+}
+
+function setGreeting() {
+  localStorage.setItem('thx', true)
 }

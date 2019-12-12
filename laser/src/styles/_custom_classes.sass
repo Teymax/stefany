@@ -1,19 +1,6 @@
 .gender-pic
 	position: relative
 
-	&:before
-		content: ''
-		position: absolute
-		top: -6em
-		left: 0
-		width: 20em
-		height: 20em
-		display: block
-		background: url('../assets/icon/male.svg') no-repeat
-		background-size: contain
-		transform: rotate(134.85deg)
-		z-index: -1
-
 .container-overflow
 	overflow: hidden
 
@@ -507,9 +494,9 @@ iframe
 	transform: scaleY(0)
 
 .hidden
-	display: none
+	display: none !important
 
-.visible
+.visible, .hidden.visible
 	display: block !important
 
 #paymentPopup

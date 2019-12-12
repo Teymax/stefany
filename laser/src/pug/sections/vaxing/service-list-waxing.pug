@@ -3,7 +3,7 @@
 section.section.service-laser-service-list.nano-service-list
   .container
     .row.main-block
-      .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.man-symbol-bg
+      .col-12.col-xl-8.d-flex.flex-column.align-items-center.left.custom-py-services-price.woman-symbol-bg
         .checkbox-wrapper
           input(type="checkbox" class="checkbox" id="checkboxServiceList")
         .service-list-group.mt-4.d-flex.flex-column.justify-content-center.align-items-center
@@ -19,7 +19,7 @@ section.section.service-laser-service-list.nano-service-list
                   .column-left
                     p.paragraph-text.text-color-lightdark.mr-3.mb-0.item-time
                     p.paragraph-text.text-color-lightdark.mb-0.font-weight-bold.item-price
-          .list-male
+          .list-male.hidden
             .checkbox-group.pb-4
               each service in arrServiceWaxingMale
                 .checkbox-row.d-flex.align-items-start.justify-content-between.py-2(id=service.id data-sex='1')
