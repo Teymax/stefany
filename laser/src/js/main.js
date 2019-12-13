@@ -1,11 +1,6 @@
 window.payment = false
 
-if (localStorage.getItem('thx')) {
-  $('#thanksPopupPay').modal('show')
-  setTimeout(() => {
-    localStorage.removeItem('thx')
-  }, 0)
-}
+
 
 $(document).ready(function () {
   let regex = new RegExp("%3c.*%3e", "i");
@@ -212,6 +207,7 @@ window.onload = function () {
   consult = document.querySelector('.main-form')
   let curUrl = document.URL
   if (curUrl.includes('payed=true')) {
+    $('#thanksPopupPay').modal('show')
     if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
       headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
@@ -488,7 +484,6 @@ function bookRecord(event, plusDate = 0) {
             localStorage.time = dataArr[0].datetime
             $('#paymentPopup').modal('show')
             window.payment = true
-            setGreeting()
             preparePayButton(inputNum);
 
           }
@@ -617,7 +612,9 @@ function consultWrite(event, plusDate = 0) {
   let email = document.getElementById("emailConsult").value
   let fullName = document.getElementById("fullnameConsult").value
 
-
+  let commentCallComplex
+  if(event.target.id === 'callComplex') commentCallComplex = 'complex';
+  else commentCallComplex = 'consult'
   ajax('GET', headers, url, null,
       function (data) {
         let dataArr = getData(data);
@@ -632,7 +629,7 @@ function consultWrite(event, plusDate = 0) {
             "phone": phone,
             "fullname": fullName,
             "email": email,
-            "comment": 'consult' + ' ' + localStorage.city,
+            "comment": commentCallComplex + ' ' + localStorage.city,
             "appointments": [
               {
                 "id": date.getTime(),
@@ -710,6 +707,4 @@ function consultWrite(event, plusDate = 0) {
 //   })
 // }
 
-function setGreeting() {
-  localStorage.setItem('thx', true)
-}
+
