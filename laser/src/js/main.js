@@ -326,10 +326,10 @@ function refreshPrice(e) {
 }
 
 // modal complex count
-document.querySelectorAll('input[name="prim"]').forEach(function (item) {
-  item.addEventListener('change', function () {
-    let checkedRadio = document.querySelector('input[name="prim"]:checked')
+document.querySelectorAll('.check-radio').forEach(function (item) {
+  item.addEventListener('click', function() {
     document.querySelectorAll('.complex-checked-order').forEach(function (item) {
+      let checkedRadio = document.querySelector('input[name="prim"]:checked')
       item.innerHTML =
           `
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
@@ -539,7 +539,7 @@ function preparePayButton(inputNum) {
   //
   //
   for (let i in params.services) {
-    price += servicesArr[params.services[i]].price;
+    price += servicesArr[params.services[i]] ? servicesArr[params.services[i]].price : 0;
   }
   let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
   // let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
@@ -581,7 +581,7 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   });
   let names = services.map(service => {
     const tempService = servicesAll.find(item => item.id === service)
-    return tempService.title
+    return tempService ? tempService.title : ''
   })
   if (names.length > 1)
     names = names.join(', ')
