@@ -16,6 +16,7 @@
           .c-input-pay
             input#pay_button.btn-submit.pay(type="submit" value="оплатить")
 
+
 #modalServiceListSinugUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
@@ -34,21 +35,7 @@
             input#order_button.btn-submit.order(type="submit" value="записаться")
 
 
-#thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
-  .modal-dialog.modal-popup.modal-dialog-centered(role='document' class="thanks-popup")
-    .modal-content.px-1
-      button.close(type='button', data-dismiss='modal', aria-label='Close')
-        span(aria-hidden='true')
-      h4.text-center Спасибо!
-      h5.text-center Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
-#thanksPopupPay.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
-  .modal-dialog.modal-popup.modal-dialog-centered(role='document' class="thanks-popup")
-    .modal-content.px-1
-      button.close(type='button', data-dismiss='modal', aria-label='Close')
-        span(aria-hidden='true')
-      h4.text-center Благодарим за оплату!
-      h5.text-center мы свяжемся с Вами в ближайшее время
-#pay-complex-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+#payComplexModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
       h4.text-center.mb-0 Оставьте ваши данные
@@ -57,13 +44,17 @@
       .c-content
         h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
         form#pay_compl
-          input#nameC.w-100.p-text-light(type="text", placeholder="Имя" required)
-          input#emailC.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phoneC.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
+          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
+          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
+          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
 
           .c-input-pay
             input#pay_button.btn-submit.pay.mt-5(type="submit" value="оплатить")
-#singUp-complex-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
+
+        div.complex-checked-order
+
+
+#singComplexModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
       h4.text-center.mb-0 Оставьте ваши данные
@@ -71,20 +62,29 @@
         span(aria-hidden='true')
       .c-content
         h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
-        form#send_compl
-          input#nameC.w-100.p-text-light(type="text", placeholder="Имя" required)
-          input#emailC.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phoneC.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
+        form#seng_compl
+          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
+          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
+          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
 
           .c-input-pay
             input#order_button.btn-submit.order(type="submit" value="записаться")
 
+        div.complex-checked-order
+
+#thanksPopupPay.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document' class="thanks-popup")
+    .modal-content.px-1
+      button.close(type='button', data-dismiss='modal', aria-label='Close')
+        span(aria-hidden='true')
+      h4.text-center Благодарим за оплату!
+      h5.text-center мы свяжемся с Вами в ближайшее время
 
 
-
-
-#paymentPopup.modal.fade(tabindex='-1' role='dialog')
-  #main
-  .ball-one
-  .ball-two
-  .ball-three
+#thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
+  .modal-dialog.modal-popup.modal-dialog-centered(role='document' class="thanks-popup")
+    .modal-content.px-1
+      button.close(type='button', data-dismiss='modal', aria-label='Close')
+        span(aria-hidden='true')
+      h4.text-center Спасибо!
+      h5.text-center Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.

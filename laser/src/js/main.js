@@ -1,6 +1,6 @@
 window.payment = false
 
-if(localStorage.getItem('thx')) {
+if (localStorage.getItem('thx')) {
   $('#thanksPopupPay').modal('show')
   setTimeout(() => {
     localStorage.removeItem('thx')
@@ -14,12 +14,12 @@ $(document).ready(function () {
     window.location.replace = "./404.html";
   }
   $('[type="tel"]').mask("+38-(000)-000-00-00")
-  var complexForm = $('#send_compl')
+  var complexForm = $('#pay_compl')
   if (complexForm)
     complexForm.on('submit', bookRecord)
-  var complexFormPay = $('#pay_compl')
-  if (complexFormPay)
-    complexFormPay.on('submit', bookRecord)
+  var complexPayForm = $('#seng_compl  ')
+  if (complexPayForm)
+    complexPayForm.on('submit', bookRecord)
   var payForm = $('#modalServiceListPay form')
   if (payForm)
     payForm.on('submit', bookRecord)
@@ -163,8 +163,8 @@ $(document).ready(function () {
 //       // $('.list-female').toggleClass('visible')
 //       // $('.custom-py-services-price').toggleClass('')
 //     }
-  $(function(){
-    $("#checkboxServiceList").change(function() {
+  $(function () {
+    $("#checkboxServiceList").change(function () {
       $(".custom-py-services-price").toggleClass("man-symbol-bg", this.checked)
       $('.list-female').toggleClass('hidden', this.checked)
       $('.list-male').toggleClass('visible', this.checked)
@@ -201,10 +201,7 @@ const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject
 window.onload = function () {
   servicesBlock = document.querySelector("div.service-list-group")
 
-  // phoneForm = document.getElementById("contactForm");
-  // codeForm = document.getElementById("phoneVerification");
   phoneInput = document.querySelectorAll("#phone");
-
   fullNameInput = document.querySelectorAll("#fullname");
   emailInput = document.querySelectorAll("#email");
 
@@ -213,7 +210,7 @@ window.onload = function () {
   let checking = document.querySelectorAll('label.service-checkbox-label input');
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
   consult = document.querySelector('.main-form')
-  consult.addEventListener('submit', consultWrite)
+  // consult.addEventListener('submit', consultWrite)
   let curUrl = document.URL
   if (curUrl.includes('payed=true')) {
     if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
@@ -298,6 +295,8 @@ function refreshPrice(e) {
     item.textContent = serviceCheckboxes.length
   })
 
+
+
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
@@ -330,6 +329,22 @@ function refreshPrice(e) {
   })
 }
 
+// modal complex count
+document.querySelectorAll('input[name="prim"]').forEach(function (item) {
+  item.addEventListener('change', function () {
+    let checkedRadio = document.querySelector('input[name="prim"]:checked')
+    document.querySelectorAll('.complex-checked-order').forEach(function (item) {
+      item.innerHTML =
+        `
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Глубокое бикини - ${checkedRadio.dataset.proc} процедур </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
+      `
+    })
+  })
+})
+
+
 function getServices() {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
@@ -339,8 +354,8 @@ function getServices() {
 function displayServices(json) {
   let data = getData(json);
   servicesAll = data.services
-  console.log(servicesAll)
   mainBlocks = document.getElementsByClassName("checkbox-row")
+  if(mainBlocks.length===0) mainBlocks = document.querySelectorAll('input[name="prim"]');
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
@@ -348,8 +363,10 @@ function displayServices(json) {
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
       if (+servicesStatic[i] === service.id) {
-        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
-        mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+        if(servicesBlock) {
+          mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
+          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+        }
         servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
       }
     })
@@ -375,53 +392,38 @@ function getData(data) {
 
 
 function getFormParams(inputNum) {
-  let serviceCheckboxes;
-  if(!servicesBlock)
-   serviceCheckboxes = document.querySelectorAll('input[name="prim"]:checked');
-  else{
-    serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
-  }
-  console.log(serviceCheckboxes);
+  let serviceCheckboxes
+  if (servicesBlock) serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
+  else serviceCheckboxes = document.querySelectorAll('input[name="prim"]:checked');
   let services = [...serviceCheckboxes].map(function (service) {
-    let main, id;
-
-    if(servicesBlock) {
-       main = service.closest('.checkbox-row');
-       id = main.getAttribute('id');
-    }else{
-      id = service.getAttribute('id');
-    }
+    let id;
+    if (servicesBlock) {
+      let main = service.closest('.checkbox-row');
+      id = main.getAttribute('id');
+    } else id = service.getAttribute("id");
+    console.log(serviceCheckboxes);
     return parseInt(id);
   });
 
-
+  if(![...phoneInput][inputNum].value) inputNum+=2;
+  console.log([...phoneInput][inputNum].value);
   let phone = [...phoneInput][inputNum].value
   let email = [...emailInput][inputNum].value
   let fullName = [...fullNameInput][inputNum].value
-  // if (!fullName) {
-  //   alert("Input correct name");
-  //   return;
-  // }
-  //
-  // if (phone.length < 13) {
-  //   alert('Input correct phone')
-  //   return
-  // }
-  // if (services.length === 0) {
-  //   alert("Yoy didn't choose any service")
-  //   return
-  // }
+
+
   return {
     phone: phone.length > 0 ? phone : false,
     fullName: fullName.length > 0 ? fullName : false,
     email: email.length > 0 ? email : false,
     services: services.length > 0 ? services : false,
-    // phone: '+380974724612',
-    // fullName: 'Vlad M',
-    // email: "malanivvlad@gmail.com",
-    // services: services.length > 0 ? services : false
   }
+
+
 }
+
+
+
 
 function ajax(method, headers, url, params, callback) {
   xmlhttp.onreadystatechange = function () {
@@ -454,7 +456,7 @@ function bookRecord(event, plusDate = 0) {
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
     date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params
-  if (event.target.id === "pay_form")
+  if ( event.target.id === "pay_form" || event.target.id === "pay_compl")
     inputNum = 0
   else
     inputNum = 1
@@ -470,6 +472,7 @@ function bookRecord(event, plusDate = 0) {
       if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
       else {
         if (!inputNum) {
+          console.log("not here");
           localStorage.fullName = params.fullName
           localStorage.email = params.email
           localStorage.phone = params.phone
@@ -482,8 +485,10 @@ function bookRecord(event, plusDate = 0) {
 
         }
         if (inputNum) {
-          let isPaid = (!servicesBlock || event.target.id === "pay_form");
-          writeClient(inputNum, dataArr[0].datetime, isPaid)
+          console.log("here");
+
+          // let isPayment = !servicesBlock || event.target.id === "pay_form";
+          writeClient(inputNum, dataArr[0].datetime, 0)
         }
         $('#modalServiceListSinugUp').modal('hide')
         !window.payment && $('#thanksPopup').modal('show')
@@ -494,14 +499,14 @@ function bookRecord(event, plusDate = 0) {
 function writeClient(inputNum, time, isPayment = false) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams(inputNum);
-
+let com = isPayment ? "online order+payment" : "online order"
 
   let date = new Date();
   userParams = {
     "phone": params.phone,
     "fullname": params.fullName,
     "email": params.email,
-    "comment": isPayment ? "online order+payment" : "online order",
+    "comment": com +  localStorage.city ,
     "appointments": [
       {
         "id": date.getTime(),
@@ -511,7 +516,7 @@ function writeClient(inputNum, time, isPayment = false) {
       }
     ]
   };
-
+  console.log(userParams)
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
     function (data) {
       let err = processErrors(getData(data));
@@ -571,25 +576,12 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value: phone,
     readonly: true
   });
-  let names
-  if (Array.isArray(services)) {
-    names = services.map(service => {
-      const tempService = servicesAll.find(item => item.id === service)
-      return tempService.title
-    })
-    console.log('1')
-
+  let names = services.map(service => {
+    const tempService = servicesAll.find(item => item.id === service)
+    return tempService.title
+  })
+  if (names.length > 1)
     names = names.join(', ')
-  } else {
-    names = servicesAll.find(item => {
-      if (item.id === services) {
-        console.log(item)
-        return item.title
-      }
-    })
-    console.log('2')
-
-  }
 
   button.addField({
     label: 'services',
@@ -632,7 +624,7 @@ function consultWrite(event, plusDate = 0) {
           "phone": phone,
           "fullname": fullName,
           "email": email,
-          "comment": "consult",
+          "comment": "consult" + localStorage.city,
           "appointments": [
             {
               "id": date.getTime(),
@@ -651,16 +643,8 @@ function consultWrite(event, plusDate = 0) {
           });
       }
     })
-
 }
 
-``
-// function writeBeauty(event, plusDate = 0) {
-//   event.preventDefault();
-//   let box = event.target.closest('form')
-//   let service = box.getAttribute('id');
-//
-// }
 function sendComplex(event, plusDate = 0) {
   event.preventDefault()
   let date = new Date();
@@ -686,7 +670,7 @@ function sendComplex(event, plusDate = 0) {
         "phone": phone,
         "fullname": name,
         "email": email,
-        "comment": "consult",
+        "comment": "complex " + localStorage.city,
         "appointments": [
           {
             "id": date.getTime(),
@@ -696,23 +680,20 @@ function sendComplex(event, plusDate = 0) {
           }
         ]
       }
-      if (event.target.id === 'pay_compl') {
-
-        let itemPrice = servicesAll.find(item => +item.id === +complex)
-        console.log(complex)
+      if (event.target.id === 'pay_complex') {
+        let price = servicesArr[complex]
         let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
         localStorage.fullName = name
         localStorage.email = email
         localStorage.phone = phone
         localStorage.services = complex
         localStorage.time = dataArr[0].datetime
-        location.replace(createOrder(itemPrice.price_max, desc, name, complex, email, phone));
+        location.replace(createOrder(price, desc, name, complex, email, phone));
       } else {
         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
           function (data) {
             let err = processErrors(getData(data));
             if (!err) {
-              console.log('Error')
             }
           });
       }
