@@ -14,9 +14,12 @@ $(document).ready(function () {
     window.location.replace = "./404.html";
   }
   $('[type="tel"]').mask("+38-(000)-000-00-00")
-  var complexForm = $('#pay_compl')
+  var complexForm = $('#send_compl')
   if (complexForm)
-    complexForm.on('submit', sendComplex)
+    complexForm.on('submit', bookRecord)
+  var complexFormPay = $('#pay_compl')
+  if (complexFormPay)
+    complexFormPay.on('submit', bookRecord)
   var payForm = $('#modalServiceListPay form')
   if (payForm)
     payForm.on('submit', bookRecord)
@@ -336,6 +339,7 @@ function getServices() {
 function displayServices(json) {
   let data = getData(json);
   servicesAll = data.services
+  console.log(servicesAll)
   mainBlocks = document.getElementsByClassName("checkbox-row")
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
@@ -371,10 +375,22 @@ function getData(data) {
 
 
 function getFormParams(inputNum) {
-  let serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
+  let serviceCheckboxes;
+  if(!servicesBlock)
+   serviceCheckboxes = document.querySelectorAll('input[name="prim"]:checked');
+  else{
+    serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
+  }
+  console.log(serviceCheckboxes);
   let services = [...serviceCheckboxes].map(function (service) {
-    let main = service.closest('.checkbox-row');
-    let id = main.getAttribute('id');
+    let main, id;
+
+    if(servicesBlock) {
+       main = service.closest('.checkbox-row');
+       id = main.getAttribute('id');
+    }else{
+      id = service.getAttribute('id');
+    }
     return parseInt(id);
   });
 
@@ -465,8 +481,10 @@ function bookRecord(event, plusDate = 0) {
           preparePayButton(inputNum);
 
         }
-        if (inputNum)
-          writeClient(inputNum, dataArr[0].datetime, event.target.id === "pay_form")
+        if (inputNum) {
+          let isPaid = (!servicesBlock || event.target.id === "pay_form");
+          writeClient(inputNum, dataArr[0].datetime, isPaid)
+        }
         $('#modalServiceListSinugUp').modal('hide')
         !window.payment && $('#thanksPopup').modal('show')
       }
@@ -679,19 +697,22 @@ function sendComplex(event, plusDate = 0) {
         ]
       }
       if (event.target.id === 'pay_compl') {
-        let itemPrice = servicesAll.find(item => item.id === complex)
+
+        let itemPrice = servicesAll.find(item => +item.id === +complex)
+        console.log(complex)
         let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
         localStorage.fullName = name
         localStorage.email = email
         localStorage.phone = phone
         localStorage.services = complex
         localStorage.time = dataArr[0].datetime
-        location.replace(createOrder(itemPrice, desc, name, complex, email, phone));
+        location.replace(createOrder(itemPrice.price_max, desc, name, complex, email, phone));
       } else {
         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
           function (data) {
             let err = processErrors(getData(data));
             if (!err) {
+              console.log('Error')
             }
           });
       }
