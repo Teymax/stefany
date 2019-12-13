@@ -210,7 +210,6 @@ window.onload = function () {
   let checking = document.querySelectorAll('label.service-checkbox-label input');
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
   consult = document.querySelector('.main-form')
-  // consult.addEventListener('submit', consultWrite)
   let curUrl = document.URL
   if (curUrl.includes('payed=true')) {
     if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
@@ -221,7 +220,7 @@ window.onload = function () {
         "phone": localStorage.phone,
         "fullname": localStorage.fullName,
         "email": localStorage.email,
-        "comment": "online order+payment",
+        "comment": localStorage.type + "+payment " + localStorage.city,
         "appointments": [
           {
             "id": date.getTime(),
@@ -245,6 +244,8 @@ window.onload = function () {
   localStorage.removeItem('phone')
   localStorage.removeItem('email')
   localStorage.removeItem('services')
+  localStorage.removeItem('type')
+
 };
 
 function refreshPrice(e) {
@@ -477,6 +478,7 @@ function bookRecord(event, plusDate = 0) {
             localStorage.email = params.email
             localStorage.phone = params.phone
             localStorage.services = params.services
+            localStorage.type =  'services'
             localStorage.time = dataArr[0].datetime
             $('#paymentPopup').modal('show')
             window.payment = true
@@ -506,7 +508,7 @@ function writeClient(inputNum, time, isPayment = false) {
     "phone": params.phone,
     "fullname": params.fullName,
     "email": params.email,
-    "comment": isPayment ? "online order+payment" : "online order",
+    "comment": 'online order' + ' ' + localStorage.city,
     "appointments": [
       {
         "id": date.getTime(),
@@ -624,7 +626,7 @@ function consultWrite(event, plusDate = 0) {
           "phone": phone,
           "fullname": fullName,
           "email": email,
-          "comment": "consult",
+          "comment": 'consult' + ' ' + localStorage.city,
           "appointments": [
             {
               "id": date.getTime(),
@@ -670,7 +672,7 @@ function sendComplex(event, plusDate = 0) {
         "phone": phone,
         "fullname": name,
         "email": email,
-        "comment": "consult",
+        "comment": 'complex' + ' ' + localStorage.city,
         "appointments": [
           {
             "id": date.getTime(),
@@ -687,6 +689,7 @@ function sendComplex(event, plusDate = 0) {
         localStorage.email = email
         localStorage.phone = phone
         localStorage.services = complex
+        localStorage.type = 'complex'
         localStorage.time = dataArr[0].datetime
         location.replace(createOrder(price, desc, name, complex, email, phone));
       } else {

@@ -1,5 +1,4 @@
 section.section.main-laser-service.overflow-visible
-  //img.bg-elem(src="/assets/img/main-service/main-bg-girl.png" alt="main-bg-girl")
   .container
     h1.h1-main-title.text-w-bold.text-color-lightgray Скидки на все зоны эпиляции
     p.subtitle.mb-3 Глубокое бикини
@@ -8,10 +7,7 @@ section.section.main-laser-service.overflow-visible
         li.list-item.text-color-lightgray.mb-2 Скидка <span class="bold">25%</span> при оплате <span class="bold">4</span> процедур &nbsp;&nbsp; <span class="line-through"> 2 000 грн</span> &nbsp;&nbsp; <span class="large">1 730 грн</span>
         li.list-item.text-color-lightgray.mb-2 Скидка <span class="bold">30%</span> при оплате <span class="bold">6</span> процедур &nbsp;&nbsp; <span class="line-through"> 5 820 грн</span> &nbsp;&nbsp; <span class="large">4 074 грн</span>
         li.list-item.text-color-lightgray.mb-2 Скидка <span class="bold">35%</span> при оплате <span class="bold">8</span> процедур &nbsp;&nbsp; <span class="line-through"> 2 000 грн</span> &nbsp;&nbsp; <span class="large">5 044 грн</span>
-      //.c-content
-      //  p.custopm-text.custopm-text__small.text-w-bold 15btn-callback-submit
-      //    span.custopm-text__small_size минут
-      //  .c-span
-      //    span.custopm-text.custopm-text__through.mr-2 2 000 грн
-      //    span.custopm-text.custopm-text__bold 1 730 грн
-    +btnSimple('подробнее', './discount.html')
+    a(href='./discount.html').link-btn-discount
+      .btn-simple
+        .text-section
+          span подробнее
