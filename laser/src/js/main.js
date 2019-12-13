@@ -5,36 +5,7 @@ if (localStorage.getItem('thx')) {
   setTimeout(() => {
     localStorage.removeItem('thx')
   }, 0)
-  {
-    if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
-      headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-
-      let date = new Date();
-      userParams = {
-        "phone": localStorage.phone,
-        "fullname": localStorage.fullName,
-        "email": localStorage.email,
-        "comment": localStorage.type + "+payment " + localStorage.city,
-        "appointments": [
-          {
-            "id": date.getTime(),
-            "services": localStorage.services,
-            "staff_id": managerId,
-            "datetime": localStorage.time
-          }
-        ]
-      };
-
-      ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-        function (data) {
-          let err = processErrors(getData(data));
-          if (!err) {
-          }
-        });
-    }
-  }
 }
-
 
 $(document).ready(function () {
   let regex = new RegExp("%3c.*%3e", "i");
@@ -240,34 +211,34 @@ window.onload = function () {
   [...checking].forEach(box => box.addEventListener("click", refreshPrice));
   consult = document.querySelector('.main-form')
   let curUrl = document.URL
-  // if (curUrl.includes('payed=true')) {
-  //   if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
-  //     headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  //
-  //     let date = new Date();
-  //     userParams = {
-  //       "phone": localStorage.phone,
-  //       "fullname": localStorage.fullName,
-  //       "email": localStorage.email,
-  //       "comment": localStorage.type + "+payment " + localStorage.city,
-  //       "appointments": [
-  //         {
-  //           "id": date.getTime(),
-  //           "services": localStorage.services,
-  //           "staff_id": managerId,
-  //           "datetime": localStorage.time
-  //         }
-  //       ]
-  //     };
-  //
-  //     ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-  //       function (data) {
-  //         let err = processErrors(getData(data));
-  //         if (!err) {
-  //         }
-  //       });
-  //   }
-  // }
+  if (curUrl.includes('payed=true')) {
+    if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
+      headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+
+      let date = new Date();
+      userParams = {
+        "phone": localStorage.phone,
+        "fullname": localStorage.fullName,
+        "email": localStorage.email,
+        "comment": localStorage.type + "+payment " + localStorage.city,
+        "appointments": [
+          {
+            "id": date.getTime(),
+            "services": localStorage.services,
+            "staff_id": managerId,
+            "datetime": localStorage.time
+          }
+        ]
+      };
+
+      ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+        function (data) {
+          let err = processErrors(getData(data));
+          if (!err) {
+          }
+        });
+    }
+  }
   localStorage.removeItem('time')
   localStorage.removeItem('fullName')
   localStorage.removeItem('phone')
@@ -481,9 +452,15 @@ function bookRecord(event, plusDate = 0) {
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+<<<<<<< HEAD
     date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+  let params
+  if ( event.target.id === "pay_form" || event.target.id === "pay_compl")
+=======
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
   let params, comment
   if (event.target.id === "pay_form" || event.target.id === "pay_compl") {
+>>>>>>> 71aa4cead28725f5a72817f8713efe75643513b4
     inputNum = 0
     if (event.target.id === "pay_form")
       comment = 'services'
@@ -502,6 +479,7 @@ function bookRecord(event, plusDate = 0) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   $('.modal').modal('hide')
   ajax('GET', headers, url, null,
+<<<<<<< HEAD
     function (data) {
       let dataArr = getData(data);
       if (processErrors(dataArr)) return alert("Error");
@@ -513,19 +491,45 @@ function bookRecord(event, plusDate = 0) {
           localStorage.email = params.email
           localStorage.phone = params.phone
           localStorage.services = params.services
-          localStorage.type = comment
           localStorage.time = dataArr[0].datetime
           $('#paymentPopup').modal('show')
           window.payment = true
           setGreeting()
           preparePayButton(inputNum);
+=======
+      function (data) {
+        let dataArr = getData(data);
+        if (processErrors(dataArr)) return alert("Error");
+        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
+        else {
+          if (!inputNum) {
+            console.log("not here");
+            localStorage.fullName = params.fullName
+            localStorage.email = params.email
+            localStorage.phone = params.phone
+            localStorage.services = params.services
+            localStorage.type = comment
+            localStorage.time = dataArr[0].datetime
+            $('#paymentPopup').modal('show')
+            window.payment = true
+            setGreeting()
+            preparePayButton(inputNum);
+>>>>>>> 71aa4cead28725f5a72817f8713efe75643513b4
 
         }
         if (inputNum) {
           console.log("here");
 
+<<<<<<< HEAD
           // let isPayment = !servicesBlock || event.target.id === "pay_form";
-          writeClient(inputNum, dataArr[0].datetime, 0, comment)
+          writeClient(inputNum, dataArr[0].datetime, 0)
+=======
+            // let isPayment = !servicesBlock || event.target.id === "pay_form";
+            writeClient(inputNum, dataArr[0].datetime, 0, comment)
+          }
+          $('#modalServiceListSinugUp').modal('hide')
+          !window.payment && $('#thanksPopup').modal('show')
+>>>>>>> 71aa4cead28725f5a72817f8713efe75643513b4
         }
         $('#modalServiceListSinugUp').modal('hide')
         !window.payment && $('#thanksPopup').modal('show')
@@ -536,14 +540,18 @@ function bookRecord(event, plusDate = 0) {
 function writeClient(inputNum, time, isPayment = false, comment) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams(inputNum);
-
+let com = isPayment ? "online order+payment" : "online order"
 
   let date = new Date();
   userParams = {
     "phone": params.phone,
     "fullname": params.fullName,
     "email": params.email,
+<<<<<<< HEAD
+    "comment": com +  localStorage.city ,
+=======
     "comment": 'online order' + ' ' + localStorage.city + " " + comment,
+>>>>>>> 71aa4cead28725f5a72817f8713efe75643513b4
     "appointments": [
       {
         "id": date.getTime(),
@@ -587,7 +595,7 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   button.setMerchantId(1397120);
   button.setAmount(amount, 'UAH', true);
   //http://steffany.dotwork.digital/laser/
-  button.setResponseUrl('http://steffany.dotwork.digital/laser/');
+  button.setResponseUrl('http://steffany.dotwork.digital/laser/?payed=true');
   button.setHost('api.fondy.eu');
   button.addField({
     label: 'Описание платежа',
@@ -648,8 +656,9 @@ function consultWrite(event, plusDate = 0) {
 
 
   ajax('GET', headers, url, null,
+<<<<<<< HEAD
     function (data) {
-      let dataArr = getData(data);g
+      let dataArr = getData(data);
       if (dataArr.length < 1) return consultWrite(event, ++plusDate);
       if (processErrors(dataArr)) return alert("Error");
       else {
@@ -661,7 +670,7 @@ function consultWrite(event, plusDate = 0) {
           "phone": phone,
           "fullname": fullName,
           "email": email,
-          "comment": 'consult' + ' ' + localStorage.city,
+          "comment": "consult" + localStorage.city,
           "appointments": [
             {
               "id": date.getTime(),
@@ -680,6 +689,96 @@ function consultWrite(event, plusDate = 0) {
           });
       }
     })
+}
+
+function sendComplex(event, plusDate = 0) {
+  event.preventDefault()
+  let date = new Date();
+  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+  let complexCheckbox = document.querySelector("input:checked");
+  let complex = complexCheckbox.getAttribute('id')
+  let name = document.getElementById('nameC').value
+  let phone = document.getElementById('phoneC').value
+  let email = document.getElementById('emailC').value
+  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+  url += "?service_ids=" + encodeURIComponent(complex);
+  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, url, null, function (data) {
+    let dataArr = getData(data);
+    if (dataArr.length < 1) return sendComplex(event, ++plusDate);
+    if (processErrors(dataArr)) return alert("Error");
+    else {
+      headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+      let date = new Date();
+      userParams = {
+        "phone": phone,
+        "fullname": name,
+        "email": email,
+        "comment": "complex " + localStorage.city,
+        "appointments": [
+          {
+            "id": date.getTime(),
+            "services": complex,
+            "staff_id": managerId,
+            "datetime": dataArr[0].datetime
+          }
+        ]
+      }
+      if (event.target.id === 'pay_complex') {
+        let price = servicesArr[complex]
+        let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
+        localStorage.fullName = name
+        localStorage.email = email
+        localStorage.phone = phone
+        localStorage.services = complex
+        localStorage.time = dataArr[0].datetime
+        location.replace(createOrder(price, desc, name, complex, email, phone));
+      } else {
+        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+          function (data) {
+            let err = processErrors(getData(data));
+            if (!err) {
+            }
+          });
+      }
+    }
+  })
+=======
+      function (data) {
+        let dataArr = getData(data);
+        if (dataArr.length < 1) return consultWrite(event, ++plusDate);
+        if (processErrors(dataArr)) return alert("Error");
+        else {
+          headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+
+
+          let date = new Date();
+          userParams = {
+            "phone": phone,
+            "fullname": fullName,
+            "email": email,
+            "comment": 'consult' + ' ' + localStorage.city,
+            "appointments": [
+              {
+                "id": date.getTime(),
+                "services": service,
+                "staff_id": managerId,
+                "datetime": dataArr[0].datetime
+              }
+            ]
+          }
+          ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+              function (data) {
+                let err = processErrors(getData(data));
+                if (!err) {
+                }
+                !window.payment && $('#thanksPopup').modal('show')
+              });
+        }
+      })
+>>>>>>> 71aa4cead28725f5a72817f8713efe75643513b4
 }
 
 // function sendComplex(event, plusDate = 0) {
