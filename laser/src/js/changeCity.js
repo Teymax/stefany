@@ -236,7 +236,11 @@ $(document).ready(function () {
 
   let localization = 'ru';
   let carouselsHTML = null;
-  let city = localStorage.getItem('city') || 'zt';
+  let city = localStorage.getItem('city');
+  if (!city) {
+    city = 'zt'
+    localStorage.setItem('city', city)
+  }
   if (city) {
     changeDataForCity();
   }

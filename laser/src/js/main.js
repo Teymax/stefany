@@ -17,7 +17,7 @@ $(document).ready(function () {
   var complexForm = $('#pay_compl')
   if (complexForm)
     complexForm.on('submit', bookRecord)
-  var complexPayForm = $('#seng_compl  ')
+  var complexPayForm = $('#send_compl  ')
   if (complexPayForm)
     complexPayForm.on('submit', bookRecord)
   var payForm = $('#modalServiceListPay form')
@@ -297,7 +297,6 @@ function refreshPrice(e) {
   })
 
 
-
   let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current, index) => {
     const parent = current.closest('.checkbox-row')
     let id = parent.getAttribute('id')
@@ -333,7 +332,7 @@ function refreshPrice(e) {
 // modal complex count
 document.querySelectorAll('input[name="prim"]').forEach(function (item) {
   item.addEventListener('change', function () {
-  let checkedRadio = document.querySelector('input[name="prim"]:checked')
+    let checkedRadio = document.querySelector('input[name="prim"]:checked')
     document.querySelectorAll('.complex-checked-order').forEach(function (item) {
       item.innerHTML =
           `
@@ -356,7 +355,7 @@ function displayServices(json) {
   let data = getData(json);
   servicesAll = data.services
   mainBlocks = document.getElementsByClassName("checkbox-row")
-  if(mainBlocks.length===0) mainBlocks = document.querySelectorAll('input[name="prim"]');
+  if (mainBlocks.length === 0) mainBlocks = document.querySelectorAll('input[name="prim"]');
   servicesStatic = Array.prototype.map.call(mainBlocks, block => {
     return block.getAttribute("id")
   })
@@ -364,7 +363,7 @@ function displayServices(json) {
   for (let i = 0; i < servicesStatic.length; i++) {
     servicesAll.map(function (service) {
       if (+servicesStatic[i] === service.id) {
-        if(servicesBlock) {
+        if (servicesBlock) {
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
           mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
         }
@@ -406,11 +405,11 @@ function getFormParams(inputNum) {
     return parseInt(id);
   });
 
-  if(![...phoneInput][inputNum].value) inputNum+=2;
+  if (![...phoneInput][inputNum].value) inputNum += 2;
   console.log([...phoneInput][inputNum].value);
-  let phone = [...phoneInput][inputNum].value
-  let email = [...emailInput][inputNum].value
-  let fullName = [...fullNameInput][inputNum].value
+  let phone = [...phoneInput][inputNum].value;
+  let email = [...emailInput][inputNum].value;
+  let fullName = [...fullNameInput][inputNum].value;
 
 
   return {
@@ -422,8 +421,6 @@ function getFormParams(inputNum) {
 
 
 }
-
-
 
 
 function ajax(method, headers, url, params, callback) {
@@ -456,11 +453,20 @@ function bookRecord(event, plusDate = 0) {
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
       date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-  let params
-  if ( event.target.id === "pay_form" || event.target.id === "pay_compl")
+  let params, comment
+  if (event.target.id === "pay_form" || event.target.id === "pay_compl") {
     inputNum = 0
-  else
+    if (event.target.id === "pay_form")
+      comment = 'services'
+    if (event.target.id === "pay_compl")
+      comment = "complex"
+  } else {
     inputNum = 1
+    if (event.target.id === "send_form")
+      comment = 'services'
+    if (event.target.id === "send_compl")
+      comment = "complex"
+  }
   params = getFormParams(inputNum);
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
@@ -478,7 +484,7 @@ function bookRecord(event, plusDate = 0) {
             localStorage.email = params.email
             localStorage.phone = params.phone
             localStorage.services = params.services
-            localStorage.type =  'services'
+            localStorage.type = comment
             localStorage.time = dataArr[0].datetime
             $('#paymentPopup').modal('show')
             window.payment = true
@@ -490,7 +496,7 @@ function bookRecord(event, plusDate = 0) {
             console.log("here");
 
             // let isPayment = !servicesBlock || event.target.id === "pay_form";
-            writeClient(inputNum, dataArr[0].datetime, 0)
+            writeClient(inputNum, dataArr[0].datetime, 0, comment)
           }
           $('#modalServiceListSinugUp').modal('hide')
           !window.payment && $('#thanksPopup').modal('show')
@@ -498,7 +504,7 @@ function bookRecord(event, plusDate = 0) {
       });
 }
 
-function writeClient(inputNum, time, isPayment = false) {
+function writeClient(inputNum, time, isPayment = false, comment) {
   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   let params = getFormParams(inputNum);
 
@@ -508,7 +514,7 @@ function writeClient(inputNum, time, isPayment = false) {
     "phone": params.phone,
     "fullname": params.fullName,
     "email": params.email,
-    "comment": 'online order' + ' ' + localStorage.city,
+    "comment": 'online order' + ' ' + localStorage.city + " " + comment,
     "appointments": [
       {
         "id": date.getTime(),
@@ -613,96 +619,96 @@ function consultWrite(event, plusDate = 0) {
 
 
   ajax('GET', headers, url, null,
-    function (data) {
-      let dataArr = getData(data);
-      if (dataArr.length < 1) return consultWrite(event, ++plusDate);
-      if (processErrors(dataArr)) return alert("Error");
-      else {
-        headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+      function (data) {
+        let dataArr = getData(data);
+        if (dataArr.length < 1) return consultWrite(event, ++plusDate);
+        if (processErrors(dataArr)) return alert("Error");
+        else {
+          headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
 
-        let date = new Date();
-        userParams = {
-          "phone": phone,
-          "fullname": fullName,
-          "email": email,
-          "comment": 'consult' + ' ' + localStorage.city,
-          "appointments": [
-            {
-              "id": date.getTime(),
-              "services": service,
-              "staff_id": managerId,
-              "datetime": dataArr[0].datetime
-            }
-          ]
-        }
-        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-            function (data) {
-              let err = processErrors(getData(data));
-              if (!err) {
+          let date = new Date();
+          userParams = {
+            "phone": phone,
+            "fullname": fullName,
+            "email": email,
+            "comment": 'consult' + ' ' + localStorage.city,
+            "appointments": [
+              {
+                "id": date.getTime(),
+                "services": service,
+                "staff_id": managerId,
+                "datetime": dataArr[0].datetime
               }
-              !window.payment && $('#thanksPopup').modal('show')
-            });
-      }
-    })
-}
-
-function sendComplex(event, plusDate = 0) {
-  event.preventDefault()
-  let date = new Date();
-  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
-  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-  let complexCheckbox = document.querySelector("input:checked");
-  let complex = complexCheckbox.getAttribute('id')
-  let name = document.getElementById('nameC').value
-  let phone = document.getElementById('phoneC').value
-  let email = document.getElementById('emailC').value
-  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
-  url += "?service_ids=" + encodeURIComponent(complex);
-  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  ajax('GET', headers, url, null, function (data) {
-    let dataArr = getData(data);
-    if (dataArr.length < 1) return sendComplex(event, ++plusDate);
-    if (processErrors(dataArr)) return alert("Error");
-    else {
-      headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-      let date = new Date();
-      userParams = {
-        "phone": phone,
-        "fullname": name,
-        "email": email,
-        "comment": 'complex' + ' ' + localStorage.city,
-        "appointments": [
-          {
-            "id": date.getTime(),
-            "services": complex,
-            "staff_id": managerId,
-            "datetime": dataArr[0].datetime
+            ]
           }
-        ]
-      }
-      if (event.target.id === 'pay_complex') {
-        let price = servicesArr[complex]
-        let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
-        localStorage.fullName = name
-        localStorage.email = email
-        localStorage.phone = phone
-        localStorage.services = complex
-        localStorage.type = 'complex'
-        localStorage.time = dataArr[0].datetime
-        location.replace(createOrder(price, desc, name, complex, email, phone));
-      } else {
-        ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-            function (data) {
-              let err = processErrors(getData(data));
-              if (!err) {
-              }
-            });
-      }
-    }
-  })
+          ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+              function (data) {
+                let err = processErrors(getData(data));
+                if (!err) {
+                }
+                !window.payment && $('#thanksPopup').modal('show')
+              });
+        }
+      })
 }
+
+// function sendComplex(event, plusDate = 0) {
+//   event.preventDefault()
+//   let date = new Date();
+//   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+//   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+//       date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+//   let complexCheckbox = document.querySelector("input:checked");
+//   let complex = complexCheckbox.getAttribute('id')
+//   let name = document.getElementById('nameC').value
+//   let phone = document.getElementById('phoneC').value
+//   let email = document.getElementById('emailC').value
+//   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+//   url += "?service_ids=" + encodeURIComponent(complex);
+//   headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+//   ajax('GET', headers, url, null, function (data) {
+//     let dataArr = getData(data);
+//     if (dataArr.length < 1) return sendComplex(event, ++plusDate);
+//     if (processErrors(dataArr)) return alert("Error");
+//     else {
+//       headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+//       let date = new Date();
+//       userParams = {
+//         "phone": phone,
+//         "fullname": name,
+//         "email": email,
+//         "comment": 'complex' + ' ' + localStorage.city,
+//         "appointments": [
+//           {
+//             "id": date.getTime(),
+//             "services": complex,
+//             "staff_id": managerId,
+//             "datetime": dataArr[0].datetime
+//           }
+//         ]
+//       }
+//       if (event.target.id === 'pay_complex') {
+//         let price = servicesArr[complex]
+//         let desc = "User: " + phone + " " + email + "pay for services: " + "Complex:" + complex + " ";
+//         localStorage.fullName = name
+//         localStorage.email = email
+//         localStorage.phone = phone
+//         localStorage.services = complex
+//         localStorage.type = 'complex'
+//         localStorage.time = dataArr[0].datetime
+//         location.replace(createOrder(price, desc, name, complex, email, phone));
+//       } else {
+//         ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+//             function (data) {
+//               let err = processErrors(getData(data));
+//               if (!err) {
+//               }
+//             });
+//       }
+//     }
+//   })
+// }
 
 function setGreeting() {
   localStorage.setItem('thx', true)
