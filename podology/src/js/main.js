@@ -55,11 +55,12 @@ $(document).ready(function () {
       'Content-Type':  'application/json',
       'Authorization': 'Bearer ' + bearer_token
     }
-    var request = $.ajax({
-                           url:     url,
-                           type:    'GET',
-                           headers: headers
-                         })
+    var request = $.ajax(
+      {
+        url:     url,
+        type:    'GET',
+        headers: headers
+      })
 
     request.done(function (msg) {
       console.log(msg);
@@ -251,7 +252,8 @@ $(document).ready(function () {
           From:    chooseDayCourse.querySelector('[data-email]').value,
           Body:    `Имя: ${chooseDayCourse.querySelector('[data-name]').value}<br>Email: ${chooseDayCourse.querySelector('[data-email]').value}<br>Телефон: ${chooseDayCourse.querySelector('[data-phone]').value}<br>Курс: ${selectedText}`
         })
-      c.value = p.value = em.value = n.value = ''
+      p.value = em.value = n.value = ''
+      c.selectedIndex = 0
     })
   }
 
