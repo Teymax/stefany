@@ -1,11 +1,6 @@
 window.payment = false
 
-if (localStorage.getItem('thx')) {
-  $('#thanksPopupPay').modal('show')
-  setTimeout(() => {
-    localStorage.removeItem('thx')
-  }, 0)
-}
+
 
 $(document).ready(function () {
   let regex = new RegExp("%3c.*%3e", "i");
@@ -212,6 +207,7 @@ window.onload = function () {
   consult = document.querySelector('.main-form')
   let curUrl = document.URL
   if (curUrl.includes('payed=true')) {
+    $('#thanksPopupPay').modal('show')
     if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone && localStorage.time) {
       headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
@@ -330,18 +326,19 @@ function refreshPrice(e) {
 }
 
 // modal complex count
-document.querySelector('.test').addEventListener('click', function() {
+document.querySelectorAll('.check-radio').forEach(function (item) {
+  item.addEventListener('click', function() {
+    document.querySelectorAll('.complex-checked-order').forEach(function (item) {
       let checkedRadio = document.querySelector('input[name="prim"]:checked')
-      document.querySelectorAll('.complex-checked-order').forEach(function (item) {
-        item.innerHTML =
-          `
+      item.innerHTML =
+        `
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Глубокое бикини - ${checkedRadio.dataset.proc} процедур </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
       `
     })
   })
-
+})
 
 
 function getServices() {
@@ -405,6 +402,7 @@ function getFormParams(inputNum) {
   });
 
   if (![...phoneInput][inputNum].value) inputNum += 2;
+  console.log([...phoneInput][inputNum].value);
   let phone = [...phoneInput][inputNum].value;
   let email = [...emailInput][inputNum].value;
   let fullName = [...fullNameInput][inputNum].value;
@@ -486,7 +484,6 @@ function bookRecord(event, plusDate = 0) {
           localStorage.time = dataArr[0].datetime
           $('#paymentPopup').modal('show')
           window.payment = true
-          setGreeting()
           preparePayButton(inputNum);
 
         }
@@ -542,7 +539,7 @@ function preparePayButton(inputNum) {
   //
   //
   for (let i in params.services) {
-    price += servicesArr[params.services[i]].price;
+    price += servicesArr[params.services[i]] ? servicesArr[params.services[i]].price : 0;
   }
   let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
   // let order = createOrder(price, desc, params.fullName, params.services, params.email, params.phone);
@@ -584,7 +581,7 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   });
   let names = services.map(service => {
     const tempService = servicesAll.find(item => item.id === service)
-    return tempService.title
+    return tempService ? tempService.title : ''
   })
   if (names.length > 1)
     names = names.join(', ')
@@ -615,7 +612,9 @@ function consultWrite(event, plusDate = 0) {
   let email = document.getElementById("emailConsult").value
   let fullName = document.getElementById("fullnameConsult").value
 
-
+  let commentCallComplex
+  if(event.target.id === 'callComplex') commentCallComplex = 'complex';
+  else commentCallComplex = 'consult'
   ajax('GET', headers, url, null,
     function (data) {
       let dataArr = getData(data);
@@ -630,7 +629,7 @@ function consultWrite(event, plusDate = 0) {
           "phone": phone,
           "fullname": fullName,
           "email": email,
-          "comment": 'consult' + ' ' + localStorage.city,
+          "comment": commentCallComplex + ' ' + localStorage.city,
           "appointments": [
             {
               "id": date.getTime(),
@@ -708,6 +707,4 @@ function consultWrite(event, plusDate = 0) {
 //   })
 // }
 
-function setGreeting() {
-  localStorage.setItem('thx', true)
-}
+
