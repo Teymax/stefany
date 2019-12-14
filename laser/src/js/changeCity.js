@@ -418,7 +418,9 @@ $(document).ready(function () {
         city = e.target.dataset.city;
         localStorage.setItem('city', city);
         changeDataForCity();
-        location.reload();
+        if (window.location.href.indexOf('about-steffany') !== -1) {
+          location.reload()
+        }
       }
     });
   }

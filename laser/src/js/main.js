@@ -330,19 +330,18 @@ function refreshPrice(e) {
 }
 
 // modal complex count
-document.querySelectorAll('input[name="prim"]').forEach(function (item) {
-  item.addEventListener('change', function () {
-    let checkedRadio = document.querySelector('input[name="prim"]:checked')
-    document.querySelectorAll('.complex-checked-order').forEach(function (item) {
-      item.innerHTML =
-        `
+document.querySelector('.test').addEventListener('click', function() {
+      let checkedRadio = document.querySelector('input[name="prim"]:checked')
+      document.querySelectorAll('.complex-checked-order').forEach(function (item) {
+        item.innerHTML =
+          `
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Глубокое бикини - ${checkedRadio.dataset.proc} процедур </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
       `
     })
   })
-})
+
 
 
 function getServices() {
@@ -406,7 +405,6 @@ function getFormParams(inputNum) {
   });
 
   if (![...phoneInput][inputNum].value) inputNum += 2;
-  console.log([...phoneInput][inputNum].value);
   let phone = [...phoneInput][inputNum].value;
   let email = [...emailInput][inputNum].value;
   let fullName = [...fullNameInput][inputNum].value;
