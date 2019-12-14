@@ -1,7 +1,6 @@
 window.payment = false
 
 
-
 $(document).ready(function () {
   let regex = new RegExp("%3c.*%3e", "i");
   let replaceHref = regex.exec(window.location.href);
@@ -212,6 +211,9 @@ window.onload = function () {
       headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
       let date = new Date();
+      let serv = localStorage.services.split(",").map(servis => {
+        return +servis
+      });
       userParams = {
         "phone": localStorage.phone,
         "fullname": localStorage.fullName,
@@ -220,7 +222,7 @@ window.onload = function () {
         "appointments": [
           {
             "id": date.getTime(),
-            "services": localStorage.services,
+            "services": serv,
             "staff_id": managerId,
             "datetime": localStorage.time
           }
@@ -234,13 +236,15 @@ window.onload = function () {
           }
         });
     }
+    localStorage.removeItem('time')
+    localStorage.removeItem('fullName')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('email')
+    localStorage.removeItem('services')
+    localStorage.removeItem('type')
+    window.history.replaceState({}, document.title, curUrl.replace("?payed=true", ""));
+
   }
-  localStorage.removeItem('time')
-  localStorage.removeItem('fullName')
-  localStorage.removeItem('phone')
-  localStorage.removeItem('email')
-  localStorage.removeItem('services')
-  localStorage.removeItem('type')
 
 };
 
@@ -327,7 +331,7 @@ function refreshPrice(e) {
 
 // modal complex count
 document.querySelectorAll('.check-radio').forEach(function (item) {
-  item.addEventListener('click', function() {
+  item.addEventListener('click', function () {
     document.querySelectorAll('.complex-checked-order').forEach(function (item) {
       let checkedRadio = document.querySelector('input[name="prim"]:checked')
       item.innerHTML =
@@ -402,7 +406,6 @@ function getFormParams(inputNum) {
   });
 
   if (![...phoneInput][inputNum].value) inputNum += 2;
-  console.log([...phoneInput][inputNum].value);
   let phone = [...phoneInput][inputNum].value;
   let email = [...emailInput][inputNum].value;
   let fullName = [...fullNameInput][inputNum].value;
@@ -480,6 +483,7 @@ function bookRecord(event, plusDate = 0) {
           localStorage.email = params.email
           localStorage.phone = params.phone
           localStorage.services = params.services
+          console.log(localStorage.services)
           localStorage.type = comment
           localStorage.time = dataArr[0].datetime
           $('#paymentPopup').modal('show')
@@ -613,7 +617,7 @@ function consultWrite(event, plusDate = 0) {
   let fullName = document.getElementById("fullnameConsult").value
 
   let commentCallComplex
-  if(event.target.id === 'callComplex') commentCallComplex = 'complex';
+  if (event.target.id === 'callComplex') commentCallComplex = 'complex';
   else commentCallComplex = 'consult'
   ajax('GET', headers, url, null,
     function (data) {
