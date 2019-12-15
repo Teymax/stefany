@@ -52,7 +52,41 @@ document.addEventListener('DOMContentLoaded', function () {
   let mainForm = $('.main-form')
   if (mainForm) mainForm.on('submit', mainFormSubmit);
   if (document.URL.includes('payed=true')) bookAfterRecord();
+  let payButtons = document.querySelectorAll(".btn-first, .btn-second");
+  [...payButtons].forEach(button => {
+    button.addEventListener('click', buttonToggle);
+  })
+
+  document.querySelectorAll('.check-radio').forEach(function (item) {
+    item.addEventListener('click', radioClick)
+  })
 });
+
+function radioClick() {
+  let checkedRadio = document.querySelector('input[type="radio"][name="service"]:checked')
+  document.querySelector('#yclient_form .c-content-count').innerHTML =
+    `
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Глубокое бикини - ${checkedRadio.dataset.proc} процедур </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
+      `;
+}
+
+function buttonToggle(event) {
+  $('#modalServiceListSinugUp').modal('show');
+  let payButton = document.querySelector("#yclient_form #pay_button");
+  let orderButton = document.querySelector("#yclient_form #order_button");
+  let payment = document.querySelector("#yclient_form #payment");
+  if (event.target.classList.contains("btn-first")) {
+    payButton.classList.remove("hidden");
+    orderButton.classList.add("hidden");
+    payment.value = 1;
+  } else {
+    payButton.classList.add("hidden");
+    orderButton.classList.remove("hidden");
+    payment.value = 0;
+  }
+}
 
 function bookAfterRecord() {
 
@@ -189,8 +223,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
       let err = processErrors(getData(data));
       if (servicesArr.length === 0) {
         getServices();
-      }
-      else if(!err){
+      } else if (!err) {
         $('#sendComplex').modal('hide');
         $('#modalServiceListSinugUp').modal('hide');
         $('#thanksPopup').modal('show');
@@ -252,6 +285,7 @@ function createOrder(amount, order_desc, name, services, email, phone) {
 
   return button.getUrl();
 }
+
 function refreshPrice(event) {
   let checkbox = event.target;
   let name = checkbox.parentNode.nextElementSibling.textContent;
@@ -267,7 +301,15 @@ function refreshPrice(event) {
   totalTimeElem.forEach(elem => {
     elem.textContent = totalTime + " мин."
   })
-
+  let count = document.querySelectorAll('input[type="checkbox"]:checked').length
+  document.querySelector('#yclient_form .c-content-count').innerHTML = `
+      <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Выбрано услуг</span>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 countCheckedService">${count}</span></div>
+      <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общее время</span>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListTime">${totalTime} мин.</span></div>
+      <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общая сумма</span>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListSum">${totalPrice} грн.</span></div>
+      `;
   let servicesContainer = document.querySelectorAll(".choosenServices");
   [...servicesContainer].forEach(container => {
     let elem = `
