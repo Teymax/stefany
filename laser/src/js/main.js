@@ -44,15 +44,32 @@ function processErrors(data) {
   return true;
 }
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
   getServices();
-  var complexForm = $('#yclient_form')
+  let complexForm = $('#yclient_form');
   if (complexForm)
-    complexForm.on('submit', complexFormSubmit)
+    complexForm.on('submit', complexFormSubmit);
+  if (document.URL.includes('payed=true')) bookAfterRecord();
+  console.log(servicesArr)
   // var consultForm = $('form.main-form')
   // if (consultForm)
   //   consultForm.on('submit', consultWrite)
 
+});
+
+function bookAfterRecord() {
+  if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone) {
+    let services = localStorage.services.split(",");
+    let params = [localStorage.fullName, localStorage.email, localStorage.phone, localStorage.comment, services, managerId, localStorage.city ? localStorage.city : "unknown"]
+    getBookTime(services, 0, bookRecord, params);
+    $('#thanksPopupPay').modal('show');
+    localStorage.removeItem('name')
+    localStorage.removeItem('comment')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('email')
+    localStorage.removeItem('services')
+    window.history.replaceState({}, document.title, document.URL.replace("?payed=true", ""));
+  }
 }
 
 function displayServices(json) {
@@ -95,12 +112,21 @@ function complexFormSubmit(event) {
   let phone = event.target.phone.value;
   let comment = +event.target.payment.value ? "payment" : "online order";
   let serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked');
+  let city = localStorage.city ? localStorage.city : "unknown";
   let services = [...serviceCheckboxes].map(checkbox => {
     return checkbox.value;
   });
-  let city = localStorage.city ? localStorage.city : "unknown";
-  let params = [name, email, phone, comment, services, city, managerId]
-  let date = getBookTime(services, 0, bookRecord, params);
+  if (+event.target.payment.value) {
+    let serviceNames = [...serviceCheckboxes].map(checkbox => {
+      console.log(checkbox.parentNode)
+      console.log(checkbox.parentNode.closest(".paragraph-text"))
+      return checkbox.parentNode.nextElementSibling.textContent;
+    });
+    payment(name, email, phone, comment, services, serviceNames.join(","))
+  } else {
+    let params = [name, email, phone, comment, services, managerId, city]
+    getBookTime(services, 0, bookRecord, params);
+  }
 }
 
 function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
@@ -113,9 +139,10 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   url += services ? ("?service_ids=" + encodeURIComponent(services.join(","))) : '';
   let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, url, null, function (data) {
+    console.log("nicce")
     let dataArr = getData(data);
     if (processErrors(dataArr)) return alert("Error");
-    if (dataArr.length < services.length) return bookRecord(event, ++plusDate);
+    if (dataArr.length < services.length) return bookRecord(++plusDate);
     else {
       callbackParams.push(dataArr[0].datetime);
       callbackFunction(...callbackParams)
@@ -123,7 +150,7 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   });
 }
 
-function bookRecord(name, email, phone, comment, services, city, managerId, datetime) {
+function bookRecord(name, email, phone, comment, services, managerId, city, datetime) {
   let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
 
   let date = new Date();
@@ -146,7 +173,63 @@ function bookRecord(name, email, phone, comment, services, city, managerId, date
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
     function (data) {
       let err = processErrors(getData(data));
-      if (!err) {
+      if (servicesArr.length===0 ) {
+        getServices();
       }
     });
+}
+
+function payment(name, email, phone, comment, services, servicesString) {
+  localStorage.fullName = name;
+  localStorage.email = email;
+  localStorage.phone = phone;
+  localStorage.comment = comment;
+  localStorage.services = services;
+  let order_desc = "User: " + phone + " " + email + "pay for services: " + servicesString;
+  let amount = 0;
+  for (let i in services) {
+    amount += servicesArr[services[i]].price;
+  }
+  location.href = createOrder(amount, order_desc, name, servicesString, email, phone);
+}
+
+function createOrder(amount, order_desc, name, services, email, phone) {
+  var button = $ipsp.get('button');
+  button.setMerchantId(1397120);
+  button.setAmount(amount, 'UAH', true);
+  button.setResponseUrl(document.URL + "?payed=true"/*'http://steffany.dotwork.digital/laser/?payed=true'*/);
+  button.setHost('api.fondy.eu');
+  button.addField({
+    label: 'Описание платежа',
+    name: 'description',
+    value: order_desc,
+    readonly: true
+  });
+  button.addField({
+    label: 'name',
+    name: 'user_name',
+    value: name,
+    readonly: true
+  });
+  button.addField({
+    label: 'email',
+    name: 'user_email',
+    value: email,
+    readonly: true
+  });
+  button.addField({
+    label: 'phone',
+    name: 'user_phone',
+    value: phone,
+    readonly: true
+  });
+
+  button.addField({
+    label: 'services',
+    name: 'user_services',
+    value: services,
+    readonly: true
+  });
+
+  return button.getUrl();
 }
