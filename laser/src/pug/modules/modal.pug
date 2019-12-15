@@ -25,10 +25,11 @@
         span(aria-hidden='true')
       .c-content
         h5.paragraph-text.text-color-dark.text-center и мы вам перезвоним
-        form#send_form
-          input#fullname.w-100.p-text-light(type="text", placeholder="Имя" required)
-          input#email.w-100.p-text-light(type="email", placeholder="Email" required)
-          input#phone.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
+        form#yclient_form
+          input#fullname.w-100.p-text-light(name = "fullname" type="text", placeholder="Имя" required)
+          input#email.w-100.p-text-light(name = "email" type="email", placeholder="Email" required)
+          input#phone.w-100.p-text-light.mb-0(name = "phone" type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
+          input#payment(name = "payment" type="hidden" value = "0")
 
           +modalServiceListInfo
           .c-input-order
