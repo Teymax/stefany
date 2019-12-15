@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function bookAfterRecord() {
+
   if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone) {
     let services = localStorage.services.split(",");
     let params = [localStorage.fullName, localStorage.email, localStorage.phone, localStorage.comment, services, managerId, localStorage.city ? localStorage.city : "unknown"]
@@ -73,6 +74,7 @@ function bookAfterRecord() {
 }
 
 function displayServices(json) {
+
   let servicesBlock = document.querySelector("div.service-list-group");
   let data = getData(json);
   let servicesAll = data.services
