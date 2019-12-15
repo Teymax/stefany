@@ -49,12 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let complexForm = $('#yclient_form');
   if (complexForm)
     complexForm.on('submit', complexFormSubmit);
+  let mainForm = $('.main-form')
+  if (mainForm) mainForm.on('submit', mainFormSubmit);
   if (document.URL.includes('payed=true')) bookAfterRecord();
-  console.log(servicesArr)
-  // var consultForm = $('form.main-form')
-  // if (consultForm)
-  //   consultForm.on('submit', consultWrite)
-
 });
 
 function bookAfterRecord() {
@@ -85,7 +82,9 @@ function displayServices(json) {
     for (let i = 0; i < servicesStatic.length; i++) {
       servicesAll.map(function (service) {
         if (+servicesStatic[i] === service.id) {
-          mainBlocks[i].querySelector("input").value = service.id;
+          let checkbox = mainBlocks[i].querySelector("input");
+          checkbox.addEventListener("click", refreshPrice);
+          checkbox.value = service.id;
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
           mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
           servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
@@ -105,6 +104,24 @@ function getServices() {
     + managerId, null, displayServices);
 }
 
+function mainFormSubmit(event) {
+  event.preventDefault();
+  let service = event.target.service.value;
+  let city = localStorage.city ? localStorage.city : "unknown";
+  let comment = (event.target.id === "callComplex" ? "service consult " : "complex ") + city;
+
+  let params = [
+    event.target.fullname.value,
+    event.target.email.value,
+    event.target.phone.value,
+    comment,
+    [+service],
+    managerId,
+    city,
+  ];
+  getBookTime([+service], 0, bookRecord, params);
+}
+
 function complexFormSubmit(event) {
   event.preventDefault();
   let name = event.target.fullname.value;
@@ -118,8 +135,6 @@ function complexFormSubmit(event) {
   });
   if (+event.target.payment.value) {
     let serviceNames = [...serviceCheckboxes].map(checkbox => {
-      console.log(checkbox.parentNode)
-      console.log(checkbox.parentNode.closest(".paragraph-text"))
       return checkbox.parentNode.nextElementSibling.textContent;
     });
     payment(name, email, phone, comment, services, serviceNames.join(","))
@@ -139,10 +154,9 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   url += services ? ("?service_ids=" + encodeURIComponent(services.join(","))) : '';
   let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, url, null, function (data) {
-    console.log("nicce")
     let dataArr = getData(data);
     if (processErrors(dataArr)) return alert("Error");
-    if (dataArr.length < services.length) return bookRecord(++plusDate);
+    if (dataArr.length < services.length) return getBookTime(services, ++plusDate, callbackFunction, callbackParams);
     else {
       callbackParams.push(dataArr[0].datetime);
       callbackFunction(...callbackParams)
@@ -168,13 +182,16 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
       }
     ]
   };
-
-  console.log(userParams)
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
     function (data) {
       let err = processErrors(getData(data));
-      if (servicesArr.length===0 ) {
+      if (servicesArr.length === 0) {
         getServices();
+      }
+      else if(!err){
+        $('#sendComplex').modal('hide');
+        $('#modalServiceListSinugUp').modal('hide');
+        $('#thanksPopup').modal('show');
       }
     });
 }
@@ -232,4 +249,38 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   });
 
   return button.getUrl();
+}
+
+function refreshPrice(event) {
+  let checkbox = event.target;
+  let name = checkbox.parentNode.nextElementSibling.textContent;
+  let totalPriceElem = document.querySelectorAll(".serviceListSum");
+  let temp = totalPriceElem[0].textContent.replace(" грн.", "");
+  let totalPrice = checkbox.checked ? +temp + servicesArr[+checkbox.value].price : +temp - servicesArr[+checkbox.value].price;
+  totalPriceElem.forEach(elem => {
+    elem.textContent = totalPrice + " грн."
+  })
+  let totalTimeElem = document.querySelectorAll(".serviceListTime");
+  temp = totalTimeElem[0].textContent.replace(" мин", "");
+  let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
+  totalTimeElem.forEach(elem => {
+    elem.textContent = totalTime + " мин."
+  })
+
+  let servicesContainer = document.querySelectorAll(".choosenServices");
+  [...servicesContainer].forEach(container => {
+    let elem = `
+          <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
+              <div class="column-right d-flex align-items-start">
+                  <img src="./assets/icon/svg/checkbox.svg" class="mt-1 mr-2">
+                  <p class="paragraph-text text-w-light text-color-white mb-0">${name}</p>
+              </div>
+              <div class="column-left d-flex justify-content-end">
+                  <p class="paragraph-text text-w-bold text-color-white mb-0">${servicesArr[+checkbox.value].price}</p>
+              </div>
+        </div>
+    `;
+    if (checkbox.checked) container.innerHTML += elem;
+    else container.innerHTML = container.innerHTML.replace(elem, "")
+  })
 }
