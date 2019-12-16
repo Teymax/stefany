@@ -64,10 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function radioClick() {
   let checkedRadio = document.querySelector('input[type="radio"][name="service"]:checked')
+  console.log(checkedRadio.dataset.name);
+  console.log(checkedRadio.dataset.proc);
+  console.log(checkedRadio.dataset.price);
   document.querySelector('#yclient_form .c-content-count').innerHTML =
     `
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
-          <p class="paragraph-text text-color-dark text-w-bold mb-0">Глубокое бикини - ${checkedRadio.dataset.proc} процедур </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">${checkedRadio.dataset.name} - ${checkedRadio.dataset.proc} процедур </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
       `;
 }
