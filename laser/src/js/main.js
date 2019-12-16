@@ -170,7 +170,7 @@ function complexFormSubmit(event) {
   let phone = event.target.phone.value;
   let city = localStorage.city ? localStorage.city : "unknown";
   let isComplex = document.querySelector('input[type="radio"]:checked');
-  let comment = (+event.target.payment.value ? "payment" : "online order") + (isComplex?" complex":" service");
+  let comment = (+event.target.payment.value ? "payment" : "online order") + (isComplex ? " complex" : " service");
   let serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked');
   let services = [...serviceCheckboxes].map(checkbox => {
     return checkbox.value;
@@ -309,7 +309,16 @@ function refreshPrice(event) {
   temp = totalTimeElem[0].textContent.replace(" мин", "");
   let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
   totalTimeElem.forEach(elem => {
-    elem.textContent = totalTime + " мин."
+    if (totalTime % 60 === 0)
+      elem.textContent = totalTime / 60 + ' ч';
+    else {
+      let minutes = totalTime % 60
+      let hours = (totalTime - minutes) / 60
+      if (hours === 0)
+        elem.textContent = minutes + " мин"
+      else
+        elem.textContent = hours + " ч " + minutes + " мин"
+    }
   })
   let count = document.querySelectorAll('input[type="checkbox"]:checked').length
   document.querySelector('#yclient_form .c-content-count').innerHTML = `
