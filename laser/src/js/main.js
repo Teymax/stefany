@@ -1,301 +1,16 @@
-window.mail = {
-  Host    : 'smtp.gmail.com',
-  Username: 'four.progs@gmail.com',
-  Password: 'Htndeth0614',
-  To      : 'help@steffany.ua',
-  From    : 'help@steffany.ua'
-}
-
-$(document).ready(function () {
-
-  $('#carouselExample').on('slide.bs.carousel', function (e) {
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 4;
-    var totalItems = $('.carousel-item').length;
-
-    if (idx >= totalItems - (itemsPerSlide - 1)) {
-      var it = itemsPerSlide - (totalItems - idx);
-      for (var i = 0; i < it; i++) {
-        // append slides to end
-        if (e.direction == "left") {
-          $('.carousel-item').eq(i).appendTo('.carousel-inner');
-        } else {
-          $('.carousel-item').eq(0).appendTo('.carousel-inner');
-        }
-      }
-    }
-  });
-
-  $('.city-trigger').click(function (e) {
-    e.preventDefault();
-    var city = "." + $(this).attr('data-city');
-    $('.city-trigger').removeClass('active');
-    $('.city-item').removeClass('city-active');
-    $(this).addClass('active');
-    $(city).addClass('city-active');
-  });
-
-
-  $('.diploma-slider').owlCarousel({
-    loop: true,
-    margin: 35,
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      731: {
-        items: 2
-      },
-      1200: {
-        items: 4
-      }
-    }
-  });
-
-  $('.specialists-slider').owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      731: {
-        items: 2
-      },
-      1200: {
-        items: 4
-      }
-    }
-  });
-
-  var videoSLider = $('.video-slider').owlCarousel({
-    loop: false,
-    margin: 0,
-    nav: false,
-    dots: false,
-    items: 1,
-    dotsContainer: '.video-slider-dots',
-    responsive: {
-      0: {
-        nav: true
-      },
-      541: {
-        nav: false
-      },
-      1200: {
-        nav: false
-      }
-    }
-  })
-
-  $('.video-slider-dots .owl-dot').click(function (e) {
-    e.preventDefault()
-    var itemPosition = $(this).attr('data-pos')
-    videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
-  })
-
-  var videoSliderDots = $('.video-slider-dots').owlCarousel({
-    navContainer: '.video-nav-slider-dots',
-    loop: false,
-    margin: 0,
-    nav: true,
-    dots: false,
-    items: 1
-  })
-
-  $('.video-nav-slider-dots .owl-next').click(function () {
-    videoSliderDots.trigger('next.owl.carousel')
-  })
-
-  $('.video-nav-slider-dots .owl-prev').click(function () {
-    videoSliderDots.trigger('prev.owl.carousel', [300])
-  })
-
-  $('#closeOverlay').click(function (e) {
-    $('#overlay').hide()
-  })
-
-// accordion
-  $(".card-header").on('click', function () {
-    $(this).toggleClass('active').siblings().removeClass('active')
-  });
-//menu-trigger
-  $('.menu-trigger').click(function (e) {
-    $(this).toggleClass('open');
-    $('header').toggleClass('open');
-    $('body').toggleClass('fixed');
-  });
-
-  $('body').click(function (event) {
-    var dropMenuClosest = event.target.closest('.drop-menu')
-    if (dropMenuClosest) {
-      $('.drop-menu').not(dropMenuClosest).removeClass('open');
-      dropMenuClosest.classList.toggle('open');
-    } else {
-      $('.drop-menu').removeClass('open');
-    }
-  });
-
-//checkbox
-  $('.checkbox').change(function (e) {
-    $(this).parent().toggleClass('checked')
-  });
-//checkbox service list male/female
-  $('#checkboxServiceList').click(function () {
-    if ($(this).is(':checked')) {
-      $('.list-female').toggleClass('hidden')
-      $('.list-male').toggleClass('visible')
-    } else {
-      $('.list-female').toggleClass('hidden')
-      $('.list-male').toggleClass('visible')
-    }
-  });
-});
-let mainBlocks, servicesStatic, userParams, servicesBlock;
+const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
-let headers;
-let servicesAll = [];
 let servicesArr = [];
-let phoneInput;
-let fullNameInput;
-let emailInput;
-let choosenServices = [];
-
-const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-window.onload = function () {
-  servicesBlock = document.querySelector("div.service-list-group")
-
-  // phoneForm = document.getElementById("contactForm");
-  // codeForm = document.getElementById("phoneVerification");
-  phoneInput = document.getElementById("phone");
-  console.log(phoneInput)
-  fullNameInput = document.getElementById("fullname");
-  emailInput = document.getElementById("email");
-  let payButtons = document.querySelectorAll(".pay_button");
-  [...payButtons].forEach(button => button.addEventListener("click", bookRecord))
-  let orderButtons = document.querySelectorAll(".order_button");
-  [...orderButtons].forEach(button => button.addEventListener("click", bookRecord))
-  getServices();
-  let checking = document.querySelectorAll('label.service-checkbox-label input');
-  [...checking].forEach(box => box.addEventListener("click", refreshPrice));
-};
-
-function refreshPrice(e) {
-  // let orderChecked = document.createElement('div')
-  // orderChecked.classList.add(['checkbox-row']);
-  // $('#choosenServices').append(orderChecked);
-
-  const parent = e.target.closest('.checkbox-row');
-  // console.log(parent);
-  let id = parent.getAttribute('id')
-  let serviceName = parent.querySelector('.paragraph-text').innerHTML;
-  let price = parent.querySelector('.item-price').innerHTML;
-  let checkbox = parent.querySelector('input[name="service"]');
-  console.log(checkbox);
-  if(checkbox.checked) {
-    choosenServices.push({
-      id,
-      serviceName,
-      price
-    });
-  } else {
-    choosenServices = choosenServices.filter(function(item) {
-      return item.id !== id
-    })
-  }
-
-  // choosenServices = choosenServices.filter(function(item, pos) {
-  //   return choosenServices.indexOf(item) == pos;
-  // })
-  $("#choosenServices")[0].innerHTML = '';
-  choosenServices.forEach(item => {
-    $("#choosenServices")[0].innerHTML += `
-       <div class="">
-        <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
-<!--          <label class="service-checkbox-label">-->
-<!--            <input class="align-self-center" type="checkbox" name="service"/>-->
-<!--            <span class="checkmark light"></span>-->
-<!--          </label>-->
-          <div class="column-right d-flex align-items-start">
-              <p class="paragraph-text text-w-light text-color-white ml-3 mb-0">${item.serviceName}</p>
-          </div>
-          <div class="column-left d-flex justify-content-end">
-              <p class="paragraph-text text-w-bold text-color-white mb-0">${item.price}</p>
-          </div>
-        </div>
-      </div>
-      `;
-  })
-  let serviceCheckboxes = document.querySelectorAll(" input:checked");
-  let genPrice = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
-    const parent = current.closest('.checkbox-row')
-    let id = parent.getAttribute('id')
-    let serv = servicesAll.find(service => service.id === +id)
-    console.log(serv)
-    return accum + serv.price_max
-  }, 0)
-  let genTime = Array.prototype.reduce.call(serviceCheckboxes, (accum, current) => {
-    const parent = current.closest('.checkbox-row')
-    let id = parent.getAttribute('id')
-    let serv = servicesAll.find(service => service.id === +id)
-    return accum + serv.seance_length
-  }, 0)
-  $('.serviceListTime').each(function (e) {
-    if (genTime % 3600 === 0)
-      this.textContent = genTime / 3600 + ' ч';
-    else {
-      let minutes = genTime % 3600
-      let hours = (genTime - minutes) / 3600
-      this.textContent = hours + " ч" + minutes + " мин"
-    }
-
-  })
-  $('.serviceListSum').each(function (e) {
-    this.textContent = genPrice + ' грн';
-  })
-}
-
-function getServices() {
-  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id=' + managerId/*'https://api.yclients.com/api/v1/book_times/72145/791383/2019'*/, null, displayServices);
-}
-
-function displayServices(json) {
-  let data = getData(json);
-  servicesAll = data.services
-  console.log(servicesAll)
-  mainBlocks = document.getElementsByClassName("checkbox-row")
-  servicesStatic = Array.prototype.map.call(mainBlocks, block => {
-    return block.getAttribute("id")
-  })
-  servicesStatic = servicesStatic.filter(service => !!service)
-  for (let i = 0; i < servicesStatic.length; i++) {
-    servicesAll.map(function (service) {
-      if (+servicesStatic[i] === service.id) {
-        mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
-        mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
-        servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
-      }
-
-    })
-  }
-}
 
 function getData(data) {
   let answer;
-  try {
-    answer = JSON.parse(data);
-  } catch (err) {
-    console.log(err.message + " in " + xmlhttp.responseText);
-    return {error: err.message, status: answer['errors']['code']};
-  }
+  // try {
+  answer = JSON.parse(data);
+  // } catch (err) {
+  //   return {error: err.message, status: answer['errors']['code']};
+  // }
   if (answer["errors"]) {
     if (answer["errors"].length > 1) return {
       error: answer['errors'][0]['message'],
@@ -304,28 +19,6 @@ function getData(data) {
     else return {error: answer['errors']['message'], status: answer['errors']['code']};
   }
   return answer;
-}
-
-
-function getFormParams() {
-  let serviceCheckboxes = servicesBlock.querySelectorAll("input:checked");
-  let services = [...serviceCheckboxes].map(function (service) {
-    let main = service.closest('.checkbox-row');
-    let id = main.getAttribute('id');
-    return parseInt(id);
-  });
-  // console.log(services)
-
-  return {
-    phone: phoneInput.value.length > 0 ? phoneInput.value : false,
-    fullName: fullNameInput.value.length > 0 ? fullNameInput.value : false,
-    email: emailInput.value.length > 0 ? emailInput.value : false,
-    services: services.length > 0 ? services : false,
-    // phone: '+380974724612',
-    // fullName: 'Vlad M',
-    // email: "malanivvlad@gmail.com",
-    // services: services.length > 0 ? services : false
-  }
 }
 
 function ajax(method, headers, url, params, callback) {
@@ -343,109 +36,227 @@ function ajax(method, headers, url, params, callback) {
 
 function processErrors(data) {
   let msg;
-  if (!data.error) return false;
-  msg = data.error.message;
+  if (!data._error) return false;
+  msg = data._error.message;
 
 
   alert(msg)
   return true;
 }
 
-var loadJS = function (url, implementationCode, location) {
-  //url is URL of external file, implementationCode is the code
-  //to be called from the file, location is the location to
-  //insert the <script> element
+document.addEventListener('DOMContentLoaded', function () {
+  getServices();
+  let complexForm = $('#yclient_form');
+  if (complexForm)
+    complexForm.on('submit', complexFormSubmit);
+  let mainForm = $('.main-form')
+  if (mainForm) mainForm.on('submit', mainFormSubmit);
+  if (document.URL.includes('payed=true')) bookAfterRecord();
+  let payButtons = document.querySelectorAll(".btn-first, .btn-second");
+  [...payButtons].forEach(button => {
+    button.addEventListener('click', buttonToggle);
+  })
 
-  var scriptTag = document.createElement('script');
-  scriptTag.src = url;
+  document.querySelectorAll('.check-radio').forEach(function (item) {
+    item.addEventListener('click', radioClick)
+  })
+});
 
-  scriptTag.onload = implementationCode;
-  scriptTag.onreadystatechange = implementationCode;
-
-  location.appendChild(scriptTag);
-};
-var yourCodeToBeCalled = function () {
-//your code goes here
+function radioClick() {
+  clearTotalPrice();
+  let checkedRadio = document.querySelector('input[type="radio"][name="service"]:checked')
+  console.log(checkedRadio.dataset.name);
+  console.log(checkedRadio.dataset.proc);
+  console.log(checkedRadio.dataset.price);
+  document.querySelector('#yclient_form .c-content-count').innerHTML =
+    `
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">${checkedRadio.dataset.name} - ${checkedRadio.dataset.proc} процедур </P>
+          <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
+      `;
 }
 
-function bookRecord(event, plusDate = 0) {
-  loadJS('https://api.fondy.eu/static_common/v1/checkout/ipsp.js', function () {
-    event.preventDefault();
-    let date = new Date();
-    if (plusDate > 0) date.setDate(date.getDate() + plusDate);
-    let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
-    let params = getFormParams();
-    let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
-    url += params.services ? ("?service_ids=" + encodeURIComponent(params.services.join(","))) : '';
-    headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-    ajax('GET', headers, url, null,
-      function (data) {
-        let dataArr = getData(data);
-        if (processErrors(dataArr)) return alert("Error");
-        if (dataArr.length < params.services.length) return bookRecord(event, ++plusDate);
-        else {
-          // console.log(dataArr[0]);let outBlock = e.closest(".checkbox-row")
-          writeClient(dataArr[0].datetime, event.target.id === "pay_button")
-        }
-      });
-  }, document.body);
-}
-
-function writeClient(time, isPayment = false) {
-  headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
-  let params = getFormParams();
-  if (!params.phone || !params.fullName || !params.email || !params.services) {
-    alert("smth went wrong, please reload the page and try again");
-    return;
+function buttonToggle(event) {
+  $('#modalServiceListSinugUp').modal('show');
+  let payButton = document.querySelector("#yclient_form #pay_button");
+  let orderButton = document.querySelector("#yclient_form #order_button");
+  let payment = document.querySelector("#yclient_form #payment");
+  if (event.target.classList.contains("btn-first")) {
+    payButton.classList.remove("hidden");
+    orderButton.classList.add("hidden");
+    payment.value = 1;
+  } else {
+    payButton.classList.add("hidden");
+    orderButton.classList.remove("hidden");
+    payment.value = 0;
   }
+}
+
+function bookAfterRecord() {
+
+  if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone) {
+    let services = localStorage.services.split(",");
+    let params = [localStorage.fullName, localStorage.email, localStorage.phone, localStorage.comment, services, managerId, localStorage.city ? localStorage.city : "unknown"]
+    getBookTime(services, 0, bookRecord, params);
+    $('#thanksPopupPay').modal('show');
+    localStorage.removeItem('name')
+    localStorage.removeItem('comment')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('email')
+    localStorage.removeItem('services')
+    window.history.replaceState({}, document.title, document.URL.replace("?payed=true", ""));
+  }
+}
+
+function displayServices(json) {
+
+  let servicesBlock = document.querySelector("div.service-list-group");
+  let data = getData(json);
+  let servicesAll = data.services
+  if (servicesBlock) {
+    let mainBlocks = document.getElementsByClassName("checkbox-row")
+    let servicesStatic = Array.prototype.map.call(mainBlocks, block => {
+      return block.getAttribute("id");
+    })
+    servicesStatic = servicesStatic.filter(service => !!service)
+    for (let i = 0; i < servicesStatic.length; i++) {
+      servicesAll.map(function (service) {
+        if (+servicesStatic[i] === service.id) {
+          let checkbox = mainBlocks[i].querySelector("input");
+          if (checkbox.getAttribute("type") === "checkbox")
+            checkbox.addEventListener("click", refreshPrice);
+          checkbox.value = service.id;
+          mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
+          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+          servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
+        }
+      })
+    }
+  } else {
+    servicesAll.map(function (service) {
+      servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
+    })
+  }
+}
+
+function getServices() {
+  let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
+    + managerId, null, displayServices);
+}
+
+function mainFormSubmit(event) {
+  event.preventDefault();
+  let service = event.target.service.value;
+  let city = localStorage.city ? localStorage.city : "unknown";
+  let comment = (event.target.id === "callComplex" ? "complex " : "service consult ");
+
+  let params = [
+    event.target.fullname.value,
+    event.target.email.value,
+    event.target.phone.value,
+    comment,
+    [+service],
+    managerId,
+    city,
+  ];
+  getBookTime([+service], 0, bookRecord, params);
+}
+
+function complexFormSubmit(event) {
+  event.preventDefault();
+  let name = event.target.fullname.value;
+  let email = event.target.email.value;
+  let phone = event.target.phone.value;
+  let city = localStorage.city ? localStorage.city : "unknown";
+  let isComplex = document.querySelector('input[type="radio"]:checked');
+  let comment = (+event.target.payment.value ? "payment" : "online order") + (isComplex ? " complex" : " service");
+  let serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked');
+  let services = [...serviceCheckboxes].map(checkbox => {
+    return checkbox.value;
+  });
+  if (+event.target.payment.value) {
+    $('#paymentPopup').modal('show');
+    let serviceNames = [...serviceCheckboxes].map(checkbox => {
+      return checkbox.parentNode.nextElementSibling.textContent;
+    });
+    payment(name, email, phone, comment, services, serviceNames.join(","))
+  } else {
+    let params = [name, email, phone, comment, services, managerId, city]
+    getBookTime(services, 0, bookRecord, params);
+  }
+}
+
+function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   let date = new Date();
-  userParams = {
-    "phone": params.phone,
-    "fullname": params.fullName,
-    "email": params.email,
-    "comment": isPayment ? "online order+payment" : "online order",
+  if (plusDate > 0) date.setDate(date.getDate() + plusDate);
+  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+
+  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
+  url += services ? ("?service_ids=" + encodeURIComponent(services.join(","))) : '';
+  let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+  ajax('GET', headers, url, null, function (data) {
+    let dataArr = getData(data);
+    if (processErrors(dataArr)) return alert("Error");
+    if (dataArr.length < services.length) return getBookTime(services, ++plusDate, callbackFunction, callbackParams);
+    else {
+      callbackParams.push(dataArr[0].datetime);
+      callbackFunction(...callbackParams)
+    }
+  });
+}
+
+function bookRecord(name, email, phone, comment, services, managerId, city, datetime) {
+  let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
+
+  let date = new Date();
+  let userParams = {
+    "phone": phone,
+    "fullname": name,
+    "email": email,
+    "comment": comment + ' ' + city,
     "appointments": [
       {
         "id": date.getTime(),
-        "services": params.services,
+        "services": services,
         "staff_id": managerId,
-        "datetime": time
+        "datetime": datetime
       }
     ]
   };
-  ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams, function (data) {
-    let err = processErrors(getData(data));
-    if (!err) {
-      alert("Success");
-    }
-  });
-  if (isPayment)
-    preparePayButton();
+  ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
+    function (data) {
+      let err = processErrors(getData(data));
+      if (servicesArr.length === 0) {
+        getServices();
+      } else if (!err) {
+        $('#sendComplex').modal('hide');
+        $('#modalServiceListSinugUp').modal('hide');
+        $('#thanksPopup').modal('show');
+      }
+    });
 }
 
-function preparePayButton() {
-  let params = getFormParams();
-  if (!params.phone || !params.fullName || !params.email || !params.services) {
-    alert("we haven`t all data for payment");
-    return;
+function payment(name, email, phone, comment, services, servicesString) {
+  localStorage.fullName = name;
+  localStorage.email = email;
+  localStorage.phone = phone;
+  localStorage.comment = comment;
+  localStorage.services = services;
+  let order_desc = "User: " + phone + " " + email + "pay for services: " + servicesString;
+  let amount = 0;
+  for (let i in services) {
+    amount += servicesArr[services[i]].price;
   }
-  let price = 0;
-  // console.log(servicesArr);
-  // console.log(params.services);
-  for (let i in params.services) {
-    price += servicesArr[params.services[i]].price;
-  }
-  let desc = "User: " + params.phone + " " + params.email + "pay for services: " + params.services.join(",");
-  let order = createOrder(price, desc, params.fullName, params.services.join(","), params.email, params.phone);
-  console.log(order)
-  location.replace(createOrder(price, desc, params.fullName, params.services.join(","), params.email, params.phone));
+  location.href = createOrder(amount, order_desc, name, servicesString, email, phone);
 }
 
 function createOrder(amount, order_desc, name, services, email, phone) {
   var button = $ipsp.get('button');
-  button.setMerchantId(1432749);
-  button.setAmount(amount, 'UAH');
-  button.setResponseUrl('http://stefany.teymax.com/?payed=true');
+  button.setMerchantId(1397120);
+  button.setAmount(amount, 'UAH', true);
+  button.setResponseUrl(document.URL + "?payed=true"/*'http://steffany.dotwork.digital/laser/?payed=true'*/);
   button.setHost('api.fondy.eu');
   button.addField({
     label: 'Описание платежа',
@@ -471,19 +282,88 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value: phone,
     readonly: true
   });
+
   button.addField({
     label: 'services',
     name: 'user_services',
     value: services,
     readonly: true
   });
-  console.log(button);
+
   return button.getUrl();
 }
 
-function sendEmail ( details ) {
-  Email.send( {
-    ...mail,
-    ...details
-  } )
+function refreshPrice(event) {
+  let radioBtns = document.querySelectorAll('input[type="radio"]:checked');
+  [...radioBtns].forEach(radio => {
+    radio.checked = false;
+  });
+  let checkbox = event.target;
+  let name = checkbox.parentNode.nextElementSibling.textContent;
+  let totalPriceElem = document.querySelectorAll(".serviceListSum");
+  let temp = totalPriceElem[0].textContent.replace(" грн.", "");
+  let totalPrice = checkbox.checked ? +temp + servicesArr[+checkbox.value].price : +temp - servicesArr[+checkbox.value].price;
+  totalPriceElem.forEach(elem => {
+    elem.textContent = totalPrice + " грн."
+  })
+  let totalTimeElem = document.querySelectorAll(".serviceListTime");
+  temp = totalTimeElem[0].textContent.replace(" мин", "");
+  let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
+  totalTimeElem.forEach(elem => {
+    if (totalTime % 60 === 0)
+      elem.textContent = totalTime / 60 + ' ч';
+    else {
+      let minutes = totalTime % 60
+      let hours = (totalTime - minutes) / 60
+      if (hours === 0)
+        elem.textContent = minutes + " мин"
+      else
+        elem.textContent = hours + " ч " + minutes + " мин"
+    }
+  })
+  let count = document.querySelectorAll('input[type="checkbox"]:checked').length
+  document.querySelector('#yclient_form .c-content-count').innerHTML = `
+      <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Выбрано услуг</span>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 countCheckedService">${count}</span></div>
+      <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общее время</span>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListTime">${totalTime} мин.</span></div>
+      <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общая сумма</span>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListSum">${totalPrice} грн.</span></div>
+      `;
+  let servicesContainer = document.querySelectorAll(".choosenServices");
+  [...servicesContainer].forEach(container => {
+    let elem = `
+          <div class="checkbox-row checkbox-row-checked d-flex align-items-start justify-content-between py-2">
+              <div class="column-right d-flex align-items-start">
+                  <img src="./assets/icon/svg/checkbox.svg" class="mt-1 mr-2">
+                  <p class="paragraph-text text-w-light text-color-white mb-0">${name}</p>
+              </div>
+              <div class="column-left d-flex justify-content-end">
+                  <p class="paragraph-text text-w-bold text-color-white mb-0">${servicesArr[+checkbox.value].price} грн</p>
+              </div>
+        </div>
+    `;
+    if (checkbox.checked) container.innerHTML += elem;
+    else container.innerHTML = container.innerHTML.replace(elem, "")
+  })
+}
+
+function clearTotalPrice() {
+  let checkBtns = document.querySelectorAll('input[type="checkbox"]:checked');
+  [...checkBtns].forEach(check => {
+    check.checked = false;
+  });
+  let servicesContainer = document.querySelectorAll(".choosenServices");
+  [...servicesContainer].forEach(container => {
+    container.innerHTML = "";
+  });
+  let serviceListTime = document.querySelectorAll(".serviceListTime");
+  [...serviceListTime].forEach(container => {
+    container.innerHTML = "0 мин.";
+  });
+  let serviceListSum = document.querySelectorAll(".serviceListSum");
+  [...serviceListSum].forEach(container => {
+    container.innerHTML = "0 грн.";
+  });
+
 }
