@@ -189,27 +189,44 @@
     letter-spacing: 0.25em !important
     padding: 0px 29px 0 0 !important
     margin-top: 37px !important
-  .c-input
-    position: relative
-    &:before, &:after
-      content: ''
-      display: block
-      position: absolute
-      pointer-events: none
-      background:
-        repeat: no-repeat
-        size: cover
-    &:before
-      background:
-        image: url('../assets/icon/svg/phone.svg')
-      width: 10px
-      height: 16px
-      left: 22px
-      bottom: 12px
-    &:after
-      background:
-        image: url('../assets/icon/svg/arrow-right.svg')
-      width: 16px
-      height: 10px
-      right: 21px
-      bottom: 14px
+
+.btn-callback-submit-modal
+  display: flex
+  justify-content: center !important
+  width: 100% !important
+  height: 38px !important
+  text-decoration: none !important
+  border-radius: 100px !important
+  border: 1px solid $btn-primary-color !important
+  background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% ) !important
+  text-transform: uppercase !important
+  cursor: pointer !important
+  @include font(Circe, 800, 10, 25)
+  color: $text-color-dark !important
+  letter-spacing: 0.25em !important
+  padding: 0px 29px 0 0 !important
+  margin-top: 37px !important
+.c-input
+  position: relative
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    pointer-events: none
+    background:
+      repeat: no-repeat
+      size: cover
+  &:before
+    background:
+      image: url('../assets/icon/svg/phone.svg')
+    width: 10px
+    height: 16px
+    left: 22px
+    bottom: 12px
+  &:after
+    background:
+      image: url('../assets/icon/svg/arrow-right.svg')
+    width: 16px
+    height: 10px
+    right: 21px
+    bottom: 14px

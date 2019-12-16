@@ -13,13 +13,13 @@ section.section.consultation-form
           p.paragraph-text.text-color-lightdark.text-center.mb-38 и мы вам перезвоним
           .form-group
             input#fullnameConsult.form-control(name = "fullname" type='text', aria-describedby='emailHelp', placeholder='Имя' required )
-            .form-group
+          .form-group
             input#emailConsult.form-control(name = "email" type='email', aria-describedby='emailHelp', placeholder='Email' required )
-            .form-group
+          .form-group
             input#phoneConsult.form-control(name = "phone" type='tel', placeholder='Телефон' required maxlength="19" minlength="19" pattern=".{19}")
-
-            input#service(name = "service", type="hidden" value="1415297")
-            input.btn-callback-submit(type='submit' value='перезвоните мне')
+            .c-input
+              input#service(name = "service", type="hidden" value="1415297")
+              input.btn-callback-submit(type='submit' value='перезвоните мне')
 
           small.small-label.mt-3 * мы наберем вас в течении 15 минут
           img(src="assets/img/logo-bg.png")
