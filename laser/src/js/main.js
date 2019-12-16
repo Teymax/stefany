@@ -173,6 +173,7 @@ function complexFormSubmit(event) {
     return checkbox.value;
   });
   if (+event.target.payment.value) {
+    $('#paymentPopup').modal('show');
     let serviceNames = [...serviceCheckboxes].map(checkbox => {
       return checkbox.parentNode.nextElementSibling.textContent;
     });
