@@ -3,43 +3,56 @@ section.section.service-laser-service-list
   @include media-breakpoint-up(xl)
     background: linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
   .container
-    background: url(../assets/img/service-list/service-laser-service-list-bg-tablet.svg)
-    background-repeat: no-repeat
-    background-position: top center
+    background:
+      image: url(../assets/img/service-list/service-laser-service-list-bg-tablet.svg)
+      repeat: no-repeat
+      position: top center
     overflow: initial
     @include media-breakpoint-up(xl)
-      background: url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
-      background-position: -100px 0
-      background-repeat: no-repeat
+      background:
+        image: url(../assets/img/service-list/service-laser-service-list-bg.png), linear-gradient(to right, #EDE1DF 50%, #6F7682 50%)
+        position: -100px 0
+        repeat: no-repeat
       overflow: initial
 
+
+
   .column-left
-    width: 69px
+    //width: 69px
     display: flex
     justify-content: space-between
+    @include media-breakpoint-down(sm)
+      width: 100%
     .paragraph-text
       white-space: nowrap
-
-
+  .column-right
+    width: 75%
+    @include media-breakpoint-down(lg)
+      width: 100%
+  .column-left
+    width: 25%
+    @include media-breakpoint-down(lg)
+      width: 32%
+    .paragraph-text
+      margin-right: .5rem
   .custom-py-services-price
     padding: 72px 0
-
-  .man-symbol-bg
-    background: url(../assets/img/service-laser-page/man-symbol.svg) center -5px no-repeat
+    @include media-breakpoint-down(lg)
+      padding: 54px 0
+    @include media-breakpoint-down(sm)
+      padding: 28px 0
+  .woman-symbol-bg.man-symbol-bg
+    background: url(../assets/icon/svg/male.svg) center 7px no-repeat
     background-size: 360px 360px
 
   .woman-symbol-bg
-    background: url(../assets/img/service-laser-page/woman-symbol.svg) center -5px no-repeat
+    background: url(../assets/icon/svg/female.svg) center 7px no-repeat
     background-size: 360px 360px
 
   .service-section-header-mb
     margin-bottom: 55px
 
-  .paragraph-text
-    //line-height: 100%
 
-  h3
-    font-size: 30px
   .checkbox-group
     display: flex
     flex-direction: column
@@ -53,9 +66,8 @@ section.section.service-laser-service-list
       input
         width: 15px
         height: 15px
-        //margin-bottom: 1.2rem
   .list-male
-    display: none
+    //display: none
   .container
     .row
       .left
@@ -75,58 +87,62 @@ section.section.service-laser-service-list
             padding: 0 15px
           h2
             font-size: 30px
-      //.checkbox-group
-         // width: 100%
-          //.checkbox-row
-             // width: 100%
       .right
+        .sale-container
+          position: relative
+          height: 110px
+          width: 100%
+        .sale-title
+          @include font(CormorantGaramond, 700, 30, 30)
+          letter-spacing: 0.01em
+          color: $text-color-white
+          &:before
+            content: ' '
+            display: block
+            position: absolute
+            width: 234%
+            height: 180px
+            top: -72px
+            left: -57px
+            background-image: url(../assets/img/laser-page/sale-bg.png)
+            background-size: 80%
+            background-repeat: repeat
+            z-index: -1
+            border-bottom: 2px solid rgba(255, 255, 255, 0.24)
         .stash
-          //position: sticky
-          //top: -20px
-          .sale-container
-            width: 324px
-            height: 215px
-            background-image:  url(../assets/img/service-laser-page/sale.png)
-            background-size: cover
-            background-repeat: no-repeat
-            &:before
-              content: '-40%'
-              display: block
-              height: 100px
-              width: 100px
-              background-color: #9FA6BA
-              border-radius: 50%
-              position: absolute
-              top: 5px
-              left: -6px
-              @include font('CormorantGaramond', 700, 48, 90)
-              color: $text-color-white
-              text-align: center
-            h4
-              width: 42%
-              line-height: 23px
+          position: sticky
+          top: 71px
+          //margin-left: 20%
+          height: 90vh
           .checkbox-group
             width: 324px
             box-sizing: border-box
-            border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+            overflow: auto
+            max-height: 343px
+            @media(min-width: 1920px)
+              max-height: 560px !important
           .sale-group
             width: 77%
             box-sizing: border-box
             border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+
             p
               margin: 20px 0
               &:nth-of-type(1)
                 margin-left: 2rem
+          .c-btn
+
           .price-group
-            width: 77%
-            .price-block
-              width: 50%
-              p
-                margin: 10px 0
-              img
-                width: 20px
-                height: 20px
-                margin: 10px 0
+
+          .price-count
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-top: 1px solid rgba(255, 255, 255, 0.34)
+            width: 95%
+            padding-top: 15px
+            margin-top: auto
+            margin-bottom: 24px
 section.section.service-laser-service-list-tablet1
   background: url(../assets/img/service-laser-page/list-image-tablet.png)
   background-size: cover
@@ -140,7 +156,6 @@ section.section.service-laser-service-list-tablet1
     width: 159px
     height: 36px
     margin-top: 5px
-    //margin: -40px 0 30px
   h3
     font-size: 30px
   .sale-img-container
@@ -186,17 +201,65 @@ section.section.service-laser-service-list-tablet2
     width: 100%
 section.section.service-laser-service-list-tablet3
   background: #6f7682
+
+  .container
+    transition: transform 0.2s ease-in
+  .c-content
+    margin-left: auto
+    margin-right: auto
+    max-width: 425px
+
+
+  .sale-container
+    background-image: url(../assets/img/laser-page/tablet3-bg.png)
+    background-size: cover
+    border-bottom: 1px solid rgba(255, 255, 255, 0.34)
+
+    .sale-title
+      @include font(CormorantGaramond, 700, 30, 30)
+      letter-spacing: 0.01em
+      color: $text-color-white
+      padding-top: 65px
+      padding-bottom: 42px
+      @include media-breakpoint-down(sm)
+        font-size: 24px
+        line-height: 30px
+        padding-top: 27px
+        padding-bottom: 12px
+
+  .checkbox-row
+    width: 425px
+    @include media-breakpoint-down(sm)
+      width: 290px
+
+  .price-count
+    padding-top: 38px
+    border-top: 1px solid rgba(255, 255, 255, 0.34)
+    @include media-breakpoint-down(lg)
+      margin-top: 52px
+      margin-bottom: 53px
+    @include media-breakpoint-down(lg)
+      margin-bottom: 18px
+      padding-top: 22px
+
+
+.bottom-content
+  margin-top: 2px
+  background: #6f7682
+  padding: 41px 0 38px 0
+  //width: 362px
   .c-btn
-    display: none
-    display: inline-flex
+    display: flex
     justify-content: space-between
     @include media-breakpoint-down(sm)
       flex-direction: column
       align-items: center
       justify-content: space-between
       height: 92px
-
-
+    .button
+      width: 154px
+      height: 38px
+  svg.icon.icon-arrow path
+    fill: #fff !important
 .w-332
   width: 332px
-

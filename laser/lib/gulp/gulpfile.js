@@ -49,7 +49,7 @@ function styles () {
   //Все файлы по шаблону './src/sass/**/*.sass'
   return gulp.src( cssFiles )
              //объединение файлов в один
-             .pipe( sass().on( 'error', sass.logError ) )
+             .pipe( sass().on( '_error.sass', sass.logError ) )
              .pipe( concat( 'style.css' ) )
              // добовление префиксов
              .pipe( autoprefixer() )
@@ -79,16 +79,16 @@ function scripts () {
              //объединение файлов в один
              .pipe( concat( 'main.js' ) )
              // минификация JS
-             .pipe( uglify( {
-               toplevel: true
-             } ) )
+             // .pipe( uglify( {
+             //   toplevel: true
+             // } ) )
              //Выходная папка для скриптов
              .pipe( gulp.dest( '../../build/js' ) )
              .pipe( browserSync.stream() )
 }
 
 function clean () {
-  return del( [ 'build/*' ] )
+  return del( ['build/*'], { force: true } )
 }
 
 function movePug () {

@@ -6,18 +6,30 @@ section.section.about-video
           .col-12.order-2.order-xl-1.mt-4.mt-md-5.mt-xl-0
             a.d-flex
               // (data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
-              img.video-img.w-100(src="assets/img/about/about-video-1.jpg", alt="about-video")
+              img.image-about-dynamic.video-img.w-100
               //span.play-btn.d-flex.align-items-center.justify-content-center
               //  span
           .col-12.order-1
             .c-content
-              a(href="").mr-2
+              a(target="_blank").inst-dynamic.mr-2
                 img(src="assets/icon/about-steffany-video/soc-instagram.svg" alt="soc-instagram.svg")
-              a(href="").mr-4
+              a(target="_blank").fb-dynamic.mr-4
                 img(src="assets/icon/about-steffany-video/soc-facebook.svg" alt="soc-facebook.svg")
-              +btnSimple('steffany podology')(class="fluid mr-4 d-none d-xl-flex")
-              +btnSimple('steffany beauty')(class="fluid d-none d-xl-flex")
-              +btnCallback('подробнее')(class="fluid d-xl-none ml-auto")
+              a(target="_blank" href='http://steffany.dotwork.digital/podology')
+                .btn-simple.fluid.mr-4.d-none.d-xl-flex
+                  .text-section
+                    span steffany podology
+              a(target="_blank" href='http://steffany.dotwork.digital/beauty')
+                .btn-simple.fluid.mr-4.d-none.d-xl-flex
+                  .text-section
+                    span steffany beauty
+              a.fluid.d-xl-none.ml-auto(href="http://steffany.dotwork.digital/homepage/")
+                .btn-callback
+                  .text-section
+                    +penSvg
+                    span подробнее
+                  .arrow-section
+                    +arrowSvg
       .col-12.col-xl-5.order-1
         .c-desc
           h3.h2-title.text-color-dark.mb-50 Давайте знакомиться!

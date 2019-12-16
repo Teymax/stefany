@@ -7,14 +7,14 @@
   width: 13px
   height: 17px
 svg.icon-loc
-  width: 16px !important
-  height: 13px !important
+  //width: 16px !important
+  //height: 13px !important
   margin-right: 6px !important
   margin-left: 0 !important
 svg.icon-phone
   width: 15px !important
   height: 15px !important
-  margin-right: 15px !important
+  margin-right: 6px !important
   margin-left: 0 !important
   path
     fill: #3a405b
@@ -81,8 +81,8 @@ svg.icon-arrow
   cursor: pointer
   position: relative
   svg
-    width: 12px
-    height: 8px
+    //width: 12px
+    //height: 8px
     margin-left: 10px
     .cls-1
       fill: #4D5259 !important
@@ -118,8 +118,8 @@ ul.dropdown-menu-list
   li
     .nav-link-text
       white-space: nowrap
-      margin-bottom: 10px
-      margin-top: 10px
+      padding-bottom: 10px
+      padding-top: 10px
       display: block
     &:not(:last-child)
       border-bottom: 1px solid #D2DBE9
@@ -141,12 +141,15 @@ ul.dropdown-menu-list
 
 
 header
+  padding-bottom: 64px
+  @include media-breakpoint-down(lg)
+    padding-bottom: 0
   //position: relative
   z-index: 5
   .header-lang
   .container
-    padding-top: 22px
-    padding-bottom: 22px
+    //padding-top: 22px
+    //padding-bottom: 22px
   .c-logo
     width: 100%
     max-width: 152px
@@ -172,12 +175,12 @@ header
     span
       color: rgba(132, 138, 164, 1)
       @include media-breakpoint-down(sm)
-        color: #fff
+        //color: #fff
     svg
       @include media-breakpoint-down(sm)
-        fill: #fff !important
+        //fill: #fff !important
   .c-row
-    max-width: 555px
+    max-width: 44em
     ul.header-contact-list
       margin-bottom: 20px !important
       &:nth-last-child(1)
@@ -206,7 +209,7 @@ nav.header-nav
     li
       position: relative
       cursor: pointer
-@media(max-width: 991px)
+@include media-breakpoint-down(lg)
   .header-nav-wrap
     position: fixed !important
     z-index: -20

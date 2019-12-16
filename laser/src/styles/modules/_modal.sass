@@ -1,33 +1,74 @@
 .modal-popup
-  max-width: 396px !important
+
+  @include media-breakpoint-down(sm)
+    margin: 0 !important
+    border-radius: 0px !important
   .modal-content
-    padding-top: 53px
-    padding-bottom: 50px
-    width: 100% !important
-    background: #2F3847 !important
-    &:not(.px-1)
-      padding-left: 73px !important
-      padding-right: 73px !important
+    position: relative
+    max-width: 396px !important
+    height: 528px
+    padding: 53px 66px !important
+    background-color: #EDE1DF !important
+    border-radius: 8px
+    border: none !important
+    background:
+      position: bottom
+      image: url("../assets/img/logo-bg.png")
+      repeat: no-repeat
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      width: 100%
+      //height: 100vh
+      border-radius: 0px !important
+    button.close
+      position: absolute
+      z-index: 1
+      top: 3px
+      right: -50px
+      opacity: 1
+      @include media-breakpoint-down(sm)
+        top: 21px
+        right: 23px
+      span
+        background:
+          image: url("../assets/img/cross.png")
+          repeat: no-repeat
+        display: block
+        width: 24px
+        height: 24px
+    .c-content
+      max-width: 252px
+      margin: 0 auto
+      .button
+        max-width: 100%
+
     h4
-      padding-bottom: 10px
-      @include font(Circe, 700, 20, 20)
-      color: #ffffff
+      width: 265px
       text-transform: uppercase
+      @include font(Circe, 700, 20, 29)
+      color: #4D5259 !important
+      letter-spacing: 0.01em
+      @include media-breakpoint-down(lg)
+        width: 100%
     h5
-      @include font(Circe, 400, 16, 16)
-      padding-bottom: 32px
-      color: #ffffff
+      @include font(Circe, 400, 16, 31)
+      color: #4D5259
+      letter-spacing: 0.4px
+      margin-bottom: 21px
     form
-      input, select
+      margin-bottom: 30px
+      input
         padding: 12px 20px
         background: #F8F8F8
         border-radius: 4px
         border: none !important
         outline: none !important
-        background: rgba(255, 255, 255, 0.2)
-        color: rgba(255, 255, 255, 0.66) !important
-        //@include placeholder
-        //  color: rgba(255, 255, 255, 0.66) !important
+        background: rgba(77, 82, 89, 0.2)
+        color: #495057
+        height: 40px
+        margin-bottom: 12px
+        &::placeholder
+          color: #fff
       select
         padding-right: 35px !important
         background-image: url('../assets/img/padalogy/learning/arrow.svg')
@@ -37,25 +78,29 @@
         -moz-appearance: none
         text-indent: 1px
         text-overflow: ''
-      .btn-send
-        height: 50px !important
-        padding-right: 28px
-        padding-left: 45px
-        border: none !important
-        background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 64px, #7B9DDD 0, #7B9DDD)
+
+    .line-height
+      line-height: 31px
+    .button
+      margin-top: 24px
+    .btn-send
+      height: 50px !important
+      padding-right: 28px
+      padding-left: 45px
+      border: none !important
+      background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 64px, #7B9DDD 0, #7B9DDD)
+      span
         span
-          span
-            color: #ffffff !important
-  button
-    max-width: 100% !important
-    & > span
-      justify-content: center !important
-      padding-right: 60px
-      max-width: 100% !important
-#thanksPopup
+          color: #ffffff !important
+  .c-content-count
+    margin-top: 24px
+
+
+.modal-popup.thanks-popup
   .modal-content
     height: 430px
-    background: url('../assets/img/padalogy/learning/modalThanks.png') !important
-    background-size: cover !important
-    background-position: bottom center !important
-    background-repeat: no-repeat !important
+    padding: 112px 45px !important
+    h4
+      width: 100%
+    button.close
+      top: -30px

@@ -1,9 +1,64 @@
 section.section.discount
-  padding-top: 75px
-  padding-bottom: 72px
   background:
     image: url("../assets/img/background/discount-bg.jpg")
     size: cover
+  padding-top: 30px
+  padding-bottom: 48px
+  @include media-breakpoint-down(lg)
+    padding-top: 26px
+    padding-bottom: 51px
+  @include media-breakpoint-down(sm)
+    padding-top: 19px
+    padding-bottom: 44px
+  .h2-title
+    margin-bottom: 18px
+    @include media-breakpoint-down(lg)
+      margin-bottom: 21px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 10px
+  .container-mobile
+    @include media-breakpoint-down(sm)
+      padding-left: 0 !important
+      padding-right: 0 !important
+  .discount-subtitle
+    @include font (Circe, 400, 20, 32)
+    color: #556278
+    margin-bottom: 30px
+    @include media-breakpoint-down(lg)
+      margin-bottom: 43px
+    @include media-breakpoint-down(sm)
+      font-size: 18px
+      line-height: 22px
+      margin-bottom: 33px
+
+  .discount-desc
+    @include font (Circe, 400, 16, 26)
+    color: #556278
+    max-width: 829px
+    margin:
+      top: 70px
+      left: auto
+      right: auto
+      bottom: 42px
+    @include media-breakpoint-down(lg)
+      margin-top: 49px
+      margin-bottom: 51px
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 22px
+      margin-top: 30px
+      margin-bottom: 15px
+
+  .btn-callback
+    margin:
+      top: 17px
+      left: auto
+      right: auto
+    max-width: 251px
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      margin-left: auto
+      margin-right: auto
   .container
     .timer-text
       @include font (Circe, 900, 26, 73)
@@ -12,20 +67,59 @@ section.section.discount
       li
         &:before
           background: $color-coral
+    .box-wrap
+      background-color: #EDE1DF
+      border-radius: 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 395px
+      box-shadow: 0px 10px 25px rgba(58, 64, 91, 0.15)
+      @include media-breakpoint-down(lg)
+        margin:
+          left: auto
+          right: auto
+          bottom: 30px
+      @include media-breakpoint-down(sm)
+        width: 100%
+      .paragraph-text
+        margin: 0 auto 24px auto
+        text-align: center
+        max-width: 321px
+        input[type='radio']
+          cursor: pointer
+          margin-right: 5px
+          width: 13px
+        input[type='radio']:checked:after
+          width: 6px
+          height: 6px
+          border-radius: 50%
+          top: -7px
+          left: 3px
+          position: relative
+          background-color: $primary-color
+          content: ''
+          display: inline-block
+          visibility: visible
+          @include media-breakpoint-down(lg)
+            top: -8px
+          @include media-breakpoint-down(sm)
+            top: -5px
     .c-content
       position: relative
-      overflow: hidden
-      height: 320px
-      background-color: #fff
-      .d-discount
-        position: absolute
-        top: -82px
-        left: -82px
-        display: block
-        width: 140px
-        height: 140px
-        background-color: #A9A8C6
-        transform: rotate(45deg)
+      width: 357px
+      border-radius: 10px
+      margin: 20px
+      border: 1px solid #9FA5B9
+      @include media-breakpoint-down(lg)
+
+      @include media-breakpoint-down(sm)
+        width: 100%
+      .discount-title
+        @include font (CormorantGaramond, 700, 24, 37)
+        letter-spacing: 0.15px
+        margin-bottom: 28px
+
       .button
         max-width: 154px
         .btn-first
@@ -42,50 +136,37 @@ section.section.discount
           @include font (Circe, 900, 18, 0)
           color: #fff
 
-      @include media-breakpoint-down(lg)
-        max-width: 430px
-        margin:
-          left: auto
-          right: auto
-          bottom: 30px
+
       .c-btn
         margin-left:  auto
         margin-right: auto
-        margin-top: 76px
         max-width: 320px
         display: flex
         justify-content: space-between
+        margin-bottom: 34px
+        @include media-breakpoint-down(lg)
+        @include media-breakpoint-down(sm)
+          flex-direction: column
+          align-items: center
+          height: 100px
+          justify-content: space-between
+          margin-bottom: 29px
+  .bold
+    @include  font(Circe, 700, 18, 22)
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
 
-  b
-    color: $text-color-dark
-@include media-breakpoint-down(lg)
-  section.section.discount
-    padding-top: 107px
-    padding-bottom: 30px
-    .container
-      .c-content
-        .d-discount
-          max-width: 430px
-          margin:
-            left: auto
-            right: auto
-            bottom: 30px
-        .c-btn
 
-@include media-breakpoint-down(sm)
-  section.section.discount
-    padding-top: 65px
-    padding-bottom: 25px
-    .container
-      .c-content
-        max-width:  285px
-        .d-discount
-        .c-btn
-          position: relative
-          .button
-            position: absolute
-          .btn-first
-            left: -41px
-          .btn-second
-            right: -44px
+  .line-through
+    text-decoration: line-through
+    @include  font(Circe, 300, 16, 19)
+    @include media-breakpoint-down(lg)
+      font-size: 16px
+    @include media-breakpoint-down(sm)
+
+  .large
+    @include  font(Circe, 800, 20, 24)
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+
 
