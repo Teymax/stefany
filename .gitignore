@@ -4,5 +4,9 @@ node_modules/
 .history/
 .history/*
 */build
-*/build/**
+*/build/*
 package-lock.json
+*.zip
+**/.DS_Store
+*/.DS_Store
+.DS_Store

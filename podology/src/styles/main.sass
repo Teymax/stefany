@@ -9,7 +9,9 @@
 @import "pages/common/variables"
 @import "pages/common/mixins"
 @import "pages/common/fonts"
-@import "../../node_modules/bootstrap/scss/mixins/breakpoints"
+@import "../../node_modules/bootstrap/scss/bootstrap"
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot"
 @import 'pages/common/custom_classes'
 @import 'pages/common/header'
 @import 'pages/common/footer'
@@ -17,7 +19,7 @@
 @import "pages/common/reset"
 @import "pages/common/spacing-helpers"
 @import "pages/common/grid"
-@import "pages/common/callback-card"
+@import "pages/common/layout-helpers"
 
 /* Home Page
 @import 'pages/index/introduce'
@@ -35,6 +37,21 @@
 
 /* About
 @import 'pages/about/about'
+@import 'pages/about/list'
+@import 'pages/about/center'
+@import 'pages/about/diploma'
+
+/* Podology
+@import 'pages/podology/about'
+@import 'pages/podology/services'
+@import 'pages/podology/specialists'
+@import 'pages/podology/constulation'
+@import 'pages/podology/technologies'
+
+/* About Salon
+@import 'pages/about-salon/about-salon'
+@import 'pages/about-salon/list'
+@import 'pages/about-salon/doctors'
 
 /***************
 /*  BOOTSTRAP
@@ -56,6 +73,9 @@
 @import 'modules/breadcrumbs'
 @import 'modules/video'
 @import 'modules/accordion'
+@import 'modules/callback-card'
+@import 'pages/common/map'
+@import 'modules/contact-form'
 
 /****************
 /*     LIBS
@@ -65,10 +85,25 @@
 @import 'sections/services/symptoms-with-image'
 @import 'sections/services/disease-treatment'
 @import 'sections/services/treatment-services'
+@import 'sections/services/backgrounds'
+@import 'sections/services/prepare-to-appointment'
+@import 'sections/services/treatment-fungus'
 
 @import 'lib/all'
+@import 'sections/learning/all'
+@import 'sections/orthopedics/all'
+@import 'sections/ingrownNail/all'
 
 /* Ne bug, a feature
+
+body
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+	padding: 0 !important
+
+footer
+	margin-top: auto
 
 @media only screen and (min-width: 1199px)
 	.container

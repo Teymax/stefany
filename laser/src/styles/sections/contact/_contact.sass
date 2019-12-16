@@ -1,0 +1,79 @@
+section.section.contact
+  @include media-breakpoint-down(lg)
+    background:
+      image: url("../assets/img/contact/bg-tablet.png")
+      background-size: cover
+  .map
+    @include media-breakpoint-down(lg)
+      margin-top: 45px
+      height: 296px
+    @include media-breakpoint-down(sm)
+      margin-top: 33px
+      height: 329px
+  .btn-callback
+    margin-top: 30px
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      margin-top: 51px
+    .text-section
+      span
+        color: $text-color-lightdark
+  .container
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
+    .btn-callback
+      width: 12em
+    .mini-map
+      //background: url('../assets/img/common/mobile-map.png') no-repeat -31em -4em
+      //background: url('../assets/img/common/mobile-map.png') no-repeat center center
+      //background-size: 80em
+      //height: 20em
+      //margin-top: 3em
+    .form-title
+      @include font (CormorantGaramond, 700, 26, 31)
+.feedback-form
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  padding-top: 36px
+  @include media-breakpoint-down(lg)
+  @include media-breakpoint-down(sm)
+    padding-top: 18px
+
+
+  textarea
+    height: 100%
+    min-height: 144px
+    resize: none
+    box-sizing: border-box
+
+  input,
+  textarea
+    display: block
+    appearance: none
+    outline: none
+    width: 100%
+    padding: .5em
+    background-color: #F8F8F8
+    border-radius: 4px
+    border: none
+    &:not(:last-child)
+      margin-bottom: 1rem
+
+    &::placeholder
+      @include font(Circe, 400, 14, 20)
+
+  @include media-breakpoint-up(lg)
+    input
+      width: 90%
+
+
+
+@include media-breakpoint-down(lg)
+  section.section.contact
+
+@include media-breakpoint-down(xs)
+  section.section.contact
+    .form-title
+      font-size: 20px

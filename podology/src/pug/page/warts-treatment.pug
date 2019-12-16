@@ -1,8 +1,25 @@
 extends ../layout/main
 
 block content
-  include ../sections/services/warts-treatment/about-warts
-  include ../sections/services/warts-treatment/callus-symptoms
-  include ../sections/services/warts-treatment/wart-symptoms
+  section.section.wrt(style="padding: 44px 0")
+    .container
+      h1.text-w-bold(style="margin: 0") Лечение бородавок и удаление мозолей в Житомире
   include ../sections/services/warts-treatment/disease-treatment
   include ../sections/services/warts-treatment/treatment-services
+  include ../sections/index/doctors
+  include ../sections/services/service-consultation
+  include ../sections/services/warts-treatment/specific
+  include ../sections/services/warts-treatment/category
+  include ../sections/services/warts-treatment/safe-treatment
+  +FAQ('Часто задаваемые вопросы', 'Возможно, наши пациенты уже спросили то, что вас интересует про лечение бородавок, мозолей и удаление натоптышей в Житомире', [
+    {
+      title: 'Удаление мозолей и бородавок — это больно?',
+      body : 'Почти все пациенты боятся идти к подологу из-за страха боли. При этом они терпят боль и неудобства от того, что живут с подошвенными бородавками или мозолями. Не бойтесь боли! Процедуры пройдут безболезненно благодаря анестезии и аккуратности наших специалистов.'
+    },
+    {
+      title: 'Мне обязательно проходить диагностику стопы?',
+      body : 'Нет, эта диагностика зависит только от вашего желания. Проходите диагностику стопы в том случае, если хотите узнать причины возникновения мозолей и сделать так, чтобы они больше не возвращались. Если проблема действительно в ваших стопах, мы поможем вам скорректировать их положение ортопедическими изделиями. Благодаря этому мозоли не вернутся.'
+    }
+  ], true, 1)
+  include ../sections/services/warts-treatment/slider-bottom-section
+

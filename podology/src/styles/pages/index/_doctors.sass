@@ -1,35 +1,14 @@
 section.section.doctors-list
-	background: url('../images/img/background/doctor-bg.png') no-repeat top left
+	background: url('../assets/img/background/doctor-bg.png') no-repeat top left
 	background-size: cover
 
-	.light-white
-		color: rgba(255, 255, 255, .46)
-		font-size: 1em
-		text-transform: uppercase
+	.owl-nav
+		top: 38% !important
 
-	.specialists
-		&-item
-			&-container
-				position: relative
-				cursor: pointer
-				overflow: hidden
+	@include media-breakpoint-down(sm)
+		.slider-pad
+			padding: 0
 
-		&-info
-			position: absolute !important
-			top: 0
-			left: 0
-			height: 100%
-			background: $spec-bg
-			transition: 0.25s linear
-			opacity: 0
+	p.h-center.light-white
+		letter-spacing: .1em
 
-			&:hover
-				opacity: 1
-
-		.specialists-item-container
-			position: relative
-			cursor: pointer
-			overflow: hidden
-
-		.specialists-img
-			height: 100%

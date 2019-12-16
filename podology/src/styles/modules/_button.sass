@@ -1,12 +1,13 @@
 .btn-callback
 	display: flex
 	justify-content: center
-	width: 14em
-	max-width: 14em
+	width: 100%
+	max-width: 100%
 	text-decoration: none
 	border-radius: 100px
 	border: none
-	background: $btn-primary-bg
+	height: 50px
+
 	color: #fff
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
 	text-transform: uppercase
@@ -16,7 +17,7 @@
 		box-shadow: none
 
 	&.no-svg
-		width: 11em
+		width: 100%
 
 		.text-section
 			width: 75%
@@ -25,6 +26,7 @@
 			width: 25%
 
 	.text-section
+		background: $btn-primary-bg
 		border:
 			top:
 				left-radius: inherit
@@ -36,22 +38,34 @@
 		justify-content: center
 		align-items: center
 		padding: .6em
+		pointer-events: none
+		@include media-breakpoint-down(md)
+			padding: .6em
 		width: 80%
 
 		svg
 			margin-right: .7em
+
 			path
 				fill: #fff
 
 		span
 			margin-top: .15em
+			letter-spacing: 0.25em
+			pointer-events: none
 
 		span
-			@include font(Circe, 400, 11, 20)
+			@include font(Circe, 800, 10, 20)
+			color: #fff
+			@include media-breakpoint-down(md)
+				font-size: 14px
 
 	.arrow-section
 		width: 20%
 		padding: .6em
+		pointer-events: none
+		@include media-breakpoint-down(md)
+			padding: .6em
 		border:
 			top:
 				left-radius: 0
@@ -63,3 +77,12 @@
 		display: flex
 		justify-content: center
 		align-items: center
+
+.btn-arrow, button-forward
+	transition: transform 0.2s ease-out
+
+.btn-callback:hover .btn-arrow
+	transform: translateX(5px)
+
+.button-forward:hover .button-forward:before
+	transform: translateX(5px)

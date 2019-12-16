@@ -3,12 +3,28 @@
   width: 15px
   height: 19px
 
-
+iframe
+  width: 100%
+  height: 100%
 .text-dashed
-  border-bottom: 1px dashed #000080
+  background:
+    image: linear-gradient(to right, black 24%, rgba(255, 255, 255, 0) 0%)
+    position: bottom
+    size: 5px 1px
+    repeat: repeat-x
 .small-text
   @include font(Circe, 400, 14, 22)
-  color: $text-color-dark
+  color: #4D5259
+
+//hotfix
+.letter-spacing-15
+  letter-spacing: 0.15px !important
+.letter-spacing-1
+  letter-spacing: 0.01em
+.text-opacity
+  color: $text-opacity !important
+//
+
 .text-w-bold
   font-weight: 700 !important
 .text-w-light
@@ -17,28 +33,37 @@
   font-weight: 400 !important
 .text-color-light
   color: $text-color-white !important
-.text-color-lightgray
-  color: $text-color-lightgrey
 .text-color-dark
   color: $text-color-dark !important
-
+.text-color-second-dark
+  color: $text-color-second-dark !important
+.text-color-lightgray
+  color: $text-color-lightgrey
+.text-color-lightdark
+  color: $text-color-lightdark !important
+.text-color-lightdark-header
+  color: #4D5259 !important
 .paragraph-text
   @include font(Circe, 400, 16, 26)
   color: $text-color-white
-.h1-title
-  @include font (CormorantGaramond, bold, 44, 53)
-  color: $text-color-white
+
+
 .h2-title
-  @include font (CormorantGaramond, bold, 34, 53)
+  @include font (CormorantGaramond, bold, 44, 45)
+  letter-spacing: 0.01em
   color: $text-color-white
 .h3-title
+  @include font (CormorantGaramond, bold, 34, 53)
+  color: $text-color-white
+.h4-title
   @include font(Circe, 400, 20, 24)
   color: $text-color-white
-
-.h4-title
+  letter-spacing: 0.1em
+.h5-title
   @include font(CormorantGaramond, 400, 24, 34)
   color: $text-color-white
-
+.sub-title
+  font-size: 27px
 .bnf-number
   //padding-bottom: 20px
   //text-transform: uppercase
@@ -48,8 +73,12 @@
 .extralarge-text-bg
   white-space: nowrap
   position: absolute
-  @include font(Circe, 900, 321, 377)
+  letter-spacing: 0.01em
+  @include font(Circe, 900, 321, 0)
   color: $text-color-white
+  z-index: 10
+  @include media-breakpoint-down(xs)
+    font-size: 159.63px
 
 .custom-icon-number
   display: inline-flex
@@ -61,17 +90,24 @@
   border-radius: 50%
   p
     @include font(Circe, 900, 27, 42)
-    color: $text-color-dark
+    color: $text-color-lightdark
     transform: translateY(9px)
+  &-small
+    @extend .custom-icon-number
+    width: 21.34px
+    height: 21.34px
+    p
+      @include font (Circe, bold, 12.6476, 20)
+      color: #fff
 
 .white-block-design
   position: relative
   background-color: #fff
   img
+    object-fit: cover
     position: absolute
-  p
-    @include font(Circe, bold, 27, 42)
-    color: #9FA6BA
+    box-shadow: $shadow-image
+
 
 .custom-bg-dark
   background-color: #9FA6BA
@@ -84,7 +120,15 @@
     color: #9FA6BA
 
 
-
+.d-line
+  display: block
+  width: 89px
+  height: 2px
+  background: rgba(125, 137, 158, 0.39)
+  margin-top: 25px
+  margin-bottom: 32px
+  @include media-breakpoint-down(xs)
+    margin-bottom: 29px
 // list - style ****
 .info-list
   li
@@ -101,13 +145,14 @@
       border-radius: 50%
 
 
-@include mobile-small
+@include media-breakpoint-down(xs)
   .paragraph-text
     @include font(Circe, 400, 14, 22)
   .h1-title
     @include font (CormorantGaramond, bold, 34, 30)
   .h2-title
-
+    font-size: 30px
+    line-height: 30px
   .h3-title
   .h4-title
 
@@ -135,126 +180,6 @@
   letter-spacing: 2px
   @include font('Circe-Regular', 400, 20, 24)
 
-// buttons - style *******
-//.btn-callback, .btn-send
-//  width: 100%
-//  max-width: 195px
-//  height: 38px
-//  padding-right: 18px
-//  padding-left: 20px
-//  background-imgage: url('../assets/img/background/callback-btn.png')
-//  background-repeat: no-repeat
-//  background-size: 45px 100%
-//  background-position: top right
-//  border: 2px solid $color-purple
-//  text-decoration: none
-//  border-radius: 100px
-//  transition: 0.2s linear
-//  & > span
-//    text-decoration: none
-//    width: 100%
-//    max-width: 120px
-//    svg
-//      width: 13px
-//      height: 13px
-//    .st0
-//      fill: $color-purple-text
-//      transition: 0.3s ease 0.2s
-//    span
-//      padding-top: 2px
-//      @include font ('Circe-ExtraBold', 900, 10, 10)
-//      text-transform: uppercase
-//      letter-spacing: 2px
-//      color: $color-purple-text
-//      transition: 0.3s ease
-//  & > svg
-//    width: 14px
-//    height: 11px
-//    .st0
-//      fill: $color-white
-//  &:hover
-//    background-size: 100% 100%
-//    text-decoration: none
-//    & > span
-//      .st0
-//        fill: $color-white
-//      span
-//        color: $color-white
-//.btn-callback-white
-//  background: url('../assets/img/background/callback-btn-white.jpg')
-//  background-repeat: no-repeat
-//  background-size: 45px 100%
-//  background-position: top right
-//  border: 2px solid $color-white
-//  & > span
-//    span
-//      color: $color-white
-//  & > svg
-//    .st0
-//      fill: $color-purple
-//  &:hover
-//    background-size: 100% 100%
-//    text-decoration: none
-//    & > span
-//      span
-//        color: $color-purple
-//.btn-callback-simple
-//  width: auto
-//  max-width: 100%
-//  & > span
-//    max-width: 100%
-//    span
-//      padding-right: 23px
-//.btn-send
-//  & > span
-//    span
-//      padding-left: 8px
-//      padding-right: 36px
-//.button
-//  cursor: pointer
-//  display: flex
-//  align-items: center
-//  justify-content: center
-//  padding: 0 33px
-//  height: 38px
-//  background: $btn-bg
-//  @include font('Circe-ExtraBold', 900, 10, 13)
-//  text-transform: uppercase
-//  color: $color-white !important
-//  letter-spacing: 1.5px
-//  border-radius: 100px
-//  transition: 0.3s ease
-//  &:hover
-//    box-shadow: 0 0 20px $btn-bg
-//.soc-btn
-//  width: 38px
-//  height: 38px
-//  background: $soc-btn
-//  border-radius: 50%
-//  transition: 0.4s ease
-//  &:hover
-//    background: $color-purple
-//.btn-simple
-//  color: $color-white
-//  height: 38px
-//  padding: 15px 30px
-//  font-size: 10px
-//  text-transform: uppercase
-//  letter-spacing: 2px
-//  transition: 0.4s ease
-//  background: $color-purple
-//.btn-simple:hover
-//  color: $color-white
-//  background: $soc-btn
-//.btn-simple-light
-//  color: $play-btn-color
-//  background: transparent
-//  border: 2px solid $border-light
-//  &:hover, &.active
-//    color: $color-white
-//    background: $color-purple
-//    color: $color-white !important
-//    border: 2px solid $color-purple
 
 
 // bg - style ********
@@ -266,51 +191,28 @@
 .no-bg
   background: transparent !important
 
+//// Icons - style *********
+//.icon
+//  margin-right: 10px
+//.icon-loc
+//  width: 13px
+//  height: 17px
+//.icon-phone
+//  width: 17px
+//  height: 16px
+//.icon-time
+//  width: 17px
+//  height: 17px
+//.icon-mail
+//  width: 17px
+//  height: 13px
+//.icon-arrow
+//  width: 12px
+//  margin-left: 6px
 
 
 
 
-
-
-
-// Icons - style *********
-.icon
-  margin-right: 10px
-.icon-loc
-  width: 13px
-  height: 17px
-.icon-phone
-  width: 17px
-  height: 16px
-.icon-time
-  width: 17px
-  height: 17px
-.icon-mail
-  width: 17px
-  height: 13px
-.icon-arrow
-  width: 12px
-  margin-left: 6px
-
-
-
-// Play-button - style ********
-.play-btn
-  position: absolute
-
-  width: 92px
-  height: 92px
-  background: $color-purple-opacity
-  border-radius: 50%
-  &-orange
-    background: $color-orange-opacity
-  span
-    width: 20px
-    height: 20px
-    background: $play-btn-color
-    clip-path: polygon(0 0, 0% 100%, 100% 50%)
-
-// border - style ********
 .border-b-light
   border-bottom: 2px solid $border-bottom-bg
 .br-100
@@ -358,7 +260,74 @@
       &:not(:last-child)
         margin-right: 16px
       &:hover, &.active
-        background: $color-purple
+        background: #A09BCF
+
+      &:focus
+        border: none !important
+        outline: none !important
+  .owl-nav
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    z-index: -1
+    @include media-breakpoint-down(sm)
+      top: 100% !important
+      width: 100px
+      margin-bottom: 60px
+    span
+      display: none
+    button
+      width: 30px
+      height: 30px
+      opacity: .4
+      &.owl-prev
+        background-image: url('../assets/icon/slider-left-arrow.png') !important
+        background-repeat: no-repeat  !important
+        background-size: contain !important
+        @include media-breakpoint-down(sm)
+          margin-left: 33%
+      &.owl-next
+        background-image: url('../assets/icon/slider-right-arrow.png') !important
+        background-repeat: no-repeat  !important
+        background-size: contain !important
+        @include media-breakpoint-down(sm)
+          margin-right: 33%
+@media (min-width: 1200px)
+  .hidden-item
+    display: none
+
+@media (max-width: 1200px)
+  .px-15
+    padding-left: 15px !important
+    padding-right: 15px !important
+
+.slider-pad
+  padding-left:  47px
+  padding-right: 47px
+.slider-block
+  .owl-dots
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding-top: 60px
+    span
+      display: none
+    .owl-dot
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #000
+      transition: 0.3s ease
+      &:not(:last-child)
+        margin-right: 16px
+      &:hover, &.active
+        background: #000
       &:focus
         border: none !important
         outline: none !important
@@ -386,86 +355,80 @@
         background-repeat: no-repeat  !important
         background-size: contain !important
 
-@media (min-width: 1199px)
-  .hidden-item
-    display: none
+  // VIDEO SLIDER
+  &.video-slider
+    .owl-nav
+      position: absolute !important
+      display: flex
+      top: calc(100% + 26px)
+      left: 0
+      width: 100%
+      margin-top: 0 !important
+      padding-top: 0 !important
+      margin-top: 50px !important
+      button
+        &.owl-prev
+          background-image: url('../assets/icon/aroow-left-gray.png') !important
+          background-repeat: no-repeat  !important
+          background-size: contain !important
+          @include media-breakpoint-down(sm)
+            background-image: url('../assets/icon/slider-left-arrow-mob.svg') !important
 
-@media (max-width: 1199px)
-  .px-15
-    padding-left: 15px !important
-    padding-right: 15px !important
+        &.owl-next
+          background-image: url('../assets/icon/aroow-right-gray.png') !important
+          background-repeat: no-repeat  !important
+          background-size: contain !important
+          @include media-breakpoint-down(sm)
+            background-image: url('../assets/icon/slider-right-arrow-mob.svg') !important
 
-// buttons
-// btn-callback
-.btn-callback
+
+.service-checkbox-label
   position: relative
-  width: 100%
-  max-width: 195px
-  height: 38px
-  padding-right: 18px
-  padding-left: 20px
-  background-position: top right
-  text-decoration: none
-  border-radius: 100px
-  border: 2px solid $btn-primary-color !important
-  background-image: linear-gradient(to right, #fff 76% ,$btn-primary-color 24%)
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
-  font:
-    family: Circe !important
-    weight: 900 !important
-    size: 10px !important
-    style: normal
-  line-height: 25px !important
-  letter-spacing: 1.5px
-
-  text-transform: uppercase
-  svg.first-svg
-    position: absolute
-    top: 11px
-    left: 20px
-  svg.second-svg
-    position: absolute
-    top: 14px
-    right: 20px
-.btn
-  position: relative
+  display: inline-block
   cursor: pointer
-  display: flex
-  align-items: center
-  justify-content: center
-  padding-right: 18px !important
-  padding-left: 25px !important
-  background-color: $btn-primary-color !important
-  text-transform: uppercase
-  color: $text-color-white !important
-  letter-spacing: 1.5px
-  border-radius: 100px !important
-  min-width: 154px
-  min-height: 38px
-  font:
-    family: Circe !important
-    weight: 900 !important
-    size: 10px !important
-    style: normal
-  line-height: 25px !important
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
-  &:active
-    box-shadow: none
-  svg
+  width: 16px
+  height: 16px
+  margin-bottom: 0
+  input
     position: absolute
-    top: 11px
-    left: 20px
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+  .checkmark
+    position: absolute
+    top: 0
+    left: 0
+    width: 16px
+    height: 16px
+    margin-top: 3px
+    border-radius: 2px
+    border-width: 1px
+    border-style: solid
+  .checkmark.dark
+    border-color: #6F7682
+  .checkmark.light
+    border-color: #E8DDDB
+  .checkmark:after
+    position: absolute
+    top: 1px
+    left: 5px
+    display: none
+    content: ''
+    width: 5px
+    height: 10px
+    border-width: 0 3px 3px 0
+    border-style: solid
+    transform: rotate(45deg)
+  .checkmark.dark::after
+    border-color: #6F7682
+  .checkmark.light:after
+    border-color: #E8DDDB
+  input:checked ~ .checkmark:after
+    display: block
 
-.btn-simple
-  padding-left: 20px !important
 
-.btn-primary-color
-  background-color: #F6AE9F !important
-.btn-second-color
-  background-color: #7F8597 !important
-.svg-light
-  fill: #fff !important
-.svg-dark
-  fill: #000 !important
-
-
+.hidden
+  display: none !important
+.visible
+  display: block !important

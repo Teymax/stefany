@@ -1,0 +1,51 @@
+section.section.choose-service-icon
+  padding-bottom: 104px
+  @include media-breakpoint-down(lg)
+    padding-bottom: 69px
+  @include media-breakpoint-down(sm)
+    padding-bottom: 43px
+  .container
+    .h2-title
+      padding-bottom: 64px
+      margin: 0
+      @include media-breakpoint-down(lg)
+        padding-bottom: 41px
+      @include media-breakpoint-down(sm)
+        padding-bottom: 3px
+
+    .c-content
+      display: flex
+      .c-card
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        &:hover .choose-title
+          color: #F6AE9F !important
+        .img-01
+          transform: translate(-6px, 7px)
+        .img-02
+          transform: translate(0px, 0px)
+        .img-03
+          transform: translate(0px, -4px)
+        .img-04
+          transform: translate(0px, 6px)
+        .img-05
+          transform: translate(0px, 7px)
+        .img-06
+          transform: translate(0px, -27px)
+    .choose-title
+      @include font (CormorantGaramond, 700, 24, 24)
+      color: $text-color-lightdark
+
+
+@include media-breakpoint-down(sm)
+  section.section.choose-service-icon
+    .container
+      .c-content
+        display: flex
+        justify-content: center
+        .c-card
+          .img-06
+            transform: translate(0px, 0px)

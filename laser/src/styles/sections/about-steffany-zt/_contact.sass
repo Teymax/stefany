@@ -1,0 +1,97 @@
+section.section.contact-about-zt
+  background:
+    image: url("../assets/img/about-steffany-zt/bg-contact.png")
+    size: cover
+  padding-top: 52px
+  padding-bottom: 62px
+  @include media-breakpoint-down(lg)
+    padding-top: 47px
+    padding-bottom: 0px
+  @include media-breakpoint-down(sm)
+    padding-top: 33px
+  .container-fluid
+    @include media-breakpoint-down(lg)
+      padding: 0
+  .map
+    @include media-breakpoint-down(lg)
+      margin-top: 45px
+      height: 296px
+    @include media-breakpoint-down(sm)
+      margin-top: 33px
+      height: 329px
+
+  .btn-callback
+    margin-top: 40px
+    @include media-breakpoint-down(lg)
+      margin-top: 40px
+
+    @include media-breakpoint-down(sm)
+      margin-top: 51px
+    .text-section
+      span
+        color: #848AA4
+
+  .container
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
+    .btn-callback
+      width: 12em
+    .form-title
+      @include font (CormorantGaramond, 700, 26, 31)
+      color: $text-color-second-dark
+      margin-bottom: 35px
+      letter-spacing: 0.01em
+      @include media-breakpoint-down(sm)
+        @include font (CormorantGaramond, 700, 21, 24)
+  .map
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      padding-top: 18px
+    input, textarea
+      padding: 12px 20px
+
+
+  textarea
+    height: 100%
+    min-height: 144px
+    resize: none
+    box-sizing: border-box
+
+
+  input,
+  textarea
+    display: block
+    appearance: none
+    outline: none
+    width: 100%
+    padding: .5em
+    background-color: #F8F8F8
+    border-radius: 4px
+    border: none
+    &:not(:last-child)
+      margin-bottom: 1rem
+
+    &::placeholder
+      @include font(Circe, 400, 14, 20)
+
+  @include media-breakpoint-up(lg)
+    input
+      width: 90%
+
+
+
+@include media-breakpoint-down(lg)
+  section.section.contact
+
+@include media-breakpoint-down(xs)
+  section.section.contact
+    .form-title
+      font-size: 20px
+
+.tablet-container
+  @include media-breakpoint-down(lg)
+    max-width: 448px

@@ -1,16 +1,37 @@
 // Icons - style header *********
+header
+	a
+		color: $secondary-header-color
+		text-decoration: none
+
+		&:hover
+			text-decoration: none
+			color: $secondary-header-color
+
+	.btn-callback
+		width: 200px
+		height: 38px
+		box-shadow: none
+
+		.text-section
+			span
+				margin-top: .35em
+
+	@include media-breakpoint-up(lg)
+		.btn-callback
+			width: 200px
 
 .icon
 	margin-right: 10px
 
-.icon-loc
+.icon-loc.text-section
+	span
+		margin-top: .35em
 	width: 13px
 	height: 17px
 
 svg
 	&.icon-loc
-		width: 16px !important
-		height: 13px !important
 		margin-right: 6px !important
 		margin-left: 0 !important
 
@@ -46,8 +67,8 @@ svg.icon-arrow
 		fill: #3a405b
 
 .icon-large
-	width: 40px
-	height: 40px
+	width: 40px !important
+	height: 40px !important
 
 .icon-facebook
 	width: 14px
@@ -88,6 +109,11 @@ svg.icon-arrow
 	cursor: pointer
 	position: relative
 
+	.dropdown-menu-list
+		.nav-link-text
+			display: block
+			width: 100%
+
 	svg
 		width: 12px
 		height: 8px
@@ -116,7 +142,7 @@ ul.dropdown-menu-list
 	padding: 30px 25px
 	background: $color-white
 	border-radius: 4px
-	box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15)
+	box-shadow: 0 20px 50px rgba(18, 18, 18, 0.15)
 
 	&::before
 		content: ''
@@ -132,6 +158,7 @@ ul.dropdown-menu-list
 	li
 		a
 			white-space: nowrap
+			font-weight: normal
 
 		&:not(:last-child)
 			padding-bottom: 15px
@@ -209,13 +236,22 @@ nav.header-nav
 	width: 100%
 	max-width: 25em
 	margin-right: 5px
+	@include media-breakpoint-only(md)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
 
 	ul.header-nav-list
 		width: 100%
+		//@include media-breakpoint-down(sm)
+		//	margin-bottom: 11rem !important
 
 		li
 			position: relative
 			cursor: pointer
+
+			span
+				font-family: Circe
 
 			a
 				color: $secondary-header-color
@@ -234,7 +270,8 @@ nav.header-nav
 		max-width: 100% !important
 		height: 100vh
 		padding: 150px 15px 150px !important
-		background: #A09BCF
+		background: url(../assets/img/background/menu.png) no-repeat center center
+		background-size: cover
 		transition: 0.45s ease
 
 		.nav-link-text
@@ -252,7 +289,7 @@ nav.header-nav
 			.dropdown-menu-list
 				width: 100% !important
 				position: static !important
-				display: flex !important
+				display: none !important
 				transform: translateX(0%) !important
 				padding: 0 !important
 				background: transparent !important
@@ -267,7 +304,6 @@ nav.header-nav
 					line-height: 0 !important
 					opacity: 0 !important
 					color: transparent
-					overflow: hidden
 					transition: opacity 0.3s ease 0.1s, font-size 0.2s ease-in-out, padding 0.2s ease-in-out
 
 				li
@@ -282,6 +318,7 @@ nav.header-nav
 		.drop-menu
 			&.open
 				.dropdown-menu-list
+					display: flex !important
 					padding-top: 10px !important
 
 					li
@@ -334,13 +371,14 @@ nav.header-nav
 	.header-nav-wrap
 		position: static !important
 		opacity: 1 !important
-		display: flex
+		display: flex !important
 		align-items: center
 		width: 100% !important
 		max-width: 100% !important
 		height: auto !important
 		padding: 0 !important
 		background: transparent
+		justify-content: center
 	.mob-menu
 		position: fixed !important
 		z-index: -20
@@ -352,13 +390,17 @@ nav.header-nav
 		max-width: 100% !important
 		height: 100vh
 		padding: 150px 15px 150px !important
-		background: #A09BCF
+		background: url(../assets/img/background/menu.png) no-repeat center center
+		background-size: cover
 		transition: 0.45s ease
+
+		& > *
+			position: initial !important
 
 		.dropdown-menu-list
 			width: 100% !important
 			position: static !important
-			display: flex !important
+			display: none !important
 			transform: translateX(0%) !important
 			padding: 0 !important
 			background: transparent !important
@@ -373,7 +415,6 @@ nav.header-nav
 				line-height: 0 !important
 				opacity: 0 !important
 				color: transparent !important
-				overflow: hidden
 				transition: opacity 0.3s ease 0.2s, font-size 0.2s ease-in-out, padding 0.2s ease-in-out
 
 			li
@@ -394,6 +435,7 @@ nav.header-nav
 		&.open
 			.dropdown-menu-list
 				padding-top: 10px !important
+				display: flex
 
 				li
 					&:not(:last-child)
@@ -411,9 +453,25 @@ nav.header-nav
 				z-index: 22
 
 			.mob-menu
+				display: flex !important
+				justify-content: start
 				visibility: visible
 				z-index: 20
 				opacity: 1
+
+				.header-nav-wrap
+					margin-top: 50%
+					margin-bottom: 0 !important
+
+				.nav-callback
+					margin-bottom: 4em
+
+				.btn-callback
+					//position: absolute
+					//left: 50%
+					//transform: translateX(-50%)
+					min-width: 200px
+					min-height: 38px
 	header .c-row ul.header-contact-list > li:not(:last-child)
 		margin-right: 0 !important
 	header .header-contact-list span, header .header-contact-list > li > a

@@ -1,8 +1,16 @@
 .specialists
-  background: url('../assets/img/specialists/specialists-bg.jpg')
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: top left
+  background: url('../assets/img/specialists-zt/bg.jpg')
+    repeat: no-repeat
+    size: cover
+    //position: top left
+  height: 693px
+  padding-top: 70px
+  padding-bottom: 83px
+  @include media-breakpoint-down(lg)
+    height: 100%
+  @include media-breakpoint-down(sm)
+    padding-top: 61px
+    padding-bottom: 57px
   &-info
     position: absolute !important
     top: 0

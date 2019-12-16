@@ -1,0 +1,119 @@
+.btn-callback
+  display: flex
+  justify-content: center
+  width: 100%
+  max-width: 195px
+  height: 38px
+  text-decoration: none
+  border-radius: 100px
+  border: 1px solid $btn-primary-color
+  background: transparent
+  color: #fff
+  //box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+  text-transform: uppercase
+  cursor: pointer
+
+  &:active
+    box-shadow: none
+
+  &.no-svg
+    width: 100%
+
+    .text-section
+      width: 75%
+
+    .arrow-section
+      width: 25%
+      svg
+        //fill: #fff
+  .text-section
+    border:
+      top:
+        left-radius: inherit
+        right-radius: 0
+      bottom:
+        left-radius: inherit
+        right-radius: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: .6em
+    color: $text-color-lightdark
+    letter-spacing: 0.20em
+
+    span
+      @include font(Circe, 900, 10, 20)
+
+    @include media-breakpoint-down(md)
+      padding: .8em
+    width: 80%
+
+    svg
+      margin-right: .6em
+      fill: $text-color-lightdark
+
+    span
+      margin-top: .45em
+
+    span
+
+
+  .arrow-section
+    width: 20%
+    padding: .6em
+    @include media-breakpoint-down(md)
+      padding: .8em
+    border:
+      top:
+        left-radius: 0
+        right-radius: inherit
+      bottom:
+        left-radius: 0
+        right-radius: inherit
+    background: $btn-primary-color
+    display: flex
+    justify-content: center
+    align-items: center
+
+.btn-simple
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 38px
+  max-width: 160px
+  text-decoration: none
+  border-radius: 100px
+  background: $btn-primary-color
+  color: #fff
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+  text-transform: uppercase
+  cursor: pointer
+  //fluid
+  &.fluid
+    width: inherit
+    max-width: inherit
+    padding: 0 22px
+  &:active
+    box-shadow: none
+
+  .text-section
+    //padding: .6em
+    span
+      @include font(Circe, 900, 10, 25)
+      letter-spacing: 0.25em
+  &.svg
+    .text-section
+      svg
+        margin-right: .4em
+    &.pen
+      background: $btn-second-color
+    svg
+      fill: #fff
+
+
+.btn-fluid
+  width: inherit
+  max-width: inherit
+  .text-section
+    padding: 0 22px

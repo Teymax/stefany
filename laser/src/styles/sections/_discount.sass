@@ -1,7 +1,91 @@
 section.section.discount
-  background-color: $color-white
+  padding-top: 75px
+  padding-bottom: 72px
+  background:
+    image: url("../assets/img/background/discount-bg.jpg")
+    size: cover
   .container
+    .timer-text
+      @include font (Circe, 900, 26, 73)
+      color: #F6AE9F
     .info-list
       li
         &:before
           background: $color-coral
+    .c-content
+      position: relative
+      overflow: hidden
+      height: 320px
+      background-color: #fff
+      .d-discount
+        position: absolute
+        top: -82px
+        left: -82px
+        display: block
+        width: 140px
+        height: 140px
+        background-color: #A9A8C6
+        transform: rotate(45deg)
+      .button
+        max-width: 154px
+        .btn-first
+        .btn-second
+      .c-text
+        position: absolute
+        top: 13px
+        left: 11px
+        transform: rotate(-45deg)
+        .d-text
+          @include font (Circe, 900, 10, 0)
+          color: #fff
+        .d-number
+          @include font (Circe, 900, 18, 0)
+          color: #fff
+
+      @include media-breakpoint-down(lg)
+        max-width: 430px
+        margin:
+          left: auto
+          right: auto
+          bottom: 30px
+      .c-btn
+        margin-left:  auto
+        margin-right: auto
+        margin-top: 76px
+        max-width: 320px
+        display: flex
+        justify-content: space-between
+
+  b
+    color: $text-color-dark
+@include media-breakpoint-down(lg)
+  section.section.discount
+    padding-top: 107px
+    padding-bottom: 30px
+    .container
+      .c-content
+        .d-discount
+          max-width: 430px
+          margin:
+            left: auto
+            right: auto
+            bottom: 30px
+        .c-btn
+
+@include media-breakpoint-down(sm)
+  section.section.discount
+    padding-top: 65px
+    padding-bottom: 25px
+    .container
+      .c-content
+        max-width:  285px
+        .d-discount
+        .c-btn
+          position: relative
+          .button
+            position: absolute
+          .btn-first
+            left: -41px
+          .btn-second
+            right: -44px
+

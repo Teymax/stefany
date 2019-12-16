@@ -1,34 +1,21 @@
 section.section.main-laser-service
+  //img.bg-elem(src="/assets/img/main-service/main-bg-girl.png" alt="main-bg-girl")
   .container
-    .row.c-service.no-gutters
-      .col-12.col-md-12.col-lg-8.order-1.order-md-1.order-lg-1.c-service__service-box.c-service__service-box_bg-1
-        .row
-          .col-6
-            .c-content.p-3
-              h1.h1-title.text-w-bold.text-color-lightgray Комплексные зоны для эпиляции
-              ul.info-list
-                li.small-text.text-color-lightgray Руки
-                li.small-text.text-color-lightgray Голени
-                li.small-text.text-color-lightgray Подмышки
-                li.small-text.text-color-lightgray Бикини глубокое
-          .col-6
-            button.btn.btn-second-color подробнее
-      .col-12.col-md-6.col-lg-4.order-2.order-md-3.order-lg-2.c-service__service-box.c-service__service-box_bg-2
-        .c-content.p-3
-          h2.h2-title.text-w-bold.text-color-lightgray Оплатите 3 сеанса лазерной эпиляции и получите 4-й в подарок
-          button.btn.btn-second-color подробнее
-      .col-12.col-md-6.col-lg-4.order-5.order-md-4.order-lg-3.c-service__service-box.c-service__service-box_bg-3
-        .c-content.p-3
-          h2.h2-title.text-w-bold.text-color-lightgray Лазерная эпиляция
-          p.paragraph-text.d-none.d-lg-block Безболезненное удаление волос в любое время года
-          button.btn.btn-second-color подробнее
-      .col-12.col-md-6.col-lg-4.order-3.order-md-2.order-lg-4.c-service__service-box.c-service__service-box_bg-4
-        .c-content.p-3
-          h2.h2-title.text-w-bold.text-color-lightgray Уход за лицом
-          p.paragraph-text.d-none.d-lg-block Процедуры для восстановления и омоложения кожи
-          button.btn.btn-second-color подробнее
-      .col-12.col-md-6.col-lg-4.order-4.order-md-5.order-lg-5.c-service__service-box.c-service__service-box_bg-5
-        .c-content.p-3
-          h2.h2-title.text-w-bold.text-color-lightgray SPA массаж
-          p.paragraph-text.d-none.d-lg-block Расслабляющие ритуалы для ухода за телом
-          button.btn.btn-second-color подробнее
+    h1.h1-main-title.text-w-bold.text-color-lightgray Комплексные зоны <br> для эпиляции
+    p.subtitle.mb-4 Maximum
+    .position-block
+      .row
+        .col-6
+          ul.info-list
+            li.list-item.text-color-lightgray.mb-2 Руки
+            li.list-item.text-color-lightgray.mb-2 Голени
+            li.list-item.text-color-lightgray.mb-2 Подмышки
+            li.list-item.text-color-lightgray.mb-4 Бикини глубокое
+        .col-6
+          .c-content
+            p.custopm-text.custopm-text__small.text-w-bold 15
+              span.custopm-text__small_size минут
+            .c-span
+              span.custopm-text.custopm-text__through.mr-2 2 000 грн
+              span.custopm-text.custopm-text__bold 1 730 грн
+    +btnSimple('подробнее', './discount.html')

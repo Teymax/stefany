@@ -1,0 +1,75 @@
+section.section.map-slider
+  padding-top: 64px
+  padding-bottom: 63px
+  @include media-breakpoint-down(lg)
+    padding-top: 38px
+    padding-bottom: 30px
+  @include media-breakpoint-down(sm)
+    padding-top: 49px
+    padding-bottom: 15px
+
+  .container
+    .btn-simple-map
+      @include font (Circe, 700, 12, 14)
+      color: #3A405B
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 44px
+      text-decoration: none
+      border-radius: 100px
+      background: #fff
+      border: 1px solid #D2DBE9
+      text-transform: uppercase
+      cursor: pointer
+      padding: 0 33px
+      &.active
+        background: $btn-primary-color
+        color: #fff
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+      &:hover
+        background: $btn-primary-color
+        border: 1px solid $btn-primary-color
+        color: #fff
+      &:focus
+        background: $btn-primary-color
+        color: #fff
+      &:active
+        box-shadow: none
+      @include media-breakpoint-down(lg)
+        margin-bottom: 19px
+
+
+
+
+.bg-wrapper
+  background:
+    image: url("../assets/img/about/contact-bg.jpg")
+    size: cover
+  .map
+    @include media-breakpoint-down(lg)
+      height: 329px
+    @include media-breakpoint-down(sm)
+
+  .container
+    //padding-top: 28px // fix bg
+    //@include media-breakpoint-down(lg)
+    //  padding-top: 0
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
+
+
+    .btn-callback
+      max-width: 300px
+      min-width: 268px
+      height: 50px
+      .text-section
+        width: 88%
+      .arrow-section
+        width: 21%
+
+  p
+    margin-bottom: 0
+
+

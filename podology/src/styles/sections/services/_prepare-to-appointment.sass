@@ -1,0 +1,55 @@
+// Colors
+$bg-color: #2d3745
+$dot-color: rgba(218, 218, 218, .3)
+
+// Dimensions
+$dot-size: 2px
+$dot-space: 22px
+
+.step-img
+	max-width: 73px
+	height: 73px
+	margin-bottom: 20px
+
+.step-num
+	width: 73px
+	height: 73px
+	color: #ffffff
+	background: $btn-primary-arrow-bg
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
+	@include font(Circe, bold, 14, 22)
+	position: relative
+	z-index: 1
+	margin-bottom: 1rem
+
+.dotted-bg
+	position: absolute
+	z-index: 0
+	display: block
+	width: 15em !important
+	height: 6.8em
+	top: -2em
+	left: -2em
+	background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color
+	background-size: $dot-space $dot-space
+
+	&.first
+		left: 1em
+		top: -2em
+
+	&.second
+		left: 3em
+		top: -1.7em
+
+	&.third
+		transform: rotate(90deg)
+		left: 2.4em
+		top: 0
+
+	&.fourth
+		top: -1.7em
+		left: 1em

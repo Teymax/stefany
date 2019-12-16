@@ -1,22 +1,45 @@
-mixin numberedSection(title1, text1, title2, text2, title3, text3, title4, text4)
+mixin numberedSection(title1, text1, title2, text2, title3, text3, title4, text4, title5, text5, title6, text6)
   .numbered-section
-    .col-sm-12.col-lg-6
-      img(src="images/icon/common/adv-1.png" srcset="images/icon/common/adv-1@2x.png")
+    .col-sm-12.col-lg-6.numbered-cnt
+      img(src="assets/icon/common/num-1.png" srcset="assets/icon/common/num-1@2x.png")
       .description
-        h3.title= title1
+        h3.title.f-bold= title1
         p.desc= text1
-    .col-sm-12.col-lg-6
-      img(src="images/icon/common/adv-2.png" srcset="images/icon/common/adv-2@2x.png")
+    .col-sm-12.col-lg-6.numbered-cnt
+      img(src="assets/icon/common/num-2.png" srcset="assets/icon/common/num-2@2x.png")
       .description
-        h3.title= title2
+        h3.title.f-bold= title2
         p.desc= text2
-    .col-sm-12.col-lg-6
-      img(src="images/icon/common/adv-3.png" srcset="images/icon/common/adv-3@2x.png")
+    .col-sm-12.col-lg-6.numbered-cnt
+      img(src="assets/icon/common/num-3.png" srcset="assets/icon/common/num-3@2x.png")
       .description
-        h3.title= title3
+        h3.title.f-bold= title3
         p.desc= text3
-    .col-sm-12.col-lg-6
-      img(src="images/icon/common/adv-4.png" srcset="images/icon/common/adv-4@2x.png")
+    .col-sm-12.col-lg-6.numbered-cnt
+      img(src="assets/icon/common/num-4.png" srcset="assets/icon/common/num-4@2x.png")
       .description
-        h3.title= title4
+        h3.title.f-bold= title4
         p.desc= text4
+    if text4 && text5
+      .col-sm-12.col-lg-6.numbered-cnt
+        img(src="assets/icon/common/num-5.png")
+        .description
+          h3.title.f-bold= title5
+          p.desc= text5
+      .col-sm-12.col-lg-6.numbered-cnt
+        img(src="assets/icon/common/num-6.png")
+        .description
+          h3.title.f-bold= title6
+          p.desc= text6
+mixin numberedSection2(title1, text1, title2, text2)
+  .numbered-section
+    .col-sm-12.col-lg-6.numbered-cnt
+      img(src="assets/icon/common/num-1.png" srcset="assets/icon/common/num-1@2x.png")
+      .description
+        h3.title.f-bold.f-bold= title1
+        p.desc= text1
+    .col-sm-12.col-lg-6.numbered-cnt
+      img(src="assets/icon/common/num-2.png" srcset="assets/icon/common/num-2@2x.png")
+      .description
+        h3.title.f-bold.f-bold= title2
+        p.desc= text2

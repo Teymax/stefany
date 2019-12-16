@@ -6,25 +6,42 @@ section.section.client-feedback
 		width: 3em
 		height: auto
 
-	#circles
+	.circles
 		top: -25em
 		width: 87em
-		height: auto
 		display: block
+		opacity: .2
+		@include media-breakpoint-down(sm)
+			width: 59em
+			top: -9em
 
 	.slider-block.slider-pad
 		width: 43em
+		@include media-breakpoint-down(sm)
+			padding: 0 !important
+			width: 100%
 
 		.owl-item
 			width: 1195px
 
 			img
 				width: 39em
+				@include media-breakpoint-down(sm)
+					width: 19em
 
 		.owl-nav
+			@include media-breakpoint-down(sm)
+				width: 8em
+				top: 6em
+				left: 50%
+				transform: translateX(-50%)
+			//left: 8em
+
 			button
 				&.owl-next
-					background: url(../images/icon/arrow-right-gray.png) !important
+					background: url(../assets/icon/arrow-right-gray.png) !important
+					margin-right: -1em
 
 				&.owl-prev
-					background: url(../images/icon/arrow-left-gray.png) !important
+					background: url(../assets/icon/arrow-left-gray.png) !important
+					margin-left: -1em
