@@ -339,7 +339,7 @@ function refreshPrice(event) {
                   <p class="paragraph-text text-w-light text-color-white mb-0">${name}</p>
               </div>
               <div class="column-left d-flex justify-content-end">
-                  <p class="paragraph-text text-w-bold text-color-white mb-0">${servicesArr[+checkbox.value].price}</p>
+                  <p class="paragraph-text text-w-bold text-color-white mb-0">${servicesArr[+checkbox.value].price} грн</p>
               </div>
         </div>
     `;
