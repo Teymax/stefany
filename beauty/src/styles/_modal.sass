@@ -1,0 +1,63 @@
+.modal-popup
+  max-width: 396px !important
+  .modal-content
+    padding-top: 35px
+    padding-bottom: 20px
+    width: 100% !important
+    background-image: url('../assets/img/form-bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    &:not(.px-1)
+      padding-left: 15px !important
+      padding-right: 15px !important
+    h4
+      @include font('Circe-Bold', 700, 18, 27)
+      color: #ffffff
+      text-transform: uppercase
+    h5
+      @include font('Circe-Regular', 400, 16, 20)
+      padding-bottom: 3px
+      color: #ffffff
+    form
+      max-width: 252px
+      margin: 0 auto
+      input, select
+        padding: 8px 20px
+        background: #F8F8F8
+        border-radius: 4px
+        border: none !important
+        outline: none !important
+        background: rgba(255, 255, 255, 0.2)
+        color: rgba(255, 255, 255, 0.66) !important
+        @include placeholder
+          color: rgba(255, 255, 255, 0.66) !important
+      select
+        padding-right: 35px !important
+        background-image: url('../assets/img/padalogy/learning/arrow.svg')
+        background-repeat: no-repeat
+        background-position: center right 15px
+        -webkit-appearance: none
+        -moz-appearance: none
+        text-indent: 1px
+        text-overflow: ''
+      .thin-text
+        font-size: 12px
+        color: rgba(255, 255, 255, 0.64)
+        margin-top: 15px
+        text-align: center
+  button
+    max-width: 100% !important
+    & > span
+      justify-content: space-between !important
+      padding-right: 38px
+      max-width: 100% !important
+      svg
+        width: 31px
+        height: 17px
+#thanksPopup
+  .modal-content
+    height: 430px
+    padding-top: 127px
+    background-image: url('../assets/img/thanks-form-bg.jpg')
+    background-size: cover
+    background-repeat: no-repeat

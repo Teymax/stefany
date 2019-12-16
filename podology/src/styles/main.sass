@@ -1,3 +1,6 @@
+@media only screen and (min-width : 1199px)
+  .container
+    max-width: 1280px !important
 /****************
 /*   SECTIONS
 /****************
@@ -84,6 +87,7 @@
 @import 'sections/services/treatment-services'
 @import 'sections/services/backgrounds'
 @import 'sections/services/prepare-to-appointment'
+@import 'sections/services/treatment-fungus'
 
 @import 'lib/all'
 @import 'sections/learning/all'
@@ -92,8 +96,16 @@
 
 /* Ne bug, a feature
 
+body
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+	padding: 0 !important
 
-@media only screen and (min-width: 1200px)
+footer
+	margin-top: auto
+
+@media only screen and (min-width: 1199px)
 	.container
 		max-width: 1280px !important
 

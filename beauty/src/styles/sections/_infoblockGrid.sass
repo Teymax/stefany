@@ -1,72 +1,86 @@
 .grid-bg-1
-	padding: 68px 0
+	padding: 68px 0 70px
 	background: url('../assets/img/infoblock/infoblockGrid-bg-1.png')
-	background-repeat: no-repeat 
+	background-repeat: no-repeat
 	background-size: cover
 	background-position: top left
 .info-block-grid
 	overflow: hidden
+	.grid-titles
+		.proccess-info
+			@media(max-width: 767px)
+				display: none
+			span
+				@media(min-width: 768px)
+					//display: none
+	.grid-cnt
+		& > .proccess-info
+			span
+				margin-right: 24px
+				@media(min-width: 768px)
+					//display: none
 	.container
 		max-width: 940px
 		padding-left: 30px !important
 		padding-right: 30px !important
 		.grid-shodow
-		  box-shadow: 0 0 70px $box-shadow-lightgray
+			box-shadow: 0 0 70px $box-shadow-lightgray
 		.grid-cnt
 			z-index: 2
 			background: $color-white
 			position: relative
 			transition: 0.3s ease
+			.section-title
+				margin-bottom: 23px
+				line-height: 43px
+				letter-spacing: 0
 			.btn-callback
 				max-width: 178px
 				padding-left: 24px
 			&::before
-        content: ''
-        position: absolute
-        display: block
-        min-width: 44px
-        min-height: 44px
-        width: 44px 
-        height: 44px 
-        transform: rotate(45deg)
-        background: $color-white
-        transition: 0.3s ease
+				content: ''
+				position: absolute
+				display: block
+				min-width: 44px
+				min-height: 44px
+				width: 44px
+				height: 44px
+				transform: rotate(45deg)
+				background: $color-white
+				transition: 0.3s ease
 			&.grid-cnt-big
-				padding: 54px 120px 85px 74px
+				padding: 54px 110px 85px 79px
 				&::before
 					right: -22px
 					top: 30px
 				.proccess-info
-					padding-bottom: 20px
+					padding-bottom: 22px
 			&.grid-cnt-small
 				min-height: 292px !important
-				padding: 50px 40px 40px 74px
+				padding: 53px 40px 36px 81px
 				&::before
 					width: 30px
 					min-width: 30px
 					height: 30px
 					min-height: 30px
-				&:nth-child(1)
+				&.grid-cnt-down:nth-child(1)
 					&::before
-						left: calc(50% - 15px)
+						right: 44px
 						top: calc(100% - 15px)
-				&:nth-child(2)
-					&::before
-						left: calc(50% - 15px)
-						top: -14px
 		.grid-img
 			position: relative
 			z-index: 1
-			img 
+			img
 				width: calc(100% + 1px)
 .doubleGrid
 	.container
 		box-shadow: none !important
+		max-width: 1105px
 	.grid-cnt-hover
 		padding: 30px 25px 40px 25px !important
 .fourGrid
 	.container
-	  max-width: 1321px !important
+		max-width: 1321px !important
 	.grid-cnt-hover
 		padding-bottom: 20px !important
 .grid-img-hover
@@ -83,96 +97,153 @@
 		transition: 0.3s ease
 		mix-blend-mode: color
 .grid-block
-  cursor: pointer
-  height: 310px
-  overflow: hidden
-  &-bigger
-    height: 438px
-  &-smaller
-    height: auto
-  .grid-number
-    top: 65px
-  .grid-cnt-hover:not(.grid-cnt-big)
-    transition: 0.3s ease
-    &::before
-      top: 33px
-      min-width: 27px !important
-      width: 27px !important
-      min-height: 27px !important
-      height: 27px !important
-      transition: 0.3s ease
-    &:nth-child(1)
-      &::before
-        right: -13px
-    &:nth-child(2)
-      &::before
-        left: -13px	
-  .hidden-text
-    height: 38px
-    padding-bottom: 0 !important
-    span
-      margin-left: 0 !important
-  .btn-callback
-    min-height: 38px !important
-    display: none !important
-  &:hover
-    .grid-img-hover
-      &::before
-        background: $color-purple
-    .grid-cnt-hover
-      background: $color-purple !important
-      &::before
-        background: $color-purple  !important
-      .grid-number, .grid-title, .proccess-info, p, .section-title
-        color: $color-white !important
-      .hidden-text
-        display: none !important
-      .btn-callback
-        display: flex !important
+	cursor: pointer
+	height: 310px
+	overflow: hidden
+	@media(max-width: 1300px)
+		height: 280px !important
+		& > div
+			height: 100% !important
+	@media(max-width: 767px)
+		& > div
+			height: auto !important
+	&-bigger
+		height: 438px
+	&-smaller
+		height: auto
+	.grid-number
+		top: 65px
+	.grid-cnt-hover:not(.grid-cnt-big)
+		transition: 0.3s ease
+		&::before
+			top: 33px
+			min-width: 27px !important
+			width: 27px !important
+			min-height: 27px !important
+			height: 27px !important
+			transition: 0.3s ease
+		&:nth-child(1)
+			&::before
+				right: -13px
+		&:nth-child(2)
+			&::before
+				left: -13px
+	.hidden-text
+		height: 38px
+		padding-bottom: 0 !important
+		span
+			margin-left: 0 !important
+	.btn-callback
+		min-height: 38px !important
+		@media(min-width: 768px)
+			display: none !important
+	&:hover
+		@media(min-width: 768px)
+			.grid-img-hover
+				&::before
+					background: $color-purple
+			.grid-cnt-hover
+				background: $color-purple !important
+				&::before
+					background: $color-purple	!important
+				.grid-number, .grid-title, .proccess-info, p, .section-title
+					color: $color-white !important
+				.hidden-text
+					display: none !important
+				.btn-callback
+					display: flex !important
+					background: url('../assets/img/background/callback-btn-white.jpg')
+					background-repeat: no-repeat
+					background-size: 45px 100%
+					background-position: top right
+					border: 2px solid $color-white !important
+					&:focus
+						border: 2px solid $color-white !important
+					& > span
+						span
+							color: $color-white
+						svg
+							.st0
+								fill: $color-white	!important
+					& > svg
+						.st0
+							fill: $color-purple
+.double-grid-big
+	.container
+		max-width: 821px
+		.grid-block-bigger
+			height: 379px
+		.grid-cnt
+			&.grid-cnt-big
+				padding: 40px 93px 50px 49px
 @media(max-width: 991px)
 	.four-grid-container
 		max-width: 630px !important
 	.grid-block-2, .info-block-grid
 		height: auto !important
 		& .grid-cnt
-      &::before
-        top: 33px !important
-        min-width: 27px !important
-        width: 27px !important
-        min-height: 27px !important
-        height: 27px !important
-        transition: 0.3s ease
-      &:nth-child(1)
-        &::before
-          right: -13px !important
-          left: auto !important
-      &:nth-child(2)
-        &::before
-          left: -13px	 !important
+			&::before
+				top: 33px !important
+				min-width: 27px !important
+				width: 27px !important
+				min-height: 27px !important
+				height: 27px !important
+				transition: 0.3s ease
+			&:nth-child(1)
+				&::before
+					right: -13px !important
+					left: auto !important
+			&:nth-child(2)
+				&::before
+					left: -13px	 !important
 	.info-block-grid .container .grid-cnt.grid-cnt-big
 		min-height: 292px !important
 		padding-bottom: 40px
 		padding-right: 40px
-				
+	.grid-titles
+		p
+			line-height: 19px
+	.grid-title
+		margin-bottom: 10px
+	.info-block-grid .container	.grid-cnt.grid-cnt-small
+		max-height: 220px !important
+		min-height: 220px !important
+		padding: 38px 15px 35px 60px
+	.grid-block .grid-number
+		top: 51px
+	.info-block-grid .container .grid-block-smaller	.grid-img
+		max-height: 220px
+	.info-block-grid .container .grid-cnt.grid-cnt-big
+		padding-right: 17px
+		padding-bottom: 36px
 @media(max-width: 880px)
 	.info-block-grid .container .grid-cnt.col-md-6
 		padding: 15px 15px 20px 30px
 	.info-block-grid .container .grid-cnt.col-md-4
-    	padding: 15px 15px 15px 45px
+			padding: 15px 15px 15px 45px
 @media(max-width: 767px)
+	.grid-number
+		display: none
+	.grid-titles
+		p
+			padding-bottom: 5px !important
+			line-height: 22px
+		.section-title, .grid-title
+			font-size: 24px
+			line-height: 24px
+			margin-bottom: 0 !important
+			br
+				display: none
 	.info-block-grid
-		padding-bottom: 0 !important
-	.info-block-2
-		padding-bottom: 0
+		padding-bottom: 58px !important
 	.info-block-grid .container .grid-cnt.grid-cnt-big
-		p.thin-text
-			display: none
-	.grid-bg-1
-		padding: 80px 15px
-	.info-block-grid .container .grid-cnt.col-md-6
-		padding: 50px 30px 50px 30px
-	.info-block-grid .container .grid-cnt.col-md-4
-    	padding: 50px 30px 50px 45px
+		min-height: 249px !important
+	.info-block-grid .container .grid-cnt.grid-cnt-small
+		min-height: 236px !important
+	.info-block-grid
+		padding: 27px 0px 80px
+	.info-block-grid .container .grid-cnt
+		padding: 29px 20px 29px 16px !important
 	.info-block-grid .container .grid-cnt::before
 		top: calc(100% - 22px)
 		left: calc(50% - 22px)
@@ -181,27 +252,42 @@
 	.info-block-grid .container
 		padding-left: 0 !important
 		padding-right: 0 !important
-  .grid-block
-    height: auto !important
-  .grid-cnt
-    height:  auto !important
-    order: 1 !important
-  .grid-img
-    order: 2 !important
+	.grid-block
+		height: auto !important
+	.grid-cnt
+		height:	auto !important
+		order: 1 !important
+	.grid-img
+		order: 2 !important
+	.info-block-grid .container .grid-block-smaller .grid-img, .info-block-grid .container	.grid-cnt.grid-cnt-small
+		max-height: 100% !important
+	.grid-bg-1
+		padding-top: 15px
+		padding-bottom: 21px !important
+	.info-block-grid .container .grid-shodow
+		box-shadow: none
+	.info-block-grid .container .grid-cnt.col-md-6
+		min-height: 249px
+		.grid-title
+			margin-bottom: 10px !important
+	.info-block-grid .row.no-gutters.mb-5
+		margin-bottom: 10px !important
+	.info-block .section-title
+		line-height: 33px
 @media(max-width: 575px)
-  .info-block-grid
-	  padding-left: 0 !important
-	  padding-right: 0 !important
-  .grid-block-2
-    .grid-cnt
-      padding-left: 50px !important
-  .info-block-grid .container .grid-cnt::before
-    top: calc(100% - 15px) !important
-    left: 37px !important
-    width: 30px !important
-    height: 30px !important
-  .grid-bg-1
-    background: $color-white
+	.info-block-grid
+		padding-left: 0 !important
+		padding-right: 0 !important
+	.grid-block-2
+		.grid-cnt
+			padding-left: 50px !important
+	.info-block-grid .container .grid-cnt::before
+		top: calc(100% - 15px) !important
+		left: 37px !important
+		width: 30px !important
+		height: 30px !important
+	.grid-bg-1
+		background: $color-white
 		.row > .section-title
 			padding-left: 15px
 			padding-right: 15px

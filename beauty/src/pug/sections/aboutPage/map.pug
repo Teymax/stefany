@@ -1,12 +1,12 @@
-.map.pt-5
+.map
   .container.container-l.pb-5.border-b-light.px-0.px-lg-1
-    .row.no-gutters.px-15.city-triggers-wrap
-      .col.d-flex.align-items-center.justify-content-start.flex-wrap.map-cnt.m-auto.m-lg-0.px-15
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.mr-3.city-popup(href="") Все города 
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-1") Киев
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger.mr-3.active(href="", data-city="city-item-2") Ивано-фракновск 
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger.mr-3(href="", data-city="city-item-3") Львов
-        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.city-trigger(href="", data-city="city-item-4") Ровно 
+    .row.no-gutters.city-triggers-wrap
+      .col.d-flex.align-items-center.justify-content-start.flex-wrap.map-cnt.m-auto.m-lg-0
+        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.mr-3.city-popup(href="") Все города 
+        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.city-trigger.mr-3(href="", data-city="city-item-1") Киев
+        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.city-trigger.mr-3.active(href="", data-city="city-item-2") Ивано-франковск 
+        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.city-trigger.mr-3(href="", data-city="city-item-3") Львов
+        a.btn-simple.btn-simple-light.br-100.px-3.d-flex.align-items-center.justify-content-center.city-trigger(href="", data-city="city-item-4") Ровно 
         .link-text-light.text-dashed.drop-menu.d-flex.align-items-center.ml-3.mt-1.mb-3.mb-md-0.pb-1(href="") 
           span Другие города 
           img.icon-arrow.ml-2(src="assets/icon/drop-arrow-down.png", srcset="assets/icon/drop-arrow-down@2x.png 2x",, alt="drop-arrow-down")
@@ -17,13 +17,13 @@
               a.nav-link-text(href="#") Львов
             li 
               a.nav-link-text(href="#") Львов
-    .row.no-gutters.city-item.city-item-1
-      .col-12.col-lg-5.pr-lg-5.mb-5.mb-lg-0.mx-auto.mx-lg-0.px-15.justify-content-center.map-cnt
+    .row.no-gutters.city-item.justify-content-between.city-item-1
+      .col-12.col-lg-5.pr-.mb-5.mb-lg-0.mx-auto.mx-lg-0.justify-content-center.map-cnt
         p.p-text.p-bold.text-uppercase.city-name Киев
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-phone(src="assets/icon/phone.png", srcset="assets/icon/phone@2x.png 2x", alt="h-map")
                 a.p-text(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
@@ -31,18 +31,18 @@
                 a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-loc(src="assets/icon/map.png", srcset="assets/icon/map@2x.png 2x", alt="h-map")
                 p.p-text.thin-text ул. Киевская, 84
               .col-12.d-flex.align-items-center.height-25
                 img.icon.icon-time(src="assets/icon/time.png", srcset="assets/icon/time@2x.png 2x", alt="h-map")
                 p.p-text 9:00 – 20:00
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information0
           a.video.d-flex.align-items-center.justify-content-center.w-100.w-lg-auto(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", srcset="assets/img/about/about-video-1@2x.jpg 2x", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
-        .row.no-gutters
+        .row.no-gutters.map-callback
           a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-lg-0(href="#")
             span.d-flex.align-items-center.justify-content-between
               span подробнее про салон
@@ -51,15 +51,15 @@
                 .st0{fill:#D11111;}
               path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
-      .col-12.col-lg-7
-        img.w-100(src="assets/img/map.jpg", srcset="assets/img/map@2x.jpg 2x", alt="map")
-    .row.no-gutters.city-item.city-item-2.city-active
-      .col-12.col-lg-5.pr-lg-5.mb-5.mb-lg-0.mx-auto.mx-lg-0.px-15.justify-content-center.map-cnt
-        p.p-text.p-bold.text-uppercase.city-name Ивано-фракновск 
-        .row.no-gutters.mb-5
+      .col-12.col-lg-7.map-img
+        img.w-100(src="assets/img/map/map.jpg", srcset="assets/img/map/map@2x.jpg 2x", alt="map")
+    .row.no-gutters.city-item.justify-content-between.city-item-2.city-active
+      .col-12.col-lg-5.pr-20.mb-5.mb-lg-0.mx-auto.mx-lg-0.justify-content-center.map-cnt
+        p.p-text.p-bold.text-uppercase.city-name Ивано-франковск 
+        .row.no-gutters.contact-information
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-phone(src="assets/icon/phone.png", srcset="assets/icon/phone@2x.png 2x", alt="h-map")
                 a.p-text(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
@@ -67,18 +67,18 @@
                 a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-loc(src="assets/icon/map.png", srcset="assets/icon/map@2x.png 2x", alt="h-map")
                 p.p-text.thin-text ул. Киевская, 84
               .col-12.d-flex.align-items-center.height-25
                 img.icon.icon-time(src="assets/icon/time.png", srcset="assets/icon/time@2x.png 2x", alt="h-map")
                 p.p-text 9:00 – 20:00
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information
           a.video.d-flex.align-items-center.justify-content-center.w-100.w-lg-auto(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", srcset="assets/img/about/about-video-1@2x.jpg 2x", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
-        .row.no-gutters
+        .row.no-gutters.map-callback
           a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-lg-0(href="#")
             span.d-flex.align-items-center.justify-content-between
               span подробнее про салон
@@ -87,15 +87,15 @@
                 .st0{fill:#D11111;}
               path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
-      .col-12.col-lg-7
-        img.w-100(src="assets/img/map.jpg", srcset="assets/img/map@2x.jpg 2x", alt="map")
-    .row.no-gutters.city-item.city-item-3
-      .col-12.col-lg-5.pr-lg-5.mb-5.mb-lg-0.mx-auto.mx-lg-0.px-15.justify-content-center.map-cnt
+      .col-12.col-lg-7.map-img
+        img.w-100(src="assets/img/map/map.jpg", srcset="assets/img/map/map@2x.jpg 2x", alt="map")
+    .row.no-gutters.city-item.justify-content-between.city-item-3
+      .col-12.col-lg-5.pr-20.mb-5.mb-lg-0.mx-auto.mx-lg-0.justify-content-center.map-cnt
         p.p-text.p-bold.text-uppercase.city-name Львов
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-phone(src="assets/icon/phone.png", srcset="assets/icon/phone@2x.png 2x", alt="h-map")
                 a.p-text(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
@@ -103,18 +103,18 @@
                 a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-loc(src="assets/icon/map.png", srcset="assets/icon/map@2x.png 2x", alt="h-map")
                 p.p-text.thin-text ул. Киевская, 84
               .col-12.d-flex.align-items-center.height-25
                 img.icon.icon-time(src="assets/icon/time.png", srcset="assets/icon/time@2x.png 2x", alt="h-map")
                 p.p-text 9:00 – 20:00
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information
           a.video.d-flex.align-items-center.justify-content-center.w-100.w-lg-auto(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", srcset="assets/img/about/about-video-1@2x.jpg 2x", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
-        .row.no-gutters
+        .row.no-gutters.map-callback
           a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-lg-0(href="#")
             span.d-flex.align-items-center.justify-content-between
               span подробнее про салон
@@ -123,15 +123,15 @@
                 .st0{fill:#D11111;}
               path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
-      .col-12.col-lg-7
-        img.w-100(src="assets/img/map.jpg", srcset="assets/img/map@2x.jpg 2x", alt="map")
-    .row.no-gutters.city-item.city-item-4
-      .col-12.col-lg-5.pr-lg-5.mb-5.mb-lg-0.mx-auto.mx-lg-0.px-15.justify-content-center.map-cnt
+      .col-12.col-lg-7.map-img
+        img.w-100(src="assets/img/map/map.jpg", srcset="assets/img/map/map@2x.jpg 2x", alt="map")
+    .row.no-gutters.city-item.justify-content-between.city-item-4
+      .col-12.col-lg-5.pr-20.mb-5.mb-lg-0.mx-auto.mx-lg-0.justify-content-center.map-cnt
         p.p-text.p-bold.text-uppercase.city-name Ровно
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-phone(src="assets/icon/phone.png", srcset="assets/icon/phone@2x.png 2x", alt="h-map")
                 a.p-text(href="tel:0980070753") 098 007 07 53
               .col-12.d-flex.align-items-center.mb-3.mb-sm-0.height-25
@@ -139,18 +139,18 @@
                 a.p-text.thin-text(href="mail-to:info@steffany.ua") info@steffany.ua
           .col-12.col-sm-6
             .row.no-gutters
-              .col-12.d-flex.align-items-center.mb-3.height-25
+              .col-12.d-flex.align-items-center.height-25.contact-information-item
                 img.icon.icon-loc(src="assets/icon/map.png", srcset="assets/icon/map@2x.png 2x", alt="h-map")
                 p.p-text.thin-text ул. Киевская, 84
               .col-12.d-flex.align-items-center.height-25
                 img.icon.icon-time(src="assets/icon/time.png", srcset="assets/icon/time@2x.png 2x", alt="h-map")
                 p.p-text 9:00 – 20:00
-        .row.no-gutters.mb-5
+        .row.no-gutters.contact-information
           a.video.d-flex.align-items-center.justify-content-center.w-100.w-lg-auto(data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk")
             img.w-100(src="assets/img/about/about-video-1.jpg", srcset="assets/img/about/about-video-1@2x.jpg 2x", alt="about-video")
             span.play-btn.play-btn-orange.d-flex.align-items-center.justify-content-center
               span
-        .row.no-gutters
+        .row.no-gutters.map-callback
           a.btn-callback.btn-callback-simple.d-flex.align-items-center.justify-content-between.height-50.mx-auto.mx-lg-0(href="#")
             span.d-flex.align-items-center.justify-content-between
               span подробнее про салон
@@ -159,5 +159,5 @@
                 .st0{fill:#D11111;}
               path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
               C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
-      .col-12.col-lg-7
-        img.w-100(src="assets/img/map.jpg", srcset="assets/img/map@2x.jpg 2x", alt="map")
+      .col-12.col-lg-7.map-img
+        img.w-100(src="assets/img/map/map.jpg", srcset="assets/img/map/map@2x.jpg 2x", alt="map")

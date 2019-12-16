@@ -4,9 +4,6 @@ section.section.salon-photos
       h2 Фото нашего салона
 
   .salon-photos-slider.owl-carousel.slider-block
-    img(src="assets/img/cabinet-1.png")
-    img(src="assets/img/cabinet-2.png")
-    img(src="assets/img/cabinet-1.png")
-    img(src="assets/img/cabinet-2.png")
-    img(src="assets/img/cabinet-1.png")
-    img(src="assets/img/cabinet-2.png")
+    - let i = 1
+    while i <= 21
+      img(src=`assets/img/cabinet-${i++}.png`)

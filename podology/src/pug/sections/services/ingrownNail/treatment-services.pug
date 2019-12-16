@@ -2,132 +2,197 @@ section.section-services.lightblue-bg.legs-bg
   .container.circles-bg
     .row
       .col.d-flex.flex-column.align-items-center.section-service-block.mx-auto
-        h3.section-title.mb-4.text-dark-1.text-center Услуги по лечению вросшего ногтя
+        h3.section-title.mb-4.text-dark-1.text-center.extra-h3.text-w-bold Услуги по лечению вросшего ногтя
         .services-treatment-divider.mb-4
         p.paragraph-text.text-dark-1.text-center.mb-4.mb-md-5.lh-40
-          | В центре здоровья ног Steffany есть разные методики лечения вросшего ногтя. Мы практикуем два вида услуг: <br/>
-          span.f-bold Аппаратное лечение&nbsp;
-          | — когда специалист работает с помощью стерильных инструментов;<br/>
-          span.f-bold Ортониксия&nbsp;
+          | В центре здоровья ног Steffany есть разные методики лечения вросшего ногтя. Мы практикуем три вида услуг: <br/>
+          span.f-bold 1. Аппаратное или инструментальное лечение&nbsp;
+          | — когда специалист работает с помощью стерильных инструментов или аппаратной техники, и извлекает вросшую часть ногтя;;<br/>
+          span.f-bold 2. Ортониксия&nbsp;
           | — когда на вросший ноготь скоба или пластина является основным методом лечения.<br/>
-          span.f-bold Коррекция ногтя&nbsp;
+          span.f-bold 3. Коррекция ногтя&nbsp;
           | с помощью протезирования вкладками — протезирующий материал защищает тело ногтя и корректирует направление роста пластины.
           | Если вы не знаете, какая процедура нужна именно в вашем случае, просто запишитесь на прием. Специалист подберет вам нужное лечение и определит количество процедур.
         .services-btn-container.btn-wrapper
-          +btnPen('записаться')
+          +btnPen('записаться')(data-toggle='modal', data-target='#callbackModal')
         .row.mt-md-4.mb-5
           .col-12.col-md-6.px-4
             .paragraph-container.mb-5
               h4.paragraph-title.mb-3 Консультация
-              p.paragraph-text.text-dark-1 На консультации специалист собирает всю необходимую информацию для того, чтобы определить причины возникновения вросшего ногтя и назначить эффективное лечение. Для этого он проводит осмотр, узнает об общем состоянии здоровья и других нюансах, которые необходимы для правильного лечения.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") На консультации специалист собирает всю необходимую информацию для того, чтобы определить причины возникновения вросшего ногтя и назначить эффективное лечение. Для этого он проводит осмотр, узнает об общем состоянии здоровья и других нюансах, которые необходимы для правильного лечения.
             .paragraph-container
               h4.paragraph-title Вросший ноготь без воспалительного процесса
-              p.paragraph-text.text-dark-1 Специалист выполняет процедуру с помощью стерильных инструментов и корректирует форму ногтя.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Специалист выполняет процедуру с помощью стерильных инструментов и корректирует форму ногтя.
             .paragraph-container
               h4.paragraph-title 3ТО скобы на вросший ноготь
-              p.paragraph-text.text-dark-1 Такая скоба состоит из трех компонентов: петли и двух крючков по бокам из медицинской стальной проволоки. Она эффективно выводит наружу врастающие углы. В процессе курса лечения важно менять скобу с периодичностью, которую назначил специалист.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Такая скоба состоит из трех компонентов: петли и двух крючков по бокам из медицинской стальной проволоки. Она эффективно выводит наружу врастающие углы. В процессе курса лечения важно менять скобу с периодичностью, которую назначил специалист.
             .paragraph-container
               h4.paragraph-title Коррекция скобы Фрезера на вросший ноготь
-              p.paragraph-text.text-dark-1 Во время курса лечения специалист меняет форму скобы в зависимости от состояния ногтевой пластины, чтобы продолжить лечение вросшего ногтя и привести его в изначальную здоровую форму.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Во время курса лечения специалист меняет форму скобы в зависимости от состояния ногтевой пластины, чтобы продолжить лечение вросшего ногтя и привести его в изначальную здоровую форму.
             .paragraph-container
-              h4.paragraph-title Ногтевая масса
-              p.paragraph-text.text-dark-1 При лечении вросшего ногтя специалист устанавливает ногтевую массу и каполин — специальный фиксирующий и корректирующий материал — под врастающий угол ногтя и таким образом корректирует направление его дальнейшего роста. Край ногтя приподнимается и благодаря этому не врастает по-старому.
+              h4.paragraph-title Ногтевая масса и каполин
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") При лечении вросшего ногтя специалист устанавливает ногтевую массу и каполин — специальный фиксирующий и корректирующий материал — под врастающий угол ногтя и таким образом корректирует направление его дальнейшего роста. Край ногтя приподнимается и благодаря этому не врастает по-старому.
             .paragraph-container
               h4.paragraph-title Анестезия
-              p.paragraph-text.text-dark-1 Лечение вросшего ногтя происходит абсолютно безболезненно. Для этого специалист «замораживает» место проблемы с помощью местной анестезии. В особо сложных, запущенных случаях специалист всегда предупреждает в случае болевых ощущений.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Лечение вросшего ногтя происходит абсолютно безболезненно. Для этого специалист «замораживает» место проблемы с помощью местной анестезии. В особо сложных, запущенных случаях специалист всегда предупреждает в случае болевых ощущений.
           .col-12.col-md-6.px-4
             .paragraph-container.mb-5
               h4.paragraph-title.mb-3 Скоба Фрезера на вросший ноготь
-              p.paragraph-text.text-dark-1 Скоба Фрезера — это своего рода брекеты для ногтей. Специалист устанавливает на ногтевую пластину изделие из медицинской стали в виде проволоки, которое корректирует форму ногтя.<br><br>Подолог подбирает курс лечения, поэтому в назначенный период нужно приходить на коррекцию скобы. В среднем курс полной коррекции ногтя занимает 8-12 месяцев (это период полного срастания ногтевой пластины и изменения памяти формы ногтя).<br><br>В течение этого времени специалист назначает пациенту визиты для коррекции системы. Уже сразу чувствуется облегчение и снижение давления ногтя на ткани, и возрастает по мере ношения системы.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Скоба Фрезера — это своего рода брекеты для ногтей. Специалист устанавливает на ногтевую пластину изделие из медицинской стали в виде проволоки, которое корректирует форму ногтя.
             .paragraph-container.mb-5
               h4.paragraph-title.mb-3 Вросший ноготь с воспалительным процессом
-              p.paragraph-text.text-dark-1 Специалист аккуратно работает с ногтем, убирая причину воспаления с помощью стерильных инструментов, и корректирует форму ногтя.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Специалист аккуратно работает с ногтем, убирая причину воспаления с помощью стерильных инструментов, и корректирует форму ногтя.
             .paragraph-container.mb-5
               h4.paragraph-title.mb-3 Титановая нить на вросший ноготь
-              p.paragraph-text.text-dark-1 Скоба изготовлена из сплава титана и никеля. Ее особенность в том, что она не деформируется под давлением, поэтому при установке на ногтевую пластину она ежесекундно оттягивает ноготь и таким образом корректирует его форму.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Скоба изготовлена из сплава титана и никеля. Ее особенность в том, что она не деформируется под давлением, поэтому при установке на ногтевую пластину она ежесекундно оттягивает ноготь и таким образом корректирует его форму.
             .paragraph-container.mb-5
               h4.paragraph-title.mb-3 Ониклип-пластина на вросший ноготь
-              p.paragraph-text.text-dark-1 Пластина ониклип одноразовая, поэтому ее необходимо менять по ходу курса лечения. Во время установки ее размер, силу натяжения и форму можно корректировать. Поэтому пациенту с разными ситуациями будет одинаково комфортно носить пластину.
+              p.paragraph-text.text-dark-1.extra-fw-300(style="font-weight: 300") Пластина ониклип одноразовая, поэтому ее необходимо менять по ходу срастания ногтевой пластины (примерно раз в три месяца). Во время установки ее размер, силу натяжения и форму можно корректировать. Поэтому пациенту с разными ситуациями будет одинаково комфортно носить пластину.
         .container-fluid.d-flex.flex-column.align-items-center
           .row.prices-container.mb-4
             .row.px-4.container-fluid
               .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Консультация
+                p.treatment-service-name.mb-1 Вросший ноготь без перевязки
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 250 грн
+                p.treatment-price.text-right 350 грн
               .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 45 мин
+                p.treatment-duration.text-right 1 час
 
             .row.px-4.container-fluid
               .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Скоба Фрезера на вросший ноготь цена
+                p.treatment-service-name.mb-1 Вросший ноготь с перевязкой
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 200 грн
+                p.treatment-price.text-right 550 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 1 час
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Анестезия
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 100 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 15 мин
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Контрольный осмотр  вросшего ногтя
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 150 грн
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 30 мин
 
             .row.px-4.container-fluid
               .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Вросший ноготь без воспалительного процесса цена
+                p.treatment-service-name.mb-1 Коррекция скобы Фрезера
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 450 грн
-              .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 1 час
-
-            .row.px-4.container-fluid
-              .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Вросший ноготь с воспалительным процессом цена
-              .col-4.col-md-2.p-0
-                p.treatment-price.text-right 350 грн
-              .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 45 мин
-
-            .row.px-4.container-fluid
-              .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 3ТО скобы на вросший ноготь цена
-              .col-4.col-md-2.p-0
-                p.treatment-price.text-right 250 грн
-              .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 45 мин
-
-            .row.px-4.container-fluid
-              .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Титановая нить на вросший ноготь цена
-              .col-4.col-md-2.p-0
-                p.treatment-price.text-right 200 грн
+                p.treatment-price.text-right 600 грн
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 30 мин
 
             .row.px-4.container-fluid
               .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Коррекция скобы Фрезера на вросший ноготь цена
+                p.treatment-service-name.mb-1 Первичная консультация подолога (с 1 января 2020 г)
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 450 грн
+                p.treatment-price.text-right 150 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 30 мин
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Протезирование ногтевой пластины  ногтевая масса (за 1 ед)
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 250 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 30 мин
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Протезирование ногтевой пластины гель с интимикотиком или серебро (за 1 ед)
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 500 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 30 мин
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Протезирование ногтевой пластины медицинский акрилат (за 1 ед)
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 650 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 30 мин
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Первичная консультация подолога (с 1 января 2020 г)
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 150 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 30 мин
+
+            //.row.px-4.container-fluid
+            //  .col-12.col-md-8.p-0.pr-5
+            //    p.treatment-service-name.mb-1 Скоба ЗТО
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-price.text-right 1100 грн
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-duration.text-right 1 час
+
+            //.row.px-4.container-fluid
+            //  .col-12.col-md-8.p-0.pr-5
+            //    p.treatment-service-name.mb-1 Скоба Фрезера
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-price.text-right 1000 грн
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-duration.text-right 1 час
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Тампонирование боковых валиков (за 1 палец)
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 50 грн
+              .col-4.col-md-2.p-0
+                p.treatment-duration.text-right 30 мин
+
+            .row.px-4.container-fluid
+              .col-12.col-md-8.p-0.pr-5
+                p.treatment-service-name.mb-1 Установка коррекционной системы
+              .col-4.col-md-2.p-0
+                p.treatment-price.text-right 1000 грн
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 1 час
 
-            .row.px-4.container-fluid
-              .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Ониклип-пластина на вросший ноготь цена
-              .col-4.col-md-2.p-0
-                p.treatment-price.text-right 350 грн
-              .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 45 мин
+
+
+            //.row.px-4.container-fluid
+            //  .col-12.col-md-8.p-0.pr-5
+            //    p.treatment-service-name.mb-1 Титановая нить
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-price.text-right 800 грн
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-duration.text-right 1 час
+
+            //.row.px-4.container-fluid
+            //  .col-12.col-md-8.p-0.pr-5
+            //    p.treatment-service-name.mb-1 Ониклип пластина
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-price.text-right 800 грн
+            //  .col-4.col-md-2.p-0
+            //    p.treatment-duration.text-right 1 час
 
             .row.px-4.container-fluid
               .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Анестезия цена
+                p.treatment-service-name.mb-1 Протезирование ногтевой пластины  частичный протез гель (за 1 ед)
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 450 грн
+                p.treatment-price.text-right 300 грн
               .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 1 час
-
+                p.treatment-duration.text-right 30 мин
             .row.px-4.container-fluid
               .col-12.col-md-8.p-0.pr-5
-                p.treatment-service-name.mb-1 Ногтевая масса цена
+                p.treatment-service-name.mb-1 Протезирование ногтевой пластины с вкладкой (за 1 ед)
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 350 грн
+                p.treatment-price.text-right 650 грн
               .col-4.col-md-2.p-0
-                p.treatment-duration.text-right 45 мин
+                p.treatment-duration.text-right 30 мин
           .services-btn-container
-            +btnPen('записаться')
+            +btnPen('записаться')(data-toggle='modal', data-target='#callbackModal')

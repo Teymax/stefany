@@ -1,11 +1,9 @@
-.map.pt-5
+.map.map-2
   .container.container-l.pb-5.border-b-light.px-0.px-lg-1
-    .row.no-gutters.px-15.mb-5
-      .col
-    .row.no-gutters
-      .col-12.col-lg-5.pr-lg-5.mb-5.mb-lg-0.mx-auto.mx-lg-0.px-15.justify-content-center.map-cnt
-        p.section-title-s.mb-40.w-100 Записывайтесь и приходите на процедуры в Steffany Beauty!
-        .row.no-gutters.mb-5
+    .row.no-gutters.justify-content-between
+      .col-12.col-lg-5.mb-5.mb-lg-0.mx-auto.mx-lg-0.justify-content-center.map-cnt
+        p.section-title-s.mb-40.w-100.map-title-1 Записывайтесь и приходите на процедуры в Steffany Beauty!
+        .row.no-gutters.contact-information
           .col-12.col-sm-6
             .row.no-gutters
               .col-12.d-flex.align-items-center.mb-3.height-25
@@ -23,15 +21,15 @@
                 img.icon.icon-time(src="assets/icon/time.png", srcset="assets/icon/time@2x.png 2x", alt="h-map")
                 p.p-text 9:00 – 20:00
         .row.no-gutters
-          p.section-title-s.mb-40.w-100 Хотите связаться лично с собственником Steffany Beauty?
+          p.section-title-s.mb-30.w-100.map-title-2 Хотите связаться лично с собственником Steffany Beauty?
           form.d-flex.align-items-start.justify-content-between.flex-wrap(action="")
-            .col-12.col-sm-5.mb-3.p-0
-              input.field.w-100.p-text-light.mb-3(type="text", placeholder="Имя")
-              input.field.w-100.p-text-light.mb-3(type="email", placeholder="Email")
-              input.field.w-100.p-text-light.mb-3(type="tel", placeholder="Телефон")
-            .col-12.col-sm-7.p-0.pl-sm-3.mb-3
-              textarea.field.w-100.p-text-light(name="Info", cols="30", rows="10", placeholder="О чем вы хотите рассказать?")
-            button.btn-send.btn-callback-simple.d-flex.align-items-center.justify-content-between.m-auto.m-sm-0.ml-sm-auto(href="#")
+            .col-12.col-sm-5.p-0
+              input.field.w-100.p-text-light(type="text", placeholder="Имя")
+              input.field.w-100.p-text-light(type="email", placeholder="Email")
+              input.field.w-100.p-text-light.mb-0(type="tel", placeholder="Телефон")
+            .col-12.col-sm-7.p-0.pl-sm-3.mb-0
+              textarea.field.w-100.p-text-light.mb-0(name="Info", cols="30", rows="10", placeholder="О чем вы хотите рассказать?")
+            button.btn-send.btn-callback-simple.d-flex.align-items-center.justify-content-between.ml-sm-auto.mt-22(href="#")
               span.d-flex.align-items-center.justify-content-between
                 span отправить
               svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
@@ -39,5 +37,5 @@
                   .st0{fill:#D11111;}
                 path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
                 C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
-      .col-12.col-lg-7
-        img.w-100(src="assets/img/map.jpg", srcset="assets/img/map@2x.jpg 2x", alt="map")
+      .col-12.col-lg-7.map-img
+        img.w-100(src="assets/img/map/map.jpg", srcset="assets/img/map/map@2x.jpg 2x", alt="map")
