@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function radioClick() {
+  clearTotalPrice();
   let checkedRadio = document.querySelector('input[type="radio"][name="service"]:checked')
   document.querySelector('#yclient_form .c-content-count').innerHTML =
     `
@@ -119,7 +120,8 @@ function displayServices(json) {
       servicesAll.map(function (service) {
         if (+servicesStatic[i] === service.id) {
           let checkbox = mainBlocks[i].querySelector("input");
-          checkbox.addEventListener("click", refreshPrice);
+          if (checkbox.getAttribute("type") === "checkbox")
+            checkbox.addEventListener("click", refreshPrice);
           checkbox.value = service.id;
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
           mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
@@ -144,7 +146,7 @@ function mainFormSubmit(event) {
   event.preventDefault();
   let service = event.target.service.value;
   let city = localStorage.city ? localStorage.city : "unknown";
-  let comment = (event.target.id === "callComplex" ? "service consult " : "complex ") + city;
+  let comment = (event.target.id === "callComplex" ? "complex " : "service consult ");
 
   let params = [
     event.target.fullname.value,
@@ -163,9 +165,10 @@ function complexFormSubmit(event) {
   let name = event.target.fullname.value;
   let email = event.target.email.value;
   let phone = event.target.phone.value;
-  let comment = +event.target.payment.value ? "payment" : "online order";
-  let serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked');
   let city = localStorage.city ? localStorage.city : "unknown";
+  let isComplex = document.querySelector('input[type="radio"]:checked');
+  let comment = (+event.target.payment.value ? "payment" : "online order") + (isComplex?" complex":" service");
+  let serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked');
   let services = [...serviceCheckboxes].map(checkbox => {
     return checkbox.value;
   });
@@ -208,7 +211,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
     "phone": phone,
     "fullname": name,
     "email": email,
-    "comment": 'online order' + ' ' + city + " " + comment,
+    "comment": comment + ' ' + city,
     "appointments": [
       {
         "id": date.getTime(),
@@ -287,6 +290,10 @@ function createOrder(amount, order_desc, name, services, email, phone) {
 }
 
 function refreshPrice(event) {
+  let radioBtns = document.querySelectorAll('input[type="radio"]:checked');
+  [...radioBtns].forEach(radio => {
+    radio.checked = false;
+  });
   let checkbox = event.target;
   let name = checkbox.parentNode.nextElementSibling.textContent;
   let totalPriceElem = document.querySelectorAll(".serviceListSum");
@@ -326,4 +333,24 @@ function refreshPrice(event) {
     if (checkbox.checked) container.innerHTML += elem;
     else container.innerHTML = container.innerHTML.replace(elem, "")
   })
+}
+
+function clearTotalPrice() {
+  let checkBtns = document.querySelectorAll('input[type="checkbox"]:checked');
+  [...checkBtns].forEach(check => {
+    check.checked = false;
+  });
+  let servicesContainer = document.querySelectorAll(".choosenServices");
+  [...servicesContainer].forEach(container => {
+    container.innerHTML = "";
+  });
+  let serviceListTime = document.querySelectorAll(".serviceListTime");
+  [...serviceListTime].forEach(container => {
+    container.innerHTML = "0 мин.";
+  });
+  let serviceListSum = document.querySelectorAll(".serviceListSum");
+  [...serviceListSum].forEach(container => {
+    container.innerHTML = "0 грн.";
+  });
+
 }
