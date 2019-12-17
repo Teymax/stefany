@@ -14,10 +14,10 @@ html
   max-width: 1283px !important
 .container-xxl
   max-width: 1470px !important
-.double-grid-container 
+.double-grid-container
   max-width: 630px !important
   box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
-.four-grid-container 
+.four-grid-container
   max-width: 1261px !important
   .grid-block
     box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
@@ -27,7 +27,7 @@ body
     overflow: hidden
 
 // text - style *******
-	
+
 .paragraph-text-light
   @include font ('Circe-Regular', 300, 16, 26)
   color: $text-color-white
@@ -108,7 +108,7 @@ p, .p-text, .paragraph-text
 	color: $breadcrump-color
 .text-small
   @include font ('Circe-Regular', 300, 12, 13)
-  color: $text-color-dark 
+  color: $text-color-dark
 .timer-nubmer
   text-transform: uppercase
   @include font ('Circe-Bold', 700, 26, 26)
@@ -189,13 +189,13 @@ p, .p-text, .paragraph-text
     margin-bottom: 10px
 .step-head
   @include font('Circe-Regular', 400, 12, 12)
-  text-align: center 
+  text-align: center
   text-transform: uppercase
   letter-spacing: 0.15em
   color: #9FA6BA
 .underline-title
   position: relative
-  &::after   
+  &::after
     content: ''
     position: absolute
     top: 100%
@@ -217,7 +217,7 @@ p, .p-text, .paragraph-text
 .light-green-bg
 	background: $dark-gren-bg !important
 .no-bg-blk
-	background: transparent !important   
+	background: transparent !important
 .gray-word-bg
   background: url('../assets/img/gray-word-bg.png') !important
   background-repeat: no-repeat !important
@@ -283,7 +283,7 @@ p, .p-text, .paragraph-text
   border: 2px solid $color-purple
   text-decoration: none
   border-radius: 100px
-  & > span 
+  & > span
     text-decoration: none
     width: 100%
     max-width: 115px
@@ -293,18 +293,18 @@ p, .p-text, .paragraph-text
     .sendSvg
       width: 13px
       height: 19px
-    .st0 
+    .st0
       fill: $color-purple-text
-    span 
+    span
       padding-top: 2px
       @include font ('Circe-ExtraBold', 900, 10, 10)
       text-transform: uppercase
       letter-spacing: 2.3px
       color: $color-purple-text
-  & > svg 
+  & > svg
     width: 14px
     height: 11px
-    .st0 
+    .st0
       fill: $color-white
 // header btn
 .btn-callback-white, header.open .btn-callback
@@ -317,17 +317,17 @@ p, .p-text, .paragraph-text
     border: 2px solid $color-white !important
   & > span
     span
-      color: $color-white 
-    svg 
+      color: $color-white
+    svg
       .st0
         fill: $color-white  !important
-  & > svg 
-    .st0 
+  & > svg
+    .st0
       fill: $color-purple
 .btn-callback-simple
 	width: auto
 	max-width: 100%
-	& > span 
+	& > span
 		max-width: 100%
 		span
 			padding-right: 23px
@@ -349,8 +349,8 @@ p, .p-text, .paragraph-text
   color: $color-white !important
   letter-spacing: 1.5px
   border-radius: 100px
-  transition: 0.3s ease 
-  &:hover 
+  transition: 0.3s ease
+  &:hover
     box-shadow: 0 0 20px $btn-bg
 .soc-btn
   width: 38px
@@ -510,7 +510,7 @@ svg.icon-arrow
   @media(max-width: 767px)
     border-bottom: 0px solid $border-bottom-bg
 .br-100
-  border-radius: 100px 
+  border-radius: 100px
 
 // margings + paddings ********
 .px-15
@@ -691,29 +691,29 @@ textarea.field
           background-size: contain !important
 
 // menu - style -- header **
-.menu-trigger 
+.menu-trigger
   transition: 0.45s ease
   cursor: pointer
   width: 22px
   height: 16px
 
-.menu-trigger span 
+.menu-trigger span
   height: 2px
   background-color: $menu-line
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1)
 
 
-.menu-trigger.open  
+.menu-trigger.open
   justify-content: center !important
 
-.menu-trigger.open span:nth-child(1) 
+.menu-trigger.open span:nth-child(1)
   transform: rotate(-40deg)
   margin-bottom: -2px
 
-.menu-trigger.open span:nth-child(2) 
+.menu-trigger.open span:nth-child(2)
   display: none !important
 
-.menu-trigger.open span:nth-child(3) 
+.menu-trigger.open span:nth-child(3)
   transform: rotate(40deg)
 
 // dropdown-menu - style header
@@ -724,7 +724,7 @@ textarea.field
   svg
     width: 12px
     height: 8px
-    margin-left: 10px 
+    margin-left: 10px
     .cls-1
       fill: #4D5259 !important
   .icon-arrow
@@ -759,10 +759,10 @@ ul.dropdown-menu-list
   li
     a
       white-space: nowrap
-    &:not(:last-child) 
-      padding-bottom: 15px
-      margin-bottom: 15px
-      border-bottom: 1px solid $border-light
+    //&:not(:last-child)
+    //  padding-bottom: 15px
+    //  margin-bottom: 15px
+    //  border-bottom: 1px solid $border-light
 .drop-menu-top
   ul.dropdown-menu-list
     top: auto
@@ -777,4 +777,3 @@ ul.dropdown-menu-list
 	.px-15
 		padding-left: 15px !important
 		padding-right: 15px !important
-	
