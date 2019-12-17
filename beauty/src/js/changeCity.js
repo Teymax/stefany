@@ -50,12 +50,12 @@ $(document).ready(function () {
       ru: {
         cityName: 'Житомир',
         cityNameIn: 'в Житомире',
-        cityPhone: '098-180-50-90',
+        cityPhone: '098-007-07-53',
         address: 'ул. Киевская, 77, тц "Глобал"',
         cityMap: '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' +'    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0@2x.jpg',
 
         imagesAmount: 6,
         imagesAmountSpecialists: 7,
@@ -114,7 +114,7 @@ $(document).ready(function () {
         cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram: 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/video-slider-0@2x.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/salon-0@2x.jpg',
 
         imagesAmount: 10,
         imagesAmountSpecialists: 4,
@@ -288,7 +288,7 @@ $(document).ready(function () {
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
-          <img src="${imgPath}video-slider-${i}.jpg" srcset="${imgPath}video-slider-${i}@2x.jpg" class="w-100">
+          <img src="${imgPath}salon-${i}.jpg" class="w-100">
         </span>
       `;
     }
@@ -296,7 +296,7 @@ $(document).ready(function () {
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
-          <img src="${imgPath}video-slider-${i}.jpg" srcset="${imgPath}video-slider-${i}@2x.jpg" class="w-100 video-slider-img">
+          <img src="${imgPath}salon-${i}.jpg" class="w-100 salon-img">
           <span class="owl-dot-bg w-100 h-100 d-block"></span>
         </span>
       `;
@@ -338,7 +338,7 @@ $(document).ready(function () {
         city = e.target.dataset.city;
         localStorage.setItem('city', city);
         changeDataForCity();
-        if (window.location.href.indexOf('about-steffany') !== -1) {
+        if (window.location.href.indexOf('salonPage') !== -1) {
           location.reload()
         }
       }
