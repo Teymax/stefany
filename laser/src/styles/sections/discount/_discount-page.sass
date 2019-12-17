@@ -1,0 +1,90 @@
+section.section.discount-page
+  //overflow: visible
+  padding-top: 13px
+
+  .container
+    .h2-title
+      margin-bottom: 41px
+    .row.wrapper
+      padding-bottom: 48px
+      border-bottom: 1px solid rgba(58, 64, 91, .2)
+    .c-content
+      max-width: 936px
+      height: 352px
+      background:
+        image: url("../assets/img/discount-page/discount-bg.jpg")
+        size: cover
+        repeat: no-repeat
+        position-y: -11px
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
+      @include media-breakpoint-down(lg)
+        background-image: url("../assets/img/discount-page/discount-bg-tablet.jpg")
+      @include media-breakpoint-down(sm)
+        background-image: url("../assets/img/discount-page/discount-bg-mobile.jpg")
+        height: 152px
+    .c-desc
+      @include media-breakpoint-down(xs)
+        max-width: 280px
+    .c-content-sidbar
+      min-height: 588px
+      padding-top: 33px
+      padding-left: 20px
+      background:
+        image: url("../assets/img/discount-page/sidebar-bg.jpg")
+        size: cover
+        repeat: no-repeat
+      .title
+        @include  font (CormorantGaramond, 700, 30, 30)
+      .subtitle
+        color: $text-color-lightgrey
+      .position-block
+        max-width: 500px
+        .c-span
+          margin-top: -20px
+          margin-left: 7px
+        .custopm-text
+          &__small
+            @include font (Circe, 300, 20, 31)
+            color: $text-color-lightgrey
+            margin-bottom: 40px
+            margin-left: -2rem
+            margin-top: -1rem
+          &__bold
+            @include font (Circe, 900, 20, 31)
+            color: $text-color-lightgrey
+          &__through
+            @include font (Circe, 300, 12, 19)
+            color: $text-color-lightgrey
+            text-decoration: line-through
+
+  .info-list
+    li
+      @include font (Circe, 400, 14, 22)
+      white-space: nowrap
+      &:before
+        background-color: #A9A8C6
+
+  .btn-left
+    margin-top: 39px
+    @include media-breakpoint-down(lg)
+      margin-top: 0
+  .btn-callback
+    margin:
+      right: 35px
+      bottom: 28px
+    .text-section
+      color: $text-color-white
+      svg
+        fill: $text-color-white
+    @include media-breakpoint-down(lg)
+      margin:
+        right: 0px
+    @include media-breakpoint-down(xs)
+      .text-section
+        color: $text-color-lightdark
+        svg
+          fill: $text-color-lightdark
+.btn-simple.btn-second
+  background: $btn-second-color !important

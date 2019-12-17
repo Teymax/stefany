@@ -1,13 +1,16 @@
 .ort-treatment
 	.section-bg-dark
 		padding-bottom: 30px !important
+
 	.container
 		max-width: 1210px !important
+
 	.ort-title
 		position: relative
 		margin-top: 24px !important
 		font-size: 14px !important
 		text-transform: uppercase
+
 		&::before
 			content: ''
 			position: absolute
@@ -19,6 +22,7 @@
 			height: 194px
 			background: #4F79CA
 			border-radius: 50%
+
 	.ort-title-gray
 		&::before
 			top: -50px
@@ -26,30 +30,49 @@
 			width: 140px
 			height: 140px
 			background: #EBF1FB
+
 	.ort-cnt
 		position: relative
 		z-index: 2
 		margin-bottom: 12px
+
 		& li
 			margin-bottom: 12px
+
 	.ort-block
 		background-image: url('../assets/img/orthopedics/dash.png')
 		background-repeat: no-repeat
 		background-position: top left
 		max-width: 506px !important
+		padding: 3rem 5rem
+
 	&.ingrown-cnt
 		padding: 65px 0 0 !important
-		& > .row 
+
+		h3
+			font-size: 30px
+
+		.d-flex
+			p
+				@include media-breakpoint-up(sm)
+					width: 40em
+
+		& > .row
 			padding-top: 0 !important
+
 		p, span, li, h3
 			color: #3A405B !important
+
 		&-2
 			padding: 0 !important
+
 			.container
 				max-width: 1320px !important
+
 				.ort-title-gray
 					&::before
 						left: -25px
+
 @media(max-width: 991px)
 	.ort-treatment .mb-80
 		margin-bottom: 40px !important
@@ -60,6 +83,7 @@
 		max-width: 500px !important
 	.ort-treatment.ingrown-cnt .ort-block-1
 		margin-bottom: 0 !important
+
 @media(max-width: 767px)
 	.ort-treatment .container
 		padding: 0 15px 0 15px !important

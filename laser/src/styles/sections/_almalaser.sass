@@ -3,6 +3,8 @@ section.section.almalaser
   background-color: #EDE1DF
   position: relative
   z-index: -1
+  b
+    color: #556278
   @include media-breakpoint-down(lg)
     padding-top: 66px
   @include media-breakpoint-down(xs)
@@ -10,23 +12,24 @@ section.section.almalaser
   .extralarge-text-bg
     bottom: 46px
     left: 522px
-    @include media-breakpoint-down(lg)
-      left: -182px
-    @include media-breakpoint-down(xs)
-      bottom: 14px
-      left: -75px
   .container
     .c-content
       max-width: 575px
+      @include  media-breakpoint-down(lg)
+        max-width: 590px
+
     .white-block-design
-      //position: relative
       width: 468px
       height: 657px
       z-index: -1
       .extralarge-text-bg
         position: absolute
         bottom: 46px
-        left: -278px
+        left: -268px
+        @include media-breakpoint-down(lg)
+        @include media-breakpoint-down(sm)
+          font-size: 159.63px
+          left: -132px
       img
         top: 60px
         left: 60px
@@ -44,3 +47,11 @@ section.section.almalaser
           top: 33px
           left: 33px
 
+@include media-breakpoint-down(xs)
+  section.section.almalaser
+    .container
+      .c-content
+      .white-block-design
+        .extralarge-text-bg
+          bottom: 9px
+          left: -122px

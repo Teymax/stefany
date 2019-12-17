@@ -1,38 +1,34 @@
 section.section.choose-service
   background:
-    image: url("../assets/img/background/discount-bg.jpg")
-    size: cover
-  padding-top: 82px
+    image: url("../assets/img/background/choose-service-bg.jpg")
+    size: contain
+    repeat: no-repeat
+  padding-top: 79px
+  padding-bottom: 70px
+  @include media-breakpoint-down(lg)
+    padding-top: 70px
+    padding-bottom: 65px
+  @include media-breakpoint-down(sm)
+    padding-top: 49px
+    padding-bottom: 93px
   .custom-icon-number
     p
       color: #9FA6BA
   .container
-    .row
-      padding-bottom: 82px
     .c-content
       margin: 0 auto
-      max-width: 365px
-    .h2-title
-      margin-bottom: 61px
-@include media-breakpoint-down(lg)
-  section.section.choose-service
-    padding-top: 76px
-    .container
-      .row
-        padding-bottom: 84px
-      .c-content
-        margin: 0 auto
-        max-width: 395px
-      .h2-title
-        margin-bottom: 76px
-@include media-breakpoint-down(xs)
-  section.section.choose-service
-    padding-top: 53px
-    .container
-      .row
-        padding-bottom: 58px
-      .c-content
-        margin: 0 auto
+      width: 396px
+      @include media-breakpoint-down(lg)
+
+      @include media-breakpoint-down(sm)
         max-width: 285px
-      .h2-title
-        margin-bottom: 41px
+
+    .h2-title
+      margin-bottom: 66px
+      @include media-breakpoint-down(lg)
+        margin-bottom: 80px
+
+      @include media-breakpoint-down(sm)
+        margin-bottom: 44px
+
+

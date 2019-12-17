@@ -1,11 +1,28 @@
 section.section.safety
-  padding-top: 76px
+  padding-top: 73px
   padding-bottom: 75px
   background:
     image: url("../assets/img/background/safety-bg.jpg")
     size: cover
+  @include media-breakpoint-down(lg)
+    background-position-x: 1400px
+    padding-top: 67px
+    padding-bottom: 92px
+  @include media-breakpoint-down(sm)
+    padding-top: 71px
+    padding-bottom: 66px
+
   .container
+    .subtitle
+      @include font(Circe, 400, 20, 45)
+      color: $text-color-white
+      letter-spacing: 0.01em
+      @include media-breakpoint-down(sm)
+        @include font(Circe, 400, 16, 20)
     .c-safety
+      margin-top: 114px
+      @include media-breakpoint-down(sm)
+        margin-top: 60px
       .safety-box
         max-width: 517px
         margin: 0 auto
@@ -23,29 +40,28 @@ section.section.safety
           left: -110px
           top: -93px
           z-index: -1
+        @include media-breakpoint-down(lg)
+          margin-left: 134px
       .c-content
-
-@include media-breakpoint-down(lg)
+        width: 505px
+        @include media-breakpoint-down(lg)
+          width: 428px
+        @include media-breakpoint-down(sm)
+          width: 100%
+@include media-breakpoint-down(sm)
   section.section.safety
-    padding-top: 72px
-    padding-bottom: 92px
-@include media-breakpoint-down(xs)
-  section.section.safety
-    padding-top: 72px
-    padding-bottom: 66px
     .container
       .c-safety
         .safety-box
-          max-width: 280px
           margin: 0 auto
           z-index: 0
           position: relative
-          &:nth-child(1):before
+          &:nth-of-type(1):before
             content: url("../assets/img/safety/safety-img_1-mob.svg")
-            left: -105px
-            top: -100px
-          &:nth-child(2):before
+            left: -89px
+            top: -61px
+          &:nth-of-type(2):before
             content: url("../assets/img/safety/safety-img_2-mob.svg")
-            left: -105px
+            left: -135px
             top: -100px
         .c-content

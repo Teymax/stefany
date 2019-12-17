@@ -21,7 +21,7 @@
 
 		h3.title
 			color: #3a405b
-			@include font(Circe, 400, 18, 20)
+			@include font(Circe, 400, 20, 20)
 			margin-bottom: 1em
 
 		p.desc
@@ -29,13 +29,13 @@
 			@include font(Circe, 200, 14, 26)
 
 	div.numbered-cnt
-		margin-bottom: 5em
+		margin-bottom: 7em
 
 		img
 			display: block !important
 
 		.description
-			&:before
+			&:before:nth-of-type(5)
 				content: none
 
 		&:nth-child(1)
@@ -45,9 +45,7 @@
 		&:nth-child(2)
 			img
 				width: 9.6em
-
-			.description
-				margin-left: 10em
+				left: 2em
 
 		&:nth-child(3)
 			img

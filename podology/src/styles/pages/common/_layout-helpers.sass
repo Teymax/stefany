@@ -30,6 +30,9 @@
 	padding-top: 0 !important
 	padding-bottom: 0 !important
 
+	li
+		color: #ffffff
+
 .p-text-light
 	@include font(Circe, 300, 14, 24)
 	color: $breadcrump-color
@@ -46,6 +49,12 @@
 
 .f-bold
 	font-weight: bold !important
+
+section.section
+	.program-head
+		.card-arrow
+			@include media-breakpoint-down(sm)
+				min-width: 80px !important
 
 .dark-color
 	color: #3A405B !important

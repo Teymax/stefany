@@ -1,0 +1,36 @@
+section.section.service-three-boxes-dark-theme
+  padding-top: 80px
+  padding-bottom: 66px
+  background:
+    image: url("../assets/img/service-waxing/three-box-bg.jpg")
+    size: cover
+  .container
+    .three-box-title
+      @include font(CormorantGaramond, 700, 44, 45)
+      color: $text-color-white
+      @include media-breakpoint-down(xs)
+        @include font(CormorantGaramond, 700, 30, 30)
+    .c-three-box
+      .img-position
+        margin:
+          left: auto
+          right: auto
+          bottom: -100px
+
+@include media-breakpoint-down(lg)
+  section.section.service-three-boxes_dark-theme
+    padding-top: 93px
+    padding-bottom: 133px
+    .container
+      .c-three-box
+        width: 430px
+        margin: 0 auto
+@include media-breakpoint-down(xs)
+  section.section.service-three-boxes_dark-theme
+    padding-top: 63px
+    padding-bottom: 137px
+    .container
+      .c-three-box
+        width: 290px
+
+

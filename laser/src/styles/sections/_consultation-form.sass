@@ -3,47 +3,72 @@ section.section.consultation-form
   background:
     image: url("../assets/img/background/consultation-form-bg.jpg")
     size: cover
+  .btn-callback
+    box-shadow: none
   .container
     .c-content
+      padding-top: 106px
+      width: 100%
+      max-width: 500px
       .c-title
-        width: 100%
-        max-width: 500px
-      .c-desc
-        width: 100%
-        max-width: 465px
+        @include media-breakpoint-down(lg)
+        font-size: 36px
+        &_color
+          color: $primary-color
+        &_large
+          @include font(CormorantGaramond, 700, 92, 70)
+          @include media-breakpoint-down(lg)
+            font-size: 65px
     .main-form
-      max-width: 390px
+      max-width: 396px
       background-color: #EDE1DF
       border-radius: 5px 5px 0 0
       overflow: hidden
-      //&:before
-      //  content: url("../assets/img/logo-bg.png")
-      //  position: absolute
-      //  bottom: -7px
       .form-control
         background-color: rgba(77, 82, 89, .2)
         width: 252px
 
+
     .small-label
       @include font(Circe, 400, 12, 22)
-    .input::placeholder
+      color: $text-color-lightdark
+    .form-control::placeholder
+      @include font(Circe, 300, 14, 22)
       color: $text-color-white
+
     .btn-callback
       background-image: linear-gradient(to right, transparent 81%, #F6AE9F 24%)
       max-width: 250px
+      margin-top: 24px
 
+  .mb-38
+    margin-bottom: 38px
 @include media-breakpoint-down(lg)
   section.section.consultation-form
     padding-top: 63px
+    background:
+      position: bottom
+      image: url("../assets/img/background/consultation-form-bg-tablet.jpg")
     .container
+      .c-content
+        padding-top: 40px
+        .c-title
+
       .main-form
         border-radius: 0
-
-@include media-breakpoint-down(xs)
+@include media-breakpoint-down(sm)
   section.section.consultation-form
     padding-top: 65px
+    background:
+      image: none
+      color: #4D5259
     .container
       max-width: 100%
+      padding: 0 !important
+      .c-content
+        padding: 0px 18px 20px 18px
+        .c-title
+          padding-top: 0px
       .media-gutters
         padding: 0
       .main-form

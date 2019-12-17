@@ -3,19 +3,94 @@ h1
 	letter-spacing: .03em
 	color: $secondary-header-color
 
+html
+	overflow-x: hidden
+
+	body
+		strong
+			font-weight: 600
+
 .icon
 	display: inline-block
 	width: 30px
 	height: 30px
+
+.wrapper-404
+	width: 100%
+	height: 100%
+	flex-grow: 1
+	background:
+		image: url('../assets/img/background/404-desktop.jpg')
+		repeat: no-repeat
+		size: cover
+
+	@include media-breakpoint-down(md)
+		background-image: url('../assets/img/background/404-tablet.jpg')
+		background-position: -70rem center
+
+	@include media-breakpoint-down(sm)
+		background-image: url('../assets/img/background/404-mobile.jpg')
 
 .container.list-section
 	padding:
 		top: 2em !important
 		bottom: 2em !important
 
+.extra-padding-10r
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 10rem
+			right: 10rem
+
+.extra-padding
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 20rem
+			right: 20rem
+
+.z-0
+	z-index: 0
+
+.z-1
+	z-index: 1
+
+.z--1
+	z-index: -1
+
+.crutch-1
+	p
+		width: 32%
+		@include media-breakpoint-down(lg)
+			width: 45%
+		@include media-breakpoint-down(md)
+			width: 60%
+		@include media-breakpoint-down(sm)
+			width: 77%
+
+.crutch-2
+	p
+		width: 70%
+		@include media-breakpoint-down(lg)
+			width: 82%
+
+html section.section .ultra-spec-mb
+	@include media-breakpoint-down(lg)
+		margin-bottom: 1rem !important
+
 iframe
 	width: 100%
 	height: 100%
+	@include media-breakpoint-up(lg)
+		margin-left: 1rem !important
+
+	&.mapych
+		@include media-breakpoint-down(lg)
+			display: none
+
+.small-map
+	height: 15em
+	@include media-breakpoint-up(lg)
+		display: none !important
 
 .arrows
 	.feet-section
@@ -51,17 +126,19 @@ iframe
 
 .crutch-text
 	color: #fff
-	@include font(Circe, normal, 20, 29)
+	@include font(Circe, normal, 16, 29)
 	width: 70%
 	text-align: center
 
 .light-blue
 	font-weight: 400
-	font-size: 20px
+	font-size: 16px
 	line-height: 29px
 	color: #7b9ddd
 
 	strong
+		font-size: 20px
+		font-weight: 800
 		color: inherit
 
 .very-special-row
@@ -73,9 +150,36 @@ body .very-special-container
 		padding: 0 !important
 		max-width: 100%
 
+.no-shadow
+	box-shadow: none
+
+body section.section .extra-h3
+	h3
+		font-size: 30px
+
+body section.section
+	.extra-fw-300
+		font-weight: 300 !important
+
+.ultra-mega-bg-btn .btn-callback .arrow-section
+	background: #303947 !important
+
 body section h2
 	font-size: 28px
 	text-transform: initial
+
+.circles.bg-circles
+	z-index: -1
+	width: 80em
+	left: 50%
+	top: 0
+	transform: translateX(-50%)
+
+section.section.category.cat-overflow
+	padding: 0
+
+	.wrapper
+		margin-left: -1em
 
 h1,
 h2,
@@ -86,6 +190,7 @@ span,
 li,
 div
 	font-family: Circe !important
+	color: $secondary-header-color
 
 	h2, p
 		color: $text-color-dark
@@ -98,7 +203,7 @@ div
 		@include font(Circe, 200, 16, 19)
 
 		strong
-			font-weight: bold
+			font-weight: 600
 
 ul.info-list
 	li
@@ -129,8 +234,6 @@ button:focus
 	outline: none
 
 .mini-map
-	background: url('../assets/img/common/mobile-map.png') no-repeat center center
-	background-size: 80em
 	height: 20em
 	margin-top: 3em
 
@@ -152,7 +255,6 @@ button:focus
 			display: none
 
 	.card-body
-		//background: transparent
 		margin-bottom: 1rem
 		background-color: rgba(85, 98, 120, .3)
 
@@ -237,7 +339,7 @@ button:focus
 .info-section
 	padding: 2em 4em
 	@include media-breakpoint-down(md)
-		padding: 1em
+		padding: 2em
 
 	.row
 		width: 100%
@@ -383,6 +485,22 @@ button:focus
 
 //////////////////////////////////////////////
 
+.responsive-text
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 10rem
+			right: 10rem
+	@include media-breakpoint-down(lg)
+		padding:
+			left: 0
+			right: 0
+
+.special-p
+	@include media-breakpoint-down(md)
+		padding:
+			left: 5rem
+			right: 5rem
+
 .feet-section
 	display: flex
 	flex-wrap: wrap
@@ -396,18 +514,18 @@ button:focus
 			.c-content
 				//padding-left: 4rem
 				//background: url('../assets/img/feet-index-1.png') no-repeat center/cover
-				background: url('../assets/img/feet-index-1.png') no-repeat right
+				background: url('../assets/img/pricing-1.png') no-repeat right
 				background-size: cover
 		//background: url("../assets/img/feet-index-1.png") no-repeat -19em 10px
 
 		&:nth-child(2)
 			.c-content
-				background: url('../assets/img/feet-index-2.png') no-repeat center/cover
+				background: url('../assets/img/pricing-2.png') no-repeat center/cover
 		//background: url('../assets/img/feet-index-2.png') no-repeat -19em 10px
 
 		&:nth-child(3)
 			.c-content
-				background: url('../assets/img/feet-index-3.png') no-repeat center/cover
+				background: url('../assets/img/pricing-3.png') no-repeat center/cover
 
 		&:nth-child(4)
 			.c-content
@@ -444,6 +562,10 @@ button:focus
 
 			.btn-callback
 				margin-top: auto
+				width: 70%
+
+				@include media-breakpoint-down(lg)
+					width: 100%
 
 .custom-icon-number-dark
 	@extend .custom-icon-number
@@ -542,6 +664,7 @@ button:focus
 // Play-button - style ********
 .play-btn
 	position: absolute
+	display: none !important
 
 	width: 92px
 	height: 92px
@@ -582,10 +705,25 @@ button:focus
 	&textarea
 		height: 164px
 
+.asap-16
+	font-size: 16px
+
+.font-16
+	font-size: 16px !important
+
+.lh-26
+	line-height: 26px !important
+
+.fs-30
+	font-size: 30px !important
+
 // slider-block - style **
 .slider-pad
 	padding-left: 47px
 	padding-right: 47px
+
+.text-initial
+	text-transform: initial !important
 
 .slider-block
 	.owl-dots
@@ -618,6 +756,8 @@ button:focus
 	.owl-nav
 		position: absolute
 		top: 50%
+		@include media-breakpoint-down(sm)
+			top: 100%
 		left: 0
 		transform: translateY(-50%)
 		display: flex
@@ -643,11 +783,11 @@ button:focus
 				background-repeat: no-repeat !important
 				background-size: contain !important
 
-@media (min-width: 1200px)
+@media (min-width: 1199px)
 	.hidden-item
 		display: none
 
-@media (max-width: 1200px)
+@media (max-width: 1199px)
 	.px-15
 		padding-left: 15px !important
 		padding-right: 15px !important
@@ -679,13 +819,50 @@ section.section-services
 	color: $secondary-header-color
 
 .section-services-treatment-row-padding
-	padding: 67px 0
+	padding: 25px 0
+
+.ult-spec-adv
+	.numbered-section
+		.numbered-cnt
+			&:nth-child(1)
+				img
+					width: 14em
+					left: 3em
+
+			&:nth-child(2)
+				img
+					width: 8.3em
+					left: 3.5em
+
+			&:nth-child(3)
+				img
+					width: 9em
+					left: 3em
 
 .services-btn-container
 	width: 19em
+	display: flex
+	justify-content: center
+
+.extra-crutch-2
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 15rem
+			right: 15rem
+
+.extra-crutch-header
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 9rem
+			right: 9rem
+	@include media-breakpoint-down(md)
+		padding:
+			left: 3rem
+			right: 3rem
 
 .width-180
-	width: 180px !important
+	@include media-breakpoint-up(md)
+		width: 180px !important
 
 .py-80
 	padding: 80px 0
@@ -705,7 +882,7 @@ section.section-services
 	&-item
 		&-container
 			position: relative
-			cursor: pointer
+			//cursor: pointer
 			overflow: hidden
 
 	&-info
@@ -722,7 +899,7 @@ section.section-services
 
 	.specialists-item-container
 		position: relative
-		cursor: pointer
+		//cursor: pointer
 		overflow: hidden
 
 	.specialists-img
@@ -759,3 +936,14 @@ ul.list-blue-bullets
 //  color: $secondary-header-color
 //  @include mobile-all
 //    @include font(Circe, 400, 14, 26)
+.line-height-41
+	line-height: 41px
+
+.slider-block
+	.owl-nav
+		z-index: -1
+
+.program
+	.btn-callback
+		margin-top: 35px
+

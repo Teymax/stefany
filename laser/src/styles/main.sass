@@ -10,18 +10,24 @@
 @import "spacing-helpers"
 @import "grid"
 
+//html
+//  overflow-x: hidden
 .container
+  //@include media-breakpoint-down(lg)
   padding-left: 30px !important
   padding-right: 30px !important
-  @include media-breakpoint-down(xs)
+  @include media-breakpoint-down(sm)
     padding-left: 18px !important
     padding-right: 18px !important
+
+@include media-breakpoint-up(lg)
+  .container
+    max-width: 720px !important
 @include media-breakpoint-up(xl)
   .container
-    max-width: 1280px !important
+    max-width: 1320px !important
 
-.section
-  overflow: hidden
+
 
 
 @import 'sections/header'
@@ -38,9 +44,14 @@
 @import 'sections/main-laser-service'
 @import 'sections/consultation-form'
 @import 'sections/about-steffany'
+@import 'sections/map'
+
+@import 'sections/error'
+
+// service
 @import 'sections/service/_service-advantages'
 @import 'sections/service/_service-consultation'
-@import 'sections/service/_service-laser-main'
+@import 'sections/service/about-page-section'
 @import 'sections/service/_service-laser-service-list'
 @import 'sections/service/_service-after-laserepila'
 @import 'sections/service/_service-laser-whatToDo'
@@ -51,21 +62,57 @@
 @import 'sections/service/_service-laser-results'
 @import 'sections/service/_service-laser-interests'
 
+// discount
+@import 'sections/discount/discount-page'
 
+//contact
+@import 'sections/contact/contact'
+
+//about-steffany-salon
+@import 'sections/about-steffany-zt/video-slider'
+@import 'sections/about-steffany-zt/contact'
+
+//about-steffany
+@import 'sections/about-steffany/four-boxes-about-steffany'
+@import 'sections/about-steffany/diploma'
+@import 'sections/about-steffany/video-about-steffany'
+
+
+//service-shugaring
+@import 'sections/service-shugarin/about-page-section'
+@import 'sections/service-shugarin/block-answer-after'
+@import 'sections/service-shugarin/block-answer-before'
+//service-nano
+@import 'sections/service-nano/about-page-section'
+@import 'sections/service-nano/block-answer-after'
+@import 'sections/service-nano/block-answer-before'
+//waxing
+@import 'sections/vaxing/about-page-section'
+@import 'sections/vaxing/block-answer-after'
+@import 'sections/vaxing/block-answer-before'
+@import 'sections/vaxing/service-three-boxes_dark-theme'
 
 
 
 @import 'sections/diploma'
 @import 'sections/workers-slider'
-@import 'sections/service-three-boxes_module'
 
 
 @import 'sections/footer'
 @import 'custom_classes'
 
+//modules
 @import 'modules/accordion'
+@import 'modules/accordion-dark-theme'
 @import 'modules/checkbox'
 @import 'modules/buttons'
+@import 'modules/carousel'
+@import 'modules/breadcrubms'
+@import 'modules/service-three-boxes_module'
+@import 'modules/modal'
+@import 'modules/scrollbar'
+
+
 
 @import 'lib/all'
 

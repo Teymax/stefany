@@ -1,435 +1,768 @@
 // container - style *******
+html
+	overflow-x: hidden
+
 .container
-  width: 100% !important
-  padding: 0 30px
+	width: 100% !important
+	padding: 0 30px
+
 .container-xs
-  max-width: 975px !important
+	max-width: 975px !important
+
 .container-m
-  max-width: 1290px !important
+	max-width: 1290px !important
+
 .container-l
-  max-width: 1270px !important
+	max-width: 1270px !important
+
 .container-xl
-  max-width: 1283px !important
+	max-width: 1283px !important
+
 .container-xxl
-  max-width: 1470px !important
-.double-grid-container 
-  max-width: 630px !important
-  box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
-.four-grid-container 
-  max-width: 1261px !important
-  .grid-block
-    box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+	max-width: 1470px !important
+
+.double-grid-container
+	max-width: 630px !important
+	box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+
+.four-grid-container
+	max-width: 1261px !important
+
+	.grid-block
+		box-shadow: 0px 50px 70px rgba(0, 0, 0, 0.13)
+
 body
-  overflow-x: hidden
-  &.fixed
-    overflow: hidden
+	overflow-x: hidden
+
+	&.fixed
+		overflow: hidden
 
 // text - style *******
-	
+
 .paragraph-text-light
-  @include font ('Circe-Regular', 300, 16, 26)
-  color: $text-color-white
+	@include font('Circe-Regular', 300, 16, 26)
+	color: $text-color-white
 
 .link-text-light
-  @include font ('Circe-Regular', 300, 14, 14)
-  color: $text-color-dark !important
+	@include font('Circe-Regular', 300, 14, 14)
+	color: $text-color-dark !important
+
 .nav-link-text
-  @include font ('Circe-Regular', 300, 16, 16)
-  color: $breadcrump-color
-  &:hover
-    color: $breadcrump-color !important
+	@include font('Circe-Regular', 300, 16, 16)
+	color: $breadcrump-color
+
+	&:hover
+		color: $breadcrump-color !important
+
 .paragraph-text-dark
-  @include font ('Circe-Regular', 300, 16, 26)
-  color: $text-color-dark
+	@include font('Circe-Regular', 300, 16, 26)
+	color: $text-color-dark
+
 .text-lightdark
-  color: $breadcrump-color !important
+	color: $breadcrump-color !important
+
 .text-dashed
-  border-bottom: 1px dashed #e4e4e4
+	border-bottom: 1px dashed #e4e4e4
 
 .extralarge-text-bg
-  white-space: nowrap
-  position: absolute
-  @include font(Circe, 400, 321, 377)
-  color: $text-color-white
+	white-space: nowrap
+	position: absolute
+	@include font(Circe, 400, 321, 377)
+	color: $text-color-white
 
 .section-title-light
-  @include font ('Circe-Bold', 700, 44, 45)
-  color: $text-color-white
-  transition: 0.3s ease
+	@include font('Circe-Bold', 700, 44, 45)
+	color: $text-color-white
+	transition: 0.3s ease
 
 .section-title-dark
-  @include font ('Circe-Bold', 700, 44, 45)
-  color: $text-color-dark
+	@include font('Circe-Bold', 700, 44, 45)
+	color: $text-color-dark
 
 .proccess-info
 	@include font('Circe-ExtraBold', 900, 11, 11)
-	letter-spacing: 2px
+	letter-spacing: 3.3px
 	text-transform: uppercase
 	color: $color-purple
 	transition: 0.3s ease
+
 	span
 		color: $proccess-info
+
 .custom-icon-number
-  display: inline-flex
-  justify-content: center
-  align-items: center
-  width: 55px
-  height: 55px
-  background-color: #EDE1DF
-  border-radius: 50%
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	width: 55px
+	height: 55px
+	background-color: #EDE1DF
+	border-radius: 50%
 
 .text-color-dark
-  color: $text-color-dark !important
+	color: $text-color-dark !important
+
+.text-color-dark2
+	color: $play-btn-color !important
+
 .text-color-for-list
-  color: $list-number !important
+	color: $list-number !important
+
 .f-bold
-  font-weight: bold !important
+	font-weight: bold !important
+
 .f-light
-  font-weight: 300 !important
+	font-weight: 300 !important
+
 .span-bigger
-  font-size: 70px !important
+	font-size: 70px !important
+
 .custom-icon-number-dark
-  @extend .custom-icon-number
-  background-color: #9FA6BA
+	@extend .custom-icon-number
+	background-color: #9FA6BA
 
 p, .p-text, .paragraph-text
-  margin-bottom: 0 !important
-  @include font('Circe-Regular', 400, 16, 23)
-  color: $text-color-dark
-  transition: 0.3s ease
+	margin-bottom: 0 !important
+	@include font('Circe-Regular', 400, 16, 25)
+	color: $text-color-dark
+	transition: 0.3s ease
+	@media(max-width: 767px)
+		line-height: 22px
+
 .p-text-light
 	@include font('Circe-Light', 300, 14, 24)
 	color: $breadcrump-color
+
 .text-small
-  @include font ('Circe-Regular', 300, 12, 13)
-  color: $text-color-dark 
+	@include font('Circe-Regular', 300, 12, 13)
+	color: $text-color-dark
+
 .timer-nubmer
-  text-transform: uppercase
-  @include font ('Circe-Bold', 700, 26, 26)
-  color: $color-white
+	text-transform: uppercase
+	@include font('Circe-Bold', 700, 26, 26)
+	color: $color-white
+
 .p-bold
-  @include font('Circe-Bold', 700, 16, 23)
+	@include font('Circe-Bold', 700, 16, 24)
+
 .text-uppercase
 	text-transform: uppercase !important
+
 .fs-12
 	font-size: 12px !important
+
+.fs-13
+	font-size: 13px !important
+
+.fs-14
+	font-size: 14px !important
+
 .fs-16
 	font-size: 16px !important
+
+.fs-20
+	font-size: 20px !important
+	line-height: 29px
+
 .regular-text
-  font-family: 'Circe-Regular' !important
+	font-family: 'Circe-Regular' !important
+
 .thin-text
-  font-family: 'Circe-Light'
+	font-family: 'Circe-Light'
+
 .extrabold
-  font-family: 'Circe-ExtraBold'
+	font-family: 'Circe-ExtraBold'
+
 .section-title
-  display: block
-  width: 100%
-  margin-bottom: 20px
-  @include font('CormorantGaramond-Bold', 700, 44, 45)
-  color: $section-title-color
+	display: block
+	width: 100%
+	margin-bottom: 20px
+	@include font('CormorantGaramond-Bold', 700, 44, 45)
+	letter-spacing: 0.41px
+	color: $section-title-color
+	@media(max-width: 1199px)
+		line-height: 53px
+		br
+			display: none
 
 .section-title-s
-  color: $breadcrump-color
-  display: block
-  @include font('CormorantGaramond-Bold', 700, 26, 31)
+	color: $breadcrump-color
+	display: block
+	@include font('CormorantGaramond-Bold', 700, 26, 31)
+	@media(max-width: 767px)
+		font-size: 20px
+		letter-spacing: 0.2px
+		line-height: 27px
 
 .section-subtitle
-  display: block
-  width: 100%
-  margin-bottom: 20px
-  @include font('Circe-Light', 400, 20, 21)
-  letter-spacing: .6px
-  color: $section-title-color
+	display: block
+	width: 100%
+	margin-bottom: 20px
+	@include font('Circe-Light', 400, 20, 21)
+	letter-spacing: .22px
+	color: $section-title-color
+	@media(max-width: 767px)
+		font-size: 16px
+		line-height: 18px
+
+.text-grid
+	@media(max-width: 1300px)
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		overflow: hidden
+		-webkit-box-orient: vertical
+	@media(max-width: 767px)
+		-webkit-line-clamp: 10
+
 .h3-title
-  @include font('Circe-Light', 400, 20, 24)
-  color: $text-color-white
+	@include font('Circe-Light', 400, 20, 24)
+	color: $text-color-white
+
 .h3-title-regular
-  @include font('Circe-Regular', 400, 20, 24)
-  color: $text-color-white
+	@include font('Circe-Regular', 400, 20, 24)
+	color: $text-color-white
+
 .grid-title
-  display: -webkit-box
-  margin-bottom: 15px
-  transition: 0.3s ease
-  @include font('CormorantGaramond-Bold', 700, 30, 35)
-  color: $section-title-color
+	display: -webkit-box
+	margin-bottom: 15px
+	transition: 0.3s ease
+	@include font('CormorantGaramond-Bold', 700, 30, 35)
+	color: $section-title-color
+	@media(max-width: 1199px)
+		margin-bottom: 10px
+
+.step-head
+	@include font('Circe-Regular', 400, 12, 12)
+	text-align: center
+	text-transform: uppercase
+	letter-spacing: 0.15em
+	color: #9FA6BA
+
+.underline-title
+	position: relative
+
+	&::after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 0
+		display: block
+		width: 100%
+		max-width: 89px
+		height: 2px
+		background: rgba(85, 98, 120, 0.39)
 
 .bg-rose
-  background: $bg-rose
-    
+	background: $bg-rose
+
+.light-orange-bg
+	background: $spec-bg !important
+
+.white-bg
+	background: $color-white !important
+
+.light-purple-bg
+	background: $btn-bg !important
+
+.light-green-bg
+	background: $dark-gren-bg !important
+
+.no-bg-blk
+	background: transparent !important
+
+.gray-word-bg
+	background: url('../assets/img/gray-word-bg.png') !important
+	background-repeat: no-repeat !important
+	background-position: center left !important
+	background-size: contain !important
+
+.gray-word-bg2
+	background: url('../assets/img/gray-word-bg2.png') !important
+	background-repeat: no-repeat !important
+	background-position: center left !important
+	background-size: contain !important
+
 .grid-number
-  display: block
-  position: absolute
-  top: 64px
-  left: 25px
-  letter-spacing: 4px
-  color: $section-title-color
-  transition: 0.3s ease
-  @include font('Circe-ExtraBold', 900, 11, 10)
+	display: block
+	position: absolute
+	top: 67px
+	left: 28px
+	letter-spacing: 4px
+	color: $section-title-color
+	transition: 0.3s ease
+	@include font('Circe-ExtraBold', 900, 11, 10)
 
 .white-text
-  color: $color-white !important
+	color: $color-white !important
+
 .light-orange-text
-  color: $spec-bg !important
+	color: $spec-bg !important
+
 .light-green-text
-  color: $dark-gren-bg !important
+	color: $dark-gren-bg !important
+
+.light-purple-text
+	color: $btn-bg !important
+
+.light-darkbrown-text
+	color: $soc-btn !important
 
 .h-center
-  text-align: center
+	text-align: center
 
 .bnf-number
-  padding-bottom: 20px
-  text-transform: uppercase
-  letter-spacing: 2px
-  @include font('CormorantGaramond-Bold', 700, 75, 75)
+	padding-bottom: 17px
+	text-transform: uppercase
+	letter-spacing: 0px
+	@include font('CormorantGaramond-Bold', 700, 75, 75)
+
 .bnf-title
-  padding-bottom: 20px
-  text-transform: uppercase
-  letter-spacing: 2px
-  @include font('Circe-Regular', 400, 20, 24)
+	padding-bottom: 17px
+	text-transform: uppercase
+	letter-spacing: 2px
+	@include font('Circe-Regular', 400, 20, 24)
+
 .benefits .bnf-title-small
-  padding-bottom: 15px
-  font-size: 14px
-  text-transform: inherit
-  letter-spacing: 0
-  font-weight: bold
+	padding-bottom: 15px
+	font-size: 14px
+	text-transform: inherit
+	letter-spacing: 0
+	font-weight: bold
 
 // buttons - style *******
 .btn-callback, .btn-send
-  width: 100%
-  max-width: 195px
-  height: 38px
-  padding-right: 18px
-  padding-left: 20px
-  background: url('../assets/img/background/callback-btn.png')
-  background-repeat: no-repeat
-  background-size: 45px 100%
-  background-position: top right
-  border: 2px solid $color-purple
-  text-decoration: none
-  border-radius: 100px
-  & > span 
-    text-decoration: none
-    width: 100%
-    max-width: 109px
-    svg
-      width: 13px
-      height: 13px
-    .sendSvg
-      width: 13px
-      height: 19px
-    .st0 
-      fill: $color-purple-text
-    span 
-      padding-top: 2px
-      @include font ('Circe-ExtraBold', 900, 10, 10)
-      text-transform: uppercase
-      letter-spacing: 2px
-      color: $color-purple-text
-  & > svg 
-    width: 14px
-    height: 11px
-    .st0 
-      fill: $color-white
+	width: 100%
+	max-width: 195px
+	height: 38px
+	padding-right: 16px
+	padding-left: 15px
+	background: url('../assets/img/background/callback-btn.png')
+	background-repeat: no-repeat
+	background-size: 42px 104%
+	background-position: top right
+	border: 2px solid $color-purple
+	text-decoration: none
+	border-radius: 100px
+
+	& > span
+		pointer-events: none
+		text-decoration: none
+		width: 100%
+		max-width: 115px
+
+		svg
+			pointer-events: none
+			width: 13px
+			height: 13px
+
+		.sendSvg
+			pointer-events: none
+			width: 13px
+			height: 19px
+
+		.st0
+			pointer-events: none
+			fill: $color-purple-text
+
+		span
+			pointer-events: none
+			padding-top: 2px
+			@include font('Circe-ExtraBold', 900, 10, 10)
+			text-transform: uppercase
+			letter-spacing: 2.3px
+			color: $color-purple-text
+
+	& > svg
+		pointer-events: none
+		width: 14px
+		height: 11px
+
+		.st0
+			pointer-events: none
+			fill: $color-white
 // header btn
 .btn-callback-white, header.open .btn-callback
-  background: url('../assets/img/background/callback-btn-white.jpg')
-  background-repeat: no-repeat
-  background-size: 45px 100%
-  background-position: top right
-  border: 2px solid $color-white !important
-  &:focus
-    border: 2px solid $color-white !important
-  & > span
-    span
-      color: $color-white 
-    svg 
-      .st0
-        fill: $color-white  !important
-  & > svg 
-    .st0 
-      fill: $color-purple
+	background: url('../assets/img/background/callback-btn-white.jpg')
+	background-repeat: no-repeat
+	background-size: 45px 104%
+	background-position: top right
+	border: 2px solid $color-white !important
+
+	&:focus
+		border: 2px solid $color-white !important
+
+	& > span
+		pointer-events: none
+
+		span
+			pointer-events: none
+			color: $color-white
+
+		svg
+			pointer-events: none
+
+			.st0
+				pointer-events: none
+				fill: $color-white !important
+
+	& > svg
+		pointer-events: none
+
+		.st0
+			pointer-events: none
+			fill: $color-purple
+
 .btn-callback-simple
 	width: auto
 	max-width: 100%
-	& > span 
+
+	& > span
+		pointer-events: none
 		max-width: 100%
+
 		span
+			pointer-events: none
 			padding-right: 23px
+
 .btn-send
 	& > span
+		pointer-events: none
+
 		span
+			pointer-events: none
 			padding-left: 8px
 			padding-right: 36px
+
 .button
-  cursor: pointer
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 0 33px
-  height: 38px
-  background: $btn-bg
-  @include font('Circe-ExtraBold', 900, 10, 13)
-  text-transform: uppercase
-  color: $color-white !important
-  letter-spacing: 1.5px
-  border-radius: 100px
-  transition: 0.3s ease 
-  &:hover 
-    box-shadow: 0 0 20px $btn-bg
+	pointer-events: none
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 0 33px
+	height: 38px
+	background: $btn-bg
+	@include font('Circe-ExtraBold', 900, 10, 13)
+	text-transform: uppercase
+	color: $color-white !important
+	letter-spacing: 1.5px
+	border-radius: 100px
+	transition: 0.3s ease
+
+	&:hover
+		box-shadow: 0 0 20px $btn-bg
+
 .soc-btn
-  width: 38px
-  height: 38px
-  background: $soc-btn
-  border-radius: 50%
-  transition: 0.4s ease
-  &:hover
-    background: $color-purple
+	width: 38px
+	height: 38px
+	background: $soc-btn
+	border-radius: 50%
+	transition: 0.4s ease
+
+	&:hover
+		background: $color-purple
+
 .btn-simple
-  color: $color-white
-  height: 38px
-  padding: 15px 30px
-  font-size: 10px
-  text-transform: uppercase
-  letter-spacing: 2px
-  transition: 0.4s ease
-  background: $color-purple
+	cursor: pointer
+	color: $color-white
+	height: 38px
+	padding: 15px 22px !important
+	font-size: 10px
+	text-transform: uppercase
+	letter-spacing: 2.5px
+	transition: 0.4s ease
+	background: $color-purple
+
 .btn-simple:hover
-  color: $color-white
-  background: $soc-btn
+	color: $color-white
+	background: $soc-btn
+
 .btn-simple-light
 	color: $play-btn-color
 	background: transparent
 	border: 2px solid $border-light
+
 	&:hover, &.active
-    color: $color-white
-    background: $color-purple
-    color: $color-white !important
-    border: 2px solid $color-purple
+		color: $color-white
+		background: $color-purple
+		color: $color-white !important
+		border: 2px solid $color-purple
 
 
 // bg - style ********
 
 .bg-settings
-  background-repeat: no-repeat !important
-  background-size: cover !important
-  background-position: center !important
+	background-repeat: no-repeat !important
+	background-size: cover !important
+	background-position: center !important
 
 .no-bg
-  background: transparent !important
+	background: transparent !important
 
 // list - style ****
 
 .info-list
-  li
-    position: relative
-    padding-left: 20px
-    &:before
-      position: absolute
-      left: 0
-      top: 9px
-      content: ''
-      width: 5px
-      height: 5px
-      background: $breadcrump-color
-      border-radius: 50%
+	margin-bottom: 22px
 
+	li
+		position: relative
+		padding-left: 19px
+
+		&:before
+			position: absolute
+			left: 0
+			top: 9px
+			content: ''
+			width: 5px
+			height: 5px
+			background: $breadcrump-color
+			border-radius: 50%
+
+		&.white-text
+			&:before
+				background: #ffffff
+
+		@media(max-width: 767px)
+			font-size: 14px
+
+	&.info-list-purple
+		li
+			&:before
+				background: #A09BCF
+
+.num-list
+	margin-bottom: 44px
+
+	li
+		&:not(:last-child)
+			padding-bottom: 16px
 // Icons - style header *********
 
 .icon
-  margin-right: 10px
-.icon-loc
-  width: 13px
-  height: 17px
-svg.icon-loc
-  width: 16px !important
-  height: 13px !important
-  margin-right: 6px !important
-  margin-left: 0 !important
-svg.icon-phone
-  width: 15px !important
-  height: 15px !important
-  margin-right: 6px !important
-  margin-left: 0 !important
-  path
-    fill: #3a405b
-.icon-phone
-  width: 17px
-  height: 16px
-.icon-time
-  width: 17px
-  height: 17px
-.icon-mail
-  width: 17px
-  height: 13px
-.icon-arrow
-  width: 12px
-  margin-left: 6px
-svg.icon-arrow
-  width: 10px !important
-  height: 7px !important
-  margin-right: 0 !important
-  margin-left: 6px !important
-  path
-    fill: #3a405b
-.icon-large
-  width: 40px
-  height: 40px
-.icon-facebook
-    width: 14px
-    height: 15px
-.icon-inst
-  width: 17px
-  height: 17px
+	margin-right: 10px
 
+.icon-loc
+	width: 13px
+	height: 17px
+
+svg.icon-loc
+	width: 16px !important
+	height: 13px !important
+	margin-right: 6px !important
+	margin-left: 0 !important
+
+svg.icon-phone
+	width: 15px !important
+	height: 15px !important
+	margin-right: 15px !important
+	margin-left: 0 !important
+
+	path
+		fill: #3a405b
+
+.icon-phone
+	width: 17px
+	height: 16px
+
+.icon-time
+	width: 17px
+	height: 17px
+
+.icon-mail
+	width: 17px
+	height: 13px
+
+.icon-arrow
+	width: 12px
+	margin-left: 6px
+
+svg.icon-arrow
+	width: 10px !important
+	height: 7px !important
+	margin-right: 0 !important
+	margin-left: 6px !important
+
+	path
+		fill: #3a405b
+
+.icon-large
+	width: 40px
+	height: 40px
+
+.icon-facebook
+	width: 14px
+	height: 15px
+
+.icon-inst
+	width: 17px
+	height: 17px
 
 
 // Play-button - style ********
 
 .play-btn
-  border-radius: 50%
-  transition: 0.4s ease
-  background: $color-purple-opacity
-  position: absolute
-  width: 92px
-  height: 92px
-  &-orange
-    background: $color-orange-opacity
-  span
-    width: 20px
-    height: 20px
-    clip-path: polygon(0 0, 0% 100%, 100% 50%)
-    background: $play-btn-color
+	border-radius: 50%
+	transition: 0.4s ease
+	background: $color-purple-opacity
+	position: absolute
+	width: 92px
+	height: 92px
+	@media(max-width: 767px)
+		width: 47px
+		height: 47px
+
+	&-orange
+		background: $color-orange-opacity
+
+	span
+		width: 20px
+		height: 20px
+		clip-path: polygon(0 0, 0% 100%, 100% 50%)
+		background: $play-btn-color
+		@media(max-width: 767px)
+			width: 7px
+			height: 6px
+
 .play-btn-small
-  width: 42px
-  height: 42px
-  span
-    width: 10px
-    height: 10px
+	width: 42px
+	height: 42px
+
+	span
+		width: 10px
+		height: 10px
 
 // border - style ********
 
 .border-b-light
-  border-bottom: 2px solid $border-bottom-bg
-  @media(max-width: 767px)
-    border-bottom: 0px solid $border-bottom-bg
+	border-bottom: 2px solid $border-bottom-bg
+	@media(max-width: 767px)
+		border-bottom: 0px solid $border-bottom-bg
+
 .br-100
-  border-radius: 100px 
+	border-radius: 100px
 
 // margings + paddings ********
+.px-15
+	padding-left: 15px !important
+	padding-right: 15px !important
+
+.pr-20
+	padding-right: 20px !important
+
+.pl-three
+	padding-left: 3px !important
+
+.pt-15
+	padding-top: 15px !important
+
+.pt-18
+	padding-top: 18px !important
+
+.pb-10
+	padding-bottom: 10px !important
+
+.pb-15
+	padding-bottom: 15px !important
+
+.pb-19
+	padding-bottom: 19px !important
+
+.pb-20
+	padding-bottom: 20px !important
+
+.pb-25
+	padding-bottom: 25px !important
+
+.pb-42
+	padding-bottom: 42px !important
+
+.mt-7
+	margin-top: 7px !important
+
+.mt-9
+	margin-top: 9px !important
+
+.mt-11
+	margin-top: 11px !important
+
+.mt-15
+	margin-top: 15px !important
+
+.mt-18
+	margin-top: 18px !important
+
+.mt-22
+	margin-top: 22px !important
+
 .mt-30
-  margin-top: 30px !important
-.mb-40
-  margin-bottom: 40px !important
-.mb-50
-  margin-bottom: 50px
+	margin-top: 30px !important
+
+.mb-11
+	margin-bottom: 11px !important
+
+.mb-6
+	margin-bottom: 6px !important
+
+.mb-15
+	margin-bottom: 15px !important
+
+.mb-16
+	margin-bottom: 16px !important
+
 .mb-20
-  margin-bottom: 20px !important
+	margin-bottom: 20px !important
+
+.mb-22
+	margin-bottom: 24px !important
+
+.mb-23
+	margin-bottom: 23px !important
+
+.mb-24
+	margin-bottom: 24px !important
+
+.mb-25
+	margin-bottom: 25px !important
+
+.mb-28
+	margin-bottom: 28px !important
+
+.mb-30
+	margin-bottom: 30px !important
+
+.mb-33
+	margin-bottom: 33px !important
+
+.mb-35
+	margin-bottom: 35px !important
+
+.mb-35
+	margin-bottom: 35px !important
+
+.mb-38
+	margin-bottom: 38px !important
+
+.mb-40
+	margin-bottom: 40px !important
+
+.mb-50
+	margin-bottom: 50px !important
+
+.mb-59
+	margin-bottom: 59px !important
+
+.mb-62
+	margin-bottom: 62px !important
+
 .mr-10
-  margin-right: 10px !important
+	margin-right: 10px !important
+
+.mr-41
+	margin-right: 41px !important
 
 // height
 .height-25
 	height: 25px
+
 .height-50
 	height: 50px
 
@@ -437,6 +770,7 @@ svg.icon-arrow
 
 .city-item
 	display: none !important
+
 .city-active
 	display: flex !important
 
@@ -448,162 +782,190 @@ svg.icon-arrow
 	border-radius: 4px
 	border: none !important
 	outline: none !important
+
 textarea.field
 	height: 175px
 
 // slider-block - style **
 .slider-pad
-  padding-left:  47px
-  padding-right: 47px
+	padding-left: 55px
+	padding-right: 55px
+	@media(max-width: 767px)
+		padding-left: 0
+		padding-right: 0
+
 .slider-block
-  .owl-dots
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 100%
-    padding-top: 60px
-    span
-      display: none
-    .owl-dot
-      width: 8px
-      height: 8px
-      border-radius: 50%
-      background: $border-light
-      transition: 0.3s ease
-      &:not(:last-child)
-        margin-right: 16px
-      &:hover, &.active
-        background: $color-purple
-      &:focus
-        border: none !important
-        outline: none !important
-  .owl-nav
-    position: absolute
-    top: 50%
-    left: 0
-    transform: translateY(-50%)
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 100%
-    span
-      display: none
-    button
-      width: 30px
-      height: 30px
-      opacity: .4
-      &.owl-prev
-	      background-image: url('../assets/icon/slider-left-arrow.png') !important
-	      background-repeat: no-repeat  !important
-	      background-size: contain !important
-      &.owl-next
-	      background-image: url('../assets/icon/slider-right-arrow.png') !important
-	      background-repeat: no-repeat  !important
-	      background-size: contain !important
-  &.video-slider
-    .owl-nav
-	    position: absolute !important
-	    display: flex
-	    top: calc(100% + 26px)
-	    left: 0
-	    width: 100%
-	    margin-top: 0 !important
-	    padding-top: 0 !important
-	    button
-        &.owl-prev
-          background-image: url('../assets/icon/aroow-left-gray.png') !important
-          background-repeat: no-repeat  !important
-          background-size: contain !important
-        &.owl-next
-          background-image: url('../assets/icon/aroow-right-gray.png') !important
-          background-repeat: no-repeat  !important
-          background-size: contain !important
+	.owl-dots
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		padding-top: 74px
+		@media(max-width: 767px)
+			padding-top: 41px
+
+		span
+			display: none
+
+		.owl-dot
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: $border-light
+			transition: 0.3s ease
+
+			&:not(:last-child)
+				margin-right: 16px
+
+			&:hover, &.active
+				background: $color-purple
+
+			&:focus
+				border: none !important
+				outline: none !important
+
+	.owl-nav
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+
+		span
+			display: none
+
+		button
+			width: 30px
+			height: 30px
+			opacity: .4
+
+			&.owl-prev
+				background-image: url('../assets/icon/slider-left-arrow.png') !important
+				background-repeat: no-repeat !important
+				background-size: contain !important
+
+			&.owl-next
+				background-image: url('../assets/icon/slider-right-arrow.png') !important
+				background-repeat: no-repeat !important
+				background-size: contain !important
+
+	&.video-slider
+		.owl-nav
+			position: absolute !important
+			display: flex
+			top: calc(100% + 26px)
+			left: 0
+			width: 100%
+			margin-top: 0 !important
+			padding-top: 0 !important
+
+			button
+				&.owl-prev
+					background-image: url('../assets/icon/aroow-left-gray.png') !important
+					background-repeat: no-repeat !important
+					background-size: contain !important
+
+				&.owl-next
+					background-image: url('../assets/icon/aroow-right-gray.png') !important
+					background-repeat: no-repeat !important
+					background-size: contain !important
 
 // menu - style -- header **
-.menu-trigger 
-  transition: 0.45s ease
-  cursor: pointer
-  width: 22px
-  height: 16px
+.menu-trigger
+	transition: 0.45s ease
+	cursor: pointer
+	width: 22px
+	height: 16px
 
-.menu-trigger span 
-  height: 2px
-  background-color: $menu-line
-  transition: 0.2s cubic-bezier(0, 0, 0.2, 1)
+.menu-trigger span
+	height: 2px
+	background-color: $menu-line
+	transition: 0.2s cubic-bezier(0, 0, 0.2, 1)
 
 
-.menu-trigger.open  
-  justify-content: center !important
+.menu-trigger.open
+	justify-content: center !important
 
-.menu-trigger.open span:nth-child(1) 
-  transform: rotate(-40deg)
-  margin-bottom: -2px
+.menu-trigger.open span:nth-child(1)
+	transform: rotate(-40deg)
+	margin-bottom: -2px
 
-.menu-trigger.open span:nth-child(2) 
-  display: none !important
+.menu-trigger.open span:nth-child(2)
+	display: none !important
 
-.menu-trigger.open span:nth-child(3) 
-  transform: rotate(40deg)
+.menu-trigger.open span:nth-child(3)
+	transform: rotate(40deg)
 
 // dropdown-menu - style header
 
 .drop-menu
-  cursor: pointer
-  position: relative
-  svg
-    width: 12px
-    height: 8px
-    margin-left: 10px 
-    .cls-1
-      fill: #4D5259 !important
-  .icon-arrow
-    transition: 0.2s ease
+	cursor: pointer
+	position: relative
+
+	svg
+		width: 12px
+		height: 8px
+		margin-left: 10px
+
+		.cls-1
+			fill: #4D5259 !important
+
+	.icon-arrow
+		transition: 0.2s ease
+
 .drop-menu.open
-  .icon-arrow, svg.icon-arrow
-    transform: rotate(180deg)
-  ul.dropdown-menu-list
-    display: flex !important
+	.icon-arrow, svg.icon-arrow
+		transform: rotate(180deg)
+
+	ul.dropdown-menu-list
+		display: flex !important
 
 ul.dropdown-menu-list
-  position: absolute
-  z-index: 10
-  display: none !important
-  top: calc(100% + 20px)
-  left: 50%
-  transform: translateX(-50%)
-  padding: 30px 25px
-  background: $color-white
-  border-radius: 4px
-  box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15)
-  &::before
-    content: ''
-    position: absolute
-    top: -8px
-    left: calc(50% - 8px)
-    display: block
-    width: 16px
-    height: 16px
-    transform: rotate(-45deg)
-    background: $color-white
-  li
-    a
-      white-space: nowrap
-    &:not(:last-child) 
-      padding-bottom: 15px
-      margin-bottom: 15px
-      border-bottom: 1px solid $border-light
-.drop-menu-top
-  ul.dropdown-menu-list
-    top: auto
-    bottom: calc(100% + 20px)
-    &::before
-      top: calc(100% - 8px)
-@media (min-width: 1200px)
-	.hidden-item
-	  display: none
+	position: absolute
+	z-index: 10
+	display: none !important
+	top: calc(100% + 20px)
+	left: 50%
+	transform: translateX(-50%)
+	padding: 30px 25px
+	background: $color-white
+	border-radius: 4px
+	box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15)
 
-@media (max-width: 1200px)
+	&::before
+		content: ''
+		position: absolute
+		top: -8px
+		left: calc(50% - 8px)
+		display: block
+		width: 16px
+		height: 16px
+		transform: rotate(-45deg)
+		background: $color-white
+
+	li
+		a
+			white-space: nowrap
+//&:not(:last-child)
+//  padding-bottom: 15px
+//  margin-bottom: 15px
+//  border-bottom: 1px solid $border-light
+.drop-menu-top
+	ul.dropdown-menu-list
+		top: auto
+		bottom: calc(100% + 20px)
+
+		&::before
+			top: calc(100% - 8px)
+
+@media (min-width: 1199px)
+	.hidden-item
+		display: none
+
+@media (max-width: 1199px)
 	.px-15
 		padding-left: 15px !important
 		padding-right: 15px !important
-	

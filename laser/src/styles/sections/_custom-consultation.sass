@@ -1,8 +1,12 @@
 section.section.custom-consultation
   background-color: #EDE1DF
-  padding-top: 64px
+  padding-top: 65px
   position: relative
   z-index: 1
+  @include media-breakpoint-down(lg)
+    padding-top: 74px
+  @include media-breakpoint-down(lg)
+    padding-top: 54px
   .custom-icon-number
     width: 27px
     height: 27px
@@ -12,44 +16,43 @@ section.section.custom-consultation
   .container
     .c-content
       margin-top: 104px
+      @include media-breakpoint-down(lg)
+        margin-top: 0px
     .white-block-design
       width: 504px
-      height: 704px
+      height: 673px
       margin-left: auto
       z-index: -1
+      @include media-breakpoint-down(lg)
+        width: 465px
+        height: 610px
+        z-index: 0
+      @include media-breakpoint-down(sm)
+        width: 234.32px
+        height: 310.92px
       img
-        top: 67px
-        right: 63px
-        box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
+        width: 540px
+        height: 513px
+        top: 48px
+        right: 54px
+        @include media-breakpoint-up(lg)
+          width: 520px
+          height: 513px
+          top: 64px
+          right: 72px
+        @include media-breakpoint-down(sm)
+          width: 256.06px
+          height: 252.62px
+          top: 30px
+          right: 29px
       .extralarge-text-bg
         left: -400px
         bottom: 57px
-    @include mobile-all
+        @include media-breakpoint-down(lg)
+          left: -496px
+        @include media-breakpoint-down(sm)
+          left: -234px
+          bottom: 18px
 
-@include media-breakpoint-down(lg)
-  section.section.custom-consultation
-    padding-top: 73px
-    .container
-      .c-content
-        margin-top: 0px
-      .white-block-design
-        z-index: 0
-        img
 
-@include media-breakpoint-down(xs)
-  section.section.custom-consultation
-    padding-top: 54px
-    .container
-      .c-content
-      .white-block-design
-        width: 234px
-        height: 310px
-        img
-          top: 34px
-          right: 43px
-          width: 256px
-          height: 252px
-        .extralarge-text-bg
-          left: -262px
-          bottom: 16px
 

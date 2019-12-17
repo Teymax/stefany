@@ -1,0 +1,790 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot"
+@mixin font-face($name, $file, $weight: normal)
+	@font-face
+		font-family: "#{$name}"
+		src: url('../assets/fonts/#{$file}')
+		font-weight: $weight
+
+@include font-face(Circe, 'Circe-Light.woff2', 300)
+@include font-face(Circe, 'Circe-Regular.woff2', 400)
+@include font-face(Circe, 'Circe-Bold.woff2', 700)
+@include font-face(Circe, 'Circe-ExtraBold.woff2', 900)
+@include font-face(Cormorant, 'CormorantGaramond-Regular.woff2', 400)
+@include font-face(Cormorant, 'CormorantGaramond-Bold.woff2', 700)
+
+html,
+body
+	padding: 0
+	margin: 0
+	overflow: hidden
+
+.desktop
+	display: flex
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	cursor: pointer
+
+	[class^="baba-"]
+		height: 100%
+		width: calc(100% / 3)
+		max-width: calc(100% / 3)
+		position: relative
+		z-index: 3
+
+		.default
+			display: block
+			width: 100%
+			height: inherit
+			max-width: 100%
+			background: inherit
+			transition: .25s ease
+			z-index: 5
+			position: relative
+
+			.wrapper
+				background: rgba(0, 0, 0, .75)
+				color: #fff
+				position: absolute
+				height: 100%
+				width: 100%
+				z-index: 6
+
+				h2
+					position: absolute
+					z-index: 7
+					display: flex
+					font-size: 16px
+					font-family: Circe, sans-serif
+					line-height: 22px
+					letter-spacing: 0.3em
+					text-align: center
+					text-transform: uppercase
+					justify-content: center
+					align-items: center
+					width: 100%
+					height: 6rem
+					background: #000
+
+		.hovered
+			opacity: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 999
+			background:
+				repeat: no-repeat
+				size: cover
+			animation:
+				name: switch-out
+				fill-mode: forwards
+				duration: .1s
+
+			.bio
+				display: flex
+				flex-direction: column
+				align-items: center
+				margin-top: 25%
+
+				p
+					font-family: Circe, sans-serif
+					text-align: center
+					font-size: 16px
+					line-height: 25px
+					font-style: normal
+					font-weight: 300
+					width: 60%
+					margin-top: 2rem
+
+			&:hover
+				animation:
+					name: switch-in
+					fill-mode: forwards
+					duration: .1s
+
+
+	.baba-1
+
+		img
+			pointer-events: none
+
+		&:hover
+			z-index: 15
+
+			.default
+				.legs
+					opacity: 0
+
+		img.legs
+			width: 186%
+			height: auto
+			position: absolute
+			z-index: 4
+			bottom: 10%
+			left: -28%
+			transform: rotate(-24.316deg)
+
+		.default
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+		.hovered
+			&:hover
+				~ .default
+					background: #000
+			img.legs
+				display: block
+				pointer-events: none
+				animation:
+					name: flip-feet-out
+					duration: .3s
+					fill-mode: forwards
+
+			&:hover
+				img.legs
+					animation:
+						name: flip-feet-in
+						duration: .3s
+						fill-mode: forwards
+
+			.bio
+				p
+					color: #556278
+
+	.baba-2
+		.baba-crutch
+			width: 265%
+			min-width: 265%
+			max-width: 265%
+			height: 80%
+			position: absolute
+			left: -50%
+			z-index: 111
+			pointer-events: none
+			bottom: 0
+			background:
+				image: url('../assets/img/woman-1.png')
+				size: cover
+				repeat: no-repeat
+			animation:
+				name: golaya-baba-out
+				duration: .3s
+				fill-mode: forwards
+
+		img.woman
+			width: 267%
+			height: auto
+			z-index: 4
+			position: absolute
+			left: -50%
+			bottom: 0
+
+		.default
+			overflow: hidden
+
+		.hovered
+			.baba-crutch
+				animation:
+					name: golaya-baba-out
+					duration: .3s
+					fill-mode: forwards
+
+			.bio
+				p
+					color: #ffffff
+
+			&:hover
+				.baba-crutch
+					animation:
+						name: golaya-baba-in
+						duration: .3s
+						fill-mode: forwards
+
+	.baba-3
+		overflow: hidden
+
+		&:hover
+			overflow: visible
+
+		.baba-crutch
+			width: 137%
+			min-width: 137%
+			max-width: 137%
+			height: 80%
+			position: absolute
+			left: -23%
+			z-index: 111
+			pointer-events: none
+			bottom: 0
+			background:
+				image: url('../assets/img/woman-2.png')
+				size: cover
+				repeat: no-repeat
+			animation:
+				name: pink-baba-out
+				duration: .3s
+				fill-mode: forwards
+
+		img.woman
+			width: 137%
+			height: auto
+			z-index: 4
+			position: absolute
+			left: -23%
+			bottom: 0
+			pointer-events: none
+
+		.default
+			.baba-crutch
+				animation:
+					name: pink-baba-out
+					duration: .3s
+					fill-mode: forwards
+
+		.hovered
+			.baba-crutch
+				height: 100%
+
+			&:hover
+
+				.baba-crutch
+					animation:
+						name: pink-baba-in
+						duration: .3s
+						fill-mode: forwards
+
+			.bio
+				p
+					color: #556278
+
+
+.tablet
+	display: flex
+	display: none
+	flex-direction: column
+	height: 100vh
+
+	[class^="baba-"]
+		width: 100%
+		flex: 1
+		position: relative
+
+		.hovered
+			opacity: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 10
+			display: flex
+			align-items: center
+			justify-content: center
+
+			.bio
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+
+				p
+					width: 60%
+					text-align: center
+					color: #556278
+					margin:
+						top: .5rem
+						bottom: .5rem
+
+				a
+					width: 60px
+					height: 60px
+					background: #556278
+					box-shadow: 0px 10px 40px rgba(30, 31, 33, 0.42)
+					border-radius: 50%
+
+					&:before
+						content: ''
+						background: url(../assets/icon/arrow.svg) no-repeat center
+						width: 100%
+						height: 100%
+						display: block
+
+
+			&:hover
+				opacity: 1
+
+		.default
+			position: relative
+
+			.wrapper
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 10
+
+		.content
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 5
+			position: absolute
+
+			.legs
+				width: 35em
+				height: auto
+				position: absolute
+				top: -8em
+				left: -13rem
+				transform: rotate(12deg)
+
+	.baba-1
+		.hovered
+			.legs
+				width: 35em
+				height: auto
+				position: absolute
+				top: -8em
+				left: -13rem
+				transform: rotate(12deg)
+				transition: .1s ease-in-out
+
+			&:hover
+				.legs
+					transform: rotate(35deg)
+					top: -4em
+
+	.baba-2
+		position: relative
+
+		.default
+			overflow: hidden
+
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+				.woman
+					width: 63em
+					top: -17rem
+					position: absolute
+
+		.hovered
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 12
+
+			p
+				color: #ffffff !important
+
+			a
+				background: #F6AE9F !important
+
+			.woman
+				position: absolute
+				width: 63em
+				top: -7rem
+				left: 3em
+				//transform: scaleX(-1)
+				display: block
+				pointer-events: none
+
+	.baba-3
+		position: relative
+
+		.default
+			overflow: hidden
+
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+				.woman-2
+					width: 22em
+					right: -12rem
+					top: -5rem
+					position: absolute
+
+	.hovered
+		position: relative
+
+		a
+			background: #A09BCF !important
+
+		.woman-2
+			width: 22em
+			right: -12rem
+			bottom: 0
+			position: absolute
+			transition: .1s ease-in-out
+
+		&:hover
+			.woman-2
+				width: 22em
+				right: -8rem
+				bottom: 0
+				position: absolute
+
+
+.mobile
+	display: flex
+	display: none
+	flex-direction: column
+	height: 100vh
+
+	[class^="baba-"]
+		width: 100%
+		flex: 1
+		position: relative
+
+		.hovered
+			opacity: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 10
+			display: flex
+			align-items: center
+			justify-content: center
+
+			.bio
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+
+				p
+					width: 60%
+					text-align: center
+					color: #556278
+					margin:
+						top: .5rem
+						bottom: .5rem
+
+				a
+					width: 60px
+					height: 60px
+					background: #556278
+					box-shadow: 0px 10px 40px rgba(30, 31, 33, 0.42)
+					border-radius: 50%
+
+					&:before
+						content: ''
+						background: url(../assets/icon/arrow.svg) no-repeat center
+						width: 100%
+						height: 100%
+						display: block
+
+
+			&:hover
+				opacity: 1
+
+		.default
+			position: relative
+
+			.wrapper
+				width: 100%
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 10
+
+		.content
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 5
+			position: absolute
+
+			.legs
+				width: 35em
+				height: auto
+				position: absolute
+				top: -8em
+				left: -21rem
+				transform: rotate(-95deg) scaleX(-1)
+
+	.baba-1
+		.hovered
+			.legs
+				width: 40em
+				height: auto
+				position: absolute
+				top: -8em
+				left: -21rem
+				transform: rotate(-111deg) scaleX(-1)
+				transition: .1s ease-in-out
+				display: block
+				pointer-events: none
+
+			&:hover
+				.legs
+					transform: rotate(-111deg) scaleX(-1)
+					top: 6em
+
+	.baba-2
+		position: relative
+
+		.default
+			overflow: hidden
+
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+				.woman
+					width: 42em
+					top: -6em
+					position: absolute
+					left: -3em
+
+		.hovered
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 12
+
+			p
+				color: #ffffff !important
+
+			a
+				background: #F6AE9F !important
+
+			.woman
+				position: absolute
+				width: 42em
+				top: 3rem
+				left: -3em
+				display: block
+				pointer-events: none
+
+	.baba-3
+		position: relative
+
+		.default
+			overflow: hidden
+
+			.content
+				width: 100%
+				height: 100%
+				position: relative
+
+				.woman-2
+					width: 22em
+					left: -12rem
+					top: -5rem
+					transform: scaleX(-1)
+					position: absolute
+
+	.hovered
+		position: relative
+
+		a
+			background: #A09BCF !important
+
+		.woman-2
+			width: 22em
+			left: -15rem
+			bottom: 0
+			position: absolute
+			transform: scaleX(-1)
+			transition: .1s ease-in-out
+
+		&:hover
+			.woman-2
+				width: 22em
+				left: -15rem
+				bottom: 0
+				position: absolute
+				transform: scaleX(-1)
+
+
+@for $i from 1 through 3
+	.desktop
+		.baba-#{$i}
+			background:
+				image: url('../assets/img/bg/#{$i}.jpg')
+				repeat: no-repeat
+				size: cover
+
+			.hovered
+				background: inherit
+
+				> *
+					transform: translate3d(0, 0, 0)
+
+	.tablet
+		.baba-#{$i}
+			&:hover
+				flex-grow: 2
+
+			background:
+				image: url('../assets/img/bg/#{$i + 3}.png')
+				repeat: no-repeat
+				size: cover
+
+			.default
+				height: 100%
+
+				.wrapper
+					height: 100%
+
+					h2
+						height: 100%
+						width: 100%
+						background: rgba(0, 0, 0, .5)
+						display: flex
+						justify-content: center
+						align-items: center
+						color: #fff
+						font-family: Circe, sans-serif
+						font-size: 18px
+						font-weight: bold
+						line-height: 22px
+						letter-spacing: .3em
+						text-transform: uppercase
+
+			.hovered
+				background: inherit
+				animation:
+					name: switch-out
+					fill-mode: forwards
+					duration: .1s
+
+				&:hover
+					animation:
+						name: switch-in
+						fill-mode: forwards
+						duration: .1s
+				//height: 40vh
+
+				> *
+					transform: translate3d(0, 0, 0)
+
+	.mobile
+		.baba-#{$i}
+			&:hover
+				flex-grow: 2
+				z-index: 15
+
+			.hovered
+				z-index: 10
+
+			background:
+				image: url('../assets/img/bg/#{$i + 3}.png')
+				repeat: no-repeat
+				size: cover
+
+			.default
+				height: 100%
+
+				.wrapper
+					height: 100%
+
+					h2
+						height: 100%
+						width: 100%
+						background: rgba(0, 0, 0, .5)
+						display: flex
+						justify-content: center
+						align-items: center
+						color: #fff
+						font-family: Circe, sans-serif
+						font-size: 14px
+						font-weight: bold
+						line-height: 20px
+						letter-spacing: .3em
+						text-transform: uppercase
+						text-align: center
+						padding: 4rem
+
+			.hovered
+				background: inherit
+				animation:
+					name: switch-out
+					fill-mode: forwards
+					duration: .1s
+
+				&:hover
+					animation:
+						name: switch-in
+						fill-mode: forwards
+						duration: .1s
+				//height: 40vh
+
+				> *
+					transform: translate3d(0, 0, 0)
+
+@keyframes flip-feet-in
+	0%
+		transform: rotate(-24.316deg)
+	100%
+		transform: rotate(-16deg)
+
+@keyframes flip-feet-out
+	0%
+		transform: rotate(-16deg)
+	100%
+		transform: rotate(-24.316deg)
+
+@keyframes golaya-baba-in
+	0%
+		left: -50%
+	100%
+		left: -100%
+
+@keyframes golaya-baba-out
+	0%
+		left: -100%
+	100%
+		left: -50%
+
+@keyframes pink-baba-in
+	0%
+		left: -23%
+	100%
+		left: -100%
+
+@keyframes pink-baba-out
+	0%
+		left: -100%
+	100%
+		left: -23%
+
+@keyframes switch-in
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes switch-out
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+@media screen and (max-width: 768px)
+	.desktop
+		display: none !important
+	.tablet
+		display: flex !important
+	.mobile
+		display: none !important
+
+@media screen and (max-width: 425px)
+	.desktop
+		display: none !important
+	.tablet
+		display: none !important
+	.mobile
+		display: flex !important

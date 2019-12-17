@@ -2,13 +2,13 @@
   display: flex
   justify-content: center
   width: 100%
-  max-width: 100%
+  max-width: 195px
+  height: 38px
   text-decoration: none
   border-radius: 100px
-  border: 2px solid $btn-primary-color
-  background: transparent
+  border: 1px solid $btn-primary-color
+  background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% )
   color: #fff
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
   text-transform: uppercase
   cursor: pointer
 
@@ -23,7 +23,7 @@
 
     .arrow-section
       width: 25%
-
+      svg
   .text-section
     border:
       top:
@@ -36,22 +36,25 @@
     justify-content: center
     align-items: center
     padding: .6em
+    color: $text-color-lightdark
+    letter-spacing: 0.20em
+
+    span
+      @include font(Circe, 900, 10, 20)
+
     @include media-breakpoint-down(md)
       padding: .8em
     width: 80%
 
     svg
-      margin-right: .7em
-      path
-        fill: #fff
+      margin-right: .6em
+      fill: $text-color-lightdark
 
     span
-      margin-top: .15em
+      margin-top: .45em
 
     span
-      @include font(Circe, 400, 11, 20)
-      @include media-breakpoint-down(md)
-        font-size: 14px
+
 
   .arrow-section
     width: 20%
@@ -65,24 +68,165 @@
       bottom:
         left-radius: 0
         right-radius: inherit
-    background: $btn-primary-color
     display: flex
     justify-content: center
     align-items: center
+
 .btn-simple
   display: flex
   justify-content: center
+  align-items: center
   width: 100%
-  max-width: 159px
+  height: 38px
+  max-width: 160px
   text-decoration: none
   border-radius: 100px
-  border: 2px solid $btn-primary-color
   background: $btn-primary-color
   color: #fff
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
   text-transform: uppercase
   cursor: pointer
+  &.fluid
+    width: inherit
+    max-width: inherit
+    padding: 0 22px
+  &:active
+    box-shadow: none
+
   .text-section
-    padding: .6em
     span
       @include font(Circe, 900, 10, 25)
+      letter-spacing: 0.25em
+  &.svg
+    .text-section
+      svg
+        margin-right: .4em
+    &.pen
+      background: $btn-second-color
+    svg
+      fill: #fff
+
+
+.btn-fluid
+  width: inherit
+  max-width: inherit
+  .text-section
+    padding: 0 22px
+
+.text-section
+  pointer-events: none
+
+.btn-submit
+  padding: 8px 10px !important
+  display: flex
+  justify-content: center !important
+  align-items: center !important
+  width: 100% !important
+  height: 38px !important
+  text-decoration: none !important
+  border-radius: 100px !important
+  background: $btn-primary-color !important
+  color: #fff !important
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important
+  text-transform: uppercase !important
+  cursor: pointer !important
+  @include font(Circe, 900, 10, 25)
+  letter-spacing: 0.25em
+  border: none !important
+.modal-dialog
+  .btn-submit
+    margin: 24px auto 0 auto
+  .pay
+    background: $btn-primary-color !important
+  .order
+    position: relative
+    background: #7F8597 !important
+  .c-input-pay, .c-input-order
+    position: relative
+  .c-input-pay:before, .c-input-order:before
+    content: ''
+    display: block
+    pointer-events: none
+    position: absolute
+    background:
+      repeat: no-repeat
+      size: cover
+    z-index: 1
+  .c-input-pay
+    &:before
+      background:
+        image: url(../assets/icon/svg/caset.svg)
+      left: 4em
+      top: 10px
+      width: 16px
+      height: 16px
+      @include media-breakpoint-down(sm)
+        left: 2em
+  .c-input-order
+    &:before
+      background:
+        image: url(../assets/icon/svg/pen.svg)
+      left: 4em
+      top: 12px
+      width: 12px
+      height: 12px
+      @include media-breakpoint-down(sm)
+        left: 2em
+.consultation-form
+  .btn-callback-submit
+    display: flex
+    justify-content: center !important
+    width: 100% !important
+    height: 38px !important
+    text-decoration: none !important
+    border-radius: 100px !important
+    border: 1px solid $btn-primary-color !important
+    background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% ) !important
+    text-transform: uppercase !important
+    cursor: pointer !important
+    @include font(Circe, 800, 10, 25)
+    color: $text-color-dark !important
+    letter-spacing: 0.25em !important
+    padding: 0px 29px 0 0 !important
+    margin-top: 37px !important
+
+.btn-callback-submit-modal
+  display: flex
+  justify-content: center !important
+  width: 100% !important
+  height: 38px !important
+  text-decoration: none !important
+  border-radius: 100px !important
+  border: 1px solid $btn-primary-color !important
+  background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #F6AE9F 78% ) !important
+  text-transform: uppercase !important
+  cursor: pointer !important
+  @include font(Circe, 800, 10, 25)
+  color: $text-color-dark !important
+  letter-spacing: 0.25em !important
+  padding: 0px 29px 0 0 !important
+  margin-top: 37px !important
+.c-input
+  position: relative
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    pointer-events: none
+    background:
+      repeat: no-repeat
+      size: cover
+  &:before
+    background:
+      image: url('../assets/icon/svg/phone.svg')
+    width: 10px
+    height: 16px
+    left: 22px
+    bottom: 12px
+  &:after
+    background:
+      image: url('../assets/icon/svg/arrow-right.svg')
+    width: 16px
+    height: 10px
+    right: 21px
+    bottom: 14px

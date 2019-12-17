@@ -1,26 +1,49 @@
 section.section.service-laser-contraindications
-    background-color: #9FA6BA
-    overflow: initial
-    .container
-        .white-block-mobile
-            .white-block-design
-                width: 489px
-                height: 489px
-                top: -81px
-                left: 184px
-                img
-                    top: -76px
-                    left: -149px
-        .white-block-lg 
-            .white-block-design
-                width: 562px
-                height: 789px
-                top: -100px
-                left: 49px
-                img
-                    top: -57px
-                    left: -116px
-        .info-list
-            li
-                &:before
-                    background: $text-color-white
+  padding-bottom: 101px
+  background-color: #9FA6BA
+  @include media-breakpoint-down(lg)
+    padding-bottom: 71px
+  @include media-breakpoint-down(sm)
+    padding-bottom: 51px
+  .container
+
+    .c-content
+      padding-top: 46px
+      @include media-breakpoint-down(lg)
+        padding-top: 61px
+      @include media-breakpoint-down(sm)
+        padding-top: 42px
+
+    .white-block-design
+      width: 540px
+      height: 794px
+      margin-left: auto
+      @include media-breakpoint-down(lg)
+        width: 517px
+        height: 482px
+      @include media-breakpoint-down(sm)
+        width: 251px
+        height: 209px
+      img
+        width: 540px
+        height: 787px
+        right: 72px
+        bottom: 78px
+        @include media-breakpoint-down(lg)
+          width: 520px
+          height: 497px
+          right: 62px
+          bottom: 71px
+        @include media-breakpoint-down(sm)
+          width: 252.68px
+          height: 241.5px
+          right: 30px
+          bottom: 34px
+
+
+
+
+    .info-list
+      li
+        &:before
+          background: $text-color-white

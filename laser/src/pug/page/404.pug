@@ -1,0 +1,43 @@
+extends ../layout/main
+
+block content
+  section.section.error
+    .container
+      .row
+        .col-12.col-xl-6
+          .c-content
+            h2.h2-title Эта страница не найдена
+            p.subtitle Проверьте правильность адреса, или нажмите на любую ссылку снизу:
+            ul.info-list
+              a(href="./index.html")
+                li.list-item.paragraph-text.text-w-bold.mb-3 Перейти на Главную
+              a(href="./about-steffany.html")
+                li.list-item.paragraph-text.text-w-bold.mb-3 Почитать про сеть салонов Steffany
+              a(href="./discount.html")
+                li.list-item.paragraph-text.text-w-bold.mb-3 Узнать о акциях салона
+              a(href="./service.html")
+                li.list-item.paragraph-text.text-w-bold.mb-3 Почитать о лазерной эпиляции
+              a(href="./service-shugaring.html")
+                li.list-item.paragraph-text.text-w-bold.mb-3 Почитать о шугаринге
+              a(href="./waxing.html")
+                li.list-item.paragraph-text.text-w-bold.mb-3 Почитать о восковой эпиляции
+        .col-12.col-xl-6
+          .white-block-design
+            img(src="" alt="about-page" srcset="assets/img/error/error-img.jpg 2x")
+            p.extralarge-text-bg ooops
+
+    //tablet
+    .container.error-tablet
+      .c-content
+        h2.h2-title Эта страница не найдена
+        p.subtitle Проверьте правильность адреса, или нажмите на любую ссылку снизу:
+        ul.info-list
+          li.list-item.paragraph-text.text-w-bold.mb-3 Перейти на Главную
+          li.list-item.paragraph-text.text-w-bold.mb-3 Почитать про сеть салонов Steffany
+          li.list-item.paragraph-text.text-w-bold.mb-3 Узнать о акциях салона
+          li.list-item.paragraph-text.text-w-bold.mb-3 Почитать о лазерной эпиляции
+          li.list-item.paragraph-text.text-w-bold.mb-3 Почитать о шугаринге
+          li.list-item.paragraph-text.text-w-bold.mb-3 Почитать о восковой эпиляции
+      .white-block-design
+        img(src="" alt="about-page" srcset="assets/img/error/error-img.jpg 2x")
+        p.extralarge-text-bg ooops

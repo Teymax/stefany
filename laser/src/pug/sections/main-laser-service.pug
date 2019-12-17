@@ -1,53 +1,13 @@
-//section.section.main-laser-service
-//  .row.c-service.no-gutters
-//    .col-12.col-md-12.col-lg-8.order-1.order-md-1.order-lg-1.c-service__service-box.c-service__service-box_bg-1
-//      .row
-//        .col-6
-//          .c-content.p-3
-//            h1.h1-title.text-w-bold.text-color-lightgray Комплексные зоны <br> для эпиляции
-//            p.paragraph-text.text-w-bold Maximum
-//            ul.info-list
-//              li.small-text.text-color-lightgray Руки
-//              li.small-text.text-color-lightgray Голени
-//              li.small-text.text-color-lightgray Подмышки
-//              li.small-text.text-color-lightgray Бикини глубокое
-//        .col-6
-//          button.btn.btn-second-color подробнее
-//    .col-12.col-md-6.col-lg-4.order-2.order-md-3.order-lg-2.c-service__service-box.c-service__service-box_bg-2
-//      .c-content.p-3
-//        h2.h2-title.text-w-bold.text-color-lightgray Оплатите 3 сеанса лазерной эпиляции и получите 4-й в подарок
-//        button.btn.btn-second-color подробнее
-//    .col-12.col-md-6.col-lg-4.order-5.order-md-4.order-lg-3.c-service__service-box.c-service__service-box_bg-3
-//      .c-content.p-3
-//        h2.h2-title.text-w-bold.text-color-lightgray Лазерная эпиляция
-//        p.paragraph-text.d-none.d-lg-block Безболезненное удаление волос в любое время года
-//        button.btn.btn-second-color подробнее
-//    .col-12.col-md-6.col-lg-4.order-3.order-md-2.order-lg-4.c-service__service-box.c-service__service-box_bg-4
-//      .c-content.p-3
-//        h2.h2-title.text-w-bold.text-color-lightgray Уход за лицом
-//        p.paragraph-text.d-none.d-lg-block Процедуры для восстановления и омоложения кожи
-//        button.btn.btn-second-color подробнее
-//    .col-12.col-md-6.col-lg-4.order-4.order-md-5.order-lg-5.c-service__service-box.c-service__service-box_bg-5
-//      .c-content.p-3
-//        h2.h2-title.text-w-bold.text-color-lightgray SPA массаж
-//        p.paragraph-text.d-none.d-lg-block Расслабляющие ритуалы для ухода за телом
-//        button.btn.btn-second-color подробнее
-section.section.main-laser-service
-  //img.bg-elem(src="/assets/img/main-service/main-bg-girl.png" alt="main-bg-girl")
+section.section.main-laser-service.overflow-visible
   .container
-    h1.h1-main-title.text-w-bold.text-color-lightgray Комплексные зоны <br> для эпиляции
-    p.subtitle.mb-4 Maximum
+    h1.h1-main-title.text-w-bold.text-color-lightgray Скидки на все зоны эпиляции
+    p.subtitle.mb-3 Глубокое бикини
     .position-block
-      .row
-        .col-6
-          ul.info-list
-            li.list-item.text-color-lightgray.mb-2 Руки
-            li.list-item.text-color-lightgray.mb-2 Голени
-            li.list-item.text-color-lightgray.mb-2 Подмышки
-            li.list-item.text-color-lightgray.mb-5 Бикини глубокое
-        .col-6
-          p.custopm-text.custopm-text__small <b>15</b> минут
-          .c-span
-            span.custopm-text.custopm-text__through.mr-2 2 000 грн
-            span.custopm-text.custopm-text__bold 1 730 грн
-    +btnSimple('подробнее')
+      ul.info-list
+        li.list-item.text-color-lightgray.mb-2 Скидка <span class="bold">25%</span> при оплате <span class="bold">4</span> процедур &nbsp;&nbsp; <span class="line-through"> 2 000 грн</span> &nbsp;&nbsp; <span class="large">1 730 грн</span>
+        li.list-item.text-color-lightgray.mb-2 Скидка <span class="bold">30%</span> при оплате <span class="bold">6</span> процедур &nbsp;&nbsp; <span class="line-through"> 5 820 грн</span> &nbsp;&nbsp; <span class="large">4 074 грн</span>
+        li.list-item.text-color-lightgray.mb-2 Скидка <span class="bold">35%</span> при оплате <span class="bold">8</span> процедур &nbsp;&nbsp; <span class="line-through"> 2 000 грн</span> &nbsp;&nbsp; <span class="large">5 044 грн</span>
+    a(href='./discount.html').link-btn-discount
+      .btn-simple
+        .text-section
+          span подробнее

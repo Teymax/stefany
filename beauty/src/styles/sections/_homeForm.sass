@@ -1,4 +1,5 @@
 section.section.consultation-form
+  padding-top: 71px
   background:
     image: url("../assets/img/background/consultation-form-bg-2.jpg")
     size: cover
@@ -12,20 +13,28 @@ section.section.consultation-form
       border-style: solid
       border-color: #000
       .form-group
-        margin-bottom: 23px !important
+        margin-bottom: 12px !important
       .btn-callback
         max-width: 100%
+        margin-top: 26px
+        margin-bottom: 22px
+        padding-left: 26px
+        padding-right: 26px
         & > span
           max-width: 100%
           padding-right: 40px
           svg
             .cls-1
               transition: 0.3s ease 0.1s
+      & > .paragraph-text
+        margin-bottom: 35px !important
       .form-control
         background-color: rgba(77, 82, 89, .2)
         width: 252px
+        padding: .375rem 23px
+        margin-right: 0
       &-bg
-        padding: 65px 65px 115px
+        padding: 62px 65px 81px !important
         max-width: 396px
         background:
           image: url("../assets/img/background/form-bg.png")
@@ -42,7 +51,10 @@ section.section.consultation-form
             outline: none !important
             color: rgba(255, 255, 255, 0.66) !important
             transition: 0.3s ease
+            font-size: 14px !important
+            height: 40px !important
             @include placeholder
+              font-size: 14px !important
               transition: 0.3s ease
               color: rgba(255, 255, 255, 0.66) !important
             &:hover, &:focus
@@ -53,35 +65,45 @@ section.section.consultation-form
                 color: rgba(255, 255, 255, 1) !important
     .small-label
       @include font(Circe, 400, 12, 22)
+    .text-small
+      letter-spacing: 0.55px
+      color: rgba(255, 255, 255, 0.64) !important
 .consultation-form .container-xxl
     padding-left: 273px
 .form-content
-  padding-top: 30px
+  padding-top: 60px
+  padding-left: 11px !important
 .timer
     &-item
         position: relative
         width: 64px
         height: 64px
         background: $color-purple
-        &:not(:last-child)::before
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+        &:not(:last-child)
+          margin-right: 26px
+          &::before
             content: ':'
             position: absolute
-            right: -11px
+            right: -17px
             color: rgba(77, 82, 89, 0.36)
             
 .c-title-item
-    @include font('CormorantGaramond-Regular', 300, 44, 55)
+    @include font('CormorantGaramond-Regular', 300, 44, 44)
     color: $soc-btn
     span
-      @include font('CormorantGaramond-Bold', 700, 44, 55)
+      @include font('CormorantGaramond-Bold', 700, 44, 50)
 .c-subtitle
-  letter-spacing: 1px
+  letter-spacing: 0.6px
+  margin-bottom: 19px !important
 @media(max-width: 1100px)
   section.section.consultation-form .container .main-form-bg
     padding: 40px 35px
 @media(max-width: 992px)
   .consultation-form .container-xxl
     padding-left: 205px
+  .service-list .row .service-item .service-btn-wrap span
+    letter-spacing: 6px
 @media(max-width: 870px)
   .consultation-form .container-xxl
     padding-left: 205px

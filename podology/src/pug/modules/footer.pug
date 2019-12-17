@@ -8,37 +8,36 @@ footer.footer.pt-3
         ul.d-flex.d-md-block.flex-column.align-items-center.mb-0
           li.mb-3.text-center.text-xl-left.d-flex.align-items-center
             img.icon.icon-phone.mr-3(src="assets/icon/phone.svg", alt="icon-phone-f")
-            a.paragraph-text-light(href='tel:+0980070753') 098-007-07-53
+            a.mt-1.paragraph-text-light(href='tel:+0980070753') 098-180-10-88
           li.mb-3.text-center.text-xl-left.d-flex.align-items-center
-            img.icon.mr-3.icon-loc(src="assets/icon/location.svg", alt="icon-map-f")
-            span.paragraph-text-light Ивано-Франковск
+            svg(width='12.5px', height='16.67px', viewbox='0 0 13 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M6.41771 0.667969C2.97177 0.667969 0.167969 3.42062 0.167969 6.80403C0.167969 7.68655 0.351958 8.52917 0.714551 9.30867C2.27716 12.6656 5.27312 16.2099 6.15432 17.2161C6.22034 17.2913 6.31659 17.3346 6.41788 17.3346C6.51917 17.3346 6.61542 17.2913 6.68144 17.2161C7.5623 16.2101 10.5583 12.666 12.1214 9.30867C12.4842 8.52917 12.668 7.68655 12.668 6.80403C12.6676 3.42062 9.86382 0.667969 6.41771 0.667969ZM6.41771 9.99112C4.62768 9.99112 3.17122 8.56123 3.17122 6.80386C3.17122 5.04631 4.62768 3.61643 6.41771 3.61643C8.20774 3.61643 9.6642 5.04631 9.6642 6.80386C9.66437 8.56123 8.20791 9.99112 6.41771 9.99112Z', fill='#fff')
+            span.mt-1.ml-3.paragraph-text-light Житомир
           li.mb-3.text-center.text-xl-left.d-flex.align-items-center.footer-icon-blk
-            a.mr-3(href="https://www.facebook.com/steffany.podology/")
-              img.icon.icon-facebook(src="assets/icon/facebook.svg", alt="facebook-f")
-            a(href="https://www.instagram.com/steffany.podology/?hl=ru")
+            a.mr-3(target="_blank" href="https://www.facebook.com/steffany.podology/")
+              img.icon.icon-facebook(src="assets/icon/facebook.svg", alt="facebook-f" style="margin-left: -3px;")
+            a(target="_blank" href="https://www.instagram.com/steffany.podology/?hl=ru")
               img.icon.icon-inst.mr-0(src="assets/icon/instagram.svg", alt="inst-f")
       .col-12.col-md-3.col-xl-2.mb-3
-        a.paragraph-text.text-center.text-md-left.mb-3.d-block(href="") Steffany Beauty
-        a.paragraph-text.text-center.text-md-left.d-block(href="") Steffany Podology
+        a.paragraph-text.text-center.text-md-left.mb-3.d-block(target="_blank" href="http://steffany.dotwork.digital/beauty") Steffany Beauty
+        a.paragraph-text.text-center.text-md-left.d-block(target="_blank" href="http://steffany.dotwork.digital/laser") Steffany Cosmetology
         hr.d-sm-none.my-4
       .col-12.col-md-5.d-none.d-md-flex.flex-column.align-items-center.align-items-md-start.d-xl-none
-        a.p-text-light.text-dashed.d-inline-block.mb-3(href="") Пользовательское соглашение <br/>
-        a.p-text-light.text-dashed.d-inline-block.mb-3.mb-md-0(href="") Политика конфиденциальности
+        a.mb-3.m-md-0.p-text-light.d-block.d-md-none.d-xl-block(target="_blank" href="./policy.html") Пользовательское соглашение
       .col-12.col-xl-4.d-none.d-md-flex.flex-column.justify-content-center.justify-content-sm-between.justify-content-xl-start.flex-xl-column.align-items-xl-center
         p.paragraph-text.text-center.mb-3
           | Скачай приложение! <br/>
           | Почувствую заботу о себе в любой момент
         div.d-none.d-sm-flex.justify-content-center.align-items-center
-          a.mr-3(href="#")
+          a.mr-3(target="_blank" href="https://apps.apple.com/ua/app/steffany/id1342254632?l=ru")
             img.icon.icon-large(src="assets/icon/app-store.svg", alt="mob-f")
-          a(href="#")
+          a(target="_blank" href="https://play.google.com/store/apps/details?id=com.yclients.widget.g50068")
             img.icon.icon-large(src="assets/icon/google-play.svg", alt="play-f")
 
     hr.d-none.d-sm-block.my-3
-    .d-flex.flex-column.align-items-center.flex-xl-row.justify-content-xl-between.footer-cnt.mx-auto.mx-xl-0
-      p.mb-3.m-md-0.p-text-light.order-1.order-xl-0.text-center.text-xl-left Разработано в &nbsp
+    .d-flex.flex-column.align-items-center.flex-xl-row.justify-content-xl-between.footer-cnt.mx-auto.mx-xl-0.mb-3
+      p.mb-3.m-md-0.p-text-light.order-1.order-xl-0.text-center.text-xl-left(style="padding: 0 15px;") Разработано в &nbsp
         |
-        a.p-text-light.text-dashed(href="") dotwork
-      a.mb-3.m-md-0.p-text-light.text-dashed.d-block.d-md-none.d-xl-block(href="") Пользовательское соглашение
-      a.mb-3.m-md-0.p-text-light.text-dashed.d-block.d-md-none.d-xl-block(href="") Политика конфиденциальности
-      p.mb-3.m-md-0.p-text-light.text-center.text-xl-left steffany.ua ©2019. Все права защищены
+        a.p-text-light(target="_blank" href="http://dotwork.digital/") dotwork
+      a.mb-3.m-md-0.p-text-light.d-block.d-md-none.d-xl-block(target="_blank" href="./policy.html" style="padding: 0 15px;") Пользовательское соглашение
+      p.mb-3.m-md-0.p-text-light.text-center.text-xl-left(style="padding: 0 50px;") steffany.ua ©2019. Все права защищены

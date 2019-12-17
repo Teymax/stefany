@@ -1,15 +1,4 @@
 section.section.section-services.py-5
   .container.mt-3.mb-5
     h3.section-title.text-color-dark.text-center.mb-5 Вас также может заинтересовать
-    .slider-wrap
-      .row.no-gutters
-        .podology-service-slider.owl-carousel.slider-block
-          // - let arrResult = [{name:"Удаление мозолей", img:"slider-img-11"},{name:"Удаление натоптышей",img:"slider-img-22"},{name:"Лечение грибка",img:"slider-img-33"},{name:"Обработка трещин",img:"slider-img-44"},{name:"Удаление мозолей", img:"slider-img-11"},{name:"Удаление натоптышей",img:"slider-img-22"},{name:"Лечение грибка",img:"slider-img-33"},{name:"Обработка трещин",img:"slider-img-44"}];
-          each element in [{name:"Удаление мозолей", img:"slider-img-11"},{name:"Удаление натоптышей",img:"slider-img-22"},{name:"Лечение грибка",img:"slider-img-33"},{name:"Обработка трещин",img:"slider-img-44"},{name:"Удаление мозолей", img:"slider-img-11"},{name:"Удаление натоптышей",img:"slider-img-22"},{name:"Лечение грибка",img:"slider-img-33"},{name:"Обработка трещин",img:"slider-img-44"}]
-            - let resultPath = "./assets/img/orthopedics/slider-1/" + element.img + ".png"
-            a.diploma-item(href=resultPath, data-fancybox="")
-              img.w-100(src=resultPath, alt="result-image")
-              .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
-                .section-bg-dark.w-100.p-1
-                  p.paragraph-text.text-center.mb-0 #{element.name}
-
+    +sliderServices

@@ -86,7 +86,7 @@ $(document).ready(function(){
 			1200:{
 				nav: false
 			}
-		}	
+		}
 	});
 
 	$('.video-slider-dots .owl-dot').click(function (e) {

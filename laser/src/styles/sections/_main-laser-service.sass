@@ -1,105 +1,138 @@
-//section.section.main-laser-service
-//  .info-list
-//    li
-//      &:before
-//        background-color: #A9A8C6
-//  .h1-title
-//    @include font (CormorantGaramond, 700, 44, 30)
-//    color: #fff
-//  .c-service
-//    &__service-box
-//      height: 300px
-//      &_bg-1
-//        background:
-//          image: url("../assets/img/main-service/bg_1.png")
-//          size: cover
-//      &_bg-2
-//        background:
-//          image: url("../assets/img/main-service/bg_2.png")
-//          size: cover
-//      &_bg-3
-//        background:
-//          image: url("../assets/img/main-service/bg_3.jpg")
-//          size: cover
-//      &_bg-4
-//        background:
-//          image: url("../assets/img/main-service/bg_4.jpg")
-//          size: cover
-//      &_bg-5
-//        background:
-//          image: url("../assets/img/main-service/bg_5.png")
-//          size: cover
-//
-//@include media-breakpoint-down(lg)
-//
-//
-//
-//@include media-breakpoint-down(xs)
-//  .h2-title
-//    font-size: 34px
 section.section.main-laser-service
   position: relative
-  background-image: url(../assets/img/main-service/main-bg.jpg)
-  background-size: cover
-  padding-top: 68px
-  padding-bottom: 109px
-  img.bg-elem
-    position: absolute
-    top: 0
-    right: 0
-  .container
-    .h1-main-title
-      @include font (CormorantGaramond, 400, 80, 60)
+  background:
+    image: url("../assets/img/main-service/new-bg.jpg")
+    //size: 732px auto, cover
+    //position: calc(100% + -79px) bottom, bottom
+    size: cover
+    repeat: no-repeat
+  padding-top: 61px
+  padding-bottom: 21px
+  min-height: 651px
+  @media(min-width: 1920px)
+    //background: url("../assets/img/main-service/girl.png") , url("../assets/img/main-service/bg-nogirl.jpg")
+    background: url(../assets/img/main-service/girl.png) 900px 0 no-repeat, url(../assets/img/main-service/new-bg-nogirl.jpg) 0px 0px round,
+      size: contain
+  @include media-breakpoint-down(lg)
+    padding-bottom: 90px
+    min-height: auto
+    padding-top: 41px
+    background-image:  url(../assets/img/main-service/main-bg-tablet.jpg)
+    background-position-x: -223px
+    @media (min-width: 992px) and (max-width: 1200px)
+      background:
+        position-x: -78px
+        size: cover
+  @include media-breakpoint-down(sm)
+    background-image:  url(../assets/img/main-service/main-bg-mob.jpg)
+    background-size: 796px
+    padding-bottom: 27px
+    padding-top: 12px
+  .c-content
+    transform: translate(-45px, -19px)
+    @include media-breakpoint-down(sm)
+      transform: translate(-6px, -19px)
+  .h1-main-title
+    max-width: 530px
+    @include font (CormorantGaramond, 400, 80, 60)
+    color: $text-color-lightgrey
+    margin-bottom: 58px
+    @include media-breakpoint-down(lg)
+      max-width: 100%
+      font-size: 55px
+      line-height: 40px
+    @include media-breakpoint-down(sm)
+      font-size: 35px
+      line-height: 26px
+      margin-bottom: 37px
+
+
+  .info-list
+    margin-bottom: 40px
+    @include media-breakpoint-down(lg)
+      margin-bottom: 38px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 18px
+
+    li.list-item
+      @include font (Circe, 400, 20, 31)
       color: $text-color-lightgrey
-      margin-bottom: 60px
+      min-width: 150px
+      padding-bottom: 4px
+      &:before
+        width: 7.71px
+        height: 7.71px
+        background: #A9A8C6
+        top: 20px
+        @include media-breakpoint-down(lg)
+          top: 9px
+      @include media-breakpoint-down(lg)
+        @include font (Circe, 400, 16, 25)
+      @include media-breakpoint-down(sm)
+        @include font (Circe, 400, 14, 22)
+  .subtitle
+    @include font (Circe, 800, 24, 37)
+    color: $text-color-lightgrey
+    letter-spacing: 0.231429px
+    @include media-breakpoint-down(lg)
+      @include font (Circe, 700, 18, 27)
+      letter-spacing: 0.179948px
+    @include media-breakpoint-down(sm)
+      @include font (Circe, 700, 16, 24)
+      font-size: 16px
+      line-height: 24px
 
-    .info-list
-      li.list-item
-        @include font (Circe, 400, 20, 31)
-        color: $text-color-lightgrey
-        &:before
-          width: 7.71px
-          height: 7.71px
-          background: #A9A8C6
-    .subtitle
-      @include font (Circe, 400, 24, 37)
-      color: $text-color-lightgrey
-    .position-block
-      max-width: 500px
-      .custopm-text
-        &__small
-          @include font (Circe, 400, 28.75, 45)
-          color: $text-color-lightgrey
-          margin-bottom: 40px
-          &:before
-            content: url("../assets/img/main-service/d-block-3.svg")
-            position: absolute
-            top: -28px
-            right: 92px
-        &__bold
-          @include font (Circe, 900, 28.75, 45)
-          color: $text-color-lightgrey
-        &__through
-          @include font (Circe, 300, 17.25, 25)
-          color: $text-color-lightgrey
-          text-decoration: line-through
-      .c-span
-        position: relative
-        margin-left: 43px
-        &:before
-          content: url("../assets/img/main-service/d-block-1.svg")
-          position: absolute
-          top: -15px
-          left: -42px
-        &:after
-          content: url("../assets/img/main-service/d-block-2.svg")
-          position: absolute
-          top: -18px
-          right: -23px
-
-@include media-breakpoint-down(lg)
+  .position-block
+    position: relative
+    max-width: 640px
+    @include media-breakpoint-down(sm)
+      max-width: 250px
+    &:before
+      content: ''
+      background:
+        image: url(../assets/img/main-service/vector.svg)
+      display: block
+      width: 111px
+      height: 204px
+      position: absolute
+      top: -20px
+      right: -28px
+      @include media-breakpoint-down(lg)
+        display: none
+  .link-btn-discount
+    display: block
+    width: 159px
+  .btn-simple
+    height: 38px
+    @include media-breakpoint-down(sm)
+      margin: 0 auto
 
 
 
-@include media-breakpoint-down(xs)
+  .bold
+    @include  font(Circe, 700, 22, 26)
+    @include media-breakpoint-down(lg)
+      font-size: 18px
+      line-height: 28px
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 22px
+
+  .line-through
+    @include  font(Circe, 700, 22, 26)
+    text-decoration: line-through
+    @include media-breakpoint-down(lg)
+      font-size: 16px
+      line-height: 25px
+    @include media-breakpoint-down(sm)
+      font-size: 14px
+      line-height: 22px
+  .large
+    @include  font(Circe, 800, 30, 47)
+    @include media-breakpoint-down(lg)
+      font-size: 23px
+      line-height: 26px
+    @include media-breakpoint-down(sm)
+      font-size: 18px
+      line-height: 28px
 
