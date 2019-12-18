@@ -4,10 +4,11 @@
       h4.text-center Запись на прием происходит в телефонном режиме
       h5.text-center укажите свои данные, для звонка и согласования деталей
       form
-        input.w-100.p-text-light.mb-2(type="text", placeholder="Имя")
-        input.w-100.p-text-light.mb-2(type="email", placeholder="Email")
-        input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон")
-        button.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between.mx-auto.mr-md-0.ml-md-auto(type="button", data-toggle='modal', data-target='#thanksPopup', data-dismiss="modal")
+        input(style="display: none;" type="submit")
+        input.w-100.p-text-light.mb-2(type="text", placeholder="Имя" required)
+        input.w-100.p-text-light.mb-2(type="email", placeholder="Email" required)
+        input.w-100.p-text-light.mb-4(type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
+        button.btn-callback.btn-callback-white.d-flex.align-items-center.justify-content-between.mx-auto.mr-md-0.ml-md-auto(type="button")
           span.d-flex.align-items-center.justify-content-between
             svg(width='10', height='17', viewBox='0 0 10 17', fill='none', xmlns='http://www.w3.org/2000/svg')
               path(d='M8.8373 0.996094H1.1627C0.523313 0.996094 0 1.48204 0 2.07678V15.915C0 16.5097 0.523313 16.9961 1.1627 16.9961H8.8373C9.47669 16.9961 10 16.5106 10 15.9154V2.07678C10 1.48204 9.47669 0.996094 8.8373 0.996094ZM3.77238 1.77507H6.22762C6.30533 1.77507 6.36829 1.83358 6.36829 1.90627C6.36829 1.97849 6.30533 2.03701 6.22762 2.03701H3.77238C3.69467 2.03701 3.63171 1.97849 3.63171 1.90627C3.63171 1.83358 3.69467 1.77507 3.77238 1.77507ZM5 16.4558C4.67883 16.4558 4.41865 16.2139 4.41865 15.915C4.41865 15.616 4.67883 15.3746 5 15.3746C5.32117 15.3746 5.58135 15.616 5.58135 15.915C5.58135 16.2139 5.32117 16.4558 5 16.4558ZM9.19093 14.9961H0.809069V2.70992H9.19093V14.9961Z', fill='white')
@@ -18,9 +19,9 @@
             path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
             C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
         p.thin-text.color-white * мы наберем вас в течении 15 минут
-        
+
 #thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content.px-1
-      h4.text-center Спасибо! 
+      h4.text-center Спасибо!
       h5.text-center Мы свяжемся с вами в ближайшее время!
