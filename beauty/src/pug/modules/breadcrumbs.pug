@@ -1,0 +1,16 @@
+mixin breadcrumbs(main, chapter, chapterLink, title, titleLink)
+  p.breadcrumbs.mb-0
+    a(href="index.html")= main
+    span.separator /
+    a(href=chapterLink)= chapter
+    span.separator /
+    a(href=titleLink aria-current="page")= title
+      span.city-in-dynamic
+
+mixin breadcrumbsSmall(main, title, titleLink)
+  p.breadcrumbs
+    a(href="index.html")= main
+    span.separator /
+    a(href=titleLink aria-current="page")= title
+      span.city-in-dynamic
+

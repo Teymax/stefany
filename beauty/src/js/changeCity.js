@@ -1,50 +1,50 @@
 $(document).ready(function () {
-  const serviceCityData = {
-    zt: {
-      ru: {
-        selectedService:
-            `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-        `
-      }
-    },
-    if: {
-      ru: {
-        selectedService:
-            `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-        `
-      }
-    },
-    lutsk: {
-      ru: {
-        selectedService:
-            `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-        `
-      }
-    },
-    lviv: {
-      ru: {
-        selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-        `
-      }
-    },
-    rovno: {
-      ru: {
-        selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-        `
-      }
-    }
-  }
+  // const serviceCityData = {
+  //   zt: {
+  //     ru: {
+  //       selectedService:
+  //           `
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
+  //       `
+  //     }
+  //   },
+  //   if: {
+  //     ru: {
+  //       selectedService:
+  //           `
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+  //       `
+  //     }
+  //   },
+  //   lutsk: {
+  //     ru: {
+  //       selectedService:
+  //           `
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
+  //       `
+  //     }
+  //   },
+  //   lviv: {
+  //     ru: {
+  //       selectedService: `
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+  //       `
+  //     }
+  //   },
+  //   rovno: {
+  //     ru: {
+  //       selectedService: `
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
+  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
+  //       `
+  //     }
+  //   }
+  // }
   const citiesData = {
     zt: {
       ru: {
@@ -57,54 +57,171 @@ $(document).ready(function () {
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0@2x.jpg',
 
-        imagesAmount: 6,
-        imagesAmountSpecialists: 7,
+        imagesAmount: 1,
         specialists: [
           {
-            name: 'Кос Инна',
-            education: 'По образованию медсестра',
+            name: 'Владислава Бондарь',
+            education: 'Парикмахер',
             experience: 'Работает уже 7 лет',
-            skills: 'Сделает лазерную эпиляцию, восковую депиляцию, шугаринг, пилинг, уходовые процедуры, индивидуальные программы с учетом состояния и типа кожи'
+            skills: 'Сделает женские и мужские стрижки, сложные окрашивания, уход за волосами, прически, укладку, полировку волос, камуфлирование седины, тонирование ранее окрашенных волос'
           },
           {
-            name: 'Виктория Демчук',
-            education: 'По образованию косметолог',
-            experience: 'Работает уже 7 лет',
-            skills: 'Сделает все виды чисток, пилингов, уходовых процедур, лазерную эпиляцию, все виды депиляций, подбор домашнего ухода'
+            name: 'Любовь Зайнчковская',
+            education: 'Мужской парикмахер',
+            experience: 'Работает уже 1,5 года',
+            skills: 'Сделает мужские стрижки любой сложности'
           },
           {
-            name: 'Ульяна Кравчук',
-            education: 'По образованию медицинский работник.',
-            experience: 'Работает уже 8 лет',
-            skills: 'Сделает лазерную эпиляцию, эстетическую косметологию, шугаринг, восковую эпиляцию'
+            name: 'Александра Крышневская',
+            education: 'Brow-мастер, визажист',
+            experience: 'Работает уже 1 год',
+            skills: 'Сделает моделирование и коррекцию бровей, окрашивание бровей краской и хной, окрашивание ресниц, мужскую коррекцию бровей, дневной, вечерний и свадебный макияж'
           },
           {
-            name: 'Татьяна Огир',
-            education: 'По образованию медсестра.',
-            experience: 'Работает уже 18 лет',
-            skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
-          },
-          {
-            name: 'Инна Степанчук',
-            education: 'По образованию фармацевт.',
+            name: 'Ирина Михалюк',
+            education: 'Парикмахер',
             experience: 'Работает уже 3 года',
-            skills: 'Сделает перманентный макияж, лазерную эпиляцию, восковую депиляцию, шугаринг, чистку и пилинг лица'
+            skills: 'Сделает женские и мужские стрижки, окрашивание в один тон, накрутку, укладку, плетение, уход за волосами'
+          },
+
+          {
+            name: 'Юлия Павлушина',
+            education: 'Парикмахер',
+            experience: 'Работает уже 3 года',
+            skills: 'Сделает мужские, женские и детские стрижки, окрашивания в один тон, сложные окрашивания, уход за волосами, плетение, прически, накрутку, укладку'
           },
           {
-            name: 'Александра Бородиян',
-            education: 'По образованию социальный реабилитолог, фельдшер-лаборант.',
-            experience: 'Работает уже 12 лет',
-            skills: 'Сделает все виды чисток, пилингов, уходовые процедуры, лазерную эпиляцию, все виды депиляции, подбор домашнего ухода'
+            name: 'Виктория Павюк',
+            education: 'Парикмахер',
+            experience: 'Работает уже 4 года',
+            skills: 'Сделает женские и мужские стрижки, укладку, накрутку, окрашивание любой сложности, уход за волосами'
           },
           {
-            name: 'Ирина Гутель',
-            education: 'По образованию медсестра и реабилитолог',
+            name: 'Алина Путянина',
+            education: 'Парикмахер',
+            experience: 'Работает уже 6 лет',
+            skills: 'Сделает женские, мужские и детские стрижки, окрашивание волос во всех техниках, укладку волос'
+          },
+          {
+            name: 'Юлия Соловко',
+            education: 'Парикмахер',
+            experience: 'Работает уже 13 лет',
+            skills: 'Сделает мужские и женские стрижки, окрашивание в один тон, сложные окрашивания, накрутку, укладку, плетение, уход за волосами'
+          },
+
+          {
+            name: 'Юлия Сурикова',
+            education: 'Парикмахер',
             experience: 'Работает уже 9 лет',
-            skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
-          }
+            skills: 'Сделает все виды окрашивания, стрижки, укладку, прически без плетения, уход за волосами'
+          },
+          {
+            name: 'Дарья Тарасюк',
+            education: 'Парикмахер',
+            experience: 'Работает уже 5 лет',
+            skills: 'Сделает женские, мужские и детские стрижки, окрашивание волос в один тон, тонирование волос, полировку волос, уход за волосами, укладку длинных волос'
+          },
+          {
+            name: 'Мария Балуева',
+            education: 'Brow-мастер, визажист',
+            experience: 'Работает уже 1 год',
+            skills: 'Сделает моделирование и коррекцию бровей, окрашивание бровей краской и хной, мужскую коррекцию бровей, дневной, вечерний и свадебный макияж'
+          },
+          {
+            name: 'Наталия Бойко',
+            education: 'Парикмахер',
+            experience: 'Работает уже 16 лет',
+            skills: 'Сделает мужские и женские стрижки, окрашивание в один тон, сложные окрашивания, накрутку, укладку, плетение, уход за волосами, завивку'
+          },
+
+          {
+            name: 'Алина Кайсын',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 7 лет',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND'
+          },
+          {
+            name: 'Наталия Клец',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 1 год',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание, укрепление, наращивание и коррекцию ногтей, несложный дизайн, парафинотерапию для рук и ног'
+          },
+
+          {
+            name: 'Екатерина Бондарь',
+            education: 'Парикмахер',
+            experience: 'Работает уже 8 лет ',
+            skills: 'Сделает мужские и женские стрижки, окрашивание в один тон, сложные окрашивания, уход за волосами'
+          },
+
+
+          {
+            name: 'Людмила Коржовская',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 7 ле',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND'
+          },
+          {
+            name: 'Владлена Охмак',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 5 лет',
+            skills: 'Сделает европейский, классический, мужской, детский маникюр, выравнивание, укрепление и «ремонт» ногтевой пластины, все виды дизайна, классический, кислотный и спа-педикюр, парафинотерапию для рук и ног'
+          },
+
+          {
+            name: 'Ольга Петрук',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 1 год',
+            skills: 'Сделает все виды маникюра, выравнивание и укрепление ногтевой пластины, классический, кислотный и спа-педикюр, дизайн (френч, аэрографию, геометрию, втирку, наклейки, несложные рисунки)'
+          },
+          {
+            name: 'Анна Роюк',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 2 года',
+            skills: 'Сделает все виды маникюра, выравнивание, укрепление и наращивание ногтей, классический, кислотный и комбинированный педикюр, несложный дизайн, спа-процедуры и парафинотерапию для рук и ног'
+          },
+          {
+            name: 'Ксения Станиславская',
+            education: 'Директор Nail Studio Steffany, мастер ногтевого сервиса',
+            experience: 'Работает уже 13 лет',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног'
+          },
+          {
+            name: 'Ольга Степанчук',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 6 лет',
+            skills: 'Сделает классический, комбинированный и аппаратный маникюр, классический, комбинированный и кислотный педикюр, парафинотерапию для рук и ног, укрепление, «ремонт» и наращивание ногтей, все виды нехудожественного дизайна'
+          },
+        ],
+        specialistsSalon: [
+          {
+            name: 'Анастасия Грицык',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 4 года',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание и коррекцию ногтей, несложный дизайн ногтей'
+          },
+          {
+            name: 'Ирина Демиденко',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 4 года',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, все виды дизайна ногтей, парафинотерапию для рук и ног'
+          },
+          {
+            name: 'Мария Пашковская',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 2 года',
+            skills: 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание и коррекцию ногтей, дизайн (аэрографию, втирку, стемпинг), парафинотерапию для рук и ног'
+          },
+          {
+            name: 'Оксана Таргонская',
+            education: 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 3 года',
+            skills: 'Сделает все виды маникюра, выравнивание и укрепление ногтевой пластины, несложный дизайн (френч, стемпинг, втирку), аэрографию, парафинотерапию для рук и ног'
+          },
         ]
       }
     },
+
     rovno: {
       ru: {
         cityName: 'Ровно',
@@ -116,37 +233,88 @@ $(document).ready(function () {
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/salon-0@2x.jpg',
 
-        imagesAmount: 10,
-        imagesAmountSpecialists: 4,
-        specialists: [
+        imagesAmount: 1,
+         specialists: [
           {
-            name: 'Валентина Дижурко',
-            education: 'По образованию анестезиолог и реаниматолог',
-            experience: 'Работает уже 2,5 года',
-            skills: 'Сделает процедуры по уходу за лицом, лазерную эпиляцию, пирсинг, восковую депиляцию'
+          name: 'Инна Кокора',
+          education: 'Мастер ногтевого сервиса',
+          experience: 'Работает уже 1,5 года',
+          skills: 'Сделает все виды маникюра и педикюра, выравнивание, коррекцию и наращивание ногтей, парафинотерапию для рук и ног'
           },
           {
-            name: 'Лариса Драганчук',
-            education: 'По образованию санитарный фельдшер',
-            experience: 'Работает уже 3 года',
-            skills: ' Сделает лазерную эпиляцию, чистки кожи, уходовые процедуры, классический массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода'
+          name: 'Мария Кузьмич',
+          education: 'Мастер маникюра',
+          experience: 'Работает уже 1 год',
+          skills: 'Сделает все виды маникюра, укрепление и коррекцию ногтей, парафинотерапию для рук'
           },
           {
-            name: 'Ирина Куба',
-            education: 'По образованию врач-дерматолог',
-            experience: 'Работает уже 10 лет',
-            skills: 'Сделает дерматоскопию и удаление новообразований на коже, чистки, пилинги, аппаратные методики для лица, лазерную эпиляцию'
+          name: 'Наталия Лело',
+          education: 'Парикмахер',
+          experience: 'Работает уже 15 лет',
+          skills: 'Сделает все виды маникюра, укрепление и коррекцию ногтей, парафинотерапию для рук'
           },
           {
-            name: 'Людмила Чорная',
-            education: 'По образованию медсестра',
-            experience: 'Работает уже 11 лет',
-            skills: 'Сделает лазерную эпиляцию, восковую депиляцию, уходовые программы для лица, чистки и массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода, перманентный макияж"'
+          name: 'Мария Остапович',
+          education: 'Мастер ногтевого сервиса',
+          experience: 'Работает уже 2 года',
+          skills: 'Сделает европейский, классический, комбинированный и детский маникюр, все виды педикюра, выравнивание и коррекцию ногтевой пластины, парафинотерапию для рук и ног'
+          },
+
+          {
+          name: 'Леся Парух',
+          education: 'Brow-мастер, визажист',
+          experience: 'Работает уже 1,5 года',
+          skills: 'Сделает окрашивание бровей краской и хной, моделирование, коррекцию и ламинирование бровей, окрашивание ресниц'
+          },
+          {
+          name: 'Екатерина Пархомчук',
+          education: 'Мастер маникюра',
+          experience: 'Работает уже 3 месяца',
+          skills: 'Сделает все виды маникюра, выравнивание ногтевой пластины, парафинотерапия для рук'
+          },
+          {
+          name: 'Галина Ребеш',
+          education: 'Мастер ногтевого сервиса',
+          experience: 'Работает уже 2 года',
+          skills: 'Сделает все виды маникюра и педикюра, выравнивание, коррекцию и наращивание ногтей, парафинотерапию для рук и ног'
+          },
+          {
+          name: 'Анна Власенко',
+          education: 'Мастер маникюра',
+          experience: 'Работает уже 6 лет',
+          skills: 'Сделает классический, комбинированный и мужской маникюр, укрепление, наращивание и коррекцию ногтей'
+          },
+
+          {
+           name: 'Яна Галицкая',
+           education: 'Мастер ногтевого сервиса',
+           experience: 'Работает уже 4 года',
+           skills: 'Сделает все виды маникюра и педикюра, укрепление ногтей, парафинотерапию для рук и ног'
+          },
+          {
+           name: 'Вероника Голянская',
+           education: 'Мастер ногтевого сервиса',
+           experience: 'Работает уже 2 года',
+           skills: 'Сделает все виды маникюра и педикюра, укрепление ногтей, парафинотерапию для рук и ног'
+          },
+          {
+           name: 'Наталия Довгаль',
+           education: 'Мастер маникюра',
+           experience: 'Работает уже 3 месяца',
+           skills: 'Сделает все виды маникюра, выравнивание ногтевой пластины, парафинотерапию для рук'
+          },
+          {
+           name: 'Ирина Коломийчук',
+           education: 'Мастер ногтевого сервиса',
+           experience: 'Работает уже 3 года',
+           skills: 'Сделает все виды маникюра, классический, комбинированный и спа-педикюр, выравнивание, укрепление и наращивание ногтей, парафинотерапию для рук и ног'
           },
         ]
       }
     }
   };
+
+
 
   let localization = 'ru';
   let carouselsHTML = null;
@@ -194,8 +362,6 @@ $(document).ready(function () {
     $('.image-about-dynamic').each(function (e) {
           this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`);
     });
-
-
   }
 
   function initCarousels() {
@@ -278,7 +444,7 @@ $(document).ready(function () {
 
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount;
-    let imagesAmountSpecialists = citiesData[city][localization].imagesAmountSpecialists;
+    let imagesAmountSpecialists = citiesData[city][localization].specialists.length;
     let specialistsData = citiesData[city][localization].specialists;
     let imgPath = `assets/img/about-steffany-salon/${city}/`;
     let images = '';
@@ -306,14 +472,14 @@ $(document).ready(function () {
       imagesSpecialists += `
         <div class="specialists-item">
             <div class="specialists-item-container mb-3 w-100">
-                <div class="specialists-img w-100"><img class="w-100" src="" alt="${specialistsData[i].name}" srcset="${imgPath}/specialists/specialist-${i}@2x.jpg 2x" /></div>
+                <div class="specialists-img w-100"><img class="w-100" src="${imgPath}/specialists/specialist-${i}@2x.jpg" alt="${specialistsData[i].name}"/></div>
                 <div class="specialists-info d-flex flex-column align-items-start w-100 p-3">
                     <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].education}</p>
                     <p class="paragraph-text text-color-lightdark text-w-bold">${specialistsData[i].experience}</p>
                     <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].skills}</p>
                 </div>
             </div>
-            <p class="h4-title h-center">${specialistsData[i].name}</p>
+            <p class="h4-title text-center text-color-white">${specialistsData[i].name}</p>
         </div>
       `;
     }
