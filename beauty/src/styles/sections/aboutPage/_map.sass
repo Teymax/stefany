@@ -1,147 +1,307 @@
-.map
-	padding-top: 65px
-	padding-bottom: 33px
-	@media(max-width: 1199px)
-		padding-top: 33px
-		padding-bottom: 3px
-		.container
-			padding-bottom: 0 !important
-			border-bottom: 0
-	@media(max-width: 767px)
-		padding-top: 50px
-	.icon
-		margin-right: 10px
-		margin-top: -2px
-		margin-left: 3px
-		&.icon-loc
-			margin-right: 13px
-			@media(max-width: 767px)
-				margin-left: 7px
-				margin-right: 12px
-.map-2
-	padding-bottom: 0px
-	@media(max-width: 767px)
-		padding-top: 17px
-		padding-bottom: 23px
-	.container
-		padding-bottom: 60px !important
-		@media(max-width: 767px)
-			padding-bottom: 0px
-	.map-title-1
-		padding-top: 16px
-		@media(max-width: 767px)
-			line-height: 24px
-	.map-title-12
-		@media(max-width: 767px)
-			line-height: 24px
-			margin-bottom: 17px !important
-	.contact-information
-		margin-bottom: 74px
-		@media(max-width: 767px)
-			margin-bottom: 40px
-		.height-25
-			&:not(:last-child)
-				@media(max-width: 767px)
-					margin-bottom: 19px !important
-	form
-		.field
-			margin-bottom: 15px
-			padding: 8px 20px
-		textarea 
-			height: 150px
-		.btn-send
-			@media(max-width: 767px)
-				margin-left: auto !important
-				margin-right: auto !important
-	.map-cnt
-		@media(min-width: 992px)
-			padding-right: 22px !important
+//.map
+//	padding-top: 65px
+//	padding-bottom: 33px
+//	@media(max-width: 1199px)
+//		padding-top: 33px
+//		padding-bottom: 3px
+//		.container
+//			padding-bottom: 0 !important
+//			border-bottom: 0
+//	@media(max-width: 767px)
+//		padding-top: 50px
+//	.icon
+//		margin-right: 10px
+//		margin-top: -2px
+//		margin-left: 3px
+//		&.icon-loc
+//			margin-right: 13px
+//			@media(max-width: 767px)
+//				margin-left: 7px
+//				margin-right: 12px
+//.map-2
+//	padding-bottom: 0px
+//	@media(max-width: 767px)
+//		padding-top: 17px
+//		padding-bottom: 23px
+//	.container
+//		padding-bottom: 60px !important
+//		@media(max-width: 767px)
+//			padding-bottom: 0px
+//	.map-title-1
+//		padding-top: 16px
+//		@media(max-width: 767px)
+//			line-height: 24px
+//	.map-title-12
+//		@media(max-width: 767px)
+//			line-height: 24px
+//			margin-bottom: 17px !important
+//	.contact-information
+//		margin-bottom: 74px
+//		@media(max-width: 767px)
+//			margin-bottom: 40px
+//		.height-25
+//			&:not(:last-child)
+//				@media(max-width: 767px)
+//					margin-bottom: 19px !important
+//	form
+//		.field
+//			margin-bottom: 15px
+//			padding: 8px 20px
+//		textarea
+//			height: 150px
+//		.btn-send
+//			@media(max-width: 767px)
+//				margin-left: auto !important
+//				margin-right: auto !important
+//	.map-cnt
+//		@media(min-width: 992px)
+//			padding-right: 22px !important
+//.contact
+//	padding-bottom: 43px
+//	.section-title
+//		margin-bottom: 38px
+//		@media(max-width: 767px)
+//			margin-bottom: 24px
+//	.container
+//		padding-bottom: 38px
+//		@media(max-width: 767px)
+//			padding-bottom: 0
+//	.contact-information
+//		margin-bottom: 19px
+//		@media(max-width: 767px)
+//			margin-bottom: 15px
+//		.height-25
+//			margin-bottom: 18px !important
+//			@media(max-width: 767px)
+//				margin-bottom: 19px !important
+//	.contact-title
+//		@media(max-width: 767px)
+//			margin-bottom:  7px
+//	.contact-title-s
+//		margin-top: 24px
+//		margin-bottom: 19px !important
+//	form
+//		padding-right: 15px
+//		.col-sm-5
+//			max-width: 203px
+//			@media(max-width: 767px)
+//				max-width: 100%
+//			.field
+//				margin-bottom: 14px !important
+//				padding: 8px 20px
+//		.col-sm-7
+//			@media(min-width: 767px)
+//				flex: auto
+//				max-width: 410px
+//			@media(max-width: 767px)
+//				max-width: 100%
+//			textarea.field
+//				height: 152px
+//		.btn-send
+//			@media(max-width: 767px)
+//				margin-top: 20px !important
+//				margin-left: auto !important
+//				margin-right: auto !important
+//.city-triggers-wrap
+//		margin-bottom: 62px
+//		@media(max-width: 1199px)
+//			margin-bottom: 13px
+//		.btn-simple
+//			min-width: 107px
+//			height: 43px
+//			padding: 15px 22px !important
+//			@media(max-width: 767px)
+//				margin-bottom: 15px
+//.city-name
+//	margin-bottom: 33px !important
+//	font-size: 14px !important
+//	letter-spacing: -0.35px
+//	@media(max-width: 1199px)
+//		font-size: 13px !important
+//	@media(max-width: 767px)
+//		margin-bottom: 30px !important
+//.contact-information
+//	margin-bottom: 46px
+//	@media(max-width: 767px)
+//		margin-bottom: 32px
+//	.col-sm-6
+//		max-width: 217px
+//	.contact-information-item
+//		margin-bottom: 19px
+//		a
+//			letter-spacing: 0.5px
+//.map-callback
+//	.btn-callback
+//		max-width: 272px !important
+//		width: 100% !important
+//		background-size: 55px 100% !important
+//		padding: 15px 24px 15px 28px !important
+//.map-img
+//	max-width: 721px !important
+//	@media(max-width: 1199px)
+//		max-width: 100% !important
+//	img
+//		min-height: 334px
+//.map-cnt
+//	@media(max-width: 991px)
+//		padding: 0 15px !important
+
+section.section.map-slider
+  padding-top: 64px
+  padding-bottom: 63px
+  @include media-breakpoint-down(lg)
+    padding-top: 38px
+    padding-bottom: 30px
+  @include media-breakpoint-down(sm)
+    padding-top: 49px
+    padding-bottom: 15px
+
+  .btn-simple-map
+    @include font (Circe, 700, 12, 14)
+    color: #3A405B
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 44px
+    text-decoration: none
+    border-radius: 100px
+    background: #fff
+    border: 1px solid #D2DBE9
+    text-transform: uppercase
+    cursor: pointer
+    padding: 0 33px
+    &.active
+      background: #A09BCF
+      color: #fff
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+    &:hover
+      background: #A09BCF
+      border: 1px solid #A09BCF
+      color: #fff !important
+    &:focus
+      background: #A09BCF
+      color: #fff
+    &:active
+      box-shadow: none
+    @include media-breakpoint-down(lg)
+      margin-bottom: 19px
+
+
+
+
+.bg-wrapper
+  background:
+    image: url("../assets/img/about/contact-bg.jpg")
+    size: cover
+
+  .cnt-info
+    margin-bottom: 21px
+
+  .map
+    @include media-breakpoint-down(lg)
+      height: 329px
+    @include media-breakpoint-down(sm)
+
+  .container
+    //padding-top: 28px // fix bg
+    //@include media-breakpoint-down(lg)
+    //  padding-top: 0
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
+
+
+    .btn-callback
+      max-width: 300px
+      min-width: 268px
+      height: 50px
+      .text-section
+        width: 88%
+      .arrow-section
+        width: 21%
+
+  p
+    margin-bottom: 0
+
+//contact
 .contact
-	padding-bottom: 43px
-	.section-title
-		margin-bottom: 38px
-		@media(max-width: 767px)
-			margin-bottom: 24px
-	.container
-		padding-bottom: 38px
-		@media(max-width: 767px)
-			padding-bottom: 0
-	.contact-information
-		margin-bottom: 19px
-		@media(max-width: 767px)
-			margin-bottom: 15px
-		.height-25
-			margin-bottom: 18px !important
-			@media(max-width: 767px)
-				margin-bottom: 19px !important
-	.contact-title
-		@media(max-width: 767px)
-			margin-bottom:  7px
-	.contact-title-s
-		margin-top: 24px
-		margin-bottom: 19px !important
-	form
-		padding-right: 15px
-		.col-sm-5
-			max-width: 203px
-			@media(max-width: 767px)
-				max-width: 100%
-			.field
-				margin-bottom: 14px !important
-				padding: 8px 20px
-		.col-sm-7
-			@media(min-width: 767px)
-				flex: auto
-				max-width: 410px
-			@media(max-width: 767px)
-				max-width: 100%
-			textarea.field
-				height: 152px
-		.btn-send
-			@media(max-width: 767px)
-				margin-top: 20px !important
-				margin-left: auto !important
-				margin-right: auto !important
-.city-triggers-wrap
-		margin-bottom: 62px
-		@media(max-width: 1199px)
-			margin-bottom: 13px
-		.btn-simple	
-			min-width: 107px
-			height: 43px
-			padding: 15px 22px !important
-			@media(max-width: 767px)
-				margin-bottom: 15px
-.city-name
-	margin-bottom: 33px !important
-	font-size: 14px !important
-	letter-spacing: -0.35px
-	@media(max-width: 1199px)
-		font-size: 13px !important
-	@media(max-width: 767px)
-		margin-bottom: 30px !important
-.contact-information
-	margin-bottom: 46px
-	@media(max-width: 767px)
-		margin-bottom: 32px
-	.col-sm-6
-		max-width: 217px
-	.contact-information-item
-		margin-bottom: 19px
-		a
-			letter-spacing: 0.5px
-.map-callback
-	.btn-callback
-		max-width: 272px !important
-		width: 100% !important
-		background-size: 55px 100% !important
-		padding: 15px 24px 15px 28px !important
-.map-img
-	max-width: 721px !important
-	@media(max-width: 1199px)
-		max-width: 100% !important
-	img
-		min-height: 334px
-.map-cnt
-	@media(max-width: 991px)
-		padding: 0 15px !important
+  padding-top: 66px
+  @include media-breakpoint-down(lg)
+    background:
+      image: url("../assets/img/contact/bg-tablet.png")
+      background-size: cover
+  .map
+    @include media-breakpoint-down(lg)
+      margin-top: 45px
+      height: 296px
+    @include media-breakpoint-down(sm)
+      margin-top: 33px
+      height: 329px
+  .btn-callback
+    margin-top: 30px
+    margin-left: auto
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      margin-top: 51px
+    .text-section
+      span
+        color: $text-color-lightdark
+  .container
+    .sub-title
+      @include font(CormorantGaramond, 700, 24, 29)
+      color: $text-color-dark
+    .btn-callback
+      width: 12em
+    .mini-map
+    //background: url('../assets/img/common/mobile-map.png') no-repeat -31em -4em
+    //background: url('../assets/img/common/mobile-map.png') no-repeat center center
+    //background-size: 80em
+    //height: 20em
+    //margin-top: 3em
+    .form-title
+      @include font (CormorantGaramond, 700, 26, 31)
+.feedback-form
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  padding-top: 36px
+  @include media-breakpoint-down(lg)
+  @include media-breakpoint-down(sm)
+    padding-top: 18px
+
+
+  textarea
+    height: 100%
+    min-height: 144px
+    resize: none
+    box-sizing: border-box
+
+  input,
+  textarea
+    display: block
+    appearance: none
+    outline: none
+    width: 100%
+    padding: .5em
+    background-color: #F8F8F8
+    border-radius: 4px
+    border: none
+    &:not(:last-child)
+      margin-bottom: 1rem
+
+    &::placeholder
+      @include font(Circe, 400, 14, 20)
+
+  @include media-breakpoint-up(lg)
+    input
+      width: 90%
+
+
+
+@include media-breakpoint-down(lg)
+  section.section.contact
+
+@include media-breakpoint-down(xs)
+  section.section.contact
+    .form-title
+      font-size: 20px

@@ -51,11 +51,12 @@ $(document).ready(function () {
         cityName: 'Житомир',
         cityNameIn: 'в Житомире',
         cityPhone: '098-007-07-53',
+        schedule: '10:00 - 20:00',
         address: 'ул. Киевская, 77, тц "Глобал"',
-        cityMap: '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' +'    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.345216309848!2d28.6856875!3d50.2668125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G2C7M8P%2BP7!5e0!3m2!1sru!2sua!4v1576752718526!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0@2x.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0.jpg',
 
         imagesAmount: 1,
         specialists: [
@@ -227,11 +228,12 @@ $(document).ready(function () {
         cityName: 'Ровно',
         cityNameIn: 'в Ровно',
         cityPhone: '098-500-48-86',
+        schedule: '9-00 - 20-00',
         address: 'ул. Киевская, 4',
-        cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32161.630767479204!2d26.25760338424141!3d50.59794991865695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G28J789%2BJR!5e0!3m2!1sru!2sua!4v1576752786381!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram: 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook: 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/salon-0@2x.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/salon-0.jpg',
 
         imagesAmount: 1,
          specialists: [
@@ -338,6 +340,9 @@ $(document).ready(function () {
     });
     $('.city-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].cityName;
+    });
+    $('.schedule-dynamic').each(function (e) {
+      this.innerText = citiesData[city][localization].schedule;
     });
     $('.telephone-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].cityPhone;
