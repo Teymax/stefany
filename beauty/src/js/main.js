@@ -58,10 +58,7 @@ $(document).ready(function () {
     console.log(window.serviceText)
   })
   
-  $('.modal form').on('submit', e => {
-    e.preventDefault()
-    // getBookTime([serviceId], 0, bookRecord)
-    e.preventDefault()
+  function _bookRecord() {
     var bearer_token = 'f5wujgx5yn6cagtk9fg2'
     var date = new Date()
     // Change
@@ -73,32 +70,76 @@ $(document).ready(function () {
     date.setDate(date.getDate() + 1)
     var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
     var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
-    
+  
     $('#callbackModal').modal('hide')
-    
+  
     $('#thanksPopup').modal('show')
-    
+  
     $('#consultPhone').val('')
     $('#consultName').val('')
     $('#consultEmail').val('')
-    
+  
     var headers = {
       'Content-Type' : 'application/json',
       'Authorization': 'Bearer ' + bearer_token
     }
-    
+  
     fetch(url, {
       method: 'GET',
       headers
     })
       .then(response => response.json())
       .then(response => {
-        console.log(response)
-        writeClient(response[0].datetime, payload)
         if (response.length) {
+          console.log(response)
+          writeClient(response[0].datetime, payload)
+        } else {
         
         }
       })
+  }
+  
+  $('.modal form').on('submit', e => {
+    e.preventDefault()
+    getBookTime([serviceId], 0, _bookRecord)
+    // var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+    // var date = new Date()
+    // // Change
+    // var payload = {
+    //   'phone': $('.modal form input[type="tel"]').val(),
+    //   'name' : $('.modal form input[type="text"]').val(),
+    //   'email': $('.modal form input[type="email"]').val()
+    // }
+    // date.setDate(date.getDate() + 1)
+    // var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+    // var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
+    //
+    // $('#callbackModal').modal('hide')
+    //
+    // $('#thanksPopup').modal('show')
+    //
+    // $('#consultPhone').val('')
+    // $('#consultName').val('')
+    // $('#consultEmail').val('')
+    //
+    // var headers = {
+    //   'Content-Type' : 'application/json',
+    //   'Authorization': 'Bearer ' + bearer_token
+    // }
+    //
+    // fetch(url, {
+    //   method: 'GET',
+    //   headers
+    // })
+    //   .then(response => response.json())
+    //   .then(response => {
+    //     if (response.length) {
+    //       console.log(response)
+    //       writeClient(response[0].datetime, payload)
+    //     } else {
+    //
+    //     }
+    //   })
     
     // request.done(function (msg) {
     //   console.log(msg);
@@ -126,6 +167,16 @@ $(document).ready(function () {
     $(city).addClass('city-active')
   })
   
+
+	$('.city-trigger').click(function(e){
+		e.preventDefault();
+		var city = '.' + $(this).attr('data-city');
+    $('.city-trigger').removeClass('active');
+    $('.city-item').removeClass('city-active');
+    $(this).addClass('active');
+    $(city).addClass('city-active');
+  });
+
   $('.menu-trigger').click(function (e) {
     $(this).toggleClass('open')
     $('header').toggleClass('open')
@@ -294,7 +345,7 @@ function processErrors(data) {
   return true
 }
 
-function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
+function getBookTime(services, plusDate = 0, callbackFunction, callbackParams = []) {
   let date = new Date()
   if (plusDate > 0) date.setDate(date.getDate() + plusDate)
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
@@ -313,6 +364,7 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
       return getBookTime(services, ++plusDate, callbackFunction, callbackParams)
     }
     else {
+      console.log(dataArr)
       callbackParams.push(dataArr[0].datetime)
       callbackFunction(...callbackParams)
     }
