@@ -7,6 +7,12 @@ const cities = {
   zt   : 'Житомир',
   rovno: 'Ровно'
 }
+window.mail = {
+  Host    : 'smtp.gmail.com',
+  Username: 'four.progs@gmail.com',
+  Password: 'Htndeth0614',
+  To      : 'a.sergeychuk@dotwork.digital'
+}
 window.serviceId = 2495961
 window.serviceText = ''
 
@@ -48,6 +54,22 @@ const writeClient = (time, data) => {
     })
 }
 
+function sendEmail(details) {
+  Email.send(
+    {
+      ...mail,
+      ...details
+    })
+  $('#thanksPopup').modal('show')
+  closeAllModals()
+}
+
+function closeAllModals() {
+  setTimeout(() => {
+    $('.modal').modal('hide')
+  }, 3000)
+}
+
 $(document).ready(function () {
   $('[type="tel"]').mask('+38-(000)-000-00-00')
   
@@ -56,6 +78,21 @@ $(document).ready(function () {
       window.serviceText = e.target.dataset.serviceId
     }
     console.log(window.serviceText)
+  })
+  
+  $('#sendMail').on('click', _ => {
+    $('.feedback-form').submit()
+  })
+  
+  $('.feedback-form').on('submit', e => {
+    e.preventDefault()
+    // console.log('prevented', $('.feedback-form input[type="email"]').val())
+    sendEmail({
+      Subject: 'Обратная связь',
+      From   : $('.feedback-form input[type="email"]').val(),
+      Body   : `Имя: ${$('.feedback-form input[type="text"]')}<br>Email: ${$('.feedback-form input[type="email"]')
+        .val()}<br>Телефон: ${$('.feedback-form input[type="tel"]').val()}<br>Сообщение: ${$('.feedback-form textarea').val()}`
+    })
   })
   
   function _bookRecord() {
@@ -70,20 +107,20 @@ $(document).ready(function () {
     date.setDate(date.getDate() + 1)
     var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
     var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
-  
+    
     $('#callbackModal').modal('hide')
-  
+    
     $('#thanksPopup').modal('show')
-  
+    
     $('#consultPhone').val('')
     $('#consultName').val('')
     $('#consultEmail').val('')
-  
+    
     var headers = {
       'Content-Type' : 'application/json',
       'Authorization': 'Bearer ' + bearer_token
     }
-  
+    
     fetch(url, {
       method: 'GET',
       headers
@@ -93,7 +130,8 @@ $(document).ready(function () {
         if (response.length) {
           console.log(response)
           writeClient(response[0].datetime, payload)
-        } else {
+        }
+        else {
         
         }
       })
@@ -167,16 +205,16 @@ $(document).ready(function () {
     $(city).addClass('city-active')
   })
   
-
-	$('.city-trigger').click(function(e){
-		e.preventDefault();
-		var city = '.' + $(this).attr('data-city');
-    $('.city-trigger').removeClass('active');
-    $('.city-item').removeClass('city-active');
-    $(this).addClass('active');
-    $(city).addClass('city-active');
-  });
-
+  
+  $('.city-trigger').click(function (e) {
+    e.preventDefault()
+    var city = '.' + $(this).attr('data-city')
+    $('.city-trigger').removeClass('active')
+    $('.city-item').removeClass('city-active')
+    $(this).addClass('active')
+    $(city).addClass('city-active')
+  })
+  
   $('.menu-trigger').click(function (e) {
     $(this).toggleClass('open')
     $('header').toggleClass('open')
