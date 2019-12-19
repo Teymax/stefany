@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('.city-trigger').click(function(e){
 		e.preventDefault();
 		var city = "." + $(this).attr('data-city');
