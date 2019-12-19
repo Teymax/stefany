@@ -15,6 +15,21 @@
 @import "media"
 
 
+.container
+  //@include media-breakpoint-down(lg)
+  padding-left: 30px !important
+  padding-right: 30px !important
+  @include media-breakpoint-down(sm)
+    padding-left: 18px !important
+    padding-right: 18px !important
+
+@include media-breakpoint-up(lg)
+  .container
+    max-width: 720px !important
+@include media-breakpoint-up(xl)
+  .container
+    max-width: 1320px !important
+
 //modules
 @import 'modules/buttons'
 @import "sections/aboutPage/video-slider"
