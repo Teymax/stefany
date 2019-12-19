@@ -1,24 +1,105 @@
 const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 const bearer_token = 'f5wujgx5yn6cagtk9fg2';
-const partnerId = 111624;
-const managerId = 819601;
+const partnerId = 72145;
+const managerId = 791383;
 let servicesArr = [];
-window.serviceId = 0
+window.serviceId = 2495961
+
+const writeClient = (time, data) => {
+  var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+  var headers = {
+    'Content-Type':  'application/json',
+    'Authorization': 'Bearer ' + bearer_token
+  }
+  var payload = {
+    'phone':        data.phone,
+    'fullname':     data.name,
+    'email':        data.email,
+    'appointments': [
+      {
+        'id':       new Date().getTime(),
+        'services': [serviceId],
+        'staff_id': managerId,
+        'datetime': time
+      }
+    ]
+  }
+  var request = $.ajax({
+                         url:     'https://api.yclients.com/api/v1/book_record/' + partnerId,
+                         type:    'POST',
+                         data:    JSON.stringify(payload),
+                         headers: headers
+                       })
+
+  request.done(function (msg) {
+  })
+
+  request.fail(function (jqXHR, textStatus) {
+  })
+}
 
 $(document).ready(function () {
   $('[type="tel"]').mask('+38-(000)-000-00-00')
 
   $('.btn-callback').on('click', e => {
-    if(e.target.dataset.serviceId)
-      window.serviceId = +e.target.dataset.serviceId
-    console.log(window.serviceId)
+    // if(e.target.dataset.serviceId)
+    //   window.serviceId = +e.target.dataset.serviceId
+    // console.log(window.serviceId)
   })
 
   // console.log(location.pathname.includes('service'));
 
   $('.modal form').on('submit', e => {
     e.preventDefault()
-    getBookTime([serviceId], 0, bookRecord)
+    // getBookTime([serviceId], 0, bookRecord)
+    e.preventDefault()
+    var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+    var date = new Date()
+    var payload = {
+      'phone': '380960000000',
+      'name':  'Oleg',
+      'email': 'qwe@qwe.qwe'
+    }
+    date.setDate(date.getDate() + 1)
+    var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+    var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
+
+    $('#callbackModal').modal('hide')
+
+    $('#thanksPopup').modal('show')
+
+    $('#consultPhone').val('')
+    $('#consultName').val('')
+    $('#consultEmail').val('')
+
+    var headers = {
+      'Content-Type':  'application/json',
+      'Authorization': 'Bearer ' + bearer_token
+    }
+    // var request = $.ajax(
+    //   {
+    //     url:     url,
+    //     type:    'GET',
+    //     headers: headers
+    //   })
+
+    fetch(url, {
+      method: 'GET',
+      headers
+    })
+      .then(response => response.json())
+      .then(response => {
+        console.log(response)
+      })
+
+    // request.done(function (msg) {
+    //   console.log(msg);
+    //   writeClient(msg[0].datetime, payload)
+    // })
+    //
+    // request.fail(function (jqXHR, textStatus) {
+    //   // handle
+    // })
     // $('.modal').modal('hide')
     // $('#thanksPopup').modal('show')
 
@@ -261,8 +342,9 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
            getServices();
          }
          else if (!err) {
-           $('#sendComplex').modal('hide');
-           $('#modalServiceListSinugUp').modal('hide');
+           // $('#sendComplex').modal('hide');
+           $('.modal').modal('hide')
+           // $('#modalServiceListSinugUp').modal('hide');
            $('#thanksPopup').modal('show');
          }
        });
