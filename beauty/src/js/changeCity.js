@@ -59,7 +59,7 @@ $(document).ready(function () {
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0.jpg',
 
         imagesAmount    : 1,
-        specialists     : [
+        specialists     :[
           {
             name      : 'Владислава Бондарь',
             education : 'Парикмахер',
@@ -193,6 +193,30 @@ $(document).ready(function () {
             skills    : 'Сделает классический, комбинированный и аппаратный маникюр, классический, комбинированный и кислотный педикюр, парафинотерапию для рук и ног, укрепление, «ремонт» и наращивание ногтей, все виды нехудожественного дизайна'
           }
         ],
+        salons          : {
+          nail: {
+            name     : 'Steffany Nail',
+            city     : 'Житомир',
+            nameIn   : 'в Житомире',
+            phone    : '098-180-50-90',
+            address  : 'ул. Киевская, 77, тц "Глобал',
+            schedule : '9:00 - 21:00',
+            map      : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5933359812803!2d28.685401029267087!3d50.2662872559772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64af91555555%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1576830374046!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+            facebook : 'https://www.facebook.com/steffany.ua/'
+          },
+          hair: {
+            name     : 'Steffany Hair',
+            city     : 'Житомир',
+            nameIn   : 'в Житомире',
+            phone    : '093-406-0479',
+            address  : 'ул. Киевская, 77, тц "Глобал',
+            schedule : '10:00 - 20:00',
+            map      : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5868053754273!2d28.685087529251003!3d50.26677505596847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1576830696418!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+            facebook : 'https://www.facebook.com/steffany.ua/'
+          }
+        }
       }
     },
 
