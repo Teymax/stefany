@@ -134,6 +134,7 @@ $(document).ready(function () {
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5868053754273!2d28.685087529251003!3d50.26677505596847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1576830696418!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
+            startSpec  : 13,
             specialists: [
               {
                 name      : 'Владислава Бондарь',
@@ -525,7 +526,7 @@ $(document).ready(function () {
       imagesSpecialists += `
         <div class="specialists-item">
             <div class="specialists-item-container mb-3 w-100">
-                <div class="specialists-img w-100"><img class="w-100" src="${imgPath}/specialists/specialist-${i}@2x.jpg" alt="${specialistsData[i].name}"/></div>
+                <div class="specialists-img w-100"><img class="w-100" src="${imgPath}/specialists/specialist-${i + specialistsData[salon].startSpec}@2x.jpg" alt="${specialistsData[i].name}"/></div>
                 <div class="specialists-info d-flex flex-column align-items-start w-100 p-3">
                     <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].education}</p>
                     <p class="paragraph-text text-color-lightdark text-w-bold">${specialistsData[i].experience}</p>
