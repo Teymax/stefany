@@ -59,7 +59,56 @@ $(document).ready(function () {
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0.jpg',
 
         imagesAmount    : 1,
-
+        specialists: [
+          {
+            name      : 'Алина Кайсын',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 7 лет',
+            skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND'
+          },
+          {
+            name      : 'Наталия Клец',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 1 год',
+            skills    : 'Сделает все виды маникюра и педикюра, выравнивание, укрепление, наращивание и коррекцию ногтей, несложный дизайн, парафинотерапию для рук и ног'
+          },
+          {
+            name      : 'Людмила Коржовская',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 7 ле',
+            skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND'
+          },
+          {
+            name      : 'Владлена Охмак',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 5 лет',
+            skills    : 'Сделает европейский, классический, мужской, детский маникюр, выравнивание, укрепление и «ремонт» ногтевой пластины, все виды дизайна, классический, кислотный и спа-педикюр, парафинотерапию для рук и ног'
+          },
+          {
+            name      : 'Ольга Петрук',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 1 год',
+            skills    : 'Сделает все виды маникюра, выравнивание и укрепление ногтевой пластины, классический, кислотный и спа-педикюр, дизайн (френч, аэрографию, геометрию, втирку, наклейки, несложные рисунки)'
+          },
+          {
+            name      : 'Анна Роюк',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 2 года',
+            skills    : 'Сделает все виды маникюра, выравнивание, укрепление и наращивание ногтей, классический, кислотный и комбинированный педикюр, несложный дизайн, спа-процедуры и парафинотерапию для рук и ног'
+          },
+          {
+            name      : 'Ксения Станиславская',
+            education : 'Директор Nail Studio Steffany, мастер ногтевого сервиса',
+            experience: 'Работает уже 13 лет',
+            skills    : 'Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног'
+          },
+          {
+            name      : 'Ольга Степанчук',
+            education : 'Мастер ногтевого сервиса',
+            experience: 'Работает уже 6 лет',
+            skills    : 'Сделает классический, комбинированный и аппаратный маникюр, классический, комбинированный и кислотный педикюр, парафинотерапию для рук и ног, укрепление, «ремонт» и наращивание ногтей, все виды нехудожественного дизайна'
+          }
+        ],
         salons          : {
           nail: {
             name     : 'Steffany Nail',
@@ -68,10 +117,10 @@ $(document).ready(function () {
             phone    : '098-180-50-90',
             address  : 'ул. Киевская, 77, тц "Глобал',
             schedule : '9:00 - 21:00',
-            map      : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5933359812803!2d28.685401029267087!3d50.2662872559772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64af91555555%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1576830374046!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            map      : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5933359812803!2d28.685401029267087!3d50.2662872559772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64af91555555%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1576830374046!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook : 'https://www.facebook.com/steffany.ua/',
-            specialist: [
+            specialists: [
               {
                 name      : 'Алина Кайсын',
                 education : 'Мастер ногтевого сервиса',
@@ -129,7 +178,7 @@ $(document).ready(function () {
             phone    : '093-406-0479',
             address  : 'ул. Киевская, 77, тц "Глобал',
             schedule : '10:00 - 20:00',
-            map      : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5868053754273!2d28.685087529251003!3d50.26677505596847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1576830696418!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            map      : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5868053754273!2d28.685087529251003!3d50.26677505596847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1576830696418!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook : 'https://www.facebook.com/steffany.ua/',
             specialists     :[
@@ -369,7 +418,7 @@ $(document).ready(function () {
 
   $('[data-salon]').first().click()
 
-  $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
+  $(`[data-city="${city}"]`).toggleClass('active')
 
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
@@ -380,7 +429,6 @@ $(document).ready(function () {
     if (city === 'zt') {
       $('.city-switcher').show()
       salon = 'hair'
-      $('[data-salon]').first().toggleClass('active')
     }
     else {
       $('.city-switcher').hide()
