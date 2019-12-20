@@ -24,3 +24,12 @@ mixin customBtn(text, className)
       span= text
     .arrow-section
       +arrowSvg
+
+mixin salonSwitcher
+  .container.map-container.city-switcher
+    .col-12.col-lg-4
+      .row.no-gutters
+        .col-12.col-lg-6
+          a.nav-link-text.btn-simple-map.city-trigger.mr-3(data-salon='nail') Nails
+        .col-12.col-lg-6
+          a.nav-link-text.btn-simple-map.city-trigger.mr-3(data-salon='hair') Hairs
