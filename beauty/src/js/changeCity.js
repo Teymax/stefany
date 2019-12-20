@@ -71,12 +71,14 @@ $(document).ready(function () {
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5933359812803!2d28.685401029267087!3d50.2662872559772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64af91555555%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1576830374046!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
+            startSpec  : 0,
             specialists: [
               {
                 name      : 'Алина Кайсын',
                 education : 'Мастер ногтевого сервиса',
                 experience: 'Работает уже 7 лет',
-                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND'
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND',
+                cover     : ''
               },
               {
                 name      : 'Наталия Клец',
@@ -241,6 +243,7 @@ $(document).ready(function () {
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32161.630767479204!2d26.25760338424141!3d50.59794991865695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G28J789%2BJR!5e0!3m2!1sru!2sua!4v1576752786381!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.rivne/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
+            startSpec  : 0,
             specialists: [
               {
                 name      : 'Инна Кокора',
@@ -370,13 +373,7 @@ $(document).ready(function () {
     changeDataForCity()
   }
   
-  console.log(salon)
-  
-  $(`[data-salon="${salon}"]`).click()
-  
   console.log($(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`))
-  
-  $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
   
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
@@ -389,16 +386,14 @@ $(document).ready(function () {
     if (city === 'zt') {
       $('.city-switcher').show()
       salon = salon ? salon !== 'salon' ? salon : 'nail' : 'nail'
-      localStorage.setItem('salon', 'salon')
-      $(`[data-salon="${salon}"]`).toggleClass('active')
-      // $('[data-salon]').first()
+      localStorage.setItem('salon', salon)
+      $(`[data-salon="${salon}"]`).addClass('active')
     }
     else {
       $('.city-switcher').hide()
       salon = 'salon'
       localStorage.setItem('salon', 'salon')
     }
-    console.log(salon)
     
     switchData(citiesData[city][localization].salons[salon])
     
@@ -495,29 +490,6 @@ $(document).ready(function () {
       width = $('.specialists')[0].querySelector('.owl-item').style.width
       slider.innerHTML = ''
       location.reload()
-      // const items = [...slider.querySelectorAll('.specialists-item')]
-      // // items.forEach(item => {
-      // //   console.log(item)
-      // //   item.style.width = width
-      // // })
-      //   $('.specialists-slider').owlCarousel({
-      //     loop      : false,
-      //     margin    : 20,
-      //     nav       : true,
-      //     dots      : false,
-      //     navigation: true,
-      //     responsive: {
-      //       0   : {
-      //         items: 1
-      //       },
-      //       731 : {
-      //         items: 2
-      //       },
-      //       1200: {
-      //         items: 4
-      //       }
-      //     }
-      //   })
     }, 0)
   }
   
