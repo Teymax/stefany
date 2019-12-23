@@ -1,0 +1,925 @@
+h1
+	@include font(Circe, bold, 40, 92)
+	letter-spacing: .03em
+	color: $secondary-header-color
+
+html
+	overflow-x: hidden
+
+	body
+		strong
+			font-weight: 600
+
+.icon
+	display: inline-block
+	width: 30px
+	height: 30px
+
+.container.list-section
+	padding:
+		top: 2em !important
+		bottom: 2em !important
+
+.extra-padding-10r
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 10rem
+			right: 10rem
+
+.extra-padding
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 20rem
+			right: 20rem
+
+.z-0
+	z-index: 0
+
+.z-1
+	z-index: 1
+
+.z--1
+	z-index: -1
+
+.crutch-1
+	p
+		width: 32%
+		@include media-breakpoint-down(lg)
+			width: 45%
+		@include media-breakpoint-down(md)
+			width: 60%
+		@include media-breakpoint-down(sm)
+			width: 77%
+
+.crutch-2
+	p
+		width: 70%
+		@include media-breakpoint-down(lg)
+			width: 82%
+
+html section.section .ultra-spec-mb
+	@include media-breakpoint-down(lg)
+		margin-bottom: 1rem !important
+
+iframe
+	width: 100%
+	height: 100%
+	@include media-breakpoint-up(lg)
+		margin-left: 1rem !important
+
+	&.mapych
+		@include media-breakpoint-down(lg)
+			display: none
+
+.small-map
+	height: 15em
+	@include media-breakpoint-up(lg)
+		display: none !important
+
+.arrows
+	.feet-section
+		> div
+			height: 15em
+
+			.c-content
+				height: 100%
+
+				.button-forward
+					width: 3em
+					height: 3em
+					background: $forward-buutton
+					border-radius: 50%
+					position: absolute
+					bottom: 1em
+					right: 1em
+
+					@include media-breakpoint-down(sm)
+						left: 1em
+
+					&:hover
+						text-decoration: none
+
+					&:before
+						content: url(../assets/icon/common/arrow.svg)
+						color: #fff
+						width: 100%
+						height: 100%
+						display: flex
+						justify-content: center
+						align-items: center
+
+.crutch-text
+	color: #fff
+	@include font(Circe, normal, 16, 29)
+	width: 70%
+	text-align: center
+
+.light-blue
+	font-weight: 400
+	font-size: 16px
+	line-height: 29px
+	color: #7b9ddd
+
+	strong
+		font-size: 20px
+		font-weight: 800
+		color: inherit
+
+.very-special-row
+	@include media-breakpoint-down(lg)
+		margin: 0
+
+body .very-special-container
+	@include media-breakpoint-down(lg)
+		padding: 0 !important
+		max-width: 100%
+
+.no-shadow
+	box-shadow: none
+
+body section.section .extra-h3
+	h3
+		font-size: 30px
+
+body section.section
+	.extra-fw-300
+		font-weight: 300 !important
+
+.ultra-mega-bg-btn .btn-callback .arrow-section
+	background: #303947 !important
+
+body section h2
+	font-size: 28px
+	text-transform: initial
+
+.circles.bg-circles
+	z-index: -1
+	width: 80em
+	left: 50%
+	top: 0
+	transform: translateX(-50%)
+
+section.section.category.cat-overflow
+	padding: 0
+
+	.wrapper
+		margin-left: -1em
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+li,
+div
+	font-family: Circe !important
+	color: $secondary-header-color
+
+	h2, p
+		color: $text-color-dark
+
+	h2
+		@include font(Circe, bold, 16, 20)
+		text-transform: uppercase
+
+	p
+		@include font(Circe, 200, 16, 19)
+
+		strong
+			font-weight: 600
+
+ul.info-list
+	li
+		padding-left: 1.5em
+		position: relative
+		margin-bottom: 2em
+
+		h3
+			margin-bottom: 1em
+			color: $text-color-dark
+			@include font(Circe, bold, 16, 20)
+
+		p
+			@include font(Circe, 200, 16, 19)
+
+			&:before
+				content: '•'
+				color: $text-color-dark
+				position: absolute
+				left: 0
+				top: 0
+
+.special-contact-padding
+	@include media-breakpoint-up(lg)
+		padding-bottom: 8em !important
+
+button:focus
+	outline: none
+
+.mini-map
+	height: 20em
+	margin-top: 3em
+
+.accordion
+	.card-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		cursor: pointer
+		margin-bottom: 1rem
+		background-color: rgba(85, 98, 120, .3)
+		padding: 0
+
+		p
+			padding: 1em
+			margin-bottom: 0
+
+		.card-header
+			display: none
+
+	.card-body
+		margin-bottom: 1rem
+		background-color: rgba(85, 98, 120, .3)
+
+		h3
+			font-size: 16px
+
+		h
+			background: #fff
+			color: #fff
+			opacity: .5
+
+	.card-header
+		&.active
+			margin-bottom: 0
+			background: rgba(114, 126, 146, 0.3)
+
+			.card-arrow
+				&:before
+					transform: rotate(180deg)
+
+	.card-arrow
+		min-width: 64px
+		width: 64px
+		height: inherit
+		align-self: stretch
+		background-color: $card-body
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&:before
+			content: ' '
+			display: block
+			background-image: url("../assets/icon/accordion-arrow.png")
+			background-repeat: no-repeat
+			width: 13px
+			height: 9px
+			transition: transform .3s
+
+	.btn:focus
+		outline: none !important
+		box-shadow: none !important
+
+.circles
+	position: absolute
+	z-index: 1
+	opacity: .3
+	pointer-events: none
+	height: auto
+
+.text-dashed
+	border-bottom: 1px dashed #000080
+
+.centered-content
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+
+.small-text
+	@include font(Circe, 400, 14, 22)
+	color: $text-color-dark
+
+.dark-block
+	background: $bg-color-section-dark-blue
+
+.light-darkness-block
+	background: $text-color-dark
+
+.light-block
+	background: $light-bg
+
+.info-block
+	padding: 1em 2em
+
+.text-w-bold
+	font-weight: 700 !important
+
+.text-w-light
+	font-weight: 300 !important
+
+.info-section
+	padding: 2em 4em
+	@include media-breakpoint-down(md)
+		padding: 2em
+
+	.row
+		width: 100%
+		margin-bottom: 2em
+
+		img
+			display: block
+			width: 5em
+
+		.wrapper
+			display: flex
+			flex: 1
+			margin-left: 1em
+			align-items: center
+
+			span
+				color: #fff
+				text-transform: uppercase
+				@include font(Circe, 600, 13, 20)
+
+	p
+		color: #fff
+		@include font(Circe, 100, 14, 24)
+
+.text-w-regular
+	font-weight: 400 !important
+
+.text-color-light
+	color: $text-color-white !important
+
+.text-color-lightgray
+	color: $text-color-lightgrey
+
+.text-color-dark
+	color: $text-color-dark !important
+
+.paragraph-text
+	@include font(Circe, 400, 16, 26)
+	color: $text-color-white
+
+.h1-title
+	@include font(CormorantGaramond, bold, 44, 53)
+	color: $text-color-white
+
+.h2-title
+	@include font(CormorantGaramond, bold, 34, 53)
+	color: $text-color-white
+
+.h3-title
+	@include font(Circe, 400, 20, 24)
+	color: $text-color-white
+
+.shadow
+	box-shadow: 0 50px 70px rgba(0, 0, 0, 0.13)
+
+.row-numbered
+	display: flex
+	flex-wrap: wrap
+
+	div
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: relative
+
+		img
+			width: 10em
+			height: auto
+
+		h3
+			text-transform: uppercase
+			text-align: center
+			margin-top: 1em
+			@include font(Circe, 600, 20, 30)
+			color: $dark-gray
+
+		p
+			text-align: center
+			@include font(Circe, 400, 14, 20)
+			color: $secondary-header-color
+
+.h4-title
+	@include font(Circe, 400, 24, 34)
+	color: $text-color-white
+
+.bnf-number
+	//padding-bottom: 20px
+	//text-transform: uppercase
+	//letter-spacing: 2px
+	@include font('CormorantGaramond', 700, 75, 75)
+	color: $text-color-white
+
+.extralarge-text-bg
+	white-space: nowrap
+	position: absolute
+	@include font(Circe, 900, 321, 377)
+	color: $text-color-white
+
+.custom-icon-number
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	width: 55px
+	height: 55px
+	background-color: #EDE1DF
+	border-radius: 50%
+
+	p
+		@include font(Circe, 900, 27, 42)
+		color: $text-color-dark
+		transform: translateY(9px)
+
+.white-block-design
+	position: relative
+	background-color: #fff
+
+	img
+		position: absolute
+
+	p
+		@include font(Circe, bold, 27, 42)
+		color: #9FA6BA
+
+.custom-bg-dark
+	background-color: #9FA6BA
+
+	p
+		color: #EDE1DF
+
+.custom-bg-light
+	background-color: #EDE1DF
+
+	p
+		color: #9FA6BA
+
+@include mobile-small
+	.paragraph-text
+		@include font(Circe, 400, 14, 22)
+	.h1-title
+		@include font(CormorantGaramond, bold, 34, 30)
+	.h3-title
+		@include font(Circe, 400, 16, 20)
+
+//////////////////////////////////////////////
+
+.responsive-text
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 10rem
+			right: 10rem
+	@include media-breakpoint-down(lg)
+		padding:
+			left: 0
+			right: 0
+
+.special-p
+	@include media-breakpoint-down(md)
+		padding:
+			left: 5rem
+			right: 5rem
+
+.feet-section
+	display: flex
+	flex-wrap: wrap
+
+	&.container
+		@include media-breakpoint-down(sm)
+			padding: .8em !important
+
+	.item
+		&:nth-child(1)
+			.c-content
+				//padding-left: 4rem
+				//background: url('../assets/img/feet-index-1.png') no-repeat center/cover
+				background: url('../assets/img/pricing-1.png') no-repeat right
+				background-size: cover
+		//background: url("../assets/img/feet-index-1.png") no-repeat -19em 10px
+
+		&:nth-child(2)
+			.c-content
+				background: url('../assets/img/pricing-2.png') no-repeat center/cover
+		//background: url('../assets/img/feet-index-2.png') no-repeat -19em 10px
+
+		&:nth-child(3)
+			.c-content
+				background: url('../assets/img/pricing-3.png') no-repeat center/cover
+
+		&:nth-child(4)
+			.c-content
+				background: url('../assets/img/feet-index-4.png') no-repeat center/cover
+
+		.c-content
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			position: relative
+			height: 25em
+			padding: 2em
+
+			h3, p, ul
+				margin: 0
+
+			h3
+				color: $text-color-dark
+				@include font(Circe, 600, 24, 20)
+				padding-bottom: 1rem
+
+			p.desc
+				color: $text-color-dark
+				padding-bottom: 1rem
+
+			ul.info-list
+				li
+					color: $text-color-dark
+					font-family: Circe
+					margin-bottom: 0
+
+					&:before
+						background: $text-color-dark
+
+			.btn-callback
+				margin-top: auto
+				width: 70%
+
+.custom-icon-number-dark
+	@extend .custom-icon-number
+	background-color: #9FA6BA
+
+.white-text
+	color: $color-white
+
+.h-center
+	text-align: center
+
+.bnf-title
+	padding-bottom: 20px
+	text-transform: uppercase
+	letter-spacing: 2px
+	@include font('Circe-Regular', 400, 20, 24)
+
+// bg - style ********
+.bg-settings
+	background-repeat: no-repeat !important
+	background-size: cover !important
+	background-position: center !important
+
+.no-bg
+	background: transparent !important
+
+.dashes
+	width: 15em
+	position: absolute
+	pointer-events: none
+	@include mobile-all
+
+.dark-blue
+	color: $secondary-header-color
+
+.dash
+	width: 5em
+	height: .3em
+	margin-top: 1em
+	margin-bottom: 1.5em
+	background: rgba(125, 137, 158, 0.39)
+
+	&.center
+		@include media-breakpoint-down(md)
+			align-self: center
+			display: flex
+
+.dash-white
+	background-color: rgba(255, 255, 255, 0.21)
+
+// list - style ****
+.info-list
+	li
+		position: relative
+		padding-left: 20px
+
+		&:before
+			position: absolute
+			left: 0
+			top: 9px
+			content: ''
+			width: 5px
+			height: 5px
+			background: $text-color-dark
+			border-radius: 50%
+
+// Icons - style *********
+.icon
+	margin-right: 10px
+	width: 17px !important
+	height: 17px !important
+
+.w-200
+	font-weight: 200 !important
+
+.icon-loc
+	width: 13px
+	height: 17px
+
+.icon-phone
+	width: 17px
+	height: 16px
+
+.icon-time
+	width: 17px
+	height: 17px
+
+.icon-mail
+	width: 17px
+	height: 13px
+
+.icon-arrow
+	width: 12px
+	margin-left: 6px
+
+// Play-button - style ********
+.play-btn
+	position: absolute
+	display: none !important
+
+	width: 92px
+	height: 92px
+	background: rgba(58, 64, 91, .8)
+	border-radius: 50%
+
+	&-orange
+		background: $color-orange-opacity
+
+	span
+		width: 20px
+		height: 20px
+		background: $play-btn-color
+		clip-path: polygon(0 0, 0% 100%, 100% 50%)
+
+// border - style ********
+.border-b-light
+	border-bottom: 2px solid $border-bottom-bg
+
+.br-100
+	border-radius: 100px
+
+// city-items - style ******
+.city-item
+	display: none !important
+
+.city-active
+	display: flex !important
+
+// inputs - style ******
+.field
+	padding: 12px 20px
+	background: $input-bg
+	border-radius: 4px
+	border: none !important
+	outline: none !important
+
+	&textarea
+		height: 164px
+
+.asap-16
+	font-size: 16px
+
+.font-16
+	font-size: 16px !important
+
+.lh-26
+	line-height: 26px !important
+
+.fs-30
+	font-size: 30px !important
+
+// slider-block - style **
+.slider-pad
+	padding-left: 47px
+	padding-right: 47px
+
+.text-initial
+	text-transform: initial !important
+
+.slider-block
+	.owl-dots
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		padding-top: 60px
+
+		span
+			display: none
+
+		.owl-dot
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: $border-light
+			transition: 0.3s ease
+
+			&:not(:last-child)
+				margin-right: 16px
+
+			&:hover, &.active
+				background: $color-purple
+
+			&:focus
+				border: none !important
+				outline: none !important
+
+	.owl-nav
+		position: absolute
+		top: 50%
+		@include media-breakpoint-down(sm)
+			top: 100%
+		left: 0
+		transform: translateY(-50%)
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+
+		span
+			display: none
+
+		button
+			width: 30px
+			height: 30px
+			opacity: .4
+
+			&.owl-prev
+				background-image: url('../assets/icon/slider-left-arrow.png') !important
+				background-repeat: no-repeat !important
+				background-size: contain !important
+
+			&.owl-next
+				background-image: url('../assets/icon/slider-right-arrow.png') !important
+				background-repeat: no-repeat !important
+				background-size: contain !important
+
+@media (min-width: 1200px)
+	.hidden-item
+		display: none
+
+@media (max-width: 1200px)
+	.px-15
+		padding-left: 15px !important
+		padding-right: 15px !important
+
+// services
+
+.section-bg-dark
+	background-color: $section-bg-dark
+
+section.section-services
+	padding: 2.5rem 0
+
+.page-title
+	color: $secondary-header-color
+	@include font(Circe, 700, 40, 40)
+	@include mobile-all
+		@include font(Circe, 700, 20, 29)
+
+.section-title-services
+	@include font(Circe, 700, 30, 36)
+	@include mobile-all
+		@include font(Circe, 700, 20, 24)
+
+.service-section-link
+	color: $secondary-header-color
+	font-weight: 300
+
+.text-dark-1
+	color: $secondary-header-color
+
+.section-services-treatment-row-padding
+	padding: 25px 0
+
+.ult-spec-adv
+	.numbered-section
+		.numbered-cnt
+			&:nth-child(1)
+				img
+					width: 14em
+					left: 3em
+
+			&:nth-child(2)
+				img
+					width: 8.3em
+					left: 3.5em
+
+			&:nth-child(3)
+				img
+					width: 9em
+					left: 3em
+
+.services-btn-container
+	width: 19em
+	display: flex
+	justify-content: center
+
+.extra-crutch-2
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 15rem
+			right: 15rem
+
+.extra-crutch-header
+	@include media-breakpoint-up(lg)
+		padding:
+			left: 9rem
+			right: 9rem
+	@include media-breakpoint-down(md)
+		padding:
+			left: 3rem
+			right: 3rem
+
+.width-180
+	@include media-breakpoint-up(md)
+		width: 180px !important
+
+.py-80
+	padding: 80px 0
+
+.py-55-mobile
+	@include media-breakpoint-down(md)
+	padding: 55px 0
+
+// end of services
+
+.light-white
+	color: rgba(255, 255, 255, .46)
+	font-size: 1em
+	text-transform: uppercase
+
+.specialists
+	&-item
+		&-container
+			position: relative
+			//cursor: pointer
+			overflow: hidden
+
+	&-info
+		position: absolute !important
+		top: 0
+		left: 0
+		height: 100%
+		background: $spec-bg
+		transition: 0.25s linear
+		opacity: 0
+
+		&:hover
+			opacity: 1
+
+	.specialists-item-container
+		position: relative
+		//cursor: pointer
+		overflow: hidden
+
+	.specialists-img
+		height: 100%
+
+	@include media-breakpoint-down(md)
+		.owl-nav
+			top: 100%
+
+// end of services
+ul.list-blue-bullets
+	list-style: none
+	padding-left: 1rem
+
+	li::before
+		content: "\2022"
+		/* Add content: \2022 is the CSS Code/unicode for a bullet */
+		color: $forward-buutton
+		/* Change the color */
+		font-weight: bold
+		/* If you want it to be bold */
+		display: inline-block
+		/* Needed to add space between the bullet and the text */
+		width: 1rem
+		/* Also needed for space (tweak if needed) */
+		margin-left: -1rem
+		margin-top: -0.1rem
+		font-size: 1.8rem
+		line-height: 1rem
+		vertical-align: middle
+
+//.paragraph-text
+//  @include font(Circe, 400, 16, 26)
+//  color: $secondary-header-color
+//  @include mobile-all
+//    @include font(Circe, 400, 14, 26)
+.line-height-41
+  line-height: 41px
+
+.slider-block
+  .owl-nav
+    z-index: -1

@@ -1,0 +1,91 @@
+section.section.introduce
+	.btn-callback
+		width: 264px
+
+	p.paragraph-text
+		font-weight: 200
+		color: #F2F2F2
+
+	padding-bottom: 0
+
+	h2.text-center.dark-blue
+		font-size: 40px
+		line-height: 59px
+		letter-spacing: .01em
+		@include media-breakpoint-down(md)
+			font-size: 28px
+			line-height: 41px
+
+	p.text-center.dark-blue
+		font-size: 20px
+		@include media-breakpoint-down(md)
+			font-size: 16px
+			line-height: 24px
+
+	@include media-breakpoint-down(md)
+		padding: 0
+
+	.info-list
+		li
+			&:before
+				background: $text-color-dark
+
+	.feet
+		position: absolute
+		z-index: -1
+		display: block
+		@include media-breakpoint-down(sm)
+			display: none
+
+	.numbered-cnt
+		&:nth-of-type(5), &:nth-of-type(6)
+			@include media-breakpoint-up(lg)
+				margin-bottom: 0
+
+	#feetOne
+		top: 0
+		right: 0
+		width: 50em
+		height: auto
+
+	#feetTwo
+		top: 2em
+		width: 25em
+
+	.container
+		position: relative
+		@include media-breakpoint-down(md)
+			padding: 0 !important
+
+		#circles
+			position: absolute
+			top: 1.9em
+			left: 10em
+			width: 60em
+			opacity: .6
+
+		.card
+			background: #303947
+			padding: 4em 3em
+			position: relative
+			@include media-breakpoint-down(sm)
+				padding: 1em 3em
+				border-radius: 0
+
+			h1
+				@include font(Circe, 300, 55, 55)
+				@include media-breakpoint-down(md)
+					font-size: 50px
+				@include media-breakpoint-down(sm)
+					font-size: 40px
+
+				strong
+					color: #4f79ca
+					font-weight: 600
+
+			.call-me
+				margin-bottom: 5em
+
+			.intro-dashes
+				bottom: 0
+				right: 3em

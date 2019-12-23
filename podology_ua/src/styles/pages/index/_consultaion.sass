@@ -1,0 +1,30 @@
+section.section.consultaion
+	background: url("../assets/img/background/consulation-bg.png") no-repeat center/cover
+
+	form
+		padding: 1em
+
+	@include media-breakpoint-only(md)
+		.container
+			> div:last-child
+				padding: 0 9em
+	@include media-breakpoint-down(sm)
+		.container
+			padding: 0 !important
+
+			> div:last-child
+				padding: 0
+
+	h2
+		@include font(Circe, 200, 30, 40)
+
+	p
+		line-height: 25px
+		font-size: 16px
+
+		strong
+			font-weight: 700
+
+	.sale
+		.dash
+			color: rgba(255, 255, 255, 0.21)

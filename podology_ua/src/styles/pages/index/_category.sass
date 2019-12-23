@@ -1,0 +1,39 @@
+section.section.category
+	.wrapper
+		&--darkness
+			background: $text-color-dark
+
+		&--light
+			background: $light-bg
+
+		&--dark
+			background: $bg-color-section-dark-blue
+
+			&--reversed
+				background: $text-color-dark
+
+		&--mixed
+			background: linear-gradient(right, $text-color-dark 50%, $light-bg 50%)
+
+			&--special
+				background: linear-gradient(right, $bg-color-section-dark-blue 50%, $light-bg 50%)
+
+	.description
+		background: url("../assets/img/background/category-people-bg.png") no-repeat
+		//background-position-y: -20px
+		background-size: cover
+
+		p
+			line-height: 25px
+
+		.container
+			height: 100%
+
+		h2
+			color: #ffffff
+
+		p
+			text-align: center
+			font-weight: 100
+			@include media-breakpoint-up(md)
+				width: 40em

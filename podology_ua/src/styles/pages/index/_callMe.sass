@@ -1,0 +1,24 @@
+section.section.call-me
+	background: url(../assets/img/background/call-me-bg.png) no-repeat
+	background-size: cover
+	@include media-breakpoint-only(md)
+		.container
+			> div:last-child
+				padding: 0 9em
+	@include media-breakpoint-down(sm)
+		.container
+			padding: 0 !important
+
+			> div:last-child
+				padding: 0
+
+	h2
+		@include font(Circe, 200, 30, 50)
+		text-transform: initial
+
+		strong
+			font-weight: 700
+
+	.sale
+		.dash
+			color: rgba(255, 255, 255, 0.21)
