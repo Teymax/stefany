@@ -15,40 +15,41 @@ header.mt-2.mb-2.mb-lg-0
         nav.header-nav.w-100
           ul.header-nav-list.d-flex.flex-column.flex-lg-row.align-items-center.justify-content-between.mb-0
             li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
-              span.p-text О нас
+              span.p-text Про нас
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
               ul.dropdown-menu-list.flex-column
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./about-salon.html") Наши салоны
+                  a.nav-link-text(href="./about-salon.html") Наші салони
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./about.html") О нас
+                  a.nav-link-text(href="./about.html") Про нас
             li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
-              span.p-text  Услуги и Цены
+              span.p-text  Послуги та ціни
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
               ul.dropdown-menu-list.d-flex.flex-column
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./podology.html") Подология
+                  a.nav-link-text(href="./podology.html") Подологія
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./ingrown-nail.html") Вросший ноготь
+                  a.nav-link-text(href="./ingrown-nail.html") Врослий ніготь
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./cracking.html") Обработка трещин на пятках
+                  a.nav-link-text(href="./cracking.html") Обробка тріщин на п'ятах
+
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./minorOrthopedics.html") Малая отртопедия
+                  a.nav-link-text(href="./minorOrthopedics.html") Мала ортопедія
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./nail-fungus-treatment.html") Лечение грибка ногтей
+                  a.nav-link-text(href="./nail-fungus-treatment.html") Лікування грибка нігтів
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./prevention.html") Профилактические услуги
+                  a.nav-link-text(href="./prevention.html") Профілактичні послуги
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./warts-treatment.html") Лечение бородавок и удаление мозолей
+                  a.nav-link-text(href="./warts-treatment.html") Лікування бородавок і видалення мозолів
             li.d-inline-flex.align-items-center.mr-0.mb-4.mb-lg-0
-              a.p-text(href="./contact.html") Контакты
+              a.p-text(href="./contact.html") Контакти
             li.d-inline-flex.align-items-center.mr-0.mb-4.mb-lg-0
-              a.p-text(href="./padology-learning.html") Обучение
+              a.p-text(href="./padology-learning.html") Навчання
         .mob-wrapper.d-flex.flex-column.d-md-none
           .a.ms_booking
-            +btnPen('записаться')
+            +btnPen('записатися')
           ul.mt-4.d-flex.flex-column.align-items-center
             li.d-flex.justify-content-center.align-items-center.flex-column
               span
@@ -60,7 +61,7 @@ header.mt-2.mb-2.mb-lg-0
               ul.dropdown-menu-list.d-flex.flex-column.towns-list
       .col-12.col-md-5.nav-callback.order-md-3.justify-content-end.d-none.d-md-flex
         .a.ms_booking
-          +btnPen('записаться')
+          +btnPen('записатися')
       .col-12.header-contact-list-wrap.order-md-1.d-none.d-md-block
         ul.header-contact-list.d-flex.flex-column.flex-md-row.align-item-center.justify-content-end
           li.d-flex.flex-wrap.flex-md-nowrap.justify-content-center.mb-4.mb-md-0.mr-0.mr-md-3.align-items-center
@@ -78,11 +79,13 @@ header.mt-2.mb-2.mb-lg-0
               path(d='M11.6974 2.32638C10.4664 1.06471 8.78193 0.294434 6.916 0.294434C6.72163 0.294434 6.52727 0.307714 6.3329 0.320995C6.13853 0.334276 5.94416 0.360837 5.7498 0.400679C5.58135 0.427241 5.46473 0.59989 5.5036 0.759258C5.52951 0.931908 5.69797 1.05143 5.85346 1.01159C5.94416 0.998311 6.02191 0.98503 6.11262 0.97175C6.20332 0.958469 6.29403 0.945188 6.38473 0.945188C6.56614 0.931908 6.73459 0.918627 6.916 0.918627C8.60052 0.918627 10.1295 1.6225 11.2439 2.75136C12.3453 3.88022 13.0321 5.44735 13.0321 7.18712C13.0321 7.28009 13.0321 7.38633 13.0321 7.4793C13.0321 7.55898 13.0191 7.63867 13.0191 7.73163C13.0062 7.90428 13.1358 8.06365 13.3042 8.07693C13.4727 8.09021 13.6281 7.9574 13.6411 7.78475C13.6541 7.58554 13.667 7.38633 13.667 7.2004C13.667 5.30126 12.9155 3.57477 11.6974 2.32638Z', fill='#3A405B')
               path(d='M13.1875 10.3741L10.894 9.11246C10.1294 8.68747 10.1035 8.96637 9.30015 9.84289C9.10578 10.0554 8.74296 10.6132 8.31536 10.5069C7.42127 10.2812 5.74971 8.93981 5.20548 8.32889C4.94632 8.03672 3.83195 6.64224 3.81899 6.1907C3.79308 5.5001 5.27027 5.1548 4.79083 3.84002L3.76716 1.48933C2.80828 -0.768389 0.126017 2.84396 0.346299 4.53061C0.916443 8.68747 8.03028 15.4075 11.9954 13.1896C12.8765 12.685 14.0686 10.9186 13.1875 10.3741Z', fill='#3A405B')
             a.link-text-light.d-flex.align-items-center.justify-content-start(href="tel:0980070753") 098 180 10 88
-          li.d-none.d-lg-flex.align-items-center.header-lang-wrap.mr-0
-            //- .drop-menu
-            span.link-text-light.d-flex.align-items-center.justify-content-start.header-lang.i18n-switch.current RU
-            ul.dropdown-menu-list.d-flex.flex-column.i18n-switcher
-              li.nav-link-text.i18n-switch.change UA
+          li.drop-menu.d-none.d-lg-flex.align-items-center.header-lang-wrap.mr-0
+            span.link-text-light.d-flex.align-items-center.justify-content-start.header-lang.i18n-switch.current UA
+            ul.dropdown-menu-list.d-flex.flex-column
+              li
+                a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(href="http://steffany.dotwork.digital/podology/") RU
+              li
+                a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(href="http://steffany.dotwork.digital/podology/ua") UA
           li.d-none.d-md-flex.d-lg-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
             span.d-block.w-100
             span.d-block.w-100
