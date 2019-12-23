@@ -1,0 +1,32 @@
+.specialists
+  background: url('../assets/img/about-steffany-salon/bg.jpg')
+    repeat: no-repeat
+    size: cover
+    //position: top left
+  height: 693px
+  padding-top: 70px
+  padding-bottom: 83px
+  @include media-breakpoint-down(lg)
+    height: 100%
+  @include media-breakpoint-down(sm)
+    padding-top: 61px
+    padding-bottom: 57px
+  &-info
+    position: absolute !important
+    top: 0
+    left: 0
+    height: 100%
+    background: $spec-bg
+    transition: 0.25s linear
+    opacity: 0
+.specialists-item-container
+  margin: 0 auto
+  max-width: 270px
+  position: relative
+  //cursor: pointer
+  overflow: hidden
+  .specialists-img
+    height: 100%
+  &:hover
+    .specialists-info
+      opacity: 1

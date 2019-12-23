@@ -1,0 +1,73 @@
+section.section.accordion-answer
+  padding-top: 72px
+  padding-bottom: 84px
+  background-color: #A9A8C6
+  .card-header
+    display: flex
+    justify-content: space-between
+    cursor: pointer
+    margin-bottom: 1rem
+    position: relative
+    border-radius: 100px !important
+    background-color: rgba(85,98,120,.3)
+    padding: 0
+    p
+      display: flex
+      align-items: center
+      padding: .35rem 1.70rem
+      margin-bottom: 0
+  .card-header.active
+    background: rgba(144, 147, 175, 0.47)
+    .card-arrow
+      background-color: $btn-primary-color
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.18)
+      &:before
+        transform: rotate(180deg)
+  .card-body
+    padding-top: 0
+  .card-arrow
+    min-width: 64px
+    min-height: 64px
+    max-width: 64px
+    max-height: 64px
+    border-radius: 50%
+    background-color: $btn-second-color
+    display: flex
+    align-items: center
+    justify-content: center
+    &:before
+      content: ' '
+      display: block
+      background-image: url("../assets/icon/accordion-arrow.png")
+      background-repeat: no-repeat
+      width: 13px
+      height: 9px
+      transition: transform .3s
+
+  .btn:focus
+    outline: none !important
+    box-shadow: none !important
+@include media-breakpoint-down(lg)
+  section.section.accordion-answer
+    padding-top: 72px
+    padding-bottom: 77px
+    .card-header p
+      max-width: 480px
+    .card-arrow
+      width: 64px
+      height: 64px
+      &:before
+        width: 13px
+        height: 9px
+@include media-breakpoint-down(xs)
+  section.section.accordion-answer
+    padding-top: 70px
+    padding-bottom: 48px
+    .card-header p
+      max-width: 250px
+    .card-arrow
+      width: 76px
+      height: 76px
+      &:before
+        width: 13px
+        height: 9px

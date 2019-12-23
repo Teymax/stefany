@@ -1,0 +1,24 @@
+section.section.contact-about-zt
+  .container
+    .row
+      .col-12.col-xl-5
+        h2.form-title.text-color-dark Записывайтесь и приходите на процедуры в Центр лазерной эпиляции и косметологии Steffany!
+        .tablet-container
+          //p.sub-title.letter-spacing-1.mb-4 Steffany Cosmetology
+          +cnt-info
+          h2.form-title.text-color-dark.mb-0.mt-2 Хотите связаться лично с собственником Steffany Lazer & Cosmetology?
+        form.feedback-form.row
+          .col-12.col-md-4.col-xl-5.px-xl-0
+            input(type="text" placeholder="Имя" name="name")
+            input(type="email" placeholder="Email" name="email")
+            input(type="tel" placeholder="Телефон" name="phone" required maxlength="19" minlength="19" pattern=".{19}")
+          .col-12.col-md-8.col-xl-7.pl-xl-0.pr-xl-3
+            textarea(placeholder="О чем вы хотите рассказать?" name="message").mt-4.mt-md-0
+        .row.d-flex.justify-content-end.no-gutters
+          +customBtn('отправить')
+      .col-12.col-xl-7
+        .map-dynamic.map.h-100
+
+.container
+  hr.m-0.d-none.d-lg-block
+

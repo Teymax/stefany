@@ -1,0 +1,106 @@
+.modal-popup
+
+  @include media-breakpoint-down(sm)
+    margin: 0 !important
+    border-radius: 0px !important
+  .modal-content
+    position: relative
+    max-width: 396px !important
+    height: 528px
+    padding: 53px 66px !important
+    background-color: #EDE1DF !important
+    border-radius: 8px
+    border: none !important
+    background:
+      position: bottom
+      image: url("../assets/img/logo-bg.png")
+      repeat: no-repeat
+    @include media-breakpoint-down(lg)
+    @include media-breakpoint-down(sm)
+      width: 100%
+      //height: 100vh
+      border-radius: 0px !important
+    button.close
+      position: absolute
+      z-index: 1
+      top: 3px
+      right: -50px
+      opacity: 1
+      @include media-breakpoint-down(sm)
+        top: 21px
+        right: 23px
+      span
+        background:
+          image: url("../assets/img/cross.png")
+          repeat: no-repeat
+        display: block
+        width: 24px
+        height: 24px
+    .c-content
+      max-width: 252px
+      margin: 0 auto
+      .button
+        max-width: 100%
+
+    h4
+      width: 265px
+      text-transform: uppercase
+      @include font(Circe, 700, 20, 29)
+      color: #4D5259 !important
+      letter-spacing: 0.01em
+      @include media-breakpoint-down(lg)
+        width: 100%
+    h5
+      @include font(Circe, 400, 16, 31)
+      color: #4D5259
+      letter-spacing: 0.4px
+      margin-bottom: 21px
+    form
+      margin-bottom: 30px
+      input
+        padding: 12px 20px
+        background: #F8F8F8
+        border-radius: 4px
+        border: none !important
+        outline: none !important
+        background: rgba(77, 82, 89, 0.2)
+        color: #495057
+        height: 40px
+        margin-bottom: 12px
+        &::placeholder
+          color: #fff
+      select
+        padding-right: 35px !important
+        background-image: url('../assets/img/padalogy/learning/arrow.svg')
+        background-repeat: no-repeat
+        background-position: center right 15px
+        -webkit-appearance: none
+        -moz-appearance: none
+        text-indent: 1px
+        text-overflow: ''
+
+    .line-height
+      line-height: 31px
+    .button
+      margin-top: 24px
+    .btn-send
+      height: 50px !important
+      padding-right: 28px
+      padding-left: 45px
+      border: none !important
+      background: -webkit-linear-gradient(right, #4F79CA, #4F79CA 64px, #7B9DDD 0, #7B9DDD)
+      span
+        span
+          color: #ffffff !important
+  .c-content-count
+    margin-top: 24px
+
+
+.modal-popup.thanks-popup
+  .modal-content
+    height: 430px
+    padding: 112px 45px !important
+    h4
+      width: 100%
+    button.close
+      top: -30px
