@@ -91,7 +91,8 @@ $(document).ready(function () {
       Subject: 'Обратная связь',
       From   : $('.feedback-form input[type="email"]').val(),
       Body   : `Имя: ${$('.feedback-form input[type="text"]')}<br>Email: ${$('.feedback-form input[type="email"]')
-        .val()}<br>Телефон: ${$('.feedback-form input[type="tel"]').val()}<br>Сообщение: ${$('.feedback-form textarea').val()}`
+        .val()}<br>Телефон: ${$('.feedback-form input[type="tel"]').val()}<br>Сообщение: ${$('.feedback-form textarea')
+        .val()}`
     })
   })
   
@@ -214,9 +215,13 @@ $(document).ready(function () {
     $(this).addClass('active')
     $(city).addClass('city-active')
   })
-  
+  const _toggleMenu = (ta, of) => {
+    document.querySelector('html').style.touchAction = ta
+    document.querySelector('html').style.overflowY = of
+  }
   $('.menu-trigger').click(function (e) {
     $(this).toggleClass('open')
+    this.classList.contains('open') ? _toggleMenu('none', 'hidden') : _toggleMenu('initial', 'initial')
     $('header').toggleClass('open')
     $('body').toggleClass('fixed')
   })
