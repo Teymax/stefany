@@ -19,14 +19,135 @@ html
 	width: 100%
 	height: 100%
 	flex-grow: 1
+	display: flex
+	flex-direction: column
+	justify-content: space-around
 	background:
 		image: url('../assets/img/background/404-desktop.jpg')
 		repeat: no-repeat
 		size: cover
 
-	@include media-breakpoint-down(md)
+	h1
+		@include font(Circe, bold, 50, 28)
+		margin-bottom: 4rem
+		color: #fff
+		@include media-breakpoint-only(md)
+			font-size: 40px !important
+			margin-bottom: 1rem !important
+		@include media-breakpoint-down(md)
+			font-size: 20px
+			line-height: 16px
+			margin-bottom: 1rem
+
+	p
+		@include font(Circe, normal, 20, 20)
+		letter-spacing: .01em
+		margin-bottom: 2rem
+		color: #fff
+		@include media-breakpoint-only(md)
+			font-size: 20px !important
+		@include media-breakpoint-down(md)
+			font-size: 14px
+			line-height: 16px
+
+	ul
+		list-style-type: disc
+		margin-left: 1rem
+		margin-bottom: 3rem
+
+		li
+			color: $forward-buutton
+			margin-bottom: 1rem
+
+			a
+				color: $forward-buutton
+				text-decoration: underline !important
+
+
+	.feet-404
+		@include media-breakpoint-down(lg)
+			width: 100%
+		@include media-breakpoint-only(md)
+			width: 80%
+
+		.col-lg-4
+			&:nth-child(1)
+				.wrapper
+					background:
+						image: url(../assets/img/nozhka-1.jpg)
+
+			&:nth-child(2)
+				.wrapper
+					background:
+						image: url(../assets/img/nozhka-2.jpg)
+
+			&:nth-child(3)
+				.wrapper
+					background:
+						image: url(../assets/img/nozhka-3.jpg)
+
+		.wrapper
+			position: relative
+			padding: 2em 3em
+			height: 156px
+			@include media-breakpoint-down(lg)
+				height: 116px
+			background:
+				repeat: no-repeat
+				size: cover
+				position: center
+
+			h2
+				text-transform: initial
+				font-size: 30px
+				color: $play-btn-color
+				@include media-breakpoint-down(lg)
+					line-height: 46px
+
+				@include media-breakpoint-down(md)
+					line-height: 27px
+					font-size: 18px
+
+			p
+				color: $text-color-dark
+				font-size: 16px
+				line-height: 25px
+				@include media-breakpoint-down(lg)
+					line-height: 16px
+					padding: 0 !important
+					margin: 0 !important
+
+				@include media-breakpoint-down(md)
+					line-height: 13px
+
+			.button-forward
+				width: 64px
+				height: 64px
+				background: $forward-buutton
+				border-radius: 50%
+				position: absolute
+				bottom: -2em
+
+				@include media-breakpoint-down(lg)
+					top: 50%
+					transform: translateY(-50%)
+					right: -32px
+
+				&:hover
+					text-decoration: none
+
+				&:before
+					content: url(../assets/icon/common/arrow.svg)
+					color: #fff
+					width: 100%
+					height: 100%
+					display: flex
+					justify-content: center
+					align-items: center
+
+	@include media-breakpoint-down(lg)
 		background-image: url('../assets/img/background/404-tablet.jpg')
-		background-position: -70rem center
+		background-position: center
 
 	@include media-breakpoint-down(sm)
 		background-image: url('../assets/img/background/404-mobile.jpg')
