@@ -6,7 +6,7 @@ window.mail = {
 }
 
 window.patterns = {
-  ru: 'podology/$1/',
+  ru: 'podology/$1',
   ua: 'podology/ua/$1'
 }
 
@@ -133,9 +133,11 @@ $(document).ready(function () {
         e.preventDefault()
         const i18n = e.target.dataset.i18n
         const p = location.pathname.split('/').slice(-1)[0]
-        const h = patterns[i18n].replace('$1', p)
+        const h = window.patterns[i18n].replace('$1', p)
         console.log(h)
-        // location.href = '/' + h
+        if (location.pathname.substr(1) !== h) {
+          location.href = '/' + h
+        }
       })
   
   $('body').click(function (event) {

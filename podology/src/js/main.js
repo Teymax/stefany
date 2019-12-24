@@ -7,6 +7,20 @@ window.mail = {
 
 window.chooseDayText = ''
 
+window.patterns = {
+  ru: 'podology/$1',
+  ua: 'podology/ua/$1'
+}
+
+window.nav = {
+  podologiya: {
+    zt: '/{{ i18n }}/podologiya'
+  },
+  edu       : {
+    zt: '/{{ i18n }}/edu'
+  }
+}
+
 $(document).ready(function () {
   
   $('[data-choose-text]').on('click', event => {
@@ -15,6 +29,18 @@ $(document).ready(function () {
   })
   
   $('[type="tel"]').mask('+38-(000)-000-00-00')
+  
+  $('[data-i18n]')
+    .on('click',
+      e => {
+        e.preventDefault()
+        const i18n = e.target.dataset.i18n
+        const p = location.pathname.split('/').slice(-1)[0]
+        const h = window.patterns[i18n].replace('$1', p)
+        if (location.pathname.substr(1) !== h) {
+          location.href = '/' + h
+        }
+      })
   
   const callbackForm = $('#callbackModal form')[0],
         callbackBtn  = $('[data-call-day-callback-btn]')
