@@ -1,0 +1,25 @@
+extends ../layout/main
+
+block content
+  section.section.wrt(style="padding: 44px 0")
+    .container
+      h1.text-w-bold(style="margin: 0") Лікування бородавок і видалення мозолів у Житомирі
+  include ../sections/services/warts-treatment/disease-treatment
+  include ../sections/services/warts-treatment/treatment-services
+  include ../sections/index/doctors
+  include ../sections/services/service-consultation
+  include ../sections/services/warts-treatment/specific
+  include ../sections/services/warts-treatment/category
+  include ../sections/services/warts-treatment/safe-treatment
+  +FAQ('Поширені запитання про видалення сухих мозолів і бородавок', 'Можливо, наші пацієнти вже запитали те, що вас цікавить про лікування бородавок, мозолів і видалення натоптишів', [
+    {
+      title: 'Видалення мозолів на ногах — це боляче?',
+      body: 'Майже всі пацієнти бояться йти до подолога через страх болю. При цьому вони терплять больові відчуття і незручності від того, що живуть з підошовними бородавками або мозолями. Не бійтеся болю! Процедури видалення мозолів на пальцях ніг пройдуть безболісно завдяки анестезії та акуратності наших спеціалістів.'
+    },
+    {
+      title: 'Мені обов\'язково проходити діагностику стопи?',
+      body: 'Проходьте діагностику стопи у тому випадку, якщо хочете дізнатися причини виникнення мозолів і зробити так, щоб після видалення мозолів вони більше не поверталися. Якщо проблема дійсно в ваших стопах, ми допоможемо вам скоригувати їх положення ортопедичними виробами. Завдяки цьому лікування мозолів між пальцями ніг або на стопах пройде більш ефективно, і мозолі не повернуться.'
+    }
+  ], true, 1)
+  include ../sections/services/warts-treatment/slider-bottom-section
+

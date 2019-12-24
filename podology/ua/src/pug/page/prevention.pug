@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block content
+  include ../sections/services/prevention/about-prevention
+  include ../sections/services/prevention/disease-treatment
+  include ../sections/services/prevention/symptoms.pug
+  include ../sections/services/prevention/infoblock.pug
+  include ../sections/services/prevention/disease-treatment2
+  include ../sections/services/prevention/treatment-services
+  include ../sections/services/prevention/safe-treatment
+  +FAQ('Поширені запитання', 'Можливо, тут ви знайдете відповідь на своє питання щодо профілактичних процедур', [
+    {
+      title: 'Наскільки болісно проходить медичний педикюр?',
+      body: 'Медичний педикюр — це безболісна процедура, не потрібно її боятися'
+    },
+    {
+      title: 'Як часто потрібно робити медичний педикюр?',
+      body: 'Якщо нічого у ваших стопах вас не турбує, досить робити медичний педикюр один раз на 3-6 місяців.'
+    },
+    {
+      title: 'Як часто потрібно проходити діагностику стопи для профілактики?',
+      body: 'Здоровим людям без очевидних проблем зі стопами і опорно-руховим апаратом ми рекомендуємо проходити діагностику хоча б 1 раз на рік.'
+    },
+    {
+      title: 'Як проходить процес вимірювання цукру за допомогою глюкометра? Це боляче? Це стерильно?',
+      body: 'За допомогою одноразової тонкої голки спеціаліст-подолог бере маленьку краплю крові у пацієнта і поміщає на спеціальну смужку. Цю смужку він вставляє у глюкометр і через 5 хвилин отримує результат. Не бійтеся, процедура повністю стерильна і безболісна. Доросла людина навіть нічого не відчує.'
+    }
+  ], true, 1)
+  include ../sections/services/prevention/slider-bottom-section
+
