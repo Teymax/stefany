@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="assets/icon/favicon/favicon.png">
+    <meta property="og:title" content="Steffany | Подология">
+    <meta property="og:site_name" content="steffany.ua">
+    <meta property="og:url" content="http://steffany.dotwork.digital/podology/">
+    <meta property="og:description" content="Салон Steffany Подология">
+    <title>Stefany | Podology</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="shortcut icon" href="assets/icon/favicon/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMS3OtvEr1IWtlA_6BYXnUlav6CPTxyhs" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="//w245756.yclients.com/widgetJS" charset="UTF-8" defer></script>
+  </head>
+  <body>
+    <div id="overlay"><img src="assets/icon/common/close.png" alt="Close" id="closeOverlay">
+      <div class="wrapper p-4">
+        <h2 class="text-center white-text">Привет!</h2>
+        <p class="white-text text-center">Пожалуйста, выбери город из списка.<br>Это поможет отобразить корректную информацию для тебя</p>
+        <p class="white-text">Я живу в:</p>
+        <select class="selectpicker">
+          <option value="kiev">Киев</option>
+          <option value="zt">Житомир</option>
+          <option value="if">Ивано-Франковск</option>
+        </select>
+      </div>
+    </div>
+    <header class="mt-2 mb-2 mb-lg-0">
+      <div class="container container-m d-flex justify-content-between align-items-center"><a class="c-logo" href="./index.html">
+          <svg width="184" height="83" viewbox="0 0 184 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.9093 5.55117C24.7536 6.73351 24.0548 7.7815 23.786 8.50703C18.545 2.56844 9.21876 2.62218 4.13904 7.27094C2.41892 8.82949 1.18258 10.9255 0.752552 13.4782C-0.94069 23.3401 10.5626 27.1558 17.6043 31.3746C28.0594 38.2806 18.7869 49.1367 7.17612 42.6069C3.14459 40.3497 2.12327 37.0445 1.26321 32.8526C1.29009 32.342 0.86006 32.2077 0 32.4495V46.4495H1.12883C1.31697 44.891 1.96201 44.1117 3.09084 44.1386C4.54219 44.5148 6.10105 44.9179 7.68678 45.5628C13.3309 47.8468 20.2383 47.4169 24.2429 43.7624C29.6183 38.8718 28.4626 30.2729 22.1734 26.4572C17.6581 23.7163 13.0353 21.2441 8.51997 18.4763C3.03709 14.4725 4.7572 8.05022 11.4495 7.10971C17.6043 6.24983 22.0928 11.4629 24.4848 16.3804C24.8611 17.3209 25.103 17.5896 25.1836 17.1865C24.9149 13.3976 25.2911 8.93697 28.8926 6.81413C33.0585 4.34195 37.9501 7.51279 37.5201 13.4782C37.2245 17.9389 33.838 23.3669 29.7796 25.4898V25.8122H33.1123V42.1232C33.3273 47.7125 41.1754 47.5244 42.6267 41.6395C42.7611 41.1021 41.7666 41.6395 41.7666 41.6395C40.0734 44.1655 37.0094 44.1923 37.0094 40.7528C36.9826 30.8641 37.0094 25.7585 37.0094 25.7585H41.9279C41.9279 24.7105 41.9279 24.2 41.9279 24.2C38.6221 24.2 36.9826 24.2 36.9826 24.2C36.9826 21.7009 36.9826 20.438 36.9826 20.438C38.5145 17.8852 39.9121 14.4456 39.8853 11.4629C39.8584 9.12507 39.0521 6.89474 37.0632 5.22871C33.8917 2.54157 28.8658 2.56844 25.9093 5.55117Z" fill="#3A405B"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M57.1134 31.5333C57.1134 31.5333 53.8344 31.5333 47.2495 31.5333C48.5665 23.7675 56.9252 24.4124 57.1134 31.5333ZM47.2495 33.0113C57.1134 32.9038 62.0587 32.9307 62.0587 32.9307C61.548 27.4758 58.9679 24.5468 54.3182 24.3049C40.5035 24.2243 40.7991 45.1034 51.9261 46.7157C56.092 47.3338 60.5805 44.7541 61.9512 38.4393C61.5212 38.09 61.3061 37.9287 61.3061 37.9287C59.9354 41.9057 57.1402 43.4911 52.8937 42.6581C49.0234 41.0458 47.142 37.8481 47.2495 33.0113Z" fill="#3A405B"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M70.0141 26.509H77.0559V40.4822C77.0559 43.9755 76.0077 45.2116 73.4006 45.1847C70.7667 45.1578 69.9873 43.8949 69.9873 40.7778C70.0141 36.0215 70.0141 31.2653 70.0141 26.509ZM70.0141 6.86599C69.6379 0.739301 74.6907 0.0943863 78.0234 4.90438C77.2978 6.81225 77.1634 7.91398 77.0559 11.0042V24.7086C72.3524 24.7086 70.0141 24.7086 70.0141 24.7086C70.0141 12.8315 70.0141 6.86599 70.0141 6.86599ZM91.5425 2.72779C88.0485 -0.658015 84.2589 -0.846115 80.2005 2.16349C78.0503 0.255615 75.5508 -0.335557 72.675 0.389972C68.4553 1.59919 66.2514 4.66253 66.0632 9.58001V24.7624H62.0586V26.5359H66.0632V42.9812C65.8751 44.4323 64.6119 45.1847 62.2467 45.1847V45.964H85.8446C85.8446 45.3997 85.8446 45.1041 85.8446 45.1041C82.8075 45.3728 81.1949 44.6204 81.0605 42.7931V26.509H86.3015V24.7355H81.0605V9.66062C80.8993 4.90438 81.5981 2.32472 83.1838 1.92165C84.7964 1.51857 85.9253 1.92164 86.5434 3.13086C87.4035 5.11935 88.5323 6.08672 89.903 6.03298C91.7844 5.68365 92.3219 4.58192 91.5425 2.72779Z" fill="#3A405B"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M99.0411 33.7113C99.0949 39.005 99.0949 41.6653 99.0949 41.6653C96.4072 43.8418 92.6713 45.9109 91.3006 41.1816C90.0374 36.8821 95.6815 34.9205 99.0411 33.7113ZM99.0411 43.2775C95.8159 46.2603 90.0642 48.9743 87.5109 43.5463C86.4627 41.3159 87.2959 38.2794 89.9567 36.4253C91.9725 35.028 95.0096 33.6038 98.9874 32.1259C99.0949 30.1374 99.1486 27.2353 97.0522 26.241C94.5258 25.0587 91.7306 26.4023 91.9456 29.4656C92.2144 33.5232 87.1884 32.7439 88.156 28.767C89.0967 24.8975 94.3645 24.1988 97.6973 24.5481C101.433 24.9243 103.046 26.7516 102.992 31.1048V39.3006C102.992 40.1873 102.858 43.0357 103.61 43.5731C104.578 44.2718 106.002 42.4714 106.594 41.8534V43.1969C105.626 44.8898 102.804 47.3889 100.681 46.5559C99.6055 46.1797 99.068 44.9436 99.0411 43.2775Z" fill="#3A405B"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M106.594 26.8852C106.889 27.4764 107.024 27.772 107.024 27.772C107.024 27.772 107.319 27.6108 107.911 27.4495C109.201 27.1002 109.98 27.7989 110.168 29.4649C110.168 29.4649 110.168 33.6031 110.195 41.8526C110.195 43.5187 109.846 44.2173 109.201 44.7816C108.636 45.2653 107.884 45.1847 106.836 45.2384V46.1252H117.506C117.506 46.1252 117.506 45.8296 117.506 45.2384C116.35 45.319 115.436 45.1309 114.845 44.701C114.281 44.2979 114.039 43.2499 114.066 41.6108C114.066 41.6108 114.066 37.8219 114.066 30.2173C114.818 29.3843 115.759 28.605 116.834 27.9063C118.151 27.1539 119.441 26.9658 120.65 27.342C122.962 28.0676 122.908 31.3459 122.854 33.2806C122.854 33.2806 122.908 36.4515 122.854 42.82C122.854 44.5666 121.645 45.3728 119.387 45.2384V46.0714H129.95C129.95 46.0714 129.95 45.8027 129.95 45.2384C127.746 45.5071 126.698 44.4054 126.725 41.9601C126.725 41.9601 126.725 38.5743 126.751 31.7758C126.832 29.6261 126.375 27.0196 124.655 25.4879C121.161 22.344 116.431 25.8641 114.039 28.7394C114.039 28.7394 114.039 27.2614 114.039 24.3056C114.039 24.3056 113.662 24.3056 112.91 24.3056C112.937 24.2787 110.813 25.1386 106.594 26.8852Z" fill="#3A405B"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M143.173 24.7617C143.2 25.3529 143.2 25.6485 143.2 25.6485C145.484 25.6216 145.753 26.5084 144.893 28.685C144.893 28.685 143.307 32.5007 140.136 40.1322C140.136 40.1322 138.55 36.6926 135.191 29.8942C134.089 27.6907 133.444 25.6216 136.803 25.5947C136.803 25.5947 136.803 25.326 136.803 24.7886C136.803 24.7886 133.551 24.7886 127.047 24.7886V25.6753C128.498 25.8366 129.815 27.1264 130.944 29.5448C130.944 29.5448 133.417 34.6235 138.362 44.8078C136.857 49.4028 135.271 51.7675 133.605 51.9288C133.229 51.7407 132.368 51.3376 130.971 51.0689C129.143 50.7195 127.853 51.5794 127.988 53.2992C128.176 55.5295 130.084 56.3357 132.825 55.5027C134.922 54.8577 136.534 53.2186 137.771 50.9614C137.771 50.9614 140.915 43.3568 147.178 28.1475C147.769 26.5621 148.71 25.7022 150 25.5947C150 25.5947 150 25.326 150 24.7617C150.027 24.7617 147.742 24.7617 143.173 24.7617Z" fill="#3A405B"></path>
+            <path d="M73.0526 71H71.905V64.469C72.017 64.469 72.3124 64.4659 72.7914 64.4597C73.2765 64.4534 73.6 64.4503 73.7617 64.4503C74.222 64.4503 74.62 64.5094 74.9559 64.6276C75.298 64.7396 75.5624 64.8982 75.749 65.1034C75.9356 65.3025 76.0724 65.5233 76.1595 65.7659C76.2466 66.0022 76.2901 66.2635 76.2901 66.5496C76.2901 67.1405 76.0786 67.6412 75.6557 68.0517C75.2327 68.4622 74.648 68.6675 73.9016 68.6675C73.5222 68.6675 73.2392 68.6582 73.0526 68.6395V71ZM73.8736 65.5233C73.7368 65.5233 73.4631 65.5295 73.0526 65.5419V67.5479C73.3512 67.579 73.6217 67.5945 73.8643 67.5945C74.2251 67.5945 74.5174 67.5075 74.7413 67.3333C74.9653 67.1529 75.0772 66.8886 75.0772 66.5403C75.0772 65.8623 74.676 65.5233 73.8736 65.5233ZM84.4691 67.7345C84.4691 66.7766 84.7863 65.9773 85.4208 65.3367C86.0614 64.6898 86.8763 64.3664 87.8652 64.3664C88.848 64.3664 89.6597 64.6774 90.3004 65.2994C90.9472 65.9214 91.2707 66.7331 91.2707 67.7345C91.2707 68.711 90.9472 69.5165 90.3004 70.151C89.6535 70.7854 88.8418 71.1026 87.8652 71.1026C86.8825 71.1026 86.0708 70.7916 85.4301 70.1696C84.7894 69.5476 84.4691 68.7359 84.4691 67.7345ZM85.682 67.7345C85.682 68.3876 85.8904 68.935 86.3071 69.3766C86.7301 69.812 87.2495 70.0297 87.8652 70.0297C88.537 70.0297 89.0688 69.812 89.4607 69.3766C89.8587 68.9412 90.0578 68.3938 90.0578 67.7345C90.0578 67.0627 89.8463 66.5123 89.4233 66.0831C89.0066 65.6539 88.4872 65.4393 87.8652 65.4393C87.237 65.4393 86.7145 65.6539 86.2978 66.0831C85.8873 66.5123 85.682 67.0627 85.682 67.7345ZM100.063 71V64.469H100.184C100.308 64.469 100.598 64.4659 101.052 64.4597C101.506 64.4472 101.817 64.441 101.985 64.441C102.619 64.441 103.176 64.5281 103.655 64.7022C104.134 64.8702 104.516 65.1065 104.802 65.4113C105.088 65.7161 105.3 66.0582 105.437 66.4376C105.58 66.8108 105.651 67.2213 105.651 67.6692C105.651 68.6395 105.325 69.4419 104.672 70.0763C104.025 70.7045 103.104 71.0187 101.91 71.0187C101.798 71.0187 101.537 71.0156 101.126 71.0093C100.722 71.0031 100.411 71 100.193 71H100.063ZM101.966 65.514C101.723 65.514 101.472 65.5233 101.21 65.5419V69.927C101.422 69.9395 101.667 69.9457 101.947 69.9457C102.725 69.9457 103.334 69.7404 103.776 69.3299C104.218 68.9194 104.438 68.3658 104.438 67.6692C104.438 67.0036 104.218 66.4781 103.776 66.0924C103.341 65.7068 102.737 65.514 101.966 65.514ZM113.957 67.7345C113.957 66.7766 114.274 65.9773 114.909 65.3367C115.549 64.6898 116.364 64.3664 117.353 64.3664C118.336 64.3664 119.148 64.6774 119.788 65.2994C120.435 65.9214 120.759 66.7331 120.759 67.7345C120.759 68.711 120.435 69.5165 119.788 70.151C119.141 70.7854 118.33 71.1026 117.353 71.1026C116.37 71.1026 115.559 70.7916 114.918 70.1696C114.277 69.5476 113.957 68.7359 113.957 67.7345ZM115.17 67.7345C115.17 68.3876 115.378 68.935 115.795 69.3766C116.218 69.812 116.737 70.0297 117.353 70.0297C118.025 70.0297 118.557 69.812 118.949 69.3766C119.347 68.9412 119.546 68.3938 119.546 67.7345C119.546 67.0627 119.334 66.5123 118.911 66.0831C118.495 65.6539 117.975 65.4393 117.353 65.4393C116.725 65.4393 116.202 65.6539 115.786 66.0831C115.375 66.5123 115.17 67.0627 115.17 67.7345ZM129.551 71V64.469H130.698V69.927H133.637V71H129.551ZM141.368 67.7345C141.368 66.7766 141.685 65.9773 142.319 65.3367C142.96 64.6898 143.775 64.3664 144.764 64.3664C145.746 64.3664 146.558 64.6774 147.199 65.2994C147.846 65.9214 148.169 66.7331 148.169 67.7345C148.169 68.711 147.846 69.5165 147.199 70.151C146.552 70.7854 145.74 71.1026 144.764 71.1026C143.781 71.1026 142.969 70.7916 142.329 70.1696C141.688 69.5476 141.368 68.7359 141.368 67.7345ZM142.58 67.7345C142.58 68.3876 142.789 68.935 143.206 69.3766C143.629 69.812 144.148 70.0297 144.764 70.0297C145.435 70.0297 145.967 69.812 146.359 69.3766C146.757 68.9412 146.956 68.3938 146.956 67.7345C146.956 67.0627 146.745 66.5123 146.322 66.0831C145.905 65.6539 145.386 65.4393 144.764 65.4393C144.136 65.4393 143.613 65.6539 143.196 66.0831C142.786 66.5123 142.58 67.0627 142.58 67.7345ZM159.676 68.5555V67.4826H162.326V70.1883C162.046 70.4682 161.673 70.6921 161.206 70.86C160.746 71.0218 160.304 71.1026 159.881 71.1026C158.824 71.1026 157.991 70.7978 157.381 70.1883C156.778 69.5787 156.476 68.7608 156.476 67.7345C156.476 66.7766 156.775 65.9773 157.372 65.3367C157.969 64.6898 158.756 64.3664 159.732 64.3664C160.572 64.3664 161.272 64.5872 161.831 65.0288L161.346 65.9431C161.185 65.7876 160.97 65.6663 160.703 65.5793C160.435 65.486 160.158 65.4393 159.872 65.4393C159.225 65.4393 158.7 65.6446 158.295 66.0551C157.891 66.4594 157.689 67.0192 157.689 67.7345C157.689 68.4249 157.891 68.9816 158.295 69.4046C158.7 69.8213 159.235 70.0297 159.9 70.0297C160.149 70.0297 160.404 69.9861 160.665 69.8991C160.933 69.8058 161.129 69.7 161.253 69.5818V68.5555H159.676ZM176.121 64.469L173.798 68.2756V71H172.65V68.2756L170.346 64.469H171.652L173.275 67.2027L174.88 64.469H176.121Z" fill="#4F79CA"></path>
+            <line x1="62.7408" y1="83" x2="62.7408" y2="53" stroke="#4F79CA" stroke-width="0.518334"></line>
+          </svg></a>
+        <div class="row no-gutters mob-menu c-row w-100 no-gutter d-block d-md-flex flex-column flex-md-row align-items-center justify-content-md-end m-0">
+          <div class="col-12 col-md-7 header-nav-wrap order-md-2 d-flex flex-column">
+            <nav class="header-nav w-100">
+              <ul class="header-nav-list d-flex flex-column flex-lg-row align-items-center justify-content-between mb-0">
+                <li class="d-inline-flex align-items-center justify-content-center flex-row flex-wrap drop-menu mb-4 mb-lg-0"><span class="p-text">Про нас</span>
+                  <svg class="icon icon-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z" fill="white"></path>
+                  </svg>
+                  <ul class="dropdown-menu-list flex-column">
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./about-salon.html">Наші салони</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./about.html">Про нас</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center justify-content-center flex-row flex-wrap drop-menu mb-4 mb-lg-0"><span class="p-text"> Послуги та ціни</span>
+                  <svg class="icon icon-arrow" width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z" fill="white"></path>
+                  </svg>
+                  <ul class="dropdown-menu-list d-flex flex-column">
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./podology.html">Подологія</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./ingrown-nail.html">Врослий ніготь</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./cracking.html">Обробка тріщин на п'ятах</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./minorOrthopedics.html">Мала ортопедія</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./nail-fungus-treatment.html">Лікування грибка нігтів</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./prevention.html">Профілактичні послуги</a></li>
+                    <li class="mb-2 mt-2"><a class="nav-link-text" href="./warts-treatment.html">Лікування бородавок і видалення мозолів</a></li>
+                  </ul>
+                </li>
+                <li class="d-inline-flex align-items-center mr-0 mb-4 mb-lg-0"><a class="p-text" href="./contact.html">Контакти</a></li>
+                <li class="d-inline-flex align-items-center mr-0 mb-4 mb-lg-0"><a class="p-text" href="./padology-learning.html">Навчання</a></li>
+              </ul>
+            </nav>
+            <div class="mob-wrapper d-flex flex-column d-md-none">
+              <div class="a ms_booking">
+                    <div class="btn-callback">
+                      <div class="text-section">
+                            <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.2227 0.77673C10.1898 -0.25891 8.50992 -0.25891 7.47696 0.77673L0.609311 7.64264C0.555617 7.69634 0.522379 7.76538 0.512151 7.83954L0.00334149 11.6088C-0.0119995 11.7162 0.026353 11.8236 0.100501 11.8977C0.164422 11.9616 0.253911 12 0.3434 12C0.358741 12 0.374082 12 0.389423 11.9974L2.65989 11.6906C2.8491 11.665 2.98205 11.4911 2.95648 11.3019C2.93091 11.1127 2.75705 10.9797 2.56784 11.0053L0.74738 11.2508L1.10278 8.62202L3.86927 11.3888C3.93319 11.4528 4.02268 11.4911 4.11217 11.4911C4.20166 11.4911 4.29115 11.4553 4.35507 11.3888L11.2227 4.52293C11.7239 4.02174 12 3.35688 12 2.64855C12 1.94023 11.7239 1.27537 11.2227 0.77673ZM7.60992 1.62058L8.76305 2.77385L2.49625 9.04139L1.34312 7.88812L7.60992 1.62058ZM4.11473 10.6575L2.98716 9.52981L9.25396 3.26227L10.3815 4.38996L4.11473 10.6575ZM10.8622 3.89644L8.10339 1.13729C8.45367 0.84833 8.89089 0.689787 9.35112 0.689787C9.87527 0.689787 10.3662 0.894358 10.7369 1.26259C11.1077 1.63081 11.3097 2.12434 11.3097 2.64855C11.3097 3.1114 11.1511 3.54611 10.8622 3.89644Z" fill="#FFF"></path>
+                            </svg><span>записатися</span>
+                      </div>
+                      <div class="arrow-section">
+                            <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                            </svg>
+                      </div>
+                    </div>
+              </div>
+              <ul class="mt-4 d-flex flex-column align-items-center">
+                <li class="d-flex justify-content-center align-items-center flex-column"><span>
+                    <svg class="icon icon-loc" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.33329 0.292969C2.57654 0.292969 0.333496 2.49509 0.333496 5.20182C0.333496 5.90784 0.480688 6.58193 0.770762 7.20553C2.02085 9.89111 4.41761 12.7265 5.12258 13.5315C5.17539 13.5916 5.25239 13.6263 5.33343 13.6263C5.41446 13.6263 5.49146 13.5916 5.54428 13.5315C6.24896 12.7267 8.64573 9.89138 9.89623 7.20553C10.1864 6.58193 10.3335 5.90784 10.3335 5.20182C10.3332 2.49509 8.09018 0.292969 5.33329 0.292969ZM5.33329 7.75149C3.90126 7.75149 2.7361 6.60758 2.7361 5.20168C2.7361 3.79564 3.90126 2.65174 5.33329 2.65174C6.76531 2.65174 7.93048 3.79564 7.93048 5.20168C7.93062 6.60758 6.76545 7.75149 5.33329 7.75149Z" fill="#3A405B"></path>
+                    </svg><span class="current-town">Житомир</span></span>
+                  <ul class="dropdown-menu-list d-flex flex-column towns-list"></ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 nav-callback order-md-3 justify-content-end d-none d-md-flex">
+            <div class="a ms_booking">
+                  <div class="btn-callback">
+                    <div class="text-section">
+                          <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2227 0.77673C10.1898 -0.25891 8.50992 -0.25891 7.47696 0.77673L0.609311 7.64264C0.555617 7.69634 0.522379 7.76538 0.512151 7.83954L0.00334149 11.6088C-0.0119995 11.7162 0.026353 11.8236 0.100501 11.8977C0.164422 11.9616 0.253911 12 0.3434 12C0.358741 12 0.374082 12 0.389423 11.9974L2.65989 11.6906C2.8491 11.665 2.98205 11.4911 2.95648 11.3019C2.93091 11.1127 2.75705 10.9797 2.56784 11.0053L0.74738 11.2508L1.10278 8.62202L3.86927 11.3888C3.93319 11.4528 4.02268 11.4911 4.11217 11.4911C4.20166 11.4911 4.29115 11.4553 4.35507 11.3888L11.2227 4.52293C11.7239 4.02174 12 3.35688 12 2.64855C12 1.94023 11.7239 1.27537 11.2227 0.77673ZM7.60992 1.62058L8.76305 2.77385L2.49625 9.04139L1.34312 7.88812L7.60992 1.62058ZM4.11473 10.6575L2.98716 9.52981L9.25396 3.26227L10.3815 4.38996L4.11473 10.6575ZM10.8622 3.89644L8.10339 1.13729C8.45367 0.84833 8.89089 0.689787 9.35112 0.689787C9.87527 0.689787 10.3662 0.894358 10.7369 1.26259C11.1077 1.63081 11.3097 2.12434 11.3097 2.64855C11.3097 3.1114 11.1511 3.54611 10.8622 3.89644Z" fill="#FFF"></path>
+                          </svg><span>записатися</span>
+                    </div>
+                    <div class="arrow-section">
+                          <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                          </svg>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="col-12 header-contact-list-wrap order-md-1 d-none d-md-block">
+            <ul class="header-contact-list d-flex flex-column flex-md-row align-item-center justify-content-end">
+              <li class="d-flex flex-wrap flex-md-nowrap justify-content-center mb-4 mb-md-0 mr-0 mr-md-3 align-items-center">
+                <svg class="icon icon-loc" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.33329 0.292969C2.57654 0.292969 0.333496 2.49509 0.333496 5.20182C0.333496 5.90784 0.480688 6.58193 0.770762 7.20553C2.02085 9.89111 4.41761 12.7265 5.12258 13.5315C5.17539 13.5916 5.25239 13.6263 5.33343 13.6263C5.41446 13.6263 5.49146 13.5916 5.54428 13.5315C6.24896 12.7267 8.64573 9.89138 9.89623 7.20553C10.1864 6.58193 10.3335 5.90784 10.3335 5.20182C10.3332 2.49509 8.09018 0.292969 5.33329 0.292969ZM5.33329 7.75149C3.90126 7.75149 2.7361 6.60758 2.7361 5.20168C2.7361 3.79564 3.90126 2.65174 5.33329 2.65174C6.76531 2.65174 7.93048 3.79564 7.93048 5.20168C7.93062 6.60758 6.76545 7.75149 5.33329 7.75149Z" fill="#3A405B"></path>
+                </svg><span class="link-text-light d-flex align-items-center justify-content-start"><span class="current-town">Житомир</span></span>
+                <ul class="dropdown-menu-list d-flex flex-column towns-list"></ul>
+              </li>
+              <li class="d-flex justify-content-center mr-0 mr-md-4 align-items-center">
+                <svg class="icon icon-phone" width="14" height="14" viewBox="0 0 14 14" fill="#3A405B" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.54627 7.29303C9.52035 7.33287 9.52035 7.37271 9.50739 7.42583C9.49444 7.59848 9.62401 7.75785 9.79246 7.77113C9.96092 7.78441 10.1164 7.65161 10.1294 7.47896C10.1294 7.43911 10.1294 7.39927 10.1423 7.33287C10.1423 7.26646 10.1423 7.22662 10.1423 7.18678C10.1423 6.80164 10.0775 6.42978 9.96092 6.0712C9.80542 5.60638 9.53331 5.19467 9.20936 4.84937C8.80767 4.43767 8.31528 4.1455 7.75809 3.98613C7.49893 3.91973 7.21386 3.87988 6.94175 3.87988C6.85104 3.87988 6.76034 3.87988 6.65668 3.89316C6.56597 3.90644 6.47527 3.91972 6.38456 3.93301C6.21611 3.95957 6.09949 4.13222 6.13836 4.29158C6.16428 4.46423 6.33273 4.58376 6.48822 4.54392C6.56597 4.53064 6.63076 4.51736 6.70851 4.51736C6.72147 4.51736 6.73442 4.51736 6.74738 4.51736C6.81217 4.51736 6.87696 4.50408 6.94175 4.50408C7.65443 4.50408 8.31528 4.79625 8.78176 5.28764C9.24824 5.76574 9.53331 6.4165 9.54627 7.14694V7.1735C9.54627 7.22662 9.54627 7.26646 9.54627 7.29303Z" fill="#3A405B"></path>
+                  <path d="M11.2567 7.58542C11.2437 7.75807 11.3733 7.91744 11.5417 7.93072C11.7102 7.944 11.8657 7.81119 11.8786 7.63854C11.8916 7.49246 11.8916 7.34637 11.8916 7.20028C11.8916 6.90811 11.8657 6.62921 11.8268 6.35032C11.6583 5.28786 11.153 4.33165 10.4403 3.60121C9.62397 2.76452 8.53551 2.22002 7.33044 2.12705C7.20086 2.11377 7.05832 2.11377 6.92874 2.11377C6.78621 2.11377 6.64367 2.11377 6.50114 2.12705C6.3586 2.14033 6.21606 2.15361 6.07353 2.18017C5.90508 2.20673 5.78846 2.37938 5.82733 2.53875C5.85324 2.7114 6.0217 2.83093 6.17719 2.79109C6.2679 2.7778 6.34564 2.76452 6.43635 2.75124C6.47522 2.75124 6.51409 2.73796 6.55297 2.73796C6.68254 2.72468 6.81212 2.72468 6.92874 2.72468C7.36931 2.72468 7.78396 2.79109 8.18565 2.91061C8.88537 3.1231 9.50735 3.50824 10.0127 4.02619C10.4274 4.45117 10.7643 4.96912 10.9845 5.52691C11.1789 6.03158 11.2955 6.58937 11.2955 7.17372C11.2955 7.21356 11.2955 7.26668 11.2955 7.30653C11.2696 7.41277 11.2567 7.49246 11.2567 7.58542Z" fill="#3A405B"></path>
+                  <path d="M11.6974 2.32638C10.4664 1.06471 8.78193 0.294434 6.916 0.294434C6.72163 0.294434 6.52727 0.307714 6.3329 0.320995C6.13853 0.334276 5.94416 0.360837 5.7498 0.400679C5.58135 0.427241 5.46473 0.59989 5.5036 0.759258C5.52951 0.931908 5.69797 1.05143 5.85346 1.01159C5.94416 0.998311 6.02191 0.98503 6.11262 0.97175C6.20332 0.958469 6.29403 0.945188 6.38473 0.945188C6.56614 0.931908 6.73459 0.918627 6.916 0.918627C8.60052 0.918627 10.1295 1.6225 11.2439 2.75136C12.3453 3.88022 13.0321 5.44735 13.0321 7.18712C13.0321 7.28009 13.0321 7.38633 13.0321 7.4793C13.0321 7.55898 13.0191 7.63867 13.0191 7.73163C13.0062 7.90428 13.1358 8.06365 13.3042 8.07693C13.4727 8.09021 13.6281 7.9574 13.6411 7.78475C13.6541 7.58554 13.667 7.38633 13.667 7.2004C13.667 5.30126 12.9155 3.57477 11.6974 2.32638Z" fill="#3A405B"></path>
+                  <path d="M13.1875 10.3741L10.894 9.11246C10.1294 8.68747 10.1035 8.96637 9.30015 9.84289C9.10578 10.0554 8.74296 10.6132 8.31536 10.5069C7.42127 10.2812 5.74971 8.93981 5.20548 8.32889C4.94632 8.03672 3.83195 6.64224 3.81899 6.1907C3.79308 5.5001 5.27027 5.1548 4.79083 3.84002L3.76716 1.48933C2.80828 -0.768389 0.126017 2.84396 0.346299 4.53061C0.916443 8.68747 8.03028 15.4075 11.9954 13.1896C12.8765 12.685 14.0686 10.9186 13.1875 10.3741Z" fill="#3A405B"></path>
+                </svg><a class="link-text-light d-flex align-items-center justify-content-start" href="tel:0980070753">098 180 10 88</a>
+              </li>
+              <li class="drop-menu d-none d-lg-flex align-items-center header-lang-wrap mr-0"><span class="link-text-light d-flex align-items-center justify-content-start header-lang i18n-switch current">UA</span>
+                <ul class="dropdown-menu-list d-flex flex-column">
+                  <li><a class="drop-menu nav-link-text paragraph-text text-color-lightdark-header header-lang text-color-dark" href="http://steffany.dotwork.digital/podology/" data-i18n="ru">RU</a></li>
+                  <li><a class="drop-menu nav-link-text paragraph-text text-color-lightdark-header header-lang text-color-dark" href="http://steffany.dotwork.digital/podology/ua" data-i18n="ua">UA</a></li>
+                </ul>
+              </li>
+              <li class="d-none d-md-flex d-lg-none align-items-center justify-content-between menu-trigger flex-column m-0"><span class="d-block w-100"></span><span class="d-block w-100"></span><span class="d-block w-100"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex d-md-none align-items-center justify-content-between menu-trigger flex-column m-0"><span class="d-block w-100"></span><span class="d-block w-100"></span><span class="d-block w-100"></span></div>
+      </div>
+    </header>
+    <div class="modal fade" id="firstDayCourse" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <h4 class="text-center">Залиште ваші дані</h4>
+          <h5 class="text-center">щоб зайняти місце у группі</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Ім'я" data-name required autocomplete="on">
+            <input class="w-100 p-text-light mb-2" type="email" placeholder="Email" data-email required autocomplete="on">
+            <input class="w-100 p-text-light mb-4" type="tel" required placeholder="Телефон" data-phone minlength="19" maxlength="19" pattern=".{19}" autocomplete="on">
+            <input type="submit" style="display: none;" data-f-day-s-btn>
+                <div class="btn-callback no-svg" data-f-day-c-btn>
+                  <div class="text-section"><span>надіслати</span></div>
+                  <div class="arrow-section">
+                        <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                        </svg>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="callbackModal" tabindex="-1" role="dialog" aria-labelledby="callbackModal" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content" style="padding-left: 50px!important; padding-right: 50px!important;">
+          <h4 class="text-center pb-4" style="font-size: 16px;">Запись на прием происходит в телефонном режиме</h4>
+          <h5 class="text-center pb-4">укажите телефон, для звонка и согласования деталей</h5>
+          <form class="pb-4p">
+            <input class="w-100 p-text-light mb-4" type="text" placeholder="Ім'я" id="consultName" data-name required autocomplete="on">
+            <input class="w-100 p-text-light mb-4" type="email" placeholder="Email" required id="consultEmail" data-email autocomplete="on">
+            <input class="w-100 p-text-light mb-4" type="tel" required placeholder="Телефон" id="consultPhone" data-phone minlength="19" maxlength="19" pattern=".{19}" autocomplete="on">
+            <input type="submit" style="display: none;" data-call-day-sub-btn>
+                <div class="btn-callback no-svg" data-call-day-callback-btn>
+                  <div class="text-section"><span>надіслати</span></div>
+                  <div class="arrow-section">
+                        <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                        </svg>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="secondDayCourse" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <h4 class="text-center">Введите свои данные</h4>
+          <h5 class="text-center">чтобы занять место в группе</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Ім'я" data-name required autocomplete="on">
+            <input class="w-100 p-text-light mb-2" type="email" placeholder="Email" required data-email autocomplete="on">
+            <input class="w-100 p-text-light mb-4" type="tel" required placeholder="Телефон" data-phone minlength="19" maxlength="19" pattern=".{19}" autocomplete="on">
+            <input type="submit" style="display: none;" data-t-day-s-btn>
+                <div class="btn-callback no-svg" data-t-day-c-btn>
+                  <div class="text-section"><span>надіслати</span></div>
+                  <div class="arrow-section">
+                        <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                        </svg>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="chooseDayCourse" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <h4 class="text-center">Залиште ваші дані</h4>
+          <h5 class="text-center">щоб зайняти місце у группі</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Ім'я" data-name required autocomplete="on">
+            <input class="w-100 p-text-light mb-2" type="email" required placeholder="Email" data-email autocomplete="on">
+            <input class="w-100 p-text-light mb-2" type="tel" required placeholder="Телефон" data-phone minlength="19" pattern=".{19}" autocomplete="on">
+            <select class="w-100 p-text-light mb-4" placeholder="Який курс ви оберете?" required>
+              <option class="p-text-light" selected disabled hidden>Який курс ви оберете?</option>
+              <option class="p-text-light" value="1">Програма курсу базової подологии</option>
+              <option class="p-text-light" value="2">Програма курсу ортоніксіі і малої ортопедії</option>
+              <option class="p-text-light" value="3">Експрес-курс апаратних і інструментальних технік</option>
+            </select>
+            <input type="submit" style="display: none;" data-fr-day-s-btn>
+                <div class="btn-callback no-svg" data-fr-day-c-btn>
+                  <div class="text-section"><span>надіслати</span></div>
+                  <div class="arrow-section">
+                        <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                        </svg>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="chooseDayCourseSpecial" tabindex="-1" role="dialog" aria-labelledby="firstDayCourse" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <h4 class="text-center">Залиште ваші дані</h4>
+          <h5 class="text-center">щоб зайняти місце у группі</h5>
+          <form>
+            <input class="w-100 p-text-light mb-2" type="text" placeholder="Ім'я" data-name required autocomplete="on">
+            <input class="w-100 p-text-light mb-2" type="email" required placeholder="Email" data-email autocomplete="on">
+            <input class="w-100 p-text-light mb-2" type="tel" required placeholder="Телефон" data-phone minlength="19" pattern=".{19}" autocomplete="on">
+            <p class="text-center text-white text-w-bold my-3">Курс:&nbsp;<span class="text-white text-light" id="placeForCourseText"></span></p>
+            <input type="submit" style="display: none;" data-fr-day-s-btn-special>
+                <div class="btn-callback no-svg" data-fr-day-c-btn-special>
+                  <div class="text-section"><span>надіслати</span></div>
+                  <div class="arrow-section">
+                        <svg class="btn-arrow" width="11" height="8" viewbox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3536 4.35355C10.5488 4.15829 10.5488 3.84171 10.3536 3.64645L7.17157 0.464466C6.97631 0.269204 6.65973 0.269204 6.46447 0.464466C6.2692 0.659728 6.2692 0.976311 6.46447 1.17157L9.29289 4L6.46447 6.82843C6.2692 7.02369 6.2692 7.34027 6.46447 7.53553C6.65973 7.7308 6.97631 7.7308 7.17157 7.53553L10.3536 4.35355ZM0 4.5H10V3.5H0V4.5Z" fill="#FFF"></path>
+                        </svg>
+                  </div>
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="thanksPopup" tabindex="-1" role="dialog" aria-labelledby="thanksPopup" aria-hidden="true">
+      <div class="modal-dialog modal-popup modal-dialog-centered" role="document">
+        <div class="modal-content px-1">
+          <h4 class="text-center">Дякуємо!</h4>
+          <h5 class="text-center">Ми зв'яжемося з вами найближчим часом!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-404">
+      <div class="container d-flex flex-column">
+        <h1 class="mt-5 mt-lg-0">Эта страница не найдена</h1>
+        <p>Проверьте правильность адреса, или намите на любую ссылку внизу:</p>
+        <ul class="d-block d-md-none d-lg-block">
+          <li><a href="./">Перейти на Главную</a></li>
+          <li><a href="./about.html">Почитать про сеть салонов Steffany</a></li>
+          <li><a href="./podology.html">Узнать об услугах подологии</a></li>
+          <li><a href="./padology-learning.html">Почитать о возможности обучения подологии</a></li>
+        </ul>
+        <div class="row d-none d-md-flex d-lg-none">
+          <div class="col-6">
+            <ul>
+              <li><a href="./">Перейти на Главную</a></li>
+              <li><a href="./about.html">Почитать про сеть салонов Steffany</a></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li><a href="./podology.html">Узнать об услугах подологии</a></li>
+              <li><a href="./padology-learning.html">Почитать о возможности обучения</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row feet-404">
+          <div class="col-12 col-lg-4 p-3">
+            <div class="wrapper">
+              <h2>Подология</h2>
+              <p>Легчение ногтей и кожи стоп</p><a class="button-forward" href="./podology.html"></a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 p-3">
+            <div class="wrapper">
+              <h2>Ортониксия</h2>
+              <p>Исправление формы и роста ногтей</p><a class="button-forward" href="./ingrown-nail.html"></a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 p-3">
+            <div class="wrapper">
+              <h2>Малая ортопедия</h2>
+              <p>Коррекция положения стоп с помощью стелек и ортезов</p><a class="button-forward" href="./minorOrthopedics.html"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
