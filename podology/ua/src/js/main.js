@@ -135,7 +135,7 @@ $(document).ready(function () {
         const p = location.pathname.split('/').slice(-1)[0]
         const h = patterns[i18n].replace('$1', p)
         console.log(h)
-        location.href = '/' + h
+        // location.href = '/' + h
       })
   
   $('body').click(function (event) {
