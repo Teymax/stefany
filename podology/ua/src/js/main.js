@@ -134,7 +134,6 @@ $(document).ready(function () {
         const i18n = e.target.dataset.i18n
         const p = location.pathname.split('/').slice(-1)[0]
         const h = window.patterns[i18n].replace('$1', p)
-        console.log(h)
         if (location.pathname.substr(1) !== h) {
           location.href = '/' + h
         }
