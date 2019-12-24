@@ -1,9 +1,14 @@
 doctype html
-html(lang="en")
+html(lang="en" prefix="og: http://ogp.me/ns#")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(property="og:image" content="assets/icon/favicon/favicon.png")
+    meta(property="og:title" content="Steffany | Подология")
+    meta(property="og:site_name" content="steffany.ua")
+    meta(property="og:url" content="http://steffany.dotwork.digital/podology/")
+    meta(property="og:description" content="Салон Steffany Подология")
     title Stefany | Podology
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
     link(rel="stylesheet" href="css/style.css")
@@ -18,7 +23,6 @@ html(lang="en")
     script(src="./js/main.js" defer)
     script(src="https://smtpjs.com/v3/smtp.js")
     script(src="//w245756.yclients.com/widgetJS" charset="UTF-8" defer)
-
   body
     include ../modules/overlay
     include ../modules/numbered-section

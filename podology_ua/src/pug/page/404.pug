@@ -1,0 +1,48 @@
+extends ../layout/404-layout
+
+block content
+  .wrapper-404
+    .container.d-flex.flex-column
+      h1.mt-5.mt-lg-0 Эта страница не найдена
+      p Проверьте правильность адреса, или намите на любую ссылку внизу:
+
+      ul.d-block.d-md-none.d-lg-block
+        li
+          a(href='./') Перейти на Главную
+        li
+          a(href='./about.html') Почитать про сеть салонов Steffany
+        li
+          a(href='./podology.html') Узнать об услугах подологии
+        li
+          a(href='./padology-learning.html') Почитать о возможности обучения подологии
+
+      .row.d-none.d-md-flex.d-lg-none
+        .col-6
+          ul
+            li
+              a(href='./') Перейти на Главную
+            li
+              a(href='./about.html') Почитать про сеть салонов Steffany
+        .col-6
+          ul
+            li
+              a(href='./podology.html') Узнать об услугах подологии
+            li
+              a(href='./padology-learning.html') Почитать о возможности обучения
+
+      .row.feet-404
+        .col-12.col-lg-4.p-3
+          .wrapper
+            h2 Подология
+            p Легчение ногтей и кожи стоп
+            a(href="./podology.html").button-forward
+        .col-12.col-lg-4.p-3
+          .wrapper
+            h2 Ортониксия
+            p Исправление формы и роста ногтей
+            a(href="./ingrown-nail.html").button-forward
+        .col-12.col-lg-4.p-3
+          .wrapper
+            h2 Малая ортопедия
+            p Коррекция положения стоп с помощью стелек и ортезов
+            a(href="./minorOrthopedics.html").button-forward

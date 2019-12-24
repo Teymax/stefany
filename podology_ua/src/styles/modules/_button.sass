@@ -38,6 +38,7 @@
 		justify-content: center
 		align-items: center
 		padding: .6em
+		pointer-events: none
 		@include media-breakpoint-down(md)
 			padding: .6em
 		width: 80%
@@ -52,8 +53,9 @@
 			margin-top: .15em
 			letter-spacing: 0.25em
 			pointer-events: none
+
 		span
-			@include font(Circe, 700, 10, 20)
+			@include font(Circe, 800, 10, 20)
 			color: #fff
 			@include media-breakpoint-down(md)
 				font-size: 14px
@@ -61,6 +63,7 @@
 	.arrow-section
 		width: 20%
 		padding: .6em
+		pointer-events: none
 		@include media-breakpoint-down(md)
 			padding: .6em
 		border:
@@ -74,3 +77,12 @@
 		display: flex
 		justify-content: center
 		align-items: center
+
+.btn-arrow, button-forward
+	transition: transform 0.2s ease-out
+
+.btn-callback:hover .btn-arrow
+	transform: translateX(5px)
+
+.button-forward:hover .button-forward:before
+	transform: translateX(5px)
