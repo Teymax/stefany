@@ -5,6 +5,20 @@ window.mail = {
   To      : 'a.sergeychuk@dotwork.digital'
 }
 
+window.patterns = {
+  ru: 'podology/$1/',
+  ua: 'podology/ua/$1'
+}
+
+window.nav = {
+  podologiya: {
+    zt: '/{{ i18n }}/podologiya'
+  },
+  edu       : {
+    zt: '/{{ i18n }}/edu'
+  }
+}
+
 window.chooseDayText = ''
 
 $(document).ready(function () {
@@ -112,6 +126,17 @@ $(document).ready(function () {
     this.classList.contains('open') ? _toggleMenu('none', 'hidden') : _toggleMenu('initial', 'initial')
     $('header').toggleClass('open')
   })
+  
+  $('[data-i18n]')
+    .on('click',
+      e => {
+        e.preventDefault()
+        const i18n = e.target.dataset.i18n
+        const p = location.pathname.split('/').slice(-1)[0]
+        const h = patterns[i18n].replace('$1', p)
+        console.log(h)
+        location.href = '/' + h
+      })
   
   $('body').click(function (event) {
     var t = event.target
