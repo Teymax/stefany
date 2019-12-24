@@ -63,14 +63,14 @@ mixin sliderServices
 
 mixin writeClientForm
   .callback-card&attributes(attributes)
-    h3 Оставьте ваши данные
-    p.text-lowercase и мы вам перезвоним
+    h3 Залиште ваші дані
+    p.text-lowercase та ми вам передзвонимо
     form(method="post" action="/")
-      input(type="text", placeholder="Имя", data-client-name required autocomplete='on')
+      input(type="text", placeholder="Ім'я", data-client-name required autocomplete='on')
       input(type="email" placeholder="Email" data-client-email required autocomplete='on')
       input(type="tel" placeholder="Телефон" data-client-phone required minlength="19" maxlength="19" pattern=".{19}" autocomplete='on').mb-4
       input(type="submit" style="display: none" data-btn-submit)
-      +btnCallback('перезвонить мне')
+      +btnCallback('передзвоніть мені')
       script(type="text/javascript")
         | (() => {
         | const form = document.currentScript.parentElement
