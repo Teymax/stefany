@@ -8,7 +8,7 @@
         input.w-100.p-text-light.mb-2(type="email" placeholder="Email" data-email required autocomplete='on')
         input.w-100.p-text-light.mb-4(type="tel" required placeholder="Телефон" data-phone minlength="19" maxlength="19" pattern=".{19}" autocomplete='on')
         input(type="submit" style="display: none;" data-f-day-s-btn)
-        +customBtn('надіслати')(data-f-day-c-btn)
+        +customBtn('відправити')(data-f-day-c-btn)
 
 #callbackModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='callbackModal', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -20,7 +20,7 @@
         input.w-100.p-text-light.mb-4(type="email" placeholder="Email" required id='consultEmail' data-email autocomplete='on')
         input.w-100.p-text-light.mb-4(type="tel" required placeholder="Телефон" id='consultPhone' data-phone minlength="19" maxlength="19" pattern=".{19}" autocomplete='on')
         input(type="submit" style="display: none;" data-call-day-sub-btn)
-        +customBtn('надіслати')(data-call-day-callback-btn)
+        +customBtn('відправити')(data-call-day-callback-btn)
 
 #secondDayCourse.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -32,7 +32,7 @@
         input.w-100.p-text-light.mb-2(type="email" placeholder="Email" required data-email autocomplete='on')
         input.w-100.p-text-light.mb-4(type="tel" required placeholder="Телефон" data-phone minlength="19" maxlength="19" pattern=".{19}" autocomplete='on')
         input(type="submit" style="display: none;" data-t-day-s-btn)
-        +customBtn('надіслати')(data-t-day-c-btn)
+        +customBtn('відправити')(data-t-day-c-btn)
 
 #chooseDayCourse.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -49,7 +49,7 @@
           option.p-text-light(value="2") Програма курсу ортоніксіі і малої ортопедії
           option.p-text-light(value="3") Експрес-курс апаратних і інструментальних технік
         input(type="submit" style="display: none;" data-fr-day-s-btn)
-        +customBtn('надіслати')(data-fr-day-c-btn)
+        +customBtn('відправити')(data-fr-day-c-btn)
 
 #chooseDayCourseSpecial.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
@@ -63,7 +63,7 @@
         p.text-center.text-white.text-w-bold.my-3 Курс:&nbsp;
           span.text-white.text-light#placeForCourseText
         input(type="submit" style="display: none;" data-fr-day-s-btn-special)
-        +customBtn('надіслати')(data-fr-day-c-btn-special)
+        +customBtn('відправити')(data-fr-day-c-btn-special)
 
 #thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
