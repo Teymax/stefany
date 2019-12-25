@@ -71,6 +71,8 @@ function closeAllModals() {
 }
 
 $(document).ready(function () {
+  console.clear()
+  setTimeout(() => console.clear(), 8000)
   $('[type="tel"]').mask('+38-(000)-000-00-00')
   
   $('.btn-callback').on('click', e => {
