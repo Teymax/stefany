@@ -1,0 +1,50 @@
+// bootstrap connection
+@import "../../node_modules/bootstrap/scss/bootstrap"
+@import "../../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot"
+
+@import "variables"
+@import "mixins"
+@import "fonts"
+@import "reset"
+@import "spacing-helpers"
+@import "grid"
+@import "sections/all"
+@import "lib/all"
+@import "modal"
+@import "media"
+
+//
+//.container.map-container
+//  .btn-simple-map
+//    color: #fff !important
+
+.container
+  //@include media-breakpoint-down(lg)
+  padding-left: 30px !important
+  padding-right: 30px !important
+  @include media-breakpoint-down(sm)
+    padding-left: 18px !important
+    padding-right: 18px !important
+
+@include media-breakpoint-up(lg)
+  .container
+    max-width: 720px !important
+@include media-breakpoint-up(xl)
+  .container
+    max-width: 1320px !important
+
+//modules
+@import 'modules/buttons'
+@import 'modules/breadecrumbs'
+@import "sections/aboutPage/video-slider"
+
+
+@import "sections/serviceSPA/about-page-spa"
+@import "sections/serviceSPA/about-proces-spa"
+
+@import "sections/_infoblock2"
+
+html body
+	margin: 0 !important
+	padding: 0 !important

@@ -1,0 +1,30 @@
+section.section.contact
+  .container
+    .row
+      .col-12.col-xl-5
+        .tablet-container
+          h2.form-title.text-color-dark Контакты
+          p.form-title.letter-spacing-1.mb-4
+        +cnt-info
+        hr.mt-4.mb-3
+        h2.form-title.text-color-dark Хотите связаться лично с собственником Steffany Beauty?
+        form.feedback-form.row
+          .col-12.col-md-4.col-xl-5.px-xl-0
+            input(type="text" placeholder="Имя" name="name" required)
+            input(type="email" placeholder="Email" name="email" required )
+            input.mb-0(type="tel" placeholder="Телефон" name="phone" required maxlength="19" minlength="19" pattern=".{19}")
+            input(type='submit' data-contact-submit style="display:none;")
+          .col-12.col-md-8.col-xl-7.pl-xl-0.pr-xl-3
+            textarea(placeholder="О чем вы хотите рассказать?" name="message" required ).mt-4.mt-md-0
+        .row.d-flex.justify-content-end.no-gutters
+        #sendMail.btn-callback.no-svg(data-btn-contact-submit)
+          .text-section
+            span отправить
+          .arrow-section
+            +arrowSvg
+
+      .col-12.col-xl-7
+        .map-dynamic.map.h-100
+
+    hr.mt-5
+
