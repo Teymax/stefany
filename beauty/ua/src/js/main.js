@@ -79,7 +79,17 @@ $(document).ready(function () {
     if (e.target.dataset.serviceId) {
       window.serviceText = e.target.dataset.serviceId
     }
-    console.log(window.serviceText)
+  })
+  
+  function scrollToAnchor(aid) {
+    var aTag = $('[data-anchor=\'' + aid + '\']')
+    $('html,body').animate({scrollTop: aTag.offset().top}, 'slow')
+  }
+  
+  $('[data-anchor-link]').on('click', e => {
+    const t      = e.target,
+          anchor = t.dataset.anchorLink
+    scrollToAnchor(anchor)
   })
   
   $('#sendMail').on('click', _ => {
