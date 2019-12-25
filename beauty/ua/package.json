@@ -9,6 +9,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-zip": "^5.0.1",
     "jquery": "^3.4.1",
+    "node-sass": "^4.13.0",
     "popper.js": "^1.16.0"
   },
   "devDependencies": {
