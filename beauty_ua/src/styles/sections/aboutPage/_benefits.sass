@@ -1,0 +1,363 @@
+.benefits
+	background-image: url('../assets/img/background/benefits-bg.jpg')
+	background-repeat: no-repeat 
+	background-size: cover
+	background-position: top left
+	&.dark-words
+		background-image: url('../assets/img/background/bnf-darkword-bg.jpg')
+		background-repeat: no-repeat 
+		background-size: cover
+		background-position: top left
+	.section-title
+		margin-bottom: 15px
+	.benefits-head
+		margin-bottom: 18px
+	.bnf-cnt
+		p
+			line-height: 26px
+	&.word-bg
+		background-image: url('../assets/img/background/benefits-bg-2.png') !important
+		background-repeat: no-repeat	!important
+		background-size: cover !important
+		background-position: top 100px left !important
+	&.serviceBenefits:not(.doubleBnf)
+		padding-top: 70px
+		padding-bottom: 0
+		background: $color-white
+		@media(max-width: 1199px)
+			padding-top: 92px
+		.section-title
+			margin-bottom: 19px
+		.section-subtitle
+			margin-bottom: 30px
+			letter-spacing: 0
+		.bnf-title
+			padding-bottom: 22px
+			@include font('Circe-Bold', 600, 16, 16)
+			letter-spacing: 0
+			text-transform: inherit
+		.bnf-cnt
+			@media(max-width: 1199px)
+				padding-bottom: 22px
+			p
+				line-height: 25px
+		.container
+			max-width: 1353px
+			padding-left: 20px
+			padding-right: 20px
+	&.serviceProccesBenefits:not(.doubleBnf)
+		padding-bottom: 37px
+		@media(max-width: 1199px)
+			padding-top: 61px
+			padding-bottom: 25px
+		.container
+			.section-title
+				margin-bottom: 50px
+			.bnf-three
+				margin-bottom: 34px 
+				.bnf-number
+					width: 72px
+					height: 72px	
+					margin-bottom: 26px
+					font-size: 77px
+				.bnf-title
+					padding-bottom: 20px
+					font-size: 17px
+			
+	&.bg-white
+		background: $color-white !important
+	&.doubleBnf
+		padding-top: 0 !important
+		padding-bottom: 15px
+		&.two-benefits
+			@media(max-width: 1199px)
+				padding-bottom: 7px
+				.bnf-two:nth-child(2)
+					margin-top: -71px
+					margin-bottom: 0 !important
+				.info-list li
+					margin-bottom: 0 !important
+		.container
+			max-width: 1127px
+			padding-left: 15px
+			padding-right: 15px
+			.bnf
+				.bnf-title
+					padding-bottom: 12px
+				.bnf-cnt
+					margin-top: -219px
+					max-width: 400px
+	&.doubleBnfDark
+		padding-top: 49px !important
+		padding-bottom: 59px
+		.container
+			max-width: 1058px
+			margin: 0 auto !important
+			padding-right: 15px
+			.section-title
+				margin-bottom: 20px
+			.section-subtitle
+				margin-bottom: 0px
+			.bnf-items
+				margin-top: -6px
+				.bnf:first-child
+					padding-right: 33px
+				.bnf:nth-child(2)
+					padding-left: 15px !important
+	&.two-benefits
+		.bnf-cnt
+			margin-top: -217px
+			max-width: 100% !important
+		.bnf-img-wrap
+			margin-left: -15px
+	&.triple-bnfs
+		padding-top: 83px !important
+		@media(max-width: 1199px)
+			padding-top: 35px !important
+			padding-bottom: 35px !important
+		.container 
+			.bnf 
+				.bnf-cnt
+					margin-top: -170px
+.benefits
+	padding: 57px 0 23px
+	.container
+		max-width: 1297px
+		& > .row 
+			justify-content: space-between !important
+			align-items: flex-start !important
+			@media(max-width: 1199px)
+				justify-content: center !important
+		.bnf
+			position: relative
+			padding-left: 235px
+			max-width: 647px
+			margin-bottom: 33px
+			.bnf-img
+				position: absolute
+				top: -13px
+				left: 7px
+				z-index: 1
+				width: 100%
+				max-width: 238px
+				&.bnf-img-1
+					max-width: 260px
+					left: 6px
+					top: -23px
+					@media(max-width: 767px)
+						min-width: 338px
+				&.bnf-img-2
+					max-width: 231px
+					top: -18px
+					left: 35px
+					@media(max-width: 767px)
+						min-width: 347px
+				&.bnf-img-3
+					max-width: 330px
+					top: -20px
+					left: -3px
+					@media(max-width: 767px)
+						min-width: 344px
+				&.bnf-img-4
+					left: 47px
+					top: -20px
+					max-width: 246px
+					@media(max-width: 767px)
+						min-width: 347px
+				&.bnf-img-5
+					max-width: 215px
+					top: -19px
+					left: 47px
+					@media(max-width: 767px)
+						min-width: 344px
+				&.bnf-img-6
+					left: 33px
+					top: -20px
+					max-width: 243px
+					@media(max-width: 767px)
+						min-width: 347px
+				img
+					max-width: 100%
+					width: 100%
+				& .bnf-img-item-1
+					display: block
+					@media(max-width: 767px)
+						display: none
+				& .bnf-img-item-2
+					display: none
+					@media(max-width: 767px)
+						display: block
+			.bnf-cnt
+				z-index: 2
+				width: 100%
+				max-width: 396px
+				position: relative
+		.bnf-two
+			padding-left: 0 !important
+			.bnf-img-wrap
+				height: 269px
+				.bnf-img
+					padding-left: 0 !important
+					width: auto !important
+					max-width: 100% !important
+			.bnf-img
+				position: static !important
+				max-width: 234px
+				margin-left: -55px
+			.bnf-cnt
+				margin-top: -155px
+		.bnf-three
+			display: flex
+			justify-content: center
+			padding-left: 0
+			.bnf-title
+				font-size: 16px
+				text-transform: inherit
+				letter-spacing: 0
+			.bnf-cnt
+				max-width: 396px
+				padding: 0 5px
+			.bnf-number
+				width: 87px
+				height: 87px
+				margin-bottom: 10px
+				padding-left: 10px
+				font-size: 100px
+				border-radius: 100%
+				background: $spec-bg
+		.bnf-number
+			.bnf-number-one
+				padding-left: 18px
+					padding-bottom: 20px
+			.bnf-number-two
+				padding-left: 10px
+					padding-bottom: 39px
+			.bnf-number-three
+				padding-left: 0
+					padding-bottom: 22px
+.three-benefits
+	.container
+		max-width: 1260px !important
+		.bnf-items 
+			.bnf
+				max-width: 394px
+				padding: 0 !important
+				.bnf-cnt
+					margin-top: -164px
+
+@media(max-width: 1199px)
+	.benefits .container .bnf
+		margin-left: auto
+		margin-right: auto
+	.bnf-cnt
+		max-width: 100% !important
+		padding-bottom: 14px
+	.bnf-two
+		padding: 0 !important
+		max-width: 500px !important
+	.benefits.doubleBnfDark
+		.container
+			.bnf-img
+				margin-left: -40px !important
+			.bnf-cnt
+				margin-top: -154px !important
+			.bnf-items
+				margin-top: 11px !important
+				.bnf:nth-child(2)
+					margin-top: -37px
+					padding-left: 0 !important
+	.benefits.doubleBnf .container
+		padding-left: 15px
+		padding-right: 15px
+@media(max-width: 767px)
+	.benefits
+		padding-top: 43px
+		padding-bottom: 45px
+		.section-subtitle
+			margin-bottom: 0
+	.benefits .container .bnf
+		padding-left: 15px !important
+		margin-bottom: 0px
+	.benefits .container .bnf .bnf-img
+		position: static !important
+		margin-left: -65px
+	.benefits .container .bnf .bnf-img.bnf-img-2, .benefits .container .bnf .bnf-img.bnf-img-3
+		margin-left: -76px
+	.benefits .container .bnf .bnf-img.bnf-img-4
+		margin-left: -46px
+	.bnf-item-2 .bnf-cnt
+		margin-top: -146px
+	.bnf-item-3 .bnf-cnt
+		margin-top: -160px
+		padding-bottom: 0
+	.bnf-item-4
+		margin-top: -22px
+		.bnf-cnt
+			margin-top: -143px
+	.benefits .bnf-cnt .bnf-number, .benefits .bnf-cnt .bnf-title, .benefits .bnf-cnt p
+		text-align: left !important
+	.bnf-title
+		letter-spacing: 1.8px
+		font-size: 18px
+		line-height: 20px
+	.benefits .bnf-cnt p
+		line-height: 22px
+	.benefits.serviceBenefits:not(.doubleBnf)
+		padding-top: 29px
+	.benefits:not(.serviceBenefits2)
+		.bnf
+			padding-left: 15px !important
+			.bnf-cnt
+				margin-top: -194px
+				max-width: 100%
+	.benefits.benefits-section
+		.bnf
+			.bnf-cnt
+				margin-top: -150px
+	.benefits.serviceBenefits:not(.doubleBnf)
+		.section-title
+			line-height: 33px
+		.section-subtitle
+			margin-bottom: 0 
+		.bnf-title
+			font-size: 14px
+			padding-bottom: 18px
+		.bnf-cnt
+			p 
+				text-align: center !important
+				font-size: 14px
+				line-height: 156%
+		.bnf-three
+			margin-bottom: 0 !important
+	.benefits .container .bnf-three .bnf-number
+		margin-bottom: 22px
+		line-height: 69px
+	.benefits.doubleBnf.two-benefits
+		padding-top: 0
+	.benefits.two-benefits .bnf-img-wrap
+		margin-left: 27px
+	.benefits .container .bnf
+		padding-left: 0 !important
+	.benefits.doubleBnf .container .bnf .bnf-title
+		padding-bottom: 9px
+	.benefits .bnf-cnt p
+		margin-bottom: 3px !important
+	.benefits .bnf-cnt .info-list
+		margin-bottom: 14px
+	.benefits.doubleBnf .container .bnf .bnf-cnt
+		margin-top: -228px !important
+	.benefits .container .bnf-three .bnf-number
+		font-size: 80px
+	.benefits.serviceProccesBenefits:not(.doubleBnf) .container .bnf-three .bnf-number
+		margin-bottom: 20px
+	.benefits.serviceProccesBenefits:not(.doubleBnf) .container .bnf-three .bnf-title
+		font-size: 14px	 
+	.benefits.doubleBnf.doubleBnfDark .container 
+		.bnf 
+			.bnf-cnt
+				margin-top: -164px !important
+			.bnf-img
+				min-width: 340px
+				margin-left: -69px !important
+	
+	
