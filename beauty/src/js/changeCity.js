@@ -56,7 +56,7 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.345216309848!2d28.6856875!3d50.2668125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G2C7M8P%2BP7!5e0!3m2!1sru!2sua!4v1576752718526!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/salon-0.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
 
         imagesAmount: 7,
 
@@ -231,7 +231,7 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32161.630767479204!2d26.25760338424141!3d50.59794991865695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G28J789%2BJR!5e0!3m2!1sru!2sua!4v1576752786381!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/salon-0.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/{{ salon }}/salon-0.jpg',
 
         imagesAmount: 6,
         salons      : {
@@ -331,6 +331,7 @@ $(document).ready(function () {
   let salon = localStorage.getItem('salon') || ''
   let city = localStorage.getItem('city')
   let width = ''
+  $(`.city-trigger[data-city=${city}]`).toggleClass('active')
   const switchData = data => {
     $('.inst-dynamic').each(function (e) {
       this.setAttribute('href', `${data.instagram}`)
@@ -400,7 +401,7 @@ $(document).ready(function () {
     })
 
     $('.image-about-dynamic').each(function (e) {
-      this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`)
+      this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
     })
   }
 
@@ -493,16 +494,13 @@ $(document).ready(function () {
 
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount
-    console.log(citiesData[city][localization].imagesAmount);
     salon = salon ? salon : city === 'zt' ? 'nail' : 'salon'
-    console.log(salon)
     let imagesAmountSpecialists = citiesData[city][localization].salons[salon].specialists.length
     let specialistsData = citiesData[city][localization].salons[salon].specialists
     let imgPath = `assets/img/about-steffany-salon/${city}/`
     let images = ''
     let imagesSmall = ''
     let imagesSpecialists = ''
-    console.log(citiesData[city][localization].salons[salon].specialists)
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
@@ -519,7 +517,6 @@ $(document).ready(function () {
         </span>
       `
     }
-    console.log(salon);
     for (let i = 0; i < imagesAmountSpecialists; i++) {
       imagesSpecialists += `
         <div class="specialists-item">
