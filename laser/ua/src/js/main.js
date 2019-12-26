@@ -127,7 +127,7 @@ function displayServices(json) {
             checkbox.addEventListener("click", refreshPrice);
           checkbox.value = service.id;
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
-          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} хв`
           servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
         }
       })
