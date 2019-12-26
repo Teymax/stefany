@@ -21,9 +21,9 @@ $(document).ready(function () {
       e.stopPropagation()
       
       let comment = document.querySelector('textarea')
-      let phone = document.querySelector('input[name=phone]')
-      let name = document.querySelector('input[name=name]')
-      let email = document.querySelector('input[name=email]')
+      let phone = document.querySelector('input[name=phoneCons]')
+      let name = document.querySelector('input[name=nameCons]')
+      let email = document.querySelector('input[name=emailCons]')
       
       
       window.mail = {
