@@ -36,10 +36,12 @@ body
 
 	&.fixed
 		overflow: hidden
+
 a
-  text-decoration: none
+	text-decoration: none
+
 a:hover
-  color: $text-color-dark !important
+	color: $text-color-dark !important
 // text - style *******
 .paragraph-text-light
 	@include font('Circe-Regular', 300, 16, 26)
@@ -332,7 +334,8 @@ p, .p-text, .paragraph-text
 
 // buttons - style *******
 .city-switcher
-  padding-top: 46px !important
+	padding-top: 46px !important
+
 .btn-callback, .btn-send
 	width: 100%
 	max-width: 195px
@@ -369,7 +372,7 @@ p, .p-text, .paragraph-text
 
 		span
 			pointer-events: none
-			padding-top: 2px
+			padding-top: 4px
 			@include font('Circe-ExtraBold', 900, 10, 10)
 			text-transform: uppercase
 			letter-spacing: 2.3px
@@ -378,7 +381,7 @@ p, .p-text, .paragraph-text
 	& > svg
 		pointer-events: none
 		width: 14px
-		height: 11px
+		height: 14px
 
 		.st0
 			pointer-events: none
@@ -690,6 +693,12 @@ svg.icon-arrow
 .mt-15
 	margin-top: 15px !important
 
+.modal
+	.btn-callback
+		background: linear-gradient(90deg, rgba(0, 0, 0, .0) 78%, #fff 78% )
+		& > svg
+			margin-right: 20px
+
 .mt-18
 	margin-top: 18px !important
 
@@ -836,6 +845,7 @@ textarea.field
 		align-items: center
 		justify-content: space-between
 		width: 100%
+
 		span
 			display: none
 
@@ -971,6 +981,7 @@ ul.dropdown-menu-list
 	.px-15
 		padding-left: 15px !important
 		padding-right: 15px !important
+
 .slider-block
-  .owl-nav
-    z-index: -1
+	.owl-nav
+		z-index: -1
