@@ -21,16 +21,16 @@ $(document).ready(function () {
       e.stopPropagation()
       
       let comment = document.querySelector('textarea')
-      let phone = document.querySelector('input[name=phone]')
-      let name = document.querySelector('input[name=name]')
-      let email = document.querySelector('input[name=email]')
+      let phone = document.querySelector('input[name=phoneCons]')
+      let name = document.querySelector('input[name=nameCons]')
+      let email = document.querySelector('input[name=emailCons]')
       
       
       window.mail = {
         Host    : 'smtp.gmail.com',
         Username: 'four.progs@gmail.com',
         Password: 'Htndeth0614',
-        To      : 'a.sergeychuk@dotwork.digital',
+        To      : 'malanivvlad@gmail.com',
         From    : email.value
       }
       
