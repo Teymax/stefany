@@ -43,7 +43,7 @@ mixin btnService(text)
 
 mixin sliderServices
   .podology-service-slider.owl-carousel.slider-block
-    each element in [{name:"Видалення мозолів", img:"pd-feet-1", link: 'warts-treatment.html'},{name:"Видалення натоптишів",img:"pd-feet-2", link: 'warts-treatment.html'},{name:"Лікування грибка",img:"pd-feet-3", link: 'nail-fungus-treatment.html'},{name:"Обробка тріщин",img:"pd-feet-4", link: 'cracking.html'},{name:"Профілактичні послуги",img:"pd-feet-5", link: 'prevention.html'},{name:"Лікування врослого нігтя",img:"pd-feet-6", link: 'ingrown-nail.html'},{name:"Мала ортопедія",img:"pd-feet-7", link: 'minorOrthopedics.html'}]
+    each element in [{name:"Видалення мозолів", img:"pd-feet-1", link: 'wart.html'},{name:"Видалення натоптишів",img:"pd-feet-2", link: 'wart.html'},{name:"Лікування грибка",img:"pd-feet-3", link: 'fungus.html'},{name:"Обробка тріщин",img:"pd-feet-4", link: 'treatment.html'},{name:"Профілактичні послуги",img:"pd-feet-5", link: 'prevention.html'},{name:"Лікування врослого нігтя",img:"pd-feet-6", link: 'otronixia.html'},{name:"Мала ортопедія",img:"pd-feet-7", link: 'orthopedics.html'}]
       - let resultPath = "./assets/img/" + element.img + ".png"
       a.diploma-item(href=element.link)
         img.w-100(src=resultPath, alt="result-image")
