@@ -2,7 +2,7 @@ extends layout/main
 
 block content
   .desktop
-    .baba-1
+    .baba-1(data-baba='baba1')
       .default
         .wrapper
           h2 Центры здоровья ног
@@ -12,8 +12,8 @@ block content
         img(src="assets/img/legs.png" alt="Legs").legs
         .bio
           img(src="assets/icon/podology.svg" alt="Podology")
-          p мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата
-    .baba-2
+          p Мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата
+    .baba-2(data-baba='baba2')
       .default
         .wrapper
           h2 Центры лазерной эпиляции и косметологии
@@ -23,8 +23,8 @@ block content
         .baba-crutch
         .bio
           img(src="assets/icon/laser.svg" alt="Laser")
-          p вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж
-    .baba-3
+          p Вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж
+    .baba-3(data-baba='baba3')
       .default
         .wrapper
           h2 Салоны красоты и ногтевого сервиса
@@ -34,7 +34,7 @@ block content
         .baba-crutch
         .bio
           img(src="assets/icon/beauty.svg" alt="Beauty")
-          p вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое
+          p Вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое
   .tablet
     .baba-1
       .default
@@ -46,8 +46,8 @@ block content
         img(src="assets/img/legs.png" alt="Legs").legs
         .bio
           img(src="assets/icon/podology.svg" alt="Podology")
-          p мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата
-          a(href="#")
+          p Мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата
+          a(href="./podology")
     .baba-2
       .default
         .wrapper
@@ -58,8 +58,8 @@ block content
         img(src="assets/img/woman-1-1.png" alt="Woman 1").woman
         .bio
           img(src="assets/icon/laser.svg" alt="Laser")
-          p вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж
-          a(href="#")
+          p Вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж
+          a(href="./laser")
     .baba-3
       .default
         .wrapper
@@ -70,8 +70,8 @@ block content
         img(src="assets/img/woman-2-2.png" alt="Woman 2").woman-2
         .bio
           img(src="assets/icon/beauty.svg" alt="Beauty")
-          p вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое
-          a(href="#")
+          p Вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое
+          a(href="./beauty")
   .mobile
     .baba-1
       .default
@@ -83,8 +83,8 @@ block content
         img(src="assets/img/legs.png" alt="Legs").legs
         .bio
           img(src="assets/icon/podology.svg" alt="Podology")
-          p мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата
-          a(href="#")
+          p Мы позаботимся о здоровье ваших стоп и всего опорно-двигательного аппарата
+          a(href="./podology")
     .baba-2
       .default
         .wrapper
@@ -95,8 +95,8 @@ block content
         img(src="assets/img/woman-1-1.png" alt="Woman 1").woman
         .bio
           img(src="assets/icon/laser.svg" alt="Laser")
-          p вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж
-          a(href="#")
+          p Вы можете удалить волосы лазером, щелочным пилингом, воском или сахаром, поухаживать за кожей лица и тела, а также сделать перманентный макияж
+          a(href="./laser")
     .baba-3
       .default
         .wrapper
@@ -107,5 +107,5 @@ block content
         img(src="assets/img/woman-2-2.png" alt="Woman 2").woman-2
         .bio
           img(src="assets/icon/beauty.svg" alt="Beauty")
-          p вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое
-          a(href="#")
+          p Вы можете сделать маникюр, педикюр, стрижку, прическу, окрашивание, моделирование, окрашивание или ламинирование бровей и многое другое
+          a(href="./beauty")
