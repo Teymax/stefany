@@ -36,7 +36,10 @@ body
 
 	&.fixed
 		overflow: hidden
-
+a
+  text-decoration: none
+a:hover
+  color: $text-color-dark !important
 // text - style *******
 .paragraph-text-light
 	@include font('Circe-Regular', 300, 16, 26)
@@ -328,23 +331,6 @@ p, .p-text, .paragraph-text
 	font-weight: bold
 
 // buttons - style *******
-form
-  .btn-callback
-    display: -webkit-box
-    display: flex
-    -webkit-box-pack: center
-    justify-content: center
-    width: 100%
-    max-width: 195px
-    height: 38px
-    text-decoration: none
-    border-radius: 100px
-    border: 1px solid #A09BCF
-    color: #fff
-    text-transform: uppercase
-    cursor: pointer
-    padding-right: 16px
-    padding-left: 15px
 .city-switcher
   padding-top: 46px !important
 .btn-callback, .btn-send
