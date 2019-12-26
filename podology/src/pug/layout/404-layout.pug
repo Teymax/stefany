@@ -23,6 +23,8 @@ html(lang="en" prefix="og: http://ogp.me/ns#")
     script(src="./js/main.js" defer)
     script(src="https://smtpjs.com/v3/smtp.js")
     script(src="//w245756.yclients.com/widgetJS" charset="UTF-8" defer)
+    script.
+      (function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MNMP2MK');
   body
     include ../modules/overlay
     include ../modules/numbered-section
@@ -36,3 +38,5 @@ html(lang="en" prefix="og: http://ogp.me/ns#")
     include ../sections/learning/modal.pug
 
     block content
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-MNMP2MK' height='0' width='0' style='display:none;visibility:hidden')
