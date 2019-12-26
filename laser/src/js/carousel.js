@@ -5,7 +5,7 @@ $(document).ready(function () {
     window.location.replace = './404.html'
   }
   $('[type="tel"]').mask('+38-(000)-000-00-00')
-  
+
   const callbackForm = $('form.feedback-form')[0],
         callbackBtn  = $('#sendMail')
   if (callbackBtn) {
@@ -19,13 +19,13 @@ $(document).ready(function () {
     callbackForm.addEventListener('submit', e => {
       e.preventDefault()
       e.stopPropagation()
-      
+
       let comment = document.querySelector('textarea')
-      let phone = document.querySelector('input[name=phone]')
-      let name = document.querySelector('input[name=name]')
-      let email = document.querySelector('input[name=email]')
-      
-      
+      let phone = document.querySelector('input[name=phoneCons]')
+      let name = document.querySelector('input[name=nameCons]')
+      let email = document.querySelector('input[name=emailCons]')
+
+
       window.mail = {
         Host    : 'smtp.gmail.com',
         Username: 'four.progs@gmail.com',
@@ -33,7 +33,7 @@ $(document).ready(function () {
         To      : 'a.sergeychuk@dotwork.digital',
         From    : email.value
       }
-      
+
       let details = {
         Subject: 'Users questions and proposals',
         Body   :
@@ -42,7 +42,7 @@ $(document).ready(function () {
 <br>Телефон:  ${phone.value}
 <br>Сообщение:  ${comment.value}`
       }
-      
+
       Email.send({
         ...mail,
         ...details
@@ -51,7 +51,7 @@ $(document).ready(function () {
       email.value = ''
       phone.value = ''
       comment.value = ''
-      !window.payment && $('#thanksPopup').modal('show')
+       $('#thanksPopup').modal('show')
     })
   }
   $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -59,7 +59,7 @@ $(document).ready(function () {
     var idx = $e.index()
     var itemsPerSlide = 4
     var totalItems = $('.carousel-item').length
-    
+
     if (idx >= totalItems - (itemsPerSlide - 1)) {
       var it = itemsPerSlide - (totalItems - idx)
       for (var i = 0; i < it; i++) {
@@ -73,7 +73,7 @@ $(document).ready(function () {
       }
     }
   })
-  
+
   $('.city-trigger').click(function (e) {
     e.preventDefault()
     var city = '.' + $(this).attr('data-city')
@@ -82,8 +82,8 @@ $(document).ready(function () {
     $(this).addClass('active')
     $(city).addClass('city-active')
   })
-  
-  
+
+
   $('.diploma-slider').owlCarousel({
     loop      : true,
     margin    : 35,
@@ -101,11 +101,11 @@ $(document).ready(function () {
       }
     }
   })
-  
+
   $('#closeOverlay').click(function (e) {
     $('#overlay').hide()
   })
-  
+
   // accordion
   $('.card-header').on('click', function () {
     $(this).toggleClass('active').siblings().removeClass('active')
@@ -121,7 +121,7 @@ $(document).ready(function () {
     $('header').toggleClass('open')
     $('body').toggleClass('fixed')
   })
-  
+
   $('body').click(function (event) {
     var dropMenuClosest = event.target.closest('.drop-menu')
     if (dropMenuClosest) {
@@ -132,7 +132,7 @@ $(document).ready(function () {
       $('.drop-menu').removeClass('open')
     }
   })
-  
+
   //checkbox
   $('.checkbox').change(function (e) {
     $(this).parent().toggleClass('checked')
@@ -151,18 +151,18 @@ $(document).ready(function () {
       $('.custom-py-services-price').toggleClass('man-symbol-bg', this.checked)
       $('.list-female').toggleClass('hidden', this.checked)
       $('.list-male').toggleClass('visible', this.checked)
-      
+
     }).change()
   })
-  
+
   //srevice drop menu tablet
   $('.drop-menu').on('click', hidden)
-  
+
   function hidden() {
     $('.drop-content').toggleClass('hidden')
     setTimeout(function () {
       $('.drop-content').toggleClass('scaleY')
     }, 200)
-    
+
   }
 })

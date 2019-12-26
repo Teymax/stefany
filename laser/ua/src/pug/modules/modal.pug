@@ -1,7 +1,7 @@
 #modalServiceListSinugUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
-      h4.text-center.mb-0 Оставьте ваши данные
+      h4.text-center.mb-0 Залишіть ваші дані
       button.close(type='button', data-dismiss='modal', aria-label='Close')
         span(aria-hidden='true')
       .c-content
@@ -22,8 +22,8 @@
     .modal-content.px-1
       button.close(type='button', data-dismiss='modal', aria-label='Close')
         span(aria-hidden='true')
-      h4.text-center Благодарим за оплату!
-      h5.text-center мы свяжемся с Вами в ближайшее время
+      h4.text-center Дякуємо за оплату!
+      h5.text-center ми зв'яжемося з вами найближчим часом
 
 
 #thanksPopup.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanksPopup', aria-hidden='true')
@@ -31,14 +31,14 @@
     .modal-content.px-1
       button.close(type='button', data-dismiss='modal', aria-label='Close')
         span(aria-hidden='true')
-      h4.text-center Спасибо!
-      h5.text-center Мы скоро свяжемся с Вами.
+      h4.text-center Дякую!
+      h5.text-center Ми скоро зв'яжемося з вами.
 
 #sendComplex.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
       form#callComplex.main-form.d-flex.flex-column.align-items-center.pt-5.mt-4.mt-md-0
-        h4.h4-title.text-uppercase.text-color-dark.text-w-bold.text-center Оставьте ваши данные
+        h4.h4-title.text-uppercase.text-color-dark.text-w-bold.text-center Залишіть ваші дані
         p.paragraph-text.text-color-lightdark.text-center.mb-38 та ми вам передзвонимо
         .form-group
           input#fullnameConsult.form-control(name = "fullname" type='text', aria-describedby='emailHelp', placeholder='Ім\'я' required )
@@ -48,7 +48,7 @@
           input#phoneConsult.form-control(name = "phone" type='tel', placeholder='Телефон' required maxlength="19" minlength="19" pattern=".{19}")
           .c-input
             input#service(name = "service", type="hidden" value="1415297")
-            input.btn-submit(type='submit' value='перезвоните мне')
+            input.btn-submit(type='submit' value='передзвоніть мені')
 
 #paymentPopup.modal.fade(tabindex='-1' role='dialog')
   #main
