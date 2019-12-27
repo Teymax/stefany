@@ -119,6 +119,23 @@ section.section.discount
         @include font (CormorantGaramond, 700, 24, 37)
         letter-spacing: 0.15px
         margin-bottom: 28px
+      .paragraph-text
+        position: relative
+      .discard-sale
+        //display: none
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        background-color: #A9A8C6
+        border-radius: 50%
+        width: 58px
+        height: 58px
+        position: absolute
+        top: -14px
+        right: -50px
+        @include font (Circe, 700, 10, 12)
+        color: $text-color-white
 
       .button
         max-width: 154px

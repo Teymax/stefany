@@ -88,7 +88,7 @@ function scripts () {
 }
 
 function clean () {
-  return del( ['build/*'], { force: true } )
+  return del( ['../../build/*', '../../build/**'], { force: true } )
 }
 
 function movePug () {
