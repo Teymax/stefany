@@ -43,6 +43,7 @@ const writeClient = (time, data) => {
   $('.modal form input[type="text"]').val('')
   $('.modal form input[type="email"]').val('')
   
+  
   fetch('https://api.yclients.com/api/v1/book_record/' + partnerId, {
     method: 'POST',
     body  : JSON.stringify(payload),
@@ -71,8 +72,8 @@ function closeAllModals() {
 }
 
 $(document).ready(function () {
-  console.clear()
-  setTimeout(() => console.clear(), 8000)
+  // console.clear()
+  // setTimeout(() => console.clear(), 8000)
   $('[type="tel"]').mask('+38-(000)-000-00-00')
   
   $('.btn-callback').on('click', e => {

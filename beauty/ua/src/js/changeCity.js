@@ -68,7 +68,7 @@ $(document).ready(function () {
             phone      : '098-180-50-90',
             address    : 'вул. Київська, 77, тц "Глобал"',
             schedule   : '9:00 - 21:00',
-            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5933359812803!2d28.685401029267087!3d50.2662872559772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64af91555555%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1576830374046!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5100.697030189027!2d28.6835212!3d50.2667509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1577382926000!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
@@ -131,7 +131,7 @@ $(document).ready(function () {
             phone      : '093-406-0479',
             address    : 'вул. Київська, 77, тц "Глобал"',
             schedule   : '10:00 - 20:00',
-            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d637.5868053754273!2d28.685087529251003!3d50.26677505596847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1576830696418!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.347268440734!2d28.683446015724748!3d50.26677417945044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1577383086491!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
@@ -228,7 +228,7 @@ $(document).ready(function () {
         cityPhone             : '098-500-48-86',
         schedule              : '9-00 - 20-00',
         address               : 'вул. Київська, 4',
-        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32161.630767479204!2d26.25760338424141!3d50.59794991865695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G28J789%2BJR!5e0!3m2!1sru!2sua!4v1576752786381!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/{{ salon }}/salon-0.jpg',
@@ -242,7 +242,7 @@ $(document).ready(function () {
             phone      : '098-500-48-86',
             address    : 'вул. Київська, 4',
             schedule   : '9-00 - 20-00',
-            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32161.630767479204!2d26.25760338424141!3d50.59794991865695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G28J789%2BJR!5e0!3m2!1sru!2sua!4v1576752786381!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.rivne/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
@@ -485,9 +485,6 @@ $(document).ready(function () {
 
   function updateCarouselHTML() {
     setTimeout(() => {
-      const slider = $('.specialists-slider.owl-carousel.slider-block.slider-pad.owl-loaded.owl-drag')[0]
-      width = $('.specialists')[0].querySelector('.owl-item').style.width
-      slider.innerHTML = ''
       location.reload()
     }, 0)
   }
