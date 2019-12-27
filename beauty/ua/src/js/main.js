@@ -108,7 +108,12 @@ $(document).ready(function () {
           '.feedback-form textarea')
           .val()}`
       })
-    } else {
+      $('.feedback-form input[type="email"]').val('')
+      $('.feedback-form input[type="text"]').val('')
+      $('.feedback-form input[type="tel"]').val('')
+      $('.feedback-form textarea').val('')
+    }
+    else {
       $('.feedback-form')[0].reportValidity()
     }
   })
