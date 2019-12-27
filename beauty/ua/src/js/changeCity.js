@@ -236,7 +236,7 @@ $(document).ready(function () {
         imagesAmount: 6,
         salons      : {
           salon: {
-            name       : '',
+            name       : 'Steffany Nail & Cosmetology',
             city       : 'Рівне',
             nameIn     : 'в Рівному',
             phone      : '098-500-48-86',

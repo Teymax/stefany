@@ -82,7 +82,7 @@ $(document).ready(function () {
     }
     console.log(window.serviceText)
   })
-
+  
   function scrollToAnchor(aid) {
     var aTag = $('[data-anchor=\'' + aid + '\']')
     $('html,body').animate({scrollTop: aTag.offset().top}, 'slow')
@@ -100,14 +100,19 @@ $(document).ready(function () {
   
   $('.feedback-form').on('submit', e => {
     e.preventDefault()
-    // console.log('prevented', $('.feedback-form input[type="email"]').val())
-    sendEmail({
-      Subject: 'Обратная связь',
-      From   : $('.feedback-form input[type="email"]').val(),
-      Body   : `Имя: ${$('.feedback-form input[type="text"]')}<br>Email: ${$('.feedback-form input[type="email"]')
-        .val()}<br>Телефон: ${$('.feedback-form input[type="tel"]').val()}<br>Сообщение: ${$('.feedback-form textarea')
-        .val()}`
-    })
+    if ($('.feedback-form')[0].checkValidity()) {
+      sendEmail({
+        Subject: 'Обратная связь',
+        From   : $('.feedback-form input[type="email"]').val(),
+        Body   : `Имя: ${$('.feedback-form input[type="text"]')}<br>Email: ${$('.feedback-form input[type="email"]')
+          .val()}<br>Телефон: ${$('.feedback-form input[type="tel"]').val()}<br>Сообщение: ${$(
+          '.feedback-form textarea')
+          .val()}`
+      })
+    }
+    else {
+      $('.feedback-form')[0].reportValidity()
+    }
   })
   
   function _bookRecord() {
