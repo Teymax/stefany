@@ -1,50 +1,4 @@
 $(document).ready(function () {
-  // const serviceCityData = {
-  //   zt: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-  //       `
-  //     }
-  //   },
-  //   if: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   lutsk: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   lviv: {
-  //     ru: {
-  //       selectedService: `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   rovno: {
-  //     ru: {
-  //       selectedService: `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-  //       `
-  //     }
-  //   }
-  // }
   const citiesData = {
     zt: {
       ru: {
@@ -57,9 +11,9 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
-        
+
         imagesAmount: 7,
-        
+
         salons: {
           nail: {
             name       : 'Steffany Nail',
@@ -97,7 +51,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 5 років',
                 skills    : 'Зробить європейський, класичний, чоловічий, дитячий манікюр, вирівнювання, зміцнення і «ремонт» нігтьової пластини, усі види дизайну, класичний, кислотний і спа-педикюр, парафінотерапію для рук і ніг'
               },
-              
+
               {
                 name      : 'Ольга Петрук',
                 education : 'Майстер нігтьового сервісу',
@@ -121,7 +75,31 @@ $(document).ready(function () {
                 education : 'Майстер нігтьового сервісу',
                 experience: 'Працює вже 6 років',
                 skills    : 'Зробить класичний, комбінований і апаратний манікюр, класичний, комбінований та кислотний педикюр, парафінотерапію для рук і ніг, зміцнення, «ремонт» і нарощування нігтів, усі види нехудожнього дизайну'
-              }
+              },
+              {
+                name      : 'Анастасія Грицик',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування і корекцію нігтів, нескладний дизайн нігтів'
+              },
+              {
+                name      : 'Ірина Демиденко',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування нігтів, усі види дизайну нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Марія Пашковська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування і корекцію нігтів, дизайн (аерографію, втирку, стемпінг), парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Оксана Таргонська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 3 років',
+                skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, нескладний дизайн (френч, стемпінг, втирку), аерографію, парафінотерапію для рук і ніг'
+              },
             ]
           },
           hair: {
@@ -159,7 +137,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 3 роки',
                 skills    : 'Зробить жіночі та чоловічі стрижки, фарбування в один тон, накрутку, укладку, плетіння, догляд за волоссям'
               },
-              
+
               {
                 name      : 'Юлія Павлушина',
                 education : 'Перукар',
@@ -184,7 +162,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 13 років',
                 skills    : 'Зробить чоловічі та жіночі стрижки, фарбування в один тон, складні фарбування, накрутку, укладку, плетіння, догляд за волоссям'
               },
-              
+
               {
                 name      : 'Юлія Сурикова',
                 education : 'Перукар',
@@ -220,7 +198,7 @@ $(document).ready(function () {
         }
       }
     },
-    
+
     rovno: {
       ru: {
         cityName              : 'Рівне',
@@ -232,7 +210,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/{{ salon }}/salon-0.jpg',
-        
+
         imagesAmount: 6,
         salons      : {
           salon: {
@@ -270,7 +248,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 2 роки',
                 skills    : 'Зробить європейський, класичний, комбінований і дитячий манікюр, усі види педикюру, вирівнювання і корекцію нігтьової пластини, парафінотерапію для рук і ніг'
               },
-              
+
               {
                 name      : 'Леся Парух',
                 education : 'Brow-майстер, візажист',
@@ -295,7 +273,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 6 років',
                 skills    : 'Зробить класичний, комбінований і чоловічий манікюр, зміцнення, нарощування і корекцію нігтів'
               },
-              
+
               {
                 name      : 'Яна Галицька',
                 education : 'Майстер нігтьового сервісу',
@@ -319,7 +297,7 @@ $(document).ready(function () {
                 education : 'Майстер нігтьового сервісу',
                 experience: 'Працює вже 3 роки',
                 skills    : 'Зробить усі види манікюру, класичний, комбінований і спа-педікюр, вирівнювання, зміцнення і нарощування нігтів, парафінотерапію для рук і ніг'
-              }, 0
+              },
             ]
           }
         }
@@ -355,11 +333,11 @@ $(document).ready(function () {
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + data.nameIn
     })
-    
+
     $('.address-dynamic').each(function (e) {
       this.innerText = data.address
     })
-    
+
     $('.map-dynamic').each(function (e) {
       this.innerHTML = data.map
     })
@@ -372,20 +350,20 @@ $(document).ready(function () {
   if (city) {
     changeDataForCity()
   }
-  
+
   if (city === 'rovno') {
     $('header [data-not-available-rovno]').remove()
     $('[data-not-available-rovno] a.btn-callback').remove()
   }
-  
-  
+
+
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
     switchData(citiesData[city][localization].salons[salon])
     localStorage.setItem('salon', salon)
     updateCarouselHTML()
   })
-  
+
   function changeDataForCity() {
     if (city === 'zt') {
       $('.city-switcher').show()
@@ -398,18 +376,18 @@ $(document).ready(function () {
       salon = 'salon'
       localStorage.setItem('salon', 'salon')
     }
-    
+
     switchData(citiesData[city][localization].salons[salon])
-    
+
     $('.service-li-dynamic').each(function (e) {
       this.innerHTML = serviceCityData[city][localization].selectedService
     })
-    
+
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
     })
   }
-  
+
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
@@ -424,7 +402,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -444,13 +422,13 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
       videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
-    
+
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
       navContainer: '.video-nav-slider-dots',
       loop        : false,
@@ -459,7 +437,7 @@ $(document).ready(function () {
       dots        : false,
       items       : 1
     })
-    
+
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
@@ -478,22 +456,22 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-nav-slider-dots .owl-next').click(function () {
       videoSliderDots.trigger('next.owl.carousel')
     })
-    
+
     $('.video-nav-slider-dots .owl-prev').click(function () {
       videoSliderDots.trigger('prev.owl.carousel', [300])
     })
   }
-  
+
   function updateCarouselHTML() {
     setTimeout(() => {
       location.reload()
     }, 0)
   }
-  
+
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount
     salon = salon ? salon : city === 'zt' ? 'nail' : 'salon'
@@ -510,7 +488,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
@@ -534,21 +512,21 @@ $(document).ready(function () {
         </div>
       `
     }
-    
+
     return {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists
     }
   }
-  
+
   function changeImagesSalon() {
     $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger(
       'refresh.owl.carousel')
     $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger(
       'refresh.owl.carousel')
   }
-  
+
   function initCities() {
     initCarousels()
     $(document).click(function (e) {
@@ -563,7 +541,7 @@ $(document).ready(function () {
       }
     })
   }
-  
+
   if (document.querySelector('a.nav-link-text')) {
     initCities()
   }
