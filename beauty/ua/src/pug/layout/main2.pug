@@ -5,6 +5,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Stefany | Beauty
+    meta(property="og:image" content="assets/img/favicon.png")
+    meta(property="og:title" content="Steffany | Косметологія")
+    meta(property="og:site_name" content="steffany.ua")
+    meta(property="og:url" content="http://steffany.dotwork.digital/beauty/ua")
     link(rel="shortcut icon", href="./assets/img/favicon.png", type="image/x-icon")
     link(rel="stylesheet", href="./css/style.css")
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
@@ -13,11 +17,13 @@ html(lang="en")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
     script(src="./js/main.js")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?' & l = '+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MNMP2MK');
   body
     include ../mixins
     include ../modules/header
     include ../modules/cnt-info
 
-  block content
-
-
+    block content
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-MNMP2MK' height='0' width='0' style='display:none;visibility:hidden')
