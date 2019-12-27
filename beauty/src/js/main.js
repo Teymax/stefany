@@ -11,7 +11,7 @@ window.mail = {
   Host    : 'smtp.gmail.com',
   Username: 'four.progs@gmail.com',
   Password: 'Htndeth0614',
-  To      : 'a.sergeychuk@dotwork.digital'
+  To      : 'help@steffany.ua'
 }
 window.serviceId = 2495961
 window.serviceText = ''

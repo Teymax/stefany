@@ -30,7 +30,7 @@ $(document).ready(function () {
         Host    : 'smtp.gmail.com',
         Username: 'four.progs@gmail.com',
         Password: 'Htndeth0614',
-        To      : 'a.sergeychuk@dotwork.digital',
+        To      : 'help@steffany.ua',
         From    : email.value
       }
 

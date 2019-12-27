@@ -2,7 +2,7 @@ window.mail = {
   Host    : 'smtp.gmail.com',
   Username: 'four.progs@gmail.com',
   Password: 'Htndeth0614',
-  To      : 'a.sergeychuk@dotwork.digital'
+  To      : 'pod@steffany.ua'
 }
 
 window.patterns = {
