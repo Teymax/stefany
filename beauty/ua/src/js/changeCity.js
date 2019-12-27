@@ -51,6 +51,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 5 років',
                 skills    : 'Зробить європейський, класичний, чоловічий, дитячий манікюр, вирівнювання, зміцнення і «ремонт» нігтьової пластини, усі види дизайну, класичний, кислотний і спа-педикюр, парафінотерапію для рук і ніг'
               },
+
               {
                 name      : 'Ольга Петрук',
                 education : 'Майстер нігтьового сервісу',
@@ -191,7 +192,7 @@ $(document).ready(function () {
                 education : 'Перукар',
                 experience: 'Працює вже 8 років',
                 skills    : 'Зробить чоловічі та жіночі стрижки, фарбування в один тон, складні фарбування, догляд за волоссям'
-              },
+              }
             ]
           }
         }
@@ -213,7 +214,7 @@ $(document).ready(function () {
         imagesAmount: 6,
         salons      : {
           salon: {
-            name       : '',
+            name       : 'Steffany Nail & Cosmetology',
             city       : 'Рівне',
             nameIn     : 'в Рівному',
             phone      : '098-500-48-86',
@@ -272,6 +273,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 6 років',
                 skills    : 'Зробить класичний, комбінований і чоловічий манікюр, зміцнення, нарощування і корекцію нігтів'
               },
+
               {
                 name      : 'Яна Галицька',
                 education : 'Майстер нігтьового сервісу',
@@ -347,6 +349,11 @@ $(document).ready(function () {
   }
   if (city) {
     changeDataForCity()
+  }
+
+  if (city === 'rovno') {
+    $('header [data-not-available-rovno]').remove()
+    $('[data-not-available-rovno] a.btn-callback').remove()
   }
 
 
@@ -535,8 +542,8 @@ $(document).ready(function () {
     })
   }
 
-  if (document.querySelector('a.nav-link-text'))
-
-  initCities()
+  if (document.querySelector('a.nav-link-text')) {
+    initCities()
+  }
 })
 

@@ -260,7 +260,7 @@ $(document).ready(function () {
         imagesAmount: 6,
         salons      : {
           salon: {
-            name       : '',
+            name       : 'Steffany Nails & Cosmetology',
             city       : 'Ровно',
             nameIn     : 'в Ровно',
             phone      : '098-500-48-86',
@@ -397,6 +397,10 @@ $(document).ready(function () {
     changeDataForCity()
   }
 
+  if (city === 'rovno') {
+    $('header [data-not-available-rovno]').remove()
+    $('[data-not-available-rovno] a.btn-callback').remove()
+  }
 
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
