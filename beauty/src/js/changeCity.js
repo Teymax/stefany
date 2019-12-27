@@ -373,6 +373,10 @@ $(document).ready(function () {
     changeDataForCity()
   }
   
+  if (city === 'rovno') {
+    $('header [data-not-available-rovno]').remove()
+    $('[data-not-available-rovno] a.btn-callback').remove()
+  }
   
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon

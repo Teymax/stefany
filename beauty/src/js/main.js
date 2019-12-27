@@ -41,7 +41,7 @@ const writeClient = (time, data) => {
   $('#thanksPopup').modal('show')
   $('.modal form input[type="tel"]').val('')
   $('.modal form input[type="text"]').val('')
-  $('.modal form input[type="email"]').val('')
+  $('.moda.l form input[type="email"]').val('')
   
   
   fetch('https://api.yclients.com/api/v1/book_record/' + partnerId, {
