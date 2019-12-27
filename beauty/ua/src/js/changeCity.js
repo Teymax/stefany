@@ -1,50 +1,4 @@
 $(document).ready(function () {
-  // const serviceCityData = {
-  //   zt: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-  //       `
-  //     }
-  //   },
-  //   if: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   lutsk: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   lviv: {
-  //     ru: {
-  //       selectedService: `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   rovno: {
-  //     ru: {
-  //       selectedService: `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-  //       `
-  //     }
-  //   }
-  // }
   const citiesData = {
     zt: {
       ru: {
@@ -97,7 +51,6 @@ $(document).ready(function () {
                 experience: 'Працює вже 5 років',
                 skills    : 'Зробить європейський, класичний, чоловічий, дитячий манікюр, вирівнювання, зміцнення і «ремонт» нігтьової пластини, усі види дизайну, класичний, кислотний і спа-педикюр, парафінотерапію для рук і ніг'
               },
-
               {
                 name      : 'Ольга Петрук',
                 education : 'Майстер нігтьового сервісу',
@@ -121,6 +74,30 @@ $(document).ready(function () {
                 education : 'Майстер нігтьового сервісу',
                 experience: 'Працює вже 6 років',
                 skills    : 'Зробить класичний, комбінований і апаратний манікюр, класичний, комбінований та кислотний педикюр, парафінотерапію для рук і ніг, зміцнення, «ремонт» і нарощування нігтів, усі види нехудожнього дизайну'
+              },
+              {
+                name      : 'Анастасія Грицик',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування і корекцію нігтів, нескладний дизайн нігтів'
+              },
+              {
+                name      : 'Ірина Демиденко',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування нігтів, усі види дизайну нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Марія Пашковська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування і корекцію нігтів, дизайн (аерографію, втирку, стемпінг), парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Оксана Таргонська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 3 років',
+                skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, нескладний дизайн (френч, стемпінг, втирку), аерографію, парафінотерапію для рук і ніг'
               },
             ]
           },
@@ -295,7 +272,6 @@ $(document).ready(function () {
                 experience: 'Працює вже 6 років',
                 skills    : 'Зробить класичний, комбінований і чоловічий манікюр, зміцнення, нарощування і корекцію нігтів'
               },
-
               {
                 name      : 'Яна Галицька',
                 education : 'Майстер нігтьового сервісу',
@@ -319,7 +295,7 @@ $(document).ready(function () {
                 education : 'Майстер нігтьового сервісу',
                 experience: 'Працює вже 3 роки',
                 skills    : 'Зробить усі види манікюру, класичний, комбінований і спа-педікюр, вирівнювання, зміцнення і нарощування нігтів, парафінотерапію для рук і ніг'
-              },0
+              },
             ]
           }
         }
