@@ -252,7 +252,7 @@ $(document).ready(function () {
     rv: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
   }
   
-  const urlCity      = location.pathname.slice(1).split('/')[2],
+  const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
   
   // location.pathname.slice(1).split('/')[2]

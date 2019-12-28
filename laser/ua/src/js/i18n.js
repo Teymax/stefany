@@ -16,7 +16,7 @@ $(document).ready(function () {
     e.preventDefault()
     const i18n = e.target.dataset.i18n
     const p = location.pathname.split('/').slice(-1)[0]
-    const urlCity      = location.pathname.slice(1).split('/')[2],
+    const urlCity      = location.pathname.slice(1).split('/')[1],
           filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
     const h = filteredCity !== 'zt' ? window.patterns[i18n].replace('{{ city }}', filteredCity).replace('$1',
       p) : window.patterns[i18n].replace('/{{ city }}', '').replace('$1', p)

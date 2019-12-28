@@ -1,6 +1,6 @@
 window.patterns = {
   ru: 'beauty/{{ city }}/$1',
-  ua: 'beauty/ua/{{ city }}/$1'
+  ua: 'beauty/{{ city }}/ua/$1'
 }
 
 window.nav = {

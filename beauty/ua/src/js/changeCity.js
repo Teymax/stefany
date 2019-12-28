@@ -306,9 +306,9 @@ $(document).ready(function () {
   }
   const nav = {
     zt: 'beauty/ua/{{ page }}',
-    rv: 'beauty/ua/rv/{{ page }}'
+    rv: 'beauty/rv/ua/{{ page }}'
   }
-  const urlCity      = location.pathname.slice(1).split('/')[2],
+  const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
   let localization = 'ru'
   let carouselsHTML = null
