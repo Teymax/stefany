@@ -1,6 +1,6 @@
 window.patterns = {
-  ru: 'beauty/$1',
-  ua: 'beauty/ua/$1'
+  ru: 'beauty/{{ city }}/$1',
+  ua: 'beauty/ua/{{ city }}/$1'
 }
 
 window.nav = {
@@ -16,9 +16,11 @@ $(document).ready(function () {
     e.preventDefault()
     const i18n = e.target.dataset.i18n
     const p = location.pathname.split('/').slice(-1)[0]
-    const h = window.patterns[i18n].replace('$1', p)
+    const urlCity      = location.pathname.slice(1).split('/')[1],
+          filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
+    const h = window.patterns[i18n].replace('{{ city }}', filteredCity).replace('$1', p)
     if (location.pathname.substr(1) !== h) {
       location.href = '/' + h
     }
   })
-});
+})
