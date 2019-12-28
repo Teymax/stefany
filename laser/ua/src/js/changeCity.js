@@ -245,11 +245,11 @@ $(document).ready(function () {
   }
   
   const nav = {
-    zt: '{{ page }}',
-    if: 'if/{{ page }}',
-    lv: 'lv/{{ page }}',
-    lt: 'lt/{{ page }}',
-    rv: 'rv/{{ page }}'
+    zt: 'ua/{{ page }}',
+    if: 'ua/if/{{ page }}',
+    lv: 'ua/lv/{{ page }}',
+    lt: 'ua/lt/{{ page }}',
+    rv: 'ua/rv/{{ page }}'
   }
   
   const urlCity      = location.pathname.slice(1).split('/')[2],
