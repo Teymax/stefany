@@ -65,9 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function radioClick() {
   clearTotalPrice();
   let checkedRadio = document.querySelector('input[type="radio"][name="service"]:checked')
-  console.log(checkedRadio.dataset.name);
-  console.log(checkedRadio.dataset.proc);
-  console.log(checkedRadio.dataset.price);
+
   document.querySelector('#yclient_form .c-content-count').innerHTML =
     `
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>

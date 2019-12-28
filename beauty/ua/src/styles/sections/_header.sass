@@ -162,11 +162,6 @@ ul.dropdown-menu-list
 
 
 header
-	.btn-callback
-		margin-left: auto
-		.text-section
-			span
-				margin-top: 0
 	padding-bottom: 64px
 	@include media-breakpoint-down(lg)
 		padding-bottom: 0
@@ -198,6 +193,9 @@ header
 	a
 		color: #4D5259 !important
 
+	.btn-callback
+		margin-left: auto
+
 		.text-section
 			span
 				margin-top: 0
@@ -212,6 +210,7 @@ header
 			@include media-breakpoint-down(sm)
 		//color: #fff
 		svg
+
 			@include media-breakpoint-down(sm)
 	//fill: #fff !important
 	.c-row
@@ -454,13 +453,6 @@ nav.header-nav
 					color: #ffffff !important
 					opacity: 1 !important
 	header
-		.btn-callback
-			margin-left: auto
-
-			.text-section
-				span
-					margin-top: 0
-
 		&.open
 			.menu-trigger
 				//position: relative

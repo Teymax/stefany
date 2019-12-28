@@ -16,14 +16,12 @@
                 li.thin-text.mb-15 Макияж со стрелками
                 li.thin-text.mb-15 Кошачий глаз
                 li.thin-text.mb-15 Макияж с акцентом на складке века
-              a.btn-callback.d-flex.align-items-center.justify-content-between.mt-15.mx-auto.mr-sm-auto.ml-sm-0(href="#",  data-toggle='modal', data-target='#appointmentModal')
-                span.d-flex.align-items-center.justify-content-between
+              a.btn-callback
+                .text-section
+                  +penSvg
                   span записаться
-                svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 11 8', style='enable-background:new 0 0 11 8;', xml:space='preserve')
-                  style(type='text/css').
-                    .st0{fill:#D11111;}
-                  path.st0(d='M10.4,4.4c0.2-0.2,0.2-0.5,0-0.7L7.2,0.5C7,0.3,6.7,0.3,6.5,0.5C6.3,0.7,6.3,1,6.5,1.2L9.3,4L6.5,6.8\
-                  C6.3,7,6.3,7.3,6.5,7.5c0.2,0.2,0.5,0.2,0.7,0L10.4,4.4z M0,4.5h10v-1H0V4.5z')
+                .arrow-section
+                  +arrowSvg
             .col-12.col-md-6.col-xl-7.order-1.order-md-1
               p.p-bold.mb-22 Вы сможете сделать макияж в зависимости от события:
               ul.info-list.p-0
