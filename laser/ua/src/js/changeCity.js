@@ -5,7 +5,7 @@ $(document).ready(function () {
         selectedService:
             `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiy">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
@@ -24,7 +24,7 @@ $(document).ready(function () {
         selectedService:
           `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiy">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
         `
       }
     },
@@ -56,7 +56,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
-        
+
         imagesAmount           : 6,
         imagesAmountSpecialists: 7,
         specialists            : [
@@ -115,7 +115,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
-        
+
         imagesAmount           : 9,
         imagesAmountSpecialists: 2,
         specialists            : [
@@ -144,8 +144,8 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lutsk/video-slider-0@2x.jpg',
-        
-        
+
+
         imagesAmount           : 9,
         imagesAmountSpecialists: 3,
         specialists            : [
@@ -180,8 +180,8 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.lviv/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lviv/video-slider-0@2x.jpg',
-        
-        
+
+
         imagesAmount           : 10,
         imagesAmountSpecialists: 2,
         specialists            : [
@@ -210,8 +210,8 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/video-slider-0@2x.jpg',
-        
-        
+
+
         imagesAmount           : 10,
         imagesAmountSpecialists: 4,
         specialists            : [
@@ -243,7 +243,7 @@ $(document).ready(function () {
       }
     }
   }
-  
+
   const nav = {
     zt: 'lazernaya-epilyatsiya/ua/{{ page }}',
     if: 'lazernaya-epilyatsiya/if/ua/{{ page }}',
@@ -251,10 +251,10 @@ $(document).ready(function () {
     lt: 'lazernaya-epilyatsiya/lt/ua/{{ page }}',
     rv: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
   }
-  
+
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
-  
+
   // location.pathname.slice(1).split('/')[2]
   let localization = 'ru'
   let carouselsHTML = null
@@ -267,9 +267,9 @@ $(document).ready(function () {
   // if (city) {
   changeDataForCity()
   // }
-  
+
   $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
-  
+
   function changeDataForCity() {
     $('.inst-dynamic').each(function (e) {
       this.setAttribute('href', `${citiesData[city][localization].cityInstagram}`)
@@ -287,26 +287,26 @@ $(document).ready(function () {
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + citiesData[city][localization].cityNameIn
     })
-    
+
     $('.address-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].address
     })
-    
+
     $('.map-dynamic').each(function (e) {
       this.innerHTML = citiesData[city][localization].cityMap
     })
-    
+
     $('.service-li-dynamic').each(function (e) {
       this.innerHTML = serviceCityData[city][localization].selectedService
     })
-    
+
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`)
     })
-    
-    
+
+
   }
-  
+
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
@@ -321,7 +321,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -341,13 +341,13 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
       videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
-    
+
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
       navContainer: '.video-nav-slider-dots',
       loop        : false,
@@ -356,7 +356,7 @@ $(document).ready(function () {
       dots        : false,
       items       : 1
     })
-    
+
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
@@ -375,16 +375,16 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-nav-slider-dots .owl-next').click(function () {
       videoSliderDots.trigger('next.owl.carousel')
     })
-    
+
     $('.video-nav-slider-dots .owl-prev').click(function () {
       videoSliderDots.trigger('prev.owl.carousel', [300])
     })
   }
-  
+
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount
     let imagesAmountSpecialists = citiesData[city][localization].imagesAmountSpecialists
@@ -393,7 +393,7 @@ $(document).ready(function () {
     let images = ''
     let imagesSmall = ''
     let imagesSpecialists = ''
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
@@ -401,7 +401,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
@@ -410,7 +410,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmountSpecialists; i++) {
       imagesSpecialists += `
         <div class="specialists-item">
@@ -426,21 +426,21 @@ $(document).ready(function () {
         </div>
       `
     }
-    
+
     return {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists
     }
   }
-  
+
   function changeImagesSalon() {
     $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger(
       'refresh.owl.carousel')
     $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger(
       'refresh.owl.carousel')
   }
-  
+
   function initCities() {
     initCarousels()
     $(document).click(function (e) {
@@ -466,8 +466,8 @@ $(document).ready(function () {
       }
     })
   }
-  
+
   initCities()
-  
+
 })
 
