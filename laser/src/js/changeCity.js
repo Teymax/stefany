@@ -4,10 +4,10 @@ $(document).ready(function () {
       ru: {
         selectedService:
             `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation.html">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya.html">Нано-эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring.html">Шугаринг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya.html">Восковая эпиляция\`</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугаринг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
         `
       }
     },
@@ -15,7 +15,7 @@ $(document).ready(function () {
       ru: {
         selectedService:
             `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation.html">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
         `
       }
     },
@@ -23,24 +23,24 @@ $(document).ready(function () {
       ru: {
         selectedService:
             `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation.html">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya.html">Нано-эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
         `
       }
     },
     lv: {
       ru: {
         selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
         `
       }
     },
     rv: {
       ru: {
         selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation.html">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring.html">Шугаринг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугаринг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing">Восковая эпиляция\`</a></li>
         `
       }
     }
