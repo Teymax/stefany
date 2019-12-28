@@ -5,20 +5,25 @@ section.section.contact-about-zt
         h2.form-title.text-color-dark Записуйтеся та приходьте на процедури до Центру лазерної епіляції і косметології Steffany!
         .tablet-container
           //p.sub-title.letter-spacing-1.mb-4 Steffany Cosmetology
-          +cnt-info
-          h2.form-title.text-color-dark.mb-0.mt-2 Хочете зв'язатися особисто із власником Steffany Lazer & Cosmetology?
+        +cnt-info
+        h2.form-title.text-color-dark Хочете зв'язатися особисто із власником Steffany Lazer & Cosmetology?
         form.feedback-form.row
           .col-12.col-md-4.col-xl-5.px-xl-0
-            input(type="text" placeholder="Ваше ім'я" name="name")
-            input(type="email" placeholder="Ваш email" name="email")
-            input(type="tel" placeholder="Ваше ім'я" name="phone" required maxlength="19" minlength="19" pattern=".{19}")
+            input(type="text" placeholder="Ваше ім'я" name="nameCons" required)
+            input(type="email" placeholder="Ваш email" name="emailCons" required )
+            input.mb-0(type="tel" placeholder="телефон" name="phoneCons" required maxlength="19" minlength="19" pattern=".{19}")
+            input(type='submit' data-contact-submit style="display:none;")
           .col-12.col-md-8.col-xl-7.pl-xl-0.pr-xl-3
-            textarea(placeholder="Про що ви хочете розповісти?" name="message").mt-4.mt-md-0
+            textarea(placeholder="Про що ви хочете розповісти?" name="message" required ).mt-4.mt-md-0
         .row.d-flex.justify-content-end.no-gutters
-          +customBtn('Відправити')
+        //+customBtn('отправить')
+        #sendMail.btn-callback.no-svg.ml-auto(data-btn-contact-submit)
+          .text-section
+            span Відправити
+          .arrow-section
+            +arrowSvg
       .col-12.col-xl-7
         .map-dynamic.map.h-100
-
 .container
   hr.m-0.d-none.d-lg-block
 
