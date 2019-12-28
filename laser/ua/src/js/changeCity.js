@@ -4,10 +4,10 @@ $(document).ready(function () {
       ru: {
         selectedService:
             `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугарінг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Воскова епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiy">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
       }
     },
@@ -15,32 +15,32 @@ $(document).ready(function () {
       ru: {
         selectedService:
             `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
         `
       }
     },
-    lutsk: {
+    lt: {
       ru: {
         selectedService:
             `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiy">Нано-епіляція</a></li>
         `
       }
     },
-    lviv: {
+    lv: {
       ru: {
         selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
         `
       }
     },
-    rovno: {
+    rv: {
       ru: {
         selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугарінг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Воскова епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
       }
     }
@@ -134,7 +134,7 @@ $(document).ready(function () {
         ]
       }
     },
-    lutsk: {
+    lt: {
       ru: {
         cityName: 'Луцьк',
         cityNameIn: 'у Луцьку',
@@ -170,7 +170,7 @@ $(document).ready(function () {
         ]
       }
     },
-    lviv: {
+    lv: {
       ru: {
         cityName: 'Львів',
         cityNameIn: 'у Львові',
@@ -200,7 +200,7 @@ $(document).ready(function () {
         ]
       }
     },
-    rovno: {
+    rv: {
       ru: {
         cityName: 'Рівне',
         cityNameIn: 'у Рівному',
