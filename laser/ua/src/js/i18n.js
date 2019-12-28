@@ -1,6 +1,6 @@
 window.patterns = {
   ru: 'lazernaya-epilyatsiya/{{ city }}/$1',
-  ua: 'lazernaya-epilyatsiya/ua/{{ city }}/$1'
+  ua: 'lazernaya-epilyatsiya/{{ city }}/ua/$1'
 }
 
 window.nav = {

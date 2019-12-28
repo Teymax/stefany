@@ -246,10 +246,10 @@ $(document).ready(function () {
   
   const nav = {
     zt: 'lazernaya-epilyatsiya/ua/{{ page }}',
-    if: 'lazernaya-epilyatsiya/ua/if/{{ page }}',
-    lv: 'lazernaya-epilyatsiya/ua/lv/{{ page }}',
-    lt: 'lazernaya-epilyatsiya/ua/lt/{{ page }}',
-    rv: 'lazernaya-epilyatsiya/ua/rv/{{ page }}'
+    if: 'lazernaya-epilyatsiya/if/ua/{{ page }}',
+    lv: 'lazernaya-epilyatsiya/lv/ua/{{ page }}',
+    lt: 'lazernaya-epilyatsiya/lt/ua/{{ page }}',
+    rv: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
   }
   
   const urlCity      = location.pathname.slice(1).split('/')[2],
