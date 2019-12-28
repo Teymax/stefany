@@ -351,8 +351,8 @@ $(document).ready(function () {
     }
   }
   const nav = {
-    zt: '{{ page }}',
-    rv: 'rv/{{ page }}'
+    zt: 'beauty/{{ page }}',
+    rv: 'beauty/rv/{{ page }}'
   }
   let localization = 'ru'
   let carouselsHTML = null

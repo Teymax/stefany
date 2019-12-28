@@ -305,11 +305,8 @@ $(document).ready(function () {
     }
   }
   const nav = {
-    zt: 'ua/{{ page }}',
-    if: 'ua/if/{{ page }}',
-    lv: 'ua/lv/{{ page }}',
-    lt: 'ua/lt/{{ page }}',
-    rv: 'ua/rv/{{ page }}'
+    zt: 'beauty/ua/{{ page }}',
+    rv: 'beauty/ua/rv/{{ page }}'
   }
   const urlCity      = location.pathname.slice(1).split('/')[2],
         filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'

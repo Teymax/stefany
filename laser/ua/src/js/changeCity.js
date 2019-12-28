@@ -245,11 +245,11 @@ $(document).ready(function () {
   }
   
   const nav = {
-    zt: 'ua/{{ page }}',
-    if: 'ua/if/{{ page }}',
-    lv: 'ua/lv/{{ page }}',
-    lt: 'ua/lt/{{ page }}',
-    rv: 'ua/rv/{{ page }}'
+    zt: 'lazernaya-epilyatsiya/ua/{{ page }}',
+    if: 'lazernaya-epilyatsiya/ua/if/{{ page }}',
+    lv: 'lazernaya-epilyatsiya/ua/lv/{{ page }}',
+    lt: 'lazernaya-epilyatsiya/ua/lt/{{ page }}',
+    rv: 'lazernaya-epilyatsiya/ua/rv/{{ page }}'
   }
   
   const urlCity      = location.pathname.slice(1).split('/')[2],

@@ -244,11 +244,11 @@ $(document).ready(function () {
     }
   }
   const nav = {
-    zt: '{{ page }}',
-    if: 'if/{{ page }}',
-    lv: 'lv/{{ page }}',
-    lt: 'lt/{{ page }}',
-    rv: 'rv/{{ page }}'
+    zt: 'lazernaya-epilyatsiya/{{ page }}',
+    if: 'lazernaya-epilyatsiya/if/{{ page }}',
+    lv: 'lazernaya-epilyatsiya/lv/{{ page }}',
+    lt: 'lazernaya-epilyatsiya/lt/{{ page }}',
+    rv: 'lazernaya-epilyatsiya/rv/{{ page }}'
   }
   let localization = 'ru'
   let carouselsHTML = null
@@ -263,9 +263,9 @@ $(document).ready(function () {
   //   localStorage.setItem('city', city)
   // }
   changeDataForCity()
-  if (city) {
-    changeDataForCity()
-  }
+  // if (city) {
+  //   changeDataForCity()
+  // }
   
   $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
   
