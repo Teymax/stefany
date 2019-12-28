@@ -199,7 +199,7 @@ $(document).ready(function () {
       }
     },
 
-    rovno: {
+    rv: {
       ru: {
         cityName              : 'Рівне',
         cityNameIn            : 'в Рівному',
@@ -351,7 +351,7 @@ $(document).ready(function () {
     changeDataForCity()
   }
 
-  if (city === 'rovno') {
+  if (city === 'rv') {
     $('header [data-not-available-rovno]').remove()
     $('[data-not-available-rovno] a.btn-callback').remove()
   }

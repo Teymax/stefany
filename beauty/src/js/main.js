@@ -5,7 +5,7 @@ const managerId = 791383
 let servicesArr = []
 const cities = {
   zt   : 'Житомир',
-  rovno: 'Ровно'
+  rv: 'Ровно'
 }
 window.mail = {
   Host    : 'smtp.gmail.com',

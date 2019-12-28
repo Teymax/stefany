@@ -3,7 +3,7 @@ $(document).ready(function () {
     zt: {
       ru: {
         selectedService:
-            `
+          `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
@@ -14,28 +14,28 @@ $(document).ready(function () {
     if: {
       ru: {
         selectedService:
-            `
+          `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
         `
       }
     },
-    lutsk: {
+    lt: {
       ru: {
         selectedService:
-            `
+          `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
         `
       }
     },
-    lviv: {
+    lv: {
       ru: {
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
         `
       }
     },
-    rovno: {
+    rv: {
       ru: {
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
@@ -48,279 +48,291 @@ $(document).ready(function () {
   const citiesData = {
     zt: {
       ru: {
-        cityName: 'Житомир',
-        cityNameIn: 'в Житомире',
-        cityPhone: '096-205-50-30',
-        address: 'ул. Киевская, 84',
-        cityMap: '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' +'    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-        cityInstagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
-        cityFacebook: 'https://www.facebook.com/steffany.ua/',
+        cityName              : 'Житомир',
+        cityNameIn            : 'в Житомире',
+        cityPhone             : '096-205-50-30',
+        address               : 'ул. Киевская, 84',
+        cityMap               : '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
-
-        imagesAmount: 6,
+        
+        imagesAmount           : 6,
         imagesAmountSpecialists: 7,
-        specialists: [
+        specialists            : [
           {
-            name: 'Кос Инна',
-            education: 'По образованию медсестра',
+            name      : 'Кос Инна',
+            education : 'По образованию медсестра',
             experience: 'Работает уже 7 лет',
-            skills: 'Сделает лазерную эпиляцию, восковую депиляцию, шугаринг, пилинг, уходовые процедуры, индивидуальные программы с учетом состояния и типа кожи'
+            skills    : 'Сделает лазерную эпиляцию, восковую депиляцию, шугаринг, пилинг, уходовые процедуры, индивидуальные программы с учетом состояния и типа кожи'
           },
           {
-            name: 'Виктория Демчук',
-            education: 'По образованию косметолог',
+            name      : 'Виктория Демчук',
+            education : 'По образованию косметолог',
             experience: 'Работает уже 7 лет',
-            skills: 'Сделает все виды чисток, пилингов, уходовых процедур, лазерную эпиляцию, все виды депиляций, подбор домашнего ухода'
+            skills    : 'Сделает все виды чисток, пилингов, уходовых процедур, лазерную эпиляцию, все виды депиляций, подбор домашнего ухода'
           },
           {
-            name: 'Ульяна Кравчук',
-            education: 'По образованию медицинский работник.',
+            name      : 'Ульяна Кравчук',
+            education : 'По образованию медицинский работник.',
             experience: 'Работает уже 8 лет',
-            skills: 'Сделает лазерную эпиляцию, эстетическую косметологию, шугаринг, восковую эпиляцию'
+            skills    : 'Сделает лазерную эпиляцию, эстетическую косметологию, шугаринг, восковую эпиляцию'
           },
           {
-            name: 'Татьяна Огир',
-            education: 'По образованию медсестра.',
+            name      : 'Татьяна Огир',
+            education : 'По образованию медсестра.',
             experience: 'Работает уже 18 лет',
-            skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
+            skills    : 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
           },
           {
-            name: 'Инна Степанчук',
-            education: 'По образованию фармацевт.',
+            name      : 'Инна Степанчук',
+            education : 'По образованию фармацевт.',
             experience: 'Работает уже 3 года',
-            skills: 'Сделает перманентный макияж, лазерную эпиляцию, восковую депиляцию, шугаринг, чистку и пилинг лица'
+            skills    : 'Сделает перманентный макияж, лазерную эпиляцию, восковую депиляцию, шугаринг, чистку и пилинг лица'
           },
           {
-            name: 'Александра Бородиян',
-            education: 'По образованию социальный реабилитолог, фельдшер-лаборант.',
+            name      : 'Александра Бородиян',
+            education : 'По образованию социальный реабилитолог, фельдшер-лаборант.',
             experience: 'Работает уже 12 лет',
-            skills: 'Сделает все виды чисток, пилингов, уходовые процедуры, лазерную эпиляцию, все виды депиляции, подбор домашнего ухода'
+            skills    : 'Сделает все виды чисток, пилингов, уходовые процедуры, лазерную эпиляцию, все виды депиляции, подбор домашнего ухода'
           },
           {
-            name: 'Ирина Гутель',
-            education: 'По образованию медсестра и реабилитолог',
+            name      : 'Ирина Гутель',
+            education : 'По образованию медсестра и реабилитолог',
             experience: 'Работает уже 9 лет',
-            skills: 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
+            skills    : 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
           }
         ]
       }
     },
     if: {
       ru: {
-        cityName: 'Ивано-Франковск',
-        cityNameIn: 'в Ивано-Франковске',
-        cityPhone: '067-110-09-69',
-        address: 'ул. Ивана Франка, 25',
-        cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-        cityInstagram: 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
-        cityFacebook: 'https://www.facebook.com/steffany.ua/',
+        cityName              : 'Ивано-Франковск',
+        cityNameIn            : 'в Ивано-Франковске',
+        cityPhone             : '067-110-09-69',
+        address               : 'ул. Ивана Франка, 25',
+        cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
-
-        imagesAmount: 9,
+        
+        imagesAmount           : 9,
         imagesAmountSpecialists: 2,
-        specialists: [
+        specialists            : [
           {
-            name: 'Оксана Иваницкая',
-            education: 'По образованию акушерка',
+            name      : 'Оксана Иваницкая',
+            education : 'По образованию акушерка',
             experience: 'Работает уже 2,5 месяца',
-            skills: 'Сделает лазерную эпиляцию'
+            skills    : 'Сделает лазерную эпиляцию'
           },
           {
-            name: 'Кристина Демедюк',
-            education: ' По образованию акушерка',
+            name      : 'Кристина Демедюк',
+            education : ' По образованию акушерка',
             experience: 'Работает уже 2,5 месяца',
-            skills: 'Сделает лазерную эпиляцию'
-          },
+            skills    : 'Сделает лазерную эпиляцию'
+          }
         ]
       }
     },
-    lutsk: {
+    lt: {
       ru: {
-        cityName: 'Луцк',
-        cityNameIn: 'в Луцке',
-        cityPhone: '068-129-24-23',
-        address: 'пр. Воли, 10',
-        cityMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-        cityInstagram: 'https://www.instagram.com/steffany.lutsk/?hl=ru',
-        cityFacebook: 'https://www.facebook.com/steffany.ua/',
+        cityName              : 'Луцк',
+        cityNameIn            : 'в Луцке',
+        cityPhone             : '068-129-24-23',
+        address               : 'пр. Воли, 10',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lutsk/video-slider-0@2x.jpg',
-
-
-        imagesAmount: 9,
+        
+        
+        imagesAmount           : 9,
         imagesAmountSpecialists: 3,
-        specialists: [
+        specialists            : [
           {
-            name: 'Кристина Данило',
-            education: 'По образованию врач-дерматолог, косметолог',
+            name      : 'Кристина Данило',
+            education : 'По образованию врач-дерматолог, косметолог',
             experience: 'Работает уже 7 лет',
-            skills: 'Сделает лазерную эпиляцию, пилинги, все виды чисток'
+            skills    : 'Сделает лазерную эпиляцию, пилинги, все виды чисток'
           },
           {
-            name: 'Татьяна Королик',
-            education: 'По образованию фельдшер',
+            name      : 'Татьяна Королик',
+            education : 'По образованию фельдшер',
             experience: 'Работает уже 1 год',
-            skills: 'Сделает лазерную эпиляцию, все виды косметологических услуг'
+            skills    : 'Сделает лазерную эпиляцию, все виды косметологических услуг'
           },
           {
-            name: 'Руслана Шостак',
-            education: 'По образованию медсестра',
+            name      : 'Руслана Шостак',
+            education : 'По образованию медсестра',
             experience: 'Работает уже 5 лет',
-            skills: 'Сделает классический массаж лица, уходовые процедуры, маски, пилинги, биоревитализацию, карбокситерапию, микротоковую терапию'
-          },
+            skills    : 'Сделает классический массаж лица, уходовые процедуры, маски, пилинги, биоревитализацию, карбокситерапию, микротоковую терапию'
+          }
         ]
       }
     },
-    lviv: {
+    lv: {
       ru: {
-        cityName: 'Львов',
-        cityNameIn: 'во Львове',
-        cityPhone: '097-203-90-03',
-        address: 'ул. Гулака-Артемовского, 2',
-        cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-        cityInstagram: 'https://www.instagram.com/steffany.lviv/?hl=ru',
-        cityFacebook: 'https://www.facebook.com/steffany.ua/',
+        cityName              : 'Львов',
+        cityNameIn            : 'во Львове',
+        cityPhone             : '097-203-90-03',
+        address               : 'ул. Гулака-Артемовского, 2',
+        cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.lviv/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lviv/video-slider-0@2x.jpg',
-
-
-        imagesAmount: 10,
+        
+        
+        imagesAmount           : 10,
         imagesAmountSpecialists: 2,
-        specialists: [
+        specialists            : [
           {
-            name: 'Ирина Станкевич',
-            education: 'По образованию акушерка',
+            name      : 'Ирина Станкевич',
+            education : 'По образованию акушерка',
             experience: 'Работает уже 2,5 года',
-            skills: 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
+            skills    : 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
           },
           {
-            name: 'Кристина Демедюк',
-            education: ' По образованию',
+            name      : 'Кристина Демедюк',
+            education : ' По образованию',
             experience: 'Работает уже 2,5 месяца',
-            skills: 'Сделает лазерную эпиляцию'
-          },
+            skills    : 'Сделает лазерную эпиляцию'
+          }
         ]
       }
     },
-    rovno: {
+    rv: {
       ru: {
-        cityName: 'Ровно',
-        cityNameIn: 'в Ровно',
-        cityPhone: '098-500-48-86',
-        address: 'ул. Киевская, 4',
-        cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-        cityInstagram: 'https://www.instagram.com/steffany.rivne/?hl=ru',
-        cityFacebook: 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/video-slider-0@2x.jpg',
-
-
-        imagesAmount: 10,
+        cityName              : 'Ровно',
+        cityNameIn            : 'в Ровно',
+        cityPhone             : '098-500-48-86',
+        address               : 'ул. Киевская, 4',
+        cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/video-slider-0@2x.jpg',
+        
+        
+        imagesAmount           : 10,
         imagesAmountSpecialists: 4,
-        specialists: [
+        specialists            : [
           {
-            name: 'Валентина Дижурко',
-            education: 'По образованию анестезиолог и реаниматолог',
+            name      : 'Валентина Дижурко',
+            education : 'По образованию анестезиолог и реаниматолог',
             experience: 'Работает уже 2,5 года',
-            skills: 'Сделает процедуры по уходу за лицом, лазерную эпиляцию, пирсинг, восковую депиляцию'
+            skills    : 'Сделает процедуры по уходу за лицом, лазерную эпиляцию, пирсинг, восковую депиляцию'
           },
           {
-            name: 'Лариса Драганчук',
-            education: 'По образованию санитарный фельдшер',
+            name      : 'Лариса Драганчук',
+            education : 'По образованию санитарный фельдшер',
             experience: 'Работает уже 3 года',
-            skills: ' Сделает лазерную эпиляцию, чистки кожи, уходовые процедуры, классический массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода'
+            skills    : ' Сделает лазерную эпиляцию, чистки кожи, уходовые процедуры, классический массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода'
           },
           {
-            name: 'Ирина Куба',
-            education: 'По образованию врач-дерматолог',
+            name      : 'Ирина Куба',
+            education : 'По образованию врач-дерматолог',
             experience: 'Работает уже 10 лет',
-            skills: 'Сделает дерматоскопию и удаление новообразований на коже, чистки, пилинги, аппаратные методики для лица, лазерную эпиляцию'
+            skills    : 'Сделает дерматоскопию и удаление новообразований на коже, чистки, пилинги, аппаратные методики для лица, лазерную эпиляцию'
           },
           {
-            name: 'Людмила Чорная',
-            education: 'По образованию медсестра',
+            name      : 'Людмила Чорная',
+            education : 'По образованию медсестра',
             experience: 'Работает уже 11 лет',
-            skills: 'Сделает лазерную эпиляцию, восковую депиляцию, уходовые программы для лица, чистки и массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода, перманентный макияж"'
-          },
+            skills    : 'Сделает лазерную эпиляцию, восковую депиляцию, уходовые программы для лица, чистки и массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода, перманентный макияж"'
+          }
         ]
       }
     }
-  };
-
-  let localization = 'ru';
-  let carouselsHTML = null;
-  let city = localStorage.getItem('city');
-  if (!city) {
-    city = 'zt'
-    localStorage.setItem('city', city)
   }
+  const nav = {
+    zt: '{{ page }}',
+    if: 'if/{{ page }}',
+    lv: 'lv/{{ page }}',
+    lt: 'lt/{{ page }}',
+    rv: 'rv/{{ page }}'
+  }
+  let localization = 'ru'
+  let carouselsHTML = null
+  const urlCity      = location.pathname.slice(1).split('/')[1],
+        filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
+  console.log(filteredCity)
+  // let city = localStorage.getItem('city')
+  let city = filteredCity
+  // console.log(city, '%ci18n', 'font-size: 20em', localization)
+  // if (!city) {
+  //   city = 'zt'
+  //   localStorage.setItem('city', city)
+  // }
+  changeDataForCity()
   if (city) {
-    changeDataForCity();
+    changeDataForCity()
   }
-
+  
   $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
-
+  
   function changeDataForCity() {
     $('.inst-dynamic').each(function (e) {
-      this.setAttribute('href', `${citiesData[city][localization].cityInstagram}`);
-    });
+      this.setAttribute('href', `${citiesData[city][localization].cityInstagram}`)
+    })
     $('.fb-dynamic').each(function (e) {
-      this.setAttribute('href', `${citiesData[city][localization].cityFacebook}`);
-    });
+      this.setAttribute('href', `${citiesData[city][localization].cityFacebook}`)
+    })
     $('.city-dynamic').each(function (e) {
-      this.innerText = citiesData[city][localization].cityName;
-    });
+      this.innerText = citiesData[city][localization].cityName
+    })
     $('.telephone-dynamic').each(function (e) {
-      this.innerText = citiesData[city][localization].cityPhone;
-      this.setAttribute('href', `tel:+${citiesData[city][localization].cityPhone}`);
-    });
+      this.innerText = citiesData[city][localization].cityPhone
+      this.setAttribute('href', `tel:+${citiesData[city][localization].cityPhone}`)
+    })
     $('.city-in-dynamic').each(function (e) {
-      this.innerText = ' ' + citiesData[city][localization].cityNameIn;
-    });
-
+      this.innerText = ' ' + citiesData[city][localization].cityNameIn
+    })
+    
     $('.address-dynamic').each(function (e) {
-      this.innerText = citiesData[city][localization].address;
-    });
-
+      this.innerText = citiesData[city][localization].address
+    })
+    
     $('.map-dynamic').each(function (e) {
-      this.innerHTML = citiesData[city][localization].cityMap;
-    });
-
+      this.innerHTML = citiesData[city][localization].cityMap
+    })
+    
     $('.service-li-dynamic').each(function (e) {
-      this.innerHTML = serviceCityData[city][localization].selectedService;
-    });
-
+      this.innerHTML = serviceCityData[city][localization].selectedService
+    })
+    
     $('.image-about-dynamic').each(function (e) {
-          this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`);
-    });
-
-
+      this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`)
+    })
+    
+    
   }
-
+  
   function initCarousels() {
-    carouselsHTML = generateHTMLForCarouseles();
-    const videoSlider = $('.video-slider');
-    const owlDots = $('.small-owl-images-container .owl-dots-item');
-    const specialistsSlider = $('.specialists-slider');
+    carouselsHTML = generateHTMLForCarouseles()
+    const videoSlider = $('.video-slider')
+    const owlDots = $('.small-owl-images-container .owl-dots-item')
+    const specialistsSlider = $('.specialists-slider')
     if (videoSlider) {
-      videoSlider.html(carouselsHTML.videoCarousel);
+      videoSlider.html(carouselsHTML.videoCarousel)
     }
     if (owlDots) {
-      owlDots.html(carouselsHTML.videoCarouselSmall);
+      owlDots.html(carouselsHTML.videoCarouselSmall)
     }
     if (specialistsSlider) {
-      specialistsSlider.html(carouselsHTML.specialistsCarousel);
+      specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-
+    
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
-      loop: false,
-      margin: 0,
-      nav: false,
-      dots: false,
-      items: 1,
+      loop         : false,
+      margin       : 0,
+      nav          : false,
+      dots         : false,
+      items        : 1,
       dotsContainer: '.video-slider-dots-wrap .video-slider-dots',
-      responsive: {
-        0: {
+      responsive   : {
+        0   : {
           nav: true
         },
-        541: {
+        541 : {
           nav: false
         },
         1200: {
@@ -328,76 +340,76 @@ $(document).ready(function () {
         }
       }
     })
-
+    
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
       videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
-
+    
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
       navContainer: '.video-nav-slider-dots',
-      loop: false,
-      margin: 0,
-      nav: true,
-      dots: false,
-      items: 1
+      loop        : false,
+      margin      : 0,
+      nav         : true,
+      dots        : false,
+      items       : 1
     })
-
+    
     $('.specialists-slider').owlCarousel({
-      loop: false,
-      margin: 20,
-      nav: true,
-      dots: false,
+      loop      : false,
+      margin    : 20,
+      nav       : true,
+      dots      : false,
       navigation: true,
       responsive: {
-        0: {
+        0   : {
           items: 1
         },
-        731: {
+        731 : {
           items: 2
         },
         1200: {
           items: 4
         }
       }
-    });
-
+    })
+    
     $('.video-nav-slider-dots .owl-next').click(function () {
       videoSliderDots.trigger('next.owl.carousel')
     })
-
+    
     $('.video-nav-slider-dots .owl-prev').click(function () {
       videoSliderDots.trigger('prev.owl.carousel', [300])
     })
   }
-
+  
   function generateHTMLForCarouseles() {
-    let imagesAmount = citiesData[city][localization].imagesAmount;
-    let imagesAmountSpecialists = citiesData[city][localization].imagesAmountSpecialists;
-    let specialistsData = citiesData[city][localization].specialists;
-    let imgPath = `assets/img/about-steffany-salon/${city}/`;
-    let images = '';
-    let imagesSmall = '';
-    let imagesSpecialists = '';
-
+    let imagesAmount = citiesData[city][localization].imagesAmount
+    let imagesAmountSpecialists = citiesData[city][localization].imagesAmountSpecialists
+    let specialistsData = citiesData[city][localization].specialists
+    let imgPath = `assets/img/about-steffany-salon/${city}/`
+    let images = ''
+    let imagesSmall = ''
+    let imagesSpecialists = ''
+    
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
           <img src="${imgPath}video-slider-${i}.jpg" srcset="${imgPath}video-slider-${i}@2x.jpg" class="w-100">
         </span>
-      `;
+      `
     }
-
+    
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
           <img src="${imgPath}video-slider-${i}.jpg" srcset="${imgPath}video-slider-${i}@2x.jpg" class="w-100 video-slider-img">
           <span class="owl-dot-bg w-100 h-100 d-block"></span>
         </span>
-      `;
+      `
     }
-
+    
     for (let i = 0; i < imagesAmountSpecialists; i++) {
       imagesSpecialists += `
         <div class="specialists-item">
@@ -411,36 +423,44 @@ $(document).ready(function () {
             </div>
             <p class="h4-title h-center">${specialistsData[i].name}</p>
         </div>
-      `;
+      `
     }
-
+    
     return {
-      videoCarousel: images,
-      videoCarouselSmall: imagesSmall,
+      videoCarousel      : images,
+      videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists
     }
   }
-
+  
   function changeImagesSalon() {
-    $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger('refresh.owl.carousel');
-    $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger('refresh.owl.carousel');
+    $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger(
+      'refresh.owl.carousel')
+    $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger(
+      'refresh.owl.carousel')
   }
-
+  
   function initCities() {
-    initCarousels();
+    initCarousels()
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
       if (closestDropdown && e.target.classList.contains('nav-link-text')) {
-        city = e.target.dataset.city;
-        localStorage.setItem('city', city);
-        changeDataForCity();
-        if (window.location.href.indexOf('about-steffany') !== -1) {
-          location.reload()
-        }
+        city = e.target.dataset.city
+        // localStorage.setItem('city', city)
+        // changeDataForCity()
+        const _h   = location.pathname.slice(1).split('/'),
+              page = _h[_h.length - 1]
+        // console.log('Redirect to: ', nav[city].replace('{{ page }}', page))
+        const link = nav[city].replace('{{ page }}', page)
+        location.pathname = '/' + link
+        // if (window.location.href.indexOf('about-steffany') !== -1) {
+        //   location.reload()
+        // }
       }
-    });
+    })
   }
-  initCities();
-
+  
+  initCities()
+  
 })
 
