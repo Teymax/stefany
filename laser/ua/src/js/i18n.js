@@ -18,7 +18,8 @@ $(document).ready(function () {
     const p = location.pathname.split('/').slice(-1)[0]
     const urlCity      = location.pathname.slice(1).split('/')[2],
           filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
-    const h = window.patterns[i18n].replace('$1', p).replace('{{ city }}', filteredCity)
+    const h = filteredCity !== 'zt' ? window.patterns[i18n].replace('{{ city }}', filteredCity).replace('$1',
+      p) : window.patterns[i18n].replace('/{{ city }}', '').replace('$1', p)
     if (location.pathname.substr(1) !== h) {
       location.href = '/' + h
     }
