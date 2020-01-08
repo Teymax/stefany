@@ -304,13 +304,18 @@ function refreshPrice(event) {
   let temp = totalPriceElem[0].textContent.replace(" грн.", "");
   let totalPrice = checkbox.checked ? +temp + servicesArr[+checkbox.value].price : +temp - servicesArr[+checkbox.value].price;
   totalPriceElem.forEach(elem => {
-    elem.textContent = totalPrice + " грн."
+    if (totalPrice < 0)
+      elem.textContent = "0 грн."
+    else
+      elem.textContent = totalPrice + " грн."
   })
   let totalTimeElem = document.querySelectorAll(".serviceListTime");
   temp = totalTimeElem[0].textContent.replace(" мин", "");
   let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
   totalTimeElem.forEach(elem => {
-    if (totalTime % 60 === 0)
+    if (totalTime < 0)
+      elem.textContent = '0 ч'
+    if (totalTime % 60 === 0 && totalTime > 0)
       elem.textContent = totalTime / 60 + ' ч';
     else {
       let minutes = totalTime % 60
