@@ -6,26 +6,30 @@ function preloadFunc() {
       "shugaring",
       "about",
       "salon",
-      "contact"
+      "contact",
+      "complex"
     ],
     "lt": [
       "epilation",
       "nano-epilyatsiya",
       "about",
       "salon",
-      "contact"
+      "contact",
+      "complex"
     ],
     "if": [
       "epilation",
       "about",
       "salon",
-      "contact"
+      "contact",
+      "complex"
     ],
     "lv": [
       "epilation",
       "about",
       "salon",
-      "contact"
+      "contact",
+      "complex"
     ]
   };
   let path = location.pathname.split("/");
