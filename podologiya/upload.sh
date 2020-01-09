@@ -1,12 +1,10 @@
+mkdir uploadBuild && mkdir uploadBuild/ua
 cd lib/gulp
 gulp build
 cd ../../ua/lib/gulp
 gulp build
 cd ../../
-mkdir ../upoalBuild/ua
-mv build/** ../upoalBuild/ua
+mkdir ../uploadBuild/ua
+mv build/** ../uploadBuild/ua
 cd ../
-mv build/** upoalBuild/
-#mv build/ ../../upoalBuild/
-#cd ../../
-#mv build/ upoalBuild/
+mv build/** uploadBuild/
