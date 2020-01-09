@@ -13,8 +13,7 @@ const gulp         = require('gulp'),
       cssmin       = require('gulp-cssmin'),
       htmlmin      = require('gulp-htmlmin'),
       zip          = require('gulp-zip'),
-      babel        = require('gulp-babel'),
-      exec         = require('async-exec')
+      babel        = require('gulp-babel')
 
 function moveImages() {
   return gulp.src('../../src/assets/img/**/*.*')
