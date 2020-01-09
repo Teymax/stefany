@@ -58,14 +58,14 @@ $(document).ready(function () {
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
 
         imagesAmount           : 6,
-        imagesAmountSpecialists: 7,
+        imagesAmountSpecialists: 6,
         specialists            : [
-          {
-            name      : 'Кос Инна',
-            education : 'По образованию медсестра',
-            experience: 'Работает уже 7 лет',
-            skills    : 'Сделает лазерную эпиляцию, восковую депиляцию, шугаринг, пилинг, уходовые процедуры, индивидуальные программы с учетом состояния и типа кожи'
-          },
+          // {
+          //   name      : 'Кос Инна',
+          //   education : 'По образованию медсестра',
+          //   experience: 'Работает уже 7 лет',
+          //   skills    : 'Сделает лазерную эпиляцию, восковую депиляцию, шугаринг, пилинг, уходовые процедуры, индивидуальные программы с учетом состояния и типа кожи'
+          // },
           {
             name      : 'Виктория Демчук',
             education : 'По образованию косметолог',
