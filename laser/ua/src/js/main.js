@@ -376,30 +376,4 @@ function clearTotalPrice() {
 
 
 
-function preloadFunc() {
-  let links = {
-    "rv": [
-      "epilation",
-      "nano-epilyatsiya",
-      "shugaring"
-    ],
-    "lt": [
-      "epilation",
-      "nano-epilyatsiya"
-    ],
-    "if": [
-      "epilation"
-    ],
-    "lv": [
-      "epilation"
-    ]
-  };
-  let path = location.pathname.split("/");
-  let pathArr = path.slice(2);
-  if (pathArr.length > 1 && links[pathArr[0]] && pathArr[1] !== "" && !links[pathArr[0]].includes(pathArr[1]))
-  {
-    let a = path.slice(0,-1).join("/");
-    window.location.href = a+"/";
-  }
-}
-window.onpaint = preloadFunc();
+
