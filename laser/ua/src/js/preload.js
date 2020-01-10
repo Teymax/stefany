@@ -7,7 +7,9 @@ function preloadFunc() {
       "about",
       "salon",
       "contact",
-      "complex"
+      "complex",
+      "voskovaya-epilyatsiya",
+
     ],
     "lt": [
       "epilation",
