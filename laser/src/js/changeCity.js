@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  $('body').on('click', e => {
+    if(e.target.id === 'mobTrigger') {
+      document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: block !important;'
+    } else {
+      document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: none !important;'
+    }
+  })
   const serviceCityData = {
     zt: {
       ru: {
