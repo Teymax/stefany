@@ -5,7 +5,6 @@ gulp build
 cd ../../ua/lib/gulp
 gulp build
 cd ../../
-mkdir ../uploadBuild/ua
 mv build/** ../uploadBuild/ua
 cd ../
 mv build/** uploadBuild/
