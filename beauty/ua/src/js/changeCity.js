@@ -552,8 +552,8 @@ $(document).ready(function () {
         // }
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
-        console.log('Redirect to: ', nav[city].replace('{{ page }}', page))
-        const link = nav[city].replace('{{ page }}', page)
+        console.log('Redirect to: ', nav[city][localization].replace('{{ page }}', page))
+        const link = nav[city][localization].replace('{{ page }}', page)
         location.pathname = '/' + link
       }
     })
