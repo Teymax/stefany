@@ -434,7 +434,7 @@ body
 
 
 .mobile
-	display: flex
+	//display: flex
 	display: none
 	flex-direction: column
 	height: 100vh
@@ -443,6 +443,7 @@ body
 		width: 100%
 		flex: 1
 		position: relative
+		//height: calc(100vh / 3)
 
 		.hovered
 			opacity: 0
@@ -788,3 +789,5 @@ body
 		display: none !important
 	.mobile
 		display: flex !important
+	_::-webkit-full-page-media, _:future, :root .mobile
+		height: 86vh
