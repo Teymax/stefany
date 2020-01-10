@@ -3,6 +3,11 @@ const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
 let servicesArr = [];
+let localization = location.pathname.split('/').find(function (loc) {
+  return loc === "ua";
+}) || 'ru';
+let LocMin = localization==="ru"?" мин":" хв";
+let LocHour = localization==="ru"?" ч":" год";
 
 function getData(data) {
   let answer;
@@ -127,7 +132,7 @@ function displayServices(json) {
             checkbox.addEventListener("click", refreshPrice);
           checkbox.value = service.id;
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
-          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} хв`
+          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} ${LocMin}`
           servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
         }
       })
@@ -294,6 +299,8 @@ function createOrder(amount, order_desc, name, services, email, phone) {
 }
 
 function refreshPrice(event) {
+
+
   let radioBtns = document.querySelectorAll('input[type="radio"]:checked');
   [...radioBtns].forEach(radio => {
     radio.checked = false;
@@ -310,20 +317,20 @@ function refreshPrice(event) {
       elem.textContent = totalPrice + " грн."
   })
   let totalTimeElem = document.querySelectorAll(".serviceListTime");
-  temp = totalTimeElem[0].textContent.replace(" мин", "");
+  temp = totalTimeElem[0].textContent.replace(LocMin, "");
   let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
   totalTimeElem.forEach(elem => {
     if (totalTime < 0)
-      elem.textContent = '0 год'
+      elem.textContent = '0'+LocHour;
     if (totalTime % 60 === 0 && totalTime > 0)
-      elem.textContent = totalTime / 60 + ' год';
+      elem.textContent = totalTime / 60 + LocHour;
     else {
       let minutes = totalTime % 60
       let hours = (totalTime - minutes) / 60
       if (hours === 0)
-        elem.textContent = minutes + " хв"
+        elem.textContent = minutes + LocMin
       else
-        elem.textContent = hours + " ч " + minutes + " хв"
+        elem.textContent = hours + LocHour+" " + minutes + LocMin
     }
   })
   let count = document.querySelectorAll('input[type="checkbox"]:checked').length
@@ -331,7 +338,7 @@ function refreshPrice(event) {
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Выбрано услуг</span>
       <span class="paragraph-text text-w-bold text-color-dark ml-2 countCheckedService">${count}</span></div>
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общее время</span>
-      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListTime">${totalTime} мин.</span></div>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListTime">${totalTime + LocMin}</span></div>
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общая сумма</span>
       <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListSum">${totalPrice} грн.</span></div>
       `;
@@ -364,7 +371,7 @@ function clearTotalPrice() {
   });
   let serviceListTime = document.querySelectorAll(".serviceListTime");
   [...serviceListTime].forEach(container => {
-    container.innerHTML = "0 мин.";
+    container.innerHTML = "0"+LocMin+".";
   });
   let serviceListSum = document.querySelectorAll(".serviceListSum");
   [...serviceListSum].forEach(container => {
