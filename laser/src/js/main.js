@@ -3,6 +3,11 @@ const bearer_token = "f5wujgx5yn6cagtk9fg2";
 const partnerId = 111624;
 const managerId = 819601;
 let servicesArr = [];
+let localization = location.pathname.split('/').find(function (loc) {
+  return loc === "ua";
+}) || 'ru';
+let LocMin = localization==="ru"?" мин":" хв";
+let LocHour = localization==="ru"?" ч":" год";
 
 function getData(data) {
   let answer;
@@ -65,9 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
 function radioClick() {
   clearTotalPrice();
   let checkedRadio = document.querySelector('input[type="radio"][name="service"]:checked')
-
+  console.log(checkedRadio.dataset.name);
+  console.log(checkedRadio.dataset.proc);
+  console.log(checkedRadio.dataset.price);
   document.querySelector('#yclient_form .c-content-count').innerHTML =
-    `
+      `
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Вы выбрали: </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">${checkedRadio.dataset.name} - ${checkedRadio.dataset.proc} процедур </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
@@ -125,7 +132,7 @@ function displayServices(json) {
             checkbox.addEventListener("click", refreshPrice);
           checkbox.value = service.id;
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`
-          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} мин`
+          mainBlocks[i].querySelector("p.item-time").textContent = `${service.seance_length / 60} ${LocMin}`
           servicesArr[service.id] = {"price": service.price_max, "length": service.seance_length / 60}
         }
       })
@@ -140,7 +147,7 @@ function displayServices(json) {
 function getServices() {
   let headers = {"Content-Type": "application/json", "Authorization": "Bearer " + bearer_token};
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
-    + managerId, null, displayServices);
+      + managerId, null, displayServices);
 }
 
 function mainFormSubmit(event) {
@@ -189,7 +196,7 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   let date = new Date();
   if (plusDate > 0) date.setDate(date.getDate() + plusDate);
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
+      date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate());
 
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString;
   url += services ? ("?service_ids=" + encodeURIComponent(services.join(","))) : '';
@@ -224,16 +231,16 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
     ]
   };
   ajax('POST', headers, 'https://api.yclients.com/api/v1/book_record/' + partnerId, userParams,
-    function (data) {
-      let err = processErrors(getData(data));
-      if (servicesArr.length === 0) {
-        getServices();
-      } else if (!err) {
-        $('#sendComplex').modal('hide');
-        $('#modalServiceListSinugUp').modal('hide');
-        $('#thanksPopup').modal('show');
-      }
-    });
+      function (data) {
+        let err = processErrors(getData(data));
+        if (servicesArr.length === 0) {
+          getServices();
+        } else if (!err) {
+          $('#sendComplex').modal('hide');
+          $('#modalServiceListSinugUp').modal('hide');
+          $('#thanksPopup').modal('show');
+        }
+      });
 }
 
 function payment(name, email, phone, comment, services, servicesString) {
@@ -292,6 +299,8 @@ function createOrder(amount, order_desc, name, services, email, phone) {
 }
 
 function refreshPrice(event) {
+
+
   let radioBtns = document.querySelectorAll('input[type="radio"]:checked');
   [...radioBtns].forEach(radio => {
     radio.checked = false;
@@ -302,21 +311,26 @@ function refreshPrice(event) {
   let temp = totalPriceElem[0].textContent.replace(" грн.", "");
   let totalPrice = checkbox.checked ? +temp + servicesArr[+checkbox.value].price : +temp - servicesArr[+checkbox.value].price;
   totalPriceElem.forEach(elem => {
-    elem.textContent = totalPrice + " грн."
+    if (totalPrice < 0)
+      elem.textContent = "0 грн."
+    else
+      elem.textContent = totalPrice + " грн."
   })
   let totalTimeElem = document.querySelectorAll(".serviceListTime");
-  temp = totalTimeElem[0].textContent.replace(" мин", "");
+  temp = totalTimeElem[0].textContent.replace(LocMin, "");
   let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
   totalTimeElem.forEach(elem => {
-    if (totalTime % 60 === 0)
-      elem.textContent = totalTime / 60 + ' ч';
+    if (totalTime < 0)
+      elem.textContent = '0'+LocHour;
+    if (totalTime % 60 === 0 && totalTime > 0)
+      elem.textContent = totalTime / 60 + LocHour;
     else {
       let minutes = totalTime % 60
       let hours = (totalTime - minutes) / 60
       if (hours === 0)
-        elem.textContent = minutes + " мин"
+        elem.textContent = minutes + LocMin
       else
-        elem.textContent = hours + " ч " + minutes + " мин"
+        elem.textContent = hours + LocHour+" " + minutes + LocMin
     }
   })
   let count = document.querySelectorAll('input[type="checkbox"]:checked').length
@@ -324,7 +338,7 @@ function refreshPrice(event) {
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Выбрано услуг</span>
       <span class="paragraph-text text-w-bold text-color-dark ml-2 countCheckedService">${count}</span></div>
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общее время</span>
-      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListTime">${totalTime} мин.</span></div>
+      <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListTime">${totalTime + LocMin}</span></div>
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Общая сумма</span>
       <span class="paragraph-text text-w-bold text-color-dark ml-2 serviceListSum">${totalPrice} грн.</span></div>
       `;
@@ -357,7 +371,7 @@ function clearTotalPrice() {
   });
   let serviceListTime = document.querySelectorAll(".serviceListTime");
   [...serviceListTime].forEach(container => {
-    container.innerHTML = "0 мин.";
+    container.innerHTML = "0"+LocMin+".";
   });
   let serviceListSum = document.querySelectorAll(".serviceListSum");
   [...serviceListSum].forEach(container => {
@@ -365,6 +379,7 @@ function clearTotalPrice() {
   });
 
 }
+
 
 
 
