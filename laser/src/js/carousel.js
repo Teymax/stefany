@@ -85,7 +85,7 @@ $(document).ready(function () {
 
 
   $('.diploma-slider').owlCarousel({
-    loop      : true,
+    // loop      : true,
     margin    : 35,
     nav       : false,
     dots      : true,
@@ -151,7 +151,6 @@ $(document).ready(function () {
       $('.custom-py-services-price').toggleClass('man-symbol-bg', this.checked)
       $('.list-female').toggleClass('hidden', this.checked)
       $('.list-male').toggleClass('visible', this.checked)
-
     }).change()
   })
 
