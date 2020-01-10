@@ -2,38 +2,66 @@ $(document).ready(function () {
   const serviceCityData = {
     zt: {
       ru: {
-        selectedService:
-            `
+        selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
         `
+      },
+      ua: {
+        selectedService:
+            `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
+        `
       }
+
     },
     if: {
       ru: {
-        selectedService:
-            `
+        selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
         `
+      },
+      ua: {
+        selectedService:
+            `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+        `
       }
+
     },
     lt: {
       ru: {
-        selectedService:
-            `
+        selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
         `
+      },
+      ua: {
+        selectedService:
+            `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
+        `
       }
+
     },
     lv: {
       ru: {
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерная эпиляция</a></li>
         `
+      },
+      ua: {
+        selectedService: `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+        `
       }
+
     },
     rv: {
       ru: {
@@ -42,9 +70,17 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
         `
+      },
+      ua: {
+        selectedService: `
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
+        `
       }
+
     }
-  }
+  };
   const citiesData = {
     zt: {
       ru: {
@@ -103,7 +139,65 @@ $(document).ready(function () {
             skills    : 'Сделает массаж, SPA-услуги, лазерную эпиляцию, LPG-массаж'
           }
         ]
+      },
+      ua: {
+        cityName              : 'Житомир',
+        cityNameIn            : 'у Житомирі',
+        cityPhone             : '096-205-50-30',
+        address               : 'вул. Київська, 84',
+        cityMap               : '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
+
+        imagesAmount           : 6,
+        imagesAmountSpecialists: 6,
+        specialists            : [
+          // {
+          //   name      : 'Інна Кос',
+          //   education : 'За освітою медсестра',
+          //   experience: 'Працює вже 7 років',
+          //   skills    : 'Зробить лазерну епіляцію, воскову депіляцію, шугарінг, пілінг, доглядові процедури, індивідуальні програми з урахуванням стану і типу шкіри'
+          // },
+          {
+            name      : 'Вікторія Демчук',
+            education : 'За освітою косметолог',
+            experience: 'Працює вже 7 років',
+            skills    : 'Зробить усі види чисток, пілінгів, доглядових процедур, лазерну епіляцію, усі види депіляції, підбір домашнього догляду'
+          },
+          {
+            name      : 'Уляна Кравчук',
+            education : 'За освітою медичиний працівник',
+            experience: 'Працює вже 8 років',
+            skills    : 'Зробить лазерну епіляцію, естетичну косметологію, шугарінг, воскову депиляцію'
+          },
+          {
+            name      : 'Тетяна Огир',
+            education : 'За освітою медсестра.',
+            experience: 'Працює вже 18 років',
+            skills    : 'Зробить масаж, SPA-послуги, лазерну епіляцію, LPG-масаж'
+          },
+          {
+            name      : 'Інна Степанчук',
+            education : 'За освітою фармацевт.',
+            experience: 'Працює вже 3 років',
+            skills    : 'Зробить перманентний макіяж, лазерну епіляцію, воскову депіляцію, шугарінг, чистку і пілінг обличчя'
+          },
+          {
+            name      : 'Олександра Бородіян',
+            education : 'За освітою соціальний реабілітолог, фельдшер-лаборант.',
+            experience: 'Працює вже 12 років',
+            skills    : 'Зробить усі види чисток, пілінгів, доглядові процедури, лазерну епіляцію, усі види депіляції, підбір домашнього догляду'
+          },
+          {
+            name      : 'Ірина Гутель',
+            education : 'За освітою медсестра і реабілітолог',
+            experience: 'Працює вже 9 років',
+            skills    : 'Зробить масаж, SPA-послуги, лазерну епіляцію, LPG-масаж'
+          }
+        ]
       }
+
     },
     if: {
       ru: {
@@ -132,7 +226,35 @@ $(document).ready(function () {
             skills    : 'Сделает лазерную эпиляцию'
           }
         ]
+      },
+      ua: {
+        cityName              : 'Івано-Франківськ',
+        cityNameIn            : 'у Івано-Франківську ',
+        cityPhone             : '067-110-09-69',
+        address               : 'вул. Івана Франка, 25',
+        cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
+
+        imagesAmount           : 9,
+        imagesAmountSpecialists: 2,
+        specialists            : [
+          {
+            name      : 'Оксана Іваницька',
+            education : 'За освітою акушерка',
+            experience: 'Працює вже 2,5 місяці',
+            skills    : 'Зробить лазерну епіляцію'
+          },
+          {
+            name      : 'Христина Данило',
+            education : 'За освітою лікар-дерматолог, косметолог',
+            experience: 'Працює вже 7 років',
+            skills    : 'Зробить лазерну епіляцію, пілінги, усі види чисток'
+          }
+        ]
       }
+
     },
     lt: {
       ru: {
@@ -168,7 +290,42 @@ $(document).ready(function () {
             skills    : 'Сделает классический массаж лица, уходовые процедуры, маски, пилинги, биоревитализацию, карбокситерапию, микротоковую терапию'
           }
         ]
+      },
+      ua: {
+        cityName              : 'Луцьк',
+        cityNameIn            : 'у Луцьку',
+        cityPhone             : '068-129-24-23',
+        address               : 'пр. Волі, 10',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lutsk/video-slider-0@2x.jpg',
+
+
+        imagesAmount           : 9,
+        imagesAmountSpecialists: 3,
+        specialists            : [
+          {
+            name      : 'Кристина Данило',
+            education : 'По образованию врач-дерматолог, косметолог',
+            experience: 'Работает уже 7 лет',
+            skills    : 'Сделает лазерную эпиляцию, пилинги, все виды чисток'
+          },
+          {
+            name      : 'Тетяна Королик',
+            education : 'За освітою фельдшер',
+            experience: 'Працює вже 1 рік',
+            skills    : 'Зробить лазерну епіляцію, усі види косметологічних послуг'
+          },
+          {
+            name      : 'Руслана Шостак',
+            education : 'За освітою медсестра',
+            experience: 'Працює вже 5 років',
+            skills    : 'Зробить класичний масаж обличчя, доглядові процедури, маски, пілінги, біоревіталізацію, карбоксітерапію, мікрострумову терапію'
+          }
+        ]
       }
+
     },
     lv: {
       ru: {
@@ -198,7 +355,36 @@ $(document).ready(function () {
             skills    : 'Сделает лазерную эпиляцию'
           }
         ]
+      },
+      ua: {
+        cityName              : 'Львів',
+        cityNameIn            : 'у Львові',
+        cityPhone             : '097-203-90-03',
+        address               : 'вул. Гулака-Артемовського, 2',
+        cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.lviv/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lviv/video-slider-0@2x.jpg',
+
+
+        imagesAmount           : 10,
+        imagesAmountSpecialists: 2,
+        specialists            : [
+          {
+            name      : 'Ірина Станкевич',
+            education : 'За освітою акушерка',
+            experience: 'Працює вже 2,5 года',
+            skills    : 'Зробить лазерну епіляцію, косметологічні послуги, чистку обличчя'
+          },
+          {
+            name      : 'Христина Демедюк',
+            education : 'По образованию',
+            experience: 'Працює вже 2,5 місяці',
+            skills    : 'Зробить лазерну епіляцію'
+          }
+        ]
       }
+
     },
     rv: {
       ru: {
@@ -240,18 +426,76 @@ $(document).ready(function () {
             skills    : 'Сделает лазерную эпиляцию, восковую депиляцию, уходовые программы для лица, чистки и массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода, перманентный макияж"'
           }
         ]
+      },
+      ua: {
+        cityName              : 'Рівне',
+        cityNameIn            : 'у Рівному',
+        cityPhone             : '098-500-48-86',
+        address               : 'вул. Київська, 4',
+        cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/video-slider-0@2x.jpg',
+
+
+        imagesAmount           : 10,
+        imagesAmountSpecialists: 4,
+        specialists            : [
+          {
+            name      : 'Валентина Дижурко',
+            education : 'За освітою анестезіолог і реаніматолог',
+            experience: 'Працює вже 2,5 року',
+            skills    : 'Зробить процедури по догляду за обличчям, лазерну епіляцію, пірсинг, воскову депіляцію'
+          },
+          {
+            name      : 'Лариса Драганчук',
+            education : 'За освітою санітарний фельдшер',
+            experience: 'Працює вже 3 роки',
+            skills    : 'Зробить лазерну епіляцію, чистку шкіри, доглядові процедури, класичний масаж обличчя, мікрострумову терапію, безін\'єкційну мезотерапію, підбір домашнього догляду'
+          },
+          {
+            name      : 'Ірина Куба',
+            education : 'За освітою лікар-дерматолог',
+            experience: 'Працює вже 10 років',
+            skills    : 'Зробить дерматоскопію і видалення новоутворень на шкірі, чистку, пілінги, апаратні методики для обличчя, лазерну епіляцію'
+          },
+          {
+            name      : 'Людмила Чорна',
+            education : 'За освітою медсестра',
+            experience: 'Працює вже 11 років',
+            skills    : 'Зробить лазерну епіляцію, воскову депіляцію, доглядові програми для обличчя, чистку і масаж обличчя, мікрострумову терапію, безін\'єкційну мезотерапію, підбір домашнього догляду, перманентний макіяж'
+          }
+        ]
       }
+
     }
-  }
+  };
   const nav = {
-    zt: 'lazernaya-epilyatsiya/{{ page }}',
-    if: 'lazernaya-epilyatsiya/if/{{ page }}',
-    lv: 'lazernaya-epilyatsiya/lv/{{ page }}',
-    lt: 'lazernaya-epilyatsiya/lt/{{ page }}',
-    rv: 'lazernaya-epilyatsiya/rv/{{ page }}'
-  }
-  let localization = 'ru'
-  let carouselsHTML = null
+    zt:{
+      ru: 'lazernaya-epilyatsiya/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/ua/{{ page }}',
+    },
+    if:{
+      ru: 'lazernaya-epilyatsiya/if/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/if/ua/{{ page }}',
+    },
+    lv:{
+      ru: 'lazernaya-epilyatsiya/lv/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/lv/ua/{{ page }}',
+    },
+    lt: {
+      ru: 'lazernaya-epilyatsiya/lt/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/lt/ua/{{ page }}',
+    },
+    rv: {
+      ru: 'lazernaya-epilyatsiya/rv/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
+    }
+  };
+  let localization = location.pathname.split('/').find(function (loc) {
+    return loc === "ua";
+  }) || 'ru';
+  let carouselsHTML = null;
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
   console.log(filteredCity)
@@ -451,7 +695,7 @@ $(document).ready(function () {
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
         // console.log('Redirect to: ', nav[city].replace('{{ page }}', page))
-        const link = nav[city].replace('{{ page }}', page)
+        const link = nav[city][localization].replace('{{ page }}', page)
         location.pathname = '/' + link
         // if (window.location.href.indexOf('about-steffany') !== -1) {
         //   location.reload()
