@@ -1,50 +1,4 @@
 $(document).ready(function () {
-  // const serviceCityData = {
-  //   zt: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-  //       `
-  //     }
-  //   },
-  //   if: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   lutsk: {
-  //     ru: {
-  //       selectedService:
-  //           `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-nano.html">Нано-эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   lviv: {
-  //     ru: {
-  //       selectedService: `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //       `
-  //     }
-  //   },
-  //   rovno: {
-  //     ru: {
-  //       selectedService: `
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service.html">Лазерная эпиляция</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./service-shugaring.html">Шугаринг</a></li>
-  //         <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./waxing.html">Восковая эпиляция\`</a></li>
-  //       `
-  //     }
-  //   }
-  // }
   const citiesData = {
     zt: {
       ru: {
@@ -242,7 +196,204 @@ $(document).ready(function () {
             ]
           }
         }
+      },
+      ua: {
+        cityName              : 'Житомир',
+        cityNameIn            : 'в Житомирі',
+        cityPhone             : '098-007-07-53',
+        schedule              : '10:00 - 20:00',
+        address               : 'вул. Київська, 77, тц "Глобал"',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.345216309848!2d28.6856875!3d50.2668125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G2C7M8P%2BP7!5e0!3m2!1sru!2sua!4v1576752718526!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
+
+        imagesAmount: 10,
+
+        salons: {
+          nail: {
+            name       : 'Steffany Nail',
+            city       : 'Житомир',
+            nameIn     : 'в Житомирі',
+            phone      : '098-180-50-90',
+            address    : 'вул. Київська, 77, тц "Глобал"',
+            schedule   : '9:00 - 21:00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+            facebook   : 'https://www.facebook.com/steffany.ua/',
+            specialists: [
+              {
+                name      : 'Аліна Кайсин',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 7 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання та зміцнення нігтьової пластини, нарощування нігтів, дизайн (геометрію, аерографію, френч, стемпінг, нескладні малюнки, втирку), парафінотерапію для рук і ніг, спа-процедуру CND',
+                cover     : ''
+              },
+              {
+                name      : 'Наталія Кльоц',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання, зміцнення, нарощування і корекцію нігтів, нескладний дизайн, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Людмила Коржовська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 7 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання та зміцнення нігтьової пластини, дизайн (геометрію, аерографію, френч, стемпінг, нескладні малюнки, втирку), парафінотерапію для рук і ніг, спа-процедуру CND'
+              },
+              {
+                name      : 'Владлена Охмак',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 5 років',
+                skills    : 'Зробить європейський, класичний, чоловічий, дитячий манікюр, вирівнювання, зміцнення і «ремонт» нігтьової пластини, усі види дизайну, класичний, кислотний і спа-педикюр, парафінотерапію для рук і ніг'
+              },
+
+              {
+                name      : 'Ольга Петрук',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, класичний, кислотний і спа-педикюр, дизайн (френч, аерографію, геометрію, втирку, наклейки, нескладні малюнки)'
+              },
+              {
+                name      : 'Анна Роюк',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 роки',
+                skills    : 'Зробить усі види манікюру, вирівнювання, зміцнення і нарощування нігтів, класичний, кислотний і комбінований педикюр, нескладний дизайн, спа-процедури і парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Ксенія Станіславська',
+                education : 'Директор Nail Studio Steffany, майстер нігтьового сервісу',
+                experience: 'Працює вже 13 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання, нарощування і корекцію нігтів, усі види дизайну, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Ольга Степанчук',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 6 років',
+                skills    : 'Зробить класичний, комбінований і апаратний манікюр, класичний, комбінований та кислотний педикюр, парафінотерапію для рук і ніг, зміцнення, «ремонт» і нарощування нігтів, усі види нехудожнього дизайну'
+              },
+              {
+                name      : 'Анастасія Грицик',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування і корекцію нігтів, нескладний дизайн нігтів'
+              },
+              {
+                name      : 'Ірина Демиденко',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування нігтів, усі види дизайну нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Марія Пашковська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 років',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання і зміцнення нігтьової пластини, нарощування і корекцію нігтів, дизайн (аерографію, втирку, стемпінг), парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Оксана Таргонська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 3 років',
+                skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, нескладний дизайн (френч, стемпінг, втирку), аерографію, парафінотерапію для рук і ніг'
+              }
+            ]
+          },
+          hair: {
+            name       : 'Steffany Hair',
+            city       : 'Житомир',
+            nameIn     : 'в Житомирі',
+            phone      : '067-404-19-33',
+            address    : 'вул. Київська, 77, тц "Глобал"',
+            schedule   : '10:00 - 20:00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.347268440734!2d28.683446015724748!3d50.26677417945044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1577383086491!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+            facebook   : 'https://www.facebook.com/steffany.ua/',
+            specialists: [
+              {
+                name      : 'Владислава Бондар',
+                education : 'Перукар',
+                experience: 'Працює вже 7 років',
+                skills    : 'Зробить жіночі та чоловічі стрижки, складні фарбування, догляд за волоссям, зачіски, укладки, полірування волосся, камуфлювання сивини, тонування раніше фарбованого волосся'
+              },
+              {
+                name      : 'Любов Зайнчківська',
+                education : 'Чоловічий перукар',
+                experience: 'Працює вже 1,5 року',
+                skills    : 'Зробить чоловічі стрижки будь-якої складності'
+              },
+              {
+                name      : 'Олександра Кришневська',
+                education : 'Brow-майстер, візажист',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить моделювання та корекцію брів, фарбування брів фарбою і хною, фарбування вій, чоловічу корекцію брів, денний, вечірній і весільний макіяж'
+              },
+              {
+                name      : 'Ірина Михалюк',
+                education : 'Перукар',
+                experience: 'Працює вже 3 роки',
+                skills    : 'Зробить жіночі та чоловічі стрижки, фарбування в один тон, накрутку, укладку, плетіння, догляд за волоссям'
+              },
+
+              {
+                name      : 'Юлія Павлушина',
+                education : 'Перукар',
+                experience: 'Працює вже 3 роки',
+                skills    : 'Зробить чоловічі, жіночі та дитячі стрижки, фарбування в один тон, складні фарбування, догляд за волоссям, плетіння, зачіски, накрутку, укладку'
+              },
+              {
+                name      : 'Вікторія Павюк',
+                education : 'Перукар',
+                experience: 'Працює вже 4 роки',
+                skills    : 'Зробить жіночі та чоловічі стрижки, укладку, накрутку, фарбування будь-якої складності, догляд за волоссям'
+              },
+              {
+                name      : 'Аліна Путяніна',
+                education : 'Перукар',
+                experience: 'Працює вже 6 років',
+                skills    : 'Зробить жіночі, чоловічі та дитячі стрижки, фарбування волосся у всіх техніках, укладку волосся'
+              },
+              {
+                name      : 'Юлія Соловко',
+                education : 'Перукар',
+                experience: 'Працює вже 13 років',
+                skills    : 'Зробить чоловічі та жіночі стрижки, фарбування в один тон, складні фарбування, накрутку, укладку, плетіння, догляд за волоссям'
+              },
+
+              {
+                name      : 'Юлія Сурикова',
+                education : 'Перукар',
+                experience: 'Працює вже 9 років',
+                skills    : 'Зробить усі види фарбування, стрижки, укладки, зачіски без плетіння, догляд за волоссям'
+              },
+              {
+                name      : 'Дарина Тарасюк',
+                education : 'Перукар',
+                experience: 'Працює вже 5 років',
+                skills    : 'Зробить жіночі, чоловічі та дитячі стрижки, фарбування волосся в один тон, тонування волосся, полірування волосся, догляд за волоссям, укладки довгого волосся'
+              },
+              {
+                name      : 'Марія Балуєва',
+                education : 'Brow-майстер, візажист',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить моделювання і корекцію брів, фарбування брів фарбою і хною, чоловічу корекцію брів, денний, вечірній і весільний макіяж'
+              },
+              {
+                name      : 'Наталія Бойко',
+                education : 'Перукар',
+                experience: 'Працює вже 16 років',
+                skills    : 'Зробить чоловічі та жіночі стрижки, фарбування в один тон, складні фарбування, накрутку, укладку, плетіння, догляд за волоссям, завивку'
+              },
+              {
+                name      : 'Катерина Бондар',
+                education : 'Перукар',
+                experience: 'Працює вже 8 років',
+                skills    : 'Зробить чоловічі та жіночі стрижки, фарбування в один тон, складні фарбування, догляд за волоссям'
+              }
+            ]
+          }
+        }
       }
+
     },
 
     rv: {
@@ -347,14 +498,125 @@ $(document).ready(function () {
             ]
           }
         }
+      },
+      ua: {
+        cityName              : 'Рівне',
+        cityNameIn            : 'в Рівному',
+        cityPhone             : '098-500-48-86',
+        schedule              : '9-00 - 20-00',
+        address               : 'вул. Київська, 4',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/{{ salon }}/salon-0.jpg',
+
+        imagesAmount: 6,
+        salons      : {
+          salon: {
+            name       : 'Steffany Nail & Cosmetology',
+            city       : 'Рівне',
+            nameIn     : 'в Рівному',
+            phone      : '098-500-48-86',
+            address    : 'вул. Київська, 4',
+            schedule   : '9-00 - 20-00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram  : 'https://www.instagram.com/steffany.rivne/?hl=ru',
+            facebook   : 'https://www.facebook.com/steffany.ua/',
+            specialists: [
+              {
+                name      : 'Інна Кокора',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 1,5 року',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання, корекцію та нарощування нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Марія Кузьмич',
+                education : 'Майстер манікюру',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить усі види манікюру, зміцнення і корекцію нігтів, парафінотерапію для рук'
+              },
+              {
+                name      : 'Наталія Лело',
+                education : 'Перукар',
+                experience: 'Працює вже 15 років',
+                skills    : 'Зробить жіночі, чоловічі та дитячі стрижки, укладки, зачіски, накрутку, складне фарбування, лікування волосся'
+              },
+              {
+                name      : 'Марія Остапович',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 роки',
+                skills    : 'Зробить європейський, класичний, комбінований і дитячий манікюр, усі види педикюру, вирівнювання і корекцію нігтьової пластини, парафінотерапію для рук і ніг'
+              },
+
+              {
+                name      : 'Леся Парух',
+                education : 'Brow-майстер, візажист',
+                experience: 'Працює вже 1,5 року',
+                skills    : 'Зробить фарбування брів фарбою і хною, моделювання, корекцію і ламінування брів, фарбування вій'
+              },
+              {
+                name      : 'Катерина Пархомчук',
+                education : 'Майстер манікюру',
+                experience: 'Працює вже 3 місяці',
+                skills    : 'Зробить усі види манікюру, вирівнювання нігтьової пластини, парафінотерапію для рук'
+              },
+              {
+                name      : 'Галина Ребеш',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 роки',
+                skills    : 'Зробить усі види манікюру та педикюру, вирівнювання, корекцію та нарощування нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Анна Власенко',
+                education : 'Майстер манікюру',
+                experience: 'Працює вже 6 років',
+                skills    : 'Зробить класичний, комбінований і чоловічий манікюр, зміцнення, нарощування і корекцію нігтів'
+              },
+
+              {
+                name      : 'Яна Галицька',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 4 роки',
+                skills    : 'Зробить усі види манікюру та педикюру, зміцнення нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Вероніка Голянська',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 2 роки',
+                skills    : 'Зробить усі види манікюру та педикюру, зміцнення нігтів, парафінотерапію для рук і ніг'
+              },
+              {
+                name      : 'Наталія Довгаль',
+                education : 'Майстер манікюру',
+                experience: 'Працює вже 3 місяці',
+                skills    : 'Зробить усі види манікюру, вирівнювання нігтьової пластини, парафінотерапію для рук'
+              },
+              {
+                name      : 'Ірина Коломійчук',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 3 роки',
+                skills    : 'Зробить усі види манікюру, класичний, комбінований і спа-педікюр, вирівнювання, зміцнення і нарощування нігтів, парафінотерапію для рук і ніг'
+              }
+            ]
+          }
+        }
       }
+
     }
   }
   const nav = {
-    zt: 'beauty/{{ page }}',
-    rv: 'beauty/rv/{{ page }}'
+    zt:{
+      ru: 'beauty/{{ page }}',
+      ua: 'beauty/ua/{{ page }}',
+    },
+    rv:{
+      ru: 'beauty/rv/{{ page }}',
+      ua: 'beauty/rv/ua/{{ page }}'
+    },
   }
-  let localization = 'ru'
+  let localization = location.pathname.split('/').find(function (loc) {
+    return loc === "ua";
+  }) || 'ru';
   let carouselsHTML = null
   let salon = localStorage.getItem('salon') || ''
   const urlCity      = location.pathname.slice(1).split('/')[1],
