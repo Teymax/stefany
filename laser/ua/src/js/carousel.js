@@ -85,7 +85,7 @@ $(document).ready(function () {
 
 
   $('.diploma-slider').owlCarousel({
-    loop      : true,
+    // loop      : true,
     margin    : 35,
     nav       : false,
     dots      : true,
