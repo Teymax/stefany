@@ -12,7 +12,7 @@ $(document).ready(function () {
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
 
-        imagesAmount: 7,
+        imagesAmount: 10,
 
         salons: {
           nail: {
