@@ -1,11 +1,4 @@
 $(document).ready(function () {
-  $('body').on('click', e => {
-    if(e.target.id === 'mobTrigger') {
-      document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: block !important;'
-    } else {
-      document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: none !important;'
-    }
-  })
   const serviceCityData = {
     zt: {
       ru: {
@@ -18,7 +11,7 @@ $(document).ready(function () {
       },
       ua: {
         selectedService:
-            `
+          `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
@@ -35,7 +28,7 @@ $(document).ready(function () {
       },
       ua: {
         selectedService:
-            `
+          `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
         `
       }
@@ -50,7 +43,7 @@ $(document).ready(function () {
       },
       ua: {
         selectedService:
-            `
+          `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
         `
@@ -87,7 +80,7 @@ $(document).ready(function () {
       }
 
     }
-  };
+  }
   const citiesData = {
     zt: {
       ru: {
@@ -476,33 +469,33 @@ $(document).ready(function () {
       }
 
     }
-  };
+  }
   const nav = {
-    zt:{
+    zt: {
       ru: 'lazernaya-epilyatsiya/{{ page }}',
-      ua: 'lazernaya-epilyatsiya/ua/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/ua/{{ page }}'
     },
-    if:{
+    if: {
       ru: 'lazernaya-epilyatsiya/if/{{ page }}',
-      ua: 'lazernaya-epilyatsiya/if/ua/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/if/ua/{{ page }}'
     },
-    lv:{
+    lv: {
       ru: 'lazernaya-epilyatsiya/lv/{{ page }}',
-      ua: 'lazernaya-epilyatsiya/lv/ua/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/lv/ua/{{ page }}'
     },
     lt: {
       ru: 'lazernaya-epilyatsiya/lt/{{ page }}',
-      ua: 'lazernaya-epilyatsiya/lt/ua/{{ page }}',
+      ua: 'lazernaya-epilyatsiya/lt/ua/{{ page }}'
     },
     rv: {
       ru: 'lazernaya-epilyatsiya/rv/{{ page }}',
       ua: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
     }
-  };
+  }
   let localization = location.pathname.split('/').find(function (loc) {
-    return loc === "ua";
-  }) || 'ru';
-  let carouselsHTML = null;
+    return loc === 'ua'
+  }) || 'ru'
+  let carouselsHTML = null
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
   console.log(filteredCity)
