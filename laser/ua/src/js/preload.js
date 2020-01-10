@@ -9,6 +9,8 @@ function preloadFunc() {
       "contact",
       "complex",
       "voskovaya-epilyatsiya",
+      "policy"
+
 
     ],
     "lt": [
@@ -17,7 +19,9 @@ function preloadFunc() {
       "about",
       "salon",
       "contact",
-      "complex"
+      "complex",
+      "policy"
+
     ],
     "if": [
       "epilation",
@@ -31,7 +35,9 @@ function preloadFunc() {
       "about",
       "salon",
       "contact",
-      "complex"
+      "complex",
+      "policy"
+
     ]
   };
   let path = location.pathname.split("/");
