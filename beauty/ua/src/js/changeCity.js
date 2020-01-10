@@ -19,7 +19,7 @@ $(document).ready(function () {
             name       : 'Steffany Nail',
             city       : 'Житомир',
             nameIn     : 'в Житомирі',
-            phone      : '098-180-50-90',
+            phone      : '067-404-19-33',
             address    : 'вул. Київська, 77, тц "Глобал"',
             schedule   : '9:00 - 21:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5100.697030189027!2d28.6835212!3d50.2667509!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1577382926000!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',

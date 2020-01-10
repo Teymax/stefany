@@ -27,10 +27,10 @@ mixin btnCallback(text, className)
       +arrowSvg
 mixin customBtn(text, className)
   .btn-callback.no-svg(class!=attributes.class)= className
-  .text-section
-    span= text
-  .arrow-section
-    +arrowSvg
+    .text-section
+      span= text
+    .arrow-section
+      +arrowSvg
 
 mixin salonSwitcher
   .container.city-switcher

@@ -314,16 +314,16 @@ function refreshPrice(event) {
   let totalTime = checkbox.checked ? +temp + servicesArr[+checkbox.value].length : +temp - servicesArr[+checkbox.value].length
   totalTimeElem.forEach(elem => {
     if (totalTime < 0)
-      elem.textContent = '0 ч'
+      elem.textContent = '0 год'
     if (totalTime % 60 === 0 && totalTime > 0)
-      elem.textContent = totalTime / 60 + ' ч';
+      elem.textContent = totalTime / 60 + ' год';
     else {
       let minutes = totalTime % 60
       let hours = (totalTime - minutes) / 60
       if (hours === 0)
-        elem.textContent = minutes + " мин"
+        elem.textContent = minutes + " хв"
       else
-        elem.textContent = hours + " ч " + minutes + " мин"
+        elem.textContent = hours + " ч " + minutes + " хв"
     }
   })
   let count = document.querySelectorAll('input[type="checkbox"]:checked').length
@@ -372,3 +372,8 @@ function clearTotalPrice() {
   });
 
 }
+
+
+
+
+

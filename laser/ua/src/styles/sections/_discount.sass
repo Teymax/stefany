@@ -136,6 +136,9 @@ section.section.discount
         right: -50px
         @include font (Circe, 700, 10, 12)
         color: $text-color-white
+        @include media-breakpoint-down(sm)
+          top: -50px
+          right: -19px
 
       .button
         max-width: 154px
