@@ -72,7 +72,7 @@ function closeAllModals() {
 
 $(document).ready(function () {
   console.clear()
-  setTimeout(() => console.clear(), 8000)
+  // setTimeout(() => console.clear(), 8000)
   
   $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
   
