@@ -247,10 +247,10 @@ $(document).ready(function () {
             skills    : 'Зробить лазерну епіляцію'
           },
           {
-            name      : 'Христина Данило',
+            name      : 'Христина Демедюк',
             education : 'За освітою лікар-дерматолог, косметолог',
             experience: 'Працює вже 7 років',
-            skills    : 'Зробить лазерну епіляцію, пілінги, усі види чисток'
+            skills    : 'Зробить лазерну епіляцію'
           }
         ]
       }
@@ -306,10 +306,10 @@ $(document).ready(function () {
         imagesAmountSpecialists: 3,
         specialists            : [
           {
-            name      : 'Кристина Данило',
-            education : 'По образованию врач-дерматолог, косметолог',
-            experience: 'Работает уже 7 лет',
-            skills    : 'Сделает лазерную эпиляцию, пилинги, все виды чисток'
+            name      : 'Христина Данило',
+            education : 'За освітою лікар-дерматолог, косметолог',
+            experience: 'Працює вже 7 років',
+            skills    : 'Зробить лазерну епіляцію, пілінги, усі види чисток'
           },
           {
             name      : 'Тетяна Королик',
@@ -340,7 +340,7 @@ $(document).ready(function () {
 
 
         imagesAmount           : 10,
-        imagesAmountSpecialists: 2,
+        imagesAmountSpecialists: 1,
         specialists            : [
           {
             name      : 'Ирина Станкевич',
@@ -348,12 +348,6 @@ $(document).ready(function () {
             experience: 'Работает уже 2,5 года',
             skills    : 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
           },
-          {
-            name      : 'Кристина Демедюк',
-            education : ' По образованию',
-            experience: 'Работает уже 2,5 месяца',
-            skills    : 'Сделает лазерную эпиляцию'
-          }
         ]
       },
       ua: {
@@ -368,7 +362,7 @@ $(document).ready(function () {
 
 
         imagesAmount           : 10,
-        imagesAmountSpecialists: 2,
+        imagesAmountSpecialists: 1,
         specialists            : [
           {
             name      : 'Ірина Станкевич',
@@ -376,12 +370,6 @@ $(document).ready(function () {
             experience: 'Працює вже 2,5 года',
             skills    : 'Зробить лазерну епіляцію, косметологічні послуги, чистку обличчя'
           },
-          {
-            name      : 'Христина Демедюк',
-            education : 'По образованию',
-            experience: 'Працює вже 2,5 місяці',
-            skills    : 'Зробить лазерну епіляцію'
-          }
         ]
       }
 

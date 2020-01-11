@@ -183,7 +183,7 @@ $(document).ready(function () {
 
 
         imagesAmount           : 10,
-        imagesAmountSpecialists: 2,
+        imagesAmountSpecialists: 1,
         specialists            : [
           {
             name      : 'Ірина Станкевич',
@@ -191,12 +191,6 @@ $(document).ready(function () {
             experience: 'Працює вже 2,5 года',
             skills    : 'Зробить лазерну епіляцію, косметологічні послуги, чистку обличчя'
           },
-          {
-            name      : 'Христина Демедюк',
-            education : 'По образованию',
-            experience: 'Працює вже 2,5 місяці',
-            skills    : 'Зробить лазерну епіляцію'
-          }
         ]
       }
     },
