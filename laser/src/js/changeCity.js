@@ -18,7 +18,7 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
       }
-      
+
     },
     if: {
       ru: {
@@ -32,7 +32,7 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
         `
       }
-      
+
     },
     lt: {
       ru: {
@@ -48,7 +48,7 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
         `
       }
-      
+
     },
     lv: {
       ru: {
@@ -61,7 +61,7 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
         `
       }
-      
+
     },
     rv: {
       ru: {
@@ -78,7 +78,7 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
       }
-      
+
     }
   }
   const citiesData = {
@@ -92,7 +92,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
-        
+
         imagesAmount           : 6,
         imagesAmountSpecialists: 6,
         specialists            : [
@@ -149,7 +149,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
-        
+
         imagesAmount           : 6,
         imagesAmountSpecialists: 6,
         specialists            : [
@@ -197,7 +197,7 @@ $(document).ready(function () {
           }
         ]
       }
-      
+
     },
     if: {
       ru: {
@@ -209,7 +209,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
-        
+
         imagesAmount           : 9,
         imagesAmountSpecialists: 2,
         specialists            : [
@@ -236,7 +236,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
-        
+
         imagesAmount           : 9,
         imagesAmountSpecialists: 2,
         specialists            : [
@@ -254,7 +254,7 @@ $(document).ready(function () {
           }
         ]
       }
-      
+
     },
     lt: {
       ru: {
@@ -265,9 +265,9 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lutsk/video-slider-0@2x.jpg',
-        
-        
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lt/video-slider-0@2x.jpg',
+
+
         imagesAmount           : 9,
         imagesAmountSpecialists: 3,
         specialists            : [
@@ -299,9 +299,9 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lutsk/video-slider-0@2x.jpg',
-        
-        
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lt/video-slider-0@2x.jpg',
+
+
         imagesAmount           : 9,
         imagesAmountSpecialists: 3,
         specialists            : [
@@ -325,7 +325,7 @@ $(document).ready(function () {
           }
         ]
       }
-      
+
     },
     lv: {
       ru: {
@@ -336,9 +336,9 @@ $(document).ready(function () {
         cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.lviv/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lviv/video-slider-0@2x.jpg',
-        
-        
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lv/video-slider-0@2x.jpg',
+
+
         imagesAmount           : 10,
         imagesAmountSpecialists: 2,
         specialists            : [
@@ -364,9 +364,9 @@ $(document).ready(function () {
         cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.lviv/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lviv/video-slider-0@2x.jpg',
-        
-        
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lv/video-slider-0@2x.jpg',
+
+
         imagesAmount           : 10,
         imagesAmountSpecialists: 2,
         specialists            : [
@@ -384,7 +384,7 @@ $(document).ready(function () {
           }
         ]
       }
-      
+
     },
     rv: {
       ru: {
@@ -396,8 +396,8 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/video-slider-0@2x.jpg',
-        
-        
+
+
         imagesAmount           : 10,
         imagesAmountSpecialists: 4,
         specialists            : [
@@ -435,9 +435,9 @@ $(document).ready(function () {
         cityMap               : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/video-slider-0@2x.jpg',
-        
-        
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/video-slider-0@2x.jpg',
+
+
         imagesAmount           : 10,
         imagesAmountSpecialists: 4,
         specialists            : [
@@ -467,7 +467,7 @@ $(document).ready(function () {
           }
         ]
       }
-      
+
     }
   }
   const nav = {
@@ -510,9 +510,9 @@ $(document).ready(function () {
   // if (city) {
   //   changeDataForCity()
   // }
-  
+
   $(`a.nav-link-text.btn-simple-map.city-trigger[data-city="${city}"]`).toggleClass('active')
-  
+
   function changeDataForCity() {
     $('.inst-dynamic').each(function (e) {
       this.setAttribute('href', `${citiesData[city][localization].cityInstagram}`)
@@ -530,26 +530,26 @@ $(document).ready(function () {
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + citiesData[city][localization].cityNameIn
     })
-    
+
     $('.address-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].address
     })
-    
+
     $('.map-dynamic').each(function (e) {
       this.innerHTML = citiesData[city][localization].cityMap
     })
-    
+
     $('.service-li-dynamic').each(function (e) {
       this.innerHTML = serviceCityData[city][localization].selectedService
     })
-    
+
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`)
     })
-    
-    
+
+
   }
-  
+
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
@@ -564,7 +564,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -584,13 +584,13 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
       videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
-    
+
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
       navContainer: '.video-nav-slider-dots',
       loop        : false,
@@ -599,7 +599,7 @@ $(document).ready(function () {
       dots        : false,
       items       : 1
     })
-    
+
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
@@ -618,16 +618,16 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-nav-slider-dots .owl-next').click(function () {
       videoSliderDots.trigger('next.owl.carousel')
     })
-    
+
     $('.video-nav-slider-dots .owl-prev').click(function () {
       videoSliderDots.trigger('prev.owl.carousel', [300])
     })
   }
-  
+
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount
     let imagesAmountSpecialists = citiesData[city][localization].imagesAmountSpecialists
@@ -636,7 +636,7 @@ $(document).ready(function () {
     let images = ''
     let imagesSmall = ''
     let imagesSpecialists = ''
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
@@ -644,7 +644,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
@@ -653,7 +653,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmountSpecialists; i++) {
       imagesSpecialists += `
         <div class="specialists-item">
@@ -669,21 +669,21 @@ $(document).ready(function () {
         </div>
       `
     }
-    
+
     return {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists
     }
   }
-  
+
   function changeImagesSalon() {
     $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger(
       'refresh.owl.carousel')
     $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger(
       'refresh.owl.carousel')
   }
-  
+
   function initCities() {
     initCarousels()
     $(document).click(function (e) {
@@ -703,8 +703,8 @@ $(document).ready(function () {
       }
     })
   }
-  
+
   initCities()
-  
+
 })
 

@@ -22,7 +22,7 @@ $(document).ready(function () {
             phone      : '098-180-50-90',
             address    : 'вул. Київська, 77, тц "Глобал"',
             schedule   : '9:00 - 21:00',
-            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
@@ -52,12 +52,12 @@ $(document).ready(function () {
                 skills    : 'Зробить європейський, класичний, чоловічий, дитячий манікюр, вирівнювання, зміцнення і «ремонт» нігтьової пластини, усі види дизайну, класичний, кислотний і спа-педикюр, парафінотерапію для рук і ніг'
               },
 
-              {
-                name      : 'Ольга Петрук',
-                education : 'Майстер нігтьового сервісу',
-                experience: 'Працює вже 1 рік',
-                skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, класичний, кислотний і спа-педикюр, дизайн (френч, аерографію, геометрію, втирку, наклейки, нескладні малюнки)'
-              },
+              // {
+              //   name      : 'Ольга Петрук',
+              //   education : 'Майстер нігтьового сервісу',
+              //   experience: 'Працює вже 1 рік',
+              //   skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, класичний, кислотний і спа-педикюр, дизайн (френч, аерографію, геометрію, втирку, наклейки, нескладні малюнки)'
+              // },
               {
                 name      : 'Анна Роюк',
                 education : 'Майстер нігтьового сервісу',
@@ -209,7 +209,7 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rovno/{{ salon }}/salon-0.jpg',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
 
         imagesAmount: 6,
         salons      : {
