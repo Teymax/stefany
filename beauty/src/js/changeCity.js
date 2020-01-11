@@ -701,9 +701,9 @@ $(document).ready(function () {
     
     switchData(citiesData[city][localization].salons[salon])
     
-    $('.service-li-dynamic').each(function (e) {
-      this.innerHTML = serviceCityData[city][localization].selectedService
-    })
+    // $('.service-li-dynamic').each(function (e) {
+    //   this.innerHTML = serviceCityData[city][localization].selectedService
+    // })
     
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
