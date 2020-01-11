@@ -23,6 +23,8 @@ window.nav = {
 
 $(document).ready(function () {
   
+  $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
+  
   $('[data-choose-text]').on('click', event => {
     window.chooseDayText = event.target.dataset.chooseText
     $('#placeForCourseText')[0].innerText = window.chooseDayText
