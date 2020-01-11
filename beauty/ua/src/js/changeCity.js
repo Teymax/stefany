@@ -3,6 +3,202 @@ $(document).ready(function () {
     zt: {
       ru: {
         cityName              : 'Житомир',
+        cityNameIn            : 'в Житомире',
+        cityPhone             : '098-007-07-53',
+        schedule              : '10:00 - 20:00',
+        address               : 'ул. Киевская, 77, тц "Глобал"',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.345216309848!2d28.6856875!3d50.2668125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s9G2C7M8P%2BP7!5e0!3m2!1sru!2sua!4v1576752718526!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
+        
+        imagesAmount: 10,
+        
+        salons: {
+          nail: {
+            name       : 'Steffany Nail',
+            city       : 'Житомир',
+            nameIn     : 'в Житомире',
+            phone      : '098-180-50-90',
+            address    : 'ул. Киевская, 77, тц "Глобал"',
+            schedule   : '9:00 - 21:00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+            facebook   : 'https://www.facebook.com/steffany.ua/',
+            specialists: [
+              {
+                name      : 'Алина Кайсын',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 7 лет',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND',
+                cover     : ''
+              },
+              {
+                name      : 'Наталия Клец',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 1 год',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание, укрепление, наращивание и коррекцию ногтей, несложный дизайн, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Людмила Коржовская',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 7 ле',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, дизайн (геометрию, аэрографию, френч, стемпинг, несложные рисунки, втирку), парафинотерапию для рук и ног, спа-процедуру CND'
+              },
+              {
+                name      : 'Владлена Охмак',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 5 лет',
+                skills    : 'Сделает европейский, классический, мужской, детский маникюр, выравнивание, укрепление и «ремонт» ногтевой пластины, все виды дизайна, классический, кислотный и спа-педикюр, парафинотерапию для рук и ног'
+              },
+              
+              // {
+              //   name      : 'Ольга Петрук',
+              //   education : 'Мастер ногтевого сервиса',
+              //   experience: 'Работает уже 1 год',
+              //   skills    : 'Сделает все виды маникюра, выравнивание и укрепление ногтевой пластины, классический, кислотный и спа-педикюр, дизайн (френч, аэрографию, геометрию, втирку, наклейки, несложные рисунки)'
+              // },
+              {
+                name      : 'Анна Роюк',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 2 года',
+                skills    : 'Сделает все виды маникюра, выравнивание, укрепление и наращивание ногтей, классический, кислотный и комбинированный педикюр, несложный дизайн, спа-процедуры и парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Ксения Станиславская',
+                education : 'Директор Nail Studio Steffany, мастер ногтевого сервиса',
+                experience: 'Работает уже 13 лет',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание, наращивание и коррекцию ногтей, все виды дизайна, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Ольга Степанчук',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 6 лет',
+                skills    : 'Сделает классический, комбинированный и аппаратный маникюр, классический, комбинированный и кислотный педикюр, парафинотерапию для рук и ног, укрепление, «ремонт» и наращивание ногтей, все виды нехудожественного дизайна'
+              },
+              {
+                name      : 'Анастасия Грицык',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 4 года',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание и коррекцию ногтей, несложный дизайн ногтей'
+              },
+              {
+                name      : 'Ирина Демиденко',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 4 года',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание ногтей, все виды дизайна ногтей, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Мария Пашковская',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 2 года',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание и укрепление ногтевой пластины, наращивание и коррекцию ногтей, дизайн (аэрографию, втирку, стемпинг), парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Оксана Таргонская',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 3 года',
+                skills    : 'Сделает все виды маникюра, выравнивание и укрепление ногтевой'
+              }
+            ]
+          },
+          hair: {
+            name       : 'Steffany Hair',
+            city       : 'Житомир',
+            nameIn     : 'в Житомире',
+            phone      : '067-404-19-33',
+            address    : 'ул. Киевская, 77, тц "Глобал"',
+            schedule   : '10:00 - 20:00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.347268440734!2d28.683446015724748!3d50.26677417945044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64afc032302d%3A0xbdc1a333cb9db4e6!2sSteffany%20Hair%20Studio!5e0!3m2!1sru!2sua!4v1577383086491!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
+            facebook   : 'https://www.facebook.com/steffany.ua/',
+            specialists: [
+              {
+                name      : 'Владислава Бондарь',
+                education : 'Парикмахер',
+                experience: 'Работает уже 7 лет',
+                skills    : 'Сделает женские и мужские стрижки, сложные окрашивания, уход за волосами, прически, укладку, полировку волос, камуфлирование седины, тонирование ранее окрашенных волос'
+              },
+              {
+                name      : 'Любовь Зайнчковская',
+                education : 'Мужской парикмахер',
+                experience: 'Работает уже 1,5 года',
+                skills    : 'Сделает мужские стрижки любой сложности'
+              },
+              {
+                name      : 'Александра Крышневская',
+                education : 'Brow-мастер, визажист',
+                experience: 'Работает уже 1 год',
+                skills    : 'Сделает моделирование и коррекцию бровей, окрашивание бровей краской и хной, окрашивание ресниц, мужскую коррекцию бровей, дневной, вечерний и свадебный макияж'
+              },
+              {
+                name      : 'Ирина Михалюк',
+                education : 'Парикмахер',
+                experience: 'Работает уже 3 года',
+                skills    : 'Сделает женские и мужские стрижки, окрашивание в один тон, накрутку, укладку, плетение, уход за волосами'
+              },
+              
+              {
+                name      : 'Юлия Павлушина',
+                education : 'Парикмахер',
+                experience: 'Работает уже 3 года',
+                skills    : 'Сделает мужские, женские и детские стрижки, окрашивания в один тон, сложные окрашивания, уход за волосами, плетение, прически, накрутку, укладку'
+              },
+              {
+                name      : 'Виктория Павюк',
+                education : 'Парикмахер',
+                experience: 'Работает уже 4 года',
+                skills    : 'Сделает женские и мужские стрижки, укладку, накрутку, окрашивание любой сложности, уход за волосами'
+              },
+              {
+                name      : 'Алина Путянина',
+                education : 'Парикмахер',
+                experience: 'Работает уже 6 лет',
+                skills    : 'Сделает женские, мужские и детские стрижки, окрашивание волос во всех техниках, укладку волос'
+              },
+              {
+                name      : 'Юлия Соловко',
+                education : 'Парикмахер',
+                experience: 'Работает уже 13 лет',
+                skills    : 'Сделает мужские и женские стрижки, окрашивание в один тон, сложные окрашивания, накрутку, укладку, плетение, уход за волосами'
+              },
+              
+              {
+                name      : 'Юлия Сурикова',
+                education : 'Парикмахер',
+                experience: 'Работает уже 9 лет',
+                skills    : 'Сделает все виды окрашивания, стрижки, укладку, прически без плетения, уход за волосами'
+              },
+              {
+                name      : 'Дарья Тарасюк',
+                education : 'Парикмахер',
+                experience: 'Работает уже 5 лет',
+                skills    : 'Сделает женские, мужские и детские стрижки, окрашивание волос в один тон, тонирование волос, полировку волос, уход за волосами, укладку длинных волос'
+              },
+              {
+                name      : 'Мария Балуева',
+                education : 'Brow-мастер, визажист',
+                experience: 'Работает уже 1 год',
+                skills    : 'Сделает моделирование и коррекцию бровей, окрашивание бровей краской и хной, мужскую коррекцию бровей, дневной, вечерний и свадебный макияж'
+              },
+              {
+                name      : 'Наталия Бойко',
+                education : 'Парикмахер',
+                experience: 'Работает уже 16 лет',
+                skills    : 'Сделает мужские и женские стрижки, окрашивание в один тон, сложные окрашивания, накрутку, укладку, плетение, уход за волосами, завивку'
+              },
+              {
+                name      : 'Екатерина Бондарь',
+                education : 'Парикмахер',
+                experience: 'Работает уже 8 лет ',
+                skills    : 'Сделает мужские и женские стрижки, окрашивание в один тон, сложные окрашивания, уход за волосами'
+              }
+            ]
+          }
+        }
+      },
+      ua: {
+        cityName              : 'Житомир',
         cityNameIn            : 'в Житомирі',
         cityPhone             : '098-007-07-53',
         schedule              : '10:00 - 20:00',
@@ -52,12 +248,12 @@ $(document).ready(function () {
                 skills    : 'Зробить європейський, класичний, чоловічий, дитячий манікюр, вирівнювання, зміцнення і «ремонт» нігтьової пластини, усі види дизайну, класичний, кислотний і спа-педикюр, парафінотерапію для рук і ніг'
               },
               
-              // {
-              //   name      : 'Ольга Петрук',
-              //   education : 'Майстер нігтьового сервісу',
-              //   experience: 'Працює вже 1 рік',
-              //   skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, класичний, кислотний і спа-педикюр, дизайн (френч, аерографію, геометрію, втирку, наклейки, нескладні малюнки)'
-              // },
+              {
+                name      : 'Ольга Петрук',
+                education : 'Майстер нігтьового сервісу',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить усі види манікюру, вирівнювання і зміцнення нігтьової пластини, класичний, кислотний і спа-педикюр, дизайн (френч, аерографію, геометрію, втирку, наклейки, нескладні малюнки)'
+              },
               {
                 name      : 'Анна Роюк',
                 education : 'Майстер нігтьового сервісу',
@@ -198,9 +394,110 @@ $(document).ready(function () {
         }
       }
     },
-    
     rv: {
       ru: {
+        cityName              : 'Ровно',
+        cityNameIn            : 'в Ровно',
+        cityPhone             : '098-500-48-86',
+        schedule              : '9-00 - 20-00',
+        address               : 'ул. Киевская, 4',
+        cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+        cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
+        cityFacebook          : 'https://www.facebook.com/steffany.ua/',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
+        
+        imagesAmount: 6,
+        salons      : {
+          salon: {
+            name       : 'Steffany Nails & Cosmetology',
+            city       : 'Ровно',
+            nameIn     : 'в Ровно',
+            phone      : '098-500-48-86',
+            address    : 'ул. Киевская, 4',
+            schedule   : '9-00 - 20-00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5063.141381159588!2d26.2695245!3d50.6165144!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabee90f50ee94b45!2sSteffany%20Nails%20and%20Cosmetology!5e0!3m2!1sru!2sua!4v1577383431739!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            instagram  : 'https://www.instagram.com/steffany.rivne/?hl=ru',
+            facebook   : 'https://www.facebook.com/steffany.ua/',
+            specialists: [
+              {
+                name      : 'Инна Кокора',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 1,5 года',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание, коррекцию и наращивание ногтей, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Мария Кузьмич',
+                education : 'Мастер маникюра',
+                experience: 'Работает уже 1 год',
+                skills    : 'Сделает все виды маникюра, укрепление и коррекцию ногтей, парафинотерапию для рук'
+              },
+              {
+                name      : 'Наталия Лело',
+                education : 'Парикмахер',
+                experience: 'Работает уже 15 лет',
+                skills    : 'Сделает все виды маникюра, укрепление и коррекцию ногтей, парафинотерапию для рук'
+              },
+              {
+                name      : 'Мария Остапович',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 2 года',
+                skills    : 'Сделает европейский, классический, комбинированный и детский маникюр, все виды педикюра, выравнивание и коррекцию ногтевой пластины, парафинотерапию для рук и ног'
+              },
+              
+              {
+                name      : 'Леся Парух',
+                education : 'Brow-мастер, визажист',
+                experience: 'Работает уже 1,5 года',
+                skills    : 'Сделает окрашивание бровей краской и хной, моделирование, коррекцию и ламинирование бровей, окрашивание ресниц'
+              },
+              {
+                name      : 'Екатерина Пархомчук',
+                education : 'Мастер маникюра',
+                experience: 'Работает уже 3 месяца',
+                skills    : 'Сделает все виды маникюра, выравнивание ногтевой пластины, парафинотерапия для рук'
+              },
+              {
+                name      : 'Галина Ребеш',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 2 года',
+                skills    : 'Сделает все виды маникюра и педикюра, выравнивание, коррекцию и наращивание ногтей, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Анна Власенко',
+                education : 'Мастер маникюра',
+                experience: 'Работает уже 6 лет',
+                skills    : 'Сделает классический, комбинированный и мужской маникюр, укрепление, наращивание и коррекцию ногтей'
+              },
+              
+              {
+                name      : 'Яна Галицкая',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 4 года',
+                skills    : 'Сделает все виды маникюра и педикюра, укрепление ногтей, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Вероника Голянская',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 2 года',
+                skills    : 'Сделает все виды маникюра и педикюра, укрепление ногтей, парафинотерапию для рук и ног'
+              },
+              {
+                name      : 'Наталия Довгаль',
+                education : 'Мастер маникюра',
+                experience: 'Работает уже 3 месяца',
+                skills    : 'Сделает все виды маникюра, выравнивание ногтевой пластины, парафинотерапию для рук'
+              },
+              {
+                name      : 'Ирина Коломийчук',
+                education : 'Мастер ногтевого сервиса',
+                experience: 'Работает уже 3 года',
+                skills    : 'Сделает все виды маникюра, классический, комбинированный и спа-педикюр, выравнивание, укрепление и наращивание ногтей, парафинотерапию для рук и ног'
+              }
+            ]
+          }
+        }
+      },
+      ua: {
         cityName              : 'Рівне',
         cityNameIn            : 'в Рівному',
         cityPhone             : '098-500-48-86',
@@ -302,18 +599,28 @@ $(document).ready(function () {
           }
         }
       }
+      
     }
   }
+  const v = 'ru'
+  console.log('QWEQWEQWE', v)
   const nav = {
-    zt: 'beauty/ua/{{ page }}',
-    rv: 'beauty/rv/ua/{{ page }}'
+    zt: {
+      ru: 'beauty/{{ page }}',
+      ua: 'beauty/ua/{{ page }}'
+    },
+    rv: {
+      ru: 'beauty/rv/{{ page }}',
+      ua: 'beauty/rv/ua/{{ page }}'
+    }
   }
-  
-  const urlCity      = location.pathname.slice(1).split('/')[1],
-        filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
-  let localization = 'ru'
+  let localization = location.pathname.split('/').find(function (loc) {
+    return loc === 'ua'
+  }) || 'ru'
   let carouselsHTML = null
   let salon = localStorage.getItem('salon') || ''
+  const urlCity      = location.pathname.slice(1).split('/')[1],
+        filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
   // let city = localStorage.getItem('city')
   let city = filteredCity
   let width = ''
@@ -353,14 +660,6 @@ $(document).ready(function () {
   if (!salon) {
     localStorage.setItem('salon', 'nail')
   }
-  
-  console.log(salon)
-  
-  // if (!city) {
-  //   city = 'zt'
-  //   localStorage.setItem('city', city)
-  //   localStorage.setItem('salon', 'nail')
-  // }
   // if (city) {
   changeDataForCity()
   // }
@@ -372,13 +671,13 @@ $(document).ready(function () {
   
   if (salon !== 'salon') {
     if (salon === 'nail') {
+      console.log('nail')
       $('[data-remove-nail]').remove()
     }
     if (salon === 'hair') {
       $('[data-remove-hair]').remove()
     }
   }
-  
   
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
@@ -402,9 +701,9 @@ $(document).ready(function () {
     
     switchData(citiesData[city][localization].salons[salon])
     
-    $('.service-li-dynamic').each(function (e) {
-      this.innerHTML = serviceCityData[city][localization].selectedService
-    })
+    // $('.service-li-dynamic').each(function (e) {
+    //   this.innerHTML = serviceCityData[city][localization].selectedService
+    // })
     
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
@@ -491,6 +790,9 @@ $(document).ready(function () {
   
   function updateCarouselHTML() {
     setTimeout(() => {
+      // const slider = $('.specialists-slider.owl-carousel.slider-block.slider-pad.owl-loaded.owl-drag')[0]
+      // width = $('.specialists')[0].querySelector('.owl-item').style.width
+      // slider.innerHTML = ''
       location.reload()
     }, 0)
   }
@@ -551,7 +853,7 @@ $(document).ready(function () {
   }
   
   function initCities() {
-    initCarousels()
+    if ($('.video-slider')[0]) initCarousels()
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
       if (closestDropdown && e.target.classList.contains('nav-link-text')) {
@@ -563,7 +865,8 @@ $(document).ready(function () {
         // }
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
-        console.log('Redirect to: ', nav[city][localization].replace('{{ page }}', page))
+        console.log(_h, page, localization, city)
+        // console.log('Redirect to: ', nav[city][localization].replace('{{ page }}', page))
         const link = nav[city][localization].replace('{{ page }}', page)
         location.pathname = '/' + link
       }
@@ -574,4 +877,3 @@ $(document).ready(function () {
     initCities()
   }
 })
-
