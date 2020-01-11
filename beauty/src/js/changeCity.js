@@ -614,6 +614,28 @@ $(document).ready(function () {
       ua: 'beauty/rv/ua/{{ page }}'
     }
   }
+  
+  const binatel = {
+    zt: function (d, w, s) {
+      var widgetHash = 'rkr67ua265zfjx62zen7',
+          gcw        = d.createElement(s)
+      gcw.type = 'text/javascript'
+      gcw.async = true
+      gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+      var sn = d.getElementsByTagName(s)[0]
+      sn.parentNode.insertBefore(gcw, sn)
+    },
+    rv: function (d, w, s) {
+      var widgetHash = 'brp0dbyeu2gyu85snk25',
+          gcw = d.createElement(s)
+      gcw.type = 'text/javascript'
+      gcw.async = true
+      gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+      var sn = d.getElementsByTagName(s)[0]
+      sn.parentNode.insertBefore(gcw, sn)
+    }
+  }
+  
   let localization = location.pathname.split('/').find(function (loc) {
     return loc === 'ua'
   }) || 'ru'
@@ -623,6 +645,7 @@ $(document).ready(function () {
         filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
   // let city = localStorage.getItem('city')
   let city = filteredCity
+  binatel[city](document, window, 'script')
   let width = ''
   $(`.city-trigger[data-city=${city}]`).toggleClass('active')
   const switchData = data => {
