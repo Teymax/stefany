@@ -20,19 +20,20 @@
 //    color: #fff !important
 
 .container
-  //@include media-breakpoint-down(lg)
-  padding-left: 30px !important
-  padding-right: 30px !important
-  @include media-breakpoint-down(sm)
-    padding-left: 18px !important
-    padding-right: 18px !important
+	//@include media-breakpoint-down(lg)
+	padding-left: 30px !important
+	padding-right: 30px !important
+	@include media-breakpoint-down(sm)
+		padding-left: 18px !important
+		padding-right: 18px !important
 
 @include media-breakpoint-up(lg)
-  .container
-    max-width: 720px !important
+	.container
+		max-width: 720px !important
+
 @include media-breakpoint-up(xl)
-  .container
-    max-width: 1320px !important
+	.container
+		max-width: 1320px !important
 
 //modules
 @import 'modules/buttons'
@@ -50,23 +51,32 @@ html body
 	padding: 0 !important
 
 #ultraFastFeature
-  display: none !important
+	display: none !important
 
 #hotfixBtn
-  .arrow-section
-    svg
-      path
-        fill: #58606C !important
+	.arrow-section
+		svg
+			path
+				fill: #58606C !important
 
 @media screen and (max-width: 425px)
-  #ultraFastFeature
-    display: flex !important
+	.row.no-gutters.mob-menu
+	  justify-content: flex-end
+
+    nav
+      height: calc(100vh - 173px) !important
+      overflow: hidden !important
+
+      > ul
+        overflow: auto !important
+	#ultraFastFeature
+		display: flex !important
 
 .modal
-  .close-pp-btn
-    position: absolute
-    top: .5rem
-    right: .5rem
-    display: block
-    width: 2rem
-    height: 2rem
+	.close-pp-btn
+		position: absolute
+		top: .5rem
+		right: .5rem
+		display: block
+		width: 2rem
+		height: 2rem
