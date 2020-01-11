@@ -282,7 +282,7 @@ nav.header-nav
 				line-height: 24px
 				@include media-breakpoint-down(sm)
 					font-size: 18px
-					//line-height: 54px
+			//line-height: 54px
 
 			.dropdown-menu-list
 				width: 100% !important
@@ -482,5 +482,13 @@ header.open
 	display: none !important
 
 @media screen and (max-width: 425px)
+	.row.no-gutters.mob-menu
+		justify-content: flex-end
+
+		nav
+			height: calc(100vh - 173px) !important
+			overflow: hidden !important
+			> ul
+				overflow: auto !important
 	#ultraFastFeature
 		display: flex !important
