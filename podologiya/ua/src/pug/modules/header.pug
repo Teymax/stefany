@@ -14,7 +14,7 @@ header.mt-2.mb-2.mb-lg-0
       .col-12.col-md-7.header-nav-wrap.order-md-2.d-flex.flex-column
         nav.header-nav.w-100
           ul.header-nav-list.d-flex.flex-column.flex-lg-row.align-items-center.justify-content-between.mb-0
-            li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
+            li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-2.mb-lg-0
               span.p-text Про нас
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
@@ -23,7 +23,7 @@ header.mt-2.mb-2.mb-lg-0
                   a.nav-link-text(href="./salon") Наші салони
                 li.mb-2.mt-2
                   a.nav-link-text(href="./about") Про Steffany
-            li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
+            li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-2.mb-lg-0
               span.p-text Послуги та ціни
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
@@ -35,20 +35,20 @@ header.mt-2.mb-2.mb-lg-0
                 li.mb-2.mt-2
                   a.nav-link-text(href="./treatment") Обробка тріщин на п'ятах
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./orthopedics") Мала ортопедія
+                  a.nav-link-text(href="./orthopedics") Мала отртопедія
                 li.mb-2.mt-2
                   a.nav-link-text(href="./fungus") Лікування грибка нігтів
                 li.mb-2.mt-2
-                  a.nav-link-text(href="./prevention") Профілактичні послуги
+                  a.nav-link-text(href="./prevention") Профилактические услуги
                 li.mb-2.mt-2
                   a.nav-link-text(href="./wart") Лікування бородавок і видалення мозолів
-            li.d-inline-flex.align-items-center.mr-0.mb-4.mb-lg-0
+            li.d-inline-flex.align-items-center.mr-0.mb-2.mb-lg-0
               a.p-text(href="./contact") Контакти
-            li.d-inline-flex.align-items-center.mr-0.mb-4.mb-lg-0
+            li.d-inline-flex.align-items-center.mr-0.mb-2.mb-lg-0
               a.p-text(href="./edu") Навчання
         .mob-wrapper.d-flex.flex-column.d-md-none
           .a.ms_booking.ultra-mega-bg-btn
-            +btnPen('записатись')
+            +btnPen('записатися')
           ul.mt-4.d-flex.flex-column.align-items-center
             li.d-flex.justify-content-center.align-items-center.flex-column
               span.d-flex
@@ -58,23 +58,24 @@ header.mt-2.mb-2.mb-lg-0
                 //- svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 //-  path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
               ul.dropdown-menu-list.d-flex.flex-column.towns-list
-          .col-12.d-flex.d-md-none.justify-content-center(style='margin-top: 2em;')
-            li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
-              span.p-text.text-white UA
-              svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
-                path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
-              ul.dropdown-menu-list.flex-column
-                li.mb-2.mt-2
-                  a.nav-link-text(data-i18n='ua') UA
-                li.mb-2.mt-2
-                  a.nav-link-text(data-i18n='ru') RU
-          .col-12.d-block.d-md-none(style='margin-top: 6em;')
-            p.text-center.text-white.d-flex.align-items-end.justify-content-center
+          .col-12.d-flex.d-md-none.justify-content-center
+            ul(style='margin-top: 24%')
+              li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-lg-0
+                span.p-text.text-white UA
+                svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
+                  path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
+                ul.dropdown-menu-list.flex-column
+                  li.mb-2.mt-2
+                    a.nav-link-text(data-i18n='ua') UA
+                  li.mb-2.mt-2
+                    a.nav-link-text(data-i18n='ru') RU
+          .col-12.d-block.d-md-none
+            p.text-center.text-white.d-flex.align-items-end.justify-content-center(style='margin-top: 8%')
               img(src='assets/icon/phone.svg' alt='phone' style='height: 1.3em; width: 1.3em;').d-block
               a(href="tel:0981801088" style='padding-top: 2px').text-white.ml-2 098 180 10 88
       .col-12.col-md-5.nav-callback.order-md-3.justify-content-end.d-none.d-md-flex
         .a.ms_booking
-          +btnPen('записатись')
+          +btnPen('записатися')
       .col-12.header-contact-list-wrap.order-md-1.d-none.d-md-block
         ul.header-contact-list.d-flex.flex-column.flex-md-row.align-item-center.justify-content-end
           li.d-flex.flex-wrap.flex-md-nowrap.justify-content-center.mb-4.mb-md-0.mr-0.mr-md-3.align-items-center(style="cursor: default;")
@@ -96,9 +97,9 @@ header.mt-2.mb-2.mb-lg-0
             span.link-text-light.d-flex.align-items-center.justify-content-start.header-lang.i18n-switch.current UA
             ul.dropdown-menu-list.d-flex.flex-column
               li
-                a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(data-i18n='ru') RU
-              li
                 a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(data-i18n='ua') UA
+              li
+                a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(data-i18n='ru') RU
           li.d-none.d-md-flex.d-lg-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
             span.d-block.w-100
             span.d-block.w-100
