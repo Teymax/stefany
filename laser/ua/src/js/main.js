@@ -333,7 +333,7 @@ function refreshPrice(event) {
         elem.textContent = hours + LocHour+" " + minutes + LocMin
     }
   })
-  let count = document.querySelectorAll('input[type="checkbox"]:checked').length
+  let count = document.querySelectorAll('input[type="checkbox"][name="service"]:checked').length
   document.querySelector('#yclient_form .c-content-count').innerHTML = `
       <div class="d-flex justify-content-between"><span class="paragraph-text text-color-dark line-height">Выбрано услуг</span>
       <span class="paragraph-text text-w-bold text-color-dark ml-2 countCheckedService">${count}</span></div>
