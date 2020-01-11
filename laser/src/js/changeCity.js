@@ -480,6 +480,55 @@ $(document).ready(function () {
             ua: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
         }
     }
+    
+    const binatel = {
+        zt: function (d, w, s) {
+            var widgetHash = 'hkjkvxczszkz5wt5imor',
+                gcw        = d.createElement(s)
+            gcw.type = 'text/javascript'
+            gcw.async = true
+            gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+            var sn = d.getElementsByTagName(s)[0]
+            sn.parentNode.insertBefore(gcw, sn)
+        },
+        if: function (d, w, s) {
+            var widgetHash = 'fl8zbssa72s58pv4hrpv',
+                gcw        = d.createElement(s)
+            gcw.type = 'text/javascript'
+            gcw.async = true
+            gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+            var sn = d.getElementsByTagName(s)[0]
+            sn.parentNode.insertBefore(gcw, sn)
+        },
+        lv: function (d, w, s) {
+            var widgetHash = 'uh04zih8n1bkwetu4pnv',
+                gcw        = d.createElement(s)
+            gcw.type = 'text/javascript'
+            gcw.async = true
+            gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+            var sn = d.getElementsByTagName(s)[0]
+            sn.parentNode.insertBefore(gcw, sn)
+        },
+        lt: function (d, w, s) {
+            var widgetHash = '7j3ys286vzbh17csmy0n',
+                gcw        = d.createElement(s)
+            gcw.type = 'text/javascript'
+            gcw.async = true
+            gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+            var sn = d.getElementsByTagName(s)[0]
+            sn.parentNode.insertBefore(gcw, sn)
+        },
+        rv: function (d, w, s) {
+            var widgetHash = '65o63ikswb72mszndoi7',
+                gcw        = d.createElement(s)
+            gcw.type = 'text/javascript'
+            gcw.async = true
+            gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
+            var sn = d.getElementsByTagName(s)[0]
+            sn.parentNode.insertBefore(gcw, sn)
+        }
+    }
+    
     let localization = location.pathname.split('/').find(function (loc) {
         return loc === 'ua'
     }) || 'ru'
@@ -489,6 +538,8 @@ $(document).ready(function () {
     console.log(filteredCity)
     // let city = localStorage.getItem('city')
     let city = filteredCity
+    
+    binatel[city](document, window, 'script')
     // console.log(city, '%ci18n', 'font-size: 20em', localization)
     // if (!city) {
     //   city = 'zt'
