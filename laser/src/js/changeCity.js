@@ -458,7 +458,7 @@ $(document).ready(function () {
 
         }
     }
-    const nav = {
+    window.nav = {
         zt: {
             ru: 'lazernaya-epilyatsiya/{{ page }}',
             ua: 'lazernaya-epilyatsiya/ua/{{ page }}'
@@ -529,7 +529,7 @@ $(document).ready(function () {
         }
     }
     
-    let localization = location.pathname.split('/').find(function (loc) {
+    window.localization = location.pathname.split('/').find(function (loc) {
         return loc === 'ua'
     }) || 'ru'
     let carouselsHTML = null

@@ -1,13 +1,25 @@
 $(document).ready(() => {
+  $('[data-city]').on('click', e => {
+    const city = e.target.dataset.city
+    // localStorage.setItem('city', city)
+    // changeDataForCity()
+    const _h = location.pathname.slice(1).split('/'),
+          page = _h[_h.length - 1]
+    // console.log('Redirect to: ', nav[city].replace('{{ page }}', page))
+    const link = nav[city][localization].replace('{{ page }}', page)
+    location.pathname = '/' + link
+  })
   $('body').on('click', e => {
+    console.log(e.target)
     if (e.target.id === 'mobTrigger') {
       document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: block !important;'
-    }
-    else if (e.target.id === 'selectCityDropdownHeader2') {
+    } else if (e.target.dataset.city || e.target.id === 'cityHeader1') {
     
     }
     else {
       document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: none !important;'
+      $('#selectCityDropdownHeader2')[0].style.cssText = ''
+      $('#specArrow')[0].style.transform = ''
     }
   })
   const _toggleMenu = disable => {
