@@ -1,45 +1,26 @@
 // Icons - style header *********
-header
-	a
-		color: $secondary-header-color
-		text-decoration: none
-
-		&:hover
-			text-decoration: none
-			color: $secondary-header-color
-
-	.btn-callback
-		width: 200px
-		height: 38px
-		box-shadow: none
-
-		.text-section
-			span
-				margin-top: .35em
-
-	@include media-breakpoint-up(lg)
-		.btn-callback
-			width: 200px
 
 .icon
 	margin-right: 10px
 
-.icon-loc.text-section
-	span
-		margin-top: .35em
+.icon-loc
 	width: 13px
 	height: 17px
 
-svg
-	&.icon-loc
-		margin-right: 6px !important
-		margin-left: 0 !important
+svg.icon-loc
+	//width: 16px !important
+	//height: 13px !important
+	margin-right: 6px !important
+	margin-left: 0 !important
 
-	&.icon-phone
-		width: 15px !important
-		height: 15px !important
-		margin-right: 6px !important
-		margin-left: 0 !important
+svg.icon-phone
+	width: 15px !important
+	height: 15px !important
+	margin-right: 6px !important
+	margin-left: 0 !important
+
+	path
+		fill: #3a405b
 
 .icon-phone
 	width: 17px
@@ -67,8 +48,8 @@ svg.icon-arrow
 		fill: #3a405b
 
 .icon-large
-	width: 40px !important
-	height: 40px !important
+	width: 40px
+	height: 40px
 
 .icon-facebook
 	width: 14px
@@ -77,6 +58,7 @@ svg.icon-arrow
 .icon-inst
 	width: 17px
 	height: 17px
+
 
 // menu - style -- header **
 .menu-trigger
@@ -89,6 +71,7 @@ svg.icon-arrow
 	height: 2px
 	background-color: #000
 	transition: 0.2s cubic-bezier(0, 0, 0.2, 1)
+
 
 .menu-trigger.open
 	justify-content: center !important
@@ -109,14 +92,9 @@ svg.icon-arrow
 	cursor: pointer
 	position: relative
 
-	.dropdown-menu-list
-		.nav-link-text
-			display: block
-			width: 100%
-
 	svg
-		width: 12px
-		height: 8px
+		//width: 12px
+		//height: 8px
 		margin-left: 10px
 
 		.cls-1
@@ -139,10 +117,10 @@ ul.dropdown-menu-list
 	top: calc(100% + 20px)
 	left: 50%
 	transform: translateX(-50%)
-	padding: 30px 25px
+	padding: 20px 25px
 	background: $color-white
 	border-radius: 4px
-	box-shadow: 0 20px 50px rgba(18, 18, 18, 0.15)
+	box-shadow: 0px 20px 50px rgba(18, 18, 18, 0.15)
 
 	&::before
 		content: ''
@@ -156,13 +134,13 @@ ul.dropdown-menu-list
 		background: $color-white
 
 	li
-		a
+		.nav-link-text
 			white-space: nowrap
-			font-weight: normal
+			padding-bottom: 5px
+			padding-top: 5px
+			display: block
 
 		&:not(:last-child)
-			padding-bottom: 15px
-			margin-bottom: 15px
 			border-bottom: 1px solid #D2DBE9
 
 .drop-menu-top
@@ -173,23 +151,28 @@ ul.dropdown-menu-list
 		&::before
 			top: calc(100% - 8px)
 
-@media (min-width: 1199px)
+@media (min-width: 1200px)
 	.hidden-item
 		display: none
 
-@media (max-width: 1199px)
+@media (max-width: 1200px)
 	.px-15
 		padding-left: 15px !important
 		padding-right: 15px !important
 
+
 header
-	position: relative
+	padding-bottom: 64px
+	@include media-breakpoint-down(lg)
+		padding-bottom: 0
+	//position: relative
 	z-index: 5
 
-	.container
-		padding-top: 30px
-		padding-bottom: 6px
+	.header-lang
 
+	.container
+	//padding-top: 22px
+	//padding-bottom: 22px
 	.c-logo
 		width: 100%
 		max-width: 152px
@@ -200,8 +183,6 @@ header
 		svg
 			width: 185px
 			height: 95px
-			@include media-breakpoint-down(md)
-				width: 110px
 
 			path
 				fill: #556278
@@ -209,11 +190,38 @@ header
 			line
 				stroke: #556278
 
+	a
+		color: #4D5259 !important
+
+	.btn-callback
+		margin-left: auto
+		height: 45px
+		width: 251px
+
+		.text-section
+			span
+				margin-top: 0
+		@include media-breakpoint-down(lg)
+
+		@include media-breakpoint-down(sm)
+			margin-left: auto
+			margin-right: auto
+
+		span
+			color: rgba(132, 138, 164, 1)
+			@include media-breakpoint-down(sm)
+		//color: #fff
+		svg
+
+			@include media-breakpoint-down(sm)
+	//fill: #fff !important
 	.c-row
 		max-width: 44em
 
 		ul.header-contact-list
 			margin-bottom: 20px !important
+
+			&:nth-last-child(1)
 
 			& > li
 				position: relative
@@ -236,30 +244,18 @@ header
 
 nav.header-nav
 	width: 100%
-	max-width: 25em
 	margin-right: 5px
-	@include media-breakpoint-only(md)
-		position: absolute
-		top: 50%
-		transform: translateY(-50%)
 
 	ul.header-nav-list
 		width: 100%
-		//@include media-breakpoint-down(sm)
-		//	margin-bottom: 11rem !important
+		@include media-breakpoint-down(sm)
+			padding-top: 100px
 
 		li
 			position: relative
 			cursor: pointer
 
-			span
-				font-family: Circe
-
-			a
-				color: $secondary-header-color
-				text-decoration: none
-
-@media(max-width: 991px)
+@include media-breakpoint-down(lg)
 	.header-nav-wrap
 		position: fixed !important
 		z-index: -20
@@ -271,9 +267,11 @@ nav.header-nav
 		width: 100% !important
 		max-width: 100% !important
 		height: 100vh
-		padding: 150px 15px 150px !important
-		background: url(../assets/img/background/menu.png) no-repeat center center
-		background-size: cover
+		//padding: 150px 15px 150px !important
+		background:
+			image: url("../assets/img/background/menu.png")
+			size: cover
+			position: -295px
 		transition: 0.45s ease
 
 		.nav-link-text
@@ -283,10 +281,13 @@ nav.header-nav
 		.header-nav
 			max-width: 100% !important
 
-			li, span, .p-text
+			li, span, a, .p-text
 				color: $color-white !important
-				font-size: 24px !important
-				line-height: 24px !important
+				font-size: 24px
+				line-height: 24px
+				@include media-breakpoint-down(sm)
+					font-size: 18px
+			//line-height: 54px
 
 			.dropdown-menu-list
 				width: 100% !important
@@ -306,6 +307,7 @@ nav.header-nav
 					line-height: 0 !important
 					opacity: 0 !important
 					color: transparent
+					overflow: hidden
 					transition: opacity 0.3s ease 0.1s, font-size 0.2s ease-in-out, padding 0.2s ease-in-out
 
 				li
@@ -320,7 +322,6 @@ nav.header-nav
 		.drop-menu
 			&.open
 				.dropdown-menu-list
-					display: flex !important
 					padding-top: 10px !important
 
 					li
@@ -330,10 +331,16 @@ nav.header-nav
 					li, a
 						font-size: 16px !important
 						line-height: 16px !important
-						color: #ffffff !important
+						color: $secondary-header-color !important
 						opacity: 1 !important
 	header
-		position: relative
+		//position: relative
+		a
+			color: #4D5259 !important
+
+
+		span.paragraoh-text
+			color: $secondary-header-color !important
 
 		&.open
 			.header-nav-wrap
@@ -356,7 +363,7 @@ nav.header-nav
 					fill: $color-white !important
 
 			.c-logo, .header-contact-list-wrap, .nav-callback
-				position: relative
+				//position: relative
 				z-index: 21
 
 			.c-logo
@@ -373,14 +380,13 @@ nav.header-nav
 	.header-nav-wrap
 		position: static !important
 		opacity: 1 !important
-		display: flex !important
+		display: flex
 		align-items: center
 		width: 100% !important
 		max-width: 100% !important
 		height: auto !important
 		padding: 0 !important
 		background: transparent
-		justify-content: center
 	.mob-menu
 		position: fixed !important
 		z-index: -20
@@ -391,18 +397,21 @@ nav.header-nav
 		left: 0
 		max-width: 100% !important
 		height: 100vh
-		padding: 150px 15px 150px !important
-		background: url(../assets/img/background/menu.png) no-repeat center center
-		background-size: cover
+		//padding: 50% 15px 50% !important
 		transition: 0.45s ease
-
-		& > *
-			position: initial !important
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		background:
+			image: url("../assets/img/background/menu.png")
+			size: cover
+			position: -295px
 
 		.dropdown-menu-list
 			width: 100% !important
 			position: static !important
-			display: none !important
+			display: flex
 			transform: translateX(0%) !important
 			padding: 0 !important
 			background: transparent !important
@@ -417,6 +426,7 @@ nav.header-nav
 				line-height: 0 !important
 				opacity: 0 !important
 				color: transparent !important
+				overflow: hidden
 				transition: opacity 0.3s ease 0.2s, font-size 0.2s ease-in-out, padding 0.2s ease-in-out
 
 			li
@@ -432,12 +442,11 @@ nav.header-nav
 			flex: 0 !important
 
 		.header-nav-wrap, .nav-callback
-			margin-bottom: 55px !important
+	//margin-bottom: 55px !important
 	.drop-menu
 		&.open
 			.dropdown-menu-list
 				padding-top: 10px !important
-				display: flex
 
 				li
 					&:not(:last-child)
@@ -451,29 +460,14 @@ nav.header-nav
 	header
 		&.open
 			.menu-trigger
-				position: relative
+				//position: relative
 				z-index: 22
 
 			.mob-menu
-				display: flex !important
-				justify-content: start
 				visibility: visible
 				z-index: 20
 				opacity: 1
 
-				.header-nav-wrap
-					margin-top: 50%
-					margin-bottom: 0 !important
-
-				.nav-callback
-					margin-bottom: 4em
-
-				.btn-callback
-					//position: absolute
-					//left: 50%
-					//transform: translateX(-50%)
-					min-width: 200px
-					min-height: 38px
 	header .c-row ul.header-contact-list > li:not(:last-child)
 		margin-right: 0 !important
 	header .header-contact-list span, header .header-contact-list > li > a
@@ -482,14 +476,116 @@ nav.header-nav
 		path
 			fill: #ffffff !important
 
-@media(max-width: 575px)
-	.mob-menu
-		padding: 100px 15px 20px !important
-		overflow-y: scroll !important
+header.open
+	.btn-callback
+		.text-section
+			span
+				color: #fff
 
-	.current-town
-		color: #fff !important
+			svg
+				fill: #fff
 
-	#pointSvg
-		path
-			fill: #fff !important
+header
+	#selectCityDropdownHeader2
+		display: none
+		margin-top: .5rem
+		li
+			text-align: center
+
+#ultraFastFeature
+	display: none !important
+
+html body header #mobileMenu
+	display: none
+
+@media screen and (max-width: 425px)
+	#selectCityDropdownHeader1
+		top: 13%
+	_::-webkit-full-page-media, _:future, :root .row.no-gutters.mob-menu
+		justify-content: center
+
+	html body header #mobileMenu
+		width: 100%
+		display: flex
+		justify-content: center
+		height: calc(100vh - 250px) !important
+		nav
+			overflow: hidden !important
+			width: 100%
+			.redirectBtn
+				.text-section
+					span
+						font-family: Circe, sans-serif
+				.arrow-section
+					svg
+						fill: #4D5259
+			.mob-title
+				font-family: Circe, sans-serif
+				color: #ffffff
+			@media screen and (max-width: 420px)
+				.mob-title
+					font-size: 20px
+
+			.sub-menu-trigger
+				&.triggered
+					svg.icon-arrow
+						transform: rotate(180deg)
+
+			.sub-menu
+				display: none
+				&.open
+					display: block
+
+			> ul
+				overflow: auto !important
+
+				li
+					margin-top: 1rem
+
+					&:not(:last-child)
+						margin-bottom: 1rem
+
+		ul
+			width: 100%
+			li
+				color: #fff
+				text-align: center
+				margin-top: .5rem
+				margin-bottom: .5rem
+
+				a
+					color: #ffffff !important
+
+				span
+					pointer-events: none
+				svg
+					pointer-events: none
+
+	html body header .desktop-menu-hide
+		display: none !important
+
+	.row.no-gutters.mob-menu
+		//justify-content: flex-end
+
+		nav.header-nav.w-100.d-flex
+			height: calc(100vh - 250px) !important
+			overflow: hidden !important
+
+			> ul
+				overflow: auto !important
+	#ultraFastFeature
+		display: flex !important
+
+@media screen and (max-width: 375px)
+	header
+		li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-xl-0.open + li.d-inline-flex.align-items-center.mr-0.li-contact
+			margin-top: 4rem
+		ul.service-li-dynamic.dropdown-menu-list.d-flex.flex-column
+			li
+				&:last-child
+//margin-top: 9rem !important
+
+
+@media screen and (max-width: 330px)
+	#selectCityDropdownHeader1
+		top: 17%
