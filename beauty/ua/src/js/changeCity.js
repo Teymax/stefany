@@ -199,7 +199,7 @@ $(document).ready(function () {
       },
       ua: {
         cityName              : 'Житомир',
-        cityNameIn            : 'в Житомирі',
+        cityNameIn            : 'у Житомирі',
         cityPhone             : '098-007-07-53',
         schedule              : '10:00 - 20:00',
         address               : 'вул. Київська, 77, тц "Глобал"',
@@ -214,7 +214,7 @@ $(document).ready(function () {
           nail: {
             name       : 'Steffany Nail',
             city       : 'Житомир',
-            nameIn     : 'в Житомирі',
+            nameIn     : 'у Житомирі',
             phone      : '098-180-50-90',
             address    : 'вул. Київська, 77, тц "Глобал"',
             schedule   : '9:00 - 21:00',
@@ -301,7 +301,7 @@ $(document).ready(function () {
           hair: {
             name       : 'Steffany Hair',
             city       : 'Житомир',
-            nameIn     : 'в Житомирі',
+            nameIn     : 'у Житомирі',
             phone      : '067-404-19-33',
             address    : 'вул. Київська, 77, тц "Глобал"',
             schedule   : '10:00 - 20:00',
