@@ -37,6 +37,8 @@
 #sendComplex.modal.fade(tabindex='-1', role='dialog', aria-labelledby='firstDayCourse', aria-hidden='true')
   .modal-dialog.modal-popup.modal-dialog-centered(role='document')
     .modal-content
+      button.close(type='button', data-dismiss='modal', aria-label='Close')
+        span(aria-hidden='true')
       form#callComplex.main-form.d-flex.flex-column.align-items-center.pt-5.mt-4.mt-md-0
         h4.h4-title.text-uppercase.text-color-dark.text-w-bold.text-center Оставьте ваши данные
         p.paragraph-text.text-color-lightdark.text-center.mb-38 и мы вам перезвоним
