@@ -97,10 +97,15 @@
 
 
 .modal-popup.thanks-popup
+  //padding:  0 20px
   .modal-content
     height: 430px
     padding: 112px 45px !important
+    @include media-breakpoint-down(sm)
+      height: 100vh
     h4
       width: 100%
     button.close
       top: -30px
+      @include media-breakpoint-down(sm)
+        top: 21px !important

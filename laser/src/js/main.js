@@ -51,8 +51,8 @@ function processErrors(data) {
   let msg
   if (!data._error) return false
   msg = data._error.message
-  
-  
+
+
   alert(msg)
   return true
 }
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [...payButtons].forEach(button => {
     button.addEventListener('click', buttonToggle)
   })
-  
+
   document.querySelectorAll('.check-radio').forEach(function (item) {
     item.addEventListener('click', radioClick)
   })
@@ -105,7 +105,7 @@ function buttonToggle(event) {
 }
 
 function bookAfterRecord() {
-  
+
   if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone) {
     let services = localStorage.services.split(',')
     let params = [
@@ -124,7 +124,7 @@ function bookAfterRecord() {
 }
 
 function displayServices(json) {
-  
+
   let servicesBlock = document.querySelector('div.service-list-group')
   let data = getData(json)
   let servicesAll = data.services
@@ -173,7 +173,7 @@ function mainFormSubmit(event) {
   let service = event.target.service.value
   let city = localStorage.city ? localStorage.city : 'unknown'
   let comment = (event.target.id === 'callComplex' ? 'complex ' : 'service consult ')
-  
+
   let params = [
     event.target.fullname.value,
     event.target.email.value,
@@ -239,7 +239,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
     'Content-Type' : 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
-  
+
   let date = new Date()
   let userParams = {
     'phone'       : phone,
@@ -313,14 +313,14 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value   : phone,
     readonly: true
   })
-  
+
   button.addField({
     label   : 'services',
     name    : 'user_services',
     value   : services,
     readonly: true
   })
-  
+
   return button.getUrl()
 }
 
