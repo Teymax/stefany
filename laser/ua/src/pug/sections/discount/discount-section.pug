@@ -31,7 +31,7 @@ section.section.discount
               .button.btn-second.btn-simple.svg.caset(data-toggle='modal', data-target='#singComplexModal').check-radio
                 .text-section
                   +penSvg
-                  span записатися
+                  span(id = "discount-1") записатися
       .col-12.col-xl-4
         .box-wrap
           .c-content
@@ -59,7 +59,7 @@ section.section.discount
               .button.btn-second.btn-simple.svg.caset(data-toggle='modal', data-target='#singComplexModal').check-radio
                 .text-section
                   +penSvg
-                  span записатися
+                  span(id = "discount-2") записатися
       .col-12.col-xl-4
         .box-wrap.mb-0
           .c-content
@@ -87,13 +87,13 @@ section.section.discount
               .button.btn-second.btn-simple.svg.caset(data-toggle='modal', data-target='#singComplexModal').check-radio
                 .text-section
                   +penSvg
-                  span записатися
+                  span(id = "discount-3") записатися
   .container
     p.discount-desc.text-center Плануйте лазерну епіляцію будь-якої зони та заощаджуйте! Сплачуйте наперед 4, 6 або 8 процедур за конкретну зону та збільшуйте свою знижку. <br> Акція діє на всі зони лазерної епіляції. Якщо ви не знайшли в таблиці потрібну вам зону, тисніть на кнопку «Замовити дзвінок». Ми зателефонуємо вам та проконсультуємо по цінах.
 
     .btn-callback(data-toggle='modal', data-target='#sendComplex')
       .text-section
         +phoneSvg
-        span Замовити дзвінок
+        span(id = "discount-call") Замовити дзвінок
       .arrow-section
         +arrowSvg
