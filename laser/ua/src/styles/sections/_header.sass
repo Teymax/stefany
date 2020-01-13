@@ -482,11 +482,14 @@ header.open
 	display: none !important
 
 @media screen and (max-width: 425px)
+	_::-webkit-full-page-media, _:future, :root .row.no-gutters.mob-menu
+		justify-content: center
+
 	.row.no-gutters.mob-menu
-		justify-content: flex-end
+		//justify-content: flex-end
 
 		nav
-			height: calc(100vh - 173px) !important
+			height: calc(100vh - 250px) !important
 			overflow: hidden !important
 
 			> ul
