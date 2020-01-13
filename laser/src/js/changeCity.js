@@ -201,7 +201,7 @@ $(document).ready(function () {
         },
         if: {
             ru: {
-                cityName: 'Ивано-Франковск',
+                cityName: 'Ивано-Фр.',
                 cityNameIn: 'в Ивано-Франковске',
                 cityPhone: '380-67-110-09-69',
                 address: 'ул. Ивана Франка, 25',
@@ -228,7 +228,7 @@ $(document).ready(function () {
                 ]
             },
             ua: {
-                cityName: 'Івано-Франківськ',
+                cityName: 'Івано-Фр.',
                 cityNameIn: 'у Івано-Франківську ',
                 cityPhone: '380-67-110-09-69',
                 address: 'вул. Івана Франка, 25',
