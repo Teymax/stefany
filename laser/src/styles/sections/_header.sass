@@ -475,9 +475,6 @@ header.open
 
 			svg
 				fill: #fff
-//@media(max-width: 575px)
-//  .mob-menu
-//    overflow-y: hidden !important
 
 header
 	#selectCityDropdownHeader2
@@ -489,16 +486,71 @@ header
 #ultraFastFeature
 	display: none !important
 
+html body header #mobileMenu
+	display: none
+
 @media screen and (max-width: 425px)
 	#selectCityDropdownHeader1
 		top: 13%
 	_::-webkit-full-page-media, _:future, :root .row.no-gutters.mob-menu
 		justify-content: center
 
+	html body header #mobileMenu
+		width: 100%
+		display: flex
+		justify-content: center
+		height: calc(100vh - 250px) !important
+		nav
+			overflow: hidden !important
+			width: 100%
+			.mob-title
+				font-family: Circe, sans-serif
+			@media screen and (max-width: 420px)
+				.mob-title
+					font-size: 20px
+
+			.sub-menu-trigger
+				&.triggered
+					svg.icon-arrow
+						transform: rotate(180deg)
+
+			.sub-menu
+				display: none
+				&.open
+					display: block
+
+			> ul
+				overflow: auto !important
+
+				li
+					margin-top: 1rem
+
+					&:not(:last-child)
+						margin-bottom: 1rem
+
+		ul
+			width: 100%
+			li
+				color: #fff
+				text-align: center
+				margin-top: .5rem
+				margin-bottom: .5rem
+
+				a
+					color: #ffffff !important
+
+				span
+					pointer-events: none
+				svg
+					pointer-events: none
+
+	html body header .desktop-menu-hide
+		display: none !important
+
 	.row.no-gutters.mob-menu
 		//justify-content: flex-end
 
-		nav
+		nav.header-nav.w-100.d-flex
 			height: calc(100vh - 250px) !important
 			overflow: hidden !important
 
@@ -519,4 +571,4 @@ header
 
 @media screen and (max-width: 330px)
 	#selectCityDropdownHeader1
-		top: 15%
+		top: 17%

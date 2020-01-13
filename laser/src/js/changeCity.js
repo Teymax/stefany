@@ -86,7 +86,7 @@ $(document).ready(function () {
             ru: {
                 cityName: 'Житомир',
                 cityNameIn: 'в Житомире',
-                cityPhone: '096-205-50-30',
+                cityPhone: '+380-98-500-48-86',
                 address: 'ул. Киевская, 84',
                 cityMap: '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
@@ -143,7 +143,7 @@ $(document).ready(function () {
             ua: {
                 cityName: 'Житомир',
                 cityNameIn: 'у Житомирі',
-                cityPhone: '096-205-50-30',
+                cityPhone: '+380-98-500-48-86',
                 address: 'вул. Київська, 84',
                 cityMap: '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
@@ -203,7 +203,7 @@ $(document).ready(function () {
             ru: {
                 cityName: 'Ивано-Франковск',
                 cityNameIn: 'в Ивано-Франковске',
-                cityPhone: '067-110-09-69',
+                cityPhone: '+380-67-110-09-69',
                 address: 'ул. Ивана Франка, 25',
                 cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
@@ -230,7 +230,7 @@ $(document).ready(function () {
             ua: {
                 cityName: 'Івано-Франківськ',
                 cityNameIn: 'у Івано-Франківську ',
-                cityPhone: '067-110-09-69',
+                cityPhone: '+380-67-110-09-69',
                 address: 'вул. Івана Франка, 25',
                 cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
@@ -260,7 +260,7 @@ $(document).ready(function () {
             ru: {
                 cityName: 'Луцк',
                 cityNameIn: 'в Луцке',
-                cityPhone: '068-129-24-23',
+                cityPhone: '+380-68-129-24-23',
                 address: 'пр. Воли, 10',
                 cityMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.lutsk/?hl=ru',
@@ -294,7 +294,7 @@ $(document).ready(function () {
             ua: {
                 cityName: 'Луцьк',
                 cityNameIn: 'у Луцьку',
-                cityPhone: '068-129-24-23',
+                cityPhone: '+380-68-129-24-23',
                 address: 'пр. Волі, 10',
                 cityMap: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.lutsk/?hl=ru',
@@ -331,7 +331,7 @@ $(document).ready(function () {
             ru: {
                 cityName: 'Львов',
                 cityNameIn: 'во Львове',
-                cityPhone: '097-203-90-03',
+                cityPhone: '+380-97-203-90-03',
                 address: 'ул. Гулака-Артемовского, 2',
                 cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.lviv/?hl=ru',
@@ -353,7 +353,7 @@ $(document).ready(function () {
             ua: {
                 cityName: 'Львів',
                 cityNameIn: 'у Львові',
-                cityPhone: '097-203-90-03',
+                cityPhone: '+380-97-203-90-03',
                 address: 'вул. Гулака-Артемовського, 2',
                 cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.lviv/?hl=ru',
@@ -378,7 +378,7 @@ $(document).ready(function () {
             ru: {
                 cityName: 'Ровно',
                 cityNameIn: 'в Ровно',
-                cityPhone: '098-500-48-86',
+                cityPhone: '+380-98-500-48-86',
                 address: 'ул. Киевская, 4',
                 cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.rivne/?hl=ru',
@@ -418,7 +418,7 @@ $(document).ready(function () {
             ua: {
                 cityName: 'Рівне',
                 cityNameIn: 'у Рівному',
-                cityPhone: '098-500-48-86',
+                cityPhone: '+380-98-500-48-86',
                 address: 'вул. Київська, 4',
                 cityMap: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.rivne/?hl=ru',
@@ -480,7 +480,7 @@ $(document).ready(function () {
             ua: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
         }
     }
-    
+
     const binatel = {
         zt: function (d, w, s) {
             var widgetHash = 'hkjkvxczszkz5wt5imor',
@@ -528,7 +528,7 @@ $(document).ready(function () {
             sn.parentNode.insertBefore(gcw, sn)
         }
     }
-    
+
     window.localization = location.pathname.split('/').find(function (loc) {
         return loc === 'ua'
     }) || 'ru'
@@ -538,7 +538,7 @@ $(document).ready(function () {
     console.log(filteredCity)
     // let city = localStorage.getItem('city')
     let city = filteredCity
-    
+
     binatel[city](document, window, 'script')
     // console.log(city, '%ci18n', 'font-size: 20em', localization)
     // if (!city) {

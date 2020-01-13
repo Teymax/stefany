@@ -475,20 +475,82 @@ header.open
 
 			svg
 				fill: #fff
-//@media(max-width: 575px)
-//  .mob-menu
-//    overflow-y: hidden !important
+
+header
+	#selectCityDropdownHeader2
+		display: none
+		margin-top: .5rem
+		li
+			text-align: center
+
 #ultraFastFeature
 	display: none !important
 
+html body header #mobileMenu
+	display: none
+
 @media screen and (max-width: 425px)
+	#selectCityDropdownHeader1
+		top: 13%
 	_::-webkit-full-page-media, _:future, :root .row.no-gutters.mob-menu
 		justify-content: center
+
+	html body header #mobileMenu
+		width: 100%
+		display: flex
+		justify-content: center
+		height: calc(100vh - 250px) !important
+		nav
+			overflow: hidden !important
+			width: 100%
+			.mob-title
+				font-family: Circe, sans-serif
+			@media screen and (max-width: 420px)
+				.mob-title
+					font-size: 20px
+
+			.sub-menu-trigger
+				&.triggered
+					svg.icon-arrow
+						transform: rotate(180deg)
+
+			.sub-menu
+				display: none
+				&.open
+					display: block
+
+			> ul
+				overflow: auto !important
+
+				li
+					margin-top: 1rem
+
+					&:not(:last-child)
+						margin-bottom: 1rem
+
+		ul
+			width: 100%
+			li
+				color: #fff
+				text-align: center
+				margin-top: .5rem
+				margin-bottom: .5rem
+
+				a
+					color: #ffffff !important
+
+				span
+					pointer-events: none
+				svg
+					pointer-events: none
+
+	html body header .desktop-menu-hide
+		display: none !important
 
 	.row.no-gutters.mob-menu
 		//justify-content: flex-end
 
-		nav
+		nav.header-nav.w-100.d-flex
 			height: calc(100vh - 250px) !important
 			overflow: hidden !important
 
@@ -496,3 +558,17 @@ header.open
 				overflow: auto !important
 	#ultraFastFeature
 		display: flex !important
+
+@media screen and (max-width: 375px)
+	header
+		li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-xl-0.open + li.d-inline-flex.align-items-center.mr-0.li-contact
+			margin-top: 4rem
+		ul.service-li-dynamic.dropdown-menu-list.d-flex.flex-column
+			li
+				&:last-child
+//margin-top: 9rem !important
+
+
+@media screen and (max-width: 330px)
+	#selectCityDropdownHeader1
+		top: 17%
