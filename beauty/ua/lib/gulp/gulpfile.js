@@ -99,7 +99,7 @@ function movePug() {
                  pretty: true
                }))
              .pipe(beautifyPug({tab_size: 1}))
-             .pipe(htmlmin({collapseWhitespace: true}))
+             .pipe(htmlmin({collapseWhitespace: false}))
              .pipe(gulp.dest('../../build'))
 }
 
