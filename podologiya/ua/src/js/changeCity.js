@@ -358,7 +358,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-  
+    
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
