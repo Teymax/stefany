@@ -5,6 +5,8 @@ window.mail = {
   To      : 'pod@steffany.ua'
 }
 
+window.chooseDayText = ''
+
 window.patterns = {
   ru: 'podologiya/$1',
   ua: 'podologiya/ua/$1'
@@ -19,18 +21,28 @@ window.nav = {
   }
 }
 
-window.chooseDayText = ''
-
 $(document).ready(function () {
   
   $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
-
+  
   $('[data-choose-text]').on('click', event => {
     window.chooseDayText = event.target.dataset.chooseText
     $('#placeForCourseText')[0].innerText = window.chooseDayText
   })
   
   $('[type="tel"]').mask('+38-(000)-000-00-00')
+  
+  $('[data-i18n]')
+    .on('click',
+      e => {
+        e.preventDefault()
+        const i18n = e.target.dataset.i18n
+        const p = location.pathname.split('/').slice(-1)[0]
+        const h = window.patterns[i18n].replace('$1', p)
+        if (location.pathname.substr(1) !== h) {
+          location.href = '/' + h
+        }
+      })
   
   const callbackForm = $('#callbackModal form')[0],
         callbackBtn  = $('[data-call-day-callback-btn]')
@@ -128,18 +140,6 @@ $(document).ready(function () {
     this.classList.contains('open') ? _toggleMenu('none', 'hidden') : _toggleMenu('initial', 'initial')
     $('header').toggleClass('open')
   })
-  
-  $('[data-i18n]')
-    .on('click',
-      e => {
-        e.preventDefault()
-        const i18n = e.target.dataset.i18n
-        const p = location.pathname.split('/').slice(-1)[0]
-        const h = window.patterns[i18n].replace('$1', p)
-        if (location.pathname.substr(1) !== h) {
-          location.href = '/' + h
-        }
-      })
   
   $('body').click(function (event) {
     var t = event.target
