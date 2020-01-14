@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  // alert('.....')
   const citiesData = {
     zt: {
       ru: {
@@ -14,6 +13,7 @@ $(document).ready(function () {
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
         
         imagesAmount: 10,
+        salonImages : 9,
         
         salons: {
           salon: {
@@ -83,6 +83,7 @@ $(document).ready(function () {
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
         
         imagesAmount: 10,
+        salonImages : 9,
         
         salons: {
           salon: {
@@ -154,7 +155,9 @@ $(document).ready(function () {
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
         
         imagesAmount: 6,
-        salons      : {
+        salonImages : 9,
+        
+        salons: {
           salon: {
             name       : 'Steffany Podology',
             city       : 'Ровно',
@@ -167,9 +170,9 @@ $(document).ready(function () {
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
               {
-                name      : 'Тетьяна Кухар',
-                education : 'Подолог',
-                skills    : 'Медицинский педикюр, вросший ноготь - коррекция и снятие воспаление, лечение мозолей, бородавок, грибковых поражений ногтей и кожи, коррекционые системы ортониксии, обработка и профиллактика трещин на стопе, удаление ороговений кожи, диабетическая стопа, диагностика стопы'
+                name     : 'Тетьяна Кухар',
+                education: 'Подолог',
+                skills   : 'Медицинский педикюр, вросший ноготь - коррекция и снятие воспаление, лечение мозолей, бородавок, грибковых поражений ногтей и кожи, коррекционые системы ортониксии, обработка и профиллактика трещин на стопе, удаление ороговений кожи, диабетическая стопа, диагностика стопы'
               }
             ]
           }
@@ -200,9 +203,9 @@ $(document).ready(function () {
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
               {
-                name      : 'Тетяна Кухар',
-                education : 'Подолог',
-                skills    : 'Медичний педикюр, врослий ніготь - корекція і зняття запалення, лікування мозолів, бородавок, грибкових уражень нігтів і шкіри, корекційні системи ортоніксіі, обробка і профіллактікі тріщин на стопі, видалення зроговіння шкіри, діабетична стопа, діагностика стопи'
+                name     : 'Тетяна Кухар',
+                education: 'Подолог',
+                skills   : 'Медичний педикюр, врослий ніготь - корекція і зняття запалення, лікування мозолів, бородавок, грибкових уражень нігтів і шкіри, корекційні системи ортоніксіі, обробка і профіллактікі тріщин на стопі, видалення зроговіння шкіри, діабетична стопа, діагностика стопи'
               }
             ]
           }
@@ -212,7 +215,7 @@ $(document).ready(function () {
     }
   }
   
-  const nav = {
+  window.nav = {
     zt: {
       ru: 'podologiya/{{ page }}',
       ua: 'podologiya/ua/{{ page }}'
@@ -244,16 +247,16 @@ $(document).ready(function () {
     }
   }
   
-  let localization = location.pathname.split('/').find(function (loc) {
+  window.localization = location.pathname.split('/').find(function (loc) {
     return loc === 'ua'
   }) || 'ru'
   let carouselsHTML = null
-  let salon = localStorage.getItem('salon') || ''
+  window.salon = localStorage.getItem('salon') || ''
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
   // let city = localStorage.getItem('city')
   
-  let city = filteredCity
+  window.city = filteredCity
   binatel[city](document, window, 'script')
   let width = ''
   $(`.city-trigger[data-city=${city}]`).toggleClass('active')
@@ -347,7 +350,7 @@ $(document).ready(function () {
     const videoSlider = $('.video-slider')
     const owlDots = $('.small-owl-images-container .owl-dots-item')
     const specialistsSlider = $('.specialists-slider')
-    console.log('%cChe', 'font-size: 15em; color: red;')
+    const salonImages = $('.salon-photos-slider')
     console.log(specialistsSlider)
     if (videoSlider) {
       videoSlider.html(carouselsHTML.videoCarousel)
@@ -358,7 +361,33 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+    console.log('asd', carouselsHTML.imagesSalon)
+    if (salonImages) {
+      salonImages.html(carouselsHTML.imagesSalon)
+    }
+    $('.salon-photos-slider').owlCarousel({
+      center    : true,
+      items     : 3,
+      loop      : true,
+      margin    : 15,
+      responsive: {
+        0   : {
+          items: 1
+        },
+        575 : {
+          items: 1
+        },
+        993 : {
+          items: 1.5
+        },
+        1400: {
+          items: 2
+        },
+        2000: {
+          items: 4
+        }
+      }
+    })
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -436,10 +465,17 @@ $(document).ready(function () {
     salon = salon ? salon : city === 'zt' ? 'nail' : 'salon'
     let imagesAmountSpecialists = citiesData[city][localization].salons[salon].specialists.length
     let specialistsData = citiesData[city][localization].salons[salon].specialists
+    let salonLength = citiesData[city][localization].salonImages
     let imgPath = `assets/img/about-steffany-salon/${city}/`
     let images = ''
     let imagesSmall = ''
     let imagesSpecialists = ''
+    let imagesSalon = ''
+    for (let i = 0; i < salonLength; i++) {
+      imagesSalon += `<img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.png">`
+    }
+    console.log(imagesSalon)
+    // for(let i = 0; i )
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
@@ -475,7 +511,8 @@ $(document).ready(function () {
     return {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
-      specialistsCarousel: imagesSpecialists
+      specialistsCarousel: imagesSpecialists,
+      imagesSalon
     }
   }
   
