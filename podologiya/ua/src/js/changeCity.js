@@ -12,9 +12,9 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.podology/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
-        
-        imagesAmount: 10,
-        
+
+        imagesAmount: 9,
+
         salons: {
           salon: {
             name       : 'Steffany Podology',
@@ -81,9 +81,9 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.podology/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
-        
+
         imagesAmount: 10,
-        
+
         salons: {
           salon: {
             name       : 'Steffany Podology',
@@ -152,7 +152,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
-        
+
         imagesAmount: 6,
         salons      : {
           salon: {
@@ -185,7 +185,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
-        
+
         imagesAmount: 6,
         salons      : {
           salon: {
@@ -208,10 +208,10 @@ $(document).ready(function () {
           }
         }
       }
-      
+
     }
   }
-  
+
   const nav = {
     zt: {
       ru: 'podologiya/{{ page }}',
@@ -222,7 +222,7 @@ $(document).ready(function () {
       ua: 'podologiya/rv/ua/{{ page }}'
     }
   }
-  
+
   const binatel = {
     zt: function (d, w, s) {
       var widgetHash = 'rkr67ua265zfjx62zen7',
@@ -243,7 +243,7 @@ $(document).ready(function () {
       sn.parentNode.insertBefore(gcw, sn)
     }
   }
-  
+
   let localization = location.pathname.split('/').find(function (loc) {
     return loc === 'ua'
   }) || 'ru'
@@ -252,7 +252,7 @@ $(document).ready(function () {
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
   // let city = localStorage.getItem('city')
-  
+
   let city = filteredCity
   binatel[city](document, window, 'script')
   let width = ''
@@ -280,11 +280,11 @@ $(document).ready(function () {
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + data.nameIn
     })
-    
+
     $('.address-dynamic').each(function (e) {
       this.innerText = data.address
     })
-    
+
     $('.map-dynamic').each(function (e) {
       this.innerHTML = data.map
     })
@@ -295,12 +295,12 @@ $(document).ready(function () {
   // if (city) {
   changeDataForCity()
   // }
-  
+
   // if (city === 'rv') {
   //   $('header [data-not-available-rovno]').remove()
   //   $('[data-not-available-rovno] a.btn-callback').remove()
   // }
-  
+
   // if (salon !== 'salon') {
   //   if (salon === 'nail') {
   //     $('[data-remove-nail]').remove()
@@ -309,14 +309,14 @@ $(document).ready(function () {
   //     $('[data-remove-hair]').remove()
   //   }
   // }
-  
+
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
     switchData(citiesData[city][localization].salons[salon])
     localStorage.setItem('salon', salon)
     updateCarouselHTML()
   })
-  
+
   function changeDataForCity() {
     salon = 'salon'
     // if (city === 'zt') {
@@ -332,16 +332,16 @@ $(document).ready(function () {
     // }
     localStorage.setItem('salon', 'salon')
     switchData(citiesData[city][localization].salons[salon])
-    
+
     // $('.service-li-dynamic').each(function (e) {
     //   this.innerHTML = serviceCityData[city][localization].selectedService
     // })
-    
+
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
     })
   }
-  
+
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
@@ -358,7 +358,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -378,13 +378,13 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
       videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
-    
+
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
       navContainer: '.video-nav-slider-dots',
       loop        : false,
@@ -393,7 +393,7 @@ $(document).ready(function () {
       dots        : false,
       items       : 1
     })
-    
+
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
@@ -412,16 +412,16 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-nav-slider-dots .owl-next').click(function () {
       videoSliderDots.trigger('next.owl.carousel')
     })
-    
+
     $('.video-nav-slider-dots .owl-prev').click(function () {
       videoSliderDots.trigger('prev.owl.carousel', [300])
     })
   }
-  
+
   function updateCarouselHTML() {
     setTimeout(() => {
       // const slider = $('.specialists-slider.owl-carousel.slider-block.slider-pad.owl-loaded.owl-drag')[0]
@@ -430,7 +430,7 @@ $(document).ready(function () {
       location.reload()
     }, 0)
   }
-  
+
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount
     salon = salon ? salon : city === 'zt' ? 'nail' : 'salon'
@@ -447,7 +447,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
@@ -471,21 +471,21 @@ $(document).ready(function () {
           <p class="fs-16 h-center light-white">${specialistsData[i].education}</p>
         </div>`
     }
-    
+
     return {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists
     }
   }
-  
+
   function changeImagesSalon() {
     $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger(
       'refresh.owl.carousel')
     $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger(
       'refresh.owl.carousel')
   }
-  
+
   function initCities() {
     // if ($('.video-slider')[0])
     initCarousels()
@@ -505,7 +505,7 @@ $(document).ready(function () {
       }
     })
   }
-  
+
   if (document.querySelector('a.nav-link-text')) {
     initCities()
   }
