@@ -4,10 +4,10 @@ $(document).ready(function () {
       ru: {
         selectedService:
           `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугарінг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
       }
     },
@@ -15,7 +15,7 @@ $(document).ready(function () {
       ru: {
         selectedService:
           `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header  mob-title" href="./epilation">Лазерна епіляція</a></li>
         `
       }
     },
@@ -23,24 +23,24 @@ $(document).ready(function () {
       ru: {
         selectedService:
           `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./nano-epilyatsiya">Нано-епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-епіляція</a></li>
         `
       }
     },
     lv: {
       ru: {
         selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
         `
       }
     },
     rv: {
       ru: {
         selectedService: `
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./epilation">Лазерна епіляція</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./shugaring">Шугарінг</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугарінг</a></li>
+          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
         `
       }
     }
@@ -238,12 +238,27 @@ $(document).ready(function () {
     }
   }
 
-  const nav = {
-    zt: 'lazernaya-epilyatsiya/ua/{{ page }}',
-    if: 'lazernaya-epilyatsiya/if/ua/{{ page }}',
-    lv: 'lazernaya-epilyatsiya/lv/ua/{{ page }}',
-    lt: 'lazernaya-epilyatsiya/lt/ua/{{ page }}',
-    rv: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
+  window.nav = {
+    zt: {
+        ru: 'lazernaya-epilyatsiya/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/ua/{{ page }}'
+    },
+    if: {
+        ru: 'lazernaya-epilyatsiya/if/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/if/ua/{{ page }}'
+    },
+    lv: {
+        ru: 'lazernaya-epilyatsiya/lv/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/lv/ua/{{ page }}'
+    },
+    lt: {
+        ru: 'lazernaya-epilyatsiya/lt/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/lt/ua/{{ page }}'
+    },
+    rv: {
+        ru: 'lazernaya-epilyatsiya/rv/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
+    }
   }
 
   const binatel = {
