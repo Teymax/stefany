@@ -238,12 +238,27 @@ $(document).ready(function () {
     }
   }
 
-  const nav = {
-    zt: 'lazernaya-epilyatsiya/ua/{{ page }}',
-    if: 'lazernaya-epilyatsiya/if/ua/{{ page }}',
-    lv: 'lazernaya-epilyatsiya/lv/ua/{{ page }}',
-    lt: 'lazernaya-epilyatsiya/lt/ua/{{ page }}',
-    rv: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
+  window.nav = {
+    zt: {
+        ru: 'lazernaya-epilyatsiya/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/ua/{{ page }}'
+    },
+    if: {
+        ru: 'lazernaya-epilyatsiya/if/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/if/ua/{{ page }}'
+    },
+    lv: {
+        ru: 'lazernaya-epilyatsiya/lv/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/lv/ua/{{ page }}'
+    },
+    lt: {
+        ru: 'lazernaya-epilyatsiya/lt/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/lt/ua/{{ page }}'
+    },
+    rv: {
+        ru: 'lazernaya-epilyatsiya/rv/{{ page }}',
+        ua: 'lazernaya-epilyatsiya/rv/ua/{{ page }}'
+    }
   }
 
   const binatel = {

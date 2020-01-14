@@ -604,7 +604,7 @@ $(document).ready(function () {
   }
   const v = 'ru'
   console.log('QWEQWEQWE', v)
-  const nav = {
+  window.nav = {
     zt: {
       ru: 'beauty/{{ page }}',
       ua: 'beauty/ua/{{ page }}'
@@ -889,6 +889,7 @@ $(document).ready(function () {
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
         console.log(_h, page, localization, city)
+        const localization = location.pathname.slice(1).split('/').includes('ua') ? 'ua' : 'ru'
         // console.log('Redirect to: ', nav[city][localization].replace('{{ page }}', page))
         const link = nav[city][localization].replace('{{ page }}', page)
         location.pathname = '/' + link
