@@ -169,7 +169,7 @@ $(document).ready(function () {
               {
                 name      : 'Тетьяна Кухар',
                 education : 'Подолог',
-                skills    : ''
+                skills    : 'Медицинский педикюр, вросший ноготь - коррекция и снятие воспаление, лечение мозолей, бородавок, грибковых поражений ногтей и кожи, коррекционые системы ортониксии, обработка и профиллактика трещин на стопе, удаление ороговений кожи, диабетическая стопа, диагностика стопы'
               }
             ]
           }
@@ -202,7 +202,7 @@ $(document).ready(function () {
               {
                 name      : 'Тетяна Кухар',
                 education : 'Подолог',
-                skills    : ''
+                skills    : 'Медичний педикюр, врослий ніготь - корекція і зняття запалення, лікування мозолів, бородавок, грибкових уражень нігтів і шкіри, корекційні системи ортоніксіі, обробка і профіллактікі тріщин на стопі, видалення зроговіння шкіри, діабетична стопа, діагностика стопи'
               }
             ]
           }
@@ -214,12 +214,12 @@ $(document).ready(function () {
   
   const nav = {
     zt: {
-      ru: 'beauty/{{ page }}',
-      ua: 'beauty/ua/{{ page }}'
+      ru: 'podologiya/{{ page }}',
+      ua: 'podologiya/ua/{{ page }}'
     },
     rv: {
-      ru: 'beauty/rv/{{ page }}',
-      ua: 'beauty/rv/ua/{{ page }}'
+      ru: 'podologiya/rv/{{ page }}',
+      ua: 'podologiya/rv/ua/{{ page }}'
     }
   }
   
@@ -358,7 +358,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-  
+    
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
