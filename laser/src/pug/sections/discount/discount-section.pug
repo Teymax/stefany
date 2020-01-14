@@ -28,10 +28,10 @@ section.section.discount
                 .text-section
                   +casetSvg
                   span оплатить
-              .button.btn-second.btn-simple.svg.caset(data-toggle='modal', data-target='#singComplexModal').check-radio
+              .button.btn-second.btn-simple.svg.caset(id = "discount-1", data-toggle='modal', data-target='#singComplexModal').check-radio
                 .text-section
                   +penSvg
-                  span(id = "discount-1") записаться
+                  span записаться
       .col-12.col-xl-4
         .box-wrap
           .c-content
@@ -56,10 +56,10 @@ section.section.discount
                 .text-section
                   +casetSvg
                   span оплатить
-              .button.btn-second.btn-simple.svg.caset(data-toggle='modal', data-target='#singComplexModal').check-radio
+              .button.btn-second.btn-simple.svg.caset(id = "discount-2", data-toggle='modal', data-target='#singComplexModal').check-radio
                 .text-section
                   +penSvg
-                  span(id = "discount-2") записаться
+                  span записаться
       .col-12.col-xl-4
         .box-wrap.mb-0
           .c-content
@@ -84,16 +84,16 @@ section.section.discount
                 .text-section
                   +casetSvg
                   span оплатить
-              .button.btn-second.btn-simple.svg.caset(data-toggle='modal', data-target='#singComplexModal').check-radio
+              .button.btn-second.btn-simple.svg.caset(id = "discount-3", data-toggle='modal', data-target='#singComplexModal').check-radio
                 .text-section
                   +penSvg
-                  span(id = "discount-3") записаться
+                  span записаться
   .container
     p.discount-desc.text-center Планируйте лазерную эпиляцию любой зоны и экономьте! Оплачивайте наперед 4, 6 или 8 процедур за конкретную зону и увеличивайте вашу скидку. <br > Акция действует на все зоны лазерной эпиляции. Если вы не нашли в таблице нужную вам зону, нажмите на кнопку «Заказать звонок». Мы позвоним вам и проконсультируем по ценам.
 
-    .btn-callback(data-toggle='modal', data-target='#sendComplex')
+    .btn-callback(id = "discount-call", data-toggle='modal', data-target='#sendComplex')
       .text-section
         +phoneSvg
-        span(id = "discount-call") Заказать звонок
+        span Заказать звонок
       .arrow-section
         +arrowSvg
