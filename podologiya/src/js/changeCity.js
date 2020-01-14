@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // alert('.....')
   const citiesData = {
     zt: {
       ru: {
@@ -27,50 +28,45 @@ $(document).ready(function () {
             facebook   : 'https://www.facebook.com/steffany.podology/',
             specialists: [
               {
-                name      : 'Руслана Даценко',
-                education : 'Подолог, специалист по ортониксии, преподаватель и автор обучающих методик',
-                skills    : 'Специализируется на аппаратном медицинском педикюре, компьютерной диагностике стопы и биомеханики ходьбы, проектировании индивидуальных стелек, изготовлении разгрузочных стелек PWO'
+                name     : 'Руслана Даценко',
+                education: 'Подолог, специалист по ортониксии, преподаватель и автор обучающих методик',
+                skills   : 'Специализируется на аппаратном медицинском педикюре, компьютерной диагностике стопы и биомеханики ходьбы, проектировании индивидуальных стелек, изготовлении разгрузочных стелек PWO'
               },
               {
-                name      : 'Наталья Полищук',
-                education : 'Подолог',
-                skills    : 'Специализируется на компьютерной диагностике стоп и биомеханики ходьбы, проектировании и изготовлении индивидуальных стелек, обработке и лечении вросшего ногтя, установке систем ортониксии по коррекции вросшего ногтя, лечении деформаций ногтей, удалении бородавок и мозолей'
+                name     : 'Наталья Полищук',
+                education: 'Подолог',
+                skills   : 'Специализируется на компьютерной диагностике стоп и биомеханики ходьбы, проектировании и изготовлении индивидуальных стелек, обработке и лечении вросшего ногтя, установке систем ортониксии по коррекции вросшего ногтя, лечении деформаций ногтей, удалении бородавок и мозолей'
               },
               {
-                name      : 'Татьяна Атаманенко',
-                education : 'Подолог',
-                skills    : 'Специализируется на компьютерной диагностике стоп и биомеханики ходьбы, проектировании и изготовлении индивидуальных стелек, установке систем ортониксии по коррекции вросшего ногтя, обработке и лечении вросшего ногтя, лечении деформаций ногтей, удалении бородавок, мозолей и трещин на стопе'
+                name     : 'Татьяна Атаманенко',
+                education: 'Подолог',
+                skills   : 'Специализируется на компьютерной диагностике стоп и биомеханики ходьбы, проектировании и изготовлении индивидуальных стелек, установке систем ортониксии по коррекции вросшего ногтя, обработке и лечении вросшего ногтя, лечении деформаций ногтей, удалении бородавок, мозолей и трещин на стопе'
               },
               {
-                name      : 'Юлия Писаревская',
-                education : 'Подолог',
-                skills    : 'Специализируется на медицинском педикюре для диабетиков, удалении бородавок, мозолей, трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, обработке и лечении вросшего ногтя, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
+                name     : 'Юлия Писаревская',
+                education: 'Подолог',
+                skills   : 'Специализируется на медицинском педикюре для диабетиков, удалении бородавок, мозолей, трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, обработке и лечении вросшего ногтя, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
               },
               {
-                name      : 'Яна Левковская',
-                education : 'Подолог',
-                skills    : 'Специализируется на медицинском педикюре, коррекции и снятии воспаления с вросшего ногтя, лечении мозолей, бородавок, грибковых поражений ногтей и кожи, коррекционных системах ортониксии, обработке и профилактике трещин на стопе, удалении ороговений кожи, обработке диабетической стопы, диагностике стопы'
+                name     : 'Яна Левковская',
+                education: 'Подолог',
+                skills   : 'Специализируется на медицинском педикюре, коррекции и снятии воспаления с вросшего ногтя, лечении мозолей, бородавок, грибковых поражений ногтей и кожи, коррекционных системах ортониксии, обработке и профилактике трещин на стопе, удалении ороговений кожи, обработке диабетической стопы, диагностике стопы'
               },
               {
-                name      : 'Ирина Черных',
-                education : 'Подолог',
-                skills    : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и профилактике трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, обработке и лечении вросшего ногтя, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
+                name     : 'Ирина Черных',
+                education: 'Подолог',
+                skills   : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и профилактике трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, обработке и лечении вросшего ногтя, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
               },
               {
-                name      : 'Ирина Вышневская',
-                education : 'Подолог',
-                skills    : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и профилактике трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
+                name     : 'Ирина Вышневская',
+                education: 'Подолог',
+                skills   : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и профилактике трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
               },
               {
-                name      : 'Наталья Томашевская',
-                education : 'Подолог',
-                skills    : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и лечении вросшего ногтя и трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей, удалении ороговений кожи'
-              },
-              {
-                name      : 'Наталья Томашевская',
-                education : 'Подолог',
-                skills    : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и лечении вросшего ногтя и трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей, удалении ороговений кожи'
-              },
+                name     : 'Наталья Томашевская',
+                education: 'Подолог',
+                skills   : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и лечении вросшего ногтя и трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей, удалении ороговений кожи'
+              }
             ]
           }
         }
@@ -430,7 +426,6 @@ $(document).ready(function () {
   // let city = localStorage.getItem('city')
   
   let city = filteredCity
-  console.log(`%ccity: ${city}`, 'font-size: 25px; color: red;')
   binatel[city](document, window, 'script')
   let width = ''
   $(`.city-trigger[data-city=${city}]`).toggleClass('active')
@@ -489,7 +484,6 @@ $(document).ready(function () {
   
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
-    console.log(citiesData[city][localization].salons[salon])
     switchData(citiesData[city][localization].salons[salon])
     localStorage.setItem('salon', salon)
     updateCarouselHTML()
@@ -509,7 +503,6 @@ $(document).ready(function () {
     //   localStorage.setItem('salon', 'salon')
     // }
     localStorage.setItem('salon', 'salon')
-    console.log(citiesData[city][localization].salons[salon])
     switchData(citiesData[city][localization].salons[salon])
     
     // $('.service-li-dynamic').each(function (e) {
@@ -526,6 +519,8 @@ $(document).ready(function () {
     const videoSlider = $('.video-slider')
     const owlDots = $('.small-owl-images-container .owl-dots-item')
     const specialistsSlider = $('.specialists-slider')
+    console.log('%cChe', 'font-size: 15em; color: red;')
+    console.log(specialistsSlider)
     if (videoSlider) {
       videoSlider.html(carouselsHTML.videoCarousel)
     }
@@ -535,7 +530,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+  
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -636,17 +631,17 @@ $(document).ready(function () {
     for (let i = 0; i < imagesAmountSpecialists; i++) {
       imagesSpecialists += `
         <div class="specialists-item">
-            <div class="specialists-item-container mb-3 w-100">
-                <div class="specialists-img w-100"><img class="w-100" src="${imgPath}/specialists/${salon}/specialist-${i}.png" alt="${specialistsData[i].name}"/></div>
-                <div class="specialists-info d-flex flex-column align-items-start w-100 p-3">
-                    <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].education}</p>
-                    <p class="paragraph-text text-color-lightdark text-w-bold">${specialistsData[i].experience}</p>
-                    <p class="paragraph-text text-color-lightdark text-w-light">${specialistsData[i].skills}</p>
-                </div>
+          <div class="specialists-item-container mb-3 w-100">
+            <div class="specialists-img w-100">
+              <img class="w-100" src="${imgPath}/specialists/${salon}/specialists-${i}.png" alt="Doctor">
             </div>
-            <p class="h4-title text-center white-text">${specialistsData[i].name}</p>
-        </div>
-      `
+            <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
+              <p class="p-text-light fs-16">${specialistsData[i].skills}</p>
+            </div>
+          </div>
+          <p class="h3-title h-center">${specialistsData[i].name}</p>
+          <p class="fs-16 h-center light-white">${specialistsData[i].education}</p>
+        </div>`
     }
     
     return {
@@ -664,7 +659,8 @@ $(document).ready(function () {
   }
   
   function initCities() {
-    if ($('.video-slider')[0]) initCarousels()
+    // if ($('.video-slider')[0])
+    initCarousels()
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
       if (closestDropdown && e.target.classList.contains('nav-link-text')) {
@@ -676,8 +672,6 @@ $(document).ready(function () {
         // }
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
-        console.log(_h, page, localization, city)
-        // console.log('Redirect to: ', nav[city][localization].replace('{{ page }}', page))
         const link = nav[city][localization].replace('{{ page }}', page)
         location.pathname = '/' + link
       }
