@@ -10,7 +10,7 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6288.768477360866!2d28.67355334502534!3d50.25248404598579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2cbe153518a079e!2sSteffany!5e0!3m2!1sru!2sua!4v1578986511431!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.podology/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
         
         imagesAmount: 10,
         salonImages : 9,
@@ -152,7 +152,7 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d532.9732425877958!2d26.269108057641883!3d50.6165984522853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1578987175913!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
         
         imagesAmount: 6,
         salonImages : 9,
@@ -187,7 +187,7 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d532.9732425877958!2d26.269108057641883!3d50.6165984522853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1578987175913!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
         
         imagesAmount: 6,
         salons      : {
@@ -472,14 +472,14 @@ $(document).ready(function () {
     let imagesSpecialists = ''
     let imagesSalon = ''
     for (let i = 0; i < salonLength; i++) {
-      imagesSalon += `<img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.png">`
+      imagesSalon += `<img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.jpg">`
     }
     console.log(imagesSalon)
     // for(let i = 0; i )
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
-          <img src="${imgPath}/${salon}/salon-${i}.png" class="w-100">
+          <img src="${imgPath}/${salon}/salon-${i}.jpg" class="w-100">
         </span>
       `
     }
@@ -487,7 +487,7 @@ $(document).ready(function () {
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
-          <img src="${imgPath}/${salon}/salon-${i}.png" class="w-100 salon-img">
+          <img src="${imgPath}/${salon}/salon-${i}.jpg" class="w-100 salon-img">
           <span class="owl-dot-bg w-100 h-100 d-block"></span>
         </span>
       `
