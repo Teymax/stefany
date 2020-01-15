@@ -92,12 +92,20 @@ function buttonToggle(event) {
   let payButton = document.querySelector('#yclient_form #pay_button')
   let orderButton = document.querySelector('#yclient_form #order_button')
   let payment = document.querySelector('#yclient_form #payment')
+  let check = document.querySelector('#yclient_form #privacy_check')
+  let span = document.querySelector('#yclient_form #privacy_link')
   if (event.target.classList.contains('btn-first')) {
+    check.setAttribute("required", "true")
+    check.classList.remove("hidden")
+    span.classList.remove("hidden")
     payButton.classList.remove('hidden')
     orderButton.classList.add('hidden')
     payment.value = 1
   }
   else {
+    check.removeAttribute("required")
+    check.classList.add("hidden")
+    span.classList.add("hidden")
     payButton.classList.add('hidden')
     orderButton.classList.remove('hidden')
     payment.value = 0
@@ -410,3 +418,4 @@ function clearTotalPrice() {
     container.innerHTML = '0 грн.'
   })
 }
+
