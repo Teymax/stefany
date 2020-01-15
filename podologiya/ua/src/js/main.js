@@ -36,8 +36,8 @@ $(document).ready(function () {
         const p = location.pathname.split('/').slice(-1)[0]
         const urlCity      = location.pathname.slice(1).split('/')[1],
               filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
-        const h = filteredCity !== 'zt' ? window.patterns[i18n].replace('{{ city }}', filteredCity).replace('$1',
-          p) : window.patterns[i18n].replace('/{{ city }}', '').replace('$1', p)
+        const h = filteredCity !== 'zt' ? window.patterns2[i18n].replace('{{ city }}', filteredCity).replace('$1',
+          p) : window.patterns2[i18n].replace('/{{ city }}', '').replace('$1', p)
         console.log('/' + h)
         if (location.pathname.substr(1) !== h) {
           location.href = '/' + h
