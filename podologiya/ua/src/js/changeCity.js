@@ -90,10 +90,10 @@ $(document).ready(function () {
             name       : 'Steffany Podology',
             city       : 'Житомир',
             nameIn     : 'в Житомирі',
-            phone      : '380-67-404-19-33',
+            phone      : '380-98-180-10-88',
             address    : 'Путятинська Площа, 1/63',
-            schedule   : '9:00 - 21:00',
-            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            schedule   : '9:00 - 20:00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6288.768477360866!2d28.67355334502534!3d50.25248404598579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2cbe153518a079e!2sSteffany!5e0!3m2!1sru!2sua!4v1578986511431!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
@@ -466,7 +466,7 @@ $(document).ready(function () {
     let imagesAmountSpecialists = citiesData[city][localization].salons[salon].specialists.length
     let specialistsData = citiesData[city][localization].salons[salon].specialists
     let salonLength = citiesData[city][localization].salonImages
-    let imgPath = `assets/img/about-steffany-salon/${city}/`
+    let imgPath = `assets/img/about-steffany-salon/${city}`
     let images = ''
     let imagesSmall = ''
     let imagesSpecialists = ''
