@@ -6,6 +6,6 @@ section.section.consultaion.service-consultation
     .col-12.col-lg-7.d-flex.flex-column.align-items-center
       p.white-text.text-center.mb-5 Ми передзвонимо вам і запишемо на консультацію, де спецыалыст проведе огляд, дасть необхідні рекомендації та відповість на запитання.
       .services-btn-container.d-none.d-md-flex.justify-content-center.ultra-mega-bg-btn
-        +btnCallback('передзвонити')(data-toggle='modal', data-target='#callbackModal')
+        +btnCallback('передзвонити')(id="consult", data-toggle='modal', data-target='#callbackModal')
       .col-12.d-block.d-md-none
         +writeClientForm.btn-callback-w-100

@@ -13,6 +13,7 @@ const gulp         = require('gulp'),
       cssmin       = require('gulp-cssmin'),
       htmlmin      = require('gulp-htmlmin'),
       zip          = require('gulp-zip'),
+      minify       = require('gulp-minify'),
       babel        = require('gulp-babel')
 
 function moveImages() {
@@ -82,6 +83,7 @@ function scripts() {
              .pipe(uglify({
                toplevel: true
              }))
+             .pipe(minify())
              //Выходная папка для скриптов
              .pipe(gulp.dest('../../build/js'))
              .pipe(browserSync.stream())
@@ -118,7 +120,7 @@ function watch() {
                }))
                .pipe(gulp.dest('../../build'))
   })
-
+  
   // следит за CSS файлами
   gulp.watch('../../src/styles/**/*.sass', styles)
   // следит за Fonts файлами

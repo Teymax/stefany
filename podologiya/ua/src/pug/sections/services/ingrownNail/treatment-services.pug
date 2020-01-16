@@ -14,7 +14,7 @@ section.section-services.lightblue-bg.legs-bg
           | за допомогою протезування вкладками — коли протезуючий матеріал захищає тіло нігтя і коригує напрям зростання пластини
           | Якщо ви не знаєте, яка процедура потрібна саме у вашому випадку, просто запишіться на прийом. Спеціаліст підбере вам потрібне лікування і визначить кількість процедур.
         .services-btn-container.btn-wrapper
-          +btnPen('Записатися')(data-toggle='modal', data-target='#callbackModal')
+          +btnPen('Записатися')(id = "cons", data-toggle='modal', data-target='#callbackModal')
         .row.mt-md-4.mb-5
           .col-12.col-md-6.px-4
             .paragraph-container.mb-5
@@ -187,4 +187,4 @@ section.section-services.lightblue-bg.legs-bg
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 30 хв
           .services-btn-container
-            +btnPen('записатись')(data-toggle='modal', data-target='#callbackModal')
+            +btnPen('записатись')(id="write",data-toggle='modal', data-target='#callbackModal')

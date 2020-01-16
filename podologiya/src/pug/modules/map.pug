@@ -23,9 +23,9 @@ section.section.map
         .row.no-gutters.mb-5
           .video.video-overlay
           a.video.d-flex.align-items-center.justify-content-center
-            img.w-100(src="assets/img/cabinet-2.png", alt="about-video")
+            img.w-100.image-about-dynamic(src="assets/img/cabinet-2.png", alt="about-video")
             img(src="assets/icon/common/play-video.png" alt="Play video button").custom-play-btn
         .row.no-gutters
-          +customBtn('подробнее про салон')(data-role="href" data-link="./salon")
+          +customBtn('подробнее про салон')(data-role="href" data-link="./salon" id="details1")
       .col-12.col-xl-6.mapped.map-dynamic
   .row.no-gutters.small-map.map-dynamic

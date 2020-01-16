@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const citiesData = {
+  window.citiesData = {
     zt: {
       ru: {
         cityName              : 'Житомир',
@@ -10,9 +10,9 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6288.768477360866!2d28.67355334502534!3d50.25248404598579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2cbe153518a079e!2sSteffany!5e0!3m2!1sru!2sua!4v1578986511431!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.podology/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
         
-        imagesAmount: 10,
+        imagesAmount: 9,
         salonImages : 9,
         
         salons: {
@@ -82,7 +82,7 @@ $(document).ready(function () {
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
         
-        imagesAmount: 10,
+        imagesAmount: 9,
         salonImages : 9,
         
         salons: {
@@ -90,10 +90,10 @@ $(document).ready(function () {
             name       : 'Steffany Podology',
             city       : 'Житомир',
             nameIn     : 'в Житомирі',
-            phone      : '380-67-404-19-33',
-            address    : 'вул. Київська, 77, тц "Глобал"',
-            schedule   : '9:00 - 21:00',
-            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            phone      : '380-98-180-10-88',
+            address    : 'Путятинська Площа, 1/63',
+            schedule   : '9:00 - 20:00',
+            map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6288.768477360866!2d28.67355334502534!3d50.25248404598579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2cbe153518a079e!2sSteffany!5e0!3m2!1sru!2sua!4v1578986511431!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             instagram  : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
@@ -108,7 +108,7 @@ $(document).ready(function () {
                 skills   : 'Спеціалізується на комп\'ютерній діагностиці стоп і біомеханіки ходьби, проектуванні і виготовленні індивідуальних устілок, обробці та лікуванні врослого нігтя, установці систем ортоніксіі по корекції врослого нігтя, лікуванні деформацій нігтів, видаленні бородавок і мозолів'
               },
               {
-                name     : 'Тетьяна Атаманенко',
+                name     : 'Тетяна Атаманенко',
                 education: 'Подолог',
                 skills   : 'Спеціалізується на комп\'ютерній діагностиці стоп та біомеханіки ходьби, проектуванні та виготовленні індивідуальних устілок, установці систем ортоніксіі по корекції врослого нігтя, обробці та лікуванні врослого нігтя, лікуванні деформацій нігтів, видаленні бородавок, мозолів і тріщин на стопі'
               },
@@ -152,9 +152,9 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d532.9732425877958!2d26.269108057641883!3d50.6165984522853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1578987175913!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
         
-        imagesAmount: 6,
+        imagesAmount: 9,
         salonImages : 9,
         
         salons: {
@@ -170,7 +170,7 @@ $(document).ready(function () {
             facebook   : 'https://www.facebook.com/steffany.ua/',
             specialists: [
               {
-                name     : 'Тетьяна Кухар',
+                name     : 'Татьяна Кухар',
                 education: 'Подолог',
                 skills   : 'Медицинский педикюр, вросший ноготь - коррекция и снятие воспаление, лечение мозолей, бородавок, грибковых поражений ногтей и кожи, коррекционые системы ортониксии, обработка и профиллактика трещин на стопе, удаление ороговений кожи, диабетическая стопа, диагностика стопы'
               }
@@ -187,9 +187,10 @@ $(document).ready(function () {
         cityMap               : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d532.9732425877958!2d26.269108057641883!3d50.6165984522853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1578987175913!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
-        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.png',
+        imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
         
-        imagesAmount: 6,
+        imagesAmount: 9,
+        salonImages : 9,
         salons      : {
           salon: {
             name       : 'Steffany Podology',
@@ -254,9 +255,14 @@ $(document).ready(function () {
   window.salon = localStorage.getItem('salon') || ''
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
-  // let city = localStorage.getItem('city')
   
   window.city = filteredCity
+  if (city === 'rv') {
+    if (location.pathname.includes(
+      'edu')) {
+      location.pathname = localization === 'ru' ? '/podologiy/rv' : 'podologiya/rv/ua/'
+    }
+  }
   binatel[city](document, window, 'script')
   let width = ''
   $(`.city-trigger[data-city=${city}]`).toggleClass('active')
@@ -295,7 +301,6 @@ $(document).ready(function () {
   if (!salon) {
     localStorage.setItem('salon', 'nail')
   }
-  // if (city) {
   changeDataForCity()
   // }
   
@@ -303,15 +308,6 @@ $(document).ready(function () {
     $('header [data-not-avalable-rovno]').remove()
     $('[data-not-available-rovno] a.btn-callback').remove()
   }
-  
-  // if (salon !== 'salon') {
-  //   if (salon === 'nail') {
-  //     $('[data-remove-nail]').remove()
-  //   }
-  //   if (salon === 'hair') {
-  //     $('[data-remove-hair]').remove()
-  //   }
-  // }
   
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
@@ -322,23 +318,8 @@ $(document).ready(function () {
   
   function changeDataForCity() {
     salon = 'salon'
-    // if (city === 'zt') {
-    //   // $('.city-switcher').show()
-    //   salon = salon ? salon !== 'salon' ? salon : 'nail' : 'nail'
-    //   localStorage.setItem('salon', salon)
-    //   // $(`[data-salon="${salon}"]`).addClass('active')
-    // }
-    // else {
-    //   // $('.city-switcher').hide()
-    //   salon = 'salon'
-    //   localStorage.setItem('salon', 'salon')
-    // }
     localStorage.setItem('salon', 'salon')
     switchData(citiesData[city][localization].salons[salon])
-    
-    // $('.service-li-dynamic').each(function (e) {
-    //   this.innerHTML = serviceCityData[city][localization].selectedService
-    // })
     
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
@@ -347,11 +328,13 @@ $(document).ready(function () {
   
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
+    window.shit = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
     const owlDots = $('.small-owl-images-container .owl-dots-item')
     const specialistsSlider = $('.specialists-slider')
     const salonImages = $('.salon-photos-slider')
-    console.log(specialistsSlider)
+    $('.owl-dots-item.d-flex.align-items-start.justify-content-between.flex-wrap.w-100')
+      .html(carouselsHTML.videoSliderDown)
     if (videoSlider) {
       videoSlider.html(carouselsHTML.videoCarousel)
     }
@@ -361,7 +344,6 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    console.log('asd', carouselsHTML.imagesSalon)
     if (salonImages) {
       salonImages.html(carouselsHTML.imagesSalon)
     }
@@ -418,17 +400,15 @@ $(document).ready(function () {
       navContainer: '.video-nav-slider-dots',
       loop        : false,
       margin      : 0,
-      nav         : true,
-      dots        : false,
       items       : 1
     })
     
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
-      nav       : true,
+      nav       : false,
       dots      : false,
-      navigation: true,
+      navigation: false,
       responsive: {
         0   : {
           items: 1
@@ -453,9 +433,6 @@ $(document).ready(function () {
   
   function updateCarouselHTML() {
     setTimeout(() => {
-      // const slider = $('.specialists-slider.owl-carousel.slider-block.slider-pad.owl-loaded.owl-drag')[0]
-      // width = $('.specialists')[0].querySelector('.owl-item').style.width
-      // slider.innerHTML = ''
       location.reload()
     }, 0)
   }
@@ -466,20 +443,23 @@ $(document).ready(function () {
     let imagesAmountSpecialists = citiesData[city][localization].salons[salon].specialists.length
     let specialistsData = citiesData[city][localization].salons[salon].specialists
     let salonLength = citiesData[city][localization].salonImages
-    let imgPath = `assets/img/about-steffany-salon/${city}/`
+    let imgPath = `assets/img/about-steffany-salon/${city}`
     let images = ''
     let imagesSmall = ''
     let imagesSpecialists = ''
     let imagesSalon = ''
+    let videoSliderDown = ''
     for (let i = 0; i < salonLength; i++) {
-      imagesSalon += `<img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.png">`
+      imagesSalon += `<img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.jpg">`
+      videoSliderDown += `
+        <a class="owl-dot d-flex align-items-center justify-content-center mb-4" href="" data-pos="${i}"><img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.jpg"/><span class="owl-dot-bg w-100 h-100 d-block"></span><span class="play-btn play-btn-small d-flex align-items-center justify-content-center"><span></span></span></a>
+      `
     }
-    console.log(imagesSalon)
-    // for(let i = 0; i )
+    
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
-          <img src="${imgPath}/${salon}/salon-${i}.png" class="w-100">
+          <img src="${imgPath}/${salon}/salon-${i}.jpg" class="w-100">
         </span>
       `
     }
@@ -487,7 +467,7 @@ $(document).ready(function () {
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
-          <img src="${imgPath}/${salon}/salon-${i}.png" class="w-100 salon-img">
+          <img src="${imgPath}/${salon}/salon-${i}.jpg" class="w-100 salon-img">
           <span class="owl-dot-bg w-100 h-100 d-block"></span>
         </span>
       `
@@ -512,7 +492,8 @@ $(document).ready(function () {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists,
-      imagesSalon
+      imagesSalon,
+      videoSliderDown
     }
   }
   
@@ -524,17 +505,11 @@ $(document).ready(function () {
   }
   
   function initCities() {
-    // if ($('.video-slider')[0])
     initCarousels()
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
       if (closestDropdown && e.target.classList.contains('nav-link-text')) {
         city = e.target.dataset.city
-        // localStorage.setItem('city', city)
-        // changeDataForCity()
-        // if (window.location.href.indexOf('salonPage') !== -1) {
-        //   location.reload()
-        // }
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
         const link = nav[city][localization].replace('{{ page }}', page)

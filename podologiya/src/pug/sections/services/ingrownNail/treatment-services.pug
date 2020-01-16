@@ -14,7 +14,7 @@ section.section-services.lightblue-bg.legs-bg
           | с помощью протезирования вкладками — протезирующий материал защищает тело ногтя и корректирует направление роста пластины.
           | Если вы не знаете, какая процедура нужна именно в вашем случае, просто запишитесь на прием. Специалист подберет вам нужное лечение и определит количество процедур.
         .services-btn-container.btn-wrapper
-          +btnPen('записаться')(data-toggle='modal', data-target='#callbackModal')
+          +btnPen('записаться')(id="cons", data-toggle='modal', data-target='#callbackModal')
         .row.mt-md-4.mb-5
           .col-12.col-md-6.px-4
             .paragraph-container.mb-5
@@ -110,7 +110,7 @@ section.section-services.lightblue-bg.legs-bg
               .col-12.col-md-8.p-0.pr-5
                 p.treatment-service-name.mb-1 Протезирование ногтевой пластины гель с антимикотиком или серебром (за 1 ед)
               .col-4.col-md-2.p-0
-                p.treatment-price.text-right 500 грн
+                p.treatment-price.text-right 500id=`serv${index+1}` грн
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 30 мин
 
@@ -195,4 +195,4 @@ section.section-services.lightblue-bg.legs-bg
               .col-4.col-md-2.p-0
                 p.treatment-duration.text-right 30 мин
           .services-btn-container
-            +btnPen('записаться')(data-toggle='modal', data-target='#callbackModal')
+            +btnPen('записаться')(id="write",data-toggle='modal', data-target='#callbackModal')

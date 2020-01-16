@@ -4,7 +4,7 @@ const partnerId = 72145
 const managerId = 791383
 let servicesArr = []
 const cities = {
-  zt   : 'Житомир',
+  zt: 'Житомир',
   rv: 'Ровно'
 }
 window.mail = {
@@ -43,6 +43,7 @@ const writeClient = (time, data) => {
   $('.modal form input[type="text"]').val('')
   $('.modal form input[type="email"]').val('')
   
+  
   fetch('https://api.yclients.com/api/v1/book_record/' + partnerId, {
     method: 'POST',
     body  : JSON.stringify(payload),
@@ -71,7 +72,7 @@ function closeAllModals() {
 }
 
 $(document).ready(function () {
-  console.clear()
+  // console.clear()
   // setTimeout(() => console.clear(), 8000)
   
   $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
@@ -82,6 +83,7 @@ $(document).ready(function () {
     if (e.target.dataset.serviceId) {
       window.serviceText = e.target.dataset.serviceId
     }
+    console.log(window.serviceText)
   })
   
   function scrollToAnchor(aid) {
@@ -101,7 +103,6 @@ $(document).ready(function () {
   
   $('.feedback-form').on('submit', e => {
     e.preventDefault()
-    // console.log('prevented', $('.feedback-form input[type="email"]').val())
     if ($('.feedback-form')[0].checkValidity()) {
       sendEmail({
         Subject: 'Обратная связь',
@@ -115,6 +116,7 @@ $(document).ready(function () {
       $('.feedback-form input[type="text"]').val('')
       $('.feedback-form input[type="tel"]').val('')
       $('.feedback-form textarea').val('')
+      
     }
     else {
       $('.feedback-form')[0].reportValidity()
