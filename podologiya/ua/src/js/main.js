@@ -391,24 +391,24 @@ $(document).ready(function () {
       items : 1
     })
   
-  $('.specialists-slider').owlCarousel(
-    {
-      loop      : true,
-      margin    : 20,
-      nav       : true,
-      dots      : false,
-      responsive: {
-        0  : {
-          items: 1
-        },
-        575: {
-          items: 2
-        },
-        993: {
-          items: 4
-        }
-      }
-    })
+  // $('.specialists-slider').owlCarousel({
+  //   loop      : true,
+  //   margin    : 20,
+  //   nav       : true,
+  //   center    : true,
+  //   dots      : false,
+  //   responsive: {
+  //     0  : {
+  //       items: 1
+  //     },
+  //     575: {
+  //       items: 2
+  //     },
+  //     993: {
+  //       items: 4
+  //     }
+  //   }
+  // })
   
   var videoSLider = $('.video-slider').owlCarousel(
     {
