@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const citiesData = {
+  window.citiesData = {
     zt: {
       ru: {
         cityName              : 'Житомир',
@@ -12,7 +12,7 @@ $(document).ready(function () {
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
         
-        imagesAmount: 10,
+        imagesAmount: 9,
         salonImages : 9,
         
         salons: {
@@ -82,7 +82,7 @@ $(document).ready(function () {
         cityFacebook          : 'https://www.facebook.com/steffany.podology/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.png',
         
-        imagesAmount: 10,
+        imagesAmount: 9,
         salonImages : 9,
         
         salons: {
@@ -154,7 +154,7 @@ $(document).ready(function () {
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
         
-        imagesAmount: 6,
+        imagesAmount: 9,
         salonImages : 9,
         
         salons: {
@@ -189,7 +189,8 @@ $(document).ready(function () {
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
         
-        imagesAmount: 6,
+        imagesAmount: 9,
+        salonImages : 9,
         salons      : {
           salon: {
             name       : 'Steffany Podology',
@@ -254,9 +255,14 @@ $(document).ready(function () {
   window.salon = localStorage.getItem('salon') || ''
   const urlCity      = location.pathname.slice(1).split('/')[1],
         filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
-  // let city = localStorage.getItem('city')
   
   window.city = filteredCity
+  if (city === 'rv') {
+    if (location.pathname.includes(
+      'edu')) {
+      location.pathname = localization === 'ru' ? '/podologiy/rv' : 'podologiya/rv/ua/'
+    }
+  }
   binatel[city](document, window, 'script')
   let width = ''
   $(`.city-trigger[data-city=${city}]`).toggleClass('active')
@@ -295,7 +301,6 @@ $(document).ready(function () {
   if (!salon) {
     localStorage.setItem('salon', 'nail')
   }
-  // if (city) {
   changeDataForCity()
   // }
   
@@ -303,15 +308,6 @@ $(document).ready(function () {
     $('header [data-not-avalable-rovno]').remove()
     $('[data-not-available-rovno] a.btn-callback').remove()
   }
-  
-  // if (salon !== 'salon') {
-  //   if (salon === 'nail') {
-  //     $('[data-remove-nail]').remove()
-  //   }
-  //   if (salon === 'hair') {
-  //     $('[data-remove-hair]').remove()
-  //   }
-  // }
   
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
@@ -322,23 +318,8 @@ $(document).ready(function () {
   
   function changeDataForCity() {
     salon = 'salon'
-    // if (city === 'zt') {
-    //   // $('.city-switcher').show()
-    //   salon = salon ? salon !== 'salon' ? salon : 'nail' : 'nail'
-    //   localStorage.setItem('salon', salon)
-    //   // $(`[data-salon="${salon}"]`).addClass('active')
-    // }
-    // else {
-    //   // $('.city-switcher').hide()
-    //   salon = 'salon'
-    //   localStorage.setItem('salon', 'salon')
-    // }
     localStorage.setItem('salon', 'salon')
     switchData(citiesData[city][localization].salons[salon])
-    
-    // $('.service-li-dynamic').each(function (e) {
-    //   this.innerHTML = serviceCityData[city][localization].selectedService
-    // })
     
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
@@ -347,11 +328,13 @@ $(document).ready(function () {
   
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
+    window.shit = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
     const owlDots = $('.small-owl-images-container .owl-dots-item')
     const specialistsSlider = $('.specialists-slider')
     const salonImages = $('.salon-photos-slider')
-    console.log(specialistsSlider)
+    $('.owl-dots-item.d-flex.align-items-start.justify-content-between.flex-wrap.w-100')
+      .html(carouselsHTML.videoSliderDown)
     if (videoSlider) {
       videoSlider.html(carouselsHTML.videoCarousel)
     }
@@ -361,7 +344,6 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    console.log('asd', carouselsHTML.imagesSalon)
     if (salonImages) {
       salonImages.html(carouselsHTML.imagesSalon)
     }
@@ -418,17 +400,15 @@ $(document).ready(function () {
       navContainer: '.video-nav-slider-dots',
       loop        : false,
       margin      : 0,
-      nav         : true,
-      dots        : false,
       items       : 1
     })
     
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
-      nav       : true,
+      nav       : false,
       dots      : false,
-      navigation: true,
+      navigation: false,
       responsive: {
         0   : {
           items: 1
@@ -453,9 +433,6 @@ $(document).ready(function () {
   
   function updateCarouselHTML() {
     setTimeout(() => {
-      // const slider = $('.specialists-slider.owl-carousel.slider-block.slider-pad.owl-loaded.owl-drag')[0]
-      // width = $('.specialists')[0].querySelector('.owl-item').style.width
-      // slider.innerHTML = ''
       location.reload()
     }, 0)
   }
@@ -471,11 +448,14 @@ $(document).ready(function () {
     let imagesSmall = ''
     let imagesSpecialists = ''
     let imagesSalon = ''
+    let videoSliderDown = ''
     for (let i = 0; i < salonLength; i++) {
       imagesSalon += `<img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.jpg">`
+      videoSliderDown += `
+        <a class="owl-dot d-flex align-items-center justify-content-center mb-4" href="" data-pos="${i}"><img src="assets/img/about-steffany-salon/${city}/salon/salon-${i}.jpg"/><span class="owl-dot-bg w-100 h-100 d-block"></span><span class="play-btn play-btn-small d-flex align-items-center justify-content-center"><span></span></span></a>
+      `
     }
-    console.log(imagesSalon)
-    // for(let i = 0; i )
+    
     for (let i = 0; i < imagesAmount; i++) {
       images += `
         <span data-pos="${i}" class="video d-flex align-items-center justify-content-center">
@@ -512,7 +492,8 @@ $(document).ready(function () {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists,
-      imagesSalon
+      imagesSalon,
+      videoSliderDown
     }
   }
   
@@ -524,17 +505,11 @@ $(document).ready(function () {
   }
   
   function initCities() {
-    // if ($('.video-slider')[0])
     initCarousels()
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
       if (closestDropdown && e.target.classList.contains('nav-link-text')) {
         city = e.target.dataset.city
-        // localStorage.setItem('city', city)
-        // changeDataForCity()
-        // if (window.location.href.indexOf('salonPage') !== -1) {
-        //   location.reload()
-        // }
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
         const link = nav[city][localization].replace('{{ page }}', page)

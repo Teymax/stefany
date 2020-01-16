@@ -38,7 +38,6 @@ $(document).ready(function () {
               filteredCity = ['rv'].find(city => city === urlCity) || 'zt'
         const h = filteredCity !== 'zt' ? window.patterns2[i18n].replace('{{ city }}', filteredCity).replace('$1',
           p) : window.patterns2[i18n].replace('/{{ city }}', '').replace('$1', p)
-        console.log('/' + h)
         if (location.pathname.substr(1) !== h) {
           location.href = '/' + h
         }
@@ -91,7 +90,6 @@ $(document).ready(function () {
       })
     
     request.done(function (msg) {
-      console.log(msg)
       writeClient(msg[0].datetime, payload)
     })
     
@@ -180,7 +178,6 @@ $(document).ready(function () {
     margin    : 20,
     nav       : false,
     dots      : true,
-    // FIXME: need to be fixed
     responsive: {
       0   : {
         items   : 1,
@@ -380,31 +377,6 @@ $(document).ready(function () {
         }
       }
     })
-  
-  // $('.salon-photos-slider').owlCarousel(
-  //   {
-  //     center    : true,
-  //     items     : 3,
-  //     loop      : true,
-  //     margin    : 15,
-  //     responsive: {
-  //       0   : {
-  //         items: 1
-  //       },
-  //       575 : {
-  //         items: 1
-  //       },
-  //       993 : {
-  //         items: 1.5
-  //       },
-  //       1400: {
-  //         items: 2
-  //       },
-  //       2000: {
-  //         items: 4
-  //       }
-  //     }
-  //   })
   
   $('.card-header').on('click', function () {
     $(this).toggleClass('active').siblings().removeClass('active')
