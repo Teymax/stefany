@@ -14,7 +14,7 @@ section.section-services.container-fluid.py-0.ort-treatment.ingrown-cnt
             span.paragraph-text-bold Що це:
             |
             | абсцес — це гнійне запалення тканин із підшкірною порожниною, де застоюється гній.
-          p.paragraph-text-light.ort-cnt
+          p.paragraph-text-light.ort-cntid=`serv${index+1}`
             span.paragraph-text-bold Як протікає:
             |
             |  у місці ускладнення шкіра червоніє, починає боліти, набрякати і опухати, температура цієї зони підвищується. Пацієнт слабшає, відчуває нездужання і головний біль, втрачає апетит.
@@ -70,4 +70,4 @@ section.section-services.container-fluid.py-0.ort-treatment.ingrown-cnt
   .row
     p.w-100.paragraph-text-bold.text-center.mx-0.mx-md-auto.mb-3.dark-color Лікуйте врослий ніготь відразу. Тоді все пройде максимально безболісно і без хірургічного втручання.
     .services-btn-container.mx-auto
-      +btnPen('Записатися')(data-toggle='modal', data-target='#callbackModal')
+      +btnPen('Записатися')(id="write-end", data-toggle='modal', data-target='#callbackModal')

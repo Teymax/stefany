@@ -43,9 +43,9 @@ mixin btnService(text)
 
 mixin sliderServices
   .podology-service-slider.owl-carousel.slider-block
-    each element in [{name:"Видалення мозолів", img:"pd-feet-1", link: 'wart'},{name:"Видалення натоптишів",img:"pd-feet-2", link: 'wart'},{name:"Лікування грибка",img:"pd-feet-3", link: 'fungus'},{name:"Обробка тріщин",img:"pd-feet-4", link: 'treatment'},{name:"Профілактичні послуги",img:"pd-feet-5", link: 'prevention'},{name:"Лікування врослого нігтя",img:"pd-feet-6", link: 'otronixia'},{name:"Мала ортопедія",img:"pd-feet-7", link: 'orthopedics'}]
+    each element, index in [{name:"Видалення мозолів", img:"pd-feet-1", link: 'wart'},{name:"Видалення натоптишів",img:"pd-feet-2", link: 'wart'},{name:"Лікування грибка",img:"pd-feet-3", link: 'fungus'},{name:"Обробка тріщин",img:"pd-feet-4", link: 'treatment'},{name:"Профілактичні послуги",img:"pd-feet-5", link: 'prevention'},{name:"Лікування врослого нігтя",img:"pd-feet-6", link: 'otronixia'},{name:"Мала ортопедія",img:"pd-feet-7", link: 'orthopedics'}]
       - let resultPath = "./assets/img/" + element.img + ".png"
-      a.diploma-item(href=element.link)
+      a.diploma-item(href=element.link id=`serv${index+1}`)
         img.w-100(src=resultPath, alt="result-image")
         .slider-item-footer.d-flex.flex-column.align-items-center.justify-content-center
           .section-bg-dark.w-100.p-1
