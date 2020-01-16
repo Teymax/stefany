@@ -418,4 +418,3 @@ function clearTotalPrice() {
     container.innerHTML = '0 грн.'
   })
 }
-
