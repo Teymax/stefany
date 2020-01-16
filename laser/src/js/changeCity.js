@@ -137,7 +137,7 @@ $(document).ready(function () {
             ua: {
                 cityName: 'Житомир',
                 cityNameIn: 'у Житомирі',
-                cityPhone: '380-98-500-48-86',
+                cityPhone: '380-96-205-50-30',
                 address: 'вул. Київська, 84',
                 cityMap: '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
                 cityInstagram: 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
@@ -199,20 +199,20 @@ $(document).ready(function () {
                 imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
 
                 imagesAmount: 9,
-                imagesAmountSpecialists: 2,
+                imagesAmountSpecialists: 1,
                 specialists: [
                     {
-                        name: 'Оксана Иваницкая',
+                        name: 'Оксана Иванцив',
                         education: 'По образованию акушерка',
                         experience: 'Работает уже 2,5 месяца',
                         skills: 'Сделает лазерную эпиляцию'
                     },
-                    {
-                        name: 'Кристина Демедюк',
-                        education: ' По образованию акушерка',
-                        experience: 'Работает уже 2,5 месяца',
-                        skills: 'Сделает лазерную эпиляцию'
-                    }
+                    // {
+                    //     name: 'Кристина Демедюк',
+                    //     education: ' По образованию акушерка',
+                    //     experience: 'Работает уже 2,5 месяца',
+                    //     skills: 'Сделает лазерную эпиляцию'
+                    // }
                 ]
             },
             ua: {
@@ -226,20 +226,20 @@ $(document).ready(function () {
                 imageAboutStaffanyPage: 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
 
                 imagesAmount: 9,
-                imagesAmountSpecialists: 2,
+                imagesAmountSpecialists: 1,
                 specialists: [
                     {
-                        name: 'Оксана Іваницька',
+                        name: 'Оксана Іванців',
                         education: 'За освітою акушерка',
                         experience: 'Працює вже 2,5 місяці',
                         skills: 'Зробить лазерну епіляцію'
                     },
-                    {
-                        name: 'Христина Демедюк',
-                        education: 'За освітою акушерка',
-                        experience: 'Працює вже 2,5 місяці',
-                        skills: 'Зробить лазерну епіляцію'
-                    }
+                    // {
+                    //     name: 'Христина Демедюк',
+                    //     education: 'За освітою акушерка',
+                    //     experience: 'Працює вже 2,5 місяці',
+                    //     skills: 'Зробить лазерну епіляцію'
+                    // }
                 ]
             }
 

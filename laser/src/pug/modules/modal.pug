@@ -11,11 +11,11 @@
           input#email.w-100.p-text-light(name = "email" type="email", placeholder="Email" required)
           input#phone.w-100.p-text-light.mb-0(name = "phone" type="tel", placeholder="Телефон" required maxlength="19" minlength="19" pattern=".{19}")
           input#payment(name = "payment" type="hidden" value = "1")
-          span.paragraph-text.text-color-dark.small-text.mb-0(style='font-size: 12px') согласен <a href="https://drive.google.com/file/d/1h7vT53uwHVyqDWv9obAiODghkVoIkAv5/view?usp=sharing"><b>с договором публичной оферты</b></a>
-          //label.service-checkbox-label
-          //  input.align-self-center(type='checkbox', required=true)
-          //  span.checkmark.dark
-          input(style='height: 12px', type='checkbox', required=true).mb-0
+          span#privacy_link.paragraph-text.text-color-dark.small-text.mb-0(style='font-size: 12px') согласен <a href="https://drive.google.com/file/d/1h7vT53uwHVyqDWv9obAiODghkVoIkAv5/view?usp=sharing"><b>с договором публичной оферты</b></a>
+            //label.service-checkbox-label
+            //  input.align-self-center(type='checkbox', required=true)
+            //  span.checkmark.dark
+          input#privacy_check(style='height: 12px', type='checkbox', required=true).mb-0
           +modalServiceListInfo
           .c-input-order
             input#order_button.btn-submit.order.hidden(type="submit" value="записаться")

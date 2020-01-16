@@ -9,7 +9,8 @@ function preloadFunc() {
       "contact",
       "complex",
       "voskovaya-epilyatsiya",
-      "policy"
+      "policy",
+      "oferta"
 
 
     ],
@@ -20,7 +21,8 @@ function preloadFunc() {
       "salon",
       "contact",
       "complex",
-      "policy"
+      "policy",
+      "oferta"
 
     ],
     "if": [
@@ -28,7 +30,9 @@ function preloadFunc() {
       "about",
       "salon",
       "contact",
-      "complex"
+      "complex",
+      "policy",
+      "oferta"
     ],
     "lv": [
       "epilation",
@@ -36,7 +40,8 @@ function preloadFunc() {
       "salon",
       "contact",
       "complex",
-      "policy"
+      "policy",
+      "oferta"
 
     ]
   };

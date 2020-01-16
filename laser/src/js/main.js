@@ -104,7 +104,7 @@ function buttonToggle(event) {
     payment.value = 1
   }
   else {
-    check.setAttribute("required", "false")
+    check.removeAttribute("required")
     check.classList.add("hidden")
     span.classList.add("hidden")
     payButton.classList.add('hidden')
@@ -143,7 +143,6 @@ function displayServices(json) {
       return block.getAttribute('id')
     })
     servicesStatic = servicesStatic.filter(service => !!service)
-    // let json = {};
     for (let i = 0; i < servicesStatic.length; i++) {
       servicesAll.map(function (service) {
         if (+servicesStatic[i] === service.id) {
@@ -159,7 +158,6 @@ function displayServices(json) {
         }
       })
     }
-    // console.log(JSON.stringify(json))
   }
   else {
     servicesAll.map(function (service) {
