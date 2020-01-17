@@ -229,7 +229,7 @@ $(document).ready(function () {
   
   const binatel = {
     zt: function (d, w, s) {
-      var widgetHash = 'rkr67ua265zfjx62zen7',
+      var widgetHash = '7bolz5aivjd0v2yhzqte',
           gcw        = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
@@ -238,8 +238,8 @@ $(document).ready(function () {
       sn.parentNode.insertBefore(gcw, sn)
     },
     rv: function (d, w, s) {
-      var widgetHash = 'brp0dbyeu2gyu85snk25',
-          gcw        = d.createElement(s)
+      var widgetHash = 'ff26q6poo5l8n0x1xncs',
+          gcw = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
       gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'

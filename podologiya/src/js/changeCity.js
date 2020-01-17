@@ -229,7 +229,7 @@ $(document).ready(function () {
   
   const binatel = {
     zt: function (d, w, s) {
-      var widgetHash = 'rkr67ua265zfjx62zen7',
+      var widgetHash = '7bolz5aivjd0v2yhzqte',
           gcw        = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
@@ -238,7 +238,7 @@ $(document).ready(function () {
       sn.parentNode.insertBefore(gcw, sn)
     },
     rv: function (d, w, s) {
-      var widgetHash = 'brp0dbyeu2gyu85snk25',
+      var widgetHash = 'wmtv29qserjiw897o0y0',
           gcw        = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
@@ -302,7 +302,6 @@ $(document).ready(function () {
     localStorage.setItem('salon', 'nail')
   }
   changeDataForCity()
-  // }
   
   if (city === 'rv') {
     $('header [data-not-avalable-rovno]').remove()
