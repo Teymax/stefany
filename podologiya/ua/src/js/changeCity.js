@@ -229,7 +229,7 @@ $(document).ready(function () {
   
   const binatel = {
     zt: function (d, w, s) {
-      var widgetHash = '7bolz5aivjd0v2yhzqte',
+      var widgetHash = 'wmtv29qserjiw897o0y0',
           gcw        = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
@@ -238,8 +238,8 @@ $(document).ready(function () {
       sn.parentNode.insertBefore(gcw, sn)
     },
     rv: function (d, w, s) {
-      var widgetHash = 'ff26q6poo5l8n0x1xncs',
-          gcw = d.createElement(s)
+      var widgetHash = 'dsanz62x7q126x5wawyq',
+          gcw        = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
       gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
@@ -302,7 +302,6 @@ $(document).ready(function () {
     localStorage.setItem('salon', 'nail')
   }
   changeDataForCity()
-  // }
   
   if (city === 'rv') {
     $('header [data-not-avalable-rovno]').remove()
