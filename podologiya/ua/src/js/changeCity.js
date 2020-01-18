@@ -58,7 +58,7 @@ $(document).ready(function () {
                 skills   : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и профилактике трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, обработке и лечении вросшего ногтя, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
               },
               {
-                name     : 'Ирина Вышневская',
+                name     : 'Ирина Вишневская',
                 education: 'Подолог',
                 skills   : 'Специализируется на медицинском педикюре, удалении бородавок, мозолей, обработке и профилактике трещин на стопе, установке систем ортониксии для коррекции вросших ногтей, протезировании и восстановлении ногтей, обработке грибковых поражений кожи и ногтей'
               },
@@ -229,7 +229,7 @@ $(document).ready(function () {
   
   const binatel = {
     zt: function (d, w, s) {
-      var widgetHash = 'wmtv29qserjiw897o0y0',
+      var widgetHash = '7bolz5aivjd0v2yhzqte',
           gcw        = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
@@ -238,8 +238,8 @@ $(document).ready(function () {
       sn.parentNode.insertBefore(gcw, sn)
     },
     rv: function (d, w, s) {
-      var widgetHash = 'dsanz62x7q126x5wawyq',
-          gcw        = d.createElement(s)
+      var widgetHash = 'ff26q6poo5l8n0x1xncs',
+          gcw = d.createElement(s)
       gcw.type = 'text/javascript'
       gcw.async = true
       gcw.src = '//widgets.binotel.com/getcall/widgets/' + widgetHash + '.js'
