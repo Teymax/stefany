@@ -216,9 +216,11 @@
     background:
       repeat: no-repeat
       size: cover
+    @include media-breakpoint-down(sm)
+      display: none
   &:before
     background:
-      image: url('../assets/icon/svg/phone.svg')
+      image: url('../assets/icon/svg/phone-light.svg')
     width: 10px
     height: 16px
     left: 22px
