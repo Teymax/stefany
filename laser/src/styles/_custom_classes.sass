@@ -9,6 +9,11 @@
 //width: 15px
 //height: 19px
 
+footer
+	ul.dropdown-menu-list
+		@include media-breakpoint-up(md)
+			left: 38%
+
 iframe
 	width: 100%
 	height: 100%
@@ -498,8 +503,10 @@ iframe
 
 .visible, .hidden.visible
 	display: block !important
+
 .visibleFlex
-  display: flex
+	display: flex
+
 #paymentPopup
 	#main
 		height: 40px
@@ -614,5 +621,6 @@ iframe
 
 		100%
 			background: skyblue
+
 .diploma-slider .owl-item
-  //max-width: 300px
+//max-width: 300px
