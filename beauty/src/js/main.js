@@ -15,6 +15,9 @@ window.mail = {
 }
 window.serviceId = 2495961
 window.serviceText = ''
+$(function() {
+  $('img').Lazy();
+});
 
 const writeClient = (time, data) => {
   var bearer_token = 'f5wujgx5yn6cagtk9fg2'

@@ -16,7 +16,9 @@ window.patterns2 = {
   ru: 'podologiya/{{ city }}/$1',
   ua: 'podologiya/{{ city }}/ua/$1'
 }
-
+$(function () {
+  $('img').Lazy()
+})
 $(document).ready(function () {
   
   $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
