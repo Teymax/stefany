@@ -1,63 +1,60 @@
 function preloadFunc() {
   let links = {
-    "rv": [
-      "epilation",
-      "nano-epilyatsiya",
-      "shugaring",
-      "about",
-      "salon",
-      "contact",
-      "complex",
-      "voskovaya-epilyatsiya",
-      "policy",
-      "oferta"
-
+    'rv': [
+      'epilation',
+      'nano-epilyatsiya',
+      'shugaring',
+      'about',
+      'salon',
+      'contact',
+      'complex',
+      'voskovaya-epilyatsiya',
+      'policy',
+      'oferta'
+    
     ],
-    "lt": [
-      "epilation",
-      "nano-epilyatsiya",
-      "about",
-      "salon",
-      "contact",
-      "complex",
-      "policy",
-      "oferta"
+    'lt': [
+      'epilation',
+      'nano-epilyatsiya',
+      'about',
+      'salon',
+      'contact',
+      'complex',
+      'policy',
+      'oferta'
     ],
-    "if": [
-      "epilation",
-      "about",
-      "salon",
-      "contact",
-      "complex",
-      "policy",
-      "oferta"
+    'if': [
+      'epilation',
+      'about',
+      'salon',
+      'contact',
+      'complex',
+      'policy',
+      'oferta'
     ],
-    "lv": [
-      "epilation",
-      "about",
-      "salon",
-      "contact",
-      "complex",
-      "policy",
-      "oferta"
-
+    'lv': [
+      'epilation',
+      'about',
+      'salon',
+      'contact',
+      'complex',
+      'policy',
+      'oferta'
+    
     ]
-  };
-  let path = location.pathname.split("/");
-  let pathArr = path.slice(2);
-  console.log(pathArr);
-  if (pathArr.length > 1 && links[pathArr[0]] && pathArr[1] !== "" && pathArr[1] !== "ua" && !links[pathArr[0]].includes(pathArr[1])) {
-    let a = path.slice(0, -1).join("/");
-    console.log(a);
-    window.location.href = a + "/";
   }
-  if (pathArr.length > 1 && links[pathArr[0]] && pathArr[1] !== "" && pathArr[1] === "ua" && pathArr[2] !== "" && !links[pathArr[0]].includes(pathArr[2])) {
-    console.log("2");
-    let a = path.slice(0, -1).join("/");
-    console.log(a);
-
-    window.location.href = a + "/";
+  let path = location.pathname.split('/')
+  let pathArr = path.slice(2)
+  if (pathArr.length > 1 && links[pathArr[0]] && pathArr[1] !== '' && pathArr[1] !== 'ua' && !links[pathArr[0]].includes(
+    pathArr[1])) {
+    let a = path.slice(0, -1).join('/')
+    window.location.href = a + '/'
+  }
+  if (pathArr.length > 1 && links[pathArr[0]] && pathArr[1] !== '' && pathArr[1] === 'ua' && pathArr[2] !== '' && !links[pathArr[0]].includes(
+    pathArr[2])) {
+    let a = path.slice(0, -1).join('/')
+    window.location.href = a + '/'
   }
 }
 
-window.onpaint = preloadFunc();
+window.onpaint = preloadFunc()

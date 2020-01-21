@@ -51,7 +51,7 @@ $(document).ready(function () {
       email.value = ''
       phone.value = ''
       comment.value = ''
-      $('#thanksPopup').modal('show')
+       $('#thanksPopup').modal('show')
     })
   }
   $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -151,7 +151,6 @@ $(document).ready(function () {
       $('.custom-py-services-price').toggleClass('man-symbol-bg', this.checked)
       $('.list-female').toggleClass('hidden', this.checked)
       $('.list-male').toggleClass('visible', this.checked)
-
     }).change()
   })
 
