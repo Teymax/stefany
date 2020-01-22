@@ -26,7 +26,11 @@ header.mt-2.mb-2.mb-lg-0
       .col-12.col-md-8.header-nav-wrap.order-md-2.d-flex.justify-content-end.desktop-menu-hide
         nav.header-nav.w-100.d-flex
           ul.header-nav-list.d-flex.flex-column.flex-xl-row.align-items-center.justify-content-between.mb-0.p-0
-            li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-xl-0
+            li.d-inline-flex.align-items-center.mr-0.li-contact
+              a.paragraph-text.text-color-lightdark-header(href="./about") Про Steffany
+            li.d-inline-flex.align-items-center.mr-0.li-contact
+              a.paragraph-text.text-color-lightdark-header(href="./salon") Про салон
+            //li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-xl-0
               span.text-color-lightdark-header О нас
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
@@ -89,10 +93,10 @@ header.mt-2.mb-2.mb-lg-0
                     a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(data-i18n='ua') UA
                   li
                     a.drop-menu.nav-link-text.paragraph-text.text-color-lightdark-header.header-lang.text-color-dark(data-i18n='ru') RU
-              li.d-none.d-md-flex.d-xl-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
-                span.d-block.w-100
-                span.d-block.w-100
-                span.d-block.w-100
+              //li.d-none.d-md-flex.d-xl-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
+              //  span.d-block.w-100
+              //  span.d-block.w-100
+              //  span.d-block.w-100
       .col-12.col-md-4.nav-callback.order-md-3.d-none.d-md-block.desktop-menu-hide
         a.ms_booking
           +btnCallback('записаться')
@@ -131,7 +135,11 @@ header.mt-2.mb-2.mb-lg-0
       #mobileMenu
         nav.d-flex
           ul
-            li.sub-menu-trigger
+            li
+              a(href='./about').mob-title Про Steffany
+            li
+              a(href='./salon').mob-title Про салон
+            //li.sub-menu-trigger
               span.mob-title О нас
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
@@ -193,6 +201,13 @@ header.mt-2.mb-2.mb-lg-0
                   a(data-i18n='ru').mob-title RU
                 li
                   a(data-i18n='ua').mob-title UA
+            li
+              a(href='/lazernaya-epilyatsiya') Laser
+              |
+              | |
+              |
+              a(href='/beauty') Beauty
+
     .d-flex.d-md-none.align-items-center.justify-content-between.menu-trigger.flex-column.m-0
       span.d-block.w-100
       span.d-block.w-100

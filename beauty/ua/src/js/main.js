@@ -15,6 +15,9 @@ window.mail = {
 }
 window.serviceId = 2495961
 window.serviceText = ''
+$(function () {
+  $('img').Lazy()
+})
 
 const writeClient = (time, data) => {
   var bearer_token = 'f5wujgx5yn6cagtk9fg2'
@@ -72,9 +75,6 @@ function closeAllModals() {
 }
 
 $(document).ready(function () {
-  // console.clear()
-  // setTimeout(() => console.clear(), 8000)
-  
   $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
   
   $('[type="tel"]').mask('+38-(000)-000-00-00')
@@ -83,7 +83,6 @@ $(document).ready(function () {
     if (e.target.dataset.serviceId) {
       window.serviceText = e.target.dataset.serviceId
     }
-    console.log(window.serviceText)
   })
   
   function scrollToAnchor(aid) {
@@ -156,7 +155,6 @@ $(document).ready(function () {
       .then(response => response.json())
       .then(response => {
         if (response.length) {
-          console.log(response)
           writeClient(response[0].datetime, payload)
         }
         else {
@@ -434,7 +432,6 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams = 
       return getBookTime(services, ++plusDate, callbackFunction, callbackParams)
     }
     else {
-      console.log(dataArr)
       callbackParams.push(dataArr[0].datetime)
       callbackFunction(...callbackParams)
     }

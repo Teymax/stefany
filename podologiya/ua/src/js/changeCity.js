@@ -476,7 +476,7 @@ $(document).ready(function () {
         <div class="specialists-item">
           <div class="specialists-item-container mb-3 w-100">
             <div class="specialists-img w-100">
-              <img class="w-100" src="${imgPath}/specialists/${salon}/specialists-${i}.png" alt="Doctor">
+              <img class="w-100" src="${imgPath}/specialists/${salon}/specialists-${i}.jpg" alt="Doctor">
             </div>
             <div class="specialists-info d-flex flex-column align-items-start justify-content-between w-100 p-3">
               <p class="p-text-light fs-16">${specialistsData[i].skills}</p>

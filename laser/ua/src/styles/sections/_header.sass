@@ -160,9 +160,31 @@ ul.dropdown-menu-list
 		padding-left: 15px !important
 		padding-right: 15px !important
 
+//html
+//	body
+//		div:not(.modal)
+//			&:first-of-type
+//				margin-top: 10rem
+
+header + div,
+header + section
+	margin-top: 10rem
+
+//html body > div:first-of-type,
+//html body > section:first-of-type
+//	margin-top: 10rem
+
+html body header.mt-2
+	margin: 0 !important
 
 header
 	padding-bottom: 64px
+	background: #ffffff
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	//margin: 0 !important
 	@include media-breakpoint-down(lg)
 		padding-bottom: 0
 	//position: relative
@@ -181,7 +203,7 @@ header
 			width: 100%
 
 		svg
-			width: 140px
+			width: 120px
 			height: 95px
 
 			path
@@ -238,7 +260,7 @@ header
 
 nav.header-nav
 	width: 100%
-	max-width: 320px
+	//max-width: 320px
 	margin-right: 5px
 
 	ul.header-nav-list

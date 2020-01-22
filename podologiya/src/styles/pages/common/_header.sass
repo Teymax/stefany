@@ -160,9 +160,25 @@ ul.dropdown-menu-list
 		padding-left: 15px !important
 		padding-right: 15px !important
 
+header + div,
+header + section
+	margin-top: 10rem
+
+html body header.mt-2
+	margin: 0 !important
+
+
+html body header.mt-2
+	margin: 0 !important
 
 header
 	padding-bottom: 64px
+	background: #ffffff
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	margin: 0 !important
 	@include media-breakpoint-down(lg)
 		padding-bottom: 0
 	//position: relative
@@ -216,7 +232,7 @@ header
 			@include media-breakpoint-down(sm)
 	//fill: #fff !important
 	.c-row
-		max-width: 44em
+		max-width: 55em
 
 		ul.header-contact-list
 			margin-bottom: 20px !important

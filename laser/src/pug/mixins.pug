@@ -27,7 +27,7 @@ mixin customBtn(text, className)
     .arrow-section
       +arrowSvg
 mixin btnCallback(text, className)
-  .btn-callback(class!=attributes.class href=href)= className
+  .btn-callback(class!=attributes.class href=href)&attributes(attributes)= className
     .text-section
       +penSvg
       span= text
@@ -106,5 +106,3 @@ mixin modalServiceListInfo
     .d-flex.justify-content-between
       span.paragraph-text.text-color-dark.line-height Общая сумма
       span.paragraph-text.text-w-bold.text-color-dark.ml-2.serviceListSum 0 грн.
-
-

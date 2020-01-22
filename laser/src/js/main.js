@@ -15,11 +15,7 @@ localStorage.city = filteredCity;
 
 function getData(data) {
   let answer
-  // try {
   answer = JSON.parse(data)
-  // } catch (err) {
-  //   return {error: err.message, status: answer['errors']['code']};
-  // }
   if (answer['errors']) {
     if (answer['errors'].length > 1) {
       return {
@@ -153,7 +149,6 @@ function displayServices(json) {
             checkbox.addEventListener("click", refreshPrice);
           checkbox.value = service.id;
           mainBlocks[i].querySelector("p.item-price").textContent = `${service.price_max} грн`;
-          // json[service.id] = service.seance_length;
           mainBlocks[i].querySelector("p.item-time").textContent = `${servicesLength[service.id] / 60} ${LocMin}`
           servicesArr[service.id] = {"price": service.price_max, "length": servicesLength[service.id] / 60}
 

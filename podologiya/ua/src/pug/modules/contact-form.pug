@@ -19,6 +19,8 @@ mixin contactForm(title)
             .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
               img(src="assets/icon/common/time.svg" alt="Time").d-block.mr-3
               p.text-color-dark.mb-0.font-weight-normal.schedule-dynamic
+          .row.justify-content-center.mt-4
+            +btnCallback('перезвонить')(data-toggle='modal', data-target='#callbackModal' id='callbackButton1')
         hr.mt-5.mb-5
         h3 Хочете зв'язатися особисто із власником Steffany Podology?
         form.feedback-form
