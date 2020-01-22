@@ -64,35 +64,35 @@ mixin defaultCheckbox(color='dark')
     span.checkmark(class=color)
 mixin accordeon(header, description, items, expandedRequired, expandedIndex)
   .container
-    h2.h2-title.text-center= header
-    p.h4-title.text-center.d-none.d-md-block.letter-spacing-1.mb-5= description
+    h2.h2-title.text-center!= header
+    p.h4-title.text-center.d-none.d-md-block.letter-spacing-1.mb-5!= description
     #accordion.accordion
       if expandedRequired
         each item, index in items
           if index === expandedIndex
             .card-header.active(data-toggle='collapse', data-target='#collapse' + index, aria-controls='collapse' + index, aria-expanded='true' id="header" + index)
-              p.paragraph-text.text-w-bold.letter-spacing-15= item.title
+              p.paragraph-text.text-w-bold.letter-spacing-15!= item.title
               .card-arrow
           else
             .card-header(data-toggle='collapse', data-target='#collapse' + index, aria-controls='collapse' + index, aria-expanded='false' id="header" + index)
-              p.paragraph-text.text-w-bold.letter-spacing-15= item.title
+              p.paragraph-text.text-w-bold.letter-spacing-15!= item.title
               .card-arrow
           if index === expandedIndex
             .collapse.show(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
               .card-body
-                p.paragraph-text.text-w-light= item.body
+                p.paragraph-text.text-w-light!= item.body
           else
             .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
               .card-body
-                p.paragraph-text.text-w-light= item.body
+                p.paragraph-text.text-w-light!= item.body
       else
         each item, index in items
           .card-header(data-toggle='collapse', data-target='#collapse' + index, aria-controls='collapse' + index, aria-expanded='false' id="header" + index)
-            p.paragraph-text.text-w-bold.letter-spacing-15= item.title
+            p.paragraph-text.text-w-bold.letter-spacing-15!= item.title
             .card-arrow
           .collapse(aria-labelledby='heading' + index, data-parent='#accordion' id="collapse" + index)
             .card-body
-              p.paragraph-text.text-w-light= item.body
+              p.paragraph-text.text-w-light!= item.body
 
 // modal service list info
 mixin modalServiceListInfo
