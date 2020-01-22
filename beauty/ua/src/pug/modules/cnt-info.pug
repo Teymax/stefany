@@ -14,3 +14,10 @@ mixin cnt-info
       .col-12.col-md-6.d-flex.p-0.align-items-center.mb-3
         img(src="assets/icon/time.svg" alt="Time").d-block.mr-3
         p.schedule-dynamic.paragraph-text.text-color-dark.mb-0
+    .d-flex.mt-3.w-100
+      .btn-callback(id="discount-call", data-toggle='modal', data-target='#appointmentModal' style='margin: auto')
+        .text-section
+          +phoneSvg
+          span Перезвоните
+        .arrow-section
+          +arrowSvg

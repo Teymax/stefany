@@ -160,9 +160,19 @@ ul.dropdown-menu-list
 		padding-left: 15px !important
 		padding-right: 15px !important
 
-html body > div:first-of-type,
-html body > section:first-of-type
+//html
+//	body
+//		div:not(.modal)
+//			&:first-of-type
+//				margin-top: 10rem
+
+header + div,
+header + section
 	margin-top: 10rem
+
+//html body > div:first-of-type,
+//html body > section:first-of-type
+//	margin-top: 10rem
 
 html body header.mt-2
 	margin: 0 !important
