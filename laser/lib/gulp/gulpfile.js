@@ -1,8 +1,8 @@
 //подключение модулей gulp
-const gulp         = require( 'gulp' ),
-      concat       = require( 'gulp-concat' ),
+const gulp = require( 'gulp' ),
+      concat = require( 'gulp-concat' ),
       autoprefixer = require( 'gulp-autoprefixer' ),
-      cleanCSS     = require( 'gulp-clean-css' ),
+      cleanCSS = require( 'gulp-clean-css' ),
       uglify       = require( 'gulp-uglify' ),
       del          = require( 'del' ),
       browserSync  = require( 'browser-sync' ).create(),
