@@ -3,6 +3,7 @@ $(document).ready(() => {
     $(e.target).toggleClass('triggered')
     $(e.target).children('ul').toggleClass('open')
   })
+  
   $('.redirectBtn .btn-callback').on('click', e => {
   
   })

@@ -181,6 +181,7 @@ header
 	padding-bottom: 64px
 	background: #ffffff
 	position: fixed
+	z-index: 999
 	width: 100%
 	top: 0
 	left: 0
@@ -188,7 +189,6 @@ header
 	@include media-breakpoint-down(lg)
 		padding-bottom: 0
 	//position: relative
-	z-index: 5
 
 	.header-lang
 
@@ -351,7 +351,7 @@ nav.header-nav
 						color: #ffffff !important
 						opacity: 1 !important
 	header
-		//position: relative
+		z-index: 999
 		a
 			color: #4D5259 !important
 

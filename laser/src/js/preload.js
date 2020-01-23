@@ -2,7 +2,6 @@ function preloadFunc() {
   let links = {
     'rv': [
       'epilation',
-      'nano-epilyatsiya',
       'shugaring',
       'about',
       'salon',
