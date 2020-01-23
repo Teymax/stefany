@@ -1171,4 +1171,3 @@ $(document).ready(function () {
   
   initCities()
 })
-
