@@ -194,7 +194,7 @@ $(document).ready(function () {
             address    : 'ул. Киевская, 84',
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/zt/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/zt/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Виктория Демчук',
@@ -294,7 +294,7 @@ $(document).ready(function () {
             address    : 'вул. Київська, 84',
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/zt/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/zt/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Вікторія Демчук',
@@ -397,7 +397,7 @@ $(document).ready(function () {
             address    : 'ул. Ивана Франка, 25',
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/if/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/if/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Оксана Иванцив',
@@ -437,7 +437,7 @@ $(document).ready(function () {
             address    : 'вул. Івана Франка, 25',
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/if/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/if/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Оксана Іванців',
@@ -480,7 +480,7 @@ $(document).ready(function () {
             address    : 'пр. Воли, 10',
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/lt/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/lt/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Кристина Данило',
@@ -544,7 +544,7 @@ $(document).ready(function () {
             address    : 'пр. Волі, 10',
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/lt/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/lt/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Христина Данило',
@@ -608,7 +608,7 @@ $(document).ready(function () {
             address    : 'ул. Княгини Ольги 98А',
             schedule   : 'с 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Ирина Станкевич',
@@ -624,7 +624,7 @@ $(document).ready(function () {
             address    : 'ул. Гулака-Артемовского, 2',
             schedule   : 'с 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Ирина Станкевич',
@@ -663,7 +663,7 @@ $(document).ready(function () {
             address    : 'вул. Княгині Ольги 98А',
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Ірина Станкевич',
@@ -679,7 +679,7 @@ $(document).ready(function () {
             address    : 'вул. Гулака-Артемовського, 2',
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Ірина Станкевич',
@@ -721,7 +721,7 @@ $(document).ready(function () {
             address    : 'ул. Киевская, 4',
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/rv/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/rv/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Валентина Дижурко',
@@ -797,7 +797,7 @@ $(document).ready(function () {
             address    : 'вул. Київська, 4',
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/_about-steffany-salon/rv/salon/video-slider-0@2x.jpg',
+            preview    : 'assets/img/_about-steffany-salon/rv/salon/video-slider-0@2x.jpg',
             specialists: [
               {
                 name      : 'Валентина Діжурко',
@@ -960,10 +960,8 @@ $(document).ready(function () {
   const setSalonSwitcher = salons => {
     let switcher = ''
     for (const salon in salons) {
-      console.log(salon)
       switcher += `<a data-salon="${salon}">${salons[salon].title}</a>`
     }
-    console.log(switcher)
     $('.salon-switcher').html(switcher)
     $(`.salon-switcher [data-salon="${salon}"]`).addClass('active')
     $('.salon-switcher').css('display', 'block')
@@ -996,19 +994,19 @@ $(document).ready(function () {
       this.innerText = citiesData[city][localization].cityName
     })
     $('.telephone-dynamic').each(function (e) {
-      this.innerText = citiesData[city][localization].cityPhone
-      this.setAttribute('href', `tel:+${citiesData[city][localization].cityPhone}`)
+      this.innerText = citiesData[city][localization].salons[salon].phone
+      this.setAttribute('href', `tel:+${citiesData[city][localization].salons[salon].cityPhone}`)
     })
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + citiesData[city][localization].cityNameIn
     })
     
     $('.address-dynamic').each(function (e) {
-      this.innerText = citiesData[city][localization].address
+      this.innerText = citiesData[city][localization].salons[salon].address
     })
     
     $('.map-dynamic').each(function (e) {
-      this.innerHTML = citiesData[city][localization].cityMap
+      this.innerHTML = citiesData[city][localization].salons[salon].map
     })
     
     $('.service-li-dynamic').each(function (e) {
@@ -1016,7 +1014,7 @@ $(document).ready(function () {
     })
     
     $('.image-about-dynamic').each(function (e) {
-      this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage}`)
+      this.setAttribute('src', `${citiesData[city][localization].salons[salon].preview}`)
     })
   }
   
