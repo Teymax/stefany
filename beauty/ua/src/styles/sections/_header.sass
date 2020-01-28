@@ -164,7 +164,7 @@ header + div:not(.modal),
 header + section:not(.modal)
 	margin-top: 10rem
 	@include media-breakpoint-down(md)
-		margin-top: 4rem
+		margin-top: 5rem
 
 html body header.mt-2
 	margin: 0 !important
@@ -177,10 +177,10 @@ header
 	top: 0
 	left: 0
 	margin: 0 !important
+	z-index: 9999999!important
 	@include media-breakpoint-down(lg)
 		padding-bottom: 0
 	//position: relative
-	z-index: 5
 
 	.header-lang
 
@@ -598,4 +598,4 @@ html body header #mobileMenu
 
 @media screen and (max-width: 330px)
 	#selectCityDropdownHeader1
-		top: 17%
+		top: 100%

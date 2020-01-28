@@ -995,7 +995,7 @@ $(document).ready(function () {
     })
     $('.telephone-dynamic').each(function (e) {
       this.innerText = citiesData[city][localization].salons[salon].phone
-      this.setAttribute('href', `tel:+${citiesData[city][localization].salons[salon].cityPhone}`)
+      this.setAttribute('href', `tel:+${citiesData[city][localization].salons[salon].phone}`)
     })
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + citiesData[city][localization].cityNameIn
