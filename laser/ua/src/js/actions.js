@@ -11,8 +11,31 @@ $(document).ready(() => {
     const city = e.target.dataset.city
     const _h   = location.pathname.slice(1).split('/'),
           page = _h[_h.length - 1]
-    const link = nav[city][localization].replace('{{ page }}', page)
-    location.pathname = '/' + link
+    const paths = {
+      zt: {
+        ru: '/lazernaya-epilyatsiya/salon',
+        ua: '/lazernaya-epilyatsiya/ua/salon'
+      },
+      rv: {
+        ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+        ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+      },
+      lv: {
+        ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+        ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+      },
+      lt: {
+        ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+        ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+      },
+      if: {
+        ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+        ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+      }
+    }            
+    console.log(_h, page, localization, city)
+    const link = paths[city][localization].replace('{{ city }}', city)
+    location.pathname = link
   })
   $('body').on('click', e => {
     if (e.target.id === 'mobTrigger') {

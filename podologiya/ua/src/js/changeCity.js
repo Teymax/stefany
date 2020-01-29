@@ -511,8 +511,19 @@ $(document).ready(function () {
         city = e.target.dataset.city
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
-        const link = nav[city][localization].replace('{{ page }}', page)
-        location.pathname = '/' + link
+        const paths = {
+          zt: {
+            ru: '/podologiya/salon',
+            ua: '/podologiya/ua/salon'
+          },
+          rv: {
+            ru: '/podologiya/{{ city }}/salon',
+            ua: '/podologiya/{{ city }}/ua/salon'
+          }
+        }              
+        console.log(_h, page, localization, city)
+        const link = paths[city][localization].replace('{{ city }}', city)
+        location.pathname = link
       }
     })
   }

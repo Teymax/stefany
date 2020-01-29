@@ -761,7 +761,7 @@ $(document).ready(function () {
     }
   }
   
-  let localization = location.pathname.split('/').find(function (loc) {
+  window.localization = location.pathname.split('/').find(function (loc) {
     return loc === 'ua'
   }) || 'ru'
   let carouselsHTML = null
@@ -996,10 +996,20 @@ $(document).ready(function () {
         city = e.target.dataset.city
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
+
+        const paths = {
+          zt: {
+            ru: '/beauty/salon',
+            ua: '/beauty/ua/salon'
+          },
+          rv: {
+            ru: '/beauty/{{ city }}/salon',
+            ua: '/beauty/{{ city }}/ua/salon'
+          }
+        }              
         console.log(_h, page, localization, city)
-        const localization = location.pathname.slice(1).split('/').includes('ua') ? 'ua' : 'ru'
-        const link = nav[city][localization].replace('{{ page }}', page)
-        location.pathname = '/' + link
+        const link = paths[city][localization].replace('{{ city }}', city)
+        location.pathname = link
       }
     })
   }
@@ -1008,4 +1018,3 @@ $(document).ready(function () {
     initCities()
   }
 })
-

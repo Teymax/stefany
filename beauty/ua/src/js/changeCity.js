@@ -19,7 +19,7 @@ $(document).ready(function () {
             name       : 'Steffany Nail',
             city       : 'Житомир',
             nameIn     : 'в Житомире',
-            phone      : '380-67-404-19-33',
+            phone      : '380-98-180-50-90',
             address    : 'ул. Киевская, 77, тц "Глобал"',
             schedule   : '9:00 - 21:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.3732072342173!2d28.683759515257734!3d50.26628980849905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x697c4ee100bcc4de!2sSteffany%20Nail%20Studio!5e0!3m2!1sru!2sua!4v1578658568743!5m2!1sru!2sua" width="600" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
@@ -761,7 +761,7 @@ $(document).ready(function () {
     }
   }
   
-  let localization = location.pathname.split('/').find(function (loc) {
+  window.localization = location.pathname.split('/').find(function (loc) {
     return loc === 'ua'
   }) || 'ru'
   let carouselsHTML = null
@@ -996,10 +996,20 @@ $(document).ready(function () {
         city = e.target.dataset.city
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
+
+        const paths = {
+          zt: {
+            ru: '/beauty/salon',
+            ua: '/beauty/ua/salon'
+          },
+          rv: {
+            ru: '/beauty/{{ city }}/salon',
+            ua: '/beauty/{{ city }}/ua/salon'
+          }
+        }              
         console.log(_h, page, localization, city)
-        const localization = location.pathname.slice(1).split('/').includes('ua') ? 'ua' : 'ru'
-        const link = nav[city][localization].replace('{{ page }}', page)
-        location.pathname = '/' + link
+        const link = paths[city][localization].replace('{{ city }}', city)
+        location.pathname = link
       }
     })
   }
@@ -1008,4 +1018,3 @@ $(document).ready(function () {
     initCities()
   }
 })
-

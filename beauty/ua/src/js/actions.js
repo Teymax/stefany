@@ -10,9 +10,19 @@ $(document).ready(() => {
     const city = e.target.dataset.city
     const _h   = location.pathname.slice(1).split('/'),
           page = _h[_h.length - 1]
-    const localization = location.pathname.slice(1).split('/').includes('ua') ? 'ua' : 'ru'
-    const link = nav[city][localization].replace('{{ page }}', page)
-    location.pathname = '/' + link
+    const paths = {
+      zt: {
+        ru: '/beauty/salon',
+        ua: '/beauty/ua/salon'
+      },
+      rv: {
+        ru: '/beauty/{{ city }}/salon',
+        ua: '/beauty/{{ city }}/ua/salon'
+      }
+    }
+    console.log(_h, page, localization, city)
+    const link = paths[city][localization].replace('{{ city }}', city)
+    location.pathname = link
   })
   $('body').on('click', e => {
     if (e.target.id === 'mobTrigger') {

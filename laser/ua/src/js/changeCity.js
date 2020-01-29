@@ -603,7 +603,7 @@ $(document).ready(function () {
         
         salons: {
           lv1: {
-            title      : 'Салон 1',
+            title      : 'ул. Гулака 2',
             phone      : '380-97-202-20-21',
             address    : 'ул. Княгини Ольги 98А',
             schedule   : 'с 9:00 до 20:00',
@@ -619,7 +619,7 @@ $(document).ready(function () {
             ]
           },
           lv2: {
-            title      : 'Салон 2',
+            title      : 'ул. Кн. Ольги 98А',
             phone      : '380-97-203-90-03',
             address    : 'ул. Гулака-Артемовского, 2',
             schedule   : 'с 9:00 до 20:00',
@@ -658,7 +658,7 @@ $(document).ready(function () {
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/lv/video-slider-0@2x.jpg',
         salons                 : {
           lv1: {
-            title      : 'Салон 1',
+            title      : 'вул. Гулака 2',
             phone      : '380-97-202-20-21',
             address    : 'вул. Княгині Ольги 98А',
             schedule   : 'з 9:00 до 20:00',
@@ -674,7 +674,7 @@ $(document).ready(function () {
             ]
           },
           lv2: {
-            title      : 'Салон 2',
+            title      : 'вул. Кн. Ольги 98А',
             phone      : '380-97-203-90-03',
             address    : 'вул. Гулака-Артемовського, 2',
             schedule   : 'з 9:00 до 20:00',
@@ -1161,8 +1161,31 @@ $(document).ready(function () {
         city = e.target.dataset.city
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
-        const link = nav[city][localization].replace('{{ page }}', page)
-        location.pathname = '/' + link
+        const paths = {
+          zt: {
+            ru: '/lazernaya-epilyatsiya/salon',
+            ua: '/lazernaya-epilyatsiya/ua/salon'
+          },
+          rv: {
+            ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+            ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+          },
+          lv: {
+            ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+            ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+          },
+          lt: {
+            ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+            ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+          },
+          if: {
+            ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
+            ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
+          }
+        }              
+        console.log(_h, page, localization, city)
+        const link = paths[city][localization].replace('{{ city }}', city)
+        location.pathname = link
       }
     })
   }
