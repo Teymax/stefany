@@ -21,7 +21,7 @@ iframe
 .salon-switcher
 	display: none
 	margin-top: 1rem
-
+	flex-wrap: wrap
 	a
 		padding: .6rem 1.7rem
 		border-radius: 100px
@@ -30,6 +30,8 @@ iframe
 		font-size: 14px
 		font-family: Circe, sans-serif
 		cursor: pointer
+		@include media-breakpoint-down(md)
+			margin-bottom: 1rem
 
 		&.active
 			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)

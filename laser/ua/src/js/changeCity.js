@@ -964,7 +964,7 @@ $(document).ready(function () {
     }
     $('.salon-switcher').html(switcher)
     $(`.salon-switcher [data-salon="${salon}"]`).addClass('active')
-    $('.salon-switcher').css('display', 'block')
+    $('.salon-switcher').css('display', 'flex')
   }
   
   window.salon = salon
