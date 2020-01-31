@@ -30,10 +30,10 @@ header.mt-2.mb-2.mb-lg-0
       p.d-flex.align-items-center.mb-0.text-right.text-color-lightdark-header(style='font-size: 14px; font-family: Circe, sans-serif;')
         svg.icon.icon-loc(width="13" height="18", viewBox='0 0 11 14', fill='none', xmlns='http://www.w3.org/2000/svg')
           path(d='M5.33329 0.292969C2.57654 0.292969 0.333496 2.49509 0.333496 5.20182C0.333496 5.90784 0.480688 6.58193 0.770762 7.20553C2.02085 9.89111 4.41761 12.7265 5.12258 13.5315C5.17539 13.5916 5.25239 13.6263 5.33343 13.6263C5.41446 13.6263 5.49146 13.5916 5.54428 13.5315C6.24896 12.7267 8.64573 9.89138 9.89623 7.20553C10.1864 6.58193 10.3335 5.90784 10.3335 5.20182C10.3332 2.49509 8.09018 0.292969 5.33329 0.292969ZM5.33329 7.75149C3.90126 7.75149 2.7361 6.60758 2.7361 5.20168C2.7361 3.79564 3.90126 2.65174 5.33329 2.65174C6.76531 2.65174 7.93048 3.79564 7.93048 5.20168C7.93062 6.60758 6.76545 7.75149 5.33329 7.75149Z', fill='#3A405B' style='fill: rgb(58, 64, 91) !important;')
-          span(style='margin-top: 2px;font-size: 0.8rem;')#mobTrigger.city-dynamic
+        span(style='margin-top: 2px;font-size: 0.8rem;')#mobTrigger.city-dynamic
         svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
           path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
-        ul#selectCityDropdownHeader1.select-city-dropdown.dropdown-menu-list.d-flex.flex-column(style="right: 12%;transform: none; left: unset;")
+        ul#selectCityDropdownHeader1.select-city-dropdown.dropdown-menu-list.d-flex.flex-column(style="right: 12%;transform: none; left: unset; position: fixed;")
           li
             span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="zt") Житомир
           li
@@ -41,7 +41,12 @@ header.mt-2.mb-2.mb-lg-0
           li
             span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="lt") Луцьк
           li
-            span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="lv") Львів
+            span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="lv") Львів<br> вул. Княгині Ольги 98Б
+          li
+            span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="lv") Львів<br> вул. Гулака-Артемовського, 2
+            //p.d-flex.flex-column
+              span(style='font-size: 12px') ул. Княгини Ольги 98Б
+              span(style='font-size: 12px') ул. Гулака-Артемовского, 2
           li
             span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="rv") Рівне
     .row.no-gutters.mob-menu.c-row.w-100.justify-content-md-end
@@ -53,7 +58,7 @@ header.mt-2.mb-2.mb-lg-0
             li.d-inline-flex.align-items-center.mr-0.li-contact
               a.paragraph-text.text-color-lightdark-header(href="./salon") Про салон
             //li.d-inline-flex.align-items-center.justify-content-center.flex-row.flex-wrap.drop-menu.mb-4.mb-xl-0
-              span.paragraph-text.text-color-lightdark-header Про нас
+              span.paragraph-text.text-color-lightdark-header О нас
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
               ul.dropdown-menu-list.d-flex.flex-column
@@ -118,7 +123,7 @@ header.mt-2.mb-2.mb-lg-0
             svg.icon.icon-loc(width="13" height="18", viewBox='0 0 11 14', fill='none', xmlns='http://www.w3.org/2000/svg')
               path(d='M5.33329 0.292969C2.57654 0.292969 0.333496 2.49509 0.333496 5.20182C0.333496 5.90784 0.480688 6.58193 0.770762 7.20553C2.02085 9.89111 4.41761 12.7265 5.12258 13.5315C5.17539 13.5916 5.25239 13.6263 5.33343 13.6263C5.41446 13.6263 5.49146 13.5916 5.54428 13.5315C6.24896 12.7267 8.64573 9.89138 9.89623 7.20553C10.1864 6.58193 10.3335 5.90784 10.3335 5.20182C10.3332 2.49509 8.09018 0.292969 5.33329 0.292969ZM5.33329 7.75149C3.90126 7.75149 2.7361 6.60758 2.7361 5.20168C2.7361 3.79564 3.90126 2.65174 5.33329 2.65174C6.76531 2.65174 7.93048 3.79564 7.93048 5.20168C7.93062 6.60758 6.76545 7.75149 5.33329 7.75149Z', fill='#3A405B')
             span.link-text-light.d-flex.align-items-center.justify-content-start.text-color-lightdark-header(href="#")
-              span#cityHeader.city-dynamic.paragraph-text.text-color-dark
+              span#cityHeader.city-dynamic.paragraph-text.text-color-dark Житомир
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
             ul#selectCityDropdownHeader.select-city-dropdown.dropdown-menu-list.d-flex.flex-column
@@ -132,6 +137,12 @@ header.mt-2.mb-2.mb-lg-0
                 span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="lv") Львів
               li
                 span.nav-link-text.paragraph-text.text-color-lightdark-header(data-city="rv") Рівне
+          li.d-flex.flex-wrap.flex-md-nowrap.justify-content-center.mb-4.mb-md-0.mr-0.mr-md-3.align-items-center.salon-dd-needed
+            span.link-text-light.d-flex.align-items-center.justify-content-start.text-color-lightdark-header(href="#")
+              span#cityHeader3.salon-title-dynamic.paragraph-text.text-color-dark Салон
+              svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg' style='display: none')
+                path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
+            ul#selectCityDropdownHeader3.select-city-dropdown.dropdown-menu-list.d-flex.flex-column.salon-dd
           li.d-flex.justify-content-center.mr-0.mr-md-4.align-items-center
             svg.icon.icon-phone(width='14', height='14', viewBox='0 0 14 14', fill='#3a405b', xmlns='http://www.w3.org/2000/svg')
               path(d='M9.54627 7.29303C9.52035 7.33287 9.52035 7.37271 9.50739 7.42583C9.49444 7.59848 9.62401 7.75785 9.79246 7.77113C9.96092 7.78441 10.1164 7.65161 10.1294 7.47896C10.1294 7.43911 10.1294 7.39927 10.1423 7.33287C10.1423 7.26646 10.1423 7.22662 10.1423 7.18678C10.1423 6.80164 10.0775 6.42978 9.96092 6.0712C9.80542 5.60638 9.53331 5.19467 9.20936 4.84937C8.80767 4.43767 8.31528 4.1455 7.75809 3.98613C7.49893 3.91973 7.21386 3.87988 6.94175 3.87988C6.85104 3.87988 6.76034 3.87988 6.65668 3.89316C6.56597 3.90644 6.47527 3.91972 6.38456 3.93301C6.21611 3.95957 6.09949 4.13222 6.13836 4.29158C6.16428 4.46423 6.33273 4.58376 6.48822 4.54392C6.56597 4.53064 6.63076 4.51736 6.70851 4.51736C6.72147 4.51736 6.73442 4.51736 6.74738 4.51736C6.81217 4.51736 6.87696 4.50408 6.94175 4.50408C7.65443 4.50408 8.31528 4.79625 8.78176 5.28764C9.24824 5.76574 9.53331 6.4165 9.54627 7.14694V7.1735C9.54627 7.22662 9.54627 7.26646 9.54627 7.29303Z', fill='#3A405B')
@@ -158,7 +169,7 @@ header.mt-2.mb-2.mb-lg-0
             li
               a(href='./salon').mob-title Про салон
             //li.sub-menu-trigger
-              span.mob-title Про нас
+              span.mob-title О нас
               svg.icon.icon-arrow(width='13', height='7', viewBox='0 0 13 7', fill='none', xmlns='http://www.w3.org/2000/svg')
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M5.16693 6.68549L0.314506 1.83307C-0.104835 1.41373 -0.104835 0.733846 0.314506 0.314506C0.733846 -0.104835 1.41373 -0.104835 1.83307 0.314506L6.18447 4.66591L10.5359 0.314506C10.9552 -0.104835 11.6351 -0.104835 12.0544 0.314506C12.4738 0.733846 12.4738 1.41373 12.0544 1.83307L7.20202 6.68549C6.92614 6.96137 6.53751 7.05575 6.18447 6.96864C5.83144 7.05575 5.4428 6.96137 5.16693 6.68549Z', fill='white')
               ul.sub-menu
@@ -178,7 +189,7 @@ header.mt-2.mb-2.mb-lg-0
                 li
                   a(href='./shugaring').mob-title Шугарінг
                 li
-                  a(href='./voskovaya-epilyatsiya').mob-title Воскова епіляція
+                  a(href='./voskovaya-epilyatsiya').mob-title Воскова епиляція
             li
               a(href='./contact').mob-title Контакти
             li.redirectBtn

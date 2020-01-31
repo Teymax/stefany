@@ -8,6 +8,9 @@ $(document).ready(() => {
   
   })
   $('[data-city]').on('click', e => {
+    if (e.target.dataset.changeSalon) {
+      localStorage.setItem('salon', e.target.dataset.changeSalon)
+    }
     const city = e.target.dataset.city
     const _h   = location.pathname.slice(1).split('/'),
           page = _h[_h.length - 1]
@@ -32,7 +35,7 @@ $(document).ready(() => {
         ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
         ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
       }
-    }            
+    }
     console.log(_h, page, localization, city)
     const link = paths[city][localization].replace('{{ city }}', city)
     location.pathname = link
@@ -55,12 +58,15 @@ $(document).ready(() => {
       document.querySelector('html').style.overflowX = 'auto'
       document.querySelector('html').style.overflowY = 'auto'
       document.querySelector('body').style.position = 'initial'
-      
+      document.querySelector('#bingc-phone-button').style.opacity = 1
+      document.querySelector('jdiv:not([class]):not([id])').style.opacity = 1
     }
     else {
       document.querySelector('html').style.overflowX = 'hidden'
       document.querySelector('html').style.overflowY = 'hidden'
       document.querySelector('body').style.position = 'relative'
+      document.querySelector('#bingc-phone-button').style.opacity = 0
+      document.querySelector('jdiv:not([class]):not([id])').style.opacity = 0
     }
   }
   

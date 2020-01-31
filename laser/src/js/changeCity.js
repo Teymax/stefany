@@ -9,7 +9,10 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">ул. Киевская, 84</span></li>
+            `
           }
         },
         selectedService: `
@@ -27,7 +30,10 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугарінг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">вул. Київська, 84</span></li>
+            `
           }
         },
         selectedService:
@@ -46,28 +52,38 @@ $(document).ready(function () {
           salon: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">ул. Ивана Франка, 25</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
         `
-      },
+      }
+      ,
       ua: {
         salons         : {
           salon: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">вул. Івана Франка, 25</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService:
           `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
         `
       }
       
-    },
+    }
+    ,
     lt: {
       ru: {
         salons         : {
@@ -75,23 +91,32 @@ $(document).ready(function () {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">пр. Воли, 10</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
         `
-      },
+      }
+      ,
       ua: {
         salons         : {
           salon: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-епіляція</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">пр. Волі, 10</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService:
           `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
@@ -99,44 +124,67 @@ $(document).ready(function () {
         `
       }
       
-    },
+    }
+    ,
     lv: {
       ru: {
         salons         : {
           lv1: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-        `
-          },
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv1">ул. Княгини Ольги 98Б</span></li>
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv2">ул. Гулака-Артемовского, 2</span></li>
+            `
+          }
+          ,
           lv2: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv2">ул. Гулака-Артемовского, 2</span></li>
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv1">ул. Княгини Ольги 98Б</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
         `
-      },
+      }
+      ,
       ua: {
         salons         : {
           lv1: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
-        `
-          },
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv1">вул. Княгині Ольги 98Б</span></li>
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv2">вул. Гулака-Артемовського, 2</span></li>
+            `
+          }
+          ,
           lv2: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv2">вул. Гулака-Артемовського, 2</span></li>
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="lv1">вул. Княгині Ольги 98Б</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
         `
       }
       
-    },
+    }
+    ,
     rv: {
       ru: {
         salons         : {
@@ -145,15 +193,20 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">ул. Киевская, 4</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
         `
-      },
+      }
+      ,
       ua: {
         salons         : {
           salon: {
@@ -161,9 +214,13 @@ $(document).ready(function () {
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугарінг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Воскова епіляція</a></li>
-        `
+        `,
+            ddSalon        : `
+            <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">вул. Київська, 4</span></li>
+            `
           }
-        },
+        }
+        ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерна епіляція</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугарінг</a></li>
@@ -603,9 +660,9 @@ $(document).ready(function () {
         
         salons: {
           lv1: {
-            title      : 'ул. Гулака 2',
+            title      : 'Кн. Ольги 98Б',
             phone      : '380-97-202-20-21',
-            address    : 'ул. Княгини Ольги 98А',
+            address    : 'ул. Княгини Ольги 98Б',
             schedule   : 'с 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/_about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
@@ -619,7 +676,7 @@ $(document).ready(function () {
             ]
           },
           lv2: {
-            title      : 'ул. Кн. Ольги 98А',
+            title      : 'Гулака-Артемовского, 2',
             phone      : '380-97-203-90-03',
             address    : 'ул. Гулака-Артемовского, 2',
             schedule   : 'с 9:00 до 20:00',
@@ -658,9 +715,9 @@ $(document).ready(function () {
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/lv/video-slider-0@2x.jpg',
         salons                 : {
           lv1: {
-            title      : 'вул. Гулака 2',
+            title      : 'Кн. Ольги 98Б',
             phone      : '380-97-202-20-21',
-            address    : 'вул. Княгині Ольги 98А',
+            address    : 'вул. Княгині Ольги 98Б',
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/_about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
@@ -674,7 +731,7 @@ $(document).ready(function () {
             ]
           },
           lv2: {
-            title      : 'вул. Кн. Ольги 98А',
+            title      : 'Гулака-Артемовського, 2',
             phone      : '380-97-203-90-03',
             address    : 'вул. Гулака-Артемовського, 2',
             schedule   : 'з 9:00 до 20:00',
@@ -965,12 +1022,15 @@ $(document).ready(function () {
     $('.salon-switcher').html(switcher)
     $(`.salon-switcher [data-salon="${salon}"]`).addClass('active')
     $('.salon-switcher').css('display', 'flex')
+    $('.salon-dd-needed')[0].classList.add('drop-menu')
+    $('.salon-dd-needed .icon-arrow').css('display', 'initial')
   }
   
   window.salon = salon
   
   
-  Object.keys(citiesData[city][localization].salons).length > 1 && setSalonSwitcher(citiesData[city][localization].salons)
+  Object.keys(citiesData[city][localization].salons).length > 1 && setSalonSwitcher(
+    citiesData[city][localization].salons)
   $('[data-salon]').on('click', e => {
     const newSalon = e.target.dataset.salon
     if (e.target.dataset.salon !== salon) {
@@ -1013,8 +1073,16 @@ $(document).ready(function () {
       this.innerHTML = serviceCityData[city][localization].salons[salon].selectedService
     })
     
+    $('.salon-dd').each(function (e) {
+      this.innerHTML = serviceCityData[city][localization].salons[salon].ddSalon
+    })
+    
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].salons[salon].preview}`)
+    })
+    
+    $('.salon-title-dynamic').each(function (e) {
+      this.innerHTML = citiesData[city][localization].salons[salon].address
     })
   }
   
@@ -1157,7 +1225,7 @@ $(document).ready(function () {
     initCarousels()
     $(document).click(function (e) {
       let closestDropdown = e.target.closest('.select-city-dropdown')
-      if (closestDropdown && e.target.classList.contains('nav-link-text')) {
+      if (closestDropdown && e.target.classList.contains('nav-link-text') && e.target.dataset.city) {
         city = e.target.dataset.city
         const _h   = location.pathname.slice(1).split('/'),
               page = _h[_h.length - 1]
@@ -1182,10 +1250,14 @@ $(document).ready(function () {
             ru: '/lazernaya-epilyatsiya/{{ city }}/salon',
             ua: '/lazernaya-epilyatsiya/{{ city }}/ua/salon'
           }
-        }              
+        }
         console.log(_h, page, localization, city)
         const link = paths[city][localization].replace('{{ city }}', city)
         location.pathname = link
+      }
+      else if (e.target.dataset.changeSalon) {
+        localStorage.setItem('salon', e.target.dataset.changeSalon)
+        location.reload()
       }
     })
   }
