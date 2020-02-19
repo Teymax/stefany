@@ -190,8 +190,8 @@ function processErrors(data) {
   let msg
   if (!data._error) return false
   msg = data._error.message
-  
-  
+
+
   alert(msg)
   return true
 }
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
   [...payButtons].forEach(button => {
     button.addEventListener('click', buttonToggle)
   })
-  
+
   document.querySelectorAll('.check-radio').forEach(function (item) {
     item.addEventListener('click', () => radioClick(item.parentElement.parentElement))
   })
@@ -252,7 +252,7 @@ function buttonToggle(event) {
 }
 
 function bookAfterRecord() {
-  
+
   if (localStorage.email && localStorage.fullName && localStorage.services && localStorage.phone) {
     let services = localStorage.services.split(',')
     let params = [
@@ -271,7 +271,7 @@ function bookAfterRecord() {
 }
 
 function displayServices(json) {
-  
+
   let servicesBlock = document.querySelector('div.service-list-group')
   let data = getData(json)
   let servicesAll = data.services
@@ -295,7 +295,7 @@ function displayServices(json) {
             'price' : service.price_max,
             'length': servicesLength[service.id] / 60
           }
-          
+
         }
       })
     }
@@ -324,7 +324,7 @@ function mainFormSubmit(event) {
   let service = event.target.service.value
   let city = localStorage.city ? localStorage.city : 'unknown'
   let comment = (event.target.id === 'callComplex' ? 'complex ' : 'service consult ')
-  
+
   let params = [
     event.target.fullname.value,
     event.target.email.value,
@@ -367,14 +367,14 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   if (plusDate > 0) date.setDate(date.getDate() + plusDate)
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
                    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
-  
+
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString
   url += services ? ('?service_ids=' + encodeURIComponent(services.join(','))) : ''
   let headers = {
     'Content-Type' : 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
-  
+
   ajax('GET', headers, url, null, function (data) {
     let dataArr = getData(data)
     if (processErrors(dataArr)) return alert('Error')
@@ -393,7 +393,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
     'Content-Type' : 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
-  
+
   let date = new Date()
   let userParams = {
     'phone'       : phone,
@@ -421,7 +421,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
         $('#thanksPopup').modal('show')
       }
     })
-  
+
 }
 
 function payment(name, email, phone, comment, services, servicesString) {
@@ -468,20 +468,20 @@ function createOrder(amount, order_desc, name, services, email, phone) {
     value   : phone,
     readonly: true
   })
-  
+
   button.addField({
     label   : 'services',
     name    : 'user_services',
     value   : services,
     readonly: true
   })
-  
+
   return button.getUrl()
 }
 
 function refreshPrice(event) {
-  
-  
+
+
   let radioBtns = document.querySelectorAll('input[type="radio"]:checked');
   [...radioBtns].forEach(radio => {
     radio.checked = false
@@ -518,7 +518,7 @@ function refreshPrice(event) {
       else {
         elem.textContent = hours + LocHour + ' ' + minutes + LocMin
       }
-      
+
     }
   })
   let count = document.querySelectorAll('input[type="checkbox"][name="service"]:checked').length
@@ -565,7 +565,7 @@ function clearTotalPrice() {
   [...serviceListTime].forEach(container => {
     container.innerHTML = '0' + LocMin + '.'
   })
-  
+
   let serviceListSum = document.querySelectorAll('.serviceListSum');
   [...serviceListSum].forEach(container => {
     container.innerHTML = '0 грн.'

@@ -3,9 +3,9 @@ $(document).ready(() => {
     $(e.target).toggleClass('triggered')
     $(e.target).children('ul').toggleClass('open')
   })
-  
+
   $('.redirectBtn .btn-callback').on('click', e => {
-  
+
   })
   $('[data-city]').on('click', e => {
     if (e.target.dataset.changeSalon) {
@@ -45,7 +45,7 @@ $(document).ready(() => {
       document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: block !important;'
     }
     else if (e.target.dataset.city || e.target.id === 'cityHeader1') {
-    
+
     }
     else {
       document.querySelector('#selectCityDropdownHeader1').style.cssText += 'display: none !important;'
@@ -59,21 +59,21 @@ $(document).ready(() => {
       document.querySelector('html').style.overflowY = 'auto'
       document.querySelector('body').style.position = 'initial'
       document.querySelector('#bingc-phone-button').style.opacity = 1
-      document.querySelector('jdiv:not([class]):not([id])').style.opacity = 1
+      document.querySelector('div:not([class]):not([id])').style.opacity = 1
     }
     else {
       document.querySelector('html').style.overflowX = 'hidden'
       document.querySelector('html').style.overflowY = 'hidden'
       document.querySelector('body').style.position = 'relative'
       document.querySelector('#bingc-phone-button').style.opacity = 0
-      document.querySelector('jdiv:not([class]):not([id])').style.opacity = 0
+      document.querySelector('div:not([class]):not([id])').style.opacity = 0
     }
   }
-  
+
   $('.menu-trigger').click(function (e) {
     this.classList.contains('open') ? _toggleMenu(true) : _toggleMenu(false)
   })
-  
+
   $('#cityHeader1').on('click', e => {
     if ($('#selectCityDropdownHeader2')[0].style.cssText) {
       $('#selectCityDropdownHeader2')[0].style.cssText = ''
