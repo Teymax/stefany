@@ -1,4 +1,46 @@
 $(document).ready(function () {
+  const serviceCityData = {
+    zt: {
+      ru: {
+        salons: {
+          salon: {
+            ddSalon: `  
+              <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">ул. Киевская, 77, тц "Глобал"</span></li>
+            `
+          }
+        },
+
+      },
+      ua: {
+        salons: {
+          salon: {
+            ddSalon: `
+             <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">вул. Київська, 77, тц "Глобал"</span></li>
+            `
+          }
+        },
+      }
+    },
+    rv: {
+      ru: {
+        salons: {
+          salon: {
+            ddSalon: `
+            `
+          }
+        }
+      },
+      ua: {
+        salons: {
+          salon: {
+            ddSalon: `
+            `
+          }
+        }
+      }
+    }
+  }
+
   const citiesData = {
     zt: {
       ru: {
@@ -11,9 +53,9 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
-        
+
         imagesAmount: 10,
-        
+
         salons: {
           nail: {
             name       : 'Steffany Nail',
@@ -270,9 +312,9 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/zt/{{ salon }}/salon-0.jpg',
-        
+
         imagesAmount: 10,
-        
+
         salons: {
           nail: {
             name       : 'Steffany Nail',
@@ -449,7 +491,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 3 роки',
                 skills    : 'Зробить жіночі та чоловічі стрижки, фарбування в один тон, накрутку, укладку, плетіння, догляд за волоссям'
               },
-              
+
               {
                 name      : 'Юлія Павлушина',
                 education : 'Перукар',
@@ -474,7 +516,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 13 років',
                 skills    : 'Зробить чоловічі та жіночі стрижки, фарбування в один тон, складні фарбування, накрутку, укладку, плетіння, догляд за волоссям'
               },
-              
+
               {
                 name      : 'Юлія Сурикова',
                 education : 'Перукар',
@@ -533,7 +575,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
-        
+
         imagesAmount: 6,
         salons      : {
           salon: {
@@ -571,7 +613,7 @@ $(document).ready(function () {
               //   experience: 'Работает уже 2 года',
               //   skills    : 'Сделает европейский, классический, комбинированный и детский маникюр, все виды педикюра, выравнивание и коррекцию ногтевой пластины, парафинотерапию для рук и ног'
               // },
-              
+
               {
                 name      : 'Леся Парух',
                 education : 'Brow-мастер, визажист',
@@ -596,7 +638,7 @@ $(document).ready(function () {
                 experience: 'Работает уже 6 лет',
                 skills    : 'Сделает классический, комбинированный и мужской маникюр, укрепление, наращивание и коррекцию ногтей'
               },
-              
+
               {
                 name      : 'Яна Галицкая',
                 education : 'Мастер ногтевого сервиса',
@@ -635,7 +677,7 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.rivne/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/rv/{{ salon }}/salon-0.jpg',
-        
+
         imagesAmount: 6,
         salons      : {
           salon: {
@@ -697,7 +739,7 @@ $(document).ready(function () {
                 experience: 'Працює вже 6 років',
                 skills    : 'Зробить класичний, комбінований і чоловічий манікюр, зміцнення, нарощування і корекцію нігтів'
               },
-              
+
               {
                 name      : 'Яна Галицька',
                 education : 'Майстер нігтьового сервісу',
@@ -726,7 +768,7 @@ $(document).ready(function () {
           }
         }
       }
-      
+
     }
   }
   window.nav = {
@@ -739,7 +781,7 @@ $(document).ready(function () {
       ua: 'beauty/rv/ua/{{ page }}'
     }
   }
-  
+
   const binatel = {
     zt: function (d, w, s) {
       var widgetHash = 'rkr67ua265zfjx62zen7',
@@ -760,7 +802,7 @@ $(document).ready(function () {
       sn.parentNode.insertBefore(gcw, sn)
     }
   }
-  
+
   window.localization = location.pathname.split('/').find(function (loc) {
     return loc === 'ua'
   }) || 'ru'
@@ -794,25 +836,52 @@ $(document).ready(function () {
     $('.city-in-dynamic').each(function (e) {
       this.innerText = ' ' + data.nameIn
     })
-    
+
     $('.address-dynamic').each(function (e) {
       this.innerText = data.address
     })
-    
+
     $('.map-dynamic').each(function (e) {
       this.innerHTML = data.map
+    })
+
+    $('.salon-dd').each(function (e) {
+      this.innerHTML = serviceCityData[city][localization].salons.salon.ddSalon
+    })
+
+    $('.salon-title-dynamic').each(function (e) {
+      this.innerHTML = citiesData[city][localization].salons[salon].address
     })
   }
   if (!salon) {
     localStorage.setItem('salon', 'nail')
   }
   changeDataForCity()
-  
+
+  const setSalonSwitcher = salons => {
+    let switcher = ''
+    for (const salon in salons) {
+      switcher += `<a data-salon="${salon}">${salons[salon].title}</a>`
+    }
+    $('.salon-switcher').html(switcher)
+    $(`.salon-switcher [data-salon="${salon}"]`).addClass('active')
+    $('.salon-switcher').css('display', 'flex')
+    $('.salon-dd-needed')[0].classList.add('drop-menu')
+    $('.salon-dd-needed .icon-arrow').css('display', 'initial')
+    // if (Object.keys(citiesData[city][localization].salons).length > 1) {$('.salon-dd-needed .icon-arrow').css('display', 'none')}
+  }
+
+  window.salon = salon
+
+  Object.keys(citiesData[city][localization].salons).length > 1 && setSalonSwitcher(
+      citiesData[city][localization].salons)
+  console.log(citiesData[city][localization].salons);
+
   if (city === 'rv') {
     $('header [data-not-available-rovno]').remove()
     $('[data-not-available-rovno] a.btn-callback').remove()
   }
-  
+
   if (salon !== 'salon') {
     if (salon === 'nail') {
       $('[data-remove-nail]').remove()
@@ -821,14 +890,14 @@ $(document).ready(function () {
       $('[data-remove-hair]').remove()
     }
   }
-  
+
   $('[data-salon]').on('click', e => {
     salon = e.target.dataset.salon
     switchData(citiesData[city][localization].salons[salon])
     localStorage.setItem('salon', salon)
     updateCarouselHTML()
   })
-  
+
   function changeDataForCity() {
     if (city === 'zt') {
       $('.city-switcher').show()
@@ -841,14 +910,14 @@ $(document).ready(function () {
       salon = 'salon'
       localStorage.setItem('salon', 'salon')
     }
-    
+
     switchData(citiesData[city][localization].salons[salon])
-    
+
     $('.image-about-dynamic').each(function (e) {
       this.setAttribute('src', `${citiesData[city][localization].imageAboutStaffanyPage.replace('{{ salon }}', salon)}`)
     })
   }
-  
+
   function initCarousels() {
     carouselsHTML = generateHTMLForCarouseles()
     const videoSlider = $('.video-slider')
@@ -863,7 +932,7 @@ $(document).ready(function () {
     if (specialistsSlider) {
       specialistsSlider.html(carouselsHTML.specialistsCarousel)
     }
-    
+
     var videoSLiderCarousel = $('.video-slider').owlCarousel({
       loop         : false,
       margin       : 0,
@@ -883,13 +952,13 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-slider-dots .owl-dot').click(function (e) {
       e.preventDefault()
       var itemPosition = $(this).attr('data-pos')
       videoSLiderCarousel.trigger('to.owl.carousel', [itemPosition, 300])
     })
-    
+
     var videoSliderDots = $('.video-slider-dots').owlCarousel({
       navContainer: '.video-nav-slider-dots',
       loop        : false,
@@ -898,7 +967,7 @@ $(document).ready(function () {
       dots        : false,
       items       : 1
     })
-    
+
     $('.specialists-slider').owlCarousel({
       loop      : false,
       margin    : 20,
@@ -917,22 +986,22 @@ $(document).ready(function () {
         }
       }
     })
-    
+
     $('.video-nav-slider-dots .owl-next').click(function () {
       videoSliderDots.trigger('next.owl.carousel')
     })
-    
+
     $('.video-nav-slider-dots .owl-prev').click(function () {
       videoSliderDots.trigger('prev.owl.carousel', [300])
     })
   }
-  
+
   function updateCarouselHTML() {
     setTimeout(() => {
       location.reload()
     }, 0)
   }
-  
+
   function generateHTMLForCarouseles() {
     let imagesAmount = citiesData[city][localization].imagesAmount
     salon = salon ? salon : city === 'zt' ? 'nail' : 'salon'
@@ -949,7 +1018,7 @@ $(document).ready(function () {
         </span>
       `
     }
-    
+
     for (let i = 0; i < imagesAmount; i++) {
       imagesSmall += `
         <span data-pos="${i}" class="owl-dot d-flex align-items-center justify-content-center mb-4">
@@ -973,21 +1042,21 @@ $(document).ready(function () {
         </div>
       `
     }
-    
+
     return {
       videoCarousel      : images,
       videoCarouselSmall : imagesSmall,
       specialistsCarousel: imagesSpecialists
     }
   }
-  
+
   function changeImagesSalon() {
     $('.video-slider').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarousel)]).trigger(
       'refresh.owl.carousel')
     $('.video-slider-dots').trigger('add.owl.carousel', [jQuery(carouselsHTML.videoCarouselSmall)]).trigger(
       'refresh.owl.carousel')
   }
-  
+
   function initCities() {
     if ($('.video-slider')[0]) initCarousels()
     $(document).click(function (e) {
@@ -1006,14 +1075,14 @@ $(document).ready(function () {
             ru: '/beauty/{{ city }}/salon',
             ua: '/beauty/{{ city }}/ua/salon'
           }
-        }              
+        }
         console.log(_h, page, localization, city)
         const link = paths[city][localization].replace('{{ city }}', city)
         location.pathname = link
       }
     })
   }
-  
+
   if (document.querySelector('a.nav-link-text')) {
     initCities()
   }
