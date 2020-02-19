@@ -241,9 +241,6 @@ $(document).ready(function () {
         cityInstagram          : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook           : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
-        imagesAmount           : 6,
-        imagesAmountSpecialists: 6,
-
         salons: {
           salon: {
             title      : 'Салон',
@@ -252,6 +249,8 @@ $(document).ready(function () {
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/zt/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 6,
+            imagesAmountSpecialists: 6,
             specialists: [
               {
                 name      : 'Виктория Демчук',
@@ -341,9 +340,6 @@ $(document).ready(function () {
         cityInstagram          : 'https://www.instagram.com/steffany.zhytomyr/?hl=ru',
         cityFacebook           : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/zt/video-slider-0@2x.jpg',
-        imagesAmount           : 6,
-        imagesAmountSpecialists: 6,
-
         salons: {
           salon: {
             title      : 'Салон',
@@ -352,6 +348,8 @@ $(document).ready(function () {
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10203.204981280256!2d28.6831072!3d50.2582963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c64a35524e091%3A0x94671cf8df29cc74!2z0JrQuNC10LLRgdC60LDRjyDRg9C7LiwgODQsINCW0LjRgtC-0LzQuNGALCDQltC40YLQvtC80LjRgNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAxMDAwMQ!5e0!3m2!1sru!2sua!4v1573470059108!5m2!1sru!2sua"\n' + '    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/zt/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 6,
+            imagesAmountSpecialists: 6,
             specialists: [
               {
                 name      : 'Вікторія Демчук',
@@ -444,8 +442,6 @@ $(document).ready(function () {
         cityInstagram          : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
         cityFacebook           : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
-        imagesAmount           : 9,
-        imagesAmountSpecialists: 1,
 
         salons: {
           salon: {
@@ -455,6 +451,8 @@ $(document).ready(function () {
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/if/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 9,
+            imagesAmountSpecialists: 1,
             specialists: [
               {
                 name      : 'Оксана Иванцив',
@@ -484,8 +482,6 @@ $(document).ready(function () {
         cityInstagram          : 'https://www.instagram.com/steffany.ifrankivsk/?hl=ru',
         cityFacebook           : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/if/video-slider-0@2x.jpg',
-        imagesAmount           : 9,
-        imagesAmountSpecialists: 1,
 
         salons: {
           salon: {
@@ -495,6 +491,8 @@ $(document).ready(function () {
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.6151145976846!2d24.714299715612086!3d48.92272480412903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16c4f01503f%3A0x2ad33aab5a158616!2z0YPQuy4g0JjQstCw0L3QsCDQpNGA0LDQvdC60L4sIDI1LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQuiwg0JjQstCw0L3Qvi3QpNGA0LDQvdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3NjAwMA!5e0!3m2!1sru!2sua!4v1573037148887!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/if/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 9,
+            imagesAmountSpecialists: 1,
             specialists: [
               {
                 name      : 'Оксана Іванців',
@@ -527,9 +525,6 @@ $(document).ready(function () {
         cityInstagram          : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
         cityFacebook           : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/lt/video-slider-0@2x.jpg',
-        imagesAmount           : 9,
-        imagesAmountSpecialists: 3,
-
         salons: {
           salon: {
             title      : 'Салон',
@@ -538,6 +533,8 @@ $(document).ready(function () {
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lt/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 9,
+            imagesAmountSpecialists: 3,
             specialists: [
               {
                 name      : 'Кристина Данило',
@@ -591,9 +588,6 @@ $(document).ready(function () {
         cityInstagram          : 'https://www.instagram.com/steffany.lutsk/?hl=ru',
         cityFacebook           : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage : 'assets/img/about-steffany-salon/lt/video-slider-0@2x.jpg',
-        imagesAmount           : 9,
-        imagesAmountSpecialists: 3,
-
         salons: {
           salon: {
             title      : 'Салон',
@@ -602,6 +596,8 @@ $(document).ready(function () {
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.5746604837755!2d25.33165866888208!3d50.74637731008205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472599efdec12f9b%3A0x2dd6f91bc0308c8e!2z0L_RgNC-0YHQvy4g0JLQvtC70LgsIDEwLCDQm9GD0YbQuiwg0JLQvtC70YvQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0MzAwMA!5e0!3m2!1sru!2sua!4v1574856828162!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lt/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 9,
+            imagesAmountSpecialists: 3,
             specialists: [
               {
                 name      : 'Христина Данило',
@@ -657,7 +653,6 @@ $(document).ready(function () {
         cityInstagram         : 'https://www.instagram.com/steffany.lviv/?hl=ru',
         cityFacebook          : 'https://www.facebook.com/steffany.ua/',
         imageAboutStaffanyPage: 'assets/img/about-steffany-salon/lv/video-slider-0@2x.jpg',
-
         salons: {
           lv1: {
             title      : 'Кн. Ольги 98Б',
@@ -666,6 +661,8 @@ $(document).ready(function () {
             schedule   : 'с 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 1,
             specialists: [
               {
                 name      : 'Ирина Станкевич',
@@ -682,27 +679,24 @@ $(document).ready(function () {
             schedule   : 'с 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 2,
             specialists: [
               {
-                name      : 'Ирина Станкевич',
-                education : 'По образованию акушерка',
-                experience: 'Работает уже 2,5 года',
-                skills    : 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
+                name      : 'Собат Кристина',
+                education : 'По образованию медицинский работник',
+                experience: 'Работает уже 1 год',
+                skills    : 'Сделает лазерную эпиляцию'
+              },
+              {
+                name      : 'Роса Анна',
+                education : 'По образованию медицинский работник',
+                experience: 'Работает уже 1 год',
+                skills    : 'Сделает лазерную эпиляцию'
               }
             ]
           }
         },
-
-        imagesAmount           : 10,
-        imagesAmountSpecialists: 1,
-        specialists            : [
-          {
-            name      : 'Ирина Станкевич',
-            education : 'По образованию акушерка',
-            experience: 'Работает уже 2,5 года',
-            skills    : 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
-          }
-        ]
       },
       ua: {
         cityName               : 'Львів',
@@ -721,6 +715,8 @@ $(document).ready(function () {
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 1,
             specialists: [
               {
                 name      : 'Ірина Станкевич',
@@ -737,12 +733,20 @@ $(document).ready(function () {
             schedule   : 'з 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 2,
             specialists: [
               {
-                name      : 'Ірина Станкевич',
-                education : 'За освітою акушерка',
-                experience: 'Працює вже 2,5 роки',
-                skills    : 'Зробить лазерну епіляцію, косметологічні послуги, чистку обличчя'
+                name      : 'Собат Христина',
+                education : 'За освітою медичний працівник',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить лазерну епіляцію'
+              },
+              {
+                name      : 'Роса Анна',
+                education : 'За освітою медичний працівник',
+                experience: 'Працює вже 1 рік',
+                skills    : 'Зробить лазерну епіляцію'
               }
             ]
           }
@@ -779,6 +783,8 @@ $(document).ready(function () {
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/rv/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 4,
             specialists: [
               {
                 name      : 'Валентина Дижурко',
@@ -807,35 +813,6 @@ $(document).ready(function () {
             ]
           }
         },
-
-        imagesAmount           : 10,
-        imagesAmountSpecialists: 4,
-        specialists            : [
-          {
-            name      : 'Валентина Дижурко',
-            education : 'По образованию анестезиолог и реаниматолог',
-            experience: 'Работает уже 2,5 года',
-            skills    : 'Сделает процедуры по уходу за лицом, лазерную эпиляцию, пирсинг, восковую депиляцию'
-          },
-          {
-            name      : 'Лариса Драганчук',
-            education : 'По образованию санитарный фельдшер',
-            experience: 'Работает уже 3 года',
-            skills    : ' Сделает лазерную эпиляцию, чистки кожи, уходовые процедуры, классический массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода'
-          },
-          {
-            name      : 'Ирина Куба',
-            education : 'По образованию врач-дерматолог',
-            experience: 'Работает уже 10 лет',
-            skills    : 'Сделает дерматоскопию и удаление новообразований на коже, чистки, пилинги, аппаратные методики для лица, лазерную эпиляцию'
-          },
-          {
-            name      : 'Людмила Чорная',
-            education : 'По образованию медсестра',
-            experience: 'Работает уже 11 лет',
-            skills    : 'Сделает лазерную эпиляцию, восковую депиляцию, уходовые программы для лица, чистки и массаж лица, микротоковую терапию, безинъекционную мезотерапию, подбор домашнего ухода, перманентный макияж'
-          }
-        ]
       },
       ua: {
         cityName              : 'Рівне',
@@ -855,6 +832,8 @@ $(document).ready(function () {
             schedule   : 'c 9:00 до 20:00',
             map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2531.5705084842903!2d26.267335815665785!3d50.61651778326605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f1366b7f21ce1%3A0x6d5a726bdbefb70!2z0YPQuy4g0JrQuNC10LLRgdC60LDRjywgNCwg0KDQvtCy0L3Qviwg0KDQvtCy0LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAzMzAwMA!5e0!3m2!1sru!2sua!4v1573036973623!5m2!1sru!2sua"width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/rv/salon/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 4,
             specialists: [
               {
                 name      : 'Валентина Діжурко',
@@ -883,37 +862,7 @@ $(document).ready(function () {
             ]
           }
         },
-
-        imagesAmount           : 10,
-        imagesAmountSpecialists: 4,
-        specialists            : [
-          {
-            name      : 'Валентина Діжурко',
-            education : 'За освітою анестезіолог і реаніматолог',
-            experience: 'Працює вже 2,5 роки',
-            skills    : 'Зробить процедури по догляду за обличчям, лазерну епіляцію, пірсинг, воскову депіляцію'
-          },
-          {
-            name      : 'Лариса Драганчук',
-            education : 'За освітою санітарний фельдшер',
-            experience: 'Працює вже 3 роки',
-            skills    : 'Зробить лазерну епіляцію, чистку шкіри, доглядові процедури, класичний масаж обличчя, мікрострумову терапію, безін\'єкційну мезотерапію, підбір домашнього догляду'
-          },
-          {
-            name      : 'Ірина Куба',
-            education : 'За освітою лікар-дерматолог',
-            experience: 'Працює вже 10 років',
-            skills    : 'Зробить дерматоскопію і видалення новоутворень на шкірі, чистку, пілінги, апаратні методики для обличчя, лазерну епіляцію'
-          },
-          {
-            name      : 'Людмила Чорна',
-            education : 'За освітою медсестра',
-            experience: 'Працює вже 11 років',
-            skills    : 'Зробить лазерну епіляцію, воскову депіляцію, доглядові програми для обличчя, чистку і масаж обличчя, мікрострумову терапію, безін\'єкційну мезотерапію, підбір домашнього догляду, перманентний макіяж'
-          }
-        ]
       }
-
     }
   }
   window.cd = citiesData
@@ -1165,8 +1114,8 @@ $(document).ready(function () {
   }
 
   function generateHTMLForCarouseles() {
-    let imagesAmount = citiesData[city][localization].imagesAmount
-    let imagesAmountSpecialists = citiesData[city][localization].imagesAmountSpecialists
+    let imagesAmount = citiesData[city][localization].salons[salon].imagesAmount
+    let imagesAmountSpecialists = citiesData[city][localization].salons[salon].imagesAmountSpecialists
     let specialistsData = citiesData[city][localization].salons[salon].specialists
     let imgPath = `assets/img/about-steffany-salon/${city}/`
     const newImgPath = `assets/img/about-steffany-salon/${city}/${salon}/`
