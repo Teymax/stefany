@@ -24,8 +24,173 @@ html(lang="en")
     script(src="//w69433.yclients.com/widgetJS" charset="UTF-8" defer)
     script(src="https://smtpjs.com/v3/smtp.js")
     script.
-      (function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MNMP2MK');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MNMP2MK');
     script(src="./js/contact.js")
+    script.
+      function initMap() {
+        let myLatLng = {lat: 50.2671116, lng: 28.6806847}
+        let opt = {
+          center: myLatLng,
+          zoom: 15,
+        }
+
+        let steffanyMap = new google.maps.Map(document.getElementById("map"), opt);
+        var openedInfoWindow;
+
+        function addMarker(prop) {
+
+          let steffanyMarker = new google.maps.Marker({
+            map: steffanyMap,
+            title: prop.title,
+            position: prop.coordinates,
+            icon: prop.image,
+          })
+          if (prop.image) {
+            steffanyMarker.setIcon(prop.image)
+          }
+          ;
+          let contentString = `<div class="p-4">
+            <div class="d-flex flex-wrap mb-0">
+            <div class="d-flex p-0 align-items-center mb-3 mr-3">
+            <img class="mr-3" src="assets/icon/phone.svg" alt="Phone">
+            <a class="paragraph-text text-color-dark" href="tel:+380-96-205-50-30">${prop.tel}</a></div>
+            <div class="d-flex p-0 align-items-center mb-3 mr-3">
+            <img class=" mr-3" src="assets/icon/map.svg" alt="Map">
+            <p class="paragraph-text text-color-dark mb-0">${prop.st}</p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap">
+          <div class=" d-flex p-0 align-items-center mr-3">
+          <img class=" mr-3" src="assets/icon/mail.svg" alt="Mail">
+          <a class="paragraph-text text-color-dark" href="mailto:info@steffany.ua">info@steffany.ua</a></div>
+          <div class=" d-flex p-0 align-items-center mr-3">
+          <img class=" mr-3" src="assets/icon/time.svg" alt="Time">
+          <p class="paragraph-text text-color-dark mb-0">${prop.shedule}</p>
+          </div>
+          </div>
+          </div> `
+          let infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+          google.maps.event.addListener(steffanyMarker, 'click', function () {
+            if(openedInfoWindow)
+              openedInfoWindow.close();
+            infowindow.open(steffanyMap, steffanyMarker);
+            openedInfoWindow = infowindow;
+          })
+          steffanyMarker.setMap(steffanyMap)
+
+        }
+
+        let markers = [
+          {
+            title: 'zt laser',
+            coordinates: {lat: 50.261791, lng: 28.6756843},
+            image: 'assets/icon/map-icon/marker-laser.svg',
+            tel: '380-96-205-50-30',
+            st: 'ул. Киевская, 84',
+            shedule: '9:00 : 20:00'
+          },
+          {
+            title: 'if laser',
+            coordinates: {lat: 48.9229821, lng: 24.7143963},
+            image: 'assets/icon/map-icon/marker-laser.svg',
+            tel: '380-67-110-09-69',
+            st: 'ул. Ивана Франка, 25',
+            shedule: '9:00 : 20:00'
+          },
+          {
+            title: 'lt laser',
+            coordinates: {lat: 50.7459936, lng: 25.3294165},
+            image: 'assets/icon/map-icon/marker-laser.svg',
+            tel: '380-68-129-24-23',
+            st: 'пр. Воли, 10',
+            shedule: '9:00 : 20:00'
+          },
+          {
+            title: 'lv laser',
+            coordinates: {lat: 49.8179273, lng: 24.0011396},
+            image: 'assets/icon/map-icon/marker-laser.svg',
+            tel: '380-97-202-20-21',
+            st: 'ул. Княгини Ольги 98Б',
+            shedule: '9:00 : 20:00'
+          },
+          {
+            title: 'lv laser',
+            coordinates: {lat: 49.8364277, lng: 24.0336921},
+            image: 'assets/icon/map-icon/marker-laser.svg',
+            tel: '380-97-203-90-03',
+            st: 'ул. Гулака-Артемовского, 2',
+            shedule: '9:00 : 20:00'
+          },
+          {
+            title: 'rv laser',
+            coordinates: {lat: 50.6165144, lng: 26.2673358},
+            image: 'assets/icon/map-icon/marker-laser.svg',
+            tel: '380-98-500-48-86',
+            st: 'ул. Киевская, 4',
+            shedule: '9:00 : 20:00'
+          },
+
+          {
+            title: 'zt beauty nail',
+            coordinates: {lat: 50.266296, lng: 28.6854008},
+            image: 'assets/icon/map-icon/marker-beauty.svg',
+            tel: '380-98-180-50-90',
+            st: 'ул. Киевская, 77, тц "Глобал"',
+            shedule: '9:00 : 21:00'
+          },
+          {
+            title: 'zt beauty hair',
+            coordinates: {lat: 50.2667777, lng: 28.6833977},
+            image: 'assets/icon/map-icon/marker-beauty.svg',
+            tel: '380-67-404-19-33',
+            st: 'ул. Киевская, 77, тц "Глобал"',
+            shedule: '10:00 : 20:00'
+          },
+          {
+            title: 'rv beauty',
+            coordinates: {lat: 50.6165144, lng: 26.2673358},
+            image: 'assets/icon/map-icon/marker-beauty.svg',
+            tel: '380-67-110-09-69',
+            st: 'ул. Киевская, 84',
+            shedule: '9:00 : 20:00'
+          },
+
+          {
+            title: 'zt Podology',
+            coordinates: {lat: 50.2479782, lng: 28.6830291},
+            image: 'assets/icon/map-icon/marker-podology.svg',
+            tel: '380-98-180-10-88',
+            st: 'Площадь Путятинская, 1/63',
+            shedule: '9:00 : 20:00'
+          },
+          {
+            title: 'rv Podology',
+            coordinates: {lat: 50.6165144, lng: 26.2673358},
+            image: 'assets/icon/map-icon/marker-podology.svg',
+            tel: '380-98-500-48-86',
+            st: 'ул. Киевская, 4',
+            shedule: '9:00 : 20:00'
+          }
+        ]
+        for (let i = 0; i < markers.length; i++) {
+
+          addMarker(markers[i])
+        }
+        console.log(markers[i])
+      }
+
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCKNfIhpMZXXUjVIHHTkF2dqo8DGTIRdiM&callback=initMap', async='', defer='')
+
 
   body
     include ../mixins
@@ -36,7 +201,6 @@ html(lang="en")
 
 
     include ../modules/header
-
     block content
 
     include ../modules/footer

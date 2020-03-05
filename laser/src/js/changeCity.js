@@ -662,24 +662,6 @@ $(document).ready(function () {
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
             imagesAmount           : 10,
-            imagesAmountSpecialists: 1,
-            specialists: [
-              {
-                name      : 'Ирина Станкевич',
-                education : 'По образованию акушерка',
-                experience: 'Работает уже 2,5 года',
-                skills    : 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
-              }
-            ]
-          },
-          lv2: {
-            title      : 'Гулака-Артемовского, 2',
-            phone      : '380-97-203-90-03',
-            address    : 'ул. Гулака-Артемовского, 2',
-            schedule   : 'с 9:00 до 20:00',
-            map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/img/about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
-            imagesAmount           : 10,
             imagesAmountSpecialists: 2,
             specialists: [
               {
@@ -694,6 +676,25 @@ $(document).ready(function () {
                 experience: 'Работает уже 1 год',
                 skills    : 'Сделает лазерную эпиляцию'
               }
+            ]
+          },
+          lv2: {
+            title      : 'Гулака-Артемовского, 2',
+            phone      : '380-97-203-90-03',
+            address    : 'ул. Гулака-Артемовского, 2',
+            schedule   : 'с 9:00 до 20:00',
+            map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            preview    : 'assets/img/about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 1,
+            specialists: [
+              {
+                name      : 'Ирина Станкевич',
+                education : 'По образованию акушерка',
+                experience: 'Работает уже 2,5 года',
+                skills    : 'Сделает лазерную эпиляцию, косметологические услуги, чистку лица'
+              }
+
             ]
           }
         },
@@ -716,24 +717,6 @@ $(document).ready(function () {
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
             imagesAmount           : 10,
-            imagesAmountSpecialists: 1,
-            specialists: [
-              {
-                name      : 'Ірина Станкевич',
-                education : 'За освітою акушерка',
-                experience: 'Працює вже 2,5 роки',
-                skills    : 'Зробить лазерну епіляцію, косметологічні послуги, чистку обличчя'
-              }
-            ]
-          },
-          lv2: {
-            title      : 'Гулака-Артемовського, 2',
-            phone      : '380-97-203-90-03',
-            address    : 'вул. Гулака-Артемовського, 2',
-            schedule   : 'з 9:00 до 20:00',
-            map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
-            preview    : 'assets/img/about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
-            imagesAmount           : 10,
             imagesAmountSpecialists: 2,
             specialists: [
               {
@@ -748,6 +731,25 @@ $(document).ready(function () {
                 experience: 'Працює вже 1 рік',
                 skills    : 'Зробить лазерну епіляцію'
               }
+            ]
+          },
+          lv2: {
+            title      : 'Гулака-Артемовського, 2',
+            phone      : '380-97-203-90-03',
+            address    : 'вул. Гулака-Артемовського, 2',
+            schedule   : 'з 9:00 до 20:00',
+            map        : '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.3207133690416!2d24.03369211564091!3d49.83643113929711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add69070842c9%3A0x9108f74379396188!2z0YPQuy4g0JPRg9C70LDQutCwLdCQ0YDRgtC10LzQvtCy0YHQutC-0LPQviwgMiwg0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1sru!2sua!4v1573037292724!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
+            preview    : 'assets/img/about-steffany-salon/lv/lv2/video-slider-0@2x.jpg',
+            imagesAmount           : 10,
+            imagesAmountSpecialists: 1,
+            specialists: [
+              {
+                name      : 'Ірина Станкевич',
+                education : 'За освітою акушерка',
+                experience: 'Працює вже 2,5 роки',
+                skills    : 'Зробить лазерну епіляцію, косметологічні послуги, чистку обличчя'
+              }
+
             ]
           }
         },
