@@ -6,7 +6,7 @@ $(document).ready(function () {
           salon: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
+<!--          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>-->
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
         `,
@@ -17,7 +17,7 @@ $(document).ready(function () {
         },
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
+<!--          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>-->
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./shugaring">Шугаринг</a></li>
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./voskovaya-epilyatsiya">Восковая эпиляция\`</a></li>
         `
@@ -90,7 +90,7 @@ $(document).ready(function () {
           salon: {
             selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
+<!--          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>-->
         `,
             ddSalon        : `
             <li><span class="nav-link-text paragraph-text text-color-lightdark-header" data-change-salon="salon">пр. Воли, 10</span></li>
@@ -100,7 +100,7 @@ $(document).ready(function () {
         ,
         selectedService: `
           <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./epilation">Лазерная эпиляция</a></li>
-          <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>
+<!--      <li class="mb-2 mb-lg-0"><a class="nav-link-text paragraph-text text-color-lightdark-header mob-title" href="./nano-epilyatsiya">Нано-эпиляция</a></li>-->
         `
       }
       ,
