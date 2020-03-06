@@ -48,7 +48,7 @@ html(lang="en")
 
           let steffanyMarker = new google.maps.Marker({
             map: steffanyMap,
-            title: prop.title,
+            title: prop.hover,
             position: prop.coordinates,
             icon: prop.image,
           })
@@ -57,6 +57,7 @@ html(lang="en")
           }
           ;
           let contentString = `<div class="p-4">
+            <h3 class="h3-title text-color-dark mb-4">${prop.title}</h3>
             <div class="d-flex flex-wrap mb-0">
             <div class="d-flex p-0 align-items-center mb-3 mr-3">
             <img class="mr-3" src="assets/icon/phone.svg" alt="Phone">
@@ -80,7 +81,7 @@ html(lang="en")
             content: contentString
           });
           google.maps.event.addListener(steffanyMarker, 'click', function () {
-            if(openedInfoWindow)
+            if (openedInfoWindow)
               openedInfoWindow.close();
             infowindow.open(steffanyMap, steffanyMarker);
             openedInfoWindow = infowindow;
@@ -91,7 +92,8 @@ html(lang="en")
 
         let markers = [
           {
-            title: 'zt laser',
+            title: 'title',
+            hover: 'zt laser ул. Киевская, 84',
             coordinates: {lat: 50.261791, lng: 28.6756843},
             image: 'assets/icon/map-icon/marker-laser.svg',
             tel: '380-96-205-50-30',
@@ -99,7 +101,8 @@ html(lang="en")
             shedule: '9:00 : 20:00'
           },
           {
-            title: 'if laser',
+            title: 'title',
+            hover: 'if laser ул. Ивана Франка, 25',
             coordinates: {lat: 48.9229821, lng: 24.7143963},
             image: 'assets/icon/map-icon/marker-laser.svg',
             tel: '380-67-110-09-69',
@@ -107,7 +110,8 @@ html(lang="en")
             shedule: '9:00 : 20:00'
           },
           {
-            title: 'lt laser',
+            title: 'title',
+            hover: 'lt laser пр. Воли, 10',
             coordinates: {lat: 50.7459936, lng: 25.3294165},
             image: 'assets/icon/map-icon/marker-laser.svg',
             tel: '380-68-129-24-23',
@@ -115,7 +119,8 @@ html(lang="en")
             shedule: '9:00 : 20:00'
           },
           {
-            title: 'lv laser',
+            title: 'title',
+            hover: 'lv laser ул. Княгини Ольги 98Б',
             coordinates: {lat: 49.8179273, lng: 24.0011396},
             image: 'assets/icon/map-icon/marker-laser.svg',
             tel: '380-97-202-20-21',
@@ -123,7 +128,8 @@ html(lang="en")
             shedule: '9:00 : 20:00'
           },
           {
-            title: 'lv laser',
+            title: 'title',
+            hover: 'lv laser ул. Гулака-Артемовского, 2',
             coordinates: {lat: 49.8364277, lng: 24.0336921},
             image: 'assets/icon/map-icon/marker-laser.svg',
             tel: '380-97-203-90-03',
@@ -131,7 +137,8 @@ html(lang="en")
             shedule: '9:00 : 20:00'
           },
           {
-            title: 'rv laser',
+            title: 'title',
+            hover: 'rv laser ул. Киевская, 4',
             coordinates: {lat: 50.6165144, lng: 26.2673358},
             image: 'assets/icon/map-icon/marker-laser.svg',
             tel: '380-98-500-48-86',
@@ -140,7 +147,8 @@ html(lang="en")
           },
 
           {
-            title: 'zt beauty nail',
+            title: 'title',
+            hover: 'zt beauty nail ул. Киевская, 77, тц "Глобал"',
             coordinates: {lat: 50.266296, lng: 28.6854008},
             image: 'assets/icon/map-icon/marker-beauty.svg',
             tel: '380-98-180-50-90',
@@ -148,7 +156,8 @@ html(lang="en")
             shedule: '9:00 : 21:00'
           },
           {
-            title: 'zt beauty hair',
+            title: 'title',
+            hover: 'zt beauty hair ул. Киевская, 77, тц "Глобал"',
             coordinates: {lat: 50.2667777, lng: 28.6833977},
             image: 'assets/icon/map-icon/marker-beauty.svg',
             tel: '380-67-404-19-33',
@@ -156,7 +165,8 @@ html(lang="en")
             shedule: '10:00 : 20:00'
           },
           {
-            title: 'rv beauty',
+            title: 'title',
+            hover: 'rv beauty ул. Киевская, 84',
             coordinates: {lat: 50.6165144, lng: 26.2673358},
             image: 'assets/icon/map-icon/marker-beauty.svg',
             tel: '380-67-110-09-69',
@@ -165,7 +175,8 @@ html(lang="en")
           },
 
           {
-            title: 'zt Podology',
+            title: 'title',
+            hover: 'zt Podology Площадь Путятинская, 1/63',
             coordinates: {lat: 50.2479782, lng: 28.6830291},
             image: 'assets/icon/map-icon/marker-podology.svg',
             tel: '380-98-180-10-88',
@@ -173,7 +184,8 @@ html(lang="en")
             shedule: '9:00 : 20:00'
           },
           {
-            title: 'rv Podology',
+            title: 'title',
+            hover: 'rv Podology ул. Киевская, 4',
             coordinates: {lat: 50.6165144, lng: 26.2673358},
             image: 'assets/icon/map-icon/marker-podology.svg',
             tel: '380-98-500-48-86',
@@ -185,7 +197,6 @@ html(lang="en")
 
           addMarker(markers[i])
         }
-        console.log(markers[i])
       }
 
 
