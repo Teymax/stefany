@@ -9,8 +9,8 @@ const cities = {
 }
 window.mail = {
   Host    : 'smtp.gmail.com',
-  Username: 'four.progs@gmail.com',
-  Password: 'Htndeth0614',
+  Username: 'uasteffany@gmail.com',
+  Password: 'uasteffany12345',
   To      : 'help@steffany.ua'
 }
 window.serviceId = 2495961
@@ -59,13 +59,13 @@ const writeClient = (time, data) => {
 }
 
 function sendEmail(details) {
+  window.mail.From = email
   Email.send(
     {
       ...mail,
       ...details
     })
-  $('#thanksPopup').modal('show')
-  closeAllModals()
+
 }
 
 function closeAllModals() {
@@ -103,7 +103,7 @@ $(document).ready(function () {
   $('.feedback-form').on('submit', e => {
     e.preventDefault()
     if ($('.feedback-form')[0].checkValidity()) {
-      sendEmail({
+      sendEmail( {
         Subject: 'Обратная связь',
         From   : $('.feedback-form input[type="email"]').val(),
         Body   : `Имя: ${$('.feedback-form input[type="text"]')}<br>Email: ${$('.feedback-form input[type="email"]')
@@ -115,7 +115,8 @@ $(document).ready(function () {
       $('.feedback-form input[type="text"]').val('')
       $('.feedback-form input[type="tel"]').val('')
       $('.feedback-form textarea').val('')
-      
+      $('#thanksPopup').modal('show')
+      closeAllModals()
     }
     else {
       $('.feedback-form')[0].reportValidity()
@@ -131,10 +132,19 @@ $(document).ready(function () {
       'name' : $('.modal form input[type="text"]').val(),
       'email': $('.modal form input[type="email"]').val()
     }
-    date.setDate(date.getDate() + 1)
-    var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
-    var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
-    
+    // date.setDate(date.getDate() + 1)
+    // var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+    // var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
+    sendEmail( {
+
+      Subject: 'Запись',
+      From   : payload.email,
+      Body:
+      `Имя: ${payload.name}
+      <br>Email: ${payload.email}
+      <br>Телефон:  ${payload.phone}
+      <br>Услуги:  ${serviceId}`
+    })
     $('#callbackModal').modal('hide')
     
     $('#thanksPopup').modal('show')
@@ -143,24 +153,24 @@ $(document).ready(function () {
     $('#consultName').val('')
     $('#consultEmail').val('')
     
-    var headers = {
-      'Content-Type' : 'application/json',
-      'Authorization': 'Bearer ' + bearer_token
-    }
-    
-    fetch(url, {
-      method: 'GET',
-      headers
-    })
-      .then(response => response.json())
-      .then(response => {
-        if (response.length) {
-          writeClient(response[0].datetime, payload)
-        }
-        else {
-        
-        }
-      })
+    // var headers = {
+    //   'Content-Type' : 'application/json',
+    //   'Authorization': 'Bearer ' + bearer_token
+    // }
+    //
+    // fetch(url, {
+    //   method: 'GET',
+    //   headers
+    // })
+    //   .then(response => response.json())
+    //   .then(response => {
+    //     if (response.length) {
+    //       writeClient(response[0].datetime, payload)
+    //     }
+    //     else {
+    //
+    //     }
+    //   })
   }
   
   $('.modal form').on('submit', e => {

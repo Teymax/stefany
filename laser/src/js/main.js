@@ -3,6 +3,7 @@ const bearer_token = 'f5wujgx5yn6cagtk9fg2'
 const partnerId = 111624
 const managerId = 819601
 let servicesArr = []
+
 let localization = location.pathname.split('/').find(function (loc) {
   return loc === 'ua'
 }) || 'ru'
@@ -149,8 +150,8 @@ let servicesLength = {
   '1415354': 900,
   '1415355': 1800
 }
-const urlCity      = location.pathname.slice(1).split('/')[1],
-      filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
+const urlCity = location.pathname.slice(1).split('/')[1],
+  filteredCity = ['rv', 'if', 'lv', 'lt'].find(city => city === urlCity) || 'zt'
 localStorage.city = filteredCity
 
 function getData(data) {
@@ -159,13 +160,12 @@ function getData(data) {
   if (answer['errors']) {
     if (answer['errors'].length > 1) {
       return {
-        error : answer['errors'][0]['message'],
+        error: answer['errors'][0]['message'],
         status: answer['errors'][0]['code']
       }
-    }
-    else {
+    } else {
       return {
-        error : answer['errors']['message'],
+        error: answer['errors']['message'],
         status: answer['errors']['code']
       }
     }
@@ -240,8 +240,7 @@ function buttonToggle(event) {
     payButton.classList.remove('hidden')
     orderButton.classList.add('hidden')
     payment.value = 1
-  }
-  else {
+  } else {
     check.removeAttribute('required')
     check.classList.add('hidden')
     span.classList.add('hidden')
@@ -292,18 +291,17 @@ function displayServices(json) {
           mainBlocks[i].querySelector('p.item-price').textContent = `${service.price_max} грн`
           mainBlocks[i].querySelector('p.item-time').textContent = `${servicesLength[service.id] / 60} ${LocMin}`
           servicesArr[service.id] = {
-            'price' : service.price_max,
+            'price': service.price_max,
             'length': servicesLength[service.id] / 60
           }
 
         }
       })
     }
-  }
-  else {
+  } else {
     servicesAll.map(function (service) {
       servicesArr[service.id] = {
-        'price' : service.price_max,
+        'price': service.price_max,
         'length': service.seance_length / 60
       }
     })
@@ -312,11 +310,11 @@ function displayServices(json) {
 
 function getServices() {
   let headers = {
-    'Content-Type' : 'application/json',
+    'Content-Type': 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
   ajax('GET', headers, 'https://api.yclients.com/api/v1/book_services/' + partnerId + '?staff_id='
-                       + managerId, null, displayServices)
+    + managerId, null, displayServices)
 }
 
 function mainFormSubmit(event) {
@@ -334,11 +332,44 @@ function mainFormSubmit(event) {
     managerId,
     city
   ]
-  getBookTime([+service], 0, bookRecord, params)
+  let checkedRadio = parent.querySelector('input[type="radio"]:checked')
+
+  // getBookTime([+service], 0, bookRecord, params)
+  window.mail = {
+    Host: 'smtp.gmail.com',
+    Username: 'uasteffany@gmail.com',
+    Password: 'uasteffany12345',
+    To: 'help@steffany.ua',
+    From: email
+  }
+  console.log(checkedRadio)
+  let details = {
+
+    Subject: 'Запись',
+    Body:
+      `Имя: ${event.target.fullname.value}
+      <br>Email: ${event.target.email.value}
+      <br>Телефон:  ${event.target.phone.value}
+      <br>Услуги:  ${checkedRadio.dataset.name + checkedRadio.dataset.proc}
+      <br>Сообщение:  ${comment}
+      <br>Город:  ${city}`
+  }
+  Email.send({
+    ...mail,
+    ...details
+  }).then(
+    res => console.log(res),
+    rej => console.log("ERROR:", rej)
+  )
+  $('#sendComplex').modal('hide')
+  $('#modalServiceListSinugUp').modal('hide')
+  $('#thanksPopup').modal('show')
 }
+
 
 function complexFormSubmit(event) {
   event.preventDefault()
+  console.log('2')
   let name = event.target.fullname.value
   let email = event.target.email.value
   let phone = event.target.phone.value
@@ -355,10 +386,42 @@ function complexFormSubmit(event) {
       return checkbox.parentNode.nextElementSibling.textContent
     })
     payment(name, email, phone, comment, services, serviceNames.join(','))
-  }
-  else {
-    let params = [name, email, phone, comment, services, managerId, city]
-    getBookTime(services, 0, bookRecord, params)
+  } else {
+    let serviceNames = [...serviceCheckboxes].map(checkbox => {
+      return checkbox.parentNode.nextElementSibling.textContent
+    })
+    // let params = [name, email, phone, comment, services, managerId, city]
+    // getBookTime(services, 0, bookRecord, params)
+    window.mail = {
+      Host: 'smtp.gmail.com',
+      Username: 'uasteffany@gmail.com',
+      Password: 'uasteffany12345',
+      To: 'help@steffany.ua',
+      From: email
+    }
+    console.log(window.mail)
+    let details = {
+
+      Subject: 'Запись',
+      Body:
+      `Имя: ${name}
+      <br>Email: ${email}
+      <br>Телефон:  ${phone}
+      <br>Услуги:  ${serviceNames}
+      <br>Сообщение:  ${comment}
+      <br>Город:  ${city}`
+    }
+    console.log(details)
+    Email.send({
+      ...mail,
+      ...details
+    }).then(
+      res => console.log(res),
+      rej => console.log("ERROR:", rej)
+    )
+    $('#sendComplex').modal('hide')
+    $('#modalServiceListSinugUp').modal('hide')
+    $('#thanksPopup').modal('show')
   }
 }
 
@@ -366,12 +429,12 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
   let date = new Date()
   if (plusDate > 0) date.setDate(date.getDate() + plusDate)
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-                   date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
 
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString
   url += services ? ('?service_ids=' + encodeURIComponent(services.join(','))) : ''
   let headers = {
-    'Content-Type' : 'application/json',
+    'Content-Type': 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
 
@@ -380,8 +443,7 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
     if (processErrors(dataArr)) return alert('Error')
     if (dataArr.length < services.length) {
       return getBookTime(services, ++plusDate, callbackFunction, callbackParams)
-    }
-    else {
+    } else {
       callbackParams.push(dataArr[0].datetime)
       callbackFunction(...callbackParams)
     }
@@ -390,19 +452,19 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
 
 function bookRecord(name, email, phone, comment, services, managerId, city, datetime) {
   let headers = {
-    'Content-Type' : 'application/json',
+    'Content-Type': 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
 
   let date = new Date()
   let userParams = {
-    'phone'       : phone,
-    'fullname'    : name,
-    'email'       : email,
-    'comment'     : comment + ' ' + city,
+    'phone': phone,
+    'fullname': name,
+    'email': email,
+    'comment': comment + ' ' + city,
     'appointments': [
       {
-        'id'      : date.getTime(),
+        'id': date.getTime(),
         'services': services,
         'staff_id': managerId,
         'datetime': datetime
@@ -414,8 +476,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
       let err = processErrors(getData(data))
       if (servicesArr.length === 0) {
         getServices()
-      }
-      else if (!err) {
+      } else if (!err) {
         $('#sendComplex').modal('hide')
         $('#modalServiceListSinugUp').modal('hide')
         $('#thanksPopup').modal('show')
@@ -445,34 +506,34 @@ function createOrder(amount, order_desc, name, services, email, phone) {
   button.setResponseUrl(document.URL + '?payed=true'/*'http://steffany.dotwork.digital/laser/?payed=true'*/)
   button.setHost('api.fondy.eu')
   button.addField({
-    label   : 'Описание платежа',
-    name    : 'description',
-    value   : order_desc,
+    label: 'Описание платежа',
+    name: 'description',
+    value: order_desc,
     readonly: true
   })
   button.addField({
-    label   : 'name',
-    name    : 'user_name',
-    value   : name,
+    label: 'name',
+    name: 'user_name',
+    value: name,
     readonly: true
   })
   button.addField({
-    label   : 'email',
-    name    : 'user_email',
-    value   : email,
+    label: 'email',
+    name: 'user_email',
+    value: email,
     readonly: true
   })
   button.addField({
-    label   : 'phone',
-    name    : 'user_phone',
-    value   : phone,
+    label: 'phone',
+    name: 'user_phone',
+    value: phone,
     readonly: true
   })
 
   button.addField({
-    label   : 'services',
-    name    : 'user_services',
-    value   : services,
+    label: 'services',
+    name: 'user_services',
+    value: services,
     readonly: true
   })
 
@@ -494,8 +555,7 @@ function refreshPrice(event) {
   totalPriceElem.forEach(elem => {
     if (totalPrice < 0) {
       elem.textContent = '0 грн.'
-    }
-    else {
+    } else {
       elem.textContent = totalPrice + ' грн.'
     }
   })
@@ -508,14 +568,12 @@ function refreshPrice(event) {
     }
     if (totalTime % 60 === 0 && totalTime > 0) {
       elem.textContent = totalTime / 60 + LocHour
-    }
-    else {
+    } else {
       let minutes = totalTime % 60
       let hours = (totalTime - minutes) / 60
       if (hours === 0) {
         elem.textContent = minutes + LocMin
-      }
-      else {
+      } else {
         elem.textContent = hours + LocHour + ' ' + minutes + LocMin
       }
 
@@ -545,8 +603,7 @@ function refreshPrice(event) {
     `
     if (checkbox.checked) {
       container.innerHTML += elem
-    }
-    else {
+    } else {
       container.innerHTML = container.innerHTML.replace(elem, '')
     }
   })

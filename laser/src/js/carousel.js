@@ -7,7 +7,7 @@ $(document).ready(function () {
   $('[type="tel"]').mask('+38-(000)-000-00-00')
 
   const callbackForm = $('form.feedback-form')[0],
-        callbackBtn  = $('#sendMail')
+    callbackBtn = $('#sendMail')
   if (callbackBtn) {
     callbackBtn.on('click', e => {
       e.stopPropagation()
@@ -27,16 +27,16 @@ $(document).ready(function () {
 
 
       window.mail = {
-        Host    : 'smtp.gmail.com',
-        Username: 'four.progs@gmail.com',
-        Password: 'Htndeth0614',
-        To      : 'help@steffany.ua',
-        From    : email.value
+        Host: 'smtp.gmail.com',
+        Username: 'uasteffany@gmail.com',
+        Password: 'uasteffany12345',
+        To: 'help@steffany.ua',
+        From: email.value
       }
 
       let details = {
         Subject: 'Users questions and proposals',
-        Body   :
+        Body:
           `Имя: ${name.value}
 <br>Email: ${email.value}
 <br>Телефон:  ${phone.value}
@@ -46,12 +46,15 @@ $(document).ready(function () {
       Email.send({
         ...mail,
         ...details
-      })
+      }).then(
+        res => console.log(res),
+        rej => console.log("ERROR:", rej)
+      )
       name.value = ''
       email.value = ''
       phone.value = ''
       comment.value = ''
-       $('#thanksPopup').modal('show')
+      $('#thanksPopup').modal('show')
     })
   }
   $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -66,8 +69,7 @@ $(document).ready(function () {
         // append slides to end
         if (e.direction == 'left') {
           $('.carousel-item').eq(i).appendTo('.carousel-inner')
-        }
-        else {
+        } else {
           $('.carousel-item').eq(0).appendTo('.carousel-inner')
         }
       }
@@ -86,14 +88,14 @@ $(document).ready(function () {
 
   $('.diploma-slider').owlCarousel({
     // loop      : true,
-    margin    : 35,
-    nav       : false,
-    dots      : true,
+    margin: 35,
+    nav: false,
+    dots: true,
     responsive: {
-      0   : {
+      0: {
         items: 1
       },
-      731 : {
+      731: {
         items: 2
       },
       1200: {
@@ -127,8 +129,7 @@ $(document).ready(function () {
     if (dropMenuClosest) {
       $('.drop-menu').not(dropMenuClosest).removeClass('open')
       dropMenuClosest.classList.toggle('open')
-    }
-    else {
+    } else {
       $('.drop-menu').removeClass('open')
     }
   })
