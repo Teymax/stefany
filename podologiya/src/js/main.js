@@ -68,31 +68,11 @@ $(document).ready(function () {
       'name' : $('#consultName').val(),
       'email': $('#consultEmail').val()
     }
-    // date.setDate(date.getDate() + 1)
-    // var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
-    // var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=3354786'
-    //
-    window.mail.From=payload.email
-    let city = window.location.includes('rv')?city = 'rv':city = 'zt'
-    let details = {
+    date.setDate(date.getDate() + 1)
+    var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+    var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=3354786'
 
-      Subject: 'Запись',
-      Body:
-        `Имя: ${payload.name}
-      <br>Email: ${payload.email}
-      <br>Телефон:  ${payload.phone}
-      <br>Услуги:  Консультация
-      <br>Сообщение:  podology
-      <br>Город:  ${city}`
-    }
-    console.log(details)
-    Email.send({
-      ...mail,
-      ...details
-    }).then(
-      res => console.log(res),
-      rej => console.log("ERROR:", rej)
-    )
+
     $('#callbackModal').modal('hide')
     
     $('#thanksPopup').modal('show')
@@ -101,24 +81,24 @@ $(document).ready(function () {
     $('#consultName').val('')
     $('#consultEmail').val('')
     
-    // var headers = {
-    //   'Content-Type' : 'application/json',
-    //   'Authorization': 'Bearer ' + bearer_token
-    // }
-    // var request = $.ajax(
-    //   {
-    //     url    : url,
-    //     type   : 'GET',
-    //     headers: headers
-    //   })
-    //
-    // request.done(function (msg) {
-    //   writeClient(msg[0].datetime, payload)
-    // })
-    //
-    // request.fail(function (jqXHR, textStatus) {
-    //   // handle
-    // })
+    var headers = {
+      'Content-Type' : 'application/json',
+      'Authorization': 'Bearer ' + bearer_token
+    }
+    var request = $.ajax(
+      {
+        url    : url,
+        type   : 'GET',
+        headers: headers
+      })
+
+    request.done(function (msg) {
+      writeClient(msg[0].datetime, payload)
+    })
+
+    request.fail(function (jqXHR, textStatus) {
+      // handle
+    })
   })
   
   $('#carouselExample').on('slide.bs.carousel', function (e) {

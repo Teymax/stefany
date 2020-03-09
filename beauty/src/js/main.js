@@ -13,58 +13,61 @@ window.mail = {
   Password: 'uasteffany12345',
   To      : 'malanivvlad@gmail.com'
 }
+
 window.serviceId = 2495961
 window.serviceText = ''
 $(function () {
   $('img').Lazy()
 })
 
-const writeClient = (time, data) => {
-  var bearer_token = 'f5wujgx5yn6cagtk9fg2'
-  var headers = {
-    'Content-Type' : 'application/json',
-    'Authorization': 'Bearer ' + bearer_token
-  }
-  var payload = {
-    'phone'       : data.phone,
-    'fullname'    : data.name,
-    'email'       : data.email,
-    'comment'     : window.serviceText + ' ' + cities[localStorage.getItem('city')],
-    'appointments': [
-      {
-        'id'      : new Date().getTime(),
-        'services': [window.serviceId],
-        'staff_id': managerId,
-        'datetime': time
-      }
-    ]
-  }
-
-  $('.modal').modal('hide')
-  $('#thanksPopup').modal('show')
-  $('.modal form input[type="tel"]').val('')
-  $('.modal form input[type="text"]').val('')
-  $('.modal form input[type="email"]').val('')
-
-
-  fetch('https://api.yclients.com/api/v1/book_record/' + partnerId, {
-    method: 'POST',
-    body  : JSON.stringify(payload),
-    headers
-  })
-    .then(response => response.json())
-    .then(response => {
-      console.log(response)
-    })
-}
+// const writeClient = (time, data) => {
+//   var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+//   var headers = {
+//     'Content-Type' : 'application/json',
+//     'Authorization': 'Bearer ' + bearer_token
+//   }
+//   var payload = {
+//     'phone'       : data.phone,
+//     'fullname'    : data.name,
+//     'email'       : data.email,
+//     'comment'     : window.serviceText + ' ' + cities[localStorage.getItem('city')],
+//     'appointments': [
+//       {
+//         'id'      : new Date().getTime(),
+//         'services': [window.serviceId],
+//         'staff_id': managerId,
+//         'datetime': time
+//       }
+//     ]
+//   }
+//
+//   $('.modal').modal('hide')
+//   $('#thanksPopup').modal('show')
+//   $('.modal form input[type="tel"]').val('')
+//   $('.modal form input[type="text"]').val('')
+//   $('.modal form input[type="email"]').val('')
+//
+//
+//   fetch('https://api.yclients.com/api/v1/book_record/' + partnerId, {
+//     method: 'POST',
+//     body  : JSON.stringify(payload),
+//     headers
+//   })
+//     .then(response => response.json())
+//     .then(response => {
+//       console.log(response)
+//     })
+// }
 
 function sendEmail(details) {
-  window.mail.From = email
   Email.send(
     {
       ...mail,
       ...details
-    })
+    }).then(
+    res => console.log(res),
+    rej => console.log("ERROR:", rej)
+  )
 
 }
 
@@ -106,7 +109,7 @@ $(document).ready(function () {
       sendEmail( {
         Subject: 'Обратная связь',
         From   : $('.feedback-form input[type="email"]').val(),
-        Body   : `Имя: ${$('.feedback-form input[type="text"]')}<br>Email: ${$('.feedback-form input[type="email"]')
+        Body   : `Имя: ${$('.feedback-form input[type="text"]').val()}<br>Email: ${$('.feedback-form input[type="email"]')
           .val()}<br>Телефон: ${$('.feedback-form input[type="tel"]').val()}<br>Сообщение: ${$(
           '.feedback-form textarea')
           .val()}`
@@ -127,31 +130,10 @@ $(document).ready(function () {
     var bearer_token = 'f5wujgx5yn6cagtk9fg2'
     var date = new Date()
     // Change
-    var payload = {
-      'phone': $('.modal form input[type="tel"]').val(),
-      'name' : $('.modal form input[type="text"]').val(),
-      'email': $('.modal form input[type="email"]').val()
-    }
+
     // date.setDate(date.getDate() + 1)
     // var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
     // var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
-    sendEmail( {
-
-      Subject: 'Запись',
-      From   : payload.email,
-      Body:
-      `Имя: ${payload.name}
-      <br>Email: ${payload.email}
-      <br>Телефон:  ${payload.phone}
-      <br>Услуги:  ${serviceId}`
-    })
-    $('#callbackModal').modal('hide')
-
-    $('#thanksPopup').modal('show')
-
-    $('#consultPhone').val('')
-    $('#consultName').val('')
-    $('#consultEmail').val('')
 
     // var headers = {
     //   'Content-Type' : 'application/json',
@@ -172,65 +154,119 @@ $(document).ready(function () {
     //     }
     //   })
   }
-
-  $('.modal form').on('submit', e => {
+  let formForSend = document.querySelector('.modal form');
+  formForSend.addEventListener('submit', e => {
     e.preventDefault()
-    getBookTime([serviceId], 0, _bookRecord)
-    // var bearer_token = 'f5wujgx5yn6cagtk9fg2'
-    // var date = new Date()
-    // // Change
-    // var payload = {
-    //   'phone': $('.modal form input[type="tel"]').val(),
-    //   'name' : $('.modal form input[type="text"]').val(),
-    //   'email': $('.modal form input[type="email"]').val()
-    // }
-    // date.setDate(date.getDate() + 1)
-    // var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
-    // var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
-    //
-    // $('#callbackModal').modal('hide')
-    //
-    // $('#thanksPopup').modal('show')
-    //
-    // $('#consultPhone').val('')
-    // $('#consultName').val('')
-    // $('#consultEmail').val('')
-    //
-    // var headers = {
-    //   'Content-Type' : 'application/json',
-    //   'Authorization': 'Bearer ' + bearer_token
-    // }
-    //
-    // fetch(url, {
-    //   method: 'GET',
-    //   headers
-    // })
-    //   .then(response => response.json())
-    //   .then(response => {
-    //     if (response.length) {
-    //       console.log(response)
-    //       writeClient(response[0].datetime, payload)
-    //     } else {
-    //
-    //     }
-    //   })
+    var payload = {
+      'phone': $('.modal form input[type="tel"]').val(),
+      'name' : $('.modal form input[type="text"]').val(),
+      'email': $('.modal form input[type="email"]').val()
+    }
+    let det = {
 
-    // request.done(function (msg) {
-    //   console.log(msg);
-    //   writeClient(msg[0].datetime, payload)
-    // })
-    //
-    // request.fail(function (jqXHR, textStatus) {
-    //   // handle
-    // })
-    // $('.modal').modal('hide')
-    // $('#thanksPopup').modal('show')
+      Subject: 'Запись',
+      From   : payload.email,
+      Body:
+        `Имя: ${payload.name}
+      <br>Email: ${payload.email}
+      <br>Телефон:  ${payload.phone}
+      <br>Услуги:  ${serviceId}
+      <br>Город:  ${cities[localStorage.getItem('city')]}`
+    }
+    console.log(det)
+    sendEmail(det)
+    $('.modal form input[type="tel"]').val('')
+    $('.modal form input[type="text"]').val('')
+    $('.modal form input[type="email"]').val('')
+    $('.modal').modal('hide')
+    $('#thanksPopup').modal('show')
+  });
+  // $('.modal form').on('submit', e => {
+  //   e.preventDefault()
+  //   var payload = {
+  //     'phone': $('.modal form input[type="tel"]').val(),
+  //     'name' : $('.modal form input[type="text"]').val(),
+  //     'email': $('.modal form input[type="email"]').val()
+  //   }
+  //   console.log(payload)
+  //   sendEmail( {
+  //
+  //     Subject: 'Запись',
+  //     From   : payload.email,
+  //     Body:
+  //       `Имя: ${payload.name}
+  //     <br>Email: ${payload.email}
+  //     <br>Телефон:  ${payload.phone}
+  //     <br>Услуги:  ${serviceId}
+  //     <br>Город:  ${cities[localStorage.getItem('city')]}`
+  //   })
+  //    $('.modal form input[type="tel"]').val('')
+  //   $('.modal form input[type="text"]').val('')
+  //    $('.modal form input[type="email"]').val('')
+  //   $('.modal').modal('hide')
+  //   $('#thanksPopup').modal('show')
+  //
+  //   // getBookTime([serviceId], 0, _bookRecord)
+  //   // var bearer_token = 'f5wujgx5yn6cagtk9fg2'
+  //   // var date = new Date()
+  //   // // Change
+  //   // var payload = {
+  //   //   'phone': $('.modal form input[type="tel"]').val(),
+  //   //   'name' : $('.modal form input[type="text"]').val(),
+  //   //   'email': $('.modal form input[type="email"]').val()
+  //   // }
+  //   // date.setDate(date.getDate() + 1)
+  //   // var dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+  //   // var url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString + '?service_ids=' + serviceId
+  //   //
+  //   // $('#callbackModal').modal('hide')
+  //   //
+  //   // $('#thanksPopup').modal('show')
+  //   //
+  //   // $('#consultPhone').val('')
+  //   // $('#consultName').val('')
+  //   // $('#consultEmail').val('')
+  //   //
+  //   // var headers = {
+  //   //   'Content-Type' : 'application/json',
+  //   //   'Authorization': 'Bearer ' + bearer_token
+  //   // }
+  //   //
+  //   // fetch(url, {
+  //   //   method: 'GET',
+  //   //   headers
+  //   // })
+  //   //   .then(response => response.json())
+  //   //   .then(response => {
+  //   //     if (response.length) {
+  //   //       console.log(response)
+  //   //       writeClient(response[0].datetime, payload)
+  //   //     } else {
+  //   //
+  //   //     }
+  //   //   })
+  //
+  //   // request.done(function (msg) {
+  //   //   console.log(msg);
+  //   //   writeClient(msg[0].datetime, payload)
+  //   // })
+  //   //
+  //   // request.fail(function (jqXHR, textStatus) {
+  //   //   // handle
+  //   // })
+  //   // $('.modal').modal('hide')
+  //   // $('#thanksPopup').modal('show')
+  //
+  // })
+  let btnForSend = document.querySelector('.modal form .btn-callback');
+  btnForSend.addEventListener('click', () => {
+    let inputForSend = document.querySelector('.modal form input[type="submit"]');
+    inputForSend.click();
+  });
 
-  })
-
-  $('.modal form .btn-callback').on('click', _ => {
-    $('.modal form input[type="submit"]').click()
-  })
+  // $('.modal form .btn-callback').on('click', () => {
+  //   $('.modal form input[type="submit"]').click()
+  // })
 
   $('.city-trigger').click(function (e) {
     e.preventDefault()

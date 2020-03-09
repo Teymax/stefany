@@ -342,7 +342,6 @@ function mainFormSubmit(event) {
     To: 'help@steffany.ua',
     From: email
   }
-  console.log(checkedRadio)
   let details = {
 
     Subject: 'Запись',
