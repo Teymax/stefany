@@ -79,30 +79,30 @@ function closeAllModals() {
 
 $(document).ready(function () {
   $('.close-pp-btn').on('click', e => $('.modal').modal('hide'))
-  
+
   $('[type="tel"]').mask('+38-(000)-000-00-00')
-  
+
   $('.btn-callback').on('click', e => {
     if (e.target.dataset.serviceId) {
       window.serviceText = e.target.dataset.serviceId
     }
   })
-  
+
   function scrollToAnchor(aid) {
     var aTag = $('[data-anchor=\'' + aid + '\']')
     $('html,body').animate({scrollTop: aTag.offset().top}, 'slow')
   }
-  
+
   $('[data-anchor-link]').on('click', e => {
     const t      = e.target,
           anchor = t.dataset.anchorLink
     scrollToAnchor(anchor)
   })
-  
+
   $('#sendMail').on('click', _ => {
     $('.feedback-form').submit()
   })
-  
+
   $('.feedback-form').on('submit', e => {
     e.preventDefault()
     if ($('.feedback-form')[0].checkValidity()) {
@@ -125,7 +125,7 @@ $(document).ready(function () {
       $('.feedback-form')[0].reportValidity()
     }
   })
-  
+
   function _bookRecord() {
     var bearer_token = 'f5wujgx5yn6cagtk9fg2'
     var date = new Date()
@@ -267,7 +267,7 @@ $(document).ready(function () {
   // $('.modal form .btn-callback').on('click', () => {
   //   $('.modal form input[type="submit"]').click()
   // })
-  
+
   $('.city-trigger').click(function (e) {
     e.preventDefault()
     var city = '.' + $(this).attr('data-city')
@@ -276,8 +276,8 @@ $(document).ready(function () {
     $(this).addClass('active')
     $(city).addClass('city-active')
   })
-  
-  
+
+
   $('.city-trigger').click(function (e) {
     e.preventDefault()
     var city = '.' + $(this).attr('data-city')
@@ -296,14 +296,14 @@ $(document).ready(function () {
     $('header').toggleClass('open')
     $('body').toggleClass('fixed')
   })
-  
+
   $('body').click(function (event) {
     var t = event.target
-    
+
     if (t.hasAttribute('data-role') && t.dataset.role === 'href') {
       location.href = t.dataset.link
     }
-    
+
     var dropMenuClosest = t.closest('.drop-menu')
     if (dropMenuClosest) {
       $('.drop-menu').not(dropMenuClosest).removeClass('open')
@@ -313,21 +313,21 @@ $(document).ready(function () {
       $('.drop-menu').removeClass('open')
     }
   })
-  
+
   $('.questions-item, .program-item .collapse, .program-item  .collapse').on('show.bs.collapse', function () {
     $(this).closest('.questions-item, .program-item').addClass('active')
   })
-  
+
   $('.questions-item, .program-item .collapse, .program-item  .collapse').on('hide.bs.collapse', function () {
     $(this).closest('.questions-item, .program-item').removeClass('active')
   })
-  
+
   $('.questions-item, .program-item').each(function (el) {
     if ($(this).find('.collapse-answer').hasClass('show') == true) {
       $(this).addClass('active')
     }
   })
-  
+
   $('.diploma-slider').owlCarousel(
     {
       loop      : true,
@@ -346,7 +346,7 @@ $(document).ready(function () {
         }
       }
     })
-  
+
   $('.specialists-slider').owlCarousel(
     {
       loop      : true,
@@ -365,7 +365,7 @@ $(document).ready(function () {
         }
       }
     })
-  
+
   var videoSLider = $('.video-slider').owlCarousel(
     {
       loop         : false,
@@ -386,13 +386,13 @@ $(document).ready(function () {
         }
       }
     })
-  
+
   $('.video-slider-dots .owl-dot').click(function (e) {
     e.preventDefault()
     var itemPosition = $(this).attr('data-pos')
     videoSLider.trigger('to.owl.carousel', [itemPosition, 300])
   })
-  
+
   var videoSliderDots = $('.video-slider-dots').owlCarousel(
     {
       navContainer: '.video-nav-slider-dots',
@@ -402,15 +402,15 @@ $(document).ready(function () {
       dots        : false,
       items       : 1
     })
-  
+
   $('.video-nav-slider-dots .owl-next').click(function () {
     videoSliderDots.trigger('next.owl.carousel')
   })
-  
+
   $('.video-nav-slider-dots .owl-prev').click(function () {
     videoSliderDots.trigger('prev.owl.carousel', [300])
   })
-  
+
 })
 
 function ajax(method, headers, url, params, callback) {
@@ -454,7 +454,7 @@ function processErrors(data) {
   let msg
   if (!data._error) return false
   msg = data._error.message
-  
+
   alert(msg)
   return true
 }
@@ -464,7 +464,7 @@ function getBookTime(services, plusDate = 0, callbackFunction, callbackParams = 
   if (plusDate > 0) date.setDate(date.getDate() + plusDate)
   let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
                    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
-  
+
   let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString
   url += services ? ('?service_ids=' + encodeURIComponent(services.join(','))) : ''
   let headers = {
@@ -498,7 +498,7 @@ function bookRecord(name, email, phone, comment, services, managerId, city, date
     'Content-Type' : 'application/json',
     'Authorization': 'Bearer ' + bearer_token
   }
-  
+
   let date = new Date()
   let userParams = {
     'phone'       : phone,
