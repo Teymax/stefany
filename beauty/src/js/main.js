@@ -11,9 +11,9 @@ window.mail = {
   Host    : 'smtp.gmail.com',
   Username: 'uasteffany@gmail.com',
   Password: 'uasteffany12345',
-  To      : 'info@steffany.ua'
+  To      : 'help@steffany.ua'
 }
-
+// help@steffany.ua
 window.serviceId = 2495961
 window.serviceText = ''
 $(function () {
@@ -106,6 +106,7 @@ $(document).ready(function () {
   $('.feedback-form').on('submit', e => {
     e.preventDefault()
     if ($('.feedback-form')[0].checkValidity()) {
+      window.mail.To = 'help@steffany.ua'
       sendEmail( {
         Subject: 'Обратная связь',
         From   : $('.feedback-form input[type="email"]').val(),
@@ -162,9 +163,10 @@ $(document).ready(function () {
       'name' : $('.modal form input[type="text"]').val(),
       'email': $('.modal form input[type="email"]').val()
     }
+    window.mail.To = 'uasteffany@gmail.com'
     let det = {
 
-      Subject: 'Запись',
+      Subject: 'Запись бьюти',
       From   : payload.email,
       Body:
         `Имя: ${payload.name}

@@ -258,7 +258,7 @@ function bookAfterRecord() {
       localStorage.fullName, localStorage.email, localStorage.phone, localStorage.comment, services, managerId,
       localStorage.city ? localStorage.city : 'unknown'
     ]
-    getBookTime(services, 0, bookRecord, params)
+    getBookTime(services, 0, params)
     $('#thanksPopupPay').modal('show')
     localStorage.removeItem('name')
     localStorage.removeItem('comment')
@@ -334,32 +334,10 @@ function mainFormSubmit(event) {
   ]
   let checkedRadio = parent.querySelector('input[type="radio"]:checked')
 
-  // getBookTime([+service], 0, bookRecord, params)
-  window.mail = {
-    Host: 'smtp.gmail.com',
-    Username: 'uasteffany@gmail.com',
-    Password: 'uasteffany12345',
-    To: 'info@steffany.ua',
-    From: email
-  }
-  let details = {
+   //getBookTime([+service], 0, params)
+  //bookRecord() as cb function
+  emailSend(...params)
 
-    Subject: 'Запись',
-    Body:
-      `Имя: ${event.target.fullname.value}
-      <br>Email: ${event.target.email.value}
-      <br>Телефон:  ${event.target.phone.value}
-      <br>Услуги:  ${checkedRadio.dataset.name + checkedRadio.dataset.proc}
-      <br>Сообщение:  ${comment}
-      <br>Город:  ${city}`
-  }
-  Email.send({
-    ...mail,
-    ...details
-  }).then(
-    res => console.log(res),
-    rej => console.log("ERROR:", rej)
-  )
   $('#sendComplex').modal('hide')
   $('#modalServiceListSinugUp').modal('hide')
   $('#thanksPopup').modal('show')
@@ -388,64 +366,70 @@ function complexFormSubmit(event) {
     let serviceNames = [...serviceCheckboxes].map(checkbox => {
       return checkbox.parentNode.nextElementSibling.textContent
     })
-    // let params = [name, email, phone, comment, services, managerId, city]
-    // getBookTime(services, 0, bookRecord, params)
-    window.mail = {
-      Host: 'smtp.gmail.com',
-      Username: 'uasteffany@gmail.com',
-      Password: 'uasteffany12345',
-      To: 'info@steffany.ua',
-      From: email
-    }
-    let details = {
+     let params = [name, email, phone, comment, services, managerId, city]
+     //getBookTime(services, 0, params)
+    emailSend(...params)
 
-      Subject: 'Запись',
-      Body:
-      `Имя: ${name}
-      <br>Email: ${email}
-      <br>Телефон:  ${phone}
-      <br>Услуги:  ${serviceNames}
-      <br>Сообщение:  ${comment}
-      <br>Город:  ${city}`
-    }
-    Email.send({
-      ...mail,
-      ...details
-    }).then(
-      res => console.log(res),
-      rej => console.log("ERROR:", rej)
-    )
     $('#sendComplex').modal('hide')
     $('#modalServiceListSinugUp').modal('hide')
     $('#thanksPopup').modal('show')
   }
 }
 
-function getBookTime(services, plusDate = 0, callbackFunction, callbackParams) {
-  let date = new Date()
-  if (plusDate > 0) date.setDate(date.getDate() + plusDate)
-  let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
-    date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
+function getBookTime(services, plusDate = 0, callbackParams) {
+  console.log(callbackParams)
+  emailSend(...callbackParams)
+  // let date = new Date()
+  // if (plusDate > 0) date.setDate(date.getDate() + plusDate)
+  // let dateString = date.getFullYear() + '-' + ((date.getMonth()) + 1 < 10 ? '0' + (date.getMonth() + 1) :
+  //   date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' + date.getDate() : date.getDate())
 
-  let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString
-  url += services ? ('?service_ids=' + encodeURIComponent(services.join(','))) : ''
-  let headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + bearer_token
+  // let url = 'https://api.yclients.com/api/v1/book_times/' + partnerId + '/' + managerId + '/' + dateString
+  // url += services ? ('?service_ids=' + encodeURIComponent(services.join(','))) : ''
+  // let headers = {
+  //   'Content-Type': 'application/json',
+  //   'Authorization': 'Bearer ' + bearer_token
+  // }
+
+  // ajax('GET', headers, url, null, function (data) {
+  //   let dataArr = getData(data)
+  //   if (processErrors(dataArr)) return alert('Error')
+  //   if (dataArr.length < services.length) {
+  //     return getBookTime(services, ++plusDate, callbackFunction, callbackParams)
+  //   } else {
+  //     callbackParams.push(dataArr[0].datetime)
+  //     callbackFunction(...callbackParams)
+  //   }
+  // })
+}
+function emailSend(name, email, phone, comment, services, managerId, city, datetime){
+  window.mail = {
+    Host: 'smtp.gmail.com',
+    Username: 'uasteffany@gmail.com',
+    Password: 'uasteffany12345',
+    To: 'uasteffany@gmail.com',
+    From: email
+  }
+  let details = {
+
+    Subject: 'Запись лазер',
+    Body:
+      `Имя: ${name}
+      <br>Email: ${email}
+      <br>Телефон:  ${phone}
+      <br>Услуги:  ${services}
+      <br>Сообщение:  ${comment}
+      <br>Город:  ${city}`
   }
 
-  ajax('GET', headers, url, null, function (data) {
-    let dataArr = getData(data)
-    if (processErrors(dataArr)) return alert('Error')
-    if (dataArr.length < services.length) {
-      return getBookTime(services, ++plusDate, callbackFunction, callbackParams)
-    } else {
-      callbackParams.push(dataArr[0].datetime)
-      callbackFunction(...callbackParams)
-    }
-  })
+  Email.send({
+    ...mail,
+    ...details
+  }).then(
+    res => console.log(res),
+    rej => console.log("ERROR:", rej)
+  )
 }
-
 function bookRecord(name, email, phone, comment, services, managerId, city, datetime) {
   let headers = {
     'Content-Type': 'application/json',
