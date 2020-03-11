@@ -339,7 +339,7 @@ function mainFormSubmit(event) {
     Host: 'smtp.gmail.com',
     Username: 'uasteffany@gmail.com',
     Password: 'uasteffany12345',
-    To: 'help@steffany.ua',
+    To: 'info@steffany.ua',
     From: email
   }
   let details = {
@@ -368,7 +368,6 @@ function mainFormSubmit(event) {
 
 function complexFormSubmit(event) {
   event.preventDefault()
-  console.log('2')
   let name = event.target.fullname.value
   let email = event.target.email.value
   let phone = event.target.phone.value
@@ -395,10 +394,9 @@ function complexFormSubmit(event) {
       Host: 'smtp.gmail.com',
       Username: 'uasteffany@gmail.com',
       Password: 'uasteffany12345',
-      To: 'help@steffany.ua',
+      To: 'info@steffany.ua',
       From: email
     }
-    console.log(window.mail)
     let details = {
 
       Subject: 'Запись',
@@ -410,7 +408,6 @@ function complexFormSubmit(event) {
       <br>Сообщение:  ${comment}
       <br>Город:  ${city}`
     }
-    console.log(details)
     Email.send({
       ...mail,
       ...details
