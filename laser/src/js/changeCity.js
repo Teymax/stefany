@@ -661,7 +661,7 @@ $(document).ready(function () {
             schedule   : 'с 9:00 до 20:00',
             map        : '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.3135978041103!2d24.003169878435035!3d49.817993772931914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae79add5d429b%3A0x1367e44d6afb11ed!2z0YPQuy4g0JrQvdGP0LPQuNC90Lgg0J7Qu9GM0LPQuCwgOTgsINCb0YzQstC-0LIsINCb0YzQstC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1sru!2sua!4v1579688832814!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>',
             preview    : 'assets/img/about-steffany-salon/lv/lv1/video-slider-0@2x.jpg',
-            imagesAmount           : 10,
+            imagesAmount           : 9,
             imagesAmountSpecialists: 2,
             specialists: [
               {
