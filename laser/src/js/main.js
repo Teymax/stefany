@@ -7,6 +7,7 @@ let servicesArr = []
 let localization = location.pathname.split('/').find(function (loc) {
   return loc === 'ua'
 }) || 'ru'
+let radioName;
 let LocMin = localization === 'ru' ? ' мин' : ' хв'
 let LocHour = localization === 'ru' ? ' ч' : ' год'
 let servicesLength = {
@@ -224,6 +225,8 @@ function radioClick(parent) {
           <p class="paragraph-text text-color-dark text-w-bold mb-0">${checkedRadio.dataset.name} - ${checkedRadio.dataset.proc} процедур </P>
           <p class="paragraph-text text-color-dark text-w-bold mb-0">Сумма ${checkedRadio.dataset.price} грн </p>
       `
+  radioName = `${checkedRadio.dataset.name} - ${checkedRadio.dataset.proc} процедур</br>
+Сумма ${checkedRadio.dataset.price} грн`
 }
 
 function buttonToggle(event) {
@@ -258,7 +261,8 @@ function bookAfterRecord() {
       localStorage.fullName, localStorage.email, localStorage.phone, localStorage.comment, services, managerId,
       localStorage.city ? localStorage.city : 'unknown'
     ]
-    getBookTime(services, 0, params)
+    emailSend(...params)
+    // getBookTime(services, 0, params)
     $('#thanksPopupPay').modal('show')
     localStorage.removeItem('name')
     localStorage.removeItem('comment')
@@ -332,9 +336,9 @@ function mainFormSubmit(event) {
     managerId,
     city
   ]
-  let checkedRadio = parent.querySelector('input[type="radio"]:checked')
+  //let checkedRadio = parent.querySelector('input[type="radio"]:checked')
 
-   //getBookTime([+service], 0, params)
+  //getBookTime([+service], 0, params)
   //bookRecord() as cb function
   emailSend(...params)
 
@@ -350,26 +354,31 @@ function complexFormSubmit(event) {
   let email = event.target.email.value
   let phone = event.target.phone.value
   let city = localStorage.city ? localStorage.city : 'unknown'
-  let isComplex = document.querySelector('input[type="radio"]:checked')
-  let comment = (+event.target.payment.value ? 'payment' : 'online order') + (isComplex ? ' complex' : ' service')
+  let serviceNames;
+  let isComplex = document.querySelectorAll('input[type="radio"]:checked');
+   let comment = (+event.target.payment.value ? 'payment' : 'online order') + (isComplex ? ' complex' : ' service')
   let serviceCheckboxes = document.querySelectorAll('input[name="service"]:checked')
   let services = [...serviceCheckboxes].map(checkbox => {
     return checkbox.value
   })
   if (+event.target.payment.value) {
     $('#paymentPopup').modal('show')
-    let serviceNames = [...serviceCheckboxes].map(checkbox => {
+    serviceNames = [...serviceCheckboxes].map(checkbox => {
       return checkbox.parentNode.nextElementSibling.textContent
     })
     payment(name, email, phone, comment, services, serviceNames.join(','))
   } else {
-    let serviceNames = [...serviceCheckboxes].map(checkbox => {
+    serviceNames = [...serviceCheckboxes].map(checkbox => {
       return checkbox.parentNode.nextElementSibling.textContent
     })
-     let params = [name, email, phone, comment, services, managerId, city]
-     //getBookTime(services, 0, params)
-    emailSend(...params)
-
+   // let params = [name, email, phone, comment, services, managerId, serviceNames.join(',')]
+    let paramsForSend = [name, email, phone, comment, serviceNames.join(','), managerId, city]
+    console.log(paramsForSend)
+    if(radioName)
+      paramsForSend = [name, email, phone, comment, radioName, managerId, city]
+    //getBookTime(services, 0, params)
+    emailSend(...paramsForSend)
+radioName =''
     $('#sendComplex').modal('hide')
     $('#modalServiceListSinugUp').modal('hide')
     $('#thanksPopup').modal('show')
@@ -402,7 +411,8 @@ function getBookTime(services, plusDate = 0, callbackParams) {
   //   }
   // })
 }
-function emailSend(name, email, phone, comment, services, managerId, city, datetime){
+
+function emailSend(name, email, phone, comment, services, managerId, city) {
   window.mail = {
     Host: 'smtp.gmail.com',
     Username: 'uasteffany@gmail.com',
@@ -430,6 +440,7 @@ function emailSend(name, email, phone, comment, services, managerId, city, datet
     rej => console.log("ERROR:", rej)
   )
 }
+
 function bookRecord(name, email, phone, comment, services, managerId, city, datetime) {
   let headers = {
     'Content-Type': 'application/json',

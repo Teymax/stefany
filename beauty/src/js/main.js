@@ -172,7 +172,6 @@ $(document).ready(function () {
         `Имя: ${payload.name}
       <br>Email: ${payload.email}
       <br>Телефон:  ${payload.phone}
-      <br>Услуги:  ${serviceId}
       <br>Город:  ${cities[localStorage.getItem('city')]}`
     }
     console.log(det)
